@@ -1,0 +1,9 @@
+keyword,intent,priority
+emergency plumber Dallas,call-intent,high
+24 hour plumber Dallas,call-intent,high
+burst pipe Dallas,call-intent,high
+sewer backup Dallas,call-intent,high
+water heater leaking Dallas,call-intent,high
+drain cleaning Dallas,call-intent,high
+plumbing emergency cost,call-intent,high
+emergency plumber cost,call-intent,high

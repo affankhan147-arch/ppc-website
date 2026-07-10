@@ -10,7 +10,7 @@ Organic SEO first. No paid ads until organic calls and income start.
 Run git status before work.
 
 ## Total tracked local files found
-12
+15
 
 ## Command files
 
@@ -18,6 +18,8 @@ Run git status before work.
 ## Ops files
 api_safety_policy.md
 api_sync_workflow.md
+codex_minimum_context.md
+pre_codex_colab_summary.md
 
 ## What Codex should do
 1. Read this file first.
