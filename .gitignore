@@ -1,0 +1,17 @@
+﻿node_modules/
+.next/
+out/
+dist/
+build/
+.env
+.env.*
+!.env.example
+*.log
+api/logs/*
+api/outputs/private/*
+secrets/
+*.key
+*.pem
+*.p12
+.DS_Store
+Thumbs.db
