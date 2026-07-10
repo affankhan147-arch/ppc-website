@@ -1,0 +1,40 @@
+FINAL 3-DAY SEO + AEO BUILD COMMAND
+
+Do not run this command during the workflow integration phase.
+
+When the owner explicitly starts Command 2, Codex should build the organic SEO + AEO foundation for the PPC lead generation website over a 3-day execution plan.
+
+Day 1 focus:
+- information architecture
+- core service page plan
+- local SEO structure without fake local office claims
+- AEO question map
+- content brief system
+
+Day 2 focus:
+- page implementation
+- schema-safe content blocks
+- internal linking
+- conversion paths for calls
+- measurement placeholders without secrets
+
+Day 3 focus:
+- QA, accessibility, performance checks
+- content polish
+- reports
+- owner launch checklist
+
+Hard safety limits:
+- no paid ads
+- no Google Ads
+- no Bing Ads
+- no fake Google Business Profiles
+- no fake reviews
+- no fake addresses
+- no fake licenses
+- no fake insurance claims
+- no copied competitor images
+- no fake local office claims
+- no spam backlinks
+- no credentials in repo files
+

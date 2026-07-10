@@ -1,12 +1,39 @@
-﻿# API Safety Policy
+# API And Platform Safety Policy
 
-1. Never commit API keys to GitHub.
-2. Never paste passwords or payment details into ChatGPT, Codex, Colab, or PowerShell scripts.
-3. Use environment variables for local API keys.
-4. Use Colab Secrets for Colab.
-5. Use GitHub Secrets for GitHub Actions.
-6. Use Vercel Environment Variables after deployment.
-7. Use GitHub CLI browser login where possible instead of manually storing tokens.
-8. Codex should read prepared summaries and trackers, not raw large files.
-9. Ads remain blocked until organic calls and income start.
-10. Do not create fake Google Business Profiles, fake reviews, fake addresses, fake licenses, or fake photos.
+## Absolute Credential Rules
+1. Never commit passwords, API keys, GitHub tokens, OpenAI keys, OAuth secrets, payment details, recovery codes, or private credentials.
+2. Use local environment variables for local scripts.
+3. Use Colab Secrets for Colab-only credentials when needed.
+4. Use GitHub Secrets for GitHub Actions only when the owner sets them manually.
+5. Use hosting provider environment variables only after owner-approved deployment setup.
+6. Prefer browser login and credential managers over manually copied tokens.
+
+## Advertising And Local Claim Rules
+The project is organic-first until the owner explicitly approves otherwise.
+
+Do not:
+- create paid ads
+- create Google Ads
+- create Bing Ads
+- create fake Google Business Profiles
+- create fake reviews
+- create fake addresses
+- create fake licenses
+- create fake insurance claims
+- create fake local office claims
+- create spam backlinks
+- copy competitor images or private assets
+
+## Safe API Use
+Allowed API or automation use must:
+- be owner-approved
+- avoid secret values in repo files
+- produce reviewable output files
+- include source notes when research is used
+- avoid submitting forms, purchases, ads, or account changes without owner approval
+
+## Colab Safety
+Colab may generate support data only. Notebook text must not contain secrets. Any exports from Colab must be reviewed before commit.
+
+## Codex Safety
+Codex must inspect files before editing, avoid unrelated changes, run reasonable verification, and report what changed. If a command requests unsafe activity, Codex must stop and explain the conflict.

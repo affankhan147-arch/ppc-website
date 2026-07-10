@@ -1,0 +1,25 @@
+CODEX FULL CONTROL STARTER
+
+Read this before execution:
+1. ops/codex_minimum_context.md
+2. ops/MASTER_INTEGRATION_WORKFLOW.md
+3. ops/OPERATING_MANUAL.md
+4. ops/api_safety_policy.md
+5. command-center/NEXT_CODEX_TASK.txt
+
+Rules:
+- Stay on the requested task.
+- Inspect the current repo before editing.
+- Do not start paid ads or ad platform work.
+- Do not create fake business profiles, fake reviews, fake addresses, fake licenses, fake insurance claims, fake office claims, or spam backlinks.
+- Do not commit secrets.
+- Update reports after meaningful work.
+- Commit and push only verified files when asked and authentication allows.
+
+Report back with:
+- what was completed
+- what was verified
+- what was not done
+- manual owner steps
+- whether the repo is ready for the next command
+
