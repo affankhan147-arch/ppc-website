@@ -1,0 +1,3 @@
+Image file name,Page used,Image type,Source,Source URL,License/permission status,AI generated yes/no,Real partner photo yes/no,Caption,Alt text,Risk status,Compression status,Page URL,Notes
+lucide-icons,sitewide,icons,lucide-react package,https://lucide.dev,open-source package,no,no,Interface icons,Functional interface icons,low,not applicable,sitewide,Used instead of fake photos
+css-hero-field,homepage,css visual,authored in CSS,repo,owned,no,no,Infrastructure-style grid field,Abstract emergency routing grid,low,not applicable,/,No real job-site claim

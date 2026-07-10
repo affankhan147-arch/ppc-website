@@ -1,17 +1,17 @@
 NEXT CODEX TASK
 
 Status:
-Workflow integration phase is the active first task.
+Command 2 is active.
 
-Do not start Command 2 yet.
+Goal:
+Build the reusable pay-per-call local lead-generation platform with Dallas-Fort Worth emergency plumbing and drain cleaning as Version 1.
 
-After this integration system is committed and pushed:
-1. Confirm all required folders and files exist.
-2. Confirm safety rules are documented.
-3. Confirm the D-drive backup script exists.
-4. Confirm the Colab guide and support notebook exist.
-5. Tell the owner the repo is ready for Command 2: the 3-day SEO + AEO build command.
+Active command source:
+command-center/PPC_Software_Company_3_Day_HyperAggressive_SEO_AEO_Codex_Super_Command_WITH_D_DRIVE_BLUEPRINT_BACKUP.txt
 
-Future task:
-Run command-center/final_3_day_command.txt only after the owner explicitly says to start Command 2.
-
+Required closeout:
+1. Build passes.
+2. QA reports exist.
+3. AEO audit exists.
+4. D-drive blueprint backup is refreshed.
+5. Changes are committed and pushed to GitHub.

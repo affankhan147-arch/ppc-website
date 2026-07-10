@@ -1,7 +1,9 @@
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-$RepoRoot = Split-Path -Parent $PSScriptRoot
+$ScriptRepoRoot = Split-Path -Parent $PSScriptRoot
+$PreferredRepoRoot = "C:\Users\dell\Documents\ppc-website"
+$RepoRoot = if (Test-Path (Join-Path $ScriptRepoRoot ".git")) { $ScriptRepoRoot } elseif (Test-Path (Join-Path $PreferredRepoRoot ".git")) { $PreferredRepoRoot } else { $ScriptRepoRoot }
 Set-Location $RepoRoot
 
 Write-Host "Repo: $RepoRoot"
@@ -18,4 +20,3 @@ git pull --ff-only origin master
 
 Write-Host "Current status:"
 git status --short --branch
-

@@ -5,7 +5,9 @@ param(
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-$RepoRoot = Split-Path -Parent $PSScriptRoot
+$ScriptRepoRoot = Split-Path -Parent $PSScriptRoot
+$PreferredRepoRoot = "C:\Users\dell\Documents\ppc-website"
+$RepoRoot = if (Test-Path (Join-Path $ScriptRepoRoot ".git")) { $ScriptRepoRoot } elseif (Test-Path (Join-Path $PreferredRepoRoot ".git")) { $PreferredRepoRoot } else { $ScriptRepoRoot }
 Set-Location $RepoRoot
 
 Write-Host "Repo: $RepoRoot"
@@ -17,7 +19,7 @@ $secretMatches = Get-ChildItem -Recurse -File |
         $_.FullName -notmatch "\\.next\\" -and
         $_.Name -notmatch "^\.env$"
     } |
-    Select-String -Pattern 'sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}' -ErrorAction SilentlyContinue
+    Select-String -Pattern '(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{20,}|(?<![A-Za-z0-9])ghp_[A-Za-z0-9]{20,}|(?<![A-Za-z0-9])github_pat_[A-Za-z0-9_]{20,}' -ErrorAction SilentlyContinue
 
 if ($secretMatches) {
     Write-Host "Possible secret-shaped values found. Review before committing:"
@@ -26,7 +28,7 @@ if ($secretMatches) {
 }
 
 git status --short --branch
-git add command-center ops scripts colab colab-output inbox-from-chatgpt outbox-to-codex manual-owner-steps reports blueprints ai-agents README.md .gitignore .env.example
+git add command-center ops scripts colab colab-output inbox-from-chatgpt outbox-to-codex manual-owner-steps reports blueprints ai-agents src public package.json pnpm-lock.yaml next.config.mjs tsconfig.json postcss.config.mjs eslint.config.mjs next-env.d.ts README.md .gitignore .env.example
 
 $changes = git status --porcelain
 if ([string]::IsNullOrWhiteSpace($changes)) {

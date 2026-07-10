@@ -1,6 +1,9 @@
 FINAL 3-DAY SEO + AEO BUILD COMMAND
 
-Do not run this command during the workflow integration phase.
+Command 2 is active.
+
+The full owner-supplied command is preserved at:
+command-center/PPC_Software_Company_3_Day_HyperAggressive_SEO_AEO_Codex_Super_Command_WITH_D_DRIVE_BLUEPRINT_BACKUP.txt
 
 When the owner explicitly starts Command 2, Codex should build the organic SEO + AEO foundation for the PPC lead generation website over a 3-day execution plan.
 
@@ -37,4 +40,3 @@ Hard safety limits:
 - no fake local office claims
 - no spam backlinks
 - no credentials in repo files
-
