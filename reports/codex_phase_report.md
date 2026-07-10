@@ -27,6 +27,20 @@ Phase 1: workflow integration system.
 - Commit and push workflow files to GitHub: pending final Git handoff.
 
 ## Manual Owner Steps
-- Run `.\scripts\20_backup_project_blueprints_to_D_drive.ps1` locally if Codex cannot access the D drive.
 - Confirm the workflow commit appears on GitHub.
 - Start Command 2 only when ready for the 3-day SEO + AEO build.
+
+## D-Drive Backup
+Codex created and verified the D-drive backup at:
+
+`D:\PPC_Project_Blueprints\PPC_Lead_Generation_Platform_Blueprint`
+
+Verified backup contents:
+- `blueprints/`
+- `ops/`
+- `command-center/`
+- `manual-owner-steps/`
+- `reports/`
+- `ai-agents/`
+- `colab/`
+- `_backup_manifest.txt`

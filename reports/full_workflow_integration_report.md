@@ -39,7 +39,17 @@ The workflow explicitly blocks:
 Backup target:
 `D:\PPC_Project_Blueprints\PPC_Lead_Generation_Platform_Blueprint`
 
-Codex prepared the backup script. The owner should run it locally if the Codex sandbox cannot access the D drive.
+Backup completed by Codex with full local filesystem access.
+
+Verified D-drive backup contents:
+- `ai-agents/`
+- `blueprints/`
+- `colab/`
+- `command-center/`
+- `manual-owner-steps/`
+- `ops/`
+- `reports/`
+- `_backup_manifest.txt`
 
 ## GitHub Status
 Ready for commit and push from branch `master`.
@@ -52,4 +62,5 @@ Ready after the workflow commit is visible on GitHub. Command 2 has not been sta
 - Colab notebook JSON validation: passed.
 - PowerShell script syntax parse: passed.
 - Secret-shaped token scan: passed.
+- D-drive backup path verification: passed.
 - Website build: intentionally not started.
