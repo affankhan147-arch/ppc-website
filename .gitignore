@@ -3,6 +3,7 @@
 out/
 dist/
 build/
+.wrangler/
 .env
 .env.*
 !.env.example

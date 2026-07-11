@@ -25,5 +25,8 @@ Sample buyer and tracking values are included for build/routing scaffolding and 
 ## QA Status
 Next 16 production build passed and generated 242 static pages plus dynamic APIs. Custom QA passed. AEO audit and launch QA reports were created.
 
+## Publishing Status
+Sites-compatible worker packaging was added and `vinext build` passed, producing `dist/server/index.js`.
+
 ## Next 7-Day Growth Plan
 Improve top city-service pages, add verified buyer data, expand FAQs, refine internal links, submit sitemap after deployment, monitor Search Console and Bing, and update content QA reports.

@@ -24,6 +24,7 @@ Command 2: 3-day SEO + AEO build.
 - Report generation: passed.
 - Custom QA: passed.
 - Next production build: passed on Next.js 16.2.10 with 242 static pages plus dynamic APIs.
+- Sites worker build: passed with `vinext build`.
 - Commit and push: pending final Git handoff.
 
 ## Manual Owner Steps
