@@ -1,6 +1,6 @@
 FINAL 3-DAY SEO + AEO BUILD COMMAND
 
-Command 2 is active.
+Command 2 is ready. Do not start until the owner explicitly says to begin.
 
 The full owner-supplied command is preserved at:
 command-center/PPC_Software_Company_3_Day_HyperAggressive_SEO_AEO_Codex_Super_Command_WITH_D_DRIVE_BLUEPRINT_BACKUP.txt
@@ -40,3 +40,8 @@ Hard safety limits:
 - no fake local office claims
 - no spam backlinks
 - no credentials in repo files
+
+Deployment context before launch:
+- Treat the ChatGPT/Codex `chatgpt.site` URL as a private preview/control URL.
+- The final production target is `https://plumbinghands.com`.
+- Keep DNS records and owner-only domain steps in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.

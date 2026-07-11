@@ -30,5 +30,6 @@ The owner must explicitly approve:
 1. Confirm this workflow commit is visible on GitHub.
 2. Run the D-drive backup script.
 3. Confirm the safety policy is acceptable.
-4. Tell Codex to start Command 2 only when ready.
-
+4. Confirm whether the private `chatgpt.site` preview should remain private or be switched to public preview access.
+5. Add the production DNS records from `manual-owner-steps/DOMAIN_DNS_STEPS.md`.
+6. Tell Codex to start Command 2 only when ready.

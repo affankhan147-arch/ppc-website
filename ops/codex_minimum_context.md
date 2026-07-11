@@ -4,9 +4,9 @@
 PPC lead generation platform for organic SEO and AEO focused call generation.
 
 ## Current Phase
-Phase 1: workflow integration system.
+Phase 1: workflow integration system complete.
 
-Do not start the website build until the owner gives Command 2.
+Do not start or resume Command 2 until the owner explicitly says to begin.
 
 ## Repository
 - GitHub: `affankhan147-arch/ppc-website`
@@ -58,5 +58,12 @@ Do not commit passwords, API keys, payment details, GitHub tokens, OpenAI keys, 
 ## Manual Owner Steps
 Only the owner handles account logins, GitHub or Google authorization, DNS, hosting, payment, ad platform approvals, and local D-drive backup execution if Codex cannot access D drive.
 
+## Deployment Context
+- The ChatGPT/Codex Sites URL is a private preview/control URL, not the final production website.
+- Current private preview URL: `https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site`
+- The Sites access mode is private/custom unless the owner explicitly asks Codex to make it public.
+- Production domain target: `https://plumbinghands.com`
+- DNS instructions are maintained in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.
+
 ## Command 2 Status
-Command 2 is the future 3-day SEO + AEO build command. It is prepared but not started.
+Command 2 is the 3-day SEO + AEO build command. It is prepared and ready, but not active until the owner explicitly starts it.

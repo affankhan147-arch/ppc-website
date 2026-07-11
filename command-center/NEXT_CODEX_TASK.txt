@@ -1,7 +1,7 @@
 NEXT CODEX TASK
 
 Status:
-Command 2 is active.
+Ready for Command 2. Do not start until the owner explicitly says to begin.
 
 Goal:
 Build the reusable pay-per-call local lead-generation platform with Dallas-Fort Worth emergency plumbing and drain cleaning as Version 1.
@@ -15,3 +15,10 @@ Required closeout:
 3. AEO audit exists.
 4. D-drive blueprint backup is refreshed.
 5. Changes are committed and pushed to GitHub.
+
+Current deployment context:
+- The ChatGPT/Codex Sites URL is a private preview/control URL, not the final production website.
+- Current private preview URL: https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site
+- Production domain target: https://plumbinghands.com
+- DNS records remain in manual-owner-steps/DOMAIN_DNS_STEPS.md.
+- Do not use or commit passwords, API keys, payment details, GitHub tokens, OpenAI keys, or private credentials.

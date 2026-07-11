@@ -1,5 +1,25 @@
 # Domain And DNS Steps
 
+## Preview Access
+
+The `chatgpt.site` deployment URL is a Codex/Sites preview and control URL. It
+is not the final production website URL.
+
+Current preview URL:
+`https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site`
+
+Current access status:
+- private/custom access
+- visible only to the allowed owner account in Sites
+- visitors who are not allowed by the Sites access policy may see a permission
+  page
+
+To make the preview publicly accessible, explicitly ask Codex to switch the
+Sites access mode to public. After that change, anyone with the preview URL can
+visit it. Keep using `plumbinghands.com` as the production domain target.
+
+## Production Domain
+
 Owner-only steps:
 
 1. Log in directly to the DNS provider for `plumbinghands.com`.

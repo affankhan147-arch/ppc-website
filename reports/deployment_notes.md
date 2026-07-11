@@ -7,6 +7,11 @@ Manual needs after Sites deployment: custom production domain if desired, real t
 Private Sites production URL:
 https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site
 
+Access status:
+- The `chatgpt.site` URL is private/custom access and may show a permission page to visitors who are not allowed in the Sites access policy.
+- It is a preview/control URL, not the final production website.
+- To make this preview public, the owner must explicitly ask Codex to switch Sites access mode to public.
+
 Custom domain target:
 https://plumbinghands.com
 

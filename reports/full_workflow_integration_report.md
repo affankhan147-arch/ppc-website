@@ -52,10 +52,19 @@ Verified D-drive backup contents:
 - `_backup_manifest.txt`
 
 ## GitHub Status
-Ready for commit and push from branch `master`.
+Workflow and deployment-access updates are committed and pushed from branch `master`.
 
 ## Command 2 Readiness
-Command 2 build has been started and implemented. Final GitHub handoff is pending the last commit and push.
+Command 2 is prepared and ready, but should not be started until the owner explicitly says to begin.
+
+## Deployment Access Confirmation
+- Sites project title: `Plumbing Hands`
+- Current preview/control URL: `https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site`
+- Preview access status: private/custom access
+- Public preview status: not public unless the owner explicitly asks Codex to switch Sites access mode to public
+- Production domain target: `https://plumbinghands.com`
+- Custom domain status: pending DNS validation
+- DNS instructions: `manual-owner-steps/DOMAIN_DNS_STEPS.md`
 
 ## Verification Completed
 - Required workflow paths checked: passed.
