@@ -7,13 +7,34 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 $ErrorActionPreference = "Stop"
 
 $ConfigPath = Join-Path (Get-Location) "scripts\indexnow.config.json"
-$Cfg = [System.IO.File]::ReadAllText($ConfigPath) | ConvertFrom-Json
-
+$ReportPath = Join-Path (Get-Location) "reports\indexnow_submission_report.md"
 $Endpoint = "https://api.indexnow.org/indexnow"
-$ReportPath = ".\reports\indexnow_submission_report.md"
+
+if (!(Test-Path $ConfigPath)) {
+    throw "Missing scripts\indexnow.config.json. Run the IndexNow setup command first."
+}
+
+$Cfg = Get-Content $ConfigPath -Raw | ConvertFrom-Json
 
 if (-not $Submit) {
     $DryRun = $true
+}
+
+Write-Host "Checking IndexNow key file..." -ForegroundColor Cyan
+Write-Host $Cfg.keyLocation
+
+try {
+    $KeyBody = (Invoke-WebRequest -Uri $Cfg.keyLocation -UseBasicParsing -TimeoutSec 30).Content.Trim()
+    if ($KeyBody -ne $Cfg.key) {
+        throw "IndexNow key file content does not match config key."
+    }
+    Write-Host "PASS: IndexNow key file is live and correct." -ForegroundColor Green
+}
+catch {
+    Write-Host "WAIT/FAIL: IndexNow key file is not live or not correct yet." -ForegroundColor Yellow
+    Write-Host $_.Exception.Message
+    Write-Host "Wait 2-5 minutes for Vercel deployment, then run this script again."
+    exit 1
 }
 
 Write-Host "Reading sitemap..." -ForegroundColor Cyan
@@ -42,12 +63,14 @@ foreach ($M in $Matches) {
 
 $Urls = $Urls | Sort-Object -Unique
 
-Write-Host "URLs found:" $Urls.Count -ForegroundColor Green
+if ($Urls.Count -eq 0) {
+    throw "No valid PlumbingHands URLs found in sitemap."
+}
+
+Write-Host "URLs found for IndexNow: $($Urls.Count)" -ForegroundColor Green
 
 $Mode = "DRY RUN"
-if ($Submit) {
-    $Mode = "SUBMIT"
-}
+if ($Submit) { $Mode = "SUBMIT" }
 
 $Report = @()
 $Report += "# IndexNow Submission Report"
@@ -60,43 +83,38 @@ $Report += "Sitemap: $($Cfg.sitemap)"
 $Report += "URL count: $($Urls.Count)"
 $Report += ""
 
-if ($Urls.Count -eq 0) {
-    throw "No valid URLs found in sitemap."
-}
-
 if ($DryRun -and -not $Submit) {
     Write-Host "DRY RUN ONLY. No URLs submitted." -ForegroundColor Yellow
     $Report += "Status: Dry run only. No URLs submitted."
     $Report += ""
     $Report += "First 25 URLs:"
-    $Urls | Select-Object -First 25 | ForEach-Object {
-        $Report += "- $_"
+    foreach ($U in ($Urls | Select-Object -First 25)) {
+        $Report += "- $U"
     }
-
     $Report | Set-Content $ReportPath -Encoding UTF8
+    Write-Host "Report saved: $ReportPath" -ForegroundColor Green
     notepad $ReportPath
     exit 0
 }
 
-$Payload = @{
+$PayloadObject = @{
     host = $Cfg.host
     key = $Cfg.key
     keyLocation = $Cfg.keyLocation
     urlList = @($Urls)
-} | ConvertTo-Json -Depth 10
+}
 
-Write-Host "Submitting to IndexNow..." -ForegroundColor Cyan
+$Payload = $PayloadObject | ConvertTo-Json -Depth 10
+
+Write-Host "Submitting URLs to IndexNow..." -ForegroundColor Cyan
 
 try {
-    $Response = Invoke-WebRequest -Uri $Endpoint -Method POST -Body $Payload -ContentType "application/json; charset=utf-8" -UseBasicParsing -TimeoutSec 120
-
-    Write-Host "IndexNow response:" $Response.StatusCode -ForegroundColor Green
+    $Response = Invoke-WebRequest -Uri $Endpoint -Method POST -Body $Payload -ContentType "application/json" -UseBasicParsing -TimeoutSec 120
+    Write-Host "IndexNow response status: $($Response.StatusCode)" -ForegroundColor Green
 
     $Report += "Submission status: $($Response.StatusCode)"
-    $Report += "Response:"
-    $Report += "```"
+    $Report += "Response content:"
     $Report += $Response.Content
-    $Report += "```"
 }
 catch {
     Write-Host "IndexNow submission error:" -ForegroundColor Red
@@ -104,16 +122,15 @@ catch {
 
     $Report += "Submission status: ERROR"
     $Report += "Error:"
-    $Report += "```"
     $Report += $_.Exception.Message
-    $Report += "```"
 }
 
 $Report += ""
-$Report += "URLs:"
-$Urls | ForEach-Object {
-    $Report += "- $_"
+$Report += "Submitted URLs:"
+foreach ($U in $Urls) {
+    $Report += "- $U"
 }
 
 $Report | Set-Content $ReportPath -Encoding UTF8
+Write-Host "Report saved: $ReportPath" -ForegroundColor Green
 notepad $ReportPath
