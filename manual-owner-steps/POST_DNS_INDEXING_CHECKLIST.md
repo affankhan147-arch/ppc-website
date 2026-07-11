@@ -1,7 +1,6 @@
 # Post-DNS Indexing Checklist
 
-Do not execute this checklist until `https://plumbinghands.com` and
-`https://www.plumbinghands.com` both open the real Vercel site with HTTPS.
+DNS and HTTPS are live. Use this checklist for Google Search Console first.
 
 ## Google Search Console
 
@@ -11,22 +10,22 @@ Do not execute this checklist until `https://plumbinghands.com` and
 - Confirm `https://plumbinghands.com/sitemap.xml` opens.
 - Submit `https://plumbinghands.com/sitemap.xml`.
 - Inspect the homepage URL.
-- Request indexing only after final domain and HTTPS work.
+- Request indexing for the homepage only after Google ownership verification succeeds.
 
 ## Bing Webmaster
 
 - Add or verify `https://plumbinghands.com`.
-- Confirm ownership only after DNS and HTTPS are active.
+- Confirm ownership only after Google Search Console is complete or Bing manual verification is ready.
 - Submit `https://plumbinghands.com/sitemap.xml`.
 
 ## IndexNow
 
-- Prepare IndexNow only after Bing verification is ready.
+- Prepare IndexNow only after Bing verification is complete.
 - Run IndexNow only for final `https://plumbinghands.com` URLs.
 
 ## Citations And Outreach
 
-- Do not start citations until final HTTPS works.
-- Do not start outreach until final HTTPS works.
+- Do not start citations until the owner explicitly approves a later citation command.
+- Do not start outreach until the owner explicitly approves a later outreach command.
 - Do not create fake address, fake Google Business Profile, fake reviews,
   fake license claims, fake insurance claims, or spam backlinks.

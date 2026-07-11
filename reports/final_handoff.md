@@ -18,20 +18,20 @@ Use Node and pnpm, then run pnpm install, pnpm run reports, pnpm run qa, pnpm ru
 See .env.example. Replace sample phone values before public launch. Keep verification tokens blank until owner approval.
 
 ## Sitemap, Robots, And Canonicals
-Sitemap target after DNS: https://plumbinghands.com/sitemap.xml
-Robots target after DNS: https://plumbinghands.com/robots.txt
+Sitemap target: https://plumbinghands.com/sitemap.xml
+Robots target: https://plumbinghands.com/robots.txt
 Canonical URL base: https://plumbinghands.com
 
-Do not submit sitemap or IndexNow until Vercel deployment, Hostinger DNS, HTTPS, Google Search Console, and Bing verification are confirmed.
+Do not submit the sitemap until Google Search Console ownership is verified. Do not run IndexNow until Bing Webmaster is verified.
 
 ## Important Page URLs
 /, /services/24-hour-emergency-plumber, /services/emergency-drain-cleaning, /cities/dallas, /cities/dallas/emergency-drain-cleaning, /faq, /contact, /partner-with-us, /privacy, /terms, /disclosure.
 
 ## Manual Owner Steps
-Have the Hostinger DNS owner add the exact Vercel records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`. Provide a real tracking number, verify Search Console and Bing after DNS/HTTPS, approve buyer routing endpoints, and approve any real business claims before use.
+Run `scripts/50_open_google_search_console_setup.ps1`, copy the Google TXT verification value, run `scripts/51_add_google_search_console_txt_to_hostinger.ps1`, verify Search Console, submit the sitemap, provide a real tracking number, approve buyer routing endpoints, and approve any real business claims before use.
 
 ## Known Limitations
-Sample buyer and tracking values are included for build/routing scaffolding and must be replaced before public launch. Vercel deployment, DNS, verification, indexing, citations, outreach, and final launch are pending.
+Sample buyer and tracking values are included for build/routing scaffolding and must be replaced before public launch. Google verification, Bing verification, IndexNow, citations, outreach, and final launch are pending.
 
 ## Next 7-Day Growth Plan
-Improve top city-service pages, add verified buyer data, expand FAQs, refine internal links, submit sitemap only after DNS/verification, monitor Search Console and Bing, and update content QA reports.
+Improve top city-service pages, add verified buyer data, expand FAQs, refine internal links, submit sitemap after Google verification, monitor Search Console and Bing, and update content QA reports.

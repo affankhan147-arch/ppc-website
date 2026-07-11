@@ -16,13 +16,22 @@ const required = [
   "manual-owner-steps/DEPLOYMENT_MANUAL_STEPS.md",
   "manual-owner-steps/DOMAIN_DNS_STEPS.md",
   "manual-owner-steps/SEARCH_CONSOLE_BING_STEPS.md",
+  "manual-owner-steps/GOOGLE_SEARCH_CONSOLE_STEP_BY_STEP.md",
+  "manual-owner-steps/GOOGLE_SITEMAP_SUBMISSION_CHECKLIST.md",
+  "manual-owner-steps/BING_WEBMASTER_NEXT_AFTER_GOOGLE.md",
+  "manual-owner-steps/INDEXNOW_PENDING.md",
   "manual-owner-steps/VERCEL_DEPLOYMENT_STEPS.md",
   "manual-owner-steps/VERCEL_DNS_STEPS.md",
   "manual-owner-steps/VERCEL_DNS_STEPS_HOSTINGER.md",
   "manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md",
   "manual-owner-steps/POST_DNS_INDEXING_CHECKLIST.md",
   "command-center/NEXT_CODEX_TASK_AFTER_DNS.txt",
+  "command-center/NEXT_OWNER_STEP.txt",
   "scripts/40_verify_plumbinghands_dns_and_https.ps1",
+  "scripts/50_open_google_search_console_setup.ps1",
+  "scripts/51_add_google_search_console_txt_to_hostinger.ps1",
+  "scripts/52_check_google_txt_dns.ps1",
+  "reports/indexing_setup_status.md",
   "ops/image_asset_tracker.csv"
 ];
 
@@ -124,6 +133,35 @@ const postDnsTask = readFileSync(join(process.cwd(), "command-center/NEXT_CODEX_
 if (!postDnsTask.includes("Verify no temporary Vercel URL is used as final canonical")) {
   console.error("Post-DNS task must include canonical URL verification.");
   process.exit(1);
+}
+
+const gscGuide = readFileSync(join(process.cwd(), "manual-owner-steps/GOOGLE_SEARCH_CONSOLE_STEP_BY_STEP.md"), "utf8");
+for (const requiredText of [
+  "https://search.google.com/search-console/welcome",
+  "Domain",
+  "plumbinghands.com",
+  "google-site-verification=",
+  "https://plumbinghands.com/sitemap.xml"
+]) {
+  if (!gscGuide.includes(requiredText)) {
+    console.error(`Google Search Console guide is missing required text: ${requiredText}`);
+    process.exit(1);
+  }
+}
+
+const hostingerGoogleScript = readFileSync(join(process.cwd(), "scripts/51_add_google_search_console_txt_to_hostinger.ps1"), "utf8");
+for (const requiredText of [
+  "Read-Host \"Paste Hostinger API token\" -AsSecureString",
+  "google-site-verification=",
+  "overwrite = $false",
+  "nslookup -type=TXT",
+  "76.76.21.21",
+  "cname.vercel-dns.com"
+]) {
+  if (!hostingerGoogleScript.includes(requiredText)) {
+    console.error(`Hostinger Google TXT script is missing required safety text: ${requiredText}`);
+    process.exit(1);
+  }
 }
 
 const reports = readdirSync(join(process.cwd(), "reports"));

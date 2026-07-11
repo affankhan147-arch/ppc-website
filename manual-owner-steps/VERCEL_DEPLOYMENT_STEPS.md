@@ -36,12 +36,12 @@ Codex local note:
 4. Confirm root directory: repository root.
 5. Confirm build command uses `npm run build` or the equivalent `next build` script.
 6. Add production environment variables from `.env.example`.
-7. Keep verification/indexing values blank until DNS and HTTPS are active.
+7. Keep Google/Bing verification values blank until the owner copies real verification tokens.
 8. Confirm domains are added in Vercel project settings:
    - `plumbinghands.com`
    - `www.plumbinghands.com`
-9. Have the Hostinger DNS owner add the records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-10. After DNS propagates, confirm:
+9. Keep the Hostinger Vercel DNS records in place.
+10. Confirm:
    - `https://plumbinghands.com`
    - `https://www.plumbinghands.com`
    - `https://plumbinghands.com/sitemap.xml`
@@ -50,7 +50,7 @@ Codex local note:
 ## Do Not Do Yet
 
 - Do not change Hostinger DNS to any non-Vercel value; the owner should only add the exact records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-- Do not submit Google Search Console.
+- Do not submit Google Search Console until owner TXT verification succeeds.
 - Do not submit Bing Webmaster Tools.
 - Do not submit sitemap.
 - Do not run IndexNow.
@@ -67,4 +67,4 @@ Codex local note:
 - Confirm all canonical URLs use `https://plumbinghands.com`.
 - Confirm sitemap and robots use `https://plumbinghands.com`.
 - Confirm forms and call buttons use owner-approved destinations.
-- Confirm Vercel deployment is production-ready before Search Console or Bing verification.
+- Confirm Vercel deployment is production-ready before Bing verification and IndexNow.

@@ -77,11 +77,11 @@ Only the owner handles account logins, GitHub or Google authorization, DNS, host
 - Production domain target: ``https://plumbinghands.com``
 - WWW production hostname: ``https://www.plumbinghands.com``
 - DNS instructions are maintained in ``manual-owner-steps/DOMAIN_DNS_STEPS.md``.
-- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citation submissions, outreach, and final launch are pending until Hostinger DNS is confirmed.
+- DNS and HTTPS are live on ``plumbinghands.com`` and ``www.plumbinghands.com``. Google Search Console TXT verification is the next owner action. Bing, IndexNow, citation submissions, outreach, and final launch remain pending.
 - Use ``plumbinghands.com`` for ``.env.example``, sitemap guidance, robots guidance, canonical URL guidance, Search Console guidance, Bing Webmaster guidance, and deployment notes.
 
 ## Command 2 Status
-Command 2 is active in DNS-safe mode. Latest required verification: report generation, custom QA, Next production build, D-drive backup, GitHub commit, and push.
+Command 2 DNS setup is complete. Current required setup: Google Search Console owner verification, sitemap submission after verification, Bing next, and IndexNow only after Bing verification.
 "@
 
 Set-Content -Path ".\ops\codex_minimum_context.md" -Value $content -Encoding UTF8

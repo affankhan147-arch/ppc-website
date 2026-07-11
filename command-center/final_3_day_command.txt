@@ -44,5 +44,5 @@ Hard safety limits:
 Deployment context before launch:
 - Treat the ChatGPT/Codex `chatgpt.site` URL as a private preview/control URL.
 - The final production targets are `https://plumbinghands.com` and `https://www.plumbinghands.com`.
-- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citations, outreach, and final launch stay pending until Hostinger DNS is confirmed.
+- DNS and HTTPS are live on the final domains. Google Search Console TXT verification is the next owner step. Bing verification, sitemap submission in Bing, IndexNow, citations, outreach, and final launch remain pending.
 - Keep DNS records and owner-only domain steps in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.

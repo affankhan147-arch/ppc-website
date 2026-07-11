@@ -29,19 +29,20 @@ Final production hostnames:
 
 DNS-safe status:
 - Vercel production deployment exists at `https://plumbinghands.vercel.app`.
-- Hostinger DNS changes are pending with the domain owner/friend.
-- Exact Hostinger DNS records are in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-- Domain verification is pending.
-- HTTPS on the custom domain is pending.
-- Google/Bing verification and indexing are pending.
-- Do not submit sitemap, Bing, or IndexNow until Vercel DNS and HTTPS are live.
+- Hostinger DNS now points to Vercel.
+- Apex DNS is `A @ 76.76.21.21`.
+- WWW DNS is `CNAME www cname.vercel-dns.com`.
+- Exact Vercel DNS records are archived in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
+- HTTPS works on `https://plumbinghands.com` and `https://www.plumbinghands.com`.
+- Google Search Console verification is pending owner action.
+- Bing and IndexNow are pending until Google verification and sitemap submission are complete.
 
 Owner-only steps:
 
 1. Do not add the previous ChatGPT Sites DNS records.
 2. Use Vercel as the production hosting target.
-3. Have the Hostinger DNS owner add only the records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-4. Wait 15 to 60 minutes.
-5. Ask Codex to run `scripts/40_verify_plumbinghands_dns_and_https.ps1`.
+3. Run `scripts/50_open_google_search_console_setup.ps1`.
+4. Copy the Google TXT value from Search Console.
+5. Run `scripts/51_add_google_search_console_txt_to_hostinger.ps1`.
 
 Do not let Codex make payment, registrar, or DNS account changes without explicit owner approval.

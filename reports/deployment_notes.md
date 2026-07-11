@@ -28,16 +28,20 @@ Canonical URL guidance:
 - Sitemap URLs are generated from `siteConfig.baseUrl`, which resolves to https://plumbinghands.com.
 - Robots points crawlers to https://plumbinghands.com/sitemap.xml when production env values are used.
 
-Pending until Hostinger DNS is confirmed:
-- Hostinger DNS record update
-- custom domain verification in Vercel
-- HTTPS validation on https://plumbinghands.com and https://www.plumbinghands.com
-- Google Search Console verification
-- Bing Webmaster verification
-- sitemap submission
-- IndexNow submission
+Confirmed:
+- Hostinger DNS points to Vercel
+- HTTPS works on https://plumbinghands.com and https://www.plumbinghands.com
+- robots.txt works
+- sitemap.xml works
+
+Pending owner action:
+- Google Search Console TXT verification
+- Google sitemap submission after verification
+- homepage URL inspection and indexing request
+- Bing Webmaster verification after Google is complete
+- IndexNow after Bing is verified
 - final public launch
 
-Manual needs: Hostinger DNS record update, real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Search Console verification, Bing verification, and DNS approval.
+Manual needs: real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Search Console verification, and Bing verification.
 
 Do not commit private credentials.

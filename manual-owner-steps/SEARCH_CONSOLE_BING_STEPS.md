@@ -1,31 +1,54 @@
 # Search Console And Bing Webmaster Steps
 
-Production domain target:
+Production domain:
 - `https://plumbinghands.com`
 - `https://www.plumbinghands.com`
 
-DNS-safe status:
-- Vercel production hosting exists at `https://plumbinghands.vercel.app`.
-- DNS is pending with the Hostinger DNS owner.
-- Google Search Console verification is pending.
-- Bing Webmaster verification is pending.
-- Sitemap submission is pending.
-- IndexNow submission is pending.
-- Do not submit anything until DNS resolves to the approved production hosting target.
+Current status:
+- Vercel production is live.
+- Hostinger DNS points to Vercel.
+- HTTPS works on apex and www.
+- `https://plumbinghands.com/robots.txt` works.
+- `https://plumbinghands.com/sitemap.xml` works.
+- Google Search Console verification is pending owner action.
+- Bing Webmaster verification is pending until Google is complete.
+- IndexNow is pending until Bing is verified.
+
+## Google First
+
+Use:
+- `manual-owner-steps/GOOGLE_SEARCH_CONSOLE_STEP_BY_STEP.md`
+- `manual-owner-steps/GOOGLE_SITEMAP_SUBMISSION_CHECKLIST.md`
+- `scripts/50_open_google_search_console_setup.ps1`
+- `scripts/51_add_google_search_console_txt_to_hostinger.ps1`
+- `scripts/52_check_google_txt_dns.ps1`
 
 Owner-only steps:
 
-1. Wait for the Hostinger DNS owner to add the records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-2. Ask Codex to run `scripts/40_verify_plumbinghands_dns_and_https.ps1`.
-3. Open Google Search Console.
-4. Add `plumbinghands.com` as the domain property or add `https://plumbinghands.com` as a URL-prefix property.
-5. Add the verification token through DNS or the approved hosting verification method.
-6. Confirm canonical URLs use `https://plumbinghands.com`.
-7. Confirm robots points to `https://plumbinghands.com/sitemap.xml`.
-8. Submit `https://plumbinghands.com/sitemap.xml` only after verification succeeds.
-9. Open Bing Webmaster Tools.
-10. Add `https://plumbinghands.com` and verify ownership.
-11. Submit `https://plumbinghands.com/sitemap.xml` only after verification succeeds.
-12. Run IndexNow only after DNS, HTTPS, and Bing verification are confirmed.
+1. Run `scripts/50_open_google_search_console_setup.ps1`.
+2. In Google Search Console, choose Domain property.
+3. Enter `plumbinghands.com`.
+4. Copy the TXT value beginning with `google-site-verification=`.
+5. Keep the Google verification page open.
+6. Run `scripts/51_add_google_search_console_txt_to_hostinger.ps1`.
+7. Wait 5 to 15 minutes.
+8. Click `VERIFY` in Google Search Console.
+9. Submit `https://plumbinghands.com/sitemap.xml`.
+10. Inspect `https://plumbinghands.com`.
+11. Request indexing for the homepage only.
 
-Do not commit verification secrets or account tokens to the repo.
+## Bing Next
+
+Use:
+- `manual-owner-steps/BING_WEBMASTER_NEXT_AFTER_GOOGLE.md`
+
+Do not start Bing until Google ownership verification and sitemap submission are complete.
+
+## IndexNow Later
+
+Use:
+- `manual-owner-steps/INDEXNOW_PENDING.md`
+
+Do not run IndexNow until Bing Webmaster is verified and the sitemap is submitted.
+
+Do not commit verification secrets, API tokens, or account credentials to the repo.

@@ -1,0 +1,1 @@
+Run scripts/50_open_google_search_console_setup.ps1, get Google TXT verification record, then run scripts/51_add_google_search_console_txt_to_hostinger.ps1.

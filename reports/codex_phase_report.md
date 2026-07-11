@@ -36,9 +36,11 @@ Command 2: 3-day SEO + AEO build, DNS-safe mode.
 
 ## Manual Owner Steps
 - Replace sample tracking phone number values with the real owner-approved call tracking number.
-- Have the Hostinger DNS owner add only the exact Vercel records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-- Run `scripts/40_verify_plumbinghands_dns_and_https.ps1` after waiting 15 to 60 minutes.
-- Verify Google Search Console and Bing Webmaster Tools only after DNS and HTTPS are live.
+- Run `scripts/50_open_google_search_console_setup.ps1`.
+- Copy the Google TXT verification value from Search Console.
+- Run `scripts/51_add_google_search_console_txt_to_hostinger.ps1`.
+- Verify Google Search Console, submit the sitemap, and request homepage indexing only.
+- Prepare Bing Webmaster only after Google verification and sitemap submission are complete.
 - Submit sitemap and run IndexNow only after verification succeeds.
 - Verify real buyer claims before any license, insurance, review, office, or GBP language is used.
 

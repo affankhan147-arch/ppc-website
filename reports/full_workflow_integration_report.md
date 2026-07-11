@@ -55,7 +55,7 @@ Verified D-drive backup contents:
 Workflow and deployment-access updates are committed and pushed from branch `master`.
 
 ## Command 2 Readiness
-Command 2 is active in DNS-safe mode. Continue build, QA, reports, and commits without waiting for DNS. DNS, verification, indexing, citations, outreach, and final launch remain pending until the Hostinger DNS owner confirms records.
+Command 2 DNS setup is complete. Continue indexing setup without paid ads, citations, or outreach. Google Search Console verification is pending owner action; Bing and IndexNow remain pending.
 
 ## Deployment Access Confirmation
 - Sites project title: `Plumbing Hands`
@@ -67,7 +67,7 @@ Command 2 is active in DNS-safe mode. Continue build, QA, reports, and commits w
 - Production hosting target: Vercel
 - Temporary Vercel production URL: `https://plumbinghands.vercel.app`
 - ChatGPT Sites DNS instructions: paused; Sites remains preview/control only
-- Vercel DNS status: Hostinger update pending
+- Vercel DNS status: live on Hostinger DNS
 - DNS instructions: `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`
 
 ## Verification Completed

@@ -87,7 +87,7 @@ Only the owner handles account logins, GitHub or Google authorization, DNS, host
 - Production domain target: `https://plumbinghands.com`
 - WWW production hostname: `https://www.plumbinghands.com`
 - Hostinger DNS instructions are maintained in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
-- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citation submissions, outreach, and final launch are pending until `plumbinghands.com` and `www.plumbinghands.com` open the real Vercel site with HTTPS.
+- DNS and HTTPS are live on `plumbinghands.com` and `www.plumbinghands.com`. Google Search Console TXT verification is the next owner action. Bing, IndexNow, citation submissions, outreach, and final launch remain pending.
 - Use `plumbinghands.com` for `.env.example`, sitemap guidance, robots guidance, canonical URL guidance, Search Console guidance, Bing Webmaster guidance, and deployment notes.
 
 ## Command 2 Status
