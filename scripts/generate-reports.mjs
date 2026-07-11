@@ -228,8 +228,8 @@ writeFileSync(
   join(reportsDir, "buyer_routing_log.csv"),
   csv([
     ["buyer_id", "market", "service", "status", "daily_cap", "fallback_number", "routing_result"],
-    ["sample-dfw-emergency-plumbing", "dallas-fort-worth", "emergency-drain-cleaning", "test", "25", "+14695550188", "eligible sample fallback"],
-    ["sample-dfw-water-heater", "dallas-fort-worth", "water-heater-emergency", "test", "12", "+14695550188", "eligible sample fallback"]
+    ["sample-dfw-emergency-plumbing", "dallas-fort-worth", "emergency-drain-cleaning", "test", "25", "+1XXXXXXXXXX", "eligible sample fallback"],
+    ["sample-dfw-water-heater", "dallas-fort-worth", "water-heater-emergency", "test", "12", "+1XXXXXXXXXX", "eligible sample fallback"]
   ])
 );
 

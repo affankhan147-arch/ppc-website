@@ -6,8 +6,14 @@ const leadSchema = z.object({
   phone: z.string().min(7),
   service: z.string().min(1),
   city: z.string().min(1),
+  urgency: z.string().min(1),
   message: z.string().min(1),
-  pageUrl: z.string().optional()
+  pageUrl: z.string().optional(),
+  utmSource: z.string().optional(),
+  utmMedium: z.string().optional(),
+  utmCampaign: z.string().optional(),
+  utmTerm: z.string().optional(),
+  utmContent: z.string().optional()
 });
 
 function redactPhone(phone: string) {
@@ -37,7 +43,15 @@ export async function POST(request: Request) {
     leadId,
     city: parsed.data.city,
     service: parsed.data.service,
+    urgency: parsed.data.urgency,
     pageUrl: parsed.data.pageUrl || "",
+    utm: {
+      source: parsed.data.utmSource || "",
+      medium: parsed.data.utmMedium || "",
+      campaign: parsed.data.utmCampaign || "",
+      term: parsed.data.utmTerm || "",
+      content: parsed.data.utmContent || ""
+    },
     phoneHint: redactPhone(parsed.data.phone),
     messageLength: parsed.data.message.length,
     receivedAt: new Date().toISOString(),

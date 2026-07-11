@@ -22,7 +22,7 @@ export const buyers: Buyer[] = [
     daily_cap: 25,
     payout: 85,
     min_call_duration: 90,
-    fallback_number: "+14695550188"
+    fallback_number: "+1XXXXXXXXXX"
   },
   {
     buyer_id: "sample-dfw-water-heater",
@@ -34,6 +34,6 @@ export const buyers: Buyer[] = [
     daily_cap: 12,
     payout: 65,
     min_call_duration: 75,
-    fallback_number: "+14695550188"
+    fallback_number: "+1XXXXXXXXXX"
   }
 ];

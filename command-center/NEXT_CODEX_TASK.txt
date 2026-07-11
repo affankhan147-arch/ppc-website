@@ -1,1 +1,1 @@
-After Google Search Console TXT is added and verified, prepare Bing Webmaster + sitemap + IndexNow setup. Do not start citations or outreach yet.
+Day 2 SEO + AEO content scale: service pages, city pages, city + service pages, problem pages, cost guides, FAQ expansion, internal linking, and content QA. Do not start Google/Bing indexing until Day 1 QA is confirmed and sitemap is stable.
