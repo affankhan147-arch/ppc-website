@@ -21,6 +21,9 @@ Current deployment context:
 - Current private preview URL: https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site
 - Production domain target: https://plumbinghands.com
 - WWW production hostname: https://www.plumbinghands.com
-- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citations, outreach, and final launch are pending until Hostinger DNS is confirmed.
-- DNS records remain in manual-owner-steps/DOMAIN_DNS_STEPS.md.
+- Vercel is the prepared production deployment path under consideration.
+- ChatGPT Sites DNS instructions are paused and Sites remains preview-only.
+- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citations, outreach, and final launch are pending until Vercel generates DNS records and Hostinger DNS is confirmed.
+- Vercel deployment steps are in manual-owner-steps/VERCEL_DEPLOYMENT_STEPS.md.
+- Vercel DNS placeholders are in manual-owner-steps/VERCEL_DNS_STEPS.md.
 - Do not use or commit passwords, API keys, payment details, GitHub tokens, OpenAI keys, or private credentials.

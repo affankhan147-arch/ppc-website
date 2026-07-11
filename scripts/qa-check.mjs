@@ -16,6 +16,8 @@ const required = [
   "manual-owner-steps/DEPLOYMENT_MANUAL_STEPS.md",
   "manual-owner-steps/DOMAIN_DNS_STEPS.md",
   "manual-owner-steps/SEARCH_CONSOLE_BING_STEPS.md",
+  "manual-owner-steps/VERCEL_DEPLOYMENT_STEPS.md",
+  "manual-owner-steps/VERCEL_DNS_STEPS.md",
   "ops/image_asset_tracker.csv"
 ];
 
@@ -86,9 +88,8 @@ for (const requiredText of [
   "https://plumbinghands.com",
   "https://www.plumbinghands.com",
   "Hostinger DNS",
-  "162.159.143.30",
-  "172.66.3.26",
-  "custom-domains.chatgpt.site."
+  "ChatGPT Sites DNS instructions are paused",
+  "VERCEL_DNS_STEPS.md"
 ]) {
   if (!domainSteps.includes(requiredText)) {
     console.error(`DOMAIN_DNS_STEPS.md is missing required DNS-safe text: ${requiredText}`);
@@ -99,6 +100,16 @@ for (const requiredText of [
 const deploymentNotes = readFileSync(join(process.cwd(), "reports/deployment_notes.md"), "utf8");
 if (!deploymentNotes.includes("must not be treated as the final production website")) {
   console.error("Deployment notes must mark chatgpt.site as preview/control only.");
+  process.exit(1);
+}
+if (!deploymentNotes.includes("Vercel is now the prepared production deployment path")) {
+  console.error("Deployment notes must mark Vercel as the prepared production path.");
+  process.exit(1);
+}
+
+const vercelDns = readFileSync(join(process.cwd(), "manual-owner-steps/VERCEL_DNS_STEPS.md"), "utf8");
+if (!vercelDns.includes("PENDING_FROM_VERCEL")) {
+  console.error("VERCEL_DNS_STEPS.md must keep DNS values pending until Vercel generates them.");
   process.exit(1);
 }
 

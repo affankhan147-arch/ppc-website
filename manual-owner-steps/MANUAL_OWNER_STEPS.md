@@ -29,9 +29,13 @@ The owner must explicitly approve:
 ## During Command 2 DNS-Safe Mode
 1. Confirm each pushed sprint commit is visible on GitHub.
 2. Keep the private `chatgpt.site` preview separate from the final production website.
-3. Ask the Hostinger DNS owner to add the records in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.
-4. Replace sample tracking phone values with real owner-approved call tracking values before public launch.
-5. Approve real buyer routing endpoints before collecting or forwarding production leads.
-6. Verify Search Console and Bing only after DNS and HTTPS are confirmed.
-7. Submit sitemap and run IndexNow only after Google/Bing verification succeeds.
-8. Do not approve paid ads, fake GBP, fake reviews, fake addresses, fake licenses, fake insurance claims, copied competitor images, or spam backlink actions.
+3. Import the GitHub repo into Vercel when ready.
+4. Add Vercel production environment variables from `.env.example`.
+5. Add `plumbinghands.com` and `www.plumbinghands.com` in Vercel.
+6. Copy exact Vercel-generated DNS records into `manual-owner-steps/VERCEL_DNS_STEPS.md`.
+7. Ask the Hostinger DNS owner to add only those exact Vercel records.
+8. Replace sample tracking phone values with real owner-approved call tracking values before public launch.
+9. Approve real buyer routing endpoints before collecting or forwarding production leads.
+10. Verify Search Console and Bing only after DNS and HTTPS are confirmed.
+11. Submit sitemap and run IndexNow only after Google/Bing verification succeeds.
+12. Do not approve paid ads, fake GBP, fake reviews, fake addresses, fake licenses, fake insurance claims, copied competitor images, or spam backlink actions.
