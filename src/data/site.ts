@@ -1,8 +1,8 @@
 export const siteConfig = {
-  brandName: "DFW Plumbing Connect",
+  brandName: "Plumbing Hands",
   platformName: "PPC Lead Generation Platform",
-  legalName: "PPC Lead Generation Platform",
-  baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://dfwplumbingconnect.com",
+  legalName: "Plumbing Hands",
+  baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://plumbinghands.com",
   marketName: "Dallas-Fort Worth",
   state: "Texas",
   primaryVertical: "Emergency plumbing and drain cleaning",
