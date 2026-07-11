@@ -4,6 +4,9 @@ import { join } from "node:path";
 const reportsDir = join(process.cwd(), "reports");
 mkdirSync(reportsDir, { recursive: true });
 
+const productionDomain = "https://plumbinghands.com";
+const productionWwwDomain = "https://www.plumbinghands.com";
+
 const services = [
   "24-hour-emergency-plumber",
   "emergency-drain-cleaning",
@@ -213,7 +216,11 @@ writeFileSync(
     ["phone links", "created", "visible call links use tel format"],
     ["forms", "created", "/api/lead logs safely"],
     ["fake claims", "passed", "No fake reviews, ratings, licenses, insurance, or offices"],
-    ["AEO audit", "created", "reports/aeo_page_audit.csv"]
+    ["AEO audit", "created", "reports/aeo_page_audit.csv"],
+    ["DNS", "pending owner action", "Hostinger DNS owner must add production records before final launch"],
+    ["Search Console", "pending DNS", "Do not verify or submit sitemap until DNS and HTTPS are live"],
+    ["Bing Webmaster", "pending DNS", "Do not verify or submit sitemap until DNS and HTTPS are live"],
+    ["IndexNow", "pending DNS", "Do not run IndexNow until DNS, HTTPS, and Bing verification are confirmed"]
   ])
 );
 
@@ -270,22 +277,22 @@ writeFileSync(
 
 writeFileSync(
   join(reportsDir, "conversion_tracking_plan.md"),
-  `# Conversion Tracking Plan\n\nUse direct tel links for visible call buttons and expose call-click support through /api/call-event. Use /api/lead for form submits. Add GA4, GTM, Clarity, Search Console, and Bing values through environment variables only after owner approval.\n`
+  `# Conversion Tracking Plan\n\nUse direct tel links for visible call buttons and expose call-click support through /api/call-event. Use /api/lead for form submits. The lead endpoint is a safe placeholder and does not return submitted personal details in the response.\n\nAdd GA4, GTM, Clarity, Search Console, and Bing values through environment variables only after owner approval. Do not run live indexing, paid ads, or outreach automation from this repo.\n`
 );
 
 writeFileSync(
   join(reportsDir, "deployment_notes.md"),
-  `# Deployment Notes\n\nThe app is prepared for deployment from GitHub branch master after owner account approval.\n\nManual needs: production domain, real tracking phone number, hosting provider, environment variables, Search Console verification, Bing verification, and DNS approval.\n\nDo not commit private credentials.\n`
+  `# Deployment Notes\n\nThe app is prepared for DNS-safe development from GitHub branch master.\n\nFinal production domains:\n- ${productionDomain}\n- ${productionWwwDomain}\n\nThe ChatGPT/Codex \`chatgpt.site\` URL is a private preview/control URL and must not be treated as the final production website.\n\nCanonical URL guidance:\n- \`.env.example\` sets \`SITE_DOMAIN=plumbinghands.com\` and \`NEXT_PUBLIC_SITE_URL=${productionDomain}\`.\n- Sitemap URLs are generated from \`siteConfig.baseUrl\`, which resolves to ${productionDomain}.\n- Robots points crawlers to ${productionDomain}/sitemap.xml when production env values are used.\n\nPending until Hostinger DNS is confirmed:\n- custom domain verification\n- HTTPS validation on ${productionDomain} and ${productionWwwDomain}\n- Google Search Console verification\n- Bing Webmaster verification\n- sitemap submission\n- IndexNow submission\n- final public launch\n\nManual needs: real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Search Console verification, Bing verification, and DNS approval.\n\nDo not commit private credentials.\n`
 );
 
 writeFileSync(
   join(reportsDir, "seo_aeo_execution_report.md"),
-  `# SEO + AEO Execution Report\n\nEpic: SEO and Content\nGoal: Build a reusable Dallas-Fort Worth emergency plumbing SEO + AEO platform.\nCompleted: Config-driven service, city, city-service, problem, cost guide, blog, FAQ, contact, partner, and legal pages.\nFiles changed: src/data, src/app, src/components, src/lib, reports, ops, blueprints.\nTests run: report generation pending build and QA run.\nRisks: Owner must replace sample tracking phone values before public launch.\nManual owner steps: tracking number, hosting, domain, Search Console, Bing verification.\nNext action: run build, QA, D-drive backup, commit, and push.\n`
+  `# SEO + AEO Execution Report\n\nEpic: SEO and Content\nGoal: Build a reusable Dallas-Fort Worth emergency plumbing SEO + AEO platform in DNS-safe mode.\nCompleted: Config-driven service, city, city-service, problem, cost guide, blog, FAQ, contact, partner, and legal pages.\nFiles changed: src/data, src/app, src/components, src/lib, public/images, reports, ops, blueprints, scripts, and manual-owner-steps.\nTests run: report generation pending build and QA run.\nRisks: Owner must replace sample tracking phone values before public launch. Hostinger DNS is pending. Search Console, Bing, sitemap submission, IndexNow, citations, outreach, and final launch are blocked until DNS and HTTPS are confirmed.\nManual owner steps: tracking number, Hostinger DNS, domain verification, Search Console verification, Bing verification, and buyer endpoint approval.\nNext action: run report generation, QA, build, D-drive backup, commit, and push.\n`
 );
 
 writeFileSync(
   join(reportsDir, "final_handoff.md"),
-  `# Final Handoff\n\n## What Was Built\nA config-driven pay-per-call lead-generation platform for Dallas-Fort Worth emergency plumbing and drain cleaning.\n\n## How To Run Locally\nUse Node and pnpm, then run pnpm install, pnpm run reports, pnpm run qa, pnpm run build, and pnpm run dev.\n\n## Environment Variables Needed\nSee .env.example. Replace sample phone values before public launch.\n\n## Sitemap And Robots\nSitemap: /sitemap.xml\nRobots: /robots.txt\n\n## Important Page URLs\n/, /services/24-hour-emergency-plumber, /services/emergency-drain-cleaning, /cities/dallas, /cities/dallas/emergency-drain-cleaning, /faq, /contact, /partner-with-us, /privacy, /terms, /disclosure.\n\n## Manual Owner Steps\nProvide real tracking number, approve hosting, connect domain/DNS, verify Search Console and Bing, approve buyer claims.\n\n## Known Limitations\nSample buyer and tracking values are included for build/routing scaffolding and must be replaced before public launch.\n\n## Next 7-Day Growth Plan\nImprove top city-service pages, add verified buyer data, expand FAQs, refine internal links, submit sitemap after deployment, monitor Search Console and Bing, and update content QA reports.\n`
+  `# Final Handoff\n\n## What Was Built\nA config-driven pay-per-call lead-generation platform for Dallas-Fort Worth emergency plumbing and drain cleaning.\n\n## DNS-Safe Production Target\nFinal domain: ${productionDomain}\nWWW hostname: ${productionWwwDomain}\n\nThe temporary \`chatgpt.site\` preview/control URL is not the final production website.\n\n## How To Run Locally\nUse Node and pnpm, then run pnpm install, pnpm run reports, pnpm run qa, pnpm run build, and pnpm run dev.\n\n## Environment Variables Needed\nSee .env.example. Replace sample phone values before public launch. Keep verification tokens blank until owner approval.\n\n## Sitemap, Robots, And Canonicals\nSitemap target after DNS: ${productionDomain}/sitemap.xml\nRobots target after DNS: ${productionDomain}/robots.txt\nCanonical URL base: ${productionDomain}\n\nDo not submit sitemap or IndexNow until Hostinger DNS, HTTPS, Google Search Console, and Bing verification are confirmed.\n\n## Important Page URLs\n/, /services/24-hour-emergency-plumber, /services/emergency-drain-cleaning, /cities/dallas, /cities/dallas/emergency-drain-cleaning, /faq, /contact, /partner-with-us, /privacy, /terms, /disclosure.\n\n## Manual Owner Steps\nProvide real tracking number, have the Hostinger DNS owner add records, verify Search Console and Bing after DNS, approve buyer routing endpoints, and approve any real business claims before use.\n\n## Known Limitations\nSample buyer and tracking values are included for build/routing scaffolding and must be replaced before public launch. DNS, verification, indexing, citations, outreach, and final launch are pending.\n\n## Next 7-Day Growth Plan\nImprove top city-service pages, add verified buyer data, expand FAQs, refine internal links, submit sitemap only after DNS/verification, monitor Search Console and Bing, and update content QA reports.\n`
 );
 
 console.log(`Generated ${pages.length} page/report records.`);

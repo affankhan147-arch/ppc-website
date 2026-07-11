@@ -1,3 +1,13 @@
 Image file name,Page used,Image type,Source,Source URL,License/permission status,AI generated yes/no,Real partner photo yes/no,Caption,Alt text,Risk status,Compression status,Page URL,Notes
 lucide-icons,sitewide,icons,lucide-react package,https://lucide.dev,open-source package,no,no,Interface icons,Functional interface icons,low,not applicable,sitewide,Used instead of fake photos
 css-hero-field,homepage,css visual,authored in CSS,repo,owned,no,no,Infrastructure-style grid field,Abstract emergency routing grid,low,not applicable,/,No real job-site claim
+public-images-blog,blog,image folder,repo,repo,placeholder folder,no,no,Blog image staging,Future approved blog visuals,low,not applicable,/blog,Folder tracked with safety README only
+public-images-brand,sitewide,image folder,repo,repo,placeholder folder,no,no,Brand image staging,Future approved brand visuals,low,not applicable,sitewide,Folder tracked with safety README only
+public-images-cities,city pages,image folder,repo,repo,placeholder folder,no,no,City image staging,Future approved city-context visuals,low,not applicable,/cities,No fake office or address claims
+public-images-cost-guides,cost guides,image folder,repo,repo,placeholder folder,no,no,Cost guide image staging,Future approved cost diagrams,low,not applicable,/cost-guides,No fake before-and-after images
+public-images-diagrams,sitewide,image folder,repo,repo,placeholder folder,no,no,Diagram image staging,Future original diagrams,low,not applicable,sitewide,Use original diagrams and flowcharts
+public-images-hero,homepage,image folder,repo,repo,placeholder folder,no,no,Hero image staging,Future approved hero visuals,low,not applicable,/,No fake technicians or customers
+public-images-partner-real-photos,partner pages,image folder,repo,repo,placeholder folder,no,no,Partner photo staging,Future real partner photos,medium,not applicable,/partner-with-us,Use only documented permission photos
+public-images-problems,problem pages,image folder,repo,repo,placeholder folder,no,no,Problem image staging,Future approved problem visuals,low,not applicable,/problems,No copied competitor images
+public-images-services,service pages,image folder,repo,repo,placeholder folder,no,no,Service image staging,Future approved service visuals,low,not applicable,/services,No unsupported license or service claims
+public-images-trust,sitewide,image folder,repo,repo,placeholder folder,no,no,Trust asset staging,Future verified trust assets,medium,not applicable,sitewide,No fake badges reviews licenses or insurance marks

@@ -1,34 +1,27 @@
 # Deployment Notes
 
-The app is prepared for deployment from GitHub branch master and has a Sites-compatible vinext worker package.
+The app is prepared for DNS-safe development from GitHub branch master.
 
-Manual needs after Sites deployment: custom production domain if desired, real tracking phone number, environment variables, Search Console verification, Bing verification, and DNS approval.
+Final production domains:
+- https://plumbinghands.com
+- https://www.plumbinghands.com
 
-Private Sites production URL:
-https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site
+The ChatGPT/Codex `chatgpt.site` URL is a private preview/control URL and must not be treated as the final production website.
 
-Access status:
-- The `chatgpt.site` URL is private/custom access and may show a permission page to visitors who are not allowed in the Sites access policy.
-- It is a preview/control URL, not the final production website.
-- To make this preview public, the owner must explicitly ask Codex to switch Sites access mode to public.
+Canonical URL guidance:
+- `.env.example` sets `SITE_DOMAIN=plumbinghands.com` and `NEXT_PUBLIC_SITE_URL=https://plumbinghands.com`.
+- Sitemap URLs are generated from `siteConfig.baseUrl`, which resolves to https://plumbinghands.com.
+- Robots points crawlers to https://plumbinghands.com/sitemap.xml when production env values are used.
 
-Custom domain target:
-https://plumbinghands.com
+Pending until Hostinger DNS is confirmed:
+- custom domain verification
+- HTTPS validation on https://plumbinghands.com and https://www.plumbinghands.com
+- Google Search Console verification
+- Bing Webmaster verification
+- sitemap submission
+- IndexNow submission
+- final public launch
 
-DNS provider detected from nameservers:
-`ns1.dns-parking.com` and `ns2.dns-parking.com`
-
-Required DNS records:
-
-Root domain:
-- `A` record for `@` to `162.159.143.30`
-- `A` record for `@` to `172.66.3.26`
-- `TXT` record `_openai-site-verification` with value `openai-site-verification=9kmC7UkZ_q4kj-kyT9D2yzxfChEBJ5jX6ldD4cYy7E4`
-- `TXT` record `_cf-custom-hostname` with value `841c231c-8c90-444e-8617-e7126a8e3a6e`
-
-WWW subdomain:
-- `CNAME` record `www` to `custom-domains.chatgpt.site.`
-- `TXT` record `_openai-site-verification.www` with value `openai-site-verification=Q9K0jUeEKtwVMGe6x3vIkD4AETfUrSf7EbkXDlJV84c`
-- `TXT` record `_cf-custom-hostname.www` with value `2f114ba2-584d-4a8f-88dd-2600f004e5d2`
+Manual needs: real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Search Console verification, Bing verification, and DNS approval.
 
 Do not commit private credentials.

@@ -1,6 +1,6 @@
 FINAL 3-DAY SEO + AEO BUILD COMMAND
 
-Command 2 is ready. Do not start until the owner explicitly says to begin.
+Command 2 is active in DNS-safe mode.
 
 The full owner-supplied command is preserved at:
 command-center/PPC_Software_Company_3_Day_HyperAggressive_SEO_AEO_Codex_Super_Command_WITH_D_DRIVE_BLUEPRINT_BACKUP.txt
@@ -43,5 +43,6 @@ Hard safety limits:
 
 Deployment context before launch:
 - Treat the ChatGPT/Codex `chatgpt.site` URL as a private preview/control URL.
-- The final production target is `https://plumbinghands.com`.
+- The final production targets are `https://plumbinghands.com` and `https://www.plumbinghands.com`.
+- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citations, outreach, and final launch stay pending until Hostinger DNS is confirmed.
 - Keep DNS records and owner-only domain steps in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.

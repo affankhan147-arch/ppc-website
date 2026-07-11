@@ -10,6 +10,15 @@ const leadSchema = z.object({
   pageUrl: z.string().optional()
 });
 
+function redactPhone(phone: string) {
+  const digits = phone.replace(/\D/g, "");
+  return digits.length >= 4 ? `last4:${digits.slice(-4)}` : "redacted";
+}
+
+function createLeadId() {
+  return `lead_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+}
+
 export async function POST(request: Request) {
   const contentType = request.headers.get("content-type") || "";
   const raw =
@@ -23,12 +32,24 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid lead request." }, { status: 400 });
   }
 
-  const lead = {
-    ...parsed.data,
+  const leadId = createLeadId();
+  const safeLeadLog = {
+    leadId,
+    city: parsed.data.city,
+    service: parsed.data.service,
+    pageUrl: parsed.data.pageUrl || "",
+    phoneHint: redactPhone(parsed.data.phone),
+    messageLength: parsed.data.message.length,
     receivedAt: new Date().toISOString(),
-    source: "website-form"
+    source: "website-form",
+    storageMode: "placeholder-console-log-only"
   };
 
-  console.info("lead_request_logged", lead);
-  return NextResponse.json({ ok: true, message: "Lead request logged for safe routing.", lead });
+  console.info("lead_request_placeholder_logged", safeLeadLog);
+  return NextResponse.json({
+    ok: true,
+    message: "Lead request logged for safe routing placeholder.",
+    leadId,
+    nextStep: "Owner must connect approved CRM, call tracking, or buyer routing storage before public launch."
+  });
 }

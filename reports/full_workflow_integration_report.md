@@ -7,7 +7,7 @@ Workflow integration system for ChatGPT, Codex, GitHub, Google Colab, PowerShell
 2026-07-11
 
 ## Status
-Workflow system created, locally verified, and extended into the Command 2 reusable SEO + AEO lead-generation platform.
+Workflow system created, locally verified, and extended into the Command 2 reusable SEO + AEO lead-generation platform in DNS-safe mode.
 
 ## Completed Components
 - Required workflow folders created or verified.
@@ -55,7 +55,7 @@ Verified D-drive backup contents:
 Workflow and deployment-access updates are committed and pushed from branch `master`.
 
 ## Command 2 Readiness
-Command 2 is prepared and ready, but should not be started until the owner explicitly says to begin.
+Command 2 is active in DNS-safe mode. Continue build, QA, reports, and commits without waiting for DNS. DNS, verification, indexing, citations, outreach, and final launch remain pending until the Hostinger DNS owner confirms records.
 
 ## Deployment Access Confirmation
 - Sites project title: `Plumbing Hands`
@@ -63,6 +63,7 @@ Command 2 is prepared and ready, but should not be started until the owner expli
 - Preview access status: private/custom access
 - Public preview status: not public unless the owner explicitly asks Codex to switch Sites access mode to public
 - Production domain target: `https://plumbinghands.com`
+- WWW production hostname: `https://www.plumbinghands.com`
 - Custom domain status: pending DNS validation
 - DNS instructions: `manual-owner-steps/DOMAIN_DNS_STEPS.md`
 

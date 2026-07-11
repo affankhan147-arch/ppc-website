@@ -20,9 +20,20 @@ visit it. Keep using `plumbinghands.com` as the production domain target.
 
 ## Production Domain
 
+Final production hostnames:
+- `https://plumbinghands.com`
+- `https://www.plumbinghands.com`
+
+DNS-safe status:
+- Hostinger DNS change is pending with the domain owner/friend.
+- Domain verification is pending.
+- HTTPS on the custom domain is pending.
+- Google/Bing verification and indexing are pending.
+- Do not submit sitemap, Bing, or IndexNow until the records below are live.
+
 Owner-only steps:
 
-1. Log in directly to the DNS provider for `plumbinghands.com`.
+1. Log in directly to Hostinger DNS for `plumbinghands.com`.
 2. Add these root-domain records:
    - `A` record for `@` to `162.159.143.30`
    - `A` record for `@` to `172.66.3.26`

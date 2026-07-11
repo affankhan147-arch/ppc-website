@@ -23,9 +23,9 @@ $content = @"
 PPC lead generation platform for organic SEO and AEO focused call generation.
 
 ## Current Phase
-Command 2: reusable SEO + AEO lead-generation platform build.
+Command 2: DNS-safe reusable SEO + AEO lead-generation platform build.
 
-The website build has started. Dallas-Fort Worth emergency plumbing and drain cleaning is Version 1.
+Continue build work that does not require DNS ownership confirmation. Dallas-Fort Worth emergency plumbing and drain cleaning is Version 1.
 
 ## Repository
 - GitHub: ``affankhan147-arch/ppc-website``
@@ -71,8 +71,17 @@ Do not commit passwords, API keys, payment details, GitHub tokens, OpenAI keys, 
 ## Manual Owner Steps
 Only the owner handles account logins, GitHub or Google authorization, DNS, hosting, payment, ad platform approvals, production call tracking number setup, Search Console verification, and Bing verification.
 
+## Deployment Context
+- The ChatGPT/Codex Sites URL is a private preview/control URL, not the final production website.
+- Current private preview/control URL: ``https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site``
+- Production domain target: ``https://plumbinghands.com``
+- WWW production hostname: ``https://www.plumbinghands.com``
+- DNS instructions are maintained in ``manual-owner-steps/DOMAIN_DNS_STEPS.md``.
+- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citation submissions, outreach, and final launch are pending until Hostinger DNS is confirmed.
+- Use ``plumbinghands.com`` for ``.env.example``, sitemap guidance, robots guidance, canonical URL guidance, Search Console guidance, Bing Webmaster guidance, and deployment notes.
+
 ## Command 2 Status
-Command 2 has been implemented in source code and reports. Latest required verification: report generation, custom QA, Next production build, D-drive backup, GitHub commit, and push.
+Command 2 is active in DNS-safe mode. Latest required verification: report generation, custom QA, Next production build, D-drive backup, GitHub commit, and push.
 "@
 
 Set-Content -Path ".\ops\codex_minimum_context.md" -Value $content -Encoding UTF8

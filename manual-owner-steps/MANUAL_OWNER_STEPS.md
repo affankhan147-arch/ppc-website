@@ -26,10 +26,12 @@ The owner must explicitly approve:
 - third-party service connections
 - any claim about licenses, insurance, physical offices, or verified reviews
 
-## Before Command 2
-1. Confirm this workflow commit is visible on GitHub.
-2. Run the D-drive backup script.
-3. Confirm the safety policy is acceptable.
-4. Confirm whether the private `chatgpt.site` preview should remain private or be switched to public preview access.
-5. Add the production DNS records from `manual-owner-steps/DOMAIN_DNS_STEPS.md`.
-6. Tell Codex to start Command 2 only when ready.
+## During Command 2 DNS-Safe Mode
+1. Confirm each pushed sprint commit is visible on GitHub.
+2. Keep the private `chatgpt.site` preview separate from the final production website.
+3. Ask the Hostinger DNS owner to add the records in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.
+4. Replace sample tracking phone values with real owner-approved call tracking values before public launch.
+5. Approve real buyer routing endpoints before collecting or forwarding production leads.
+6. Verify Search Console and Bing only after DNS and HTTPS are confirmed.
+7. Submit sitemap and run IndexNow only after Google/Bing verification succeeds.
+8. Do not approve paid ads, fake GBP, fake reviews, fake addresses, fake licenses, fake insurance claims, copied competitor images, or spam backlink actions.
