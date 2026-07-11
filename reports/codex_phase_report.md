@@ -23,7 +23,7 @@ Command 2: 3-day SEO + AEO build.
 - Secret-shaped value scan: pending final pre-commit scan.
 - Report generation: passed.
 - Custom QA: passed.
-- Next production build: passed with 243 generated routes.
+- Next production build: passed on Next.js 16.2.10 with 242 static pages plus dynamic APIs.
 - Commit and push: pending final Git handoff.
 
 ## Manual Owner Steps

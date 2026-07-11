@@ -1,5 +1,5 @@
 "gate","status","notes"
-"build","passed","Next production build generated 243 routes"
+"build","passed","Next 16 production build generated 242 static pages plus dynamic APIs"
 "typescript","passed","Next build lint and type validation completed"
 "sitemap","created","/sitemap.xml"
 "robots","created","/robots.txt"
