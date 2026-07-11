@@ -1,5 +1,5 @@
 import { blogPosts } from "@/data/blogPosts";
-import { cities } from "@/data/cities";
+import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
@@ -75,15 +75,18 @@ export function getAllInventoryPages(): InventoryPage[] {
     description: `Connect with local emergency plumbing and drain cleaning providers serving ${city.name} and nearby ${siteConfig.marketName} areas.`
   }));
 
-  const cityServicePages = cities.flatMap((city) =>
-    services.map((service) => ({
+  const cityServicePages = priorityCityServiceCombos.flatMap((combo) => {
+    const city = cities.find((item) => item.slug === combo.citySlug);
+    const service = services.find((item) => item.slug === combo.serviceSlug);
+    if (!city || !service) return [];
+    return [{
       kind: "city-service" as const,
       title: `${service.name} in ${city.name}, TX`,
       path: cityServicePath(city.slug, service.slug),
       h1: `${service.name} in ${city.name}, TX`,
       description: `${service.shortAnswer} This ${city.name} page is written for local service-area intent without fake office claims.`
-    }))
-  );
+    }];
+  });
 
   const problemPages = problems.map((problem) => ({
     kind: "problem" as const,

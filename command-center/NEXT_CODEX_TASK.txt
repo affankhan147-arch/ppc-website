@@ -1,1 +1,1 @@
-Day 2 SEO + AEO content scale: service pages, city pages, city + service pages, problem pages, cost guides, FAQ expansion, internal linking, and content QA. Do not start Google/Bing indexing until Day 1 QA is confirmed and sitemap is stable.
+After owner approves Day 2 content QA and sitemap stability, proceed with Google Search Console setup, sitemap submission, Bing Webmaster preparation, and IndexNow planning. Do not start citations, outreach, or paid ads.

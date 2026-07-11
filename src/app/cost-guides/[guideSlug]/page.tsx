@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { CostFactors, DirectAnswer, FAQBlock, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
@@ -33,6 +34,9 @@ export default async function CostGuidePage({ params }: Props) {
   const guide = costGuides.find((item) => item.slug === guideSlug);
   if (!guide) notFound();
   const relatedService = services.find((service) => service.slug === guide.relatedServiceSlug);
+  const relatedProblems = guide.relatedProblemSlugs
+    .map((slug) => problems.find((problem) => problem.slug === slug))
+    .filter((problem): problem is (typeof problems)[number] => Boolean(problem));
   const path = `/cost-guides/${guide.slug}`;
   const faqs = [
     {
@@ -70,10 +74,22 @@ export default async function CostGuidePage({ params }: Props) {
       </div>
 
       <DirectAnswer>{guide.directAnswer}</DirectAnswer>
+      <section className="content-section">
+        <p className="section-kicker">General range guidance</p>
+        <h2 className="mt-2 text-2xl font-black text-slate-950">Why exact pricing is not guaranteed here</h2>
+        <p className="mt-3 leading-7 text-slate-700">{guide.rangeGuidance}</p>
+      </section>
       <CostFactors factors={guide.factors} />
+      <InfoListSection kicker="Before booking" title="Questions to ask the provider" items={guide.questionsToAsk} />
       <LocalGuidance />
       <FAQBlock faqs={faqs} />
-      <InternalLinks extra={relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []} />
+      <InternalLinks
+        extra={[
+          ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
+          ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
+          { label: "Request provider connection", href: "/contact" }
+        ]}
+      />
     </main>
   );
 }

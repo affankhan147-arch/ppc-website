@@ -2,6 +2,10 @@
 
 Date: 2026-07-12
 
+## Latest Scope
+
+Day 2 SEO + AEO content scale.
+
 ## Requested Commands
 
 `npm install`:
@@ -21,7 +25,8 @@ Command path:
 
 Result:
 - Next.js production build passed
-- 242 static pages generated
+- 118 static build entries generated, including framework/support routes
+- 112 sitemap URLs verified in the local sitemap artifact
 - `/api/lead` remains dynamic
 - `/api/call-event` remains dynamic
 
@@ -38,6 +43,10 @@ Custom QA:
 
 TypeScript:
 - passed with `pnpm run typecheck`
+
+Sitemap artifact:
+- `.next/server/app/sitemap.xml.body` contained 112 final-domain URLs
+- no Vercel preview, ChatGPT Sites, localhost, admin, report, or draft URLs were found
 
 PowerShell syntax checks:
 - passed for Google Search Console helper scripts

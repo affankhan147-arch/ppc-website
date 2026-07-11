@@ -46,6 +46,33 @@ export function CostFactors({ factors }: { factors: string[] }) {
   );
 }
 
+export function InfoListSection({
+  kicker,
+  title,
+  intro,
+  items
+}: {
+  kicker: string;
+  title: string;
+  intro?: string;
+  items: string[];
+}) {
+  return (
+    <section className="content-section">
+      <p className="section-kicker">{kicker}</p>
+      <h2 className="mt-2 text-2xl font-black text-slate-950">{title}</h2>
+      {intro ? <p className="mt-3 leading-7 text-slate-700">{intro}</p> : null}
+      <ul className="mt-4 grid gap-3 md:grid-cols-2">
+        {items.map((item) => (
+          <li key={item} className="rounded-md border border-slate-200 bg-white p-4 font-semibold leading-6 text-slate-800">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function LocalGuidance({ cityName = "Dallas-Fort Worth" }: { cityName?: string }) {
   return (
     <section className="content-section">

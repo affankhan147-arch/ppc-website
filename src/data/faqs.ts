@@ -19,6 +19,18 @@ export const universalFaqs: FAQ[] = [
   {
     question: "Do you create Google Business Profiles?",
     answer: "No fake profiles are created. A Google Business Profile should only be used for a real eligible business or verified partner."
+  },
+  {
+    question: "Does Plumbing Hands have an office in every city page?",
+    answer: "No. City pages use service-area wording for Dallas-Fort Worth. They do not claim a physical office, fake address, or fake local listing."
+  },
+  {
+    question: "Is the phone number a live tracking number?",
+    answer: "The site uses a placeholder phone until the owner supplies an approved call tracking number. Real tracking should not be claimed until it is configured."
+  },
+  {
+    question: "Can this site guarantee exact plumbing prices?",
+    answer: "No. Cost depends on diagnosis, access, timing, parts, severity, and provider pricing. Confirm pricing directly before approving work."
   }
 ];
 
@@ -38,5 +50,17 @@ export const emergencyFaqs: FAQ[] = [
   {
     question: "What details should I share when calling?",
     answer: "Share the city, affected fixtures, whether water is active, any sewer odor, and whether the problem is getting worse."
+  },
+  {
+    question: "When is a sewer smell urgent?",
+    answer: "Sewer smell is more urgent when it appears with slow drains, gurgling toilets, visible wastewater, or symptoms across multiple fixtures."
+  },
+  {
+    question: "What should I avoid during a drain backup?",
+    answer: "Avoid running more water, using chemical cleaners, running laundry or dishwasher cycles, and touching contaminated water."
+  },
+  {
+    question: "Should I request indexing before content QA is complete?",
+    answer: "No. Google and Bing setup should wait until the Day 2 sitemap and content QA are stable and the owner approves indexing."
   }
 ];

@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { CostFactors, DirectAnswer, EmergencySteps, FAQBlock, InternalLinks, LocalGuidance } from "@/components/PageSections";
-import { cities } from "@/data/cities";
+import { CostFactors, DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { cities, priorityCityServiceCombos } from "@/data/cities";
+import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
@@ -42,6 +44,16 @@ export default async function ServicePage({ params }: Props) {
     ...emergencyFaqs,
     ...universalFaqs
   ].slice(0, 8);
+  const relatedProblems = problems.filter((problem) => problem.relatedServiceSlug === service.slug).slice(0, 3);
+  const relatedCostGuide = costGuides.find((guide) => guide.relatedServiceSlug === service.slug);
+  const priorityCityLinks = priorityCityServiceCombos
+    .filter((combo) => combo.serviceSlug === service.slug)
+    .slice(0, 4)
+    .map((combo) => {
+      const city = cities.find((item) => item.slug === combo.citySlug);
+      return city ? { label: `${service.name} in ${city.name}`, href: `/cities/${city.slug}/${service.slug}` } : null;
+    })
+    .filter((link): link is { label: string; href: string } => Boolean(link));
 
   return (
     <main className="page-shell">
@@ -74,6 +86,12 @@ export default async function ServicePage({ params }: Props) {
 
       <DirectAnswer>{service.shortAnswer}</DirectAnswer>
       <EmergencySteps steps={service.steps} />
+      <InfoListSection
+        kicker="Before calling"
+        title="What information to prepare"
+        intro="The matched provider can usually triage faster when the request includes clear, practical details."
+        items={service.callPrep}
+      />
 
       <section className="content-section">
         <p className="section-kicker">When to call</p>
@@ -85,14 +103,31 @@ export default async function ServicePage({ params }: Props) {
         </ul>
       </section>
 
+      <InfoListSection
+        kicker="Common causes"
+        title={`Why ${service.name} issues happen`}
+        intro="The exact cause requires diagnosis, but these are common patterns Dallas-Fort Worth homeowners and managers report."
+        items={service.commonCauses}
+      />
+      <InfoListSection
+        kicker="Avoid these mistakes"
+        title="What not to do during the emergency"
+        items={service.mistakesToAvoid}
+      />
+      <section className="content-section">
+        <p className="section-kicker">Cost discussion</p>
+        <h2 className="mt-2 text-2xl font-black text-slate-950">Approximate cost factors without fake pricing</h2>
+        <p className="mt-3 leading-7 text-slate-700">{service.costDiscussion}</p>
+      </section>
       <CostFactors factors={service.costFactors} />
       <LocalGuidance />
       <FAQBlock faqs={faqs} />
       <InternalLinks
-        extra={cities.slice(0, 4).map((city) => ({
-          label: `${service.name} in ${city.name}`,
-          href: `/cities/${city.slug}/${service.slug}`
-        }))}
+        extra={[
+          ...priorityCityLinks,
+          ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
+          ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])
+        ]}
       />
     </main>
   );

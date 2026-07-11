@@ -42,14 +42,28 @@ const cities = [
   "garland",
   "frisco",
   "mckinney",
-  "carrollton",
   "denton",
-  "richardson",
-  "mesquite",
-  "grand-prairie",
   "lewisville",
+  "carrollton",
+  "richardson",
+  "grand-prairie",
+  "mesquite",
+  "grapevine",
+  "euless",
+  "bedford",
+  "hurst",
+  "keller",
+  "southlake",
+  "flower-mound",
+  "the-colony",
   "allen",
-  "grapevine"
+  "rockwall",
+  "rowlett",
+  "mansfield",
+  "cedar-hill",
+  "desoto",
+  "duncanville",
+  "wylie"
 ];
 
 const cityNames = [
@@ -61,33 +75,72 @@ const cityNames = [
   "Garland",
   "Frisco",
   "McKinney",
-  "Carrollton",
   "Denton",
-  "Richardson",
-  "Mesquite",
-  "Grand Prairie",
   "Lewisville",
+  "Carrollton",
+  "Richardson",
+  "Grand Prairie",
+  "Mesquite",
+  "Grapevine",
+  "Euless",
+  "Bedford",
+  "Hurst",
+  "Keller",
+  "Southlake",
+  "Flower Mound",
+  "The Colony",
   "Allen",
-  "Grapevine"
+  "Rockwall",
+  "Rowlett",
+  "Mansfield",
+  "Cedar Hill",
+  "DeSoto",
+  "Duncanville",
+  "Wylie"
+];
+
+const cityServiceCombos = [
+  ["dallas", "24-hour-emergency-plumber"],
+  ["dallas", "emergency-drain-cleaning"],
+  ["fort-worth", "24-hour-emergency-plumber"],
+  ["fort-worth", "emergency-drain-cleaning"],
+  ["arlington", "24-hour-emergency-plumber"],
+  ["arlington", "emergency-drain-cleaning"],
+  ["plano", "24-hour-emergency-plumber"],
+  ["plano", "emergency-drain-cleaning"],
+  ["irving", "24-hour-emergency-plumber"],
+  ["irving", "emergency-drain-cleaning"],
+  ["garland", "24-hour-emergency-plumber"],
+  ["garland", "emergency-drain-cleaning"],
+  ["frisco", "24-hour-emergency-plumber"],
+  ["frisco", "emergency-drain-cleaning"],
+  ["mckinney", "24-hour-emergency-plumber"],
+  ["mckinney", "emergency-drain-cleaning"]
 ];
 
 const problems = [
-  "toilet-and-tub-backing-up",
-  "sewage-smell-in-bathroom",
-  "water-coming-through-ceiling",
+  "water-backing-up-in-shower-and-toilet",
+  "sewer-smell-in-bathroom",
+  "toilet-overflowing-will-not-stop",
   "kitchen-sink-backing-up",
-  "water-heater-leaking",
-  "main-drain-slow",
-  "business-restroom-closed",
-  "shower-filling-with-dirty-water"
+  "bathtub-drain-backing-up",
+  "floor-drain-backing-up",
+  "gurgling-toilet-and-slow-drains",
+  "main-sewer-line-signs",
+  "burst-pipe-first-steps",
+  "water-heater-leaking-emergency",
+  "no-hot-water-emergency",
+  "ceiling-leak-from-plumbing",
+  "outdoor-cleanout-overflowing",
+  "washing-machine-drain-backing-up"
 ];
 
 const costGuides = [
-  "emergency-plumbing-cost-dallas",
-  "emergency-drain-cleaning-cost-dallas",
-  "sewer-backup-cost-dallas",
-  "burst-pipe-repair-cost-dallas",
-  "water-heater-emergency-cost-dallas"
+  "emergency-plumbing-cost-dfw",
+  "drain-cleaning-cost-dfw",
+  "sewer-line-clog-cost-guide",
+  "water-heater-emergency-cost-guide",
+  "burst-pipe-emergency-cost-guide"
 ];
 
 const blogTitles = [
@@ -137,14 +190,16 @@ const pages = [
   ["legal", "/disclosure", "Provider connection disclosure", "Provider connection disclosure"],
   ...services.map((slug, index) => ["service", `/services/${slug}`, `${serviceNames[index]} in Dallas-Fort Worth`, `${serviceNames[index]} in Dallas-Fort Worth`]),
   ...cities.map((slug, index) => ["city", `/cities/${slug}`, `Emergency plumbing help in ${cityNames[index]}`, `Emergency plumbing help in ${cityNames[index]}`]),
-  ...cities.flatMap((citySlug, cityIndex) =>
-    services.map((serviceSlug, serviceIndex) => [
+  ...cityServiceCombos.map(([citySlug, serviceSlug]) => {
+    const cityIndex = cities.indexOf(citySlug);
+    const serviceIndex = services.indexOf(serviceSlug);
+    return [
       "city-service",
       `/cities/${citySlug}/${serviceSlug}`,
       `${serviceNames[serviceIndex]} in ${cityNames[cityIndex]}, TX`,
       `${serviceNames[serviceIndex]} in ${cityNames[cityIndex]}, TX`
-    ])
-  ),
+    ];
+  }),
   ...problems.map((slug) => ["problem", `/problems/${slug}`, slug.replaceAll("-", " "), slug.replaceAll("-", " ")]),
   ...costGuides.map((slug) => ["cost-guide", `/cost-guides/${slug}`, slug.replaceAll("-", " "), slug.replaceAll("-", " ")]),
   ...blogTitles.map((title) => ["blog", `/blog/${slugify(title)}`, title, title])
@@ -174,8 +229,16 @@ writeFileSync(
   join(reportsDir, "internal_link_map.csv"),
   csv([
     ["source_url", "target_url", "anchor", "reason"],
-    ...services.flatMap((serviceSlug, index) => cities.slice(0, 6).map((citySlug, cityIndex) => [`/services/${serviceSlug}`, `/cities/${citySlug}/${serviceSlug}`, `${serviceNames[index]} in ${cityNames[cityIndex]}`, "service to city-service"])),
-    ...cities.flatMap((citySlug, index) => services.slice(0, 6).map((serviceSlug, serviceIndex) => [`/cities/${citySlug}`, `/cities/${citySlug}/${serviceSlug}`, `${serviceNames[serviceIndex]} in ${cityNames[index]}`, "city to city-service"]))
+    ...cityServiceCombos.map(([citySlug, serviceSlug]) => {
+      const cityIndex = cities.indexOf(citySlug);
+      const serviceIndex = services.indexOf(serviceSlug);
+      return [`/services/${serviceSlug}`, `/cities/${citySlug}/${serviceSlug}`, `${serviceNames[serviceIndex]} in ${cityNames[cityIndex]}`, "service to controlled city-service"];
+    }),
+    ...cityServiceCombos.map(([citySlug, serviceSlug]) => {
+      const cityIndex = cities.indexOf(citySlug);
+      const serviceIndex = services.indexOf(serviceSlug);
+      return [`/cities/${citySlug}`, `/cities/${citySlug}/${serviceSlug}`, `${serviceNames[serviceIndex]} in ${cityNames[cityIndex]}`, "city to controlled city-service"];
+    })
   ])
 );
 

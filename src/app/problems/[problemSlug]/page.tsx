@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { DirectAnswer, EmergencySteps, FAQBlock, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
@@ -33,6 +34,7 @@ export default async function ProblemPage({ params }: Props) {
   const problem = problems.find((item) => item.slug === problemSlug);
   if (!problem) notFound();
   const relatedService = services.find((service) => service.slug === problem.relatedServiceSlug);
+  const relatedCostGuide = costGuides.find((guide) => guide.slug === problem.relatedCostGuideSlug);
   const path = `/problems/${problem.slug}`;
   const faqs = [
     {
@@ -66,6 +68,11 @@ export default async function ProblemPage({ params }: Props) {
       </div>
 
       <DirectAnswer>{problem.directAnswer}</DirectAnswer>
+      <section className="content-section">
+        <p className="section-kicker">What it means</p>
+        <h2 className="mt-2 text-2xl font-black text-slate-950">What this problem usually points to</h2>
+        <p className="mt-3 leading-7 text-slate-700">{problem.whatItMeans}</p>
+      </section>
       <EmergencySteps steps={problem.steps} />
       <section className="content-section">
         <p className="section-kicker">Warning signs</p>
@@ -75,9 +82,26 @@ export default async function ProblemPage({ params }: Props) {
           ))}
         </ul>
       </section>
+      <InfoListSection kicker="What not to do" title="Avoid making the problem worse" items={problem.whatNotToDo} />
+      <InfoListSection kicker="When urgent" title="When to call immediately" items={problem.urgentWhen} />
+      {relatedService ? (
+        <section className="content-section rounded-md border border-emerald-200 bg-emerald-50">
+          <p className="section-kicker text-emerald-800">Recommended service page</p>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">Call from: {relatedService.name}</h2>
+          <p className="mt-3 leading-7 text-slate-700">{relatedService.shortAnswer}</p>
+          <div className="mt-5">
+            <CallButton location={`problem-${problem.slug}-service-cta`} />
+          </div>
+        </section>
+      ) : null}
       <LocalGuidance />
       <FAQBlock faqs={faqs} />
-      <InternalLinks extra={relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []} />
+      <InternalLinks
+        extra={[
+          ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
+          ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])
+        ]}
+      />
     </main>
   );
 }

@@ -4,7 +4,9 @@ import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer, FAQBlock, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { cities } from "@/data/cities";
+import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
@@ -124,6 +126,31 @@ export default function HomePage() {
                 Emergency plumbing in {city.name}
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div>
+            <p className="section-kicker">Problem helpers</p>
+            <h2 className="mt-2 text-3xl font-black text-slate-950">Fast answers for urgent symptoms</h2>
+            <div className="mt-5 grid gap-3">
+              {problems.slice(0, 6).map((problem) => (
+                <Link key={problem.slug} href={`/problems/${problem.slug}`} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400">
+                  {problem.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="section-kicker">Cost guidance</p>
+            <h2 className="mt-2 text-3xl font-black text-slate-950">Cost factors before you call</h2>
+            <div className="mt-5 grid gap-3">
+              {costGuides.map((guide) => (
+                <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400">
+                  {guide.title}
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

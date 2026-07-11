@@ -17,6 +17,13 @@ const required = [
   "reports/day1_qa_checklist.md",
   "reports/build_status.md",
   "reports/remaining_owner_inputs.md",
+  "reports/day2_seo_aeo_content_report.md",
+  "reports/day2_page_inventory.csv",
+  "reports/day2_internal_linking_report.md",
+  "reports/day2_schema_report.md",
+  "reports/day2_sitemap_report.md",
+  "reports/day2_remaining_risks.md",
+  "ops/day2_content_architecture.md",
   "reports/final_handoff.md",
   "manual-owner-steps/DEPLOYMENT_MANUAL_STEPS.md",
   "manual-owner-steps/DOMAIN_DNS_STEPS.md",
@@ -167,6 +174,20 @@ for (const requiredText of [
     console.error(`Hostinger Google TXT script is missing required safety text: ${requiredText}`);
     process.exit(1);
   }
+}
+
+const day2SitemapReport = readFileSync(join(process.cwd(), "reports/day2_sitemap_report.md"), "utf8");
+for (const requiredText of ["Total expected sitemap URLs: 112", "https://plumbinghands.com", "Vercel preview URLs", "ChatGPT Sites URLs"]) {
+  if (!day2SitemapReport.includes(requiredText)) {
+    console.error(`Day 2 sitemap report is missing required text: ${requiredText}`);
+    process.exit(1);
+  }
+}
+
+const cityServicePage = readFileSync(join(process.cwd(), "src/app/cities/[citySlug]/[serviceSlug]/page.tsx"), "utf8");
+if (!cityServicePage.includes("priorityCityServiceCombos") || !cityServicePage.includes("dynamicParams = false")) {
+  console.error("City plus service pages must use the controlled priority city-service set.");
+  process.exit(1);
 }
 
 const reports = readdirSync(join(process.cwd(), "reports"));
