@@ -17,13 +17,14 @@ Required closeout:
 5. Changes are committed and pushed to GitHub.
 
 Current deployment context:
-- The ChatGPT/Codex Sites URL is a private preview/control URL, not the final production website.
+- ChatGPT/Codex Sites is no longer the final production target; keep it preview/control only.
 - Current private preview URL: https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site
+- Vercel is the production hosting target.
+- Temporary Vercel production URL: https://plumbinghands.vercel.app
 - Production domain target: https://plumbinghands.com
 - WWW production hostname: https://www.plumbinghands.com
-- Vercel is the prepared production deployment path under consideration.
-- ChatGPT Sites DNS instructions are paused and Sites remains preview-only.
-- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citations, outreach, and final launch are pending until Vercel generates DNS records and Hostinger DNS is confirmed.
+- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citations, outreach, and final launch are pending until Hostinger DNS points the final domains to Vercel and HTTPS works.
 - Vercel deployment steps are in manual-owner-steps/VERCEL_DEPLOYMENT_STEPS.md.
-- Vercel DNS placeholders are in manual-owner-steps/VERCEL_DNS_STEPS.md.
+- Exact Hostinger DNS records are in manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md.
+- Next task after DNS is in command-center/NEXT_CODEX_TASK_AFTER_DNS.txt.
 - Do not use or commit passwords, API keys, payment details, GitHub tokens, OpenAI keys, or private credentials.

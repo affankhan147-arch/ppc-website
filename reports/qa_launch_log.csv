@@ -8,7 +8,7 @@
 "forms","created","/api/lead logs safely"
 "fake claims","passed","No fake reviews, ratings, licenses, insurance, or offices"
 "AEO audit","created","reports/aeo_page_audit.csv"
-"DNS","pending owner action","Hostinger DNS owner must wait for Vercel-generated records before making changes"
+"DNS","pending owner action","Hostinger DNS owner must add A @ 76.76.21.21 and CNAME www cname.vercel-dns.com"
 "Search Console","pending DNS","Do not verify or submit sitemap until DNS and HTTPS are live"
 "Bing Webmaster","pending DNS","Do not verify or submit sitemap until DNS and HTTPS are live"
 "IndexNow","pending DNS","Do not run IndexNow until DNS, HTTPS, and Bing verification are confirmed"

@@ -18,8 +18,8 @@ To make the preview publicly accessible, explicitly ask Codex to switch the
 Sites access mode to public. After that change, anyone with the preview URL can
 visit it.
 
-ChatGPT Sites DNS instructions are paused while Vercel is being considered as
-the final production hosting target.
+ChatGPT Sites DNS instructions are paused. Vercel is the final production
+hosting target.
 
 ## Production Domain
 
@@ -28,9 +28,9 @@ Final production hostnames:
 - `https://www.plumbinghands.com`
 
 DNS-safe status:
-- Vercel deployment path is being prepared.
+- Vercel production deployment exists at `https://plumbinghands.vercel.app`.
 - Hostinger DNS changes are pending with the domain owner/friend.
-- Vercel-generated DNS records are pending.
+- Exact Hostinger DNS records are in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
 - Domain verification is pending.
 - HTTPS on the custom domain is pending.
 - Google/Bing verification and indexing are pending.
@@ -39,10 +39,9 @@ DNS-safe status:
 Owner-only steps:
 
 1. Do not add the previous ChatGPT Sites DNS records.
-2. Import/deploy the project in Vercel first.
-3. Add `plumbinghands.com` and `www.plumbinghands.com` to the Vercel project.
-4. Copy the exact Vercel-generated DNS records into `manual-owner-steps/VERCEL_DNS_STEPS.md`.
-5. Have the Hostinger DNS owner add only those Vercel records.
-6. Wait for DNS propagation, then ask Codex to verify domain and HTTPS status.
+2. Use Vercel as the production hosting target.
+3. Have the Hostinger DNS owner add only the records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
+4. Wait 15 to 60 minutes.
+5. Ask Codex to run `scripts/40_verify_plumbinghands_dns_and_https.ps1`.
 
 Do not let Codex make payment, registrar, or DNS account changes without explicit owner approval.

@@ -7,7 +7,9 @@ A config-driven pay-per-call lead-generation platform for Dallas-Fort Worth emer
 Final domain: https://plumbinghands.com
 WWW hostname: https://www.plumbinghands.com
 
-The temporary `chatgpt.site` preview/control URL is not the final production website. Vercel is the prepared production deployment path under consideration, while ChatGPT Sites remains preview-only.
+The temporary `chatgpt.site` preview/control URL is not the final production website. Vercel is the production hosting target, while ChatGPT Sites remains preview-only.
+
+Temporary Vercel production URL: `https://plumbinghands.vercel.app`
 
 ## How To Run Locally
 Use Node and pnpm, then run pnpm install, pnpm run reports, pnpm run qa, pnpm run build, and pnpm run dev.
@@ -26,7 +28,7 @@ Do not submit sitemap or IndexNow until Vercel deployment, Hostinger DNS, HTTPS,
 /, /services/24-hour-emergency-plumber, /services/emergency-drain-cleaning, /cities/dallas, /cities/dallas/emergency-drain-cleaning, /faq, /contact, /partner-with-us, /privacy, /terms, /disclosure.
 
 ## Manual Owner Steps
-Import the GitHub repo into Vercel, add Vercel environment variables, deploy from `master`, add both production domains in Vercel, copy Vercel-generated DNS records into `manual-owner-steps/VERCEL_DNS_STEPS.md`, then have the Hostinger DNS owner add those exact records. Provide a real tracking number, verify Search Console and Bing after DNS/HTTPS, approve buyer routing endpoints, and approve any real business claims before use.
+Have the Hostinger DNS owner add the exact Vercel records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`. Provide a real tracking number, verify Search Console and Bing after DNS/HTTPS, approve buyer routing endpoints, and approve any real business claims before use.
 
 ## Known Limitations
 Sample buyer and tracking values are included for build/routing scaffolding and must be replaced before public launch. Vercel deployment, DNS, verification, indexing, citations, outreach, and final launch are pending.

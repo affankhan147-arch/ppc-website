@@ -7,8 +7,8 @@ import { StickyCallBar } from "@/components/StickyCallBar";
 import { JsonLd, organizationSchema } from "@/lib/schema";
 import { siteConfig } from "@/data/site";
 
-const googleVerification = process.env.NEXT_PUBLIC_SEARCH_CONSOLE_TOKEN;
-const bingVerification = process.env.NEXT_PUBLIC_BING_WEBMASTER_TOKEN;
+const googleVerification = process.env.NEXT_PUBLIC_SEARCH_CONSOLE_TOKEN || process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerification = process.env.NEXT_PUBLIC_BING_WEBMASTER_TOKEN || process.env.NEXT_PUBLIC_BING_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),

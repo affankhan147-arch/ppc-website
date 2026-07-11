@@ -29,11 +29,11 @@ The owner must explicitly approve:
 ## During Command 2 DNS-Safe Mode
 1. Confirm each pushed sprint commit is visible on GitHub.
 2. Keep the private `chatgpt.site` preview separate from the final production website.
-3. Import the GitHub repo into Vercel when ready.
+3. Confirm the Vercel deployment at `https://plumbinghands.vercel.app`.
 4. Add Vercel production environment variables from `.env.example`.
-5. Add `plumbinghands.com` and `www.plumbinghands.com` in Vercel.
-6. Copy exact Vercel-generated DNS records into `manual-owner-steps/VERCEL_DNS_STEPS.md`.
-7. Ask the Hostinger DNS owner to add only those exact Vercel records.
+5. Confirm `plumbinghands.com` and `www.plumbinghands.com` are added in Vercel.
+6. Ask the Hostinger DNS owner to add only the records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
+7. Run `scripts/40_verify_plumbinghands_dns_and_https.ps1` after waiting 15 to 60 minutes.
 8. Replace sample tracking phone values with real owner-approved call tracking values before public launch.
 9. Approve real buyer routing endpoints before collecting or forwarding production leads.
 10. Verify Search Console and Bing only after DNS and HTTPS are confirmed.

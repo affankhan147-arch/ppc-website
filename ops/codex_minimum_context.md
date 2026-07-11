@@ -80,12 +80,14 @@ Do not commit passwords, API keys, payment details, GitHub tokens, OpenAI keys, 
 Only the owner handles account logins, GitHub or Google authorization, DNS, hosting, payment, ad platform approvals, production call tracking number setup, Search Console verification, and Bing verification.
 
 ## Deployment Context
-- The ChatGPT/Codex Sites URL is a private preview/control URL, not the final production website.
+- ChatGPT/Codex Sites is no longer the final production target; keep it preview/control only.
 - Current private preview/control URL: `https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site`
+- Vercel is the production hosting target.
+- Current temporary Vercel production URL: `https://plumbinghands.vercel.app`
 - Production domain target: `https://plumbinghands.com`
 - WWW production hostname: `https://www.plumbinghands.com`
-- DNS instructions are maintained in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.
-- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citation submissions, outreach, and final launch are pending until Hostinger DNS is confirmed.
+- Hostinger DNS instructions are maintained in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
+- DNS, Search Console verification, Bing verification, sitemap submission, IndexNow, citation submissions, outreach, and final launch are pending until `plumbinghands.com` and `www.plumbinghands.com` open the real Vercel site with HTTPS.
 - Use `plumbinghands.com` for `.env.example`, sitemap guidance, robots guidance, canonical URL guidance, Search Console guidance, Bing Webmaster guidance, and deployment notes.
 
 ## Command 2 Status

@@ -1,0 +1,18 @@
+NEXT CODEX TASK AFTER DNS
+
+Start only after Hostinger DNS is added and HTTPS works.
+
+1. Verify `https://plumbinghands.com` and `https://www.plumbinghands.com`.
+2. Verify `https://plumbinghands.com/robots.txt`.
+3. Verify `https://plumbinghands.com/sitemap.xml`.
+4. Verify canonical URLs.
+5. Verify no temporary Vercel URL is used as final canonical.
+6. Prepare Google Search Console verification steps.
+7. Prepare Bing Webmaster verification steps.
+8. Prepare IndexNow only after Bing is ready.
+9. Prepare citation/outreach only after final domain works.
+10. Commit and stop.
+
+Do not create paid ads, fake business profiles, fake reviews, fake addresses,
+fake licenses, fake insurance claims, copied competitor images, spam backlinks,
+or any indexing submission before final-domain HTTPS verification passes.

@@ -1,6 +1,9 @@
 # Vercel DNS Steps
 
-Status: pending Vercel-generated records.
+Status: exact Hostinger DNS records are prepared. DNS is still pending owner action.
+
+Temporary Vercel production URL:
+`https://plumbinghands.vercel.app`
 
 Final production domains:
 - `plumbinghands.com`
@@ -11,37 +14,39 @@ DNS provider:
 
 ## Important
 
-Do not add or change DNS yet. First deploy/import the project in Vercel and add
-both domains to the Vercel project. Then copy the exact records Vercel provides
-into this file.
+Do not change nameservers.
+Do not reset DNS records.
+Do not delete MX/email records if any exist.
+Do not add ChatGPT Sites DNS records while Vercel is the production hosting target.
 
-## Pending Records
+## Delete Old Conflicting Records If Present
 
-Root domain, `plumbinghands.com`:
-- record type: `PENDING_FROM_VERCEL`
-- host/name: `PENDING_FROM_VERCEL`
-- value/target: `PENDING_FROM_VERCEL`
-- TTL: Hostinger default unless Vercel says otherwise
+```text
+CNAME  www  plumbinghands.com
+A      @    2.57.91.91
+```
 
-WWW hostname, `www.plumbinghands.com`:
-- record type: `PENDING_FROM_VERCEL`
-- host/name: `PENDING_FROM_VERCEL`
-- value/target: `PENDING_FROM_VERCEL`
-- TTL: Hostinger default unless Vercel says otherwise
+## Add These Vercel Records
 
-Verification record, if Vercel requests one:
-- record type: `PENDING_FROM_VERCEL`
-- host/name: `PENDING_FROM_VERCEL`
-- value/target: `PENDING_FROM_VERCEL`
-- TTL: Hostinger default unless Vercel says otherwise
+```text
+A      @      76.76.21.21
+CNAME  www    cname.vercel-dns.com
+```
+
+TTL:
+- Use Hostinger default unless Vercel specifically asks for another value.
+
+Verification record:
+- Add only if Vercel displays a separate verification record in project domain settings.
+- Do not invent a verification value.
 
 ## Hostinger Owner Instructions
 
-1. Wait until Vercel displays the exact required DNS records.
-2. Remove conflicting old records for `@` or `www` only after confirming the Vercel replacement records.
-3. Add the exact Vercel records in Hostinger.
-4. Wait for propagation.
-5. Ask Codex to verify DNS and HTTPS.
+1. Open Hostinger: Domains -> plumbinghands.com -> DNS / Nameservers -> DNS records.
+2. Remove only the conflicting old `@` and `www` records listed above if present.
+3. Add the Vercel `A` and `CNAME` records exactly as listed.
+4. Wait 15 to 60 minutes.
+5. Ask Codex to verify DNS and HTTPS with `scripts/40_verify_plumbinghands_dns_and_https.ps1`.
 
 ## Still Blocked Until DNS Works
 

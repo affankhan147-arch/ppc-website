@@ -1,19 +1,22 @@
 # Deployment Notes
 
-The app is prepared for DNS-safe development from GitHub branch master. Vercel is now the prepared production deployment path under consideration.
+The app is prepared for DNS-safe development from GitHub branch master. Vercel is now the production hosting target.
+
+Temporary Vercel production URL:
+https://plumbinghands.vercel.app
 
 Final production domains:
 - https://plumbinghands.com
 - https://www.plumbinghands.com
 
-The ChatGPT/Codex `chatgpt.site` URL is a private preview/control URL and must not be treated as the final production website. ChatGPT Sites DNS instructions are paused.
+The ChatGPT/Codex `chatgpt.site` URL is a private preview/control URL and must not be treated as the final production website. ChatGPT Sites is no longer the final production target.
 
 ## Vercel Readiness
 
 - Framework: Next.js
-- Package manager: pnpm, detected from `pnpm-lock.yaml`
-- Install command: Vercel auto-detect, or `pnpm install`
-- Build command: `pnpm run build`
+- Build script: `next build`
+- Local Codex npm status: `npm` executable unavailable in this runtime
+- Verified build path: Vercel-style Next production build passed from the D project root
 - Output directory: Vercel default for Next.js
 - Root directory: repository root
 - Required runtime environment values: see `.env.example`
@@ -25,9 +28,8 @@ Canonical URL guidance:
 - Sitemap URLs are generated from `siteConfig.baseUrl`, which resolves to https://plumbinghands.com.
 - Robots points crawlers to https://plumbinghands.com/sitemap.xml when production env values are used.
 
-Pending until Vercel deployment and Hostinger DNS are confirmed:
-- Vercel project import/deployment
-- Vercel-generated DNS records
+Pending until Hostinger DNS is confirmed:
+- Hostinger DNS record update
 - custom domain verification in Vercel
 - HTTPS validation on https://plumbinghands.com and https://www.plumbinghands.com
 - Google Search Console verification
@@ -36,6 +38,6 @@ Pending until Vercel deployment and Hostinger DNS are confirmed:
 - IndexNow submission
 - final public launch
 
-Manual needs: Vercel account import, real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Vercel domain records, Search Console verification, Bing verification, and DNS approval.
+Manual needs: Hostinger DNS record update, real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Search Console verification, Bing verification, and DNS approval.
 
 Do not commit private credentials.

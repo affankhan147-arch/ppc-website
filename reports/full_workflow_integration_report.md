@@ -64,10 +64,11 @@ Command 2 is active in DNS-safe mode. Continue build, QA, reports, and commits w
 - Public preview status: not public unless the owner explicitly asks Codex to switch Sites access mode to public
 - Production domain target: `https://plumbinghands.com`
 - WWW production hostname: `https://www.plumbinghands.com`
-- Production hosting path under consideration: Vercel
+- Production hosting target: Vercel
+- Temporary Vercel production URL: `https://plumbinghands.vercel.app`
 - ChatGPT Sites DNS instructions: paused; Sites remains preview/control only
-- Vercel DNS status: pending Vercel-generated records
-- DNS instructions: `manual-owner-steps/VERCEL_DNS_STEPS.md`
+- Vercel DNS status: Hostinger update pending
+- DNS instructions: `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`
 
 ## Verification Completed
 - Required workflow paths checked: passed.

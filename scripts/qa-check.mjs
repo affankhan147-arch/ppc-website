@@ -18,6 +18,11 @@ const required = [
   "manual-owner-steps/SEARCH_CONSOLE_BING_STEPS.md",
   "manual-owner-steps/VERCEL_DEPLOYMENT_STEPS.md",
   "manual-owner-steps/VERCEL_DNS_STEPS.md",
+  "manual-owner-steps/VERCEL_DNS_STEPS_HOSTINGER.md",
+  "manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md",
+  "manual-owner-steps/POST_DNS_INDEXING_CHECKLIST.md",
+  "command-center/NEXT_CODEX_TASK_AFTER_DNS.txt",
+  "scripts/40_verify_plumbinghands_dns_and_https.ps1",
   "ops/image_asset_tracker.csv"
 ];
 
@@ -89,7 +94,7 @@ for (const requiredText of [
   "https://www.plumbinghands.com",
   "Hostinger DNS",
   "ChatGPT Sites DNS instructions are paused",
-  "VERCEL_DNS_STEPS.md"
+  "HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md"
 ]) {
   if (!domainSteps.includes(requiredText)) {
     console.error(`DOMAIN_DNS_STEPS.md is missing required DNS-safe text: ${requiredText}`);
@@ -102,14 +107,22 @@ if (!deploymentNotes.includes("must not be treated as the final production websi
   console.error("Deployment notes must mark chatgpt.site as preview/control only.");
   process.exit(1);
 }
-if (!deploymentNotes.includes("Vercel is now the prepared production deployment path")) {
-  console.error("Deployment notes must mark Vercel as the prepared production path.");
+if (!deploymentNotes.includes("Vercel is now the production hosting target")) {
+  console.error("Deployment notes must mark Vercel as the production path.");
   process.exit(1);
 }
 
-const vercelDns = readFileSync(join(process.cwd(), "manual-owner-steps/VERCEL_DNS_STEPS.md"), "utf8");
-if (!vercelDns.includes("PENDING_FROM_VERCEL")) {
-  console.error("VERCEL_DNS_STEPS.md must keep DNS values pending until Vercel generates them.");
+const hostingerDns = readFileSync(join(process.cwd(), "manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md"), "utf8");
+for (const requiredText of ["76.76.21.21", "cname.vercel-dns.com", "2.57.91.91"]) {
+  if (!hostingerDns.includes(requiredText)) {
+    console.error(`Hostinger DNS handoff is missing required text: ${requiredText}`);
+    process.exit(1);
+  }
+}
+
+const postDnsTask = readFileSync(join(process.cwd(), "command-center/NEXT_CODEX_TASK_AFTER_DNS.txt"), "utf8");
+if (!postDnsTask.includes("Verify no temporary Vercel URL is used as final canonical")) {
+  console.error("Post-DNS task must include canonical URL verification.");
   process.exit(1);
 }
 

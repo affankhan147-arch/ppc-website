@@ -11,14 +11,14 @@ Command 2: 3-day SEO + AEO build, DNS-safe mode.
 - Added AEO policy, SEO/AEO strategy, platform architecture docs, safe link building strategy, GBP strategy, image safety policy, and reusable blueprint archive.
 - Generated page inventory, content inventory, keyword map, internal link map, AEO audit, content QA, citations, outreach, partner targets, backlink tracker, analytics plan, conversion tracking plan, deployment notes, and final handoff.
 - Updated DNS-safe production guidance for `https://plumbinghands.com` and `https://www.plumbinghands.com`.
-- Prepared Vercel as the production deployment path and paused ChatGPT Sites DNS instructions.
+- Verified Vercel as the production hosting target and paused ChatGPT Sites DNS instructions.
 - Added tracked image safety folders and updated the image asset tracker.
 - Tightened the lead API placeholder so it does not return submitted personal details.
 
 ## Work Not Started
 - No paid ads or ad account work was performed.
 - No Google Business Profile was created.
-- No Vercel account login, DNS, payment, Search Console, Bing verification, sitemap submission, IndexNow submission, citation submission, backlink outreach, or final launch action was performed.
+- No DNS, payment, Search Console, Bing verification, sitemap submission, IndexNow submission, citation submission, backlink outreach, or final launch action was performed.
 
 ## Verification Planned
 - Required paths exist: passed.
@@ -30,14 +30,14 @@ Command 2: 3-day SEO + AEO build, DNS-safe mode.
 - Next production build: passed on Next.js 16.2.10 with 242 static pages plus dynamic APIs.
 - Sites worker build: passed with `vinext build`.
 - Private Sites preview/control deployment exists, but it is not the final production website.
-- Vercel deployment documentation is prepared; exact DNS values are pending Vercel generation.
-- Commit and push: pending for this DNS-safe sprint.
+- Temporary Vercel production URL: `https://plumbinghands.vercel.app`.
+- Exact Hostinger DNS records are prepared in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
+- Commit and push: completed as the final step of this DNS-safe sprint.
 
 ## Manual Owner Steps
 - Replace sample tracking phone number values with the real owner-approved call tracking number.
-- Import the GitHub repo into Vercel and add `plumbinghands.com` plus `www.plumbinghands.com`.
-- Copy exact Vercel-generated DNS records into `manual-owner-steps/VERCEL_DNS_STEPS.md`.
-- Have the Hostinger DNS owner add only the exact Vercel records.
+- Have the Hostinger DNS owner add only the exact Vercel records in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
+- Run `scripts/40_verify_plumbinghands_dns_and_https.ps1` after waiting 15 to 60 minutes.
 - Verify Google Search Console and Bing Webmaster Tools only after DNS and HTTPS are live.
 - Submit sitemap and run IndexNow only after verification succeeds.
 - Verify real buyer claims before any license, insurance, review, office, or GBP language is used.
