@@ -28,5 +28,8 @@ Next 16 production build passed and generated 242 static pages plus dynamic APIs
 ## Publishing Status
 Sites-compatible worker packaging was added and `vinext build` passed, producing `dist/server/index.js`.
 
+Private production URL:
+https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site
+
 ## Next 7-Day Growth Plan
 Improve top city-service pages, add verified buyer data, expand FAQs, refine internal links, submit sitemap after deployment, monitor Search Console and Bing, and update content QA reports.

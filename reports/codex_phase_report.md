@@ -25,7 +25,8 @@ Command 2: 3-day SEO + AEO build.
 - Custom QA: passed.
 - Next production build: passed on Next.js 16.2.10 with 242 static pages plus dynamic APIs.
 - Sites worker build: passed with `vinext build`.
-- Commit and push: pending final Git handoff.
+- Private Sites deployment: succeeded at `https://dfw-plumbing-connect.m-atifmuneer.chatgpt.site`.
+- Commit and push: final deployment record pending.
 
 ## Manual Owner Steps
 - Replace sample tracking phone number values with the real owner-approved call tracking number.
