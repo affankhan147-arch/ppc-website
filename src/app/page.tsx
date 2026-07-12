@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   AlertTriangle,
   ArrowRight,
@@ -122,11 +123,13 @@ export default function HomePage() {
 
           <aside className="grid gap-4">
             <div className="overflow-hidden rounded-md border border-white/20 bg-white/10 shadow-2xl">
-              <img
+              <Image
                 src="/images/hero/emergency-plumbing-abstract.svg"
                 alt=""
+                width={960}
+                height={320}
                 className="h-40 w-full object-cover"
-                loading="eager"
+                priority
               />
             </div>
             <div>
@@ -230,7 +233,13 @@ export default function HomePage() {
               <p className="mt-4 leading-7 text-slate-700">
                 Service availability may vary by location, timing, and provider coverage. City pages use service-area wording and do not claim a physical office in every listed city.
               </p>
-              <img src="/images/cities/dfw-service-area-map.svg" alt="" className="mt-6 rounded-md border border-slate-200 bg-white" loading="lazy" />
+              <Image
+                src="/images/cities/dfw-service-area-map.svg"
+                alt=""
+                width={900}
+                height={520}
+                className="mt-6 rounded-md border border-slate-200 bg-white"
+              />
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {cities.slice(0, 12).map((city) => (

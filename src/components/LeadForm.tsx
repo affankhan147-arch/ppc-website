@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Send } from "lucide-react";
 
 type LeadFormProps = {
@@ -22,35 +22,37 @@ const serviceOptions = [
 
 export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
   const options = service && !serviceOptions.includes(service) ? [service, ...serviceOptions] : serviceOptions;
-  const [tracking, setTracking] = useState({
-    pageUrl,
-    utmSource: "",
-    utmMedium: "",
-    utmCampaign: "",
-    utmTerm: "",
-    utmContent: ""
-  });
+  const pageUrlRef = useRef<HTMLInputElement>(null);
+  const utmSourceRef = useRef<HTMLInputElement>(null);
+  const utmMediumRef = useRef<HTMLInputElement>(null);
+  const utmCampaignRef = useRef<HTMLInputElement>(null);
+  const utmTermRef = useRef<HTMLInputElement>(null);
+  const utmContentRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    setTracking({
-      pageUrl: window.location.href,
-      utmSource: params.get("utm_source") || "",
-      utmMedium: params.get("utm_medium") || "",
-      utmCampaign: params.get("utm_campaign") || "",
-      utmTerm: params.get("utm_term") || "",
-      utmContent: params.get("utm_content") || ""
+    const fields = [
+      [pageUrlRef, window.location.href],
+      [utmSourceRef, params.get("utm_source") || ""],
+      [utmMediumRef, params.get("utm_medium") || ""],
+      [utmCampaignRef, params.get("utm_campaign") || ""],
+      [utmTermRef, params.get("utm_term") || ""],
+      [utmContentRef, params.get("utm_content") || ""]
+    ] as const;
+
+    fields.forEach(([ref, value]) => {
+      if (ref.current) ref.current.value = value;
     });
   }, [pageUrl]);
 
   return (
     <form action="/api/lead" method="post" className="premium-form grid gap-3 rounded-md border border-slate-200 bg-white p-4 shadow-xl shadow-slate-950/10">
-      <input type="hidden" name="pageUrl" value={tracking.pageUrl} />
-      <input type="hidden" name="utmSource" value={tracking.utmSource} />
-      <input type="hidden" name="utmMedium" value={tracking.utmMedium} />
-      <input type="hidden" name="utmCampaign" value={tracking.utmCampaign} />
-      <input type="hidden" name="utmTerm" value={tracking.utmTerm} />
-      <input type="hidden" name="utmContent" value={tracking.utmContent} />
+      <input ref={pageUrlRef} type="hidden" name="pageUrl" defaultValue={pageUrl} />
+      <input ref={utmSourceRef} type="hidden" name="utmSource" defaultValue="" />
+      <input ref={utmMediumRef} type="hidden" name="utmMedium" defaultValue="" />
+      <input ref={utmCampaignRef} type="hidden" name="utmCampaign" defaultValue="" />
+      <input ref={utmTermRef} type="hidden" name="utmTerm" defaultValue="" />
+      <input ref={utmContentRef} type="hidden" name="utmContent" defaultValue="" />
       <div>
         <p className="text-xs font-black uppercase tracking-normal text-sky-700">Fast request form</p>
         <h2 className="mt-1 text-2xl font-black text-slate-950">Tell us what service you need</h2>

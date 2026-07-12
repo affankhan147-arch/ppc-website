@@ -1,7 +1,7 @@
 import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer } from "@/components/PageSections";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Provider partner inquiries",
@@ -12,7 +12,12 @@ export const metadata = buildMetadata({
 export default function PartnerPage() {
   return (
     <main className="page-shell">
-      <JsonLd data={webPageSchema("/partner-with-us", "Provider partner inquiries", "Partner inquiry page for plumbing providers and service partners.")} />
+      <JsonLd
+        data={[
+          webPageSchema("/partner-with-us", "Provider partner inquiries", "Partner inquiry page for plumbing providers and service partners."),
+          breadcrumbSchema([{ name: "Partner with us", path: "/partner-with-us" }])
+        ]}
+      />
       <div className="answer-grid">
         <article>
           <p className="section-kicker">Provider partners</p>

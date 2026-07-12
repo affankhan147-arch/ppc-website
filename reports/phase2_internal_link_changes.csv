@@ -1,0 +1,6 @@
+"source","target","anchor text","reason"
+"/","/blog","Guides","Global navigation now exposes the guide hub naturally."
+"/blog","30 blog article URLs","Article titles","New hub links to every guide article by category."
+"blog article template","/blog","Emergency plumbing guide hub","Each article links back to the hub."
+"blog article template","same-category articles","Related guide titles","Each article links to related guide content in the same topic cluster."
+"footer","/blog","Emergency guides","Footer gives users another stable entry to the guide hub."

@@ -21,6 +21,7 @@ export const navigation = [
   { label: "Services", href: "/services/24-hour-emergency-plumber" },
   { label: "Cities", href: "/cities/dallas" },
   { label: "Costs", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+  { label: "Guides", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Partners", href: "/partner-with-us" },
   { label: "Contact", href: "/contact" }

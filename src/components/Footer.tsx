@@ -40,6 +40,7 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
             <Link href="/terms" className="hover:text-white">Terms</Link>
             <Link href="/disclosure" className="hover:text-white">Disclosure</Link>
+            <Link href="/blog" className="hover:text-white">Emergency guides</Link>
             <Link href="/partner-with-us" className="hover:text-white">Partner with us</Link>
           </div>
         </div>

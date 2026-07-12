@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Terms of use",
@@ -9,6 +10,12 @@ export const metadata = buildMetadata({
 export default function TermsPage() {
   return (
     <main className="page-shell max-w-4xl">
+      <JsonLd
+        data={[
+          webPageSchema("/terms", "Terms of use", "Terms for using this provider connection website."),
+          breadcrumbSchema([{ name: "Terms", path: "/terms" }])
+        ]}
+      />
       <p className="section-kicker">Legal</p>
       <h1 className="mt-3 text-4xl font-black text-slate-950">Terms of use</h1>
       <div className="content-section space-y-4 leading-7 text-slate-700">

@@ -1,0 +1,17 @@
+# Phase 2 Session 2 Priority Queue
+
+Generated: 2026-07-12T15:04:57.214Z
+
+| Priority | Affected URL or File | Problem | Business Impact | Recommended Fix | Complexity | Owner Action | Order |
+|---|---|---|---|---|---|---|---|
+| P0 | vite.config.ts; build/sites-vite-plugin.ts; worker/index.ts | Production build failed because Sites vinext support files were missing and worker ambient types were unavailable. | No deployable build; site changes could not be validated. | Fixed in Session 1 by restoring Sites support plugin/worker and local worker types; final build passes. | Low | no | 1 |
+| P1 | src/data/site.ts; hosted environment settings | Tracking phone values are placeholders, so no live tel links render. | Phone-call conversion cannot be verified and call buttons route to /contact. | Owner must provide real tracking phone display/E164 values; then verify tel links and call tracking. | Low | yes | 2 |
+| P1 | Git/project root | Actual project at D:/PPC_Build_Workspace/plumbinghands_day3_build is not a Git repository; workspace root repo is empty and has no remote. | Cannot complete pull/commit/push procedure or produce a traceable commit hash from this project. | Initialize or reconnect the correct repository/remote, then commit reports and critical fixes. | Medium | yes | 3 |
+| P2 | src/lib/seo.ts; src/app/layout.tsx | Generated page titles include duplicate brand suffix on most non-home pages. | Lower SERP quality and repeated brand noise across commercial pages. | Return raw page title from buildMetadata or remove layout template duplication; validate all titles. | Low | no | 4 |
+| P2 | src/components/CallButton.tsx | Call click tracking hook is data-only; no client click handler calls /api/call-event. | Call-click analytics will be incomplete even after phone values are added. | Add a small client-side call button wrapper or analytics handler that fires safely before navigation. | Medium | no | 5 |
+| P2 | src/components/LeadForm.tsx; src/app/api/lead/route.ts | Native form POST returns JSON rather than an in-page confirmation state. | User experience after form submission is weak; lead confidence may drop. | Convert LeadForm to client submit with success/error state or redirect to a confirmation page. | Medium | no | 6 |
+| P2 | Internal links | 29 orphan page(s) found in crawl. | Orphan pages may be harder for users and crawlers to discover. | Add relevant links from service/city/problem/cost hubs. | Medium | no | 7 |
+| P2 | Blog routes | Blog articles do not emit Article schema. | Helpful content pages have less structured article context. | Add safe Article schema without fake author/review/date claims. | Low | no | 8 |
+| P2 | City and city-service content | City and city-service pages are honest but heavily template-driven. | Risk of weak local differentiation if scaled without proof. | Add verified local details only when sourced: service-area notes, owner-approved partner coverage, real FAQs. | High | yes | 9 |
+| P3 | Global metadata | No og:image/twitter:image metadata is present. | Social unfurls may look generic. | Create and wire a truthful brand/social image after public positioning is final. | Medium | no | 10 |
+| P3 | Backlink/citation trackers | Backlink tracker shows not started; no verified backlinks applied yet. | No off-page authority baseline exists. | After owner approval, vet topical citations manually and record status without spam or paid links. | High | yes | 11 |

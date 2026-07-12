@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Privacy policy",
@@ -9,6 +10,12 @@ export const metadata = buildMetadata({
 export default function PrivacyPage() {
   return (
     <main className="page-shell max-w-4xl">
+      <JsonLd
+        data={[
+          webPageSchema("/privacy", "Privacy policy", "How this website handles submitted service request information."),
+          breadcrumbSchema([{ name: "Privacy", path: "/privacy" }])
+        ]}
+      />
       <p className="section-kicker">Legal</p>
       <h1 className="mt-3 text-4xl font-black text-slate-950">Privacy policy</h1>
       <div className="content-section space-y-4 leading-7 text-slate-700">

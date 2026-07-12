@@ -2,7 +2,10 @@
 .next/
 out/
 dist/
-build/
+*.tsbuildinfo
+build/*
+!build/
+!build/sites-vite-plugin.ts
 .wrangler/
 .sites/
 .vercel/
@@ -19,4 +22,6 @@ secrets/
 .DS_Store
 Thumbs.db
 .vercel
-.env*
+.env
+.env.*
+!.env.example

@@ -1,0 +1,3 @@
+"affected file or URL","issue","status","repair","validation result"
+"src/lib/seo.ts","duplicate brand in generated titles","fixed","Metadata title now returns the page title and lets the layout template append the brand once.","Build HTML titles no longer end with Plumbing Hands twice."
+"/blog","missing guide hub metadata","fixed","Added title, description, canonical through buildMetadata.","Route builds and is included in sitemap."

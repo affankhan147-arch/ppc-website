@@ -41,6 +41,25 @@ export function webPageSchema(path: string, name: string, description: string) {
   };
 }
 
+export function articleSchema(path: string, headline: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    url: joinUrl(siteConfig.baseUrl, path),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": joinUrl(siteConfig.baseUrl, path)
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      url: siteConfig.baseUrl
+    }
+  };
+}
+
 export function serviceSchema(name: string, path: string, description: string) {
   return {
     "@context": "https://schema.org",

@@ -14,6 +14,7 @@ async function exists(path: string): Promise<boolean> {
   }
 }
 
+// Packages Sites metadata and migrations after Vite finishes compiling.
 export function sites(): Plugin {
   let root = process.cwd();
 
@@ -36,9 +37,9 @@ export function sites(): Plugin {
       }
       if (await exists(drizzleSource)) {
         await cp(drizzleSource, resolve(outputDirectory, "drizzle"), {
-          recursive: true
+          recursive: true,
         });
       }
-    }
+    },
   };
 }

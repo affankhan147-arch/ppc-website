@@ -3,7 +3,7 @@ import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer } from "@/components/PageSections";
 import { siteConfig } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Request urgent plumbing help",
@@ -14,7 +14,12 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <main className="page-shell">
-      <JsonLd data={webPageSchema("/contact", "Request urgent plumbing help", "Contact and service request page.")} />
+      <JsonLd
+        data={[
+          webPageSchema("/contact", "Request urgent plumbing help", "Contact and service request page."),
+          breadcrumbSchema([{ name: "Contact", path: "/contact" }])
+        ]}
+      />
       <div className="answer-grid">
         <article>
           <p className="section-kicker">Contact</p>
