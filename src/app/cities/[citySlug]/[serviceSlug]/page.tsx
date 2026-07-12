@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props) {
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
   return buildMetadata({
     title: `${service.name} in ${city.name}, TX`,
-    description: `${service.shortAnswer} Local service-area guidance for ${city.name}, TX without fake office or license claims.`,
+    description: `${service.shortAnswer} Local service-area guidance for ${city.name}, TX with provider availability reminders.`,
     path: `/cities/${city.slug}/${service.slug}`
   });
 }
@@ -49,7 +49,7 @@ export default async function CityServicePage({ params }: Props) {
     },
     {
       question: `Is there a claimed office in ${city.name}?`,
-      answer: "No. This page is a service-area connection page and does not claim a physical office, fake address, or fake Google Business Profile."
+      answer: "No. This page is a service-area request page and does not claim a physical office in every city listed."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -74,7 +74,7 @@ export default async function CityServicePage({ params }: Props) {
           <p className="section-kicker">City plus service page</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{service.name} in {city.name}, TX</h1>
           <p className="mt-4 text-lg leading-8 text-slate-700">
-            Local answer-ready guidance for {city.name} homeowners and property managers who need {service.name} without fake office, address, license, or guaranteed-arrival claims.
+            Local guidance for {city.name} homeowners and property managers who need {service.name}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
           </p>
           <div className="mt-6">
             <CallButton location={`city-service-${city.slug}-${service.slug}-top`} />
@@ -90,7 +90,7 @@ export default async function CityServicePage({ params }: Props) {
       <InfoListSection
         kicker="City relevance"
         title={`${city.name} service-area guidance`}
-        intro={`This page is focused on ${city.areaHint}. It is a provider-connection page, not a claim that Plumbing Hands has a physical office in ${city.name}.`}
+        intro={`This page is focused on ${city.areaHint}. It is a service-area request page, not a claim that Plumbing Hands has a physical office in ${city.name}.`}
         items={[
           `Share that the request is in ${city.name} and mention nearby cross streets when calling.`,
           `Describe whether the issue affects one fixture, several fixtures, or the whole property.`,

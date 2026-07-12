@@ -4,7 +4,7 @@ Date: 2026-07-12
 
 ## Latest Scope
 
-Day 2 SEO + AEO content scale.
+Day 3 premium design cleanup, public copy cleanup, safe visual assets, reusable blueprints, and obsolete softcopy cleanup.
 
 ## Requested Commands
 
@@ -26,7 +26,7 @@ Command path:
 Result:
 - Next.js production build passed
 - 118 static build entries generated, including framework/support routes
-- 112 sitemap URLs verified in the local sitemap artifact
+- 112 sitemap URLs remain preserved by sitemap logic
 - `/api/lead` remains dynamic
 - `/api/call-event` remains dynamic
 
@@ -52,7 +52,7 @@ PowerShell syntax checks:
 - passed for Google Search Console helper scripts
 
 Live URL checks:
-- `https://plumbinghands.com`: reachable on Vercel
+- `https://plumbinghands.com`: reachable on Vercel after Day 3 deploy; Day 3 homepage copy present
 - `https://www.plumbinghands.com`: reachable on Vercel
 - `https://plumbinghands.com/robots.txt`: reachable
-- `https://plumbinghands.com/sitemap.xml`: reachable
+- `https://plumbinghands.com/sitemap.xml`: reachable with 112 final-domain URLs and no preview URLs

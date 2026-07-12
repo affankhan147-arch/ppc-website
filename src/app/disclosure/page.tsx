@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Provider connection disclosure",
-  description: "Disclosure for the Dallas-Fort Worth emergency plumbing lead generation platform.",
+  description: "Disclosure for the Dallas-Fort Worth emergency plumbing service request website.",
   path: "/disclosure"
 });
 
@@ -15,7 +15,7 @@ export default function DisclosurePage() {
       <div className="content-section space-y-4 leading-7 text-slate-700">
         <p>{siteConfig.disclosure}</p>
         <p>No page on this site should be read as a fake Google Business Profile, fake address, fake local office, fake review, fake license, fake insurance claim, or guaranteed response-time claim.</p>
-        <p>The platform is built for organic SEO, local service-area relevance, AEO answers, call capture, lead forms, routing data, and compliance-aware growth.</p>
+        <p>Service availability, pricing, arrival timing, credentials, and scope should be confirmed directly with the provider before work begins.</p>
       </div>
     </main>
   );

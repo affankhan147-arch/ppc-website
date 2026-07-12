@@ -74,8 +74,7 @@ export default async function ServicePage({ params }: Props) {
           <p className="section-kicker">{service.urgency} urgency service page</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{service.name} in Dallas-Fort Worth</h1>
           <p className="mt-4 text-lg leading-8 text-slate-700">
-            Built for urgent homeowner questions, local service-area SEO, and answer engine visibility without fake office,
-            review, license, or guarantee claims.
+            Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
             <CallButton location={`service-${service.slug}-top`} />
@@ -116,7 +115,7 @@ export default async function ServicePage({ params }: Props) {
       />
       <section className="content-section">
         <p className="section-kicker">Cost discussion</p>
-        <h2 className="mt-2 text-2xl font-black text-slate-950">Approximate cost factors without fake pricing</h2>
+        <h2 className="mt-2 text-2xl font-black text-slate-950">Cost factors to confirm before work starts</h2>
         <p className="mt-3 leading-7 text-slate-700">{service.costDiscussion}</p>
       </section>
       <CostFactors factors={service.costFactors} />

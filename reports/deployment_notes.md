@@ -33,15 +33,19 @@ Confirmed:
 - HTTPS works on https://plumbinghands.com and https://www.plumbinghands.com
 - robots.txt works
 - sitemap.xml works
+- Google Search Console is verified
+- Google sitemap was submitted
+- Homepage indexing was requested
+- IndexNow key is live
+- 112 URLs were submitted to IndexNow with status 202
 
 Pending owner action:
-- Google Search Console TXT verification
-- Google sitemap submission after verification
-- homepage URL inspection and indexing request
-- Bing Webmaster verification after Google is complete
-- IndexNow after Bing is verified
-- final public launch
+- real tracked phone number
+- production service request handling endpoint
+- analytics IDs if owner wants GA4, GTM, or Clarity
+- optional Bing Webmaster dashboard review later
+- final public growth approval
 
-Manual needs: real tracking phone number, production environment variables, owner-approved buyer routing endpoints, Search Console verification, and Bing verification.
+Manual needs: real tracking phone number, production environment variables, approved request handling endpoint, analytics values if used, and verified provider partner details before publishing any provider-specific claims.
 
 Do not commit private credentials.

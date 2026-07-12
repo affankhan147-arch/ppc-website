@@ -7,7 +7,7 @@ const leadSchema = z.object({
   service: z.string().min(1),
   city: z.string().min(1),
   urgency: z.string().min(1),
-  message: z.string().min(1),
+  message: z.string().optional(),
   pageUrl: z.string().optional(),
   utmSource: z.string().optional(),
   utmMedium: z.string().optional(),
@@ -21,8 +21,8 @@ function redactPhone(phone: string) {
   return digits.length >= 4 ? `last4:${digits.slice(-4)}` : "redacted";
 }
 
-function createLeadId() {
-  return `lead_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+function createRequestId() {
+  return `request_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
 }
 
 export async function POST(request: Request) {
@@ -35,12 +35,12 @@ export async function POST(request: Request) {
   const parsed = leadSchema.safeParse(raw);
 
   if (!parsed.success) {
-    return NextResponse.json({ ok: false, error: "Invalid lead request." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "Invalid service request." }, { status: 400 });
   }
 
-  const leadId = createLeadId();
-  const safeLeadLog = {
-    leadId,
+  const requestId = createRequestId();
+  const safeRequestLog = {
+    requestId,
     city: parsed.data.city,
     service: parsed.data.service,
     urgency: parsed.data.urgency,
@@ -53,17 +53,17 @@ export async function POST(request: Request) {
       content: parsed.data.utmContent || ""
     },
     phoneHint: redactPhone(parsed.data.phone),
-    messageLength: parsed.data.message.length,
+    messageLength: parsed.data.message?.length || 0,
     receivedAt: new Date().toISOString(),
     source: "website-form",
     storageMode: "placeholder-console-log-only"
   };
 
-  console.info("lead_request_placeholder_logged", safeLeadLog);
+  console.info("service_request_placeholder_logged", safeRequestLog);
   return NextResponse.json({
     ok: true,
-    message: "Lead request logged for safe routing placeholder.",
-    leadId,
-    nextStep: "Owner must connect approved CRM, call tracking, or buyer routing storage before public launch."
+    message: "Service request logged for safe placeholder handling.",
+    requestId,
+    nextStep: "Owner must connect approved CRM or service request storage before public launch."
   });
 }

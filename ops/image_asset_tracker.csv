@@ -11,3 +11,12 @@ public-images-partner-real-photos,partner pages,image folder,repo,repo,placehold
 public-images-problems,problem pages,image folder,repo,repo,placeholder folder,no,no,Problem image staging,Future approved problem visuals,low,not applicable,/problems,No copied competitor images
 public-images-services,service pages,image folder,repo,repo,placeholder folder,no,no,Service image staging,Future approved service visuals,low,not applicable,/services,No unsupported license or service claims
 public-images-trust,sitewide,image folder,repo,repo,placeholder folder,no,no,Trust asset staging,Future verified trust assets,medium,not applicable,sitewide,No fake badges reviews licenses or insurance marks
+emergency-plumbing-abstract.svg,homepage,abstract SVG,repo-created original,repo,owned by project,no,no,Abstract emergency plumbing pipe visual,,low,not applicable,/,Original SVG with no people photos or office claims
+service-card-icons.svg,service pages,icon SVG,repo-created original,repo,owned by project,no,no,Service icon set,,low,not applicable,/services,Original SVG icons only
+problem-water-backup.svg,problem pages,diagram SVG,repo-created original,repo,owned by project,no,no,Water backup symptom diagram,,low,not applicable,/problems,Original SVG diagram only
+cost-guide-meter.svg,cost guides,diagram SVG,repo-created original,repo,owned by project,no,no,Cost factor meter diagram,,low,not applicable,/cost-guides,Original SVG diagram only
+dfw-service-area-map.svg,homepage and city pages,abstract SVG,repo-created original,repo,owned by project,no,no,DFW service-area map abstract,,low,not applicable,/cities,No address or office claim
+how-it-works-flow.svg,sitewide,flow SVG,repo-created original,repo,owned by project,no,no,Service request flow diagram,,low,not applicable,sitewide,Original flow diagram
+provider-connection-disclosure.svg,disclosure and trust,diagram SVG,repo-created original,repo,owned by project,no,no,Provider availability disclosure shield,,low,not applicable,/disclosure,No fake badge or credential mark
+plumbing-hands-mark.svg,brand,brand SVG,repo-created original,repo,owned by project,no,no,Plumbing Hands abstract mark,,low,not applicable,sitewide,Original brand icon
+safe-visual-placeholder.svg,placeholder,placeholder SVG,repo-created original,repo,owned by project,no,no,Safe visual placeholder,,low,not applicable,sitewide,Original placeholder for future approved visuals

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
   if (!city) return {};
   return buildMetadata({
     title: `Emergency plumbing help in ${city.name}, TX`,
-    description: `Connect with local emergency plumbing and drain cleaning providers serving ${city.name}, TX without fake local office claims.`,
+    description: `Request emergency plumbing and drain cleaning help serving ${city.name}, TX with clear service-area guidance.`,
     path: `/cities/${city.slug}`
   });
 }
@@ -47,7 +47,7 @@ export default async function CityPage({ params }: Props) {
     },
     {
       question: `Does this site claim a local office in ${city.name}?`,
-      answer: "No. The site uses service-area wording and does not claim a physical office, fake address, fake GBP, or guaranteed response time."
+      answer: "No. The site uses service-area wording and does not claim a physical office in every city listed."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -65,7 +65,7 @@ export default async function CityPage({ params }: Props) {
       <Breadcrumbs items={[{ label: "Cities", href: "/cities/dallas" }, { label: city.name, href: path }]} />
       <div className="mt-6 answer-grid">
         <article>
-          <p className="section-kicker">Local SEO without fake address claims</p>
+          <p className="section-kicker">Local service-area guidance</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">Emergency plumbing help in {city.name}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-700">
             For urgent leaks, drain backups, sewer line symptoms, overflows, and water heater problems in {city.name} and nearby {city.countyHint} areas.

@@ -2,8 +2,10 @@ FINAL 3-DAY SEO + AEO BUILD COMMAND
 
 Command 2 is active in DNS-safe mode.
 
-The full owner-supplied command is preserved at:
-command-center/PPC_Software_Company_3_Day_HyperAggressive_SEO_AEO_Codex_Super_Command_WITH_D_DRIVE_BLUEPRINT_BACKUP.txt
+The old owner-supplied command softcopy has been superseded by reusable blueprint files:
+- blueprints/PPC_LOCAL_LEADGEN_0_TO_FINAL_REUSABLE_CLOUD_BLUEPRINT.md
+- blueprints/NEXT_PROJECT_FAST_START_CHECKLIST.md
+- blueprints/REUSABLE_COMMAND_LIBRARY.md
 
 When the owner explicitly starts Command 2, Codex should build the organic SEO + AEO foundation for the PPC lead generation website over a 3-day execution plan.
 
@@ -41,8 +43,14 @@ Hard safety limits:
 - no spam backlinks
 - no credentials in repo files
 
-Deployment context before launch:
+Deployment and indexing context:
 - Treat the ChatGPT/Codex `chatgpt.site` URL as a private preview/control URL.
 - The final production targets are `https://plumbinghands.com` and `https://www.plumbinghands.com`.
-- DNS and HTTPS are live on the final domains. Google Search Console TXT verification is the next owner step. Bing verification, sitemap submission in Bing, IndexNow, citations, outreach, and final launch remain pending.
+- DNS and HTTPS are live on the final domains.
+- Google Search Console is verified.
+- Google sitemap was submitted.
+- Homepage indexing was requested.
+- IndexNow key is live and 112 URLs were submitted with status 202.
+- Bing Webmaster dashboard setup is optional later because discovery through IndexNow is complete.
+- Citations, outreach, paid ads, and fake-claim activities remain blocked unless the owner separately approves a compliant task.
 - Keep DNS records and owner-only domain steps in `manual-owner-steps/DOMAIN_DNS_STEPS.md`.

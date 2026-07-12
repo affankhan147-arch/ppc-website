@@ -7,11 +7,13 @@ type CallButtonProps = {
   className?: string;
 };
 
-export function CallButton({ label = `Call ${siteConfig.phoneDisplay}`, location, className = "" }: CallButtonProps) {
+const hasUsablePhone = !siteConfig.phoneE164.includes("X");
+
+export function CallButton({ label = hasUsablePhone ? `Call ${siteConfig.phoneDisplay}` : "Request Emergency Help", location, className = "" }: CallButtonProps) {
   return (
     <a
-      className={`inline-flex items-center justify-center gap-2 rounded-md bg-emerald-500 px-4 py-3 text-sm font-bold text-slate-950 shadow-sm transition hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-300 ${className}`}
-      href={`tel:${siteConfig.phoneE164}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-md bg-orange-500 px-4 py-3 text-sm font-black text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 ${className}`}
+      href={hasUsablePhone ? `tel:${siteConfig.phoneE164}` : "/contact"}
       data-call-event-url={`/api/call-event?location=${encodeURIComponent(location)}`}
       aria-label={`${label} from ${location}`}
     >

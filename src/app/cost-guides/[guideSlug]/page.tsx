@@ -65,7 +65,7 @@ export default async function CostGuidePage({ params }: Props) {
         <article>
           <p className="section-kicker">Cost guide</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{guide.title}</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-700">Helpful cost-factor guidance for urgent Dallas-Fort Worth plumbing decisions without fake guaranteed pricing.</p>
+          <p className="mt-4 text-lg leading-8 text-slate-700">Helpful cost-factor guidance for urgent Dallas-Fort Worth plumbing decisions before you approve work.</p>
           <div className="mt-6">
             <CallButton location={`cost-${guide.slug}-top`} />
           </div>

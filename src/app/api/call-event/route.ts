@@ -9,7 +9,7 @@ export async function GET(request: Request) {
     city: url.searchParams.get("city") || "",
     service: url.searchParams.get("service") || "",
     timestamp: new Date().toISOString(),
-    trackedPhone: siteConfig.phoneE164
+    requestDestination: siteConfig.phoneE164.includes("X") ? "contact-form-placeholder" : "phone"
   };
 
   console.info("call_click_event", event);

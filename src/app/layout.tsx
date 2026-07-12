@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.brandName}`
   },
   description:
-    "Config-driven pay-per-call lead generation platform for emergency plumbing and drain cleaning provider connections across Dallas-Fort Worth.",
+    "Emergency plumbing request help across Dallas-Fort Worth for urgent drain, sewer, pipe, toilet, and water-heater problems.",
   applicationName: siteConfig.brandName,
   verification: {
     ...(googleVerification ? { google: googleVerification } : {}),

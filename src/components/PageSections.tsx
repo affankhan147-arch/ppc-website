@@ -78,9 +78,8 @@ export function LocalGuidance({ cityName = "Dallas-Fort Worth" }: { cityName?: s
     <section className="content-section">
       <div className="section-kicker"><MapPin className="h-4 w-4" aria-hidden="true" /> Local service-area guidance</div>
       <p className="mt-3 leading-7 text-slate-700">
-        This page is written for homeowners and property managers in {cityName}. It does not claim a physical office, fake address,
-        fake Google Business Profile, guaranteed response time, license, insurance, or review score. The purpose is to connect urgent
-        service requests with available local providers.
+        This page is written for homeowners and property managers in {cityName}. Plumbing Hands helps connect visitors with available plumbing
+        service providers or partners where coverage is available. We do not claim a physical office in every city listed.
       </p>
     </section>
   );

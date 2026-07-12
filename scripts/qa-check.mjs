@@ -98,8 +98,8 @@ for (const file of sourceFiles) {
 }
 
 const callButton = readFileSync(join(process.cwd(), "src/components/CallButton.tsx"), "utf8");
-if (!callButton.includes("href={`tel:${siteConfig.phoneE164}`}")) {
-  console.error("CallButton must use tel: link format.");
+if (!callButton.includes("hasUsablePhone") || !callButton.includes("`tel:${siteConfig.phoneE164}`") || !callButton.includes('"/contact"')) {
+  console.error("CallButton must use tel: for real phone numbers and /contact while the phone is a placeholder.");
   process.exit(1);
 }
 

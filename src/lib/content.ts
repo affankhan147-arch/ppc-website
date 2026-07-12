@@ -53,10 +53,10 @@ export function getAllInventoryPages(): InventoryPage[] {
     { kind: "home", title: `${siteConfig.brandName} | Emergency Plumbing Connections`, path: "/", h1: "Emergency plumbing help across Dallas-Fort Worth", description: "Connect with local emergency plumbing and drain cleaning providers across Dallas-Fort Worth." },
     { kind: "faq", title: "Emergency Plumbing FAQ", path: "/faq", h1: "Emergency plumbing and drain cleaning FAQ", description: "Clear answers for urgent plumbing, drain, and sewer questions." },
     { kind: "legal", title: "Contact", path: "/contact", h1: "Request a plumbing provider connection", description: "Share your city, service need, and urgency to request a local provider connection." },
-    { kind: "legal", title: "Partner With Us", path: "/partner-with-us", h1: "Partner with the PPC lead generation platform", description: "Partner inquiry page for verified plumbing providers and lead buyers." },
-    { kind: "legal", title: "Privacy Policy", path: "/privacy", h1: "Privacy policy", description: "How this lead generation platform handles submitted information." },
+    { kind: "legal", title: "Partner With Us", path: "/partner-with-us", h1: "Provider partner inquiries", description: "Partner inquiry page for real plumbing providers and service partners." },
+    { kind: "legal", title: "Privacy Policy", path: "/privacy", h1: "Privacy policy", description: "How this website handles submitted service request information." },
     { kind: "legal", title: "Terms", path: "/terms", h1: "Terms of use", description: "Terms for using this provider connection website." },
-    { kind: "legal", title: "Disclosure", path: "/disclosure", h1: "Provider connection disclosure", description: "Honest disclosure for this lead generation website." }
+    { kind: "legal", title: "Disclosure", path: "/disclosure", h1: "Provider connection disclosure", description: "Honest disclosure for this service request website." }
   ];
 
   const servicePages = services.map((service) => ({
@@ -84,7 +84,7 @@ export function getAllInventoryPages(): InventoryPage[] {
       title: `${service.name} in ${city.name}, TX`,
       path: cityServicePath(city.slug, service.slug),
       h1: `${service.name} in ${city.name}, TX`,
-      description: `${service.shortAnswer} This ${city.name} page is written for local service-area intent without fake office claims.`
+      description: `${service.shortAnswer} This ${city.name} page uses transparent service-area wording and provider availability guidance.`
     }];
   });
 

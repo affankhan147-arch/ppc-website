@@ -34,15 +34,18 @@ DNS-safe status:
 - WWW DNS is `CNAME www cname.vercel-dns.com`.
 - Exact Vercel DNS records are archived in `manual-owner-steps/HOSTINGER_DNS_NOW_ADD_THESE_RECORDS.md`.
 - HTTPS works on `https://plumbinghands.com` and `https://www.plumbinghands.com`.
-- Google Search Console verification is pending owner action.
-- Bing and IndexNow are pending until Google verification and sitemap submission are complete.
+- Google Search Console is verified.
+- Google sitemap was submitted.
+- Homepage indexing was requested.
+- IndexNow key is live and 112 URLs were submitted with status `202`.
+- Bing Webmaster dashboard setup is optional later because discovery through IndexNow is complete.
 
 Owner-only steps:
 
 1. Do not add the previous ChatGPT Sites DNS records.
 2. Use Vercel as the production hosting target.
-3. Run `scripts/50_open_google_search_console_setup.ps1`.
-4. Copy the Google TXT value from Search Console.
-5. Run `scripts/51_add_google_search_console_txt_to_hostinger.ps1`.
+3. Keep Hostinger DNS records unchanged unless Vercel or the owner requests a change.
+4. Do not resubmit the sitemap or IndexNow URLs unless there is a new owner-approved indexing task.
+5. Add analytics and real call tracking only through approved hosting environment variables.
 
 Do not let Codex make payment, registrar, or DNS account changes without explicit owner approval.

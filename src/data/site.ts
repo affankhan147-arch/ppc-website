@@ -1,6 +1,6 @@
 export const siteConfig = {
   brandName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
-  platformName: "PPC Lead Generation Platform",
+  serviceName: "Emergency Plumbing Help",
   legalName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://plumbinghands.com",
   marketName: process.env.NEXT_PUBLIC_PRIMARY_MARKET || "Dallas-Fort Worth",
@@ -12,7 +12,7 @@ export const siteConfig = {
   fallbackPhoneE164: process.env.NEXT_PUBLIC_FALLBACK_PHONE_E164 || process.env.NEXT_PUBLIC_TRACKED_PHONE || "+1XXXXXXXXXX",
   email: "partners@example.com",
   disclosure:
-    "This website connects users with local emergency plumbing providers. It is not a government agency, utility company, emergency service, or licensed plumbing company unless specifically stated with proof.",
+    "Plumbing Hands helps connect visitors with available plumbing service providers or partners where coverage is available. We do not claim a physical office in every city listed.",
   ownerSetupNote:
     "Replace sample tracking numbers with an owner-approved call tracking number before public launch."
 };

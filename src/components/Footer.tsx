@@ -5,11 +5,14 @@ import { services } from "@/data/services";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 text-white">
+    <footer className="border-t border-slate-200 bg-[#102238] text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <p className="text-lg font-black">{siteConfig.brandName}</p>
-          <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">{siteConfig.disclosure}</p>
+          <p className="mt-3 max-w-md text-sm leading-6 text-slate-200">{siteConfig.disclosure}</p>
+          <p className="mt-4 rounded-md border border-white/15 bg-white/10 p-3 text-xs leading-5 text-slate-200">
+            Service availability may vary by location, timing, and provider coverage. Confirm pricing, credentials, and scope directly with the provider.
+          </p>
         </div>
         <div>
           <p className="font-bold">Services</p>

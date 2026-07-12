@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Terms of use",
-  description: "Terms of use for the Dallas-Fort Worth emergency plumbing provider connection platform.",
+  description: "Terms of use for the Dallas-Fort Worth emergency plumbing service request website.",
   path: "/terms"
 });
 
@@ -12,7 +12,7 @@ export default function TermsPage() {
       <p className="section-kicker">Legal</p>
       <h1 className="mt-3 text-4xl font-black text-slate-950">Terms of use</h1>
       <div className="content-section space-y-4 leading-7 text-slate-700">
-        <p>This website provides information and provider connection requests. It does not guarantee availability, pricing, arrival time, results, licensing, insurance, or emergency response.</p>
+        <p>This website provides information and service request options. It does not guarantee availability, pricing, arrival time, results, licensing, insurance, or emergency response.</p>
         <p>Users should verify provider details, pricing, credentials, and work scope directly with the provider before authorizing service.</p>
         <p>If there is danger to life, health, fire, gas, electricity, or public safety, contact the proper emergency service or utility immediately.</p>
       </div>
