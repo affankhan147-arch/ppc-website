@@ -23,7 +23,7 @@ export const siteConfig = {
 
 export const navigation = [
   { label: "Services", href: "/services/24-hour-emergency-plumber" },
-  { label: "Cities", href: "/cities/dallas" },
+  { label: "Cities", href: "/cities" },
   { label: "Costs", href: "/cost-guides/emergency-plumbing-cost-dfw" },
   { label: "Guides", href: "/blog" },
   { label: "FAQ", href: "/faq" },

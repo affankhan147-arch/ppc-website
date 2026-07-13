@@ -138,7 +138,7 @@ export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
       <input ref={utmContentRef} type="hidden" name="utmContent" defaultValue="" />
       <div>
         <p className="text-xs font-black uppercase tracking-normal text-sky-700">Fast request form</p>
-        <h2 className="mt-1 text-2xl font-black text-slate-950">Tell us what service you need</h2>
+        <h2 className="mt-1 text-xl font-black text-slate-950 sm:text-2xl">Tell us what service you need</h2>
       </div>
       <label className="grid gap-1 text-sm font-semibold text-slate-700">
         Plumbing issue

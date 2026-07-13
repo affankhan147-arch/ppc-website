@@ -61,11 +61,11 @@ export default async function CityPage({ params }: Props) {
       <JsonLd
         data={[
           webPageSchema(path, `Emergency plumbing help in ${city.name}`, `Provider connection page for urgent plumbing in ${city.name}.`),
-          breadcrumbSchema([{ name: "Cities", path: "/cities/dallas" }, { name: city.name, path }]),
+          breadcrumbSchema([{ name: "Cities", path: "/cities" }, { name: city.name, path }]),
           faqSchema(faqs)
         ]}
       />
-      <Breadcrumbs items={[{ label: "Cities", href: "/cities/dallas" }, { label: city.name, href: path }]} />
+      <Breadcrumbs items={[{ label: "Cities", href: "/cities" }, { label: city.name, href: path }]} />
       <div className="mt-6 answer-grid">
         <article>
           <p className="section-kicker">Local service-area guidance</p>
@@ -124,7 +124,7 @@ export default async function CityPage({ params }: Props) {
       ) : null}
       <section className="content-section">
         <p className="section-kicker">Nearby DFW areas</p>
-        <h2 className="mt-2 text-2xl font-black text-slate-950">Nearby city pages</h2>
+        <h2 className="mt-2 text-2xl font-black text-slate-950">Nearby DFW locations</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {nearbyCities.map((nearby) => (
             <Link key={nearby.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400" href={`/cities/${nearby.slug}`}>

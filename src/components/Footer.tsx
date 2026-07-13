@@ -28,6 +28,9 @@ export function Footer() {
         <div>
           <p className="font-bold">Cities</p>
           <div className="mt-3 grid gap-2 text-sm text-slate-300">
+            <Link href="/cities" className="hover:text-white">
+              All DFW locations
+            </Link>
             {cities.slice(0, 6).map((city) => (
               <Link key={city.slug} href={`/cities/${city.slug}`} className="hover:text-white">
                 {city.name}

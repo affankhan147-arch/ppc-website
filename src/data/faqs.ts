@@ -40,8 +40,20 @@ export const emergencyFaqs: FAQ[] = [
     answer: "Stop the water source if safe, avoid using affected fixtures, protect people from contaminated water, and request help."
   },
   {
+    question: "What should I do during an active leak?",
+    answer: "Use the closest working shutoff valve, keep water away from electrical areas, and request leak help quickly if water keeps spreading."
+  },
+  {
     question: "When should a drain backup be treated as urgent?",
     answer: "Treat it as urgent when more than one fixture backs up, wastewater appears, or the problem blocks essential use."
+  },
+  {
+    question: "Which sewer symptoms need fast attention?",
+    answer: "Multiple slow drains, sewer odor, toilet gurgling, dirty tub water, or outdoor cleanout overflow should be treated as urgent warning signs."
+  },
+  {
+    question: "When does fixture loss become urgent?",
+    answer: "No usable toilet, no hot water for vulnerable occupants, or water near unsafe areas can justify urgent guidance."
   },
   {
     question: "Can I use chemical drain cleaner during a backup?",
