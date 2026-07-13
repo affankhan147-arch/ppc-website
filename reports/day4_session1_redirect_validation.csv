@@ -1,0 +1,4 @@
+Area,Redirect Found,Status,Evidence
+next.config.mjs,no,pass,No redirect configuration found in repository.
+Dynamic routes,no,pass,"Missing params use notFound(), not redirect."
+Navigation,no,pass,"Navigation points directly to live paths, including /cities."

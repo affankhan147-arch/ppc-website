@@ -1,0 +1,8 @@
+Check,Result,Evidence,Action
+Homepage in sitemap inventory,pass,getAllInventoryPages includes kind=home path=/,none
+/cities hub in sitemap inventory,pass,getAllInventoryPages includes kind=city-index path=/cities,none
+Services in sitemap inventory,pass,services map to /services/[serviceSlug],none
+Cities in sitemap inventory,pass,cities map to /cities/[citySlug],none
+Priority city-service pages,pass,priorityCityServiceCombos map to /cities/[citySlug]/[serviceSlug],none
+Problems and costs,pass,problems and costGuides map to indexable URLs,none
+Blog posts,pass,30 blog titles map to /blog/[postSlug],none

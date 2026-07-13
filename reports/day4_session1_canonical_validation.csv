@@ -1,0 +1,8 @@
+Route Type,Canonical Source,Status,Evidence
+Home,buildMetadata path=/,pass,src/app/page.tsx uses buildMetadata
+City hub,buildMetadata path=/cities,pass,src/app/cities/page.tsx uses buildMetadata
+Service,buildMetadata path=/services/[slug],pass,src/app/services/[serviceSlug]/page.tsx generateMetadata
+City,buildMetadata path=/cities/[slug],pass,src/app/cities/[citySlug]/page.tsx generateMetadata
+Problem,buildMetadata path=/problems/[slug],pass,src/app/problems/[problemSlug]/page.tsx generateMetadata
+Cost guide,buildMetadata path=/cost-guides/[slug],pass,src/app/cost-guides/[guideSlug]/page.tsx generateMetadata
+Blog,buildMetadata path=/blog/[slug],pass,src/app/blog/[postSlug]/page.tsx generateMetadata
