@@ -186,7 +186,7 @@ export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
         Problem details optional
         <textarea className="min-h-20 rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="message" placeholder="Fixture, active water, backup, shutoff, access notes..." />
       </label>
-      <button className="inline-flex items-center justify-center gap-2 rounded-md bg-slate-950 px-4 py-3 text-sm font-black text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500" type="submit" disabled={submitting}>
+      <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-slate-950 px-4 py-3 text-base font-black text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500" type="submit" disabled={submitting}>
         <Send className="h-4 w-4" aria-hidden="true" />
         {submitting ? "Submitting Request" : "Submit Service Request"}
       </button>
