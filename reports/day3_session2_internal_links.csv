@@ -1,0 +1,6 @@
+Source URL,Target URL,Anchor,Reason,Implemented
+/services/burst-pipe-emergency,/problems/water-shutoff-valve-will-not-close,Water shutoff valve will not close,Supports active-leak triage when isolation fails.,yes
+/services/burst-pipe-emergency,/cost-guides/emergency-leak-repair-cost-dfw,Emergency leak repair cost,Connects emergency service intent to pricing-scope questions.,yes
+/problems/water-shutoff-valve-will-not-close,/services/burst-pipe-emergency,Burst pipe emergency,Routes failed-shutoff problem users to the matching service page.,yes
+/cost-guides/emergency-leak-repair-cost-dfw,/problems/water-shutoff-valve-will-not-close,Water shutoff valve will not close,Explains why failed valves can change leak cost scope.,yes
+/cost-guides/emergency-leak-repair-cost-dfw,/cities/dallas,Dallas emergency plumbing help,Connects commercial cost intent to local service-area path.,yes

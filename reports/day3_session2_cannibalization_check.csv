@@ -1,0 +1,5 @@
+URL,Primary Intent,Potential Overlap,Decision,Evidence
+/services/burst-pipe-emergency,Request emergency pipe or leak help,/problems/water-shutoff-valve-will-not-close,No cannibalization,Service page covers provider request path; problem page covers failed valve diagnosis and immediate decision.
+/problems/water-shutoff-valve-will-not-close,Understand failed shutoff during leak,/cost-guides/emergency-leak-repair-cost-dfw,No cannibalization,Problem page explains what to do; cost page explains scope factors before approval.
+/cost-guides/emergency-leak-repair-cost-dfw,Compare leak repair cost factors,/cost-guides/burst-pipe-emergency-cost-guide,Distinct,Leak repair guide includes shutoff/access/restoration scope; burst pipe guide covers pipe-break emergency factors.
+/cities/dallas,Local service-area request path,/cities/dallas/emergency-drain-cleaning,Distinct,City page is a broad local hub; city-service page is service-specific.

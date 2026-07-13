@@ -166,7 +166,8 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
-      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
     ]
   }
 };
@@ -265,7 +266,8 @@ export const problemEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
-      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
     ]
   }
 };
@@ -359,7 +361,8 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
-      { label: "Burst pipe cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" }
+      { label: "Burst pipe cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
     ]
   }
 };
@@ -502,6 +505,13 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
 };
 
 export const serviceFaqEnhancements: Record<string, FAQ[]> = {
+  "burst-pipe-emergency": [
+    {
+      question: "What leak details should I include in the request?",
+      answer:
+        "Include whether water is still active, which shutoff worked, where water is visible, whether electrical areas are nearby, and whether walls, ceilings, cabinets, or floors are wet."
+    }
+  ],
   "main-sewer-line-clog": [
     {
       question: "What details help a main sewer line call get triaged?",
@@ -512,6 +522,13 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
 };
 
 export const problemFaqEnhancements: Record<string, FAQ[]> = {
+  "water-shutoff-valve-will-not-close": [
+    {
+      question: "What should I tell the provider if the shutoff valve failed?",
+      answer:
+        "Share which valve failed, whether it leaked or spun, whether the main valve is accessible, and whether water is still spreading."
+    }
+  ],
   "kitchen-sink-backing-up": [
     {
       question: "When is a kitchen sink backup more than a simple sink clog?",
@@ -529,6 +546,13 @@ export const problemFaqEnhancements: Record<string, FAQ[]> = {
 };
 
 export const costGuideFaqEnhancements: Record<string, FAQ[]> = {
+  "emergency-leak-repair-cost-dfw": [
+    {
+      question: "What is the most important leak cost detail?",
+      answer:
+        "The key detail is whether water is still active. Active water, failed shutoffs, hidden access, and restoration needs can change the scope."
+    }
+  ],
   "drain-cleaning-cost-dfw": [
     {
       question: "Why can two drain-cleaning quotes describe different work?",
