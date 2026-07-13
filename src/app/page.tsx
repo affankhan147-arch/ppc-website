@@ -103,7 +103,7 @@ export default function HomePage() {
               Find help for urgent drain, sewer, pipe, toilet, and water-heater problems. {siteConfig.serviceStatement}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <CallButton location="home-hero" label="Request Emergency Help" />
+              <CallButton location="home-hero" label="Request Emergency Help" pagePath="/" pageType="homepage" service="Emergency plumbing" city={siteConfig.marketName} />
               <Link
                 href="#services"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/25 px-5 py-3 text-sm font-black text-white transition hover:bg-white/10"

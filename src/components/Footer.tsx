@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { cities } from "@/data/cities";
 import { services } from "@/data/services";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export function Footer() {
   return (
@@ -41,7 +42,9 @@ export function Footer() {
             <Link href="/terms" className="hover:text-white">Terms</Link>
             <Link href="/disclosure" className="hover:text-white">Disclosure</Link>
             <Link href="/blog" className="hover:text-white">Emergency guides</Link>
-            <Link href="/partner-with-us" className="hover:text-white">Partner with us</Link>
+            <TrackedLink href="/partner-with-us" className="hover:text-white" eventName="partner_route_click" ctaLocation="footer-partner-link" pageType="footer">
+              Partner with us
+            </TrackedLink>
           </div>
         </div>
       </div>

@@ -71,7 +71,7 @@ export default async function CityPage({ params }: Props) {
             For urgent leaks, drain backups, sewer line symptoms, overflows, and water heater problems in {city.name} and nearby {city.countyHint} areas.
           </p>
           <div className="mt-6">
-            <CallButton location={`city-${city.slug}-top`} />
+            <CallButton location={`city-${city.slug}-top`} pagePath={path} pageType="city" city={city.name} service="Emergency plumbing" />
           </div>
         </article>
         <LeadForm pageUrl={path} service="Emergency plumbing" city={city.name} />

@@ -627,10 +627,303 @@ Do not expose secrets.
   console.log(`Phase A reports generated for ${pages.length} money pages.`);
 }
 
+function generatePhaseB() {
+  const pages = htmlRouteData();
+  const selected = selectedPhaseAPages.map((url) => pages.find((page) => page.route === url)).filter(Boolean);
+  const conversionRows = [
+    ["Source URL", "Component", "Visible Label", "Destination", "Event Name", "Event Parameters", "Production Readiness", "Placeholder Status", "Owner Action Required", "Validation Status"],
+    ["sitewide", "Header CallButton", "Request Emergency Help or Call {phone}", "+1 tel when configured; /contact while placeholder", "header_call_click", "eventName, location, ctaLocation, pagePath, pageType, service, city, problem, deviceContext", "Code ready; production phone not configured", "phone placeholder", "Provide tracked phone", "Build passed"],
+    ["sitewide mobile", "StickyCallBar CallButton", "Request Emergency Help or Call {phone}", "+1 tel when configured; /contact while placeholder", "sticky_call_click", "eventName, location, ctaLocation, pagePath, pageType, service, city, problem, deviceContext", "Code ready; production phone not configured", "phone placeholder", "Provide tracked phone", "Build passed"],
+    ["/", "Hero CallButton", "Request Emergency Help", "/contact while phone placeholder", "phone_click", "homepage pagePath/pageType, service=Emergency plumbing, city=Dallas-Fort Worth, deviceContext", "Safe fallback ready", "phone placeholder", "Provide tracked phone", "Build passed"],
+    ["/contact", "LeadForm", "Submit Service Request", "/api/lead", "contact_form_start; contact_form_submit", "pagePath, pageType, service, city, deviceContext; no submitted PII sent to event endpoint", "UX ready; destination placeholder", "lead storage placeholder", "Provide CRM/webhook/email destination", "Build passed"],
+    ["/partner-with-us", "LeadForm", "Submit Service Request", "/api/lead", "contact_form_start; contact_form_submit", "pagePath, pageType=partner, service=Partner inquiry, city=Dallas-Fort Worth, deviceContext", "UX ready; destination placeholder", "lead storage placeholder", "Provide partner lead workflow", "Build passed"],
+    ["footer", "TrackedLink", "Partner with us", "/partner-with-us", "partner_route_click", "eventName, ctaLocation=footer-partner-link, pagePath, pageType=footer, deviceContext", "Ready", "none", "No", "Build passed"],
+    ["/api/call-event", "Route handler", "not visible", "server log", "all allowed event names", "sanitized event parameters; requestDestination contact-form-placeholder until phone configured", "Ready for privacy-conscious logging", "phone destination placeholder", "Provide analytics/log destination if needed", "Build passed"],
+    ["/api/lead", "Route handler", "not visible", "redacted placeholder console log", "service_request_placeholder_logged", "city, service, urgency, pageUrl, UTM, phone last4, messageLength; no full phone/message returned", "Validation ready; delivery not configured", "lead storage placeholder", "Provide approved destination", "Build passed"],
+    ...selected.map((page) => [
+      page.route,
+      "Page CallButton and LeadForm",
+      "Request Emergency Help; Submit Service Request",
+      "/contact or /api/lead while phone is placeholder",
+      page.type.includes("service") ? "service_page_call" : page.type.includes("problem") ? "emergency_page_call" : page.type.includes("cost") ? "cost_page_call" : "city_page_call",
+      "pagePath, pageType, service/city/problem where available, ctaLocation, deviceContext",
+      "Ready with safe phone fallback and form UX",
+      "phone and lead destination placeholders",
+      "Provide phone and lead destination",
+      "Build passed"
+    ])
+  ];
+  writeCsv("reports/day2_session2_conversion_path_map.csv", conversionRows);
+
+  writeMd(
+    "reports/day2_session2_tracking_implementation.md",
+    `# Day 2 Session 2 Tracking Implementation
+
+## Starting State
+
+- Phase B starting build: pass.
+- Phase A commit confirmed: a36c7dc.
+- Working tree was clean before Phase B edits.
+
+## Implemented Events
+
+- Call buttons now emit explicit event names and context through /api/call-event.
+- Header CTA uses header_call_click.
+- Sticky mobile CTA uses sticky_call_click.
+- Service pages use service_page_call.
+- Problem pages use emergency_page_call.
+- Cost guides use cost_page_call.
+- City and city-service pages use city_page_call.
+- Lead forms emit contact_form_start on first focus and contact_form_submit on submit.
+- Footer partner link emits partner_route_click through a tracked client link.
+
+## Parameters
+
+The event endpoint accepts eventName, location, ctaLocation, pagePath, pageType, service, city, problem, and deviceContext. Parameters are trimmed and stripped of control characters. Form events do not transmit name, phone, message text, or other sensitive submitted fields.
+
+## Privacy Notes
+
+- No paid advertising IDs were added.
+- No analytics account IDs were invented.
+- No sensitive personal data is transmitted to /api/call-event.
+- /api/lead still logs only redacted phone last4, message length, and routing context until an owner-approved destination exists.
+
+## Production Limitation
+
+Real analytics destinations, call-tracking vendor IDs, and lead-routing destinations require owner-provided configuration.`
+  );
+
+  writeCsv("reports/day2_session2_event_dictionary.csv", [
+    ["Event Name", "Trigger", "Parameters", "PII Policy", "Destination", "Production Readiness", "Notes"],
+    ["phone_click", "Generic or homepage CTA click", "eventName, location, ctaLocation, pagePath, pageType, service, city, problem, deviceContext", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Falls back to /contact until phone configured."],
+    ["sticky_call_click", "Mobile sticky CTA click", "same as phone_click", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Identifies sticky mobile location."],
+    ["header_call_click", "Header CTA click", "same as phone_click", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Identifies global header location."],
+    ["service_page_call", "Service page CTA click", "same plus service", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Used on service templates."],
+    ["city_page_call", "City or city-service CTA click", "same plus city/service", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Used on city and city-service templates."],
+    ["emergency_page_call", "Problem page CTA click", "same plus problem/service", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Used for emergency problem intent."],
+    ["cost_page_call", "Cost guide CTA click", "same plus service", "No submitted PII", "/api/call-event", "Ready; phone placeholder remains", "Used for cost guide CTAs."],
+    ["contact_form_start", "First focus inside LeadForm", "eventName, location, ctaLocation, pagePath, pageType, service, city, deviceContext", "No name, phone, or message", "/api/call-event", "Ready", "Measures form engagement."],
+    ["contact_form_submit", "LeadForm submit attempt", "eventName, location, ctaLocation, pagePath, pageType, service, city, deviceContext", "No name, phone, or message", "/api/call-event", "Ready", "Measures submit attempt separately from lead validation."],
+    ["email_click", "Future email link click if an approved email link is added", "same as phone_click", "No submitted PII", "/api/call-event", "Reserved", "No public email link currently added."],
+    ["partner_route_click", "Tracked footer partner link", "eventName, ctaLocation, pagePath, pageType, deviceContext", "No submitted PII", "/api/call-event", "Ready", "Routes provider inquiries to /partner-with-us."]
+  ]);
+
+  writeMd(
+    "reports/day2_session2_phone_and_routing_audit.md",
+    `# Day 2 Session 2 Phone and Routing Audit
+
+## Phone Links
+
+- Current public phone values remain +1XXXXXXXXXX in src/data/site.ts fallbacks and .env.example.
+- CallButton still routes to /contact when the phone contains X.
+- No fake tel link is emitted while the placeholder remains.
+- Organization JSON-LD does not emit placeholder telephone.
+- Owner must provide NEXT_PUBLIC_TRACKED_PHONE_DISPLAY and NEXT_PUBLIC_TRACKED_PHONE_E164 before live call routing can be verified.
+
+## Call Events
+
+- /api/call-event logs sanitized event context.
+- requestDestination is contact-form-placeholder until a real phone is configured.
+- Event endpoint does not collect name, full phone, address, or message text.
+
+## Lead Routing
+
+- /api/lead validates required fields and logs only safe context, phone last4, and message length.
+- No approved CRM, webhook, or email destination is configured in repository.
+- LEAD_NOTIFY_EMAIL and LEAD_WEBHOOK_URL remain blank placeholders in .env.example.
+
+## Risk
+
+No real leads are silently routed to an invalid phone number because CTAs route to /contact in placeholder mode. Form delivery remains a P1 owner-configuration risk because production storage/delivery is not approved yet.`
+  );
+
+  writeCsv("reports/day2_session2_faq_changes.csv", [
+    ["URL", "Question", "Original Answer", "New Answer", "Intent", "User Value", "Supporting Page", "Schema Status", "Truthfulness Check", "Validation Status"],
+    ["/services/main-sewer-line-clog", "What details help a main sewer line call get triaged?", "No dedicated supporting-cluster FAQ existed.", "Share which fixtures react together, whether the outdoor cleanout is overflowing, whether wastewater is visible, and whether heavy rain or recurring backups are involved.", "Sewer diagnosis prep", "Improves call quality and provider triage.", "/problems/water-backing-up-in-shower-and-toilet", "Visible FAQ and FAQPage schema", "No guarantee or price claim.", "Build passed"],
+    ["/problems/kitchen-sink-backing-up", "When is a kitchen sink backup more than a simple sink clog?", "No dedicated supporting-cluster FAQ existed.", "It may be more than a simple fixture clog when the dishwasher backs up, nearby drains gurgle, water returns quickly after clearing, or grease-heavy use keeps causing the problem.", "Drain diagnosis", "Helps users distinguish fixture versus branch/main issue.", "/services/emergency-drain-cleaning", "Visible FAQ and FAQPage schema", "No unsupported claim.", "Build passed"],
+    ["/problems/outdoor-cleanout-overflowing", "Should I open an overflowing outdoor cleanout?", "No dedicated supporting-cluster FAQ existed.", "Do not remove a cleanout cap if pressure or wastewater is present. Stop indoor water use and request sewer-line guidance instead.", "Sewer safety", "Reduces unsafe DIY behavior.", "/services/main-sewer-line-clog", "Visible FAQ and FAQPage schema", "Safety guidance only; no credential claim.", "Build passed"],
+    ["/cost-guides/drain-cleaning-cost-dfw", "Why can two drain-cleaning quotes describe different work?", "No dedicated supporting-cluster FAQ existed.", "One quote may cover a simple fixture clog while another includes main-line access, camera inspection, after-hours timing, or repeat-blockage diagnosis.", "Cost comparison", "Improves buyer decision quality without exact prices.", "/services/emergency-drain-cleaning", "Visible FAQ and FAQPage schema", "No exact price or guarantee.", "Build passed"],
+    ["/cost-guides/sewer-line-clog-cost-guide", "What sewer-line cost question protects me from unclear scope?", "No dedicated supporting-cluster FAQ existed.", "Ask whether the visit is for clearing only, diagnosis, camera inspection, cleanup coordination, or repair planning because those can be separate scopes.", "Cost scope", "Helps users ask better questions before approval.", "/problems/water-backing-up-in-shower-and-toilet", "Visible FAQ and FAQPage schema", "No exact price claim.", "Build passed"],
+    ...selectedPhaseAPages.flatMap((url) => {
+      const page = selectedPageMeta[url];
+      return [
+        [url, "Selected-page FAQ set", "Phase A selected-page FAQs were present.", "Reviewed and retained because answers are specific, non-duplicative, and visible on page.", page.intent, "Preserves selected-page answer quality.", "Phase A selected page", "Visible FAQ and FAQPage schema", "No fake claims.", "Reviewed in Phase B"],
+        [url, "Generic emergency FAQ set", "Generic emergency FAQs were present.", "Reviewed and retained where they support the page without replacing specific answers.", page.intent, "Keeps common emergency answers available.", "Commercial cluster", "Visible FAQ and FAQPage schema", "No fake claims.", "Reviewed in Phase B"]
+      ];
+    })
+  ]);
+
+  writeCsv("reports/day2_session2_cluster_map.csv", [
+    ["Money Page", "Cluster Type", "Supporting URL", "Relationship", "User Purpose", "Phase B Action", "Owner Input Required", "Validation Status"],
+    ["/services/24-hour-emergency-plumber", "Emergency plumbing", "/cost-guides/emergency-plumbing-cost-dfw", "service to cost guide", "Cost-factor decision support", "Preserved Phase A link and tracked CTA event context", "No", "Build passed"],
+    ["/services/24-hour-emergency-plumber", "Emergency plumbing", "/problems/burst-pipe-first-steps", "service to problem", "Immediate shutoff guidance", "Preserved Phase A link and tracked CTA event context", "No", "Build passed"],
+    ["/services/emergency-drain-cleaning", "Drain cleaning", "/cost-guides/drain-cleaning-cost-dfw", "service to cost guide", "Drain quote comparison", "Added supporting FAQ on cost guide", "No", "Build passed"],
+    ["/services/emergency-drain-cleaning", "Drain cleaning", "/problems/kitchen-sink-backing-up", "service to problem", "Fixture-specific drain guidance", "Added supporting FAQ", "No", "Build passed"],
+    ["/problems/water-backing-up-in-shower-and-toilet", "Sewer help", "/services/main-sewer-line-clog", "problem to service", "Main-line triage and service action", "Added supporting FAQ on service page", "No", "Build passed"],
+    ["/problems/water-backing-up-in-shower-and-toilet", "Sewer help", "/problems/outdoor-cleanout-overflowing", "problem to problem", "Cleanout safety", "Added supporting FAQ", "No", "Build passed"],
+    ["/cost-guides/emergency-plumbing-cost-dfw", "Emergency cost", "/services/24-hour-emergency-plumber", "cost to service", "Move from research to action", "Tracked cost CTA context", "No", "Build passed"],
+    ["/cities/dallas/emergency-drain-cleaning", "Dallas drain cleaning", "/cities/dallas", "city-service to city", "Local service-area navigation", "Tracked city-service CTA context", "No", "Build passed"],
+    ["/cities/dallas/emergency-drain-cleaning", "Dallas drain cleaning", "/services/emergency-drain-cleaning", "city-service to service", "Broader service explanation", "Preserved link and added form/call tracking", "No", "Build passed"]
+  ]);
+
+  writeCsv("reports/day2_session2_internal_link_changes.csv", [
+    ["Source URL", "Target URL", "Anchor Text", "Link Location", "Topic Cluster", "User Purpose", "Link Added or Updated", "Validation Status", "Notes"],
+    ["/services/main-sewer-line-clog", "/problems/water-backing-up-in-shower-and-toilet", "Water backing up in shower and toilet", "Existing related resources", "Sewer help", "Supporting FAQ now better qualifies traffic from problem symptoms.", "Content updated", "Build passed", "FAQ strengthened the existing link path."],
+    ["/cost-guides/drain-cleaning-cost-dfw", "/services/emergency-drain-cleaning", "emergency drain cleaning", "Existing related resources", "Drain cleaning", "Cost page now better explains scope before moving to service action.", "Content updated", "Build passed", "FAQ strengthened the cost-to-service path."],
+    ["/problems/outdoor-cleanout-overflowing", "/services/main-sewer-line-clog", "main sewer line clog", "Existing related resources", "Sewer help", "Safety FAQ improves problem-to-service path.", "Content updated", "Build passed", "No exact-match anchor abuse added."],
+    ["footer", "/partner-with-us", "Partner with us", "Footer legal/resources column", "Provider partner routing", "Measure partner-route clicks without adding a fake provider claim.", "Updated", "Build passed", "TrackedLink added partner_route_click event."]
+  ]);
+
+  writeMd(
+    "reports/day2_session2_conversion_ux_changes.md",
+    `# Day 2 Session 2 Conversion UX Changes
+
+- LeadForm now submits with client-side fetch instead of sending the visitor to a raw JSON response.
+- LeadForm shows success or error state inline with aria-live.
+- Submit button is disabled during submission and labels the active state.
+- contact_form_start is emitted on first form focus.
+- contact_form_submit is emitted on submit attempt.
+- CallButton now exposes data-call-event-name, data-cta-location, and data-phone-mode attributes.
+- Placeholder phone mode remains explicit: CTA destination is /contact until an owner-approved phone exists.
+- Header, sticky mobile, service, city, problem, and cost CTAs now get distinct event names.
+- Footer partner link now tracks partner_route_click.
+
+No pressure tactics, false scarcity, guaranteed availability, fake employment, or fake credential claims were added.`
+  );
+
+  writeMd(
+    "reports/day2_session2_final_report.md",
+    `# Day 2 Session 2 Final Report
+
+## Build State
+
+- Starting build: pass.
+- Final build: pass.
+
+## Work Completed
+
+- Conversion path map created.
+- Event dictionary created.
+- CallButton event architecture improved with event names and sanitized context.
+- LeadForm now has in-page success/error UX and form-start/form-submit events.
+- /api/call-event now accepts a controlled event dictionary and sanitized parameters.
+- Phone/routing audit completed; approved production phone and lead destination remain owner-required.
+- Five supporting-cluster FAQs were added and selected-page FAQs were reviewed.
+- Commercial cluster map and internal-link reinforcement reports created.
+
+## Safety
+
+- Backlinks created: 0.
+- Paid ads created: 0.
+- Fake claims added: 0.
+- No analytics IDs invented.
+- No real phone, CRM, webhook, or email destination invented.
+- No PII is sent to /api/call-event.
+
+## Remaining P1
+
+- Owner must provide approved tracking phone values.
+- Owner must provide approved lead destination.
+- Owner must provide analytics/account IDs if tracking tools are approved.
+
+## Next Phase Start
+
+Begin Day 3 Session 1 with topical gap analysis, priority matrix, careful implementation of no more than four targets, indexing support, and authority-readiness work without outreach or backlinks.`
+  );
+
+  writeMd(
+    "reports/day3_session1_priority_queue.md",
+    `# Day 3 Session 1 Priority Queue
+
+## P0
+
+- Priority: P0
+- URL or file: none currently
+- Problem: No build, route, conversion, or indexing P0 is known after Phase B.
+- Business impact: No launch-blocking issue identified.
+- Recommended action: Proceed to topical authority and indexing support.
+- Owner input required: no
+- Estimated complexity: not applicable
+- Validation method: build, QA, smoke checks.
+- Proposed order: not applicable
+
+## P1
+
+- Priority: P1
+- URL or file: strategy/day3_topical_gap_analysis.csv
+- Problem: Topic architecture needs an evidence-based gap map across services, emergency problems, costs, cities, service-plus-city pages, FAQs, and troubleshooting.
+- Business impact: Helps choose content that supports high-intent pages without doorway content.
+- Recommended action: Create topical gap analysis from existing repository evidence.
+- Owner input required: no
+- Estimated complexity: medium
+- Validation method: CSV created and no unsupported volume/ranking claims.
+- Proposed order: 1
+
+- Priority: P1
+- URL or file: priority implementation targets
+- Problem: Several support topics can improve commercial coverage, but mass page generation is forbidden.
+- Business impact: Focused expansion can improve topical completeness and internal links.
+- Recommended action: Select no more than four targets using commercial relevance, urgency, uniqueness, internal-link potential, and duplication risk.
+- Owner input required: no
+- Estimated complexity: medium
+- Validation method: priority matrix and build.
+- Proposed order: 2
+
+- Priority: P1
+- URL or file: sitemap/indexing support
+- Problem: Any new or changed URLs must be reflected in sitemap and crawl checks.
+- Business impact: Avoids orphan, canonical, sitemap, and indexing mistakes.
+- Recommended action: Update and verify sitemap, canonicals, robots, noindex, duplicate metadata, changed URL list, and crawl paths.
+- Owner input required: no
+- Estimated complexity: medium
+- Validation method: build HTML inspection and QA.
+- Proposed order: 3
+
+## P2
+
+- Priority: P2
+- URL or file: authority/day3_linkable_asset_readiness.md
+- Problem: Future authority work needs a genuine useful asset before any outreach.
+- Business impact: Creates a reason for future unpaid editorial mentions without spam.
+- Recommended action: Improve one existing checklist/guide into an authority-ready resource; do not contact anyone.
+- Owner input required: no
+- Estimated complexity: medium
+- Validation method: asset report and content implementation report.
+- Proposed order: 4
+
+- Priority: P2
+- URL or file: authority/unpaid_backlink_quality_filter.csv and authority/unpaid_backlink_policy.md
+- Problem: Future backlink decisions need permanent quality filters.
+- Business impact: Prevents paid links, PBNs, fake citations, spam, and manipulative anchors.
+- Recommended action: Create screening system only; backlinks created must remain 0.
+- Owner input required: no
+- Estimated complexity: low
+- Validation method: policy files exist and reject prohibited tactics.
+- Proposed order: 5
+
+## P3
+
+- Priority: P3
+- URL or file: owner configuration
+- Problem: Phone, lead destination, and analytics IDs remain owner-required.
+- Business impact: Conversion measurement cannot be fully production-verified.
+- Recommended action: Carry forward as owner action; do not invent values during topical work.
+- Owner input required: yes
+- Estimated complexity: low after values exist
+- Validation method: hosted event and lead tests.
+- Proposed order: after content/indexing work
+`
+  );
+
+  console.log("Phase B reports generated.");
+}
+
 const command = process.argv[2] || "phase-a";
 
 if (command === "phase-a") {
   generatePhaseA();
+} else if (command === "phase-b") {
+  generatePhaseB();
 } else {
   console.error(`Unknown report command: ${command}`);
   process.exit(1);

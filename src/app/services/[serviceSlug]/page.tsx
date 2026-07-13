@@ -6,7 +6,7 @@ import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBloc
 import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
-import { serviceEnhancements } from "@/data/pageEnhancements";
+import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
@@ -40,6 +40,7 @@ export default async function ServicePage({ params }: Props) {
   const enhancement = serviceEnhancements[service.slug];
   const faqs = [
     ...(enhancement?.extraFaqs || []),
+    ...(serviceFaqEnhancements[service.slug] || []),
     ...service.faqSeed.map((question) => ({
       question,
       answer: `${service.shortAnswer} The safest next step is to stop water use where possible, describe the affected fixtures, and request a provider connection.`
@@ -80,7 +81,7 @@ export default async function ServicePage({ params }: Props) {
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
-            <CallButton location={`service-${service.slug}-top`} />
+            <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={service.name} />
           </div>
         </article>
         <LeadForm pageUrl={path} service={service.name} city="Dallas" />

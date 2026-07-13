@@ -28,7 +28,7 @@ export default function ContactPage() {
             Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
           </p>
           <div className="mt-6">
-            <CallButton location="contact-top" />
+            <CallButton location="contact-top" pagePath="/contact" pageType="contact" service="Emergency plumbing" city="Dallas-Fort Worth" />
           </div>
           <DirectAnswer>
             For active water, wastewater, or essential fixture problems, call if safe. Forms are useful when you can briefly describe the issue and your location.

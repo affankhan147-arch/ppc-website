@@ -270,3 +270,47 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     ]
   }
 };
+
+export const serviceFaqEnhancements: Record<string, FAQ[]> = {
+  "main-sewer-line-clog": [
+    {
+      question: "What details help a main sewer line call get triaged?",
+      answer:
+        "Share which fixtures react together, whether the outdoor cleanout is overflowing, whether wastewater is visible, and whether heavy rain or recurring backups are involved."
+    }
+  ]
+};
+
+export const problemFaqEnhancements: Record<string, FAQ[]> = {
+  "kitchen-sink-backing-up": [
+    {
+      question: "When is a kitchen sink backup more than a simple sink clog?",
+      answer:
+        "It may be more than a simple fixture clog when the dishwasher backs up, nearby drains gurgle, water returns quickly after clearing, or grease-heavy use keeps causing the problem."
+    }
+  ],
+  "outdoor-cleanout-overflowing": [
+    {
+      question: "Should I open an overflowing outdoor cleanout?",
+      answer:
+        "Do not remove a cleanout cap if pressure or wastewater is present. Stop indoor water use and request sewer-line guidance instead."
+    }
+  ]
+};
+
+export const costGuideFaqEnhancements: Record<string, FAQ[]> = {
+  "drain-cleaning-cost-dfw": [
+    {
+      question: "Why can two drain-cleaning quotes describe different work?",
+      answer:
+        "One quote may cover a simple fixture clog while another includes main-line access, camera inspection, after-hours timing, or repeat-blockage diagnosis."
+    }
+  ],
+  "sewer-line-clog-cost-guide": [
+    {
+      question: "What sewer-line cost question protects me from unclear scope?",
+      answer:
+        "Ask whether the visit is for clearing only, diagnosis, camera inspection, cleanup coordination, or repair planning because those can be separate scopes."
+    }
+  ]
+};

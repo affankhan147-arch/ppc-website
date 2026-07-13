@@ -80,7 +80,7 @@ export default async function CityServicePage({ params }: Props) {
             Local guidance for {city.name} homeowners and property managers who need {service.name}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
           </p>
           <div className="mt-6">
-            <CallButton location={`city-service-${city.slug}-${service.slug}-top`} />
+            <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={service.name} />
           </div>
         </article>
         <LeadForm pageUrl={path} service={service.name} city={city.name} />
