@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { AlertTriangle, ArrowRight, CheckCircle2, HelpCircle, MapPin, WalletCards } from "lucide-react";
 import { FAQ } from "@/data/faqs";
 import { internalLinkGroups } from "@/data/internalLinks";
+import type { PageEnhancement } from "@/data/pageEnhancements";
+import { siteConfig } from "@/data/site";
 
 export function DirectAnswer({ children }: { children: ReactNode }) {
   return (
@@ -78,10 +80,42 @@ export function LocalGuidance({ cityName = "Dallas-Fort Worth" }: { cityName?: s
     <section className="content-section">
       <div className="section-kicker"><MapPin className="h-4 w-4" aria-hidden="true" /> Local service-area guidance</div>
       <p className="mt-3 leading-7 text-slate-700">
-        This page is written for homeowners and property managers in {cityName}. Plumbing Hands helps connect visitors with available plumbing
-        service providers or partners where coverage is available. We do not claim a physical office in every city listed.
+        This page is written for homeowners and property managers in {cityName}. {siteConfig.serviceStatement} Availability, pricing,
+        credentials, and arrival details should be confirmed directly with the matched provider.
       </p>
     </section>
+  );
+}
+
+export function EnhancementSections({ enhancement }: { enhancement?: PageEnhancement }) {
+  if (!enhancement) return null;
+
+  return (
+    <>
+      <InfoListSection
+        kicker="Decision support"
+        title={enhancement.decisionTitle}
+        intro={enhancement.decisionIntro}
+        items={enhancement.decisionItems}
+      />
+      <InfoListSection
+        kicker="Provider diagnosis"
+        title={enhancement.providerTitle}
+        items={enhancement.providerItems}
+      />
+      <InfoListSection
+        kicker="Safety boundaries"
+        title={enhancement.safetyTitle}
+        items={enhancement.safetyItems}
+      />
+      {enhancement.preventionItems?.length ? (
+        <InfoListSection
+          kicker="Prevention"
+          title={enhancement.preventionTitle || "How to reduce repeat risk"}
+          items={enhancement.preventionItems}
+        />
+      ) : null}
+    </>
   );
 }
 

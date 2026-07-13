@@ -16,14 +16,19 @@ export function JsonLd({ data }: JsonLdProps) {
 }
 
 export function organizationSchema() {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.legalName,
     url: siteConfig.baseUrl,
-    telephone: siteConfig.phoneE164,
-    description: siteConfig.disclosure
+    description: siteConfig.serviceStatement
   };
+
+  if (!siteConfig.phoneE164.includes("X")) {
+    schema.telephone = siteConfig.phoneE164;
+  }
+
+  return schema;
 }
 
 export function webPageSchema(path: string, name: string, description: string) {

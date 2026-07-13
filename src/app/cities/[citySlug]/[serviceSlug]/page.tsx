@@ -2,10 +2,11 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { CostFactors, DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { cities, isPriorityCityService, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { cityServiceEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
@@ -40,16 +41,18 @@ export default async function CityServicePage({ params }: Props) {
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) notFound();
 
   const path = `/cities/${city.slug}/${service.slug}`;
+  const enhancement = cityServiceEnhancements[`${city.slug}/${service.slug}`];
   const relatedProblems = problems.filter((problem) => problem.relatedServiceSlug === service.slug).slice(0, 2);
   const relatedCostGuide = costGuides.find((guide) => guide.relatedServiceSlug === service.slug);
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
     {
       question: `When should I call for ${service.name} in ${city.name}?`,
       answer: `Call when the problem risks property damage, wastewater exposure, fixture shutdown, or worsening backup symptoms. ${service.shortAnswer}`
     },
     {
-      question: `Is there a claimed office in ${city.name}?`,
-      answer: "No. This page is a service-area request page and does not claim a physical office in every city listed."
+      question: `How should I use this ${city.name} service-area page?`,
+      answer: "Use it to describe the service need and request a provider connection. Do not treat it as a claim of an unverified local address, guaranteed availability, or guaranteed arrival time."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -90,7 +93,7 @@ export default async function CityServicePage({ params }: Props) {
       <InfoListSection
         kicker="City relevance"
         title={`${city.name} service-area guidance`}
-        intro={`This page is focused on ${city.areaHint}. It is a service-area request page, not a claim that Plumbing Hands has a physical office in ${city.name}.`}
+        intro={`This page is focused on ${city.areaHint}. It is a service-area request page, not a claim of an unverified Plumbing Hands address in ${city.name}.`}
         items={[
           `Share that the request is in ${city.name} and mention nearby cross streets when calling.`,
           `Describe whether the issue affects one fixture, several fixtures, or the whole property.`,
@@ -98,6 +101,7 @@ export default async function CityServicePage({ params }: Props) {
           `Confirm provider availability, licensing, pricing, and arrival details directly before work begins.`
         ]}
       />
+      <EnhancementSections enhancement={enhancement} />
       <InfoListSection
         kicker="Before calling"
         title="What to prepare"
@@ -108,6 +112,7 @@ export default async function CityServicePage({ params }: Props) {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...(enhancement?.extraLinks || []),
           { label: `${city.name} emergency plumbing`, href: `/cities/${city.slug}` },
           { label: `${service.name} service page`, href: `/services/${service.slug}` },
           ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),

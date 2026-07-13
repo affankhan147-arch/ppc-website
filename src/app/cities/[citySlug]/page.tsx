@@ -43,11 +43,11 @@ export default async function CityPage({ params }: Props) {
   const faqs = [
     {
       question: `Can I request emergency plumbing help in ${city.name}?`,
-      answer: `Yes. This page helps route urgent plumbing and drain requests in ${city.name} to available local providers where possible.`
+      answer: `Yes. This page helps route urgent plumbing and drain requests in ${city.name} to available plumbing professionals serving the area where coverage is available.`
     },
     {
-      question: `Does this site claim a local office in ${city.name}?`,
-      answer: "No. The site uses service-area wording and does not claim a physical office in every city listed."
+      question: `How should I use the ${city.name} service-area page?`,
+      answer: "Use it to request help for a local plumbing issue. It should not be treated as a claim of an unverified local address, guaranteed availability, or guaranteed arrival time."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -85,7 +85,7 @@ export default async function CityPage({ params }: Props) {
       <InfoListSection
         kicker="Local relevance"
         title={`Emergency plumbing situations in ${city.name}`}
-        intro={`This page uses service-area wording for ${city.areaHint}. It does not claim a Plumbing Hands office, local address, or local license in ${city.name}.`}
+        intro={`This page uses service-area wording for ${city.areaHint}. It does not claim an unverified Plumbing Hands office, address, or local license in ${city.name}.`}
         items={[
           "Older fixtures, high-use bathrooms, apartment buildings, restaurants, and slab plumbing can all create urgent calls.",
           "Drain and sewer symptoms should be treated faster when several fixtures react at once.",

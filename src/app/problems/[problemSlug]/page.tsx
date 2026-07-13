@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { problemEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
@@ -36,7 +37,9 @@ export default async function ProblemPage({ params }: Props) {
   const relatedService = services.find((service) => service.slug === problem.relatedServiceSlug);
   const relatedCostGuide = costGuides.find((guide) => guide.slug === problem.relatedCostGuideSlug);
   const path = `/problems/${problem.slug}`;
+  const enhancement = problemEnhancements[problem.slug];
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
     {
       question: `What should I do first if I see ${problem.title.toLowerCase()}?`,
       answer: problem.steps[0] || problem.directAnswer
@@ -74,6 +77,7 @@ export default async function ProblemPage({ params }: Props) {
         <p className="mt-3 leading-7 text-slate-700">{problem.whatItMeans}</p>
       </section>
       <EmergencySteps steps={problem.steps} />
+      <EnhancementSections enhancement={enhancement} />
       <section className="content-section">
         <p className="section-kicker">Warning signs</p>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
@@ -98,6 +102,7 @@ export default async function ProblemPage({ params }: Props) {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...(enhancement?.extraLinks || []),
           ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
           ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])
         ]}

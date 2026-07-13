@@ -25,7 +25,7 @@ export default function ContactPage() {
           <p className="section-kicker">Contact</p>
           <h1 className="mt-3 text-4xl font-black text-slate-950">Request urgent plumbing help</h1>
           <p className="mt-4 text-lg leading-8 text-slate-700">
-            Share your city, service need, urgency, and phone number. Plumbing Hands helps visitors request service from available providers or partners where coverage is available.
+            Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
           </p>
           <div className="mt-6">
             <CallButton location="contact-top" />
@@ -37,7 +37,7 @@ export default function ContactPage() {
         <LeadForm pageUrl="/contact" service="Emergency plumbing" city="Dallas" />
       </div>
       <section className="content-section">
-        <p className="section-kicker">Disclosure</p>
+        <p className="section-kicker">Service-area note</p>
         <p className="mt-2 leading-7 text-slate-700">{siteConfig.disclosure}</p>
       </section>
     </main>

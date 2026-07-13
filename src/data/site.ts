@@ -11,8 +11,12 @@ export const siteConfig = {
   fallbackPhoneDisplay: process.env.NEXT_PUBLIC_FALLBACK_PHONE_DISPLAY || "+1XXXXXXXXXX",
   fallbackPhoneE164: process.env.NEXT_PUBLIC_FALLBACK_PHONE_E164 || process.env.NEXT_PUBLIC_TRACKED_PHONE || "+1XXXXXXXXXX",
   email: "partners@example.com",
+  serviceStatement:
+    "Plumbing Hands helps you connect with available plumbing professionals serving your area.",
   disclosure:
-    "Plumbing Hands helps connect visitors with available plumbing service providers or partners where coverage is available. We do not claim a physical office in every city listed.",
+    "Plumbing Hands helps you connect with available plumbing professionals serving your area.",
+  legalDisclosure:
+    "Plumbing Hands is a provider-connection website for service-area requests. A city, service, or city-service page should not be read as a claim that Plumbing Hands maintains a staffed office, address, local license, guaranteed availability, or arrival-time promise in that location.",
   ownerSetupNote:
     "Replace sample tracking numbers with an owner-approved call tracking number before public launch."
 };

@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { CostFactors, DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { costGuideEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
@@ -38,7 +39,9 @@ export default async function CostGuidePage({ params }: Props) {
     .map((slug) => problems.find((problem) => problem.slug === slug))
     .filter((problem): problem is (typeof problems)[number] => Boolean(problem));
   const path = `/cost-guides/${guide.slug}`;
+  const enhancement = costGuideEnhancements[guide.slug];
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
     {
       question: "Can this page guarantee a price?",
       answer: "No. Cost depends on the provider, timing, access, parts, and severity. Confirm pricing directly before approving work."
@@ -81,10 +84,12 @@ export default async function CostGuidePage({ params }: Props) {
       </section>
       <CostFactors factors={guide.factors} />
       <InfoListSection kicker="Before booking" title="Questions to ask the provider" items={guide.questionsToAsk} />
+      <EnhancementSections enhancement={enhancement} />
       <LocalGuidance />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...(enhancement?.extraLinks || []),
           ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
           ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
           { label: "Request provider connection", href: "/contact" }

@@ -64,12 +64,12 @@ export default function HomePage() {
     {
       question: "Can I request urgent plumbing help across Dallas-Fort Worth?",
       answer:
-        "Yes. Plumbing Hands helps visitors request service from available providers or partners where coverage is available."
+        siteConfig.serviceStatement
     },
     {
-      question: "Does Plumbing Hands claim an office in every city listed?",
+      question: "How does Plumbing Hands describe service areas?",
       answer:
-        "No. Plumbing Hands helps connect visitors with available plumbing service providers or partners where coverage is available. We do not claim a physical office in every city listed."
+        "Service-area pages help visitors describe where they need plumbing help. They should not be treated as unverified local address, license, or guaranteed-availability claims."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -100,7 +100,7 @@ export default function HomePage() {
               Emergency Plumbing Help Across Dallas-Fort Worth
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-100">
-              Find help for urgent drain, sewer, pipe, toilet, and water-heater problems. Plumbing Hands helps visitors request service from available providers or partners where coverage is available.
+              Find help for urgent drain, sewer, pipe, toilet, and water-heater problems. {siteConfig.serviceStatement}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <CallButton location="home-hero" label="Request Emergency Help" />
@@ -167,7 +167,7 @@ export default function HomePage() {
                 Built for urgent DFW plumbing decisions
               </h2>
               <p className="mt-4 leading-7 text-slate-700">
-                The site gives visitors clear next steps, service-area pages, direct answers, cost-factor guidance, and a safe request path without pretending to be a physical office in every city.
+                The site gives visitors clear next steps, service-area pages, direct answers, cost-factor guidance, and a safe request path without adding unverified local office claims.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
@@ -231,7 +231,7 @@ export default function HomePage() {
               <p className="section-kicker">Coverage area</p>
               <h2 className="mt-2 text-3xl font-black text-slate-950">Dallas-Fort Worth city pages</h2>
               <p className="mt-4 leading-7 text-slate-700">
-                Service availability may vary by location, timing, and provider coverage. City pages use service-area wording and do not claim a physical office in every listed city.
+                Service availability may vary by location, timing, and provider coverage. City pages use service-area wording and avoid unverified local address claims.
               </p>
               <Image
                 src="/images/cities/dfw-service-area-map.svg"
