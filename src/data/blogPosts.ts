@@ -36,7 +36,8 @@ const titles = [
   "Emergency Drain Cleaning in Fort Worth: Fast Homeowner Guide",
   "Emergency Plumber in Plano: When to Call Now",
   "Emergency Drain Cleaning in Frisco: What to Expect",
-  "Emergency Sewer Help in Garland: Signs and Next Steps"
+  "Emergency Sewer Help in Garland: Signs and Next Steps",
+  "Water Shutoff Valve Will Not Close During a Leak"
 ];
 
 const serviceCycle = [
@@ -58,11 +59,15 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+const relatedServiceOverrides: Record<string, string> = {
+  "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency"
+};
+
 export const blogPosts: BlogPost[] = titles.map((title, index) => ({
   slug: slugify(title),
   title,
   directAnswer:
     "Fast action starts with stopping water use where safe, identifying the affected fixture, and calling a local provider connection when the issue risks damage, contamination, or loss of essential plumbing.",
   category: index % 3 === 0 ? "Cost and decision guides" : index % 3 === 1 ? "Emergency steps" : "Drain and sewer guidance",
-  relatedServiceSlug: serviceCycle[index % serviceCycle.length]
+  relatedServiceSlug: relatedServiceOverrides[title] || serviceCycle[index % serviceCycle.length]
 }));

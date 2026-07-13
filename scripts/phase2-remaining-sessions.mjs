@@ -278,7 +278,7 @@ Generated from repository state at commit ${s.commit}.
 
 ## Content Work
 
-- Added one supporting guide URL: /blog/water-shutoff-valve-wont-close-during-a-leak.
+- Added one supporting guide URL: /blog/water-shutoff-valve-will-not-close-during-a-leak.
 - Added checklist and verification sections for the new guide through blogEnhancements.
 - Added FAQ schema support through the existing blog page FAQ pipeline.
 - Strengthened leak/shutoff internal-link support without generating mass city pages.
@@ -291,30 +291,30 @@ Generated from repository state at commit ${s.commit}.
   write("reports/day4_session2_faq_changes.csv", csv(
     ["URL", "Question", "Purpose", "Schema Path"],
     [
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", Question: "Should I force a stuck shutoff valve during a leak?", Purpose: "Safety boundary for failed valve users.", "Schema Path": "blog page FAQ schema" },
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", Question: "What details help a plumber triage a failed shutoff valve?", Purpose: "Improves request quality.", "Schema Path": "blog page FAQ schema" }
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", Question: "Should I force a stuck shutoff valve during a leak?", Purpose: "Safety boundary for failed valve users.", "Schema Path": "blog page FAQ schema" },
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", Question: "What details help a plumber triage a failed shutoff valve?", Purpose: "Improves request quality.", "Schema Path": "blog page FAQ schema" }
     ]
   ));
   write("reports/day4_session2_internal_links.csv", csv(
     ["Source URL", "Target URL", "Anchor", "Reason", "Implemented"],
     [
-      { "Source URL": "/blog/water-shutoff-valve-wont-close-during-a-leak", "Target URL": "/problems/water-shutoff-valve-will-not-close", Anchor: "Water shutoff valve will not close", Reason: "Connects guide to problem page.", Implemented: "yes" },
-      { "Source URL": "/blog/water-shutoff-valve-wont-close-during-a-leak", "Target URL": "/services/burst-pipe-emergency", Anchor: "Burst pipe emergency", Reason: "Routes urgent users to service page.", Implemented: "yes" },
-      { "Source URL": "/blog/water-shutoff-valve-wont-close-during-a-leak", "Target URL": "/cost-guides/emergency-leak-repair-cost-dfw", Anchor: "Emergency leak repair cost", Reason: "Routes cost questions to cost factors.", Implemented: "yes" }
+      { "Source URL": "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Target URL": "/problems/water-shutoff-valve-will-not-close", Anchor: "Water shutoff valve will not close", Reason: "Connects guide to problem page.", Implemented: "yes" },
+      { "Source URL": "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Target URL": "/services/burst-pipe-emergency", Anchor: "Burst pipe emergency", Reason: "Routes urgent users to service page.", Implemented: "yes" },
+      { "Source URL": "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Target URL": "/cost-guides/emergency-leak-repair-cost-dfw", Anchor: "Emergency leak repair cost", Reason: "Routes cost questions to cost factors.", Implemented: "yes" }
     ]
   ));
   write("reports/day4_session2_schema_changes.csv", csv(
     ["URL", "Schema Type", "Change", "Evidence"],
     [
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", "Schema Type": "Article", Change: "New blog URL receives articleSchema.", Evidence: "src/app/blog/[postSlug]/page.tsx" },
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", "Schema Type": "FAQPage", Change: "New guide receives FAQ schema from faqs array.", Evidence: "src/app/blog/[postSlug]/page.tsx" },
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", "Schema Type": "BreadcrumbList", Change: "New guide receives breadcrumb schema.", Evidence: "src/app/blog/[postSlug]/page.tsx" }
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Schema Type": "Article", Change: "New blog URL receives articleSchema.", Evidence: "src/app/blog/[postSlug]/page.tsx" },
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Schema Type": "FAQPage", Change: "New guide receives FAQ schema from faqs array.", Evidence: "src/app/blog/[postSlug]/page.tsx" },
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Schema Type": "BreadcrumbList", Change: "New guide receives breadcrumb schema.", Evidence: "src/app/blog/[postSlug]/page.tsx" }
     ]
   ));
   write("reports/day4_session2_new_urls.csv", csv(
     ["URL", "Type", "Intent", "Indexing Status", "Notes"],
     [
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", Type: "blog", Intent: "Failed shutoff leak safety guide", "Indexing Status": "included in generated sitemap after build", Notes: "No external submission made." }
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", Type: "blog", Intent: "Failed shutoff leak safety guide", "Indexing Status": "included in generated sitemap after build", Notes: "No external submission made." }
     ]
   ));
   write("reports/day5_session1_priority_queue.md", `
@@ -341,7 +341,7 @@ function phaseG() {
     ["Prospect Category", "Specific URL", "Verification Status", "Allowed Asset", "Required Owner Proof", "Action Status"],
     [
       { "Prospect Category": "DFW homeowner emergency preparedness resource", "Specific URL": "", "Verification Status": "owner research required; no external URL asserted", "Allowed Asset": "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Required Owner Proof": "none for generic guide; claims must stay generic", "Action Status": "not contacted" },
-      { "Prospect Category": "Property manager tenant-maintenance resource", "Specific URL": "", "Verification Status": "owner research required; no external URL asserted", "Allowed Asset": "/blog/water-shutoff-valve-wont-close-during-a-leak", "Required Owner Proof": "relationship or editorial permission if a real partner is used", "Action Status": "not contacted" },
+      { "Prospect Category": "Property manager tenant-maintenance resource", "Specific URL": "", "Verification Status": "owner research required; no external URL asserted", "Allowed Asset": "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Required Owner Proof": "relationship or editorial permission if a real partner is used", "Action Status": "not contacted" },
       { "Prospect Category": "Verified plumbing partner website resource page", "Specific URL": "", "Verification Status": "blocked until owner confirms real partner", "Allowed Asset": "/services/24-hour-emergency-plumber", "Required Owner Proof": "verified partner relationship and permitted language", "Action Status": "blocked by owner" }
     ]
   ));
@@ -464,7 +464,7 @@ Before sending, the owner must verify the recipient, remove unsupported claims, 
     ["Date", "Target Category", "Specific Target", "Asset", "Status", "Owner Approval", "Notes"],
     [
       { Date: "2026-07-13", "Target Category": "Editorial resource", "Specific Target": "", Asset: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", Status: "not sent", "Owner Approval": "required", Notes: "No external target asserted." },
-      { Date: "2026-07-13", "Target Category": "Property manager resource", "Specific Target": "", Asset: "/blog/water-shutoff-valve-wont-close-during-a-leak", Status: "not sent", "Owner Approval": "required", Notes: "Owner research needed." }
+      { Date: "2026-07-13", "Target Category": "Property manager resource", "Specific Target": "", Asset: "/blog/water-shutoff-valve-will-not-close-during-a-leak", Status: "not sent", "Owner Approval": "required", Notes: "Owner research needed." }
     ]
   ));
   write("authority/linkable_asset_final.md", `
@@ -476,7 +476,7 @@ Primary unpaid linkable asset:
 
 Supporting asset:
 
-- /blog/water-shutoff-valve-wont-close-during-a-leak
+- /blog/water-shutoff-valve-will-not-close-during-a-leak
 
 ## Why These Assets Are Safe
 
@@ -590,7 +590,7 @@ function phaseJ() {
 
 ## Supporting Asset
 
-- /blog/water-shutoff-valve-wont-close-during-a-leak
+- /blog/water-shutoff-valve-will-not-close-during-a-leak
 
 ## Linkable Value
 
@@ -603,14 +603,14 @@ function phaseJ() {
     [
       { "Source URL": "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Target URL": "/cost-guides/emergency-plumbing-cost-dfw", Reason: "Connect booking questions to cost factors.", Status: "implemented" },
       { "Source URL": "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Target URL": "/services/24-hour-emergency-plumber", Reason: "Connect decision guide to service page.", Status: "implemented" },
-      { "Source URL": "/blog/water-shutoff-valve-wont-close-during-a-leak", "Target URL": "/problems/water-shutoff-valve-will-not-close", Reason: "Connect guide to problem page.", Status: "implemented" }
+      { "Source URL": "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Target URL": "/problems/water-shutoff-valve-will-not-close", Reason: "Connect guide to problem page.", Status: "implemented" }
     ]
   ));
   write("reports/day6_session2_faq_changes.csv", csv(
     ["URL", "FAQ Topic", "Status"],
     [
       { URL: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "FAQ Topic": "Most important question before approving work", Status: "implemented" },
-      { URL: "/blog/water-shutoff-valve-wont-close-during-a-leak", "FAQ Topic": "Stuck shutoff valve safety", Status: "implemented" }
+      { URL: "/blog/water-shutoff-valve-will-not-close-during-a-leak", "FAQ Topic": "Stuck shutoff valve safety", Status: "implemented" }
     ]
   ));
   write("reports/day6_session2_indexing_changes.md", `
@@ -618,7 +618,7 @@ function phaseJ() {
 
 - Changed/confirmed linkable URLs:
   - /blog/best-questions-to-ask-before-you-book-an-emergency-plumber
-  - /blog/water-shutoff-valve-wont-close-during-a-leak
+  - /blog/water-shutoff-valve-will-not-close-during-a-leak
 - Sitemap generation covers blog URLs through getAllInventoryPages().
 - Search Console submissions: 0.
 - Bing submissions: 0.
@@ -628,7 +628,7 @@ function phaseJ() {
     ["Asset URL", "Asset Type", "Primary Audience", "Claims Risk", "External Status"],
     [
       { "Asset URL": "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Asset Type": "Checklist guide", "Primary Audience": "Homeowners comparing emergency plumbing scope", "Claims Risk": "low; no unsupported claims", "External Status": "not promoted externally" },
-      { "Asset URL": "/blog/water-shutoff-valve-wont-close-during-a-leak", "Asset Type": "Safety guide", "Primary Audience": "Leak users with failed shutoff", "Claims Risk": "low; safety and triage only", "External Status": "not promoted externally" }
+      { "Asset URL": "/blog/water-shutoff-valve-will-not-close-during-a-leak", "Asset Type": "Safety guide", "Primary Audience": "Leak users with failed shutoff", "Claims Risk": "low; safety and triage only", "External Status": "not promoted externally" }
     ]
   ));
   write("reports/day7_session1_priority_queue.md", `

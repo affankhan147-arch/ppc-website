@@ -465,6 +465,43 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "water-shutoff-valve-will-not-close-during-a-leak": {
+    checklistTitle: "Failed shutoff leak checklist",
+    checklistIntro:
+      "Use this checklist when water is leaking and the nearest valve will not close. The goal is to reduce risk and describe the situation clearly.",
+    checklistItems: [
+      "Stop using the affected fixture immediately.",
+      "Check for the next upstream shutoff only if it is safe to reach.",
+      "Avoid forcing a corroded, leaking, or spinning valve.",
+      "Keep water away from outlets, switches, panels, and plugged-in equipment.",
+      "Describe whether water is still active, where it is visible, and which valve failed.",
+      "Ask whether the visit is for isolation, diagnosis, valve repair, pipe repair, or restoration coordination."
+    ],
+    proofTitle: "Claims and scope to verify before approval",
+    proofItems: [
+      "Confirm whether the provider is stopping active water or completing a permanent repair.",
+      "Confirm whether wall, ceiling, cabinet, or floor access is included.",
+      "Confirm whether drying, cleanup, drywall, flooring, or cabinet repair is outside the plumbing scope.",
+      "Confirm pricing and credentials directly with the matched provider before authorizing work."
+    ],
+    extraFaqs: [
+      {
+        question: "Should I force a stuck shutoff valve during a leak?",
+        answer:
+          "No. If a valve is brittle, corroded, leaking, or spinning, forcing it can make the leak worse. Look for the next safe upstream shutoff or main valve instead."
+      },
+      {
+        question: "What details help a plumber triage a failed shutoff valve?",
+        answer:
+          "Share which valve failed, whether water is still active, whether electrical areas are nearby, and whether walls, ceilings, cabinets, or floors are wet."
+      }
+    ],
+    extraLinks: [
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
+      { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
+    ]
+  },
   "best-questions-to-ask-before-you-book-an-emergency-plumber": {
     checklistTitle: "Emergency plumber booking checklist",
     checklistIntro:
