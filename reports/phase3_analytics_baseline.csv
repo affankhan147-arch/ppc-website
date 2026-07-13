@@ -1,0 +1,5 @@
+"metric","value","evidence","status"
+"organic_sessions","NOT AVAILABLE","No GA4/analytics export/API data in repository","owner-blocked"
+"organic_users","NOT AVAILABLE","No GA4/analytics export/API data in repository","owner-blocked"
+"landing_pages","NOT AVAILABLE","No analytics export/API data in repository","owner-blocked"
+"conversion_rate","NOT AVAILABLE","No analytics export/API data in repository","owner-blocked"

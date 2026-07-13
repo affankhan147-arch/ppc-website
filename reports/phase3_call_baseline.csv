@@ -1,0 +1,5 @@
+"metric","value","evidence","status"
+"calls","NOT AVAILABLE","No production call-event export or call-tracking vendor data in repository","owner-blocked"
+"qualified_leads","NOT AVAILABLE","No production qualified-lead data in repository","owner-blocked"
+"call_click_event_endpoint","present","src/app/api/call-event/route.ts and CallButton click handler","repository evidence"
+"form_event_endpoint","present","src/components/LeadForm.tsx sends start and submit events","repository evidence"
