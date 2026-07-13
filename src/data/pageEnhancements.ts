@@ -19,6 +19,16 @@ export type PageEnhancement = {
   extraLinks?: EnhancementLink[];
 };
 
+export type BlogEnhancement = {
+  checklistTitle: string;
+  checklistIntro: string;
+  checklistItems: string[];
+  proofTitle: string;
+  proofItems: string[];
+  extraFaqs?: FAQ[];
+  extraLinks?: EnhancementLink[];
+};
+
 export const serviceEnhancements: Record<string, PageEnhancement> = {
   "24-hour-emergency-plumber": {
     decisionTitle: "How to decide whether this is an emergency",
@@ -115,6 +125,49 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
       { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
     ]
+  },
+  "burst-pipe-emergency": {
+    decisionTitle: "How to handle a leak before repair starts",
+    decisionIntro:
+      "The priority is stopping water safely, then describing where water is appearing and whether the leak can be isolated.",
+    decisionItems: [
+      "Use the fixture shutoff first if it is reachable and not corroded.",
+      "Use the main shutoff when water is spreading and a smaller valve will not work.",
+      "Treat ceiling, wall, cabinet, or electrical-area leaks as urgent because hidden damage can spread.",
+      "Ask the provider to separate leak isolation, pipe repair, access work, and restoration in the scope."
+    ],
+    providerTitle: "What a leak provider may check",
+    providerItems: [
+      "Whether water is still under pressure and which shutoff controls it.",
+      "Visible pipe material, valve condition, fixture supply lines, and water heater connections.",
+      "Whether access through a wall, ceiling, cabinet, crawlspace, or slab may be needed.",
+      "Whether drying, cleanup, or restoration should be handled separately from plumbing repair."
+    ],
+    safetyTitle: "When to stop trying to isolate the leak yourself",
+    safetyItems: [
+      "Stop if a valve handle bends, spins, or starts leaking while turning.",
+      "Stop if water is near outlets, lights, breakers, or plugged-in appliances.",
+      "Stop if ceiling drywall sags or water spreads inside a wall.",
+      "Stop if you cannot reach the shutoff without standing in water."
+    ],
+    preventionTitle: "Preparation for future leak emergencies",
+    preventionItems: [
+      "Label the main shutoff and test owner-approved maintenance only when no leak is active.",
+      "Replace corroded or frozen fixture valves before they are needed in an emergency.",
+      "Keep photos of valve locations and water heater labels for faster triage."
+    ],
+    extraFaqs: [
+      {
+        question: "What if the small shutoff valve will not close?",
+        answer:
+          "Do not force a brittle valve. If safe, move to the next upstream shutoff or main valve and request urgent leak help."
+      }
+    ],
+    extraLinks: [
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
+    ]
   }
 };
 
@@ -165,6 +218,54 @@ export const problemEnhancements: Record<string, PageEnhancement> = {
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
       { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" }
+    ]
+  },
+  "water-shutoff-valve-will-not-close": {
+    decisionTitle: "How to choose the next shutoff step",
+    decisionIntro:
+      "A stuck valve is urgent when water is still moving. The right next step depends on whether another shutoff can be reached safely.",
+    decisionItems: [
+      "If the fixture valve will not close, look for a branch shutoff or the main water valve.",
+      "If the valve leaks or the handle spins, stop turning it and avoid breaking it under pressure.",
+      "If water is near electrical areas, prioritize getting clear and reducing risk.",
+      "Tell the provider which valve failed and whether the main shutoff is accessible."
+    ],
+    providerTitle: "What a provider may inspect",
+    providerItems: [
+      "Valve age, corrosion, handle movement, and whether the stem or packing leaks.",
+      "Whether a temporary isolation step is needed before permanent repair.",
+      "Pipe material and access around the valve.",
+      "Whether nearby supply lines, fixture connectors, or pressure issues contributed."
+    ],
+    safetyTitle: "What not to do with a stuck valve",
+    safetyItems: [
+      "Do not use excessive force on a corroded valve.",
+      "Do not disassemble a valve while water is pressurized.",
+      "Do not keep using the fixture to test the leak.",
+      "Do not stand in water near electrical equipment."
+    ],
+    preventionTitle: "How to reduce repeat shutoff problems",
+    preventionItems: [
+      "Document shutoff locations before an emergency.",
+      "Ask whether brittle valves should be replaced after the leak is controlled.",
+      "Keep notes on which valve stopped the water and which did not."
+    ],
+    extraFaqs: [
+      {
+        question: "Can I force a stuck shutoff valve closed?",
+        answer:
+          "Avoid forcing a brittle or corroded valve. Breaking the valve can make the leak worse and may remove your easiest isolation point."
+      },
+      {
+        question: "Should I turn off the main water valve?",
+        answer:
+          "If water is spreading and a fixture valve will not close, the main valve may be the safest next shutoff if you can reach it without standing in water or touching electrical areas."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
+      { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
     ]
   }
 };
@@ -217,6 +318,49 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
       { label: "Burst pipe emergency cost", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
     ]
+  },
+  "emergency-leak-repair-cost-dfw": {
+    decisionTitle: "How to compare leak repair scopes",
+    decisionIntro:
+      "Leak pricing is clearest when water isolation, diagnosis, access, repair, and restoration are discussed as separate parts of the job.",
+    decisionItems: [
+      "Ask whether the provider is pricing leak isolation, leak diagnosis, repair, or all three.",
+      "Clarify whether opening a wall, ceiling, cabinet, or floor is included.",
+      "Ask what temporary stopgap options exist if permanent repair needs parts or access.",
+      "Confirm whether drying, cleanup, drywall, paint, flooring, or cabinet work is outside the plumbing scope."
+    ],
+    providerTitle: "Questions to ask before approving leak work",
+    providerItems: [
+      "Is water fully shut off or still active?",
+      "What access do you need to confirm the leak source?",
+      "What could change after the wall, ceiling, or cabinet is opened?",
+      "Is this repair intended to stop active water, replace a failed valve, or fix a damaged pipe?"
+    ],
+    safetyTitle: "When cost comparison should wait",
+    safetyItems: [
+      "Water is spreading near electrical fixtures.",
+      "The ceiling is sagging or water is inside a wall.",
+      "The main shutoff does not close.",
+      "Water is actively damaging flooring, cabinets, or shared building areas."
+    ],
+    preventionTitle: "Records that help future leak decisions",
+    preventionItems: [
+      "Photos of valve locations, pipe material, and water-damaged areas.",
+      "Receipts or notes from prior valve, fixture, or pipe repairs.",
+      "Dates and conditions when leaks or pressure changes appeared."
+    ],
+    extraFaqs: [
+      {
+        question: "Why is restoration usually separate from plumbing leak repair?",
+        answer:
+          "A plumber may stop the water and repair the pipe or valve, while drying, drywall, flooring, paint, or cabinet repair may require a separate restoration scope."
+      }
+    ],
+    extraLinks: [
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
+      { label: "Burst pipe cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" }
+    ]
   }
 };
 
@@ -267,6 +411,92 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Dallas emergency plumbing", href: "/cities/dallas" },
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  }
+};
+
+export const cityPageEnhancements: Record<string, PageEnhancement> = {
+  dallas: {
+    decisionTitle: "Dallas emergency leak and drain triage",
+    decisionIntro:
+      "Dallas requests are clearer when the first message explains whether the issue is active water, wastewater, an essential fixture outage, or a cost/planning question.",
+    decisionItems: [
+      "For active leaks, share whether a fixture valve or main shutoff has stopped the water.",
+      "For drain backups, share whether one fixture or several fixtures are reacting.",
+      "For apartments, restaurants, or shared buildings, mention tenant, customer, or business impact.",
+      "Use nearby cross streets or neighborhood context for service-area matching without treating this as a local office claim."
+    ],
+    providerTitle: "Useful Dallas request details",
+    providerItems: [
+      "Affected fixture, room, or business area.",
+      "Whether water is clean, dirty, hot, or cold.",
+      "Whether a cleanout, shutoff valve, or water heater is accessible.",
+      "Whether the problem is new, recurring, or tied to heavy use or recent storms."
+    ],
+    safetyTitle: "When Dallas requests should be treated as urgent",
+    safetyItems: [
+      "Water is active or spreading.",
+      "Wastewater appears indoors or near a cleanout.",
+      "A shutoff valve will not close.",
+      "A business, apartment, or only bathroom cannot operate safely."
+    ],
+    preventionTitle: "Follow-up notes to keep after service",
+    preventionItems: [
+      "Which shutoff worked and which valve needs attention.",
+      "Whether a drain clearing found a likely cause.",
+      "What follow-up maintenance or inspection was recommended."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I include in a Dallas emergency plumbing request?",
+        answer:
+          "Include the affected fixture, nearby cross streets, whether water or wastewater is active, and whether a shutoff valve, cleanout, or business area is involved."
+      }
+    ],
+    extraLinks: [
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
+      { label: "Emergency drain cleaning in Dallas", href: "/cities/dallas/emergency-drain-cleaning" }
+    ]
+  }
+};
+
+export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "best-questions-to-ask-before-you-book-an-emergency-plumber": {
+    checklistTitle: "Emergency plumber booking checklist",
+    checklistIntro:
+      "Use these questions to compare scope and safety before approving emergency work. They are designed to help homeowners get clear answers, not to pressure a booking.",
+    checklistItems: [
+      "What is included before I approve repair work?",
+      "Is there a dispatch or diagnostic fee, and does it change after hours?",
+      "What safety step should I take before help arrives?",
+      "What could change the scope after diagnosis or access?",
+      "Can you explain repair versus replacement options if both are possible?",
+      "What work is outside the plumbing scope, such as cleanup or restoration?"
+    ],
+    proofTitle: "Claims to verify before trusting a provider",
+    proofItems: [
+      "License, insurance, rating, review, and warranty claims should be verified directly with the provider.",
+      "Arrival timing and availability should be confirmed for the specific address and problem.",
+      "Exact pricing should not be treated as final until the provider explains diagnosis, access, parts, and scope.",
+      "A local listing or office claim should match real, verifiable business information."
+    ],
+    extraFaqs: [
+      {
+        question: "What is the most important question before approving emergency plumbing work?",
+        answer:
+          "Ask what is included before repair approval and what could change after diagnosis. That helps separate dispatch, diagnosis, repair, parts, access, and cleanup."
+      },
+      {
+        question: "Should I choose the fastest provider automatically?",
+        answer:
+          "Fast help matters when water or wastewater is active, but you should still confirm availability, scope, pricing rules, and credentials directly before authorizing work."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
   }
 };

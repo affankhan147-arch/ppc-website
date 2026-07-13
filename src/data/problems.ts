@@ -179,5 +179,17 @@ export const problems: Problem[] = [
     urgentWhen: ["water spreads across flooring", "floor drains back up", "several fixtures slow", "backup returns every cycle"],
     relatedServiceSlug: "emergency-drain-cleaning",
     relatedCostGuideSlug: "drain-cleaning-cost-dfw"
+  },
+  {
+    slug: "water-shutoff-valve-will-not-close",
+    title: "Water shutoff valve will not close",
+    directAnswer: "If a water shutoff valve will not close during a leak, avoid forcing it until it breaks, look for the next upstream shutoff if safe, and request urgent plumbing help.",
+    whatItMeans: "A stuck shutoff can turn a small leak into a larger emergency because water cannot be isolated at the fixture. The next safe shutoff may be a branch valve, water heater valve, or the main water valve.",
+    warningSigns: ["valve handle spins", "valve leaks when turned", "water keeps running", "corrosion around valve"],
+    steps: ["Stop using the affected fixture.", "Try the next upstream shutoff only if you can reach it safely.", "Keep water away from electrical areas.", "Request urgent valve or leak help."],
+    whatNotToDo: ["Do not force a brittle or corroded valve.", "Do not remove a valve under pressure.", "Do not stand in water near electrical equipment.", "Do not wait if water is spreading."],
+    urgentWhen: ["water cannot be isolated", "a ceiling or cabinet is wet", "the main valve will not close", "electrical areas are nearby"],
+    relatedServiceSlug: "burst-pipe-emergency",
+    relatedCostGuideSlug: "emergency-leak-repair-cost-dfw"
   }
 ];

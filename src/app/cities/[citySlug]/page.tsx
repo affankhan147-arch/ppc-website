@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { cities, getNearbyCities, getPriorityServiceSlugsForCity } from "@/data/cities";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { cityPageEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
@@ -36,11 +37,13 @@ export default async function CityPage({ params }: Props) {
 
   const path = `/cities/${city.slug}`;
   const priorityServiceSlugs = getPriorityServiceSlugsForCity(city.slug);
+  const enhancement = cityPageEnhancements[city.slug];
   const cityServiceLinks = priorityServiceSlugs
     .map((serviceSlug) => services.find((service) => service.slug === serviceSlug))
     .filter((service): service is (typeof services)[number] => Boolean(service));
   const nearbyCities = getNearbyCities(city.slug, 4);
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
     {
       question: `Can I request emergency plumbing help in ${city.name}?`,
       answer: `Yes. This page helps route urgent plumbing and drain requests in ${city.name} to available plumbing professionals serving the area where coverage is available.`
@@ -82,6 +85,7 @@ export default async function CityPage({ params }: Props) {
         stop water use where safe and request a provider connection.
       </DirectAnswer>
       <LocalGuidance cityName={city.name} />
+      <EnhancementSections enhancement={enhancement} />
       <InfoListSection
         kicker="Local relevance"
         title={`Emergency plumbing situations in ${city.name}`}
@@ -133,6 +137,7 @@ export default async function CityPage({ params }: Props) {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...(enhancement?.extraLinks || []),
           ...services.slice(0, 4).map((service) => ({ label: service.name, href: `/services/${service.slug}` })),
           ...nearbyCities.map((nearby) => ({ label: `Emergency plumbing in ${nearby.name}`, href: `/cities/${nearby.slug}` }))
         ]}

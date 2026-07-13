@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { DirectAnswer, FAQBlock, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { blogPosts } from "@/data/blogPosts";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
@@ -37,7 +38,9 @@ export default async function BlogPostPage({ params }: Props) {
     .filter((item) => item.slug !== post.slug && item.category === post.category)
     .slice(0, 3);
   const path = `/blog/${post.slug}`;
+  const enhancement = blogEnhancements[post.slug];
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
     {
       question: "What is the quick decision?",
       answer: post.directAnswer
@@ -80,6 +83,21 @@ export default async function BlogPostPage({ params }: Props) {
               includes dirty water, or risks property damage, treat it as urgent and request provider guidance.
             </p>
           </section>
+          {enhancement ? (
+            <>
+              <InfoListSection
+                kicker="Checklist"
+                title={enhancement.checklistTitle}
+                intro={enhancement.checklistIntro}
+                items={enhancement.checklistItems}
+              />
+              <InfoListSection
+                kicker="Verification"
+                title={enhancement.proofTitle}
+                items={enhancement.proofItems}
+              />
+            </>
+          ) : null}
         </div>
         <LeadForm pageUrl={path} service={relatedService?.name || "Emergency plumbing"} city="Dallas" />
       </div>
@@ -88,6 +106,7 @@ export default async function BlogPostPage({ params }: Props) {
       <InternalLinks
         extra={[
           { label: "Emergency plumbing guide hub", href: "/blog" },
+          ...(enhancement?.extraLinks || []),
           ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
           ...relatedPosts.map((item) => ({ label: item.title, href: `/blog/${item.slug}` }))
         ]}

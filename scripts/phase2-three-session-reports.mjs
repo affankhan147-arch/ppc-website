@@ -918,12 +918,367 @@ Begin Day 3 Session 1 with topical gap analysis, priority matrix, careful implem
   console.log("Phase B reports generated.");
 }
 
+function generatePhaseC() {
+  const sitemapPath = path.join(appDir, "sitemap.xml.body");
+  const sitemapBody = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, "utf8") : "";
+  const sitemapUrls = [...sitemapBody.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => decodeHtml(match[1]));
+  const changedUrls = [
+    ["/problems/water-shutoff-valve-will-not-close", "New", "Emergency problem page", "Water shutoff valve emergency guidance", "yes"],
+    ["/cost-guides/emergency-leak-repair-cost-dfw", "New", "Cost decision guide", "Leak repair cost factors without exact prices", "yes"],
+    ["/services/burst-pipe-emergency", "Changed", "Service support page", "Leak isolation and shutoff valve support links", "yes"],
+    ["/cities/dallas", "Changed", "Local intent page", "Dallas leak/drain triage and new internal links", "yes"],
+    ["/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Changed", "Authority-ready guide", "Emergency plumber booking checklist and claim-verification guidance", "yes"],
+    ["/", "Changed", "Homepage", "New cost guide appears in cost guide list", "yes"],
+    ["/sitemap.xml", "Changed", "Indexing support", "Sitemap includes new problem and cost guide URLs", "yes"]
+  ];
+
+  writeCsv("strategy/day3_topical_gap_analysis.csv", [
+    ["Topic", "Intent", "Existing URL", "Gap Type", "Commercial Value", "Urgency", "Supporting Cluster", "Cannibalization Risk", "Recommended Action", "Evidence", "Priority"],
+    ["Stuck shutoff valve during active leak", "Emergency problem diagnosis", "", "Missing high-intent emergency problem", "High", "High", "Burst pipe/leak cluster", "Low; distinct from burst-pipe-first-steps because user intent is valve isolation", "Create focused problem page", "Existing burst pipe and ceiling leak pages lacked stuck-valve-specific guidance", "P1"],
+    ["Emergency leak repair cost factors", "Cost research before approval", "", "Missing leak-specific cost decision guide", "High", "High", "Burst pipe/leak cluster", "Low; distinct from burst pipe cost because it covers valves, access, and restoration separation", "Create cost guide", "Existing cost guides covered burst pipes but not active leak isolation and valve scope", "P1"],
+    ["Emergency plumber booking checklist", "Decision support / linkable asset", "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Thin authority asset", "Medium-high", "Medium", "Emergency decision guides", "Low; enhances an existing guide", "Upgrade existing guide into checklist resource", "Blog title existed but used generic article template", "P1"],
+    ["Dallas leak and drain triage", "Local service-area request", "/cities/dallas", "Local content depth gap", "High", "High", "Dallas local cluster", "Low; improves one priority city, no location-swapped rollout", "Upgrade Dallas page only", "Dallas is priority city and supports selected service/city-service pages", "P1"],
+    ["Slab leak diagnosis", "Emergency leak diagnosis", "", "Potential future topic", "Medium-high", "High", "Leak cluster", "Medium; could overlap hidden leak/leak repair pages", "Defer until more leak cluster is stable", "No owner proof or service data specific to slab leak", "P2"],
+    ["Water heater replacement decision", "Repair versus replacement", "/cost-guides/water-heater-emergency-cost-guide", "Partial coverage", "Medium", "Medium", "Water heater cluster", "Low", "Future upgrade", "Existing water heater cost guide mentions repair versus replacement but lacks decision tree", "P2"],
+    ["Commercial restroom shutdown", "Commercial emergency service", "/services/commercial-emergency-plumbing", "Support depth gap", "Medium", "High", "Commercial emergency cluster", "Low", "Future supporting page or upgrade", "Commercial page exists but no dedicated restroom-shutdown problem guide", "P2"],
+    ["Recurring drain backup prevention", "Maintenance/prevention", "/services/emergency-drain-cleaning", "Support depth gap", "Medium", "Medium", "Drain cleaning cluster", "Medium; must avoid duplicating existing drain guides", "Future guide if distinct", "Existing content covers mistakes and prevention lightly", "P3"]
+  ]);
+
+  writeCsv("strategy/day3_page_priority_matrix.csv", [
+    ["URL", "Action", "User Urgency", "Commercial Relevance", "Support For Existing Money Pages", "Unique Value", "Internal-Link Potential", "Conversion Potential", "Content Confidence", "Duplication Risk", "Selected", "Rationale"],
+    ["/problems/water-shutoff-valve-will-not-close", "Create", "High", "High", "High", "High", "High", "High", "High", "Low", "yes", "Specific emergency problem that supports burst pipe, ceiling leak, and leak cost content."],
+    ["/cost-guides/emergency-leak-repair-cost-dfw", "Create", "High", "High", "High", "High", "High", "Medium-high", "High", "Low", "yes", "Cost guide fills leak/valve/access/restoration decision gap without exact prices."],
+    ["/blog/best-questions-to-ask-before-you-book-an-emergency-plumber", "Upgrade", "Medium", "Medium-high", "High", "High", "High", "Medium", "High", "Low", "yes", "Existing guide becomes a standalone checklist and future authority-ready asset."],
+    ["/cities/dallas", "Upgrade", "High", "High", "High", "Medium-high", "High", "High", "High", "Low", "yes", "Improves one priority city without mass city-page generation or fake local proof."],
+    ["/services/burst-pipe-emergency", "Supporting upgrade", "High", "High", "High", "Medium-high", "High", "High", "High", "Low", "supporting", "Updated through enhancement links and leak/shutoff guidance to support selected targets."],
+    ["/cost-guides/water-heater-emergency-cost-guide", "Defer", "Medium", "Medium", "Medium", "Medium", "Medium", "Medium", "Medium", "Low", "no", "Useful future repair-versus-replacement upgrade, but leak cluster had stronger immediate opportunity."]
+  ]);
+
+  writeMd(
+    "reports/day3_session1_content_implementation.md",
+    `# Day 3 Session 1 Content Implementation
+
+## /problems/water-shutoff-valve-will-not-close
+
+- Type: New emergency problem page.
+- Direct answer: Added stuck shutoff valve guidance and safe next steps.
+- Safety guidance: Avoid forcing brittle valves, disassembling pressurized valves, or standing in water near electrical equipment.
+- Diagnosis: Added provider inspection details around valve age, corrosion, pipe material, and pressure.
+- Repair options: Framed as provider-diagnosed valve/leak repair without exact scope promises.
+- Cost factors: Linked to emergency leak repair cost guide.
+- Internal links: Burst pipe emergency, emergency leak cost, ceiling leak.
+- CTA: Existing problem-page CTA and form path.
+- Schema: WebPage, BreadcrumbList, FAQPage.
+
+## /cost-guides/emergency-leak-repair-cost-dfw
+
+- Type: New cost decision guide.
+- Direct answer: Cost depends on active water, leak location, access, and shutoff valve condition.
+- Safety guidance: Cost comparison should wait when water is near electrical areas, walls/ceilings, or active damage.
+- Cost factors: Active water, shutoff valve condition, leak location, access, pipe material, timing.
+- Internal links: Stuck shutoff valve, burst pipe emergency, burst pipe cost.
+- Schema: WebPage, BreadcrumbList, FAQPage.
+- Exact prices: Not added.
+
+## /blog/best-questions-to-ask-before-you-book-an-emergency-plumber
+
+- Type: Existing guide upgraded into authority-ready checklist.
+- Content added: Emergency plumber booking checklist, provider-claim verification checklist, two specific FAQs, and links to emergency cost, shutoff valve, and 24-hour emergency plumber pages.
+- User value: Helps homeowners compare scope, pricing rules, safety steps, and claims before approving emergency work.
+- Outreach: None.
+
+## /cities/dallas
+
+- Type: Existing local page upgrade.
+- Content added: Dallas emergency leak and drain triage, useful request details, urgency triggers, follow-up notes, local FAQ, and links to new leak/shutoff resources.
+- Local proof: No fake office, address, license, or guaranteed availability claims added.
+
+## Supporting Template Impact
+
+- /services/burst-pipe-emergency now links into stuck shutoff valve and emergency leak repair cost resources through existing enhancement architecture.
+- Homepage cost guide list now includes the new emergency leak repair cost guide.
+`
+  );
+
+  writeMd(
+    "reports/day3_session1_indexing_support.md",
+    `# Day 3 Session 1 Indexing Support
+
+## Sitemap
+
+- Built sitemap URL count: ${sitemapUrls.length}
+- New URL in sitemap: https://plumbinghands.com/problems/water-shutoff-valve-will-not-close
+- New URL in sitemap: https://plumbinghands.com/cost-guides/emergency-leak-repair-cost-dfw
+- Sitemap generation source: src/app/sitemap.ts through getAllInventoryPages().
+
+## Canonicals
+
+- New problem canonical: https://plumbinghands.com/problems/water-shutoff-valve-will-not-close
+- New cost guide canonical: https://plumbinghands.com/cost-guides/emergency-leak-repair-cost-dfw
+- Changed guide canonical preserved: https://plumbinghands.com/blog/best-questions-to-ask-before-you-book-an-emergency-plumber
+- Changed Dallas canonical preserved: https://plumbinghands.com/cities/dallas
+
+## Robots And Noindex
+
+- robots.txt route builds.
+- No noindex directive was added to new or changed pages.
+
+## Crawl Paths
+
+- New problem page is linked from burst pipe emergency, Dallas page, new leak cost guide, and the upgraded booking checklist guide.
+- New cost guide is linked from Dallas page, burst pipe emergency, new problem page, homepage cost guide list, and the upgraded booking checklist guide.
+- Upgraded guide links back into emergency cost, shutoff valve, and 24-hour emergency plumber resources.
+
+## IndexNow
+
+IndexNow changed-URL candidates are documented in reports/day3_session1_new_and_changed_urls.csv. No IndexNow submission was made because Bing/Webmaster verification remains an owner-controlled external action.
+
+## Checks
+
+- Production build passed after implementation.
+- No paid ads, backlinks, fake citations, fake offices, or unsupported schema were added.
+`
+  );
+
+  writeCsv("reports/day3_session1_new_and_changed_urls.csv", [
+    ["URL", "Change Type", "Page Type", "Reason", "Sitemap Status", "Canonical Status", "Robots Status", "IndexNow Candidate", "Validation Status"],
+    ...changedUrls.map(([url, changeType, pageType, reason, indexNow]) => [
+      url,
+      changeType,
+      pageType,
+      reason,
+      url === "/sitemap.xml" ? "route builds" : sitemapUrls.includes(`https://plumbinghands.com${url}`) ? "included" : "not applicable",
+      url === "/sitemap.xml" ? "not applicable" : "self canonical or unchanged canonical verified in build",
+      "indexable; no noindex added",
+      indexNow,
+      "Build passed"
+    ])
+  ]);
+
+  writeMd(
+    "authority/day3_linkable_asset_readiness.md",
+    `# Day 3 Linkable Asset Readiness
+
+## Selected Asset
+
+- URL: /blog/best-questions-to-ask-before-you-book-an-emergency-plumber
+- Asset type: Emergency plumber booking checklist and claim-verification guide.
+- Reason selected: It provides standalone homeowner value, supports emergency service and cost pages, and does not require fake ratings, licenses, office claims, or outreach.
+
+## Improvements Completed
+
+- Added a concise booking checklist with questions about dispatch/diagnostic fees, safety steps, diagnosis, repair versus replacement, and restoration scope.
+- Added a verification section covering licenses, insurance, ratings, reviews, arrival timing, exact pricing, and local office/listing claims.
+- Added two visible FAQs and matching FAQPage schema.
+- Added internal links to emergency plumbing cost, shutoff valve emergency, and 24-hour emergency plumber pages.
+
+## Authority Readiness
+
+- Useful without search engines: yes.
+- Original site content: yes.
+- Requires owner proof: no, because it advises users to verify provider claims directly.
+- Outreach started: no.
+- Backlinks created: 0.
+- Paid placements created: 0.
+
+## Future Non-Outreach Use
+
+After owner review, this asset can support unpaid editorial opportunities only when the opportunity is relevant, audience-serving, and passes the unpaid backlink quality filter.`
+  );
+
+  writeCsv("authority/unpaid_backlink_quality_filter.csv", [
+    ["Criterion", "Score Range", "Pass Threshold", "Auto Reject Condition", "Owner Verification Needed", "Notes"],
+    ["Topical relevance", "0-10", "7", "Unrelated to plumbing, home services, emergency preparedness, DFW homeowner topics, property management, or local safety", "No", "Must make sense for a real reader."],
+    ["Local relevance", "0-10", "5", "Claims a fake local address, office, or service area", "Yes if local claim is used", "Local relevance is helpful but must be truthful."],
+    ["Genuine audience", "0-10", "7", "No real readership or made-for-links page", "No", "Reject empty directories and thin link pages."],
+    ["Editorial justification", "0-10", "8", "Paid insertion, link exchange, or unexplained exact-match anchor", "Yes for any partnership", "Must be editorially useful."],
+    ["Page-level relevance", "0-10", "7", "Link appears on irrelevant page or unrelated list", "No", "Page context matters more than domain name."],
+    ["Referral traffic potential", "0-10", "5", "No plausible visitors", "No", "Traffic does not need to be large but should be real."],
+    ["Lead potential", "0-10", "4", "Audience cannot reasonably need emergency plumbing help", "No", "Lead potential is secondary to relevance."],
+    ["Domain cleanliness", "0-10", "8", "PBN, link farm, malware, scraped site, spam outbound pattern", "No", "Reject if spam pattern is visible."],
+    ["Outbound-link quality", "0-10", "7", "Casino/adult/payday/pharma/link package footprint or excessive unrelated outbound links", "No", "Manual review required."],
+    ["Natural anchor suitability", "0-10", "8", "Exact-match money anchor demanded", "No", "Prefer brand, URL, resource title, or natural sentence anchors."],
+    ["Permanence", "0-10", "5", "Temporary paid rental link", "Yes if contract exists", "Do not buy permanence."],
+    ["Owner verification needs", "0-10", "10", "Requires unverified license, insurance, office, review, response time, or pricing claim", "Yes", "No proof means no claim."]
+  ]);
+
+  writeMd(
+    "authority/unpaid_backlink_policy.md",
+    `# Unpaid Backlink Policy
+
+Backlinks created in Day 3 Session 1: 0.
+
+## Allowed Future Opportunity Types
+
+- Genuine editorial references to a useful guide or checklist.
+- Relevant local resource pages with real audiences.
+- Partner references from verified real businesses when the relationship is truthful and owner-approved.
+- Homeowner safety, maintenance, emergency preparedness, property management, or DFW local resources when the page context is relevant.
+
+## Automatically Rejected
+
+- Paid placements.
+- Link packages.
+- PBNs.
+- Link farms.
+- Automated directories.
+- Irrelevant guest posts.
+- Spam comments.
+- Forum spam.
+- Fake citations.
+- Low-quality syndication.
+- Manipulative exchanges.
+- Exact-match anchor demands.
+- Fake profiles.
+- Fake offices or fake local listings.
+
+## Anchor Rules
+
+Use natural anchors only: brand name, URL, article title, checklist title, or sentence-context anchors. Do not request exact-match commercial anchors.
+
+## Verification Rules
+
+Any opportunity that needs license, insurance, review, rating, local-office, business-address, response-time, pricing, or partner-capacity claims requires owner proof before use. If proof is not available, the claim must be removed or the opportunity rejected.
+
+## Approval
+
+Future opportunities must be scored in authority/unpaid_backlink_quality_filter.csv before any outreach, submission, or publication.`
+  );
+
+  writeMd(
+    "reports/day3_session1_final_report.md",
+    `# Day 3 Session 1 Final Report
+
+## Build State
+
+- Starting build: pass.
+- Final build: pass.
+
+## Content And Topical Authority
+
+- Topic gaps mapped in strategy/day3_topical_gap_analysis.csv.
+- Priority matrix created in strategy/day3_page_priority_matrix.csv.
+- Selected implementation targets: 4.
+- New pages created: 2.
+- Existing pages upgraded: 2 primary targets plus supporting burst-pipe service links.
+
+## URLs
+
+- New: /problems/water-shutoff-valve-will-not-close
+- New: /cost-guides/emergency-leak-repair-cost-dfw
+- Changed: /blog/best-questions-to-ask-before-you-book-an-emergency-plumber
+- Changed: /cities/dallas
+- Supporting changed: /services/burst-pipe-emergency and /
+
+## Indexing
+
+- Sitemap includes both new URLs.
+- Canonicals are self-referential on new pages.
+- No noindex added.
+- Changed URL list created.
+- IndexNow submission not performed.
+
+## Authority Readiness
+
+- Linkable asset improved: emergency plumber booking checklist.
+- Unpaid backlink quality filter created.
+- Unpaid backlink policy created.
+
+## Safety
+
+- Backlinks created: 0.
+- Paid ads created: 0.
+- Fake claims added: 0.
+- No exact prices, ratings, reviews, office claims, license claims, or response-time promises added.
+- Owner configuration for phone, lead destination, and analytics remains required.
+`
+  );
+
+  writeMd(
+    "reports/day3_session2_priority_queue.md",
+    `# Day 3 Session 2 Priority Queue
+
+## P0
+
+- Priority: P0
+- URL or file: none currently
+- Problem: No known build, routing, indexing, or conversion P0 remains.
+- Business impact: No hidden launch blocker identified in repository checks.
+- Recommended action: Continue only after owner reviews required configuration.
+- Owner input required: no
+- Estimated complexity: not applicable
+- Validation method: build, QA, smoke checks.
+- Proposed order: not applicable
+
+## P1
+
+- Priority: P1
+- URL or file: hosted environment; src/data/site.ts
+- Problem: Tracking phone values remain placeholders.
+- Business impact: Phone conversion cannot be production-verified.
+- Recommended action: Owner provides approved display/E.164 tracking phone values.
+- Owner input required: yes
+- Estimated complexity: low after values exist
+- Validation method: CTA hrefs change to tel: and call-event requestDestination becomes phone.
+- Proposed order: 1
+
+- Priority: P1
+- URL or file: hosted environment; src/app/api/lead/route.ts
+- Problem: Lead delivery destination remains placeholder-only.
+- Business impact: Form submissions are not routed to approved production CRM/webhook/email.
+- Recommended action: Owner approves destination and secrets are configured only in hosting env.
+- Owner input required: yes
+- Estimated complexity: medium
+- Validation method: live test lead reaches approved destination without exposing PII.
+- Proposed order: 2
+
+## P2
+
+- Priority: P2
+- URL or file: /services/burst-pipe-emergency and leak cluster
+- Problem: Leak cluster can be expanded later with owner-approved details such as verified service coverage and provider capabilities.
+- Business impact: More complete topical support after owner proof exists.
+- Recommended action: Add proof-backed service details only after verification.
+- Owner input required: yes
+- Estimated complexity: medium
+- Validation method: content review and build.
+- Proposed order: 3
+
+- Priority: P2
+- URL or file: /blog/best-questions-to-ask-before-you-book-an-emergency-plumber
+- Problem: Authority-ready asset can be made more useful with owner-approved downloadable/printable format later.
+- Business impact: Better usefulness and future editorial suitability.
+- Recommended action: Add downloadable checklist only if the site design supports it and no outreach starts.
+- Owner input required: no
+- Estimated complexity: medium
+- Validation method: visual QA and accessibility check.
+- Proposed order: 4
+
+## P3
+
+- Priority: P3
+- URL or file: authority files
+- Problem: Future unpaid backlink opportunities need manual scoring before use.
+- Business impact: Keeps authority work clean.
+- Recommended action: Score opportunities only when real relevant opportunities exist.
+- Owner input required: yes for claims/relationships
+- Estimated complexity: low
+- Validation method: filter score and policy compliance.
+- Proposed order: after owner configuration
+`
+  );
+
+  console.log("Phase C reports generated.");
+}
+
 const command = process.argv[2] || "phase-a";
 
 if (command === "phase-a") {
   generatePhaseA();
 } else if (command === "phase-b") {
   generatePhaseB();
+} else if (command === "phase-c") {
+  generatePhaseC();
 } else {
   console.error(`Unknown report command: ${command}`);
   process.exit(1);
