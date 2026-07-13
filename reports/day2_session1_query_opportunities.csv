@@ -1,0 +1,6 @@
+"page","query_opportunity","position","impressions","clicks","selection_basis","status"
+"/services/24-hour-emergency-plumber","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","commercial emergency page; no GSC data; selected by repo score and commercial intent","DATA-LIMITED"
+"/services/emergency-drain-cleaning","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","commercial drain page; no GSC data; selected by repo score and conversion value","DATA-LIMITED"
+"/services/main-sewer-line-clog","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","commercial sewer page; no GSC data; selected by urgency and topical depth","DATA-LIMITED"
+"/cost-guides/emergency-plumbing-cost-dfw","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","cost decision page; no GSC data; selected by cost intent","DATA-LIMITED"
+"/problems/water-shutoff-valve-will-not-close","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","NOT AVAILABLE","problem page; no GSC data; selected by leak/shutoff support cluster","DATA-LIMITED"

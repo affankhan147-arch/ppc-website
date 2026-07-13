@@ -126,6 +126,50 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
     ]
   },
+  "main-sewer-line-clog": {
+    decisionTitle: "How to recognize a likely main-line problem",
+    decisionIntro:
+      "Main sewer symptoms are usually higher risk when several fixtures react together or wastewater appears at a low drain or cleanout.",
+    decisionItems: [
+      "Treat toilet-and-tub backup, floor drain overflow, and outdoor cleanout overflow as stronger main-line warning signs.",
+      "Stop water use when more than one fixture reacts because every extra gallon can push wastewater into lower openings.",
+      "Mention heavy rain, recurring backups, roots, or prior cleanings because those details can change the next diagnostic step.",
+      "Ask whether the provider is clearing a line, inspecting the cause, or recommending repair planning."
+    ],
+    providerTitle: "What a sewer provider may need to confirm",
+    providerItems: [
+      "Lowest fixture where water first appeared.",
+      "Whether an outdoor cleanout is accessible and whether it is overflowing.",
+      "Which fixtures react when a toilet flushes, shower runs, or laundry drains.",
+      "Whether cleanup, camera inspection, or repair planning is outside the initial clearing scope."
+    ],
+    safetyTitle: "When the main-line request should be urgent",
+    safetyItems: [
+      "Wastewater appears indoors.",
+      "Several fixtures back up or gurgle together.",
+      "A cleanout overflows or has visible sewage.",
+      "A business, apartment, or only bathroom cannot be used safely."
+    ],
+    preventionTitle: "Details to save after the visit",
+    preventionItems: [
+      "What likely caused the restriction.",
+      "Whether the provider saw roots, grease, damaged pipe, or repeat-risk conditions.",
+      "What symptoms should trigger faster action next time."
+    ],
+    extraFaqs: [
+      {
+        question: "What is the fastest clue that a clog may be in the main sewer line?",
+        answer:
+          "The strongest clue is more than one fixture reacting together, such as a toilet flush causing water to rise in a tub, shower, floor drain, or outdoor cleanout."
+      }
+    ],
+    extraLinks: [
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" },
+      { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" },
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" }
+    ]
+  },
   "burst-pipe-emergency": {
     decisionTitle: "How to handle a leak before repair starts",
     decisionIntro:
@@ -319,6 +363,50 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Burst pipe emergency cost", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
+    ]
+  },
+  "drain-cleaning-cost-dfw": {
+    decisionTitle: "How to compare drain-cleaning scopes",
+    decisionIntro:
+      "Drain-cleaning pricing is easier to compare when the provider explains whether the work is for one fixture, a shared branch line, or a possible main sewer line.",
+    decisionItems: [
+      "Ask whether the quoted work is for a sink, tub, toilet, floor drain, branch line, or main line.",
+      "Ask whether cable clearing, hydro equipment, cleanout access, or camera inspection changes the scope.",
+      "Mention chemicals, plunging, prior cleanings, and recurring backups before approving work.",
+      "Avoid comparing prices until each provider describes the same equipment, access, and return-policy assumptions."
+    ],
+    providerTitle: "Questions that improve drain cost clarity",
+    providerItems: [
+      "What fixture or line is included in this visit?",
+      "Is camera inspection included, optional, or separate?",
+      "What happens if the clog returns quickly?",
+      "Does after-hours timing or difficult access change the pricing method?"
+    ],
+    safetyTitle: "When cost shopping should pause",
+    safetyItems: [
+      "Wastewater is visible or spreading.",
+      "A business restroom, kitchen, or floor drain cannot be used safely.",
+      "Several fixtures react together.",
+      "A cleanout is overflowing."
+    ],
+    preventionTitle: "Records that help with repeat drain decisions",
+    preventionItems: [
+      "Which fixture backed up first and which fixtures reacted later.",
+      "Whether grease, wipes, roots, foreign objects, or equipment access affected the visit.",
+      "What the provider recommended if the backup returns."
+    ],
+    extraFaqs: [
+      {
+        question: "Why can drain-cleaning prices vary so much?",
+        answer:
+          "A single sink clog, a bathroom branch clog, and a suspected main sewer line problem can require different access, equipment, diagnosis, and follow-up."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
+      { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
+      { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
     ]
   },
   "emergency-leak-repair-cost-dfw": {
