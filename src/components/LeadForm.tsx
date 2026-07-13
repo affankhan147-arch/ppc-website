@@ -15,9 +15,11 @@ const serviceOptions = [
   "Main sewer line clog",
   "Toilet overflow",
   "Burst pipe",
+  "Leak or shutoff valve problem",
   "Water heater emergency",
   "Sewer backup",
-  "Commercial plumbing emergency"
+  "Commercial plumbing emergency",
+  "Not sure - urgent plumbing help"
 ];
 
 const requestDetailPrompts = [
