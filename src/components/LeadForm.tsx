@@ -20,6 +20,12 @@ const serviceOptions = [
   "Commercial plumbing emergency"
 ];
 
+const requestDetailPrompts = [
+  "Affected fixture or room",
+  "Water or wastewater active",
+  "Nearest cross streets"
+];
+
 function inferPageType(pathname: string) {
   if (pathname === "/") return "homepage";
   if (pathname === "/contact") return "contact";
@@ -139,6 +145,11 @@ export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
       <div>
         <p className="text-xs font-black uppercase tracking-normal text-sky-700">Fast request form</p>
         <h2 className="mt-1 text-xl font-black text-slate-950 sm:text-2xl">Tell us what service you need</h2>
+        <ul className="mt-3 grid gap-1 text-sm font-semibold leading-5 text-slate-600">
+          {requestDetailPrompts.map((prompt) => (
+            <li key={prompt}>{prompt}</li>
+          ))}
+        </ul>
       </div>
       <label className="grid gap-1 text-sm font-semibold text-slate-700">
         Plumbing issue
@@ -172,8 +183,8 @@ export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
         </label>
       </div>
       <label className="grid gap-1 text-sm font-semibold text-slate-700">
-        Message optional
-        <textarea className="min-h-20 rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="message" placeholder="Briefly describe the issue, if you can." />
+        Problem details optional
+        <textarea className="min-h-20 rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="message" placeholder="Fixture, active water, backup, shutoff, access notes..." />
       </label>
       <button className="inline-flex items-center justify-center gap-2 rounded-md bg-slate-950 px-4 py-3 text-sm font-black text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500" type="submit" disabled={submitting}>
         <Send className="h-4 w-4" aria-hidden="true" />
