@@ -1,18 +1,31 @@
 CODEX NIGHT SHIFT V2
 
 Objective:
-Run daily source-safe growth checks without paid ads, paid backlinks, fake claims, fake citations, fake reviews, fake offices, or invented tracking values.
+Run daily source-safe organic growth checks without paid ads, paid backlinks, fake claims, fake citations, fake reviews, fake offices, invented metrics, or unsupported local business claims.
 
 Daily order:
 1. Pull origin/master.
 2. Confirm clean working tree.
 3. Run pnpm run build, pnpm run typecheck, pnpm run qa, eslint, and sites:build.
-4. Review owner blockers.
-5. Improve one verified content, crawlability, internal-link, conversion, accessibility, or documentation item.
-6. Commit and push only after QA passes.
+4. Review latest Phase 3 scorecard, reports, and owner blockers.
+5. Select the first verified task from this priority order:
+   1. P0 failures.
+   2. Indexing problems.
+   3. Broken conversion paths.
+   4. Position 8 to 30 opportunities when Search Console data exists.
+   5. High-impression low-CTR pages when Search Console data exists.
+   6. Weak conversion pages when analytics/call data exists.
+   7. Content refresh based on verified quality or performance evidence.
+   8. Topical gaps.
+   9. Internal-link opportunities.
+   10. Authority follow-up only after owner approval.
+   11. New content only when justified.
+6. Execute one evidence-supported improvement.
+7. Update scorecard and reports.
+8. Commit and push only after QA passes.
 
 Never:
 - Send outreach automatically.
 - Create backlinks.
 - Create citations.
-- Invent phone numbers, tracking IDs, NAP, license, insurance, prices, reviews, or response times.
+- Invent phone numbers, tracking IDs, NAP, licenses, insurance, prices, reviews, response times, rankings, impressions, clicks, calls, or qualified leads.
