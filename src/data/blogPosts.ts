@@ -37,7 +37,8 @@ const titles = [
   "Emergency Plumber in Plano: When to Call Now",
   "Emergency Drain Cleaning in Frisco: What to Expect",
   "Emergency Sewer Help in Garland: Signs and Next Steps",
-  "Water Shutoff Valve Will Not Close During a Leak"
+  "Water Shutoff Valve Will Not Close During a Leak",
+  "Emergency Leak Approval Checklist for Homeowners"
 ];
 
 const serviceCycle = [
@@ -60,7 +61,8 @@ const slugify = (value: string) =>
     .replace(/^-|-$/g, "");
 
 const relatedServiceOverrides: Record<string, string> = {
-  "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency"
+  "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
+  "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency"
 };
 
 const directAnswerOverrides: Record<string, string> = {
@@ -69,7 +71,9 @@ const directAnswerOverrides: Record<string, string> = {
   "Emergency Plumbing Cost Guide for Dallas Homeowners":
     "Emergency plumbing cost depends on diagnosis, timing, access, parts, and whether water damage is active. Ask about dispatch, diagnostic, repair approval, and cleanup scope before work begins.",
   "Drain Cleaning Cost Guide for Dallas Homeowners":
-    "Drain cleaning cost depends on whether the blockage is in one fixture, a shared branch, or the main sewer line. Ask what equipment, access, inspection, and return-policy assumptions are included."
+    "Drain cleaning cost depends on whether the blockage is in one fixture, a shared branch, or the main sewer line. Ask what equipment, access, inspection, and return-policy assumptions are included.",
+  "Emergency Leak Approval Checklist for Homeowners":
+    "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };
 
 export const blogPosts: BlogPost[] = titles.map((title, index) => ({

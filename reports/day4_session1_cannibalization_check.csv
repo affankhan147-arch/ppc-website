@@ -1,0 +1,5 @@
+"url","primary_intent","overlap_risk","decision"
+"/services/burst-pipe-emergency","request emergency pipe/leak help","low","keep"
+"/problems/water-shutoff-valve-will-not-close","identify failed shutoff problem","low","keep"
+"/cost-guides/emergency-leak-repair-cost-dfw","understand leak cost factors","low","keep"
+"/blog/water-shutoff-valve-will-not-close-during-a-leak","checklist before help arrives","low","keep"

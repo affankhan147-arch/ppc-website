@@ -394,6 +394,7 @@ Emergency leak and shutoff decision support.
 - Existing problem page: /problems/water-shutoff-valve-will-not-close.
 - Existing cost page: /cost-guides/emergency-leak-repair-cost-dfw.
 - Existing guide: /blog/water-shutoff-valve-will-not-close-during-a-leak.
+- New support guide: /blog/emergency-leak-approval-checklist-for-homeowners.
 
 ## Rationale
 
@@ -405,7 +406,8 @@ This cluster has practical homeowner value, strong emergency intent, and clear s
 - Commercial support page: /services/burst-pipe-emergency strengthened through leak, shutoff, cost, and problem links.
 - Emergency/problem page: /problems/water-shutoff-valve-will-not-close supports failed-valve triage.
 - Cost/decision page: /cost-guides/emergency-leak-repair-cost-dfw separates isolation, diagnosis, repair, and restoration scope.
-- Supporting guide page: /blog/water-shutoff-valve-will-not-close-during-a-leak remains the checklist asset for homeowners.
+- Supporting FAQ/checklist guide page: /blog/emergency-leak-approval-checklist-for-homeowners added to explain approval questions before emergency leak work.
+- Existing checklist page: /blog/water-shutoff-valve-will-not-close-during-a-leak remains supporting content for failed shutoff symptoms.
 `);
 
   writeCsv("reports/day4_session1_internal_links.csv", [
@@ -413,6 +415,7 @@ This cluster has practical homeowner value, strong emergency intent, and clear s
     ["/services/burst-pipe-emergency", "/problems/water-shutoff-valve-will-not-close", "Water shutoff valve will not close", "problem support"],
     ["/services/burst-pipe-emergency", "/cost-guides/emergency-leak-repair-cost-dfw", "Emergency leak repair cost", "cost support"],
     ["/cost-guides/emergency-leak-repair-cost-dfw", "/blog/water-shutoff-valve-will-not-close-during-a-leak", "failed shutoff leak checklist", "guide support"],
+    ["/blog/emergency-leak-approval-checklist-for-homeowners", "/cost-guides/emergency-leak-repair-cost-dfw", "Emergency leak repair cost", "cost support"],
     ["/cities/dallas", "/problems/water-shutoff-valve-will-not-close", "Water shutoff valve will not close", "local emergency support"]
   ]);
 

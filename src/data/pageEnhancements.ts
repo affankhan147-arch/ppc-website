@@ -626,6 +626,44 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
+  },
+  "emergency-leak-approval-checklist-for-homeowners": {
+    checklistTitle: "Emergency leak approval checklist",
+    checklistIntro:
+      "Use these prompts when water is active, a shutoff valve failed, or a leak repair needs access through a wall, ceiling, cabinet, or floor.",
+    checklistItems: [
+      "Water isolated or next safe shutoff identified.",
+      "Electrical areas avoided if wet.",
+      "Leak source, access area, and affected room described clearly.",
+      "Repair scope separated from drying, cleanup, drywall, flooring, and cabinet work.",
+      "Dispatch, diagnostic, after-hours, parts, and approval steps explained before work begins.",
+      "Credentials, availability, pricing, and warranty details verified directly with the provider."
+    ],
+    proofTitle: "Scope details to verify",
+    proofItems: [
+      "Whether the work stops active water, diagnoses hidden access, repairs a pipe, replaces a valve, or coordinates restoration.",
+      "What could change once a wall, ceiling, cabinet, or floor is opened.",
+      "Whether temporary isolation is available if permanent repair needs parts or extra access.",
+      "What is not included in the plumbing scope."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I confirm before approving emergency leak work?",
+        answer:
+          "Confirm whether water is isolated, what access is needed, what the plumbing repair includes, and whether drying or restoration is separate."
+      },
+      {
+        question: "Should price comparison wait during an active leak?",
+        answer:
+          "If water is spreading or electrical areas are wet, safety and isolation come first. Compare scope and pricing after the immediate risk is controlled."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
+      { label: "Failed shutoff leak checklist", href: "/blog/water-shutoff-valve-will-not-close-during-a-leak" }
+    ]
   }
 };
 
