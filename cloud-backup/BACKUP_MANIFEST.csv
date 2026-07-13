@@ -1,0 +1,16 @@
+File,Bytes,Category,Purpose,Reusable Framework,Project Specific,Owner Values Included
+cloud-backup/AUTHORITY_AND_BACKLINK_POLICY/README.md,451,AUTHORITY_AND_BACKLINK_POLICY,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/CHANGELOG.md,371,CHANGELOG.md,backup control file,mixed,yes,no secrets; placeholders only
+cloud-backup/CONTENT_AND_INTERNAL_LINKING/README.md,320,CONTENT_AND_INTERNAL_LINKING,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/CONVERSION_AND_TRACKING/README.md,332,CONVERSION_AND_TRACKING,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/DAY1_TO_DAY3_COMPLETE_COMMANDS/README.md,503,DAY1_TO_DAY3_COMPLETE_COMMANDS,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/FUTURE_PROJECT_STARTER/README.md,433,FUTURE_PROJECT_STARTER,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/LESSONS_LEARNED/README.md,482,LESSONS_LEARNED,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/MANUAL_OWNER_ACTIONS/README.md,324,MANUAL_OWNER_ACTIONS,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/MASTER_PROJECT_BLUEPRINT.md,3341,MASTER_PROJECT_BLUEPRINT.md,backup control file,yes,limited,no secrets; placeholders only
+cloud-backup/NIGHT_SHIFT_SYSTEM/README.md,344,NIGHT_SHIFT_SYSTEM,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/PHASE2_COMPLETE_COMMANDS/README.md,418,PHASE2_COMPLETE_COMMANDS,section guidance,yes,yes,no secrets; placeholders only
+cloud-backup/QA_AND_RELEASE/README.md,300,QA_AND_RELEASE,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/README.md,695,README.md,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/REPORT_TEMPLATES/README.md,268,REPORT_TEMPLATES,section guidance,yes,limited,no secrets; placeholders only
+cloud-backup/SEO_AEO_FRAMEWORK/README.md,317,SEO_AEO_FRAMEWORK,section guidance,yes,limited,no secrets; placeholders only
