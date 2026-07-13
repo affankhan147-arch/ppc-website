@@ -63,10 +63,20 @@ const relatedServiceOverrides: Record<string, string> = {
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency"
 };
 
+const directAnswerOverrides: Record<string, string> = {
+  "Main Sewer Line Clogged in Dallas: Warning Signs and Fast Options":
+    "A likely main sewer clog shows up as multiple slow drains, toilet-and-tub backup, outdoor cleanout overflow, or sewer odor. Stop water use and request sewer guidance before more wastewater appears.",
+  "Emergency Plumbing Cost Guide for Dallas Homeowners":
+    "Emergency plumbing cost depends on diagnosis, timing, access, parts, and whether water damage is active. Ask about dispatch, diagnostic, repair approval, and cleanup scope before work begins.",
+  "Drain Cleaning Cost Guide for Dallas Homeowners":
+    "Drain cleaning cost depends on whether the blockage is in one fixture, a shared branch, or the main sewer line. Ask what equipment, access, inspection, and return-policy assumptions are included."
+};
+
 export const blogPosts: BlogPost[] = titles.map((title, index) => ({
   slug: slugify(title),
   title,
   directAnswer:
+    directAnswerOverrides[title] ||
     "Fast action starts with stopping water use where safe, identifying the affected fixture, and calling a local provider connection when the issue risks damage, contamination, or loss of essential plumbing.",
   category: index % 3 === 0 ? "Cost and decision guides" : index % 3 === 1 ? "Emergency steps" : "Drain and sewer guidance",
   relatedServiceSlug: relatedServiceOverrides[title] || serviceCycle[index % serviceCycle.length]
