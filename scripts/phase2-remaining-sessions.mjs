@@ -955,7 +955,8 @@ function verificationReport(phaseCommits, finalQa, routeCount) {
 
 - Path: ${root}.
 - Branch: ${git(["rev-parse", "--abbrev-ref", "HEAD"])}.
-- Latest commit at report generation: ${latest}.
+- Latest pushed phase commit at report generation: ${latest}.
+- This verification report is committed after generation; use git log for the final artifact commit hash.
 - Pull status: origin/master was already up to date at startup.
 - Working tree status before final commit: report generated after staged source checks.
 
