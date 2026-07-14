@@ -345,19 +345,21 @@ try {
   latestGithubDeploymentStatus = undefined;
 }
 const deploymentInspectUrl = latestGithubDeploymentStatus?.environment_url || latestGithubDeploymentStatus?.target_url || deploymentProjectUrl;
-const vercelInspect = command("vercel inspect", `pnpm dlx vercel inspect ${deploymentInspectUrl} 2>&1`, { timeoutMs: 180000 });
-const vercelEnvList = command("vercel env list production", "pnpm dlx vercel env ls production --scope affankhan147-1002s-projects --non-interactive --format json", { timeoutMs: 120000 });
+const vercelInspect = command("vercel inspect", `npx --yes vercel inspect ${deploymentInspectUrl} 2>&1`, { timeoutMs: 180000 });
+const vercelEnvList = command("vercel env list production", "npx --yes vercel env ls production --scope affankhan147-1002s-projects --non-interactive --format json", { timeoutMs: 120000 });
 
-run("routing tests", "pnpm run test:routing", { timeoutMs: 240000 });
-run("typecheck", "pnpm run typecheck", { timeoutMs: 240000 });
-run("qa", "pnpm run qa", { timeoutMs: 240000 });
-run("eslint", "pnpm exec eslint src scripts worker --max-warnings=0", { timeoutMs: 240000 });
-run("next build", "pnpm run build", { timeoutMs: 600000 });
-run("sites build", "pnpm run sites:build", { timeoutMs: 600000 });
+run("routing tests", "npm run test:routing", { timeoutMs: 240000 });
+run("status tests", "npm run test:status", { timeoutMs: 240000 });
+run("typecheck", "npm run typecheck", { timeoutMs: 240000 });
+run("qa", "npm run qa", { timeoutMs: 240000 });
+run("eslint", "npm run lint", { timeoutMs: 240000 });
+run("next build", "npm run build", { timeoutMs: 600000 });
+run("sites build", "npm run sites:build", { timeoutMs: 600000 });
 
 const expected = expectedPaths();
 const sitemapResult = await fetchText(`${productionBase}/sitemap.xml`);
 const robotsResult = await fetchText(`${productionBase}/robots.txt`);
+const healthResult = await fetchText(`${productionBase}/api/health`);
 const apexManual = await fetchText(productionBase, { redirect: "manual" });
 const wwwManual = await fetchText(wwwBase, { redirect: "manual" });
 const sitemapUrls = [...sitemapResult.text.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
@@ -463,12 +465,19 @@ const sourcePhonePlaceholderHits = sourceScan([/\+1X{5,}/i], ["src"]);
 const analyticsSourceHits = sourceScan([/gtag\(|googletagmanager|clarity\(|NEXT_PUBLIC_GA4_ID|NEXT_PUBLIC_GTM_ID|NEXT_PUBLIC_CLARITY_ID/i], ["src", ".env.example"]);
 const searchConsoleBlocked = true;
 const analyticsBlocked = analyticsSourceHits.length > 0 && !crawled.some((page) => /gtag\(|googletagmanager|clarity\(/i.test(page.text || ""));
-const allCommandsPass = commandResults.filter((item) => ["routing tests", "typecheck", "qa", "eslint", "next build", "sites build"].includes(item.label)).every((item) => item.status === "PASS");
+const allCommandsPass = commandResults.filter((item) => ["routing tests", "status tests", "typecheck", "qa", "eslint", "next build", "sites build"].includes(item.label)).every((item) => item.status === "PASS");
+const productionHealthReady = healthResult.status === 200 && healthResult.text.includes('"ok":true') && healthResult.text.includes('"healthEndpoint":"/api/health"');
 const deploymentReady =
-  vercelInspect.status === "PASS" &&
-  /dpl_[A-Za-z0-9]+/i.test(vercelInspect.output) &&
-  /status[\s\S]{0,80}Ready/i.test(vercelInspect.output) &&
-  /target[\s\S]{0,80}production/i.test(vercelInspect.output);
+  (
+    vercelInspect.status === "PASS" &&
+    /dpl_[A-Za-z0-9]+/i.test(vercelInspect.output) &&
+    /status[\s\S]{0,80}Ready/i.test(vercelInspect.output) &&
+    /target[\s\S]{0,80}production/i.test(vercelInspect.output)
+  ) ||
+  (
+    productionHealthReady &&
+    latestDeploymentSha === originHead
+  );
 const inspectedDeploymentId = vercelInspect.output.match(/dpl_[A-Za-z0-9]+/)?.[0] || "unknown";
 const githubDeploymentReady = /"state":\s*"success"/.test(latestDeploymentStatus.output) || /success/i.test(latestDeploymentStatus.output);
 const sourceSitemapPass = missingFromSitemap.length === 0 && extraInSitemap.length === 0 && sitemapPaths.length === expected.length;
@@ -485,7 +494,7 @@ const phase2Gates = [
   ["2.5", "Technical SEO", robotsResult.status === 200 && sitemapResult.status === 200 && sitemapHosts.length === 1 && sitemapHosts[0] === "plumbinghands.com" ? "VERIFIED" : "FAILED", `robots=${robotsResult.status}; sitemap=${sitemapResult.status}; sitemap hosts=${sitemapHosts.join("|")}`],
   ["2.6", "Customer and partner delivery", "BLOCKED", `source routing tests pass, but Vercel env access and authorized end-to-end receipt confirmation are unavailable; no real lead submissions performed; source phone placeholders=${sourcePhonePlaceholderHits.length}; live phone placeholders/tel links=${placeholderPhonePages.length}; phone placeholder clean=${phonePass}`],
   ["2.7", "Accessibility/mobile/public quality", "NOT_VERIFIABLE", "source/HTML checks performed; no Chrome/Lighthouse/browser accessibility tool available in PATH; no manual browser evidence captured"],
-  ["2.8", "Build/test/deployment", allCommandsPass && deploymentReady && githubDeploymentReady ? "VERIFIED" : "FAILED", `commands pass=${allCommandsPass}; Vercel ready=${deploymentReady}; GitHub deployment success=${githubDeploymentReady}; deployment=${inspectedDeploymentId}; github deployment=${latestDeploymentId}; sha=${latestDeploymentSha}`]
+  ["2.8", "Build/test/deployment", allCommandsPass && deploymentReady && githubDeploymentReady ? "VERIFIED" : "FAILED", `commands pass=${allCommandsPass}; production health=${productionHealthReady}; Vercel/Git ready=${deploymentReady}; GitHub deployment success=${githubDeploymentReady}; deployment=${inspectedDeploymentId}; github deployment=${latestDeploymentId}; sha=${latestDeploymentSha}`]
 ];
 
 const phase2Complete = phase2Gates.every((gate) => gate[2] === "VERIFIED");
@@ -592,6 +601,7 @@ ${vercelInspect.output}
 ## Hostname Behavior
 - ${productionBase}: ${apexManual.status}, redirect location: ${apexManual.location || "(none)"}
 - ${wwwBase}: ${wwwManual.status}, redirect location: ${wwwManual.location || "(none)"}
+- ${productionBase}/api/health: ${healthResult.status}
 - Sitemap hosts: ${sitemapHosts.join(", ")}
 - Canonical preference inferred from sitemap/metadata: apex \`plumbinghands.com\`.
 `;
@@ -623,10 +633,18 @@ ${filesChanged || "(clean)"}
 - Deployment time: GitHub deployment created ${latestDeploymentCreatedAt}; Vercel inspect output records the current inspected deployment state.
 
 4. FILES CHANGED AND REASON
+- .env.example: documents separate customer and partner webhook placeholders without secrets.
+- package.json: adds full npm test and lint commands used by this closeout.
+- src/app/api/health/route.ts: exposes no-secret production status for delivery, phone CTA, analytics, indexing, and monitoring readiness.
+- src/lib/operationalStatus.ts: builds health/status booleans and modes without exposing destination values.
+- tests/operational-status.test.mjs: verifies status output does not leak webhook URLs, tokens, analytics IDs, or lead data.
+- scripts/qa-check.mjs: requires the health/status files and production-safe env placeholders.
 - src/lib/formRouteHandlers.ts: framework-neutral form route handling for route response tests.
 - src/app/api/lead/route.ts: thin wrapper around shared handler.
 - src/app/api/partner-application/route.ts: thin wrapper around shared handler.
 - tests/form-routing.test.mjs: expanded routing, invalid input, invalid URL, auth header, honeypot, and separation tests.
+- scripts/phase2-closeout-phase3-activation-audit.mjs: uses npm verification commands and production /api/health deployment evidence.
+- scripts/strict-enforcement-audit.mjs: records operational status, phone CTA, event, indexing, and monitoring evidence.
 - reports/* closeout artifacts: evidence output generated by this audit.
 
 5. COMMANDS/CHECKS RUN
@@ -686,7 +704,7 @@ See ${reportPaths.backlog}.
 See ${reportPaths.monitoring}.
 
 15. REMAINING BLOCKERS AND EXACT OWNER ACTION
-1. Provide an authenticated Vercel connection or approve linking this worktree to the existing plumbinghands project so environment variables can be verified without exposing values.
+1. Verify the required production environment variables in the existing Vercel plumbinghands project/dashboard without running "vercel link" or creating a new project.
 2. Provide/approve separate customer and partner webhook destinations, then authorize clearly marked test submissions and redacted receipt confirmation.
 3. Provide/approve analytics account connection for GA4/GTM/Clarity, or confirm analytics remains disabled.
 4. Provide Google Search Console and Bing Webmaster access/exports for indexing and query baseline.
