@@ -486,6 +486,36 @@ const linkPass = internalLinkFailures.length === 0;
 const publicCopyPass = sourceOldCopyHits.length === 0 && oldCopyLive.length === 0;
 const phonePass = placeholderPhonePages.length === 0;
 
+const accessibilityEvidenceDirs = existsSync(join(root, "reports"))
+  ? readdirSync(join(root, "reports"))
+      .filter((name) => name.startsWith("contrast_repair_evidence_") && statSync(join(root, "reports", name)).isDirectory())
+      .sort()
+      .reverse()
+  : [];
+const accessibilityEvidenceDir = accessibilityEvidenceDirs[0] || "";
+const accessibilityEvidenceFile = accessibilityEvidenceDir ? join(root, "reports", accessibilityEvidenceDir, "axe-results.json") : "";
+let accessibilityResults = [];
+try {
+  accessibilityResults = accessibilityEvidenceFile && existsSync(accessibilityEvidenceFile)
+    ? JSON.parse(readFileSync(accessibilityEvidenceFile, "utf8"))
+    : [];
+} catch {
+  accessibilityResults = [];
+}
+const accessibilitySeriousFindings = accessibilityResults.flatMap((entry) =>
+  (entry.violations || []).filter((violation) => violation.impact === "serious" || violation.impact === "critical")
+);
+const accessibilityScreenshotCount = accessibilityEvidenceDir
+  ? readdirSync(join(root, "reports", accessibilityEvidenceDir)).filter((name) => name.endsWith(".png")).length
+  : 0;
+const accessibilityPass =
+  accessibilityResults.length >= 10 &&
+  accessibilityResults.every((entry) => entry.status === 200) &&
+  accessibilitySeriousFindings.length === 0 &&
+  accessibilityScreenshotCount >= 10;
+const accessibilityEvidenceSummary = accessibilityPass
+  ? `Playwright/axe desktop/mobile pages=${accessibilityResults.length}; serious/critical findings=0; screenshots=${accessibilityScreenshotCount}; evidence=reports/${accessibilityEvidenceDir}`
+  : `browser evidence incomplete; pages=${accessibilityResults.length}; serious/critical findings=${accessibilitySeriousFindings.length}; screenshots=${accessibilityScreenshotCount}`;
 const phase2Gates = [
   ["2.1", "Routes and architecture", sourceSitemapPass ? "VERIFIED" : "FAILED", `source=${expected.length}; sitemap=${sitemapPaths.length}; missing=${missingFromSitemap.length}; extra=${extraInSitemap.length}`],
   ["2.2", "On-page SEO", urlCrawlPass ? "VERIFIED" : "FAILED", `crawled=${crawled.length}; failed=${failedCrawl.length}; metadata/schema issues=${missingMetadata.length}`],
@@ -493,7 +523,7 @@ const phase2Gates = [
   ["2.4", "Internal linking", linkPass && orphanPriority.length === 0 ? "VERIFIED" : "FAILED", `internal link failures=${internalLinkFailures.length}; orphan priority paths=${orphanPriority.length}; redirected internal targets=${redirectInternalTargets.length}`],
   ["2.5", "Technical SEO", robotsResult.status === 200 && sitemapResult.status === 200 && sitemapHosts.length === 1 && sitemapHosts[0] === "plumbinghands.com" ? "VERIFIED" : "FAILED", `robots=${robotsResult.status}; sitemap=${sitemapResult.status}; sitemap hosts=${sitemapHosts.join("|")}`],
   ["2.6", "Customer and partner delivery", "BLOCKED", `source routing tests pass, but Vercel env access and authorized end-to-end receipt confirmation are unavailable; no real lead submissions performed; source phone placeholders=${sourcePhonePlaceholderHits.length}; live phone placeholders/tel links=${placeholderPhonePages.length}; phone placeholder clean=${phonePass}`],
-  ["2.7", "Accessibility/mobile/public quality", "NOT_VERIFIABLE", "source/HTML checks performed; no Chrome/Lighthouse/browser accessibility tool available in PATH; no manual browser evidence captured"],
+  ["2.7", "Accessibility/mobile/public quality", accessibilityPass ? "VERIFIED" : "NOT_VERIFIABLE", accessibilityEvidenceSummary],
   ["2.8", "Build/test/deployment", allCommandsPass && deploymentReady && githubDeploymentReady ? "VERIFIED" : "FAILED", `commands pass=${allCommandsPass}; production health=${productionHealthReady}; Vercel/Git ready=${deploymentReady}; GitHub deployment success=${githubDeploymentReady}; deployment=${inspectedDeploymentId}; github deployment=${latestDeploymentId}; sha=${latestDeploymentSha}`]
 ];
 
@@ -542,7 +572,7 @@ const backlogRows = [
   ["P3-001", "P0", "customer and partner form delivery", "conversion", "Gate 2.6 BLOCKED: no authorized webhook receipt evidence", "Connect separate owner-approved LEAD_WEBHOOK_URL and PARTNER_WEBHOOK_URL, then run redacted production test receipts", "verified delivery without false success", "baseline blocked; API invalid-input tests pass", "owner/Vercel access", "remove env vars or redeploy prior deployment", "Vercel env evidence plus redacted receipt confirmation"],
   ["P3-002", "P0", "analytics delivery events", "measurement", "No active GA4/GTM/Clarity script found in rendered pages", "Connect owner-approved analytics and server/client delivery events without PII", "conversion attempts and delivery outcomes measurable", "baseline blocked", "owner analytics account", "remove IDs/env vars and redeploy", "debug/realtime event evidence"],
   ["P3-003", "P0", "Search Console/Bing", "indexing baseline", "No authenticated account access available", "Verify properties, record sitemap status, export priority indexing/query baseline", "search baseline for optimization decisions", "baseline blocked", "owner webmaster access", "no site code rollback required", "GSC/Bing screenshots or export files"],
-  ["P3-004", "P1", "accessibility/mobile templates", "quality", "Gate 2.7 NOT_VERIFIABLE without browser evidence", "Run Lighthouse/axe/manual keyboard checks and fix critical findings", "verified public quality", "source/HTML checks only", "browser tooling or connected session", "revert specific UI fix commit", "dated results and screenshots"],
+  ["P3-004", accessibilityPass ? "CLOSED" : "P1", "accessibility/mobile templates", "quality", accessibilityEvidenceSummary, accessibilityPass ? "No further critical repair required" : "Run Lighthouse/axe/manual keyboard checks and fix critical findings", "verified public quality", accessibilityPass ? "zero serious/critical findings" : "source/HTML checks only", "browser evidence", "revert specific UI fix commit", "dated axe results and screenshots"],
   ["P3-005", "P2", "duplicate metadata clusters if any", "SEO refinement", `${duplicateRows.length - 1} duplicate clusters found`, "Rewrite duplicate title/description/H1 only where crawler evidence shows conflicts", "cleaner search snippets", "see duplicate report", "Codex", "revert metadata edits", "recrawl URL inventory"]
 ];
 
@@ -615,7 +645,7 @@ Production: ${productionBase}
 GitHub: https://github.com/affankhan147-arch/ppc-website
 Branch used: ${localBranch}
 
-Current production deployment evidence ties GitHub deployment ${latestDeploymentId} to commit ${latestDeploymentSha} and Vercel deployment ${inspectedDeploymentId}. Local source checks pass after strengthening form-routing tests. Phase 2 is still ${finalPhase2Verdict} because mandatory Gate 2.6 is BLOCKED by missing authorized end-to-end customer/partner receipt evidence and Gate 2.7 is NOT_VERIFIABLE without browser accessibility/mobile evidence. Phase 3 is ${finalPhase3Verdict} because analytics/search/indexing baselines are not authenticated or verified.
+Current production deployment evidence ties GitHub deployment ${latestDeploymentId} to commit ${latestDeploymentSha} and Vercel deployment ${inspectedDeploymentId}. Local source checks pass. Gate 2.7 accessibility/mobile evidence is ${accessibilityPass ? "VERIFIED" : "NOT_VERIFIABLE"}. Phase 2 is ${finalPhase2Verdict}${phase2Gates.find((gate) => gate[0] === "2.6")?.[2] !== "VERIFIED" ? " because mandatory Gate 2.6 still lacks authorized end-to-end customer/partner receipt evidence" : ""}. Phase 3 is ${finalPhase3Verdict} because analytics/search/indexing baselines are not authenticated or verified.
 
 2. STARTING AND ENDING COMMITS
 - Starting HEAD: ${startingHead}
@@ -680,8 +710,9 @@ ${phase3Gates.map((gate) => `- ${gate[0]} ${gate[1]}: ${gate[2]} - ${gate[3]}`).
 
 10. ACCESSIBILITY/MOBILE RESULTS
 - Source/HTML checks: labels, form controls, aria-live, and form presence recorded in URL inventory.
-- Required browser evidence: NOT_VERIFIABLE. No Chrome/Lighthouse/browser accessibility tool was available in this session.
-- Gate 2.7 cannot be marked verified until automated plus manual/browser evidence exists.
+- Browser evidence status: ${accessibilityPass ? "VERIFIED" : "NOT_VERIFIABLE"}.
+- ${accessibilityEvidenceSummary}.
+- Gate 2.7 status is derived from the committed axe JSON plus desktop/mobile screenshots; serious or critical findings must equal zero.
 
 11. ANALYTICS EVENT VERIFICATION
 - Rendered analytics scripts active: ${analyticsBlocked ? "no verified active GA4/GTM/Clarity script" : "review required"}.
@@ -708,7 +739,7 @@ See ${reportPaths.monitoring}.
 2. Provide/approve separate customer and partner webhook destinations, then authorize clearly marked test submissions and redacted receipt confirmation.
 3. Provide/approve analytics account connection for GA4/GTM/Clarity, or confirm analytics remains disabled.
 4. Provide Google Search Console and Bing Webmaster access/exports for indexing and query baseline.
-5. Provide browser QA capability or authorize Lighthouse/axe tooling installation/run for accessibility/mobile evidence.
+${accessibilityPass ? "" : "5. Provide browser QA capability or authorize Lighthouse/axe tooling installation/run for accessibility/mobile evidence."}
 6. Provide an approved tracking phone number or confirm all CTAs should remain contact-form fallback.
 
 16. ROLLBACK PLAN

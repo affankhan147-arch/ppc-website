@@ -1,17 +1,17 @@
 "label","command","status","exit_code","duration_ms","output_excerpt"
-"routing tests","npm run test:routing","PASS","0","1072","> ppc-lead-generation-platform@1.0.0 test:routing
+"routing tests","npm run test:routing","PASS","0","1088","> ppc-lead-generation-platform@1.0.0 test:routing
 > node --test --experimental-strip-types tests/form-routing.test.mjs
 
-service_request_delivery_failed { requestId: 'request_mrl68n4w_k951jv', reason: 'not-configured' }
-✔ fails honestly when a destination is not configured (2.3246ms)
-✔ keeps customer and partner destinations separate (32.2651ms)
-✔ reports a rejected webhook delivery (0.4242ms)
-✔ rejects invalid production webhook URLs (0.261ms)
-✔ adds bearer authorization only when configured (0.5015ms)
-✔ lead route returns 400 for invalid input (3.3422ms)
-✔ lead route returns an honest 503 when delivery is not configured (2.5741ms)
-✔ partner honeypot filters without calling the webhook (2.4522ms)
-✔ routes successful customer and partner submissions to separate payload types (1.5935ms)
+service_request_delivery_failed { requestId: 'request_mrl6m2gi_vix4gg', reason: 'not-configured' }
+✔ fails honestly when a destination is not configured (2.6237ms)
+✔ keeps customer and partner destinations separate (39.1442ms)
+✔ reports a rejected webhook delivery (0.621ms)
+✔ rejects invalid production webhook URLs (0.4353ms)
+✔ adds bearer authorization only when configured (0.5761ms)
+✔ lead route returns 400 for invalid input (3.337ms)
+✔ lead route returns an honest 503 when delivery is not configured (2.2892ms)
+✔ partner honeypot filters without calling the webhook (2.7974ms)
+✔ routes successful customer and partner submissions to separate payload types (1.6381ms)
 ℹ tests 9
 ℹ suites 0
 ℹ pass 9
@@ -19,12 +19,12 @@ service_request_delivery_failed { requestId: 'request_mrl68n4w_k951jv', reason: 
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 387.0962"
-"status tests","npm run test:status","PASS","0","840","> ppc-lead-generation-platform@1.0.0 test:status
+ℹ duration_ms 404.257"
+"status tests","npm run test:status","PASS","0","824","> ppc-lead-generation-platform@1.0.0 test:status
 > node --test --experimental-strip-types tests/operational-status.test.mjs
 
-✔ reports owner-action-required without exposing destination values (1.551ms)
-✔ reports configured surfaces as booleans and modes only (0.4184ms)
+✔ reports owner-action-required without exposing destination values (1.3065ms)
+✔ reports configured surfaces as booleans and modes only (0.3592ms)
 ℹ tests 2
 ℹ suites 0
 ℹ pass 2
@@ -32,31 +32,31 @@ service_request_delivery_failed { requestId: 'request_mrl68n4w_k951jv', reason: 
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 170.6334"
-"typecheck","npm run typecheck","PASS","0","3398","> ppc-lead-generation-platform@1.0.0 typecheck
+ℹ duration_ms 159.5132"
+"typecheck","npm run typecheck","PASS","0","3424","> ppc-lead-generation-platform@1.0.0 typecheck
 > tsc --noEmit"
-"qa","npm run qa","PASS","0","1075","> ppc-lead-generation-platform@1.0.0 qa
+"qa","npm run qa","PASS","0","651","> ppc-lead-generation-platform@1.0.0 qa
 > node scripts/qa-check.mjs
 
 QA checks passed."
-"eslint","npm run lint","PASS","0","10108","> ppc-lead-generation-platform@1.0.0 lint
+"eslint","npm run lint","PASS","0","8109","> ppc-lead-generation-platform@1.0.0 lint
 > eslint src scripts worker --max-warnings=0"
-"next build","npm run build","PASS","0","18985","> ppc-lead-generation-platform@1.0.0 build
+"next build","npm run build","PASS","0","17733","> ppc-lead-generation-platform@1.0.0 build
 > next build
 
 ▲ Next.js 16.2.10 (Turbopack)
 - Environments: .env.local
 
   Creating an optimized production build ...
-✓ Compiled successfully in 6.5s
+✓ Compiled successfully in 5.3s
   Running TypeScript ...
-  Finished TypeScript in 5.9s ...
+  Finished TypeScript in 5.6s ...
   Collecting page data using 3 workers ...
   Generating static pages using 3 workers (0/125) ...
   Generating static pages using 3 workers (31/125) 
   Generating static pages using 3 workers (62/125) 
   Generating static pages using 3 workers (93/125) 
-✓ Generating static pages using 3 workers (125/125) in 2.3s
+✓ Generating static pages using 3 workers (125/125) in 2.2s
   Finalizing page optimization ...
 
 Route (app)
@@ -87,7 +87,7 @@ Route (app)
 ├ ● /cost-guides/[guideSlug]
 │ ├ /cost-guides/emergency-plumbing-cost-dfw
 │ ├ "
-"sites build","npm run sites:build","PASS","0","8553","> ppc-lead-generation-platform@1.0.0 sites:build
+"sites build","npm run sites:build","PASS","0","10315","> ppc-lead-generation-platform@1.0.0 sites:build
 > vinext build
 
 
@@ -96,26 +96,26 @@ Route (app)
 [34m[1/5] analyze client references...[39m
 [2Ktransforming...✓ 277 modules transformed.
 rendering chunks...
-[32m✓ built in 1.17s[39m
+[32m✓ built in 1.31s[39m
 [34m[2/5] analyze server references...[39m
 [2Ktransforming...✓ 121 modules transformed.
 rendering chunks...
-[32m✓ built in 258ms[39m
+[32m✓ built in 259ms[39m
 [34m[3/5] build rsc environment...[39m
 [2Ktransforming...✓ 283 modules transformed.
 rendering chunks...
 computing gzip size...
-[32m✓ built in 1.17s[39m
+[32m✓ built in 1.18s[39m
 [34m[4/5] build client environment...[39m
 [2Ktransforming...✓ 1874 modules transformed.
 rendering chunks...
 computing gzip size...
-[32m✓ built in 1.94s[39m
+[32m✓ built in 2.78s[39m
 [34m[5/5] build ssr environment...[39m
 [2Ktransforming...✓ 127 modules transformed.
 rendering chunks...
 computing gzip size...
-[32m✓ built in 468ms[39m
+[32m✓ built in 577ms[39m
 [0m
   Route (app)
   ┌ ? /                             
