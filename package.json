@@ -8,8 +8,11 @@
     "build": "next build",
     "sites:build": "vinext build",
     "start": "next start",
+    "test": "npm run test:routing && npm run test:status",
     "typecheck": "tsc --noEmit",
     "test:routing": "node --test --experimental-strip-types tests/form-routing.test.mjs",
+    "test:status": "node --test --experimental-strip-types tests/operational-status.test.mjs",
+    "lint": "eslint src scripts worker --max-warnings=0",
     "qa": "node scripts/qa-check.mjs",
     "reports": "node scripts/generate-reports.mjs"
   },

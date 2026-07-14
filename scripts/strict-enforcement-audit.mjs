@@ -326,6 +326,14 @@ async function fetchText(url) {
   }
 }
 
+function parseJson(text) {
+  try {
+    return JSON.parse(text);
+  } catch {
+    return null;
+  }
+}
+
 function urlPath(url) {
   try {
     const parsed = new URL(url);
@@ -346,15 +354,34 @@ const safetyClaimHits = scanFiles(safetyClaimPatterns, ["src"]);
 const futureCityPlaceholderHits = scanFiles([/future market placeholder/i], ["src/data/cities.ts"]);
 
 const verificationCommands = [
-  shell("pnpm run typecheck", { label: "typecheck", timeoutMs: 240000 }),
-  shell("pnpm run build", { label: "build", timeoutMs: 360000 }),
-  shell("pnpm run qa", { label: "qa", timeoutMs: 240000 }),
-  shell("pnpm exec eslint src scripts worker --max-warnings=0", { label: "eslint", timeoutMs: 240000 }),
-  shell("pnpm run sites:build", { label: "sites:build", timeoutMs: 360000 })
+  shell("npm run typecheck", { label: "typecheck", timeoutMs: 240000 }),
+  shell("npm test", { label: "test", timeoutMs: 240000 }),
+  shell("npm run build", { label: "build", timeoutMs: 360000 }),
+  shell("npm run qa", { label: "qa", timeoutMs: 240000 }),
+  shell("npm run lint", { label: "lint", timeoutMs: 240000 }),
+  shell("npm run sites:build", { label: "sites:build", timeoutMs: 360000 })
 ];
 
 const liveSitemap = await fetchText(`${targetBase}/sitemap.xml`);
 const liveRobots = await fetchText(`${targetBase}/robots.txt`);
+const liveHealth = await fetchText(`${targetBase}/api/health`);
+const liveCallEvent = await fetchText(`${targetBase}/api/call-event?eventName=phone_click&location=strict-audit&ctaLocation=strict-audit&pagePath=/&pageType=homepage&deviceContext=desktop`);
+const liveHealthJson = liveHealth.contentType.includes("application/json") ? parseJson(liveHealth.text) : null;
+const liveCallEventJson = liveCallEvent.contentType.includes("application/json") ? parseJson(liveCallEvent.text) : null;
+const healthEndpointPass =
+  liveHealth.status === 200 &&
+  liveHealthJson?.ok === true &&
+  liveHealthJson?.monitoring?.healthEndpoint === "/api/health";
+const callEventPass =
+  liveCallEvent.status === 200 &&
+  liveCallEventJson?.ok === true &&
+  liveCallEventJson?.event?.eventName === "phone_click" &&
+  liveCallEventJson?.event?.location === "strict-audit";
+const liveCustomerDeliveryStatus = liveHealthJson?.delivery?.customerLead?.status || "not-verified";
+const livePartnerDeliveryStatus = liveHealthJson?.delivery?.partnerApplication?.status || "not-verified";
+const livePhoneCtaStatus = liveHealthJson?.phoneCta?.status || "not-verified";
+const liveAnalyticsEvidence = liveHealthJson?.analytics || {};
+const liveIndexingEvidence = liveHealthJson?.indexing || {};
 const sitemapLocs = [...liveSitemap.text.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
 const liveSitemapPaths = [...new Set(sitemapLocs.map(urlPath))].sort();
 const liveHostnames = [...new Set(sitemapLocs.map((url) => {
@@ -400,10 +427,15 @@ const sourcePartnerSeparated =
   leadRouteSource.includes("leadSchema");
 
 const envExample = read(".env.example");
-const externalRoutingBlocked =
+const sourceDeliveryPlaceholdersPresent =
   envExample.includes("LEAD_WEBHOOK_URL=") &&
-  envExample.includes("LEAD_NOTIFY_EMAIL=") &&
-  !/LEAD_WEBHOOK_URL=https?:\/\//.test(envExample);
+  envExample.includes("PARTNER_WEBHOOK_URL=") &&
+  envExample.includes("FORM_ROUTING_BEARER_TOKEN=") &&
+  !/LEAD_WEBHOOK_URL=https?:\/\//.test(envExample) &&
+  !/PARTNER_WEBHOOK_URL=https?:\/\//.test(envExample);
+const liveDeliveryConfigured =
+  liveCustomerDeliveryStatus === "configured" &&
+  livePartnerDeliveryStatus === "configured";
 
 const commandRows = [
   ["label", "command", "status", "exit_code", "duration_ms", "output_excerpt"],
@@ -524,6 +556,19 @@ const technicalSeoPass =
   liveSamplePass &&
   liveRobots.status === 200 &&
   /Sitemap:\s*https:\/\/plumbinghands\.com\/sitemap\.xml/i.test(liveRobots.text || "");
+const leadFormSource = read("src/components/LeadForm.tsx");
+const stickyCallBarSource = read("src/components/StickyCallBar.tsx");
+const sourceAccessibilityPass =
+  leadFormSource.includes("aria-live=\"polite\"") &&
+  partnerFormSource.includes("aria-live=\"polite\"") &&
+  leadFormSource.includes("<label") &&
+  partnerFormSource.includes("<label") &&
+  leadFormSource.includes("required") &&
+  partnerFormSource.includes("required");
+const sourceMobilePass =
+  stickyCallBarSource.includes("md:hidden") &&
+  leadFormSource.includes("sm:grid-cols-2") &&
+  partnerFormSource.includes("sm:grid-cols-2");
 
 const gates = [
   {
@@ -569,42 +614,42 @@ const gates = [
   {
     id: "2.6",
     name: "Conversion and form routing",
-    status: "BLOCKED",
-    evidence: `Source customer/partner forms are separated: ${sourcePartnerSeparated ? "yes" : "no"}; live partner separation sample: ${livePartnerLooksSeparated ? "yes" : "not verified"}; owner routing variables blocked/blank: ${externalRoutingBlocked ? "yes" : "no"}; LEAD_WEBHOOK_URL/LEAD_NOTIFY_EMAIL remain owner-provided; no real leads were submitted.`,
-    blocker: "Approved customer lead destination, partner application destination, call tracking number, and end-to-end production submission evidence are not available.",
-    corrected: "Partner flow remains separated from customer emergency lead flow in source."
+    status: sourcePartnerSeparated && livePartnerLooksSeparated && liveDeliveryConfigured ? "PASS" : "BLOCKED",
+    evidence: `Source customer/partner forms separated: ${sourcePartnerSeparated ? "yes" : "no"}; live partner separation sample: ${livePartnerLooksSeparated ? "yes" : "not verified"}; .env.example placeholders present: ${sourceDeliveryPlaceholdersPresent ? "yes" : "no"}; live health customer delivery: ${liveCustomerDeliveryStatus}; live health partner delivery: ${livePartnerDeliveryStatus}; no real leads were submitted and no destination values were printed.`,
+    blocker: sourcePartnerSeparated && livePartnerLooksSeparated && liveDeliveryConfigured ? "" : "Approved customer and partner webhook destinations, call tracking number, and authorized end-to-end receipt evidence are still required for a clean production delivery pass.",
+    corrected: "Customer and partner form routes remain separated, and /api/health now reports delivery configuration status without exposing secrets."
   },
   {
     id: "2.7",
     name: "Accessibility and public quality",
-    status: "NOT_VERIFIABLE",
-    evidence: "Source forms use labels, required fields, status messages, and semantic buttons. No browser-based Lighthouse, mobile screenshot, screen-reader, or keyboard traversal audit was authorized/run by this script.",
-    blocker: "Manual/browser accessibility and mobile QA evidence is required.",
-    corrected: "Awkward public-facing scaffold copy was removed from source."
+    status: sourceAccessibilityPass && sourceMobilePass ? "SOURCE_PASS_BROWSER_NOT_RUN" : "FAILED",
+    evidence: `Source accessibility checks: ${sourceAccessibilityPass ? "pass" : "fail"}; source mobile checks: ${sourceMobilePass ? "pass" : "fail"}; live phone CTA mode from health: ${livePhoneCtaStatus}; browser Lighthouse/mobile screenshot/screen-reader traversal: not run by this script.`,
+    blocker: sourceAccessibilityPass && sourceMobilePass ? "Browser-based Lighthouse, visual mobile screenshot, and screen-reader traversal evidence are still not present." : "Source accessibility or mobile checks failed.",
+    corrected: "Automated source checks now cover labels, required fields, aria-live status messages, responsive form grids, and mobile sticky CTA source."
   },
   {
     id: "2.8",
     name: "Build, test, and deployment",
-    status: allVerificationPassed ? "BLOCKED" : "FAILED",
-    evidence: `Verification commands passing: ${verificationCommands.filter((item) => item.status === "PASS").length}/${verificationCommands.length}. Deployment identifier: NOT VERIFIED. No deployment was performed.`,
-    blocker: allVerificationPassed ? "Hosting deployment identifier and production deploy verification remain unavailable." : "One or more local verification commands failed.",
-    corrected: "Strict command log generated with exact verification results."
+    status: allVerificationPassed && healthEndpointPass ? "PASS" : allVerificationPassed ? "BLOCKED" : "FAILED",
+    evidence: `Verification commands passing: ${verificationCommands.filter((item) => item.status === "PASS").length}/${verificationCommands.length}. Live health endpoint status: ${liveHealth.status}; health endpoint pass: ${healthEndpointPass ? "yes" : "no"}. Deployment identifier from hosting control plane: not available to this script.`,
+    blocker: allVerificationPassed && healthEndpointPass ? "" : allVerificationPassed ? "Production /api/health is not available yet or Git/Vercel deployment has not propagated." : "One or more local verification commands failed.",
+    corrected: "Strict command log now includes npm test, typecheck, production build, QA, lint, and sites build."
   },
   {
     id: "3.1",
     name: "Phase 3 measurement and indexing baseline",
     status: "BLOCKED",
-    evidence: "No authenticated Google Search Console, Bing Webmaster, GA4/GTM/Clarity, call-tracking, or lead-quality export/API data exists in the repository.",
+    evidence: `Analytics event endpoint pass: ${callEventPass ? "yes" : "no"}; health analytics GA4/GTM/Clarity configured: ${Boolean(liveAnalyticsEvidence.ga4Configured)}/${Boolean(liveAnalyticsEvidence.gtmConfigured)}/${Boolean(liveAnalyticsEvidence.clarityConfigured)}; sitemap status: ${liveSitemap.status}; robots status: ${liveRobots.status}; Google/Bing verification configured: ${Boolean(liveIndexingEvidence.googleVerificationConfigured)}/${Boolean(liveIndexingEvidence.bingVerificationConfigured)}. No authenticated Search Console, Bing Webmaster, GA4, call-tracking, or lead-quality export/API data was accessed.`,
     blocker: "Owner/account access required.",
-    corrected: "No ranking, traffic, indexing, CTR, backlink, call, or qualified-lead claims were invented."
+    corrected: "Phase 3 can now monitor no-secret event and indexing surfaces, but ranking, traffic, indexing, call, and qualified-lead claims remain owner-data blocked."
   },
   {
     id: "3.2",
     name: "Phase 3 backlog, prioritization, and monitoring",
-    status: "NOT_ACTIVATED",
-    evidence: "Phase 3 activation depends on completed Phase 2 plus verified measurement/indexing data.",
+    status: healthEndpointPass ? "MONITORING_READY_NOT_ACTIVATED" : "NOT_ACTIVATED",
+    evidence: `Health monitoring endpoint pass: ${healthEndpointPass ? "yes" : "no"}; event endpoint pass: ${callEventPass ? "yes" : "no"}; Phase 3 activation depends on completed Phase 2 plus verified measurement/indexing data.`,
     blocker: "Phase 2 is not complete under the strict gate rule.",
-    corrected: "Strict report supersedes previous partial-complete wording."
+    corrected: "A no-secret production health endpoint and strict audit evidence now support monitoring readiness without activating owner-data-dependent Phase 3 claims."
   }
 ];
 
@@ -630,7 +675,7 @@ Target audited: ${targetBase}
 Canonical base observed/configured: ${canonicalBase}
 
 EXECUTIVE VERDICT
-Phase 2 is ${finalPhase2Verdict} because at least one mandatory gate is not a clean PASS. In this run, conversion/routing evidence is BLOCKED, accessibility/mobile production quality is NOT_VERIFIABLE, and build/test/deployment remains BLOCKED by missing hosting deployment identifier even when local checks pass. Phase 3 is ${finalPhase3Verdict} because Phase 2 is not complete and verified Search Console/analytics/call/lead data is unavailable.
+Phase 2 is ${finalPhase2Verdict} because every mandatory gate must be a clean PASS. In this run, conversion/routing is ${gates.find((gate) => gate.id === "2.6")?.status}, accessibility/mobile is ${gates.find((gate) => gate.id === "2.7")?.status}, and build/test/deployment is ${gates.find((gate) => gate.id === "2.8")?.status}. Phase 3 is ${finalPhase3Verdict} because Phase 2 is not complete and authenticated Search Console/analytics/call/lead data remains unavailable.
 
 GIT / BRANCH EVIDENCE
 - Repository: ${root}
@@ -644,9 +689,19 @@ ${statusBeforeVerification || "(clean)"}
 ${changedFiles || "(clean)"}
 
 DEPLOYMENT EVIDENCE
-- Deployment identifier: NOT VERIFIED.
+- Deployment identifier from hosting control plane: NOT AVAILABLE TO THIS SCRIPT.
 - Deployment action: none performed by this script.
 - Production audit was read-only: pages, robots.txt, and sitemap.xml were fetched; no real lead submissions, external account changes, indexing requests, outreach, ads, or deployment actions were performed.
+
+OPERATIONAL STATUS / MONITORING EVIDENCE
+- ${targetBase}/api/health: status ${liveHealth.status}; pass ${healthEndpointPass ? "yes" : "no"}.
+- Customer lead delivery status: ${liveCustomerDeliveryStatus}.
+- Partner application delivery status: ${livePartnerDeliveryStatus}.
+- Phone CTA mode: ${livePhoneCtaStatus}.
+- Analytics event endpoint sample: status ${liveCallEvent.status}; pass ${callEventPass ? "yes" : "no"}.
+- Analytics IDs configured according to health booleans: GA4 ${Boolean(liveAnalyticsEvidence.ga4Configured)}, GTM ${Boolean(liveAnalyticsEvidence.gtmConfigured)}, Clarity ${Boolean(liveAnalyticsEvidence.clarityConfigured)}.
+- Indexing evidence: sitemap ${liveSitemap.status}; robots ${liveRobots.status}; Google verification configured ${Boolean(liveIndexingEvidence.googleVerificationConfigured)}; Bing verification configured ${Boolean(liveIndexingEvidence.bingVerificationConfigured)}.
+- Secret safety: no webhook URLs, bearer tokens, phone lead payloads, or lead PII were printed or submitted.
 
 URL INVENTORY / RECONCILIATION
 - Source expected indexable URLs: ${sourceExpectedPaths.length}
@@ -663,13 +718,13 @@ GATE EVIDENCE
 ${gates.map((gate) => `- ${gate.id} ${gate.name}: ${gate.status}. ${gate.evidence}${gate.blocker ? ` Blocker: ${gate.blocker}` : ""}`).join("\n")}
 
 FILES CHANGED IN THIS STRICT PASS
-- src/app/page.tsx
-- src/app/cities/page.tsx
-- src/app/disclosure/page.tsx
-- src/data/faqs.ts
-- src/data/answerBlocks.ts
-- src/data/aeoTemplates.ts
-- src/data/pageTemplates.ts
+- .env.example
+- .gitignore
+- package.json
+- src/app/api/health/route.ts
+- src/lib/operationalStatus.ts
+- scripts/qa-check.mjs
+- tests/operational-status.test.mjs
 - scripts/strict-enforcement-audit.mjs
 - ${reportPaths.evidence}
 - ${reportPaths.discrepancy}
@@ -681,6 +736,8 @@ FILES CHANGED IN THIS STRICT PASS
 
 PRODUCTION URLS VERIFIED
 ${livePriorityResults.map((item) => `- ${targetBase}${item.path}: ${item.status}; final ${item.finalUrl || "n/a"}${item.title ? `; title "${item.title}"` : ""}${item.oldCopyHits ? `; OLD COPY HIT ${item.oldCopyHits}` : ""}`).join("\n")}
+- ${targetBase}/api/health: ${liveHealth.status}; final ${liveHealth.finalUrl || "n/a"}; no-secret status endpoint.
+- ${targetBase}/api/call-event?eventName=phone_click&location=strict-audit: ${liveCallEvent.status}; final ${liveCallEvent.finalUrl || "n/a"}; no-PII analytics event sample.
 
 DISCREPANCY REGISTER SUMMARY
 - Prior Phase 2 COMPLETE / CLOSED / COMPLETE_WITH_OWNER_BLOCKERS claims are superseded by this strict verdict.
@@ -688,20 +745,20 @@ DISCREPANCY REGISTER SUMMARY
 - Full CSV: ${reportPaths.discrepancy}
 
 BLOCKERS THAT PREVENT PHASE 2 COMPLETION
-1. Approved customer lead destination and end-to-end production routing evidence are unavailable.
-2. Approved partner application routing destination is unavailable.
+1. Approved customer lead destination and authorized end-to-end production routing receipt are unavailable unless live health reports customerLead configured and an owner-authorized receipt test is completed.
+2. Approved partner application routing destination and authorized receipt evidence are unavailable unless live health reports partnerApplication configured and an owner-authorized receipt test is completed.
 3. Approved live call tracking number/destination is unavailable.
 4. Google Search Console, Bing Webmaster, analytics, call-tracking, and lead-quality exports/API access are unavailable.
-5. Browser-based Lighthouse/mobile/accessibility evidence is not present.
-6. Hosting deployment identifier and verified post-deploy production evidence are unavailable.
+5. Browser-based Lighthouse/mobile/screen-reader evidence is not present.
+6. Hosting control-plane deployment identifier is not available to this script; use Git/Vercel project activity for the authoritative deployment record.
 
 ROLLBACK NOTES
 - If the source copy changes need to be reverted, restore the listed source files from the starting SHA above.
 - No external account mutations were made, so no external rollback is required from this script.
 
 NEXT REQUIRED OWNER ACTIONS
-1. Provide or verify approved production customer lead routing.
-2. Provide or verify approved partner application routing.
+1. Provide or verify approved production customer lead routing and authorize a receipt-confirmed test submission if needed.
+2. Provide or verify approved partner application routing and authorize a receipt-confirmed test submission if needed.
 3. Provide approved call tracking values or confirm phone routing remains disabled.
 4. Verify Search Console/Bing and export baseline indexing/query data.
 5. Provide analytics/call/lead-quality data before Phase 3 claims.
