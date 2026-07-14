@@ -9,6 +9,7 @@
     "sites:build": "vinext build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
+    "test:routing": "node --test --experimental-strip-types tests/form-routing.test.mjs",
     "qa": "node scripts/qa-check.mjs",
     "reports": "node scripts/generate-reports.mjs"
   },

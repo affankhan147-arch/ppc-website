@@ -9,8 +9,8 @@ export const universalFaqs: FAQ[] = [
     answer: "This website connects users with local emergency plumbing providers. It is not a licensed plumbing company unless specific verified proof is shown."
   },
   {
-    question: "Can you guarantee arrival time?",
-    answer: "No guaranteed arrival time is claimed. Availability depends on the matched provider, location, service need, and schedule."
+    question: "Is arrival time promised?",
+    answer: "No. Availability depends on the matched provider, location, service need, and schedule."
   },
   {
     question: "Should I call if water is actively leaking?",
@@ -21,8 +21,8 @@ export const universalFaqs: FAQ[] = [
     answer: "Confirm the provider's pricing, credentials, scope, and timing directly before approving any work."
   },
   {
-    question: "Does Plumbing Hands have an office in every city page?",
-    answer: "No. City pages use service-area wording for Dallas-Fort Worth. They do not claim a physical office, fake address, or fake local listing."
+    question: "How should I use the city service-area pages?",
+    answer: "Use city pages to describe where plumbing help is needed. Provider availability, credentials, timing, pricing, and scope should be confirmed directly before work begins."
   },
   {
     question: "Can I call instead of using the form?",

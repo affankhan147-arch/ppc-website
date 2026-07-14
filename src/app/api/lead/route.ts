@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { deliverToWebhook } from "@/lib/formDelivery";
 
 const leadSchema = z.object({
   name: z.string().min(1),
@@ -39,6 +40,27 @@ export async function POST(request: Request) {
   }
 
   const requestId = createRequestId();
+  const receivedAt = new Date().toISOString();
+  const delivery = await deliverToWebhook("LEAD_WEBHOOK_URL", {
+    type: "customer-service-request",
+    requestId,
+    receivedAt,
+    ...parsed.data
+  });
+
+  if (!delivery.ok) {
+    console.error("service_request_delivery_failed", { requestId, reason: delivery.reason });
+    return NextResponse.json(
+      {
+        ok: false,
+        error: delivery.reason === "not-configured"
+          ? "Online request delivery is not configured yet. Please try again later."
+          : "The request could not be delivered right now. Please try again shortly."
+      },
+      { status: 503 }
+    );
+  }
+
   const safeRequestLog = {
     requestId,
     city: parsed.data.city,
@@ -54,16 +76,15 @@ export async function POST(request: Request) {
     },
     phoneHint: redactPhone(parsed.data.phone),
     messageLength: parsed.data.message?.length || 0,
-    receivedAt: new Date().toISOString(),
+    receivedAt,
     source: "website-form",
-    storageMode: "placeholder-console-log-only"
+    storageMode: "approved-webhook"
   };
 
-  console.info("service_request_placeholder_logged", safeRequestLog);
+  console.info("service_request_delivered", safeRequestLog);
   return NextResponse.json({
     ok: true,
     message: "Service request received.",
-    requestId,
-    nextStep: "Owner must connect approved CRM or service request storage before public launch."
+    requestId
   });
 }

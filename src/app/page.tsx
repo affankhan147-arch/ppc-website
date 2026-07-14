@@ -66,7 +66,7 @@ const localStructureBullets = [
   "Service-area routing",
   "Direct emergency answers",
   "Cost-factor guidance",
-  "No unverified local-office claims"
+  "Clear provider coverage guidance"
 ];
 
 export const metadata = buildMetadata({
@@ -86,7 +86,7 @@ export default function HomePage() {
     {
       question: "How does Plumbing Hands describe service areas?",
       answer:
-        "Service-area pages help visitors describe where they need plumbing help. They should not be treated as unverified local address, license, or guaranteed-availability claims."
+        "Service-area pages help visitors describe where plumbing help is needed. Availability, timing, pricing, credentials, and scope should be confirmed directly with the provider."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -129,7 +129,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {["Transparent service areas", "Original safety-first copy", "Provider coverage varies"].map((item) => (
+              {["Transparent service areas", "Practical safety-first guidance", "Provider coverage varies"].map((item) => (
                 <div key={item} className="rounded-md border border-white/15 bg-white/10 p-3 text-sm font-bold text-slate-100">
                   <CheckCircle2 className="mb-2 h-4 w-4 text-cyan-200" aria-hidden="true" />
                   {item}
@@ -183,7 +183,7 @@ export default function HomePage() {
         <section className="content-section soft-band">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
-              <p className="section-kicker">Fast local structure</p>
+              <p className="section-kicker">DFW request paths</p>
               <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950">
                 Services by DFW location
               </h2>
@@ -264,7 +264,7 @@ export default function HomePage() {
                 <li>Dallas, Fort Worth, Arlington, Plano, Irving</li>
                 <li>City-specific service request paths</li>
                 <li>Provider coverage confirmed directly</li>
-                <li>No unverified local address claims</li>
+                <li>Provider details confirmed before work</li>
               </ul>
               <Link href="/cities" className="mt-5 inline-flex items-center gap-2 text-base font-black text-cyan-700 hover:text-cyan-900">
                 View all DFW locations <ArrowRight className="h-5 w-5" aria-hidden="true" />

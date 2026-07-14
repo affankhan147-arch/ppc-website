@@ -21,7 +21,7 @@ export default function DisclosurePage() {
       <h1 className="mt-3 text-4xl font-black text-slate-950">Provider connection disclosure</h1>
       <div className="content-section space-y-4 leading-7 text-slate-700">
         <p>{siteConfig.legalDisclosure}</p>
-        <p>No page on this site should be read as a fake Google Business Profile, fake address, fake local office, fake review, fake license, fake insurance claim, or guaranteed response-time claim.</p>
+        <p>No page on this site should be read as a verified Google Business Profile, physical office listing, review, license, insurance statement, or response-time commitment unless verified proof is stated on that page.</p>
         <p>Service availability, pricing, arrival timing, credentials, and scope should be confirmed directly with the provider before work begins.</p>
       </div>
     </main>

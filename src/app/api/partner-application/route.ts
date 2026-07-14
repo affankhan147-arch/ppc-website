@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { deliverToWebhook } from "@/lib/formDelivery";
 
 const partnerApplicationSchema = z.object({
   businessName: z.string().trim().min(2).max(160),
@@ -57,6 +58,28 @@ export async function POST(request: Request) {
   }
 
   const requestId = createRequestId();
+  const receivedAt = new Date().toISOString();
+  const delivery = await deliverToWebhook("PARTNER_WEBHOOK_URL", {
+    type: "provider-partner-application",
+    requestId,
+    receivedAt,
+    ...parsed.data,
+    companyFax: undefined
+  });
+
+  if (!delivery.ok) {
+    console.error("partner_application_delivery_failed", { requestId, reason: delivery.reason });
+    return NextResponse.json(
+      {
+        ok: false,
+        error: delivery.reason === "not-configured"
+          ? "Provider application delivery is not configured yet. Please try again later."
+          : "The application could not be delivered right now. Please try again shortly."
+      },
+      { status: 503 }
+    );
+  }
+
   const safeApplicationLog = {
     requestId,
     businessName: parsed.data.businessName,
@@ -81,16 +104,15 @@ export async function POST(request: Request) {
       term: parsed.data.utmTerm || "",
       content: parsed.data.utmContent || ""
     },
-    receivedAt: new Date().toISOString(),
+    receivedAt,
     source: "provider-application-form",
-    storageMode: "provider-application-console-log-only"
+    storageMode: "approved-partner-webhook"
   };
 
-  console.info("partner_application_placeholder_logged", safeApplicationLog);
+  console.info("partner_application_delivered", safeApplicationLog);
   return NextResponse.json({
     ok: true,
     message: "Provider application received.",
-    requestId,
-    nextStep: "Owner must connect or verify the approved provider application routing destination."
+    requestId
   });
 }

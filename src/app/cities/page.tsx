@@ -19,7 +19,7 @@ const hubBullets = [
   "City-specific request paths",
   "Emergency plumbing and drain needs",
   "Provider availability varies by area",
-  "No unverified local-office claims"
+  "Clear provider coverage guidance"
 ];
 
 function serviceNamesForCity(citySlug: string) {
