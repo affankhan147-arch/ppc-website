@@ -6,7 +6,7 @@
 "2.5","Technical SEO","VERIFIED","robots=200; sitemap=200; sitemap hosts=plumbinghands.com"
 "2.6","Customer and partner delivery","BLOCKED","source routing tests pass, but Vercel env access and authorized end-to-end receipt confirmation are unavailable; no real lead submissions performed; source phone placeholders=0; live phone placeholders/tel links=0; phone placeholder clean=true"
 "2.7","Accessibility/mobile/public quality","NOT_VERIFIABLE","source/HTML checks performed; no Chrome/Lighthouse/browser accessibility tool available in PATH; no manual browser evidence captured"
-"2.8","Build/test/deployment","VERIFIED","commands pass=true; production health=true; Vercel/Git ready=true; GitHub deployment success=true; deployment=dpl_D9vRP5r2bWteBYvo3B3wNKjMqqao; github deployment=5447368047; sha=d7cf800b8153ddfca4934a766edf2c5bc278bd3f"
+"2.8","Build/test/deployment","VERIFIED","commands pass=true; production health=true; Vercel/Git ready=true; GitHub deployment success=true; deployment=dpl_3gKNXU7JFpKRRTjjnX4a13sjWARS; github deployment=5448168816; sha=a20e00ce62e92cdd3097ebcea9404d32904b7a51"
 "3.1","Analytics/conversion measurement","BLOCKED","rendered analytics active=false; Vercel env access=available"
 "3.2","Search Console/Bing/indexing baseline","BLOCKED","authenticated GSC/Bing/IndexNow account access not available in this session; blocked=true"
 "3.3","Prioritized backlog","PREPARED_NOT_ACTIVE","backlog generated from verified blockers and crawl evidence, but Phase 3 cannot activate until measurement/indexing are verified"

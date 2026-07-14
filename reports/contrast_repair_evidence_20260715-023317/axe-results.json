@@ -1,0 +1,62 @@
+[
+  {
+    "mode": "mobile",
+    "route": "/",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "mobile",
+    "route": "/contact",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "mobile",
+    "route": "/partner-with-us",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "mobile",
+    "route": "/services/24-hour-emergency-plumber",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "mobile",
+    "route": "/problems/water-backing-up-in-shower-and-toilet",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "desktop",
+    "route": "/",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "desktop",
+    "route": "/contact",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "desktop",
+    "route": "/partner-with-us",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "desktop",
+    "route": "/services/24-hour-emergency-plumber",
+    "status": 200,
+    "violations": []
+  },
+  {
+    "mode": "desktop",
+    "route": "/problems/water-backing-up-in-shower-and-toilet",
+    "status": 200,
+    "violations": []
+  }
+]
