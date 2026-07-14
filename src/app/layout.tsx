@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         {children}
         <Footer />
         <StickyCallBar />
+              <GoogleAnalytics gaId="G-MQ820VTTB0" />
       </body>
     </html>
   );

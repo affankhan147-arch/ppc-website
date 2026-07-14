@@ -17,6 +17,7 @@
     "reports": "node scripts/generate-reports.mjs"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.10",
     "lucide-react": "latest",
     "next": "16.2.10",
     "next-sitemap": "latest",
@@ -27,16 +28,16 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
     "@eslint/eslintrc": "3.3.1",
-    "@vitejs/plugin-react": "6.0.2",
-    "@vitejs/plugin-rsc": "0.5.26",
+    "@next/eslint-plugin-next": "16.2.10",
     "@tailwindcss/postcss": "4.1.13",
     "@types/node": "22.18.6",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
     "autoprefixer": "latest",
     "eslint": "9.36.0",
     "eslint-config-next": "16.2.10",
-    "@next/eslint-plugin-next": "16.2.10",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "postcss": "latest",
