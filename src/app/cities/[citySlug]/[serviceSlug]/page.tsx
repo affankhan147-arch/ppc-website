@@ -52,7 +52,7 @@ export default async function CityServicePage({ params }: Props) {
     },
     {
       question: `How should I use this ${city.name} service-area page?`,
-      answer: "Use it to describe the service need and request a provider connection. Do not treat it as a claim of an unverified local address, guaranteed availability, or guaranteed arrival time."
+      answer: "Use it to describe the service need and request a provider connection. Service availability depends on provider coverage in your area."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -93,7 +93,7 @@ export default async function CityServicePage({ params }: Props) {
       <InfoListSection
         kicker="City relevance"
         title={`${city.name} service-area guidance`}
-        intro={`This page is focused on ${city.areaHint}. It is a service-area request page, not a claim of an unverified Plumbing Hands address in ${city.name}.`}
+        intro={`This page is focused on ${city.areaHint}. Confirm pricing, credentials, timing, and scope directly with the provider.`}
         items={[
           `Share that the request is in ${city.name} and mention nearby cross streets when calling.`,
           `Describe whether the issue affects one fixture, several fixtures, or the whole property.`,

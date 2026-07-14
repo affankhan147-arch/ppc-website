@@ -50,7 +50,7 @@ export default async function CityPage({ params }: Props) {
     },
     {
       question: `How should I use the ${city.name} service-area page?`,
-      answer: "Use it to request help for a local plumbing issue. It should not be treated as a claim of an unverified local address, guaranteed availability, or guaranteed arrival time."
+      answer: "Use it to request help for a local plumbing issue. Service availability depends on provider coverage in your area."
     },
     ...emergencyFaqs,
     ...universalFaqs
@@ -89,7 +89,7 @@ export default async function CityPage({ params }: Props) {
       <InfoListSection
         kicker="Local relevance"
         title={`Emergency plumbing situations in ${city.name}`}
-        intro={`This page uses service-area wording for ${city.areaHint}. It does not claim an unverified Plumbing Hands office, address, or local license in ${city.name}.`}
+        intro={`This page is organized around ${city.areaHint}. Confirm pricing, credentials, timing, and scope directly with the provider.`}
         items={[
           "Older fixtures, high-use bathrooms, apartment buildings, restaurants, and slab plumbing can all create urgent calls.",
           "Drain and sewer symptoms should be treated faster when several fixtures react at once.",

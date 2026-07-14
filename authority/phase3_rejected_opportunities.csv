@@ -5,3 +5,7 @@
 "Automated directory blast","spam and no owner verification","reject"
 "Forum/comment link drop","irrelevant or manipulative","reject"
 "Exact-match anchor exchange","manipulative link exchange risk","reject"
+"Paid link package - final audit","violates no paid backlinks rule","reject"
+"PBN or link farm - final audit","manipulative authority signal","reject"
+"Fake local citation - final audit","would require fake address/profile","reject"
+"Directory requiring unsupported claim","would require unsupported license/insurance/rating claim","reject"

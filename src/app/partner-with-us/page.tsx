@@ -1,4 +1,4 @@
-import { LeadForm } from "@/components/LeadForm";
+import { PartnerApplicationForm } from "@/components/PartnerApplicationForm";
 import { DirectAnswer } from "@/components/PageSections";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -29,7 +29,7 @@ export default function PartnerPage() {
             Partners should provide real business details, owner-approved service areas, verified credential claims, clear availability rules, and capacity for urgent work.
           </DirectAnswer>
         </article>
-        <LeadForm pageUrl="/partner-with-us" service="Partner inquiry" city="Dallas-Fort Worth" />
+        <PartnerApplicationForm pageUrl="/partner-with-us" />
       </div>
       <section className="content-section">
         <p className="section-kicker">Partner quality rules</p>

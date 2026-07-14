@@ -29,3 +29,17 @@ Never:
 - Create backlinks.
 - Create citations.
 - Invent phone numbers, tracking IDs, NAP, licenses, insurance, prices, reviews, response times, rankings, impressions, clicks, calls, or qualified leads.
+
+---
+
+# Final Master Addendum
+
+Generated: 2026-07-14T16:41:02.934Z
+
+Start only after pulling latest master and confirming a clean working tree.
+
+1. Run pnpm run build, pnpm run typecheck, pnpm run qa, pnpm exec eslint src scripts worker --max-warnings=0, and pnpm run sites:build.
+2. Confirm /partner-with-us still uses PartnerApplicationForm and /api/partner-application.
+3. Do not invent Search Console, analytics, call, lead, ranking, backlink, review, rating, license, insurance, office, price, or response-time data.
+4. If owner data is unavailable, work only on repository-evidence tasks and update owner action reports.
+5. Highest priority: owner-verified routing destinations, analytics/Search Console data ingestion, then query-backed Phase 3 improvements.

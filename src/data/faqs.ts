@@ -17,16 +17,16 @@ export const universalFaqs: FAQ[] = [
     answer: "Yes. If water is actively leaking and you cannot stop it safely, shut off water if possible and request urgent help."
   },
   {
-    question: "Do you create Google Business Profiles?",
-    answer: "No fake profiles are created. A Google Business Profile should only be used for a real eligible business or verified partner."
+    question: "How should I verify the provider?",
+    answer: "Confirm the provider's pricing, credentials, scope, and timing directly before approving any work."
   },
   {
     question: "Does Plumbing Hands have an office in every city page?",
     answer: "No. City pages use service-area wording for Dallas-Fort Worth. They do not claim a physical office, fake address, or fake local listing."
   },
   {
-    question: "Is the phone number a live tracking number?",
-    answer: "The site uses a placeholder phone until the owner supplies an approved call tracking number. Real tracking should not be claimed until it is configured."
+    question: "Can I call instead of using the form?",
+    answer: "When phone support is available, use the call option. If it is not shown, submit the request form with your city, issue, and urgency."
   },
   {
     question: "Can this site guarantee exact plumbing prices?",
@@ -72,7 +72,7 @@ export const emergencyFaqs: FAQ[] = [
     answer: "Avoid running more water, using chemical cleaners, running laundry or dishwasher cycles, and touching contaminated water."
   },
   {
-    question: "Should I request indexing before content QA is complete?",
-    answer: "No. Google and Bing setup should wait until the Day 2 sitemap and content QA are stable and the owner approves indexing."
+    question: "What should I tell the provider?",
+    answer: "Share the affected fixture, whether water or wastewater is active, your city, access notes, and any shutoff steps already taken."
   }
 ];

@@ -11,6 +11,8 @@ const allowedEvents = new Set([
   "cost_page_call",
   "contact_form_start",
   "contact_form_submit",
+  "partner_application_start",
+  "partner_application_submit",
   "email_click",
   "partner_route_click"
 ]);

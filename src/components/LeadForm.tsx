@@ -122,7 +122,7 @@ export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
       event.currentTarget.reset();
       setStatus({
         tone: "success",
-        message: `Request received for safe placeholder handling. Reference: ${result.requestId || "pending"}.`
+        message: `Request received. Reference: ${result.requestId || "pending"}.`
       });
     } catch {
       setStatus({ tone: "error", message: "The request could not be submitted right now. Please try again shortly." });

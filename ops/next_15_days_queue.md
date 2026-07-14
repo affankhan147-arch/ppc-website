@@ -15,3 +15,20 @@
 13. Update daily scorecard.
 14. Prepare weekly review.
 15. Decide next content cluster from verified data only.
+
+---
+
+# Final Master Next 15 Days Addendum
+
+Generated: 2026-07-14T16:41:02.934Z
+
+1. Verify customer lead routing destination.
+2. Verify partner application routing destination.
+3. Configure approved tracking phone if phone routing is desired.
+4. Verify Search Console and submit sitemap.
+5. Export Search Console baseline after data appears.
+6. Configure approved analytics IDs or document analytics-disabled decision.
+7. Export call/form data for Phase 3 conversion analysis.
+8. Review Phase 3 authority approval queue.
+9. Run Lighthouse/mobile visual audit.
+10. Improve only evidence-backed Phase 3 pages.

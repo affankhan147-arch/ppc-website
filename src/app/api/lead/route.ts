@@ -62,7 +62,7 @@ export async function POST(request: Request) {
   console.info("service_request_placeholder_logged", safeRequestLog);
   return NextResponse.json({
     ok: true,
-    message: "Service request logged for safe placeholder handling.",
+    message: "Service request received.",
     requestId,
     nextStep: "Owner must connect approved CRM or service request storage before public launch."
   });

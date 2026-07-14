@@ -1,0 +1,72 @@
+PHASE 2 STATUS:
+COMPLETE
+
+LIVE WEBSITE:
+- deployment status: Live site sampled at https://plumbinghands.com; homepage 200; robots 200; sitemap 200 with 118 URLs.
+- key improvements verified: provider application flow separated from customer request flow; public fallback/disclosure wording cleaned; final evidence reports generated.
+- unresolved live issues: customer lead routing, provider application routing, approved tracking phone, analytics, Search Console, Bing, and call-tracking data remain owner-blocked.
+
+TECHNICAL SEO:
+- robots result: PASS.
+- sitemap result: PASS (118 URLs found).
+- canonical result: sampled HTML canonicals use plumbinghands.com unless marked in reports.
+- indexing-directive result: sampled HTML routes are index/follow by default; verified live indexing requires Search Console.
+- schema result: sampled JSON-LD parsed without INVALID_JSON_LD hits in final schema report.
+- redirects/broken links/orphans result: sampled report generated; intentional missing URL check recorded.
+
+CONTENT:
+- public copy cleaned: yes.
+- disclosure refined: yes; full disclosure preserved on dedicated legal page.
+- duplicate/thin content actions: data-limited queue generated; no mass pages created.
+- city differentiation completed: priority city final copy refined; future city work needs Search Console data.
+
+CONVERSION AND DATA:
+- customer form result: builds and posts to /api/lead; production routing owner-blocked.
+- partner form result: dedicated provider application form posts to /api/partner-application.
+- routing result: customer and partner paths separated; destinations require owner verification.
+- call-event result: endpoint live; partner application events added.
+- GA4 result: owner-blocked; no IDs invented or exposed.
+- Search Console result: owner-blocked; sitemap/robots ready.
+
+QUALITY:
+- build: PASS after clearing ignored stale .next output.
+- typecheck: PASS.
+- lint: PASS.
+- QA/tests: PASS.
+- smoke tests: live URL sample and local route evidence recorded.
+- mobile/accessibility: source-level form accessibility reviewed; Lighthouse/mobile screenshots not run.
+- performance: build baseline recorded; LCP/INP/CLS not measured in this pass.
+
+GIT AND BACKUP:
+- commits: pending at report generation.
+- push results: pending at report generation.
+- working-tree status: Codex changes present for implementation and reports.
+- backup result: existing cloud-backup evidence preserved; no competing backup location created.
+
+PHASE 3 STATUS:
+PARTIALLY COMPLETE
+
+PHASE 3 VERIFIED OPPORTUNITIES:
+- position 8-30: not available without Search Console export.
+- weak CTR: not available without Search Console export.
+- unindexed URLs: live index status owner-blocked; sitemap inventory recorded.
+- weak conversion pages: /partner-with-us fixed; customer/contact routing owner-blocked.
+- repetitive content: priority city/service monitoring queue generated.
+- DFW queries: mapped to existing URLs without creating mass pages.
+- legitimate authority prospects: owner approval queue generated; no outreach sent.
+
+OWNER ACTIONS:
+1. Provide or verify the approved customer lead-routing destination and required secrets.
+2. Provide or verify the approved provider application routing destination.
+3. Provide an approved call tracking number if public phone routing should be enabled.
+4. Provide approved GA4/GTM/Clarity or equivalent analytics IDs, or confirm analytics will remain disabled.
+5. Verify Google Search Console for plumbinghands.com and submit https://plumbinghands.com/sitemap.xml.
+6. Verify Bing Webmaster Tools after Google is complete; run IndexNow only after verification.
+7. Provide legal proof before adding any license, insurance, rating, review, office, exact-price, response-time, or guarantee claim.
+8. Export Search Console, analytics, call, and form data before Phase 3 performance claims are made.
+
+NEXT ACTION:
+Provide or verify the approved customer lead-routing destination and partner application routing destination, then run an end-to-end production submission test without exposing secrets.
+
+Generated: 2026-07-14T16:41:02.934Z
+Repository: C:\Users\dell\OneDrive\Documents\Pay Per Call(PPC)

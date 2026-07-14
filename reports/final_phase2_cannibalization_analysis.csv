@@ -1,0 +1,5 @@
+"intent_group","primary_url","secondary_urls","status","evidence_limit"
+"24-hour emergency plumber","/services/24-hour-emergency-plumber","/cities/*/24-hour-emergency-plumber; related blog guides","monitor","No Search Console query export available."
+"emergency drain cleaning","/services/emergency-drain-cleaning","/cities/*/emergency-drain-cleaning; related blog guides","monitor","No Search Console query export available."
+"emergency plumbing cost","/cost-guides/emergency-plumbing-cost-dfw","cost-related blog guides","monitor","No Search Console query export available."
+"provider partner inquiry","/partner-with-us","none","separated","Dedicated provider application route implemented."

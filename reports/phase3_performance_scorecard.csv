@@ -1,0 +1,8 @@
+"metric","value","source","status"
+"clicks","NOT AVAILABLE","No Search Console export/API data","owner-blocked"
+"impressions","NOT AVAILABLE","No Search Console export/API data","owner-blocked"
+"CTR","NOT AVAILABLE","No Search Console export/API data","owner-blocked"
+"average_position","NOT AVAILABLE","No Search Console export/API data","owner-blocked"
+"indexed_urls","NOT AVAILABLE","No Search Console/Bing export","owner-blocked"
+"form_conversions","NOT AVAILABLE","No production CRM/analytics data","owner-blocked"
+"phone_click_events","repository endpoint present","src/app/api/call-event/route.ts","repo-verified"

@@ -1,20 +1,4 @@
-# Phase 2 Unresolved Manual Tasks
-
-## P0
-
-- None known.
-
-## P1 Owner Tasks
-
-- Approved production tracking phone number.
-- Approved lead-routing destination and secrets.
-- Google Search Console verification.
-- Bing Webmaster Tools verification.
-- Owner approval before outreach, citations, legal claims, ratings, reviews, licenses, insurance, exact prices, response-time, or local-office claims.
-
----
-
-# Final Master Manual Tasks Addendum
+# Final Phase 2 Owner Actions
 
 Generated: 2026-07-14T16:41:02.934Z
 

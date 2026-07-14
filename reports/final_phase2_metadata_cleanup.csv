@@ -1,0 +1,5 @@
+"file_or_route","issue_found","action","evidence"
+"src/data/faqs.ts","public FAQ contained phone placeholder/indexing QA wording","rewritten to customer-facing provider verification and call/form guidance","source scan now reports no Day 2 sitemap/request indexing public source hits"
+"src/app/cities/[citySlug]/page.tsx","city page FAQ and intro repeated defensive unverified-address language","rewritten to short availability and provider-confirmation language","build and source checks passed"
+"src/app/cities/[citySlug]/[serviceSlug]/page.tsx","city-service intro repeated defensive unverified-address language","rewritten to short availability and provider-confirmation language","build and source checks passed"
+"src/components/LeadForm.tsx","success message exposed placeholder handling","rewritten as neutral request received message","typecheck and build passed"
