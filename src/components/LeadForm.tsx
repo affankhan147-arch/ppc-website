@@ -204,7 +204,7 @@ export function LeadForm({ pageUrl, service = "", city = "" }: LeadFormProps) {
           {status.message}
         </p>
       ) : null}
-      <p className="text-xs leading-5 text-slate-500">
+      <p className="text-xs leading-5 text-slate-600">
         Service availability depends on location, timing, and provider coverage. Pricing, credentials, and arrival details should be confirmed directly with the provider.
       </p>
     </form>

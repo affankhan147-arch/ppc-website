@@ -82,7 +82,7 @@ export function CallButton({
 
   return (
     <a
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-orange-500 px-5 py-3 text-base font-black text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-orange-700 px-5 py-3 text-base font-black text-white shadow-sm transition hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300 ${className}`}
       href={hasUsablePhone ? `tel:${siteConfig.phoneE164}` : "/contact"}
       data-call-event-name={eventName || inferEventName(location)}
       data-cta-location={location}

@@ -13,7 +13,7 @@ export function Header() {
           </span>
           <span className="min-w-0">
             <span className="block truncate text-sm font-black uppercase tracking-normal text-slate-950">{siteConfig.brandName}</span>
-            <span className="block truncate text-xs font-medium text-slate-500">Emergency plumbing request help</span>
+            <span className="block truncate text-xs font-medium text-slate-600">Emergency plumbing request help</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-semibold text-slate-700 lg:flex" aria-label="Primary navigation">

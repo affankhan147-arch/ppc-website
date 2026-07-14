@@ -229,7 +229,7 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
           {status.message}
         </p>
       ) : null}
-      <p className="text-xs leading-5 text-slate-500">
+      <p className="text-xs leading-5 text-slate-600">
         Application routing depends on the approved provider-review workflow. Do not submit customer emergency requests through this form.
       </p>
     </form>
