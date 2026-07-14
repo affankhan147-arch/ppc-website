@@ -1,5 +1,5 @@
 import { Buyer, buyers } from "@/data/buyers";
-import { siteConfig } from "@/data/site";
+import { hasConfiguredPhone, siteConfig } from "@/data/site";
 
 type MatchInput = {
   marketSlug: string;
@@ -19,9 +19,11 @@ export function matchBuyer({ marketSlug, serviceSlug }: MatchInput): Buyer | nul
 
 export function getRoutingNumber(input: MatchInput) {
   const buyer = matchBuyer(input);
-  return buyer?.fallback_number || siteConfig.fallbackPhoneE164;
+  if (buyer?.fallback_number && hasConfiguredPhone(buyer.fallback_number)) return buyer.fallback_number;
+  return hasConfiguredPhone(siteConfig.fallbackPhoneE164) ? siteConfig.fallbackPhoneE164 : "";
 }
 
 export function normalizePhoneForTel(phone: string) {
-  return phone.startsWith("+") ? phone : siteConfig.phoneE164;
+  if (hasConfiguredPhone(phone)) return phone;
+  return hasConfiguredPhone(siteConfig.phoneE164) ? siteConfig.phoneE164 : "";
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { PhoneCall } from "lucide-react";
-import { siteConfig } from "@/data/site";
+import { hasConfiguredPhone, siteConfig } from "@/data/site";
 
 type CallButtonProps = {
   label?: string;
@@ -15,7 +15,7 @@ type CallButtonProps = {
   problem?: string;
 };
 
-const hasUsablePhone = !siteConfig.phoneE164.includes("X");
+const hasUsablePhone = hasConfiguredPhone();
 
 function inferEventName(location: string) {
   if (location === "header") return "header_call_click";
@@ -44,7 +44,7 @@ function inferDeviceContext() {
 }
 
 export function CallButton({
-  label = hasUsablePhone ? `Call ${siteConfig.phoneDisplay}` : "Request Emergency Help",
+  label = hasUsablePhone ? `Call ${siteConfig.phoneDisplay || siteConfig.phoneE164}` : "Request Emergency Help",
   location,
   className = "",
   eventName,

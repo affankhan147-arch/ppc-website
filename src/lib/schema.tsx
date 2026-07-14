@@ -1,5 +1,5 @@
 import { FAQ } from "@/data/faqs";
-import { siteConfig } from "@/data/site";
+import { hasConfiguredPhone, siteConfig } from "@/data/site";
 import { joinUrl } from "@/lib/format";
 
 type JsonLdProps = {
@@ -24,7 +24,7 @@ export function organizationSchema() {
     description: siteConfig.serviceStatement
   };
 
-  if (!siteConfig.phoneE164.includes("X")) {
+  if (hasConfiguredPhone()) {
     schema.telephone = siteConfig.phoneE164;
   }
 

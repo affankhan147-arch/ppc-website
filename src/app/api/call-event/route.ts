@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { siteConfig } from "@/data/site";
+import { hasConfiguredPhone } from "@/data/site";
 
 const allowedEvents = new Set([
   "phone_click",
@@ -36,7 +36,7 @@ export async function GET(request: Request) {
     problem: cleanParam(url.searchParams.get("problem")),
     deviceContext: cleanParam(url.searchParams.get("deviceContext"), "unknown"),
     timestamp: new Date().toISOString(),
-    requestDestination: siteConfig.phoneE164.includes("X") ? "contact-form-placeholder" : "phone"
+    requestDestination: hasConfiguredPhone() ? "phone" : "contact-form-placeholder"
   };
 
   console.info("call_click_event", event);
