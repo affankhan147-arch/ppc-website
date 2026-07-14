@@ -345,7 +345,7 @@ try {
   latestGithubDeploymentStatus = undefined;
 }
 const deploymentInspectUrl = latestGithubDeploymentStatus?.environment_url || latestGithubDeploymentStatus?.target_url || deploymentProjectUrl;
-const vercelInspect = command("vercel inspect", `pnpm dlx vercel inspect ${deploymentInspectUrl}`, { timeoutMs: 180000 });
+const vercelInspect = command("vercel inspect", `pnpm dlx vercel inspect ${deploymentInspectUrl} 2>&1`, { timeoutMs: 180000 });
 const vercelEnvList = command("vercel env list production", "pnpm dlx vercel env ls production --scope affankhan147-1002s-projects --non-interactive --format json", { timeoutMs: 120000 });
 
 run("routing tests", "pnpm run test:routing", { timeoutMs: 240000 });
