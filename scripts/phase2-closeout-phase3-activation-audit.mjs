@@ -516,13 +516,24 @@ const accessibilityPass =
 const accessibilityEvidenceSummary = accessibilityPass
   ? `Playwright/axe desktop/mobile pages=${accessibilityResults.length}; serious/critical findings=0; screenshots=${accessibilityScreenshotCount}; evidence=reports/${accessibilityEvidenceDir}`
   : `browser evidence incomplete; pages=${accessibilityResults.length}; serious/critical findings=${accessibilitySeriousFindings.length}; screenshots=${accessibilityScreenshotCount}`;
+const formDeliveryEvidenceDirs = existsSync(join(root, "reports"))
+  ? readdirSync(join(root, "reports")).filter((name) => name.startsWith("form_delivery_evidence_") && statSync(join(root, "reports", name)).isDirectory()).sort().reverse()
+  : [];
+const formDeliveryEvidenceDir = formDeliveryEvidenceDirs[0] || "";
+const formDeliveryEvidenceFile = formDeliveryEvidenceDir ? join(root, "reports", formDeliveryEvidenceDir, "redacted-receipt-status.json") : "";
+let formDeliveryEvidence = {};
+try { formDeliveryEvidence = formDeliveryEvidenceFile && existsSync(formDeliveryEvidenceFile) ? JSON.parse(readFileSync(formDeliveryEvidenceFile, "utf8")) : {}; } catch { formDeliveryEvidence = {}; }
+const formDeliveryPass = formDeliveryEvidence.customerStatus === 200 && formDeliveryEvidence.partnerStatus === 200 && formDeliveryEvidence.ownerConfirmedBothReceipts === true && formDeliveryEvidence.syntheticOnly === true && formDeliveryEvidence.piiStoredInEvidence === false;
+const formDeliverySummary = formDeliveryPass
+  ? `separate customer/partner endpoints returned 200; owner confirmed both synthetic receipts; redacted evidence=reports/${formDeliveryEvidenceDir}`
+  : "authorized end-to-end customer/partner receipt evidence is unavailable";
 const phase2Gates = [
   ["2.1", "Routes and architecture", sourceSitemapPass ? "VERIFIED" : "FAILED", `source=${expected.length}; sitemap=${sitemapPaths.length}; missing=${missingFromSitemap.length}; extra=${extraInSitemap.length}`],
   ["2.2", "On-page SEO", urlCrawlPass ? "VERIFIED" : "FAILED", `crawled=${crawled.length}; failed=${failedCrawl.length}; metadata/schema issues=${missingMetadata.length}`],
   ["2.3", "Content uniqueness/public quality", publicCopyPass && duplicateRows.length === 1 ? "VERIFIED" : "FAILED", `source old-copy hits=${sourceOldCopyHits.length}; live old-copy hits=${oldCopyLive.length}; duplicate metadata clusters=${duplicateRows.length - 1}`],
   ["2.4", "Internal linking", linkPass && orphanPriority.length === 0 ? "VERIFIED" : "FAILED", `internal link failures=${internalLinkFailures.length}; orphan priority paths=${orphanPriority.length}; redirected internal targets=${redirectInternalTargets.length}`],
   ["2.5", "Technical SEO", robotsResult.status === 200 && sitemapResult.status === 200 && sitemapHosts.length === 1 && sitemapHosts[0] === "plumbinghands.com" ? "VERIFIED" : "FAILED", `robots=${robotsResult.status}; sitemap=${sitemapResult.status}; sitemap hosts=${sitemapHosts.join("|")}`],
-  ["2.6", "Customer and partner delivery", "BLOCKED", `source routing tests pass, but Vercel env access and authorized end-to-end receipt confirmation are unavailable; no real lead submissions performed; source phone placeholders=${sourcePhonePlaceholderHits.length}; live phone placeholders/tel links=${placeholderPhonePages.length}; phone placeholder clean=${phonePass}`],
+  ["2.6", "Customer and partner delivery", formDeliveryPass ? "VERIFIED" : "BLOCKED", `${formDeliverySummary}; source phone placeholders=${sourcePhonePlaceholderHits.length}; live phone placeholders/tel links=${placeholderPhonePages.length}; phone placeholder clean=${phonePass}`],
   ["2.7", "Accessibility/mobile/public quality", accessibilityPass ? "VERIFIED" : "NOT_VERIFIABLE", accessibilityEvidenceSummary],
   ["2.8", "Build/test/deployment", allCommandsPass && deploymentReady && githubDeploymentReady ? "VERIFIED" : "FAILED", `commands pass=${allCommandsPass}; production health=${productionHealthReady}; Vercel/Git ready=${deploymentReady}; GitHub deployment success=${githubDeploymentReady}; deployment=${inspectedDeploymentId}; github deployment=${latestDeploymentId}; sha=${latestDeploymentSha}`]
 ];
@@ -703,8 +714,8 @@ ${phase3Gates.map((gate) => `- ${gate[0]} ${gate[1]}: ${gate[2]} - ${gate[3]}`).
 - Production invalid customer request test: ${apiTests.find((row) => row[0].startsWith("customer"))?.[3]}.
 - Production invalid partner request test: ${apiTests.find((row) => row[0].startsWith("partner"))?.[3]}.
 - Production call-event safe test: ${apiTests.find((row) => row[0].startsWith("call-event"))?.[3]}.
-- Authorized production customer receipt: BLOCKED.
-- Authorized production partner receipt: BLOCKED.
+- Authorized production customer receipt: ${formDeliveryPass ? "VERIFIED (synthetic/redacted)" : "BLOCKED"}.
+- Authorized production partner receipt: ${formDeliveryPass ? "VERIFIED (synthetic/redacted)" : "BLOCKED"}.
 - Vercel environment inspection: ${vercelEnvList.status === "PASS" ? "available" : "blocked/not linked"}.
 - No full PII or secrets are printed in this report.
 
@@ -735,8 +746,7 @@ See ${reportPaths.backlog}.
 See ${reportPaths.monitoring}.
 
 15. REMAINING BLOCKERS AND EXACT OWNER ACTION
-1. Verify the required production environment variables in the existing Vercel plumbinghands project/dashboard without running "vercel link" or creating a new project.
-2. Provide/approve separate customer and partner webhook destinations, then authorize clearly marked test submissions and redacted receipt confirmation.
+${formDeliveryPass ? "" : "1. Verify the required production environment variables in the existing Vercel plumbinghands project dashboard.\n2. Provide/approve separate customer and partner webhook destinations, then authorize clearly marked test submissions and redacted receipt confirmation."}
 3. Provide/approve analytics account connection for GA4/GTM/Clarity, or confirm analytics remains disabled.
 4. Provide Google Search Console and Bing Webmaster access/exports for indexing and query baseline.
 ${accessibilityPass ? "" : "5. Provide browser QA capability or authorize Lighthouse/axe tooling installation/run for accessibility/mobile evidence."}
