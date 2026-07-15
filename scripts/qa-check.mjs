@@ -6,7 +6,6 @@ const required = [
   "src/app/services/[serviceSlug]/page.tsx",
   "src/app/cities/[citySlug]/page.tsx",
   "src/app/cities/[citySlug]/[serviceSlug]/page.tsx",
-  "src/app/api/lead/route.ts",
   "src/app/api/call-event/route.ts",
   "src/app/api/health/route.ts",
   "src/app/sitemap.ts",
