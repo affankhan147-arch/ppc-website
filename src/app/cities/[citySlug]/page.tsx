@@ -23,9 +23,10 @@ export async function generateMetadata({ params }: Props) {
   const { citySlug } = await params;
   const city = cities.find((item) => item.slug === citySlug);
   if (!city) return {};
+  const isIrving = city.slug === "irving";
   return buildMetadata({
-    title: `Emergency plumbing help in ${city.name}, TX`,
-    description: `Request emergency plumbing and drain cleaning help serving ${city.name}, TX with clear service-area guidance.`,
+    title: isIrving ? "Emergency Plumber Irving, TX" : `Emergency plumbing help in ${city.name}, TX`,
+    description: isIrving ? "Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available plumbing professional. Coverage varies." : `Request emergency plumbing and drain cleaning help serving ${city.name}, TX with clear service-area guidance.`,
     path: `/cities/${city.slug}`
   });
 }
@@ -35,6 +36,7 @@ export default async function CityPage({ params }: Props) {
   const city = cities.find((item) => item.slug === citySlug);
   if (!city) notFound();
 
+  const pageHeading = city.slug === "irving" ? "Emergency Plumber Help in Irving, TX" : `Emergency plumbing help in ${city.name}`;
   const path = `/cities/${city.slug}`;
   const priorityServiceSlugs = getPriorityServiceSlugsForCity(city.slug);
   const enhancement = cityPageEnhancements[city.slug];
@@ -60,7 +62,7 @@ export default async function CityPage({ params }: Props) {
     <main className="page-shell">
       <JsonLd
         data={[
-          webPageSchema(path, `Emergency plumbing help in ${city.name}`, `Provider connection page for urgent plumbing in ${city.name}.`),
+          webPageSchema(path, pageHeading, `Provider connection page for urgent plumbing in ${city.name}.`),
           breadcrumbSchema([{ name: "Cities", path: "/cities" }, { name: city.name, path }]),
           faqSchema(faqs)
         ]}
@@ -69,7 +71,7 @@ export default async function CityPage({ params }: Props) {
       <div className="mt-6 answer-grid">
         <article>
           <p className="section-kicker">Local service-area guidance</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">Emergency plumbing help in {city.name}</h1>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{pageHeading}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-700">
             For urgent leaks, drain backups, sewer line symptoms, overflows, and water heater problems in {city.name} and nearby {city.countyHint} areas.
           </p>
