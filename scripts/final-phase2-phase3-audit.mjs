@@ -228,7 +228,7 @@ async function postPartnerApplication(base) {
   const body = new FormData();
   body.set("businessName", "Final Validation Plumbing Partner");
   body.set("contactName", "Validation Contact");
-  body.set("phone", "555-010-0199");
+  body.set("phone", "+1 844-397-8298");
   body.set("email", "validation@example.com");
   body.set("website", "https://example.com");
   body.set("primaryServiceAreas", "Dallas, Fort Worth, Arlington");

@@ -496,7 +496,7 @@ ${selectedPhaseAPages
 - File or environment location: src/data/site.ts fallbacks; .env.example NEXT_PUBLIC_TRACKED_PHONE, NEXT_PUBLIC_TRACKED_PHONE_DISPLAY, NEXT_PUBLIC_TRACKED_PHONE_E164, NEXT_PUBLIC_FALLBACK_PHONE_DISPLAY, NEXT_PUBLIC_FALLBACK_PHONE_E164
 - Publicly visible: No live tel link while placeholder remains; visible CTA falls back to /contact.
 - Approved replacement required: Owner-approved tracked display number and E.164 tel value.
-- Expected format: Display value such as +1 214 555 0100 or owner-preferred formatting; E.164 value such as +12145550100.
+- Expected format: Display value such as +1 844-397-8298 or owner-preferred formatting; E.164 value such as +1 844-397-8298.
 - Safe fallback: /contact CTA path while phone contains X.
 - Risk if unresolved: Phone-call conversion cannot be verified; real calls cannot be attributed.
 

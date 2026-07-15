@@ -13,7 +13,7 @@ const localBindingConfig = {
         {
           binding: d1,
           database_name: "site-d1",
-          database_id: "00000000-0000-4000-8000-000000000000"
+          database_id: "00000000-0000-4000-8000-+1 844-397-829800"
         }
       ]
     : [],
