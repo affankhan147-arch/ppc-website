@@ -448,6 +448,7 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
     ],
     extraLinks: [
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+    { label: "Failed shutoff leak checklist", href: "/blog/water-shutoff-valve-will-not-close-during-a-leak" },
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
       { label: "Burst pipe cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
       { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
