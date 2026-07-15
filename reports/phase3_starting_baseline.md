@@ -40,3 +40,17 @@ approved tracking phone, lead destination, analytics IDs, Search Console verific
 ## Session Objective
 
 Create a truthful Phase 3 baseline and proceed with data-limited crawl, content, conversion, and authority-preparation work until owner-owned performance exports are available.
+
+## 2026-07-16 PowerShell Revalidation
+
+- Status: DATA-LIMITED
+- Live sitemap URLs: 118
+- robots.txt status: 200 and references sitemap.xml
+- Production DID: +1 844-397-8298
+- Telephone URI: tel:+18443978298
+- Approved call-process section: present
+- Customer request form: absent
+- Search Console data: NOT AVAILABLE
+- Analytics data: NOT AVAILABLE
+- Production call and qualified-lead exports: NOT AVAILABLE
+- Verified commits: ac8e5e9 and ac283c9

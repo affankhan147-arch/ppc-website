@@ -1,6 +1,6 @@
-"metric","value","evidence","status"
+﻿"metric","value","evidence","status"
 "repository_indexable_pages","112","reports/phase2_page_inventory.csv","repository evidence"
-"sitemap_included_pages","112","reports/phase2_page_inventory.csv","repository evidence"
+"sitemap_included_pages","118","Live sitemap.xml count verified on 2026-07-16","production evidence"
 "live_indexed_pages","NOT AVAILABLE","NOT AVAILABLE - no Search Console, Bing Webmaster, or live indexing export exists in repository","owner-blocked"
 "robots_blockers","0 known","reports/phase2_indexing_readiness_after_repairs.md","repository evidence"
 "canonical_conflicts","0 known","reports/phase2_indexing_readiness_after_repairs.md","repository evidence"
