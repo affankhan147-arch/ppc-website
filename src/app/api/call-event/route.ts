@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { checkRateLimit, clientIdentifier, noStoreHeaders, validateApiRequest } from "@/lib/apiSecurity";
 import { hasConfiguredPhone } from "@/data/site";
 
 const allowedEvents = new Set([
@@ -22,6 +23,19 @@ function cleanParam(value: string | null, fallback = "") {
 }
 
 export async function GET(request: Request) {
+  const validation = validateApiRequest(request, { methods: ["GET"] });
+  if (!validation.ok) {
+    return NextResponse.json({ ok: false, error: validation.error }, { status: validation.status, headers: noStoreHeaders });
+  }
+
+  const rate = checkRateLimit(`call-event:${clientIdentifier(request)}`, { limit: 120, windowMs: 60 * 1000 });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { ok: false, error: "Too many requests. Please try again later." },
+      { status: 429, headers: { ...noStoreHeaders, "retry-after": String(rate.retryAfterSeconds) } }
+    );
+  }
+
   const url = new URL(request.url);
   const rawEventName = cleanParam(url.searchParams.get("eventName"), "phone_click");
   const eventName = allowedEvents.has(rawEventName) ? rawEventName : "phone_click";
@@ -40,5 +54,5 @@ export async function GET(request: Request) {
   };
 
   console.info("call_click_event", event);
-  return NextResponse.json({ ok: true, event });
+  return NextResponse.json({ ok: true, event }, { headers: noStoreHeaders });
 }
