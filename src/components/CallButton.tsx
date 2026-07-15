@@ -1,7 +1,7 @@
 "use client";
 
 import { PhoneCall } from "lucide-react";
-import { hasConfiguredPhone, siteConfig } from "@/data/site";
+import { hasConfiguredPhone, phoneConfig } from "@/data/site";
 
 type CallButtonProps = {
   label?: string;
@@ -15,7 +15,7 @@ type CallButtonProps = {
   problem?: string;
 };
 
-const hasUsablePhone = hasConfiguredPhone();
+const hasUsablePhone = hasConfiguredPhone(phoneConfig.e164) && phoneConfig.href === `tel:${phoneConfig.e164}`;
 
 function inferEventName(location: string) {
   if (location === "header") return "header_call_click";
@@ -44,7 +44,7 @@ function inferDeviceContext() {
 }
 
 export function CallButton({
-  label = hasUsablePhone ? `Call ${siteConfig.phoneDisplay || siteConfig.phoneE164}` : "Request Emergency Help",
+  label = hasUsablePhone ? `Call ${phoneConfig.display}` : "Request Emergency Help",
   location,
   className = "",
   eventName,
@@ -83,7 +83,7 @@ export function CallButton({
   return (
     <a
       className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-orange-700 px-5 py-3 text-base font-black text-white shadow-sm transition hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300 ${className}`}
-      href={hasUsablePhone ? `tel:${siteConfig.phoneE164}` : "/contact"}
+      href={hasUsablePhone ? phoneConfig.href : "/contact"}
       data-call-event-name={eventName || inferEventName(location)}
       data-cta-location={location}
       data-phone-mode={hasUsablePhone ? "tel" : "contact-placeholder"}

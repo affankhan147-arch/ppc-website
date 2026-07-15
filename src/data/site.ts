@@ -1,3 +1,10 @@
+export const phoneConfig = {
+  did: "+1 844-397-8298",
+  display: "1 844-397-8298",
+  e164: "+18443978298",
+  href: "tel:+18443978298"
+} as const;
+
 export const siteConfig = {
   brandName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
   serviceName: "Emergency Plumbing Help",
@@ -6,10 +13,11 @@ export const siteConfig = {
   marketName: process.env.NEXT_PUBLIC_PRIMARY_MARKET || "Dallas-Fort Worth",
   state: "Texas",
   primaryVertical: "Emergency plumbing and drain cleaning",
-  phoneDisplay: process.env.NEXT_PUBLIC_TRACKED_PHONE_DISPLAY || "",
-  phoneE164: process.env.NEXT_PUBLIC_TRACKED_PHONE_E164 || process.env.NEXT_PUBLIC_TRACKED_PHONE || "",
-  fallbackPhoneDisplay: process.env.NEXT_PUBLIC_FALLBACK_PHONE_DISPLAY || "",
-  fallbackPhoneE164: process.env.NEXT_PUBLIC_FALLBACK_PHONE_E164 || process.env.NEXT_PUBLIC_TRACKED_PHONE || "",
+  phoneDisplay: phoneConfig.display,
+  phoneE164: phoneConfig.e164,
+  phoneHref: phoneConfig.href,
+  fallbackPhoneDisplay: phoneConfig.display,
+  fallbackPhoneE164: phoneConfig.e164,
   email: "partners@example.com",
   serviceStatement:
     "Plumbing Hands helps you connect with available plumbing professionals serving your area.",
@@ -21,7 +29,7 @@ export const siteConfig = {
     "Set an owner-approved call tracking number before enabling phone-call routing."
 };
 
-export function hasConfiguredPhone(value = siteConfig.phoneE164) {
+export function hasConfiguredPhone(value: string = siteConfig.phoneE164) {
   return /^\+[1-9]\d{6,14}$/.test(value);
 }
 
