@@ -19,6 +19,8 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
   const utmCampaignRef = useRef<HTMLInputElement>(null);
   const utmTermRef = useRef<HTMLInputElement>(null);
   const utmContentRef = useRef<HTMLInputElement>(null);
+  const formStartedAtRef = useRef<HTMLInputElement>(null);
+  const submissionIdRef = useRef<HTMLInputElement>(null);
   const [started, setStarted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<{ tone: "success" | "error"; message: string } | null>(null);
@@ -31,7 +33,9 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
       [utmMediumRef, params.get("utm_medium") || ""],
       [utmCampaignRef, params.get("utm_campaign") || ""],
       [utmTermRef, params.get("utm_term") || ""],
-      [utmContentRef, params.get("utm_content") || ""]
+      [utmContentRef, params.get("utm_content") || ""],
+      [formStartedAtRef, String(Date.now())],
+      [submissionIdRef, crypto.randomUUID()]
     ] as const;
 
     fields.forEach(([ref, value]) => {
@@ -84,6 +88,8 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
       }
 
       event.currentTarget.reset();
+      if (formStartedAtRef.current) formStartedAtRef.current.value = String(Date.now());
+      if (submissionIdRef.current) submissionIdRef.current.value = crypto.randomUUID();
       setStatus({
         tone: "success",
         message: `Provider application received. Reference: ${result.requestId || "pending"}.`
@@ -108,6 +114,8 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
       <input ref={utmCampaignRef} type="hidden" name="utmCampaign" defaultValue="" />
       <input ref={utmTermRef} type="hidden" name="utmTerm" defaultValue="" />
       <input ref={utmContentRef} type="hidden" name="utmContent" defaultValue="" />
+      <input ref={formStartedAtRef} type="hidden" name="formStartedAt" defaultValue="" />
+      <input ref={submissionIdRef} type="hidden" name="submissionId" defaultValue="" />
       <input className="hidden" type="text" name="companyFax" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <div>

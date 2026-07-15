@@ -50,6 +50,8 @@ const partnerApplicationSchema = z.object({
   notes: z.string().trim().max(1000).optional(),
   consent: z.literal("on"),
   companyFax: z.string().optional(),
+  formStartedAt: z.string().regex(/^\d{13}$/),
+  submissionId: z.string().uuid(),
   pageUrl: z.string().optional(),
   utmSource: z.string().optional(),
   utmMedium: z.string().optional(),
@@ -77,6 +79,25 @@ function emailDomain(email: string) {
 
 type LeadSubmission = z.infer<typeof leadSchema>;
 type PartnerApplicationSubmission = z.infer<typeof partnerApplicationSchema>;
+
+const deliveredPartnerSubmissions = new Map<string, number>();
+
+function pruneDeliveredPartnerSubmissions(now: number) {
+  for (const [submissionId, deliveredAt] of deliveredPartnerSubmissions) {
+    if (now - deliveredAt > 2 * 60 * 60 * 1000) deliveredPartnerSubmissions.delete(submissionId);
+  }
+}
+
+function isFilteredPartnerSubmission(data: PartnerApplicationSubmission, now = Date.now()) {
+  pruneDeliveredPartnerSubmissions(now);
+  const startedAt = Number(data.formStartedAt);
+  const elapsed = now - startedAt;
+  return Boolean(data.companyFax) ||
+    !Number.isFinite(startedAt) ||
+    elapsed < 3000 ||
+    elapsed > 2 * 60 * 60 * 1000 ||
+    deliveredPartnerSubmissions.has(data.submissionId);
+}
 
 function logLeadDelivered(logger: RouteLogger, requestId: string, receivedAt: string, data: LeadSubmission) {
   logger.info("service_request_delivered", {
@@ -193,7 +214,7 @@ export async function handlePartnerApplicationSubmission(
     return { status: 400, body: { ok: false, error: "Invalid provider application." } };
   }
 
-  if (parsed.data.companyFax) {
+  if (isFilteredPartnerSubmission(parsed.data)) {
     return { status: 200, body: { ok: true, requestId: "partner_filtered" } };
   }
 
@@ -222,6 +243,7 @@ export async function handlePartnerApplicationSubmission(
     };
   }
 
+  deliveredPartnerSubmissions.set(parsed.data.submissionId, Date.now());
   logPartnerApplicationDelivered(logger, requestId, receivedAt, parsed.data);
   return {
     status: 200,

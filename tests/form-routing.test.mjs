@@ -127,6 +127,8 @@ test("partner honeypot filters without calling the webhook", async () => {
       insuranceStatus: "prefer-discuss",
       preferredContactMethod: "email",
       consent: "on",
+      formStartedAt: String(Date.now() - 10000),
+      submissionId: crypto.randomUUID(),
       companyFax: "bot-filled"
     },
     async () => {
@@ -176,7 +178,9 @@ test("routes successful customer and partner submissions to separate payload typ
       customerTypes: "residential-commercial",
       insuranceStatus: "prefer-discuss",
       preferredContactMethod: "email",
-      consent: "on"
+      consent: "on",
+      formStartedAt: String(Date.now() - 10000),
+      submissionId: crypto.randomUUID()
     },
     deliver,
     logger
@@ -197,4 +201,67 @@ test("routes successful customer and partner submissions to separate payload typ
   assert.ok(!JSON.stringify(logs).includes("5550101000"));
   assert.ok(!JSON.stringify(logs).includes("5550102000"));
   assert.ok(!JSON.stringify(logs).includes("partner@example.com"));
+});
+
+
+test("rejects private-network webhook destinations in production", async () => {
+  restoreEnvironment();
+  process.env.NODE_ENV = "production";
+  process.env.PARTNER_WEBHOOK_URL = "https://127.0.0.1/private-hook";
+  let called = false;
+  const result = await deliverToWebhook("PARTNER_WEBHOOK_URL", {}, async () => {
+    called = true;
+    return new Response(null, { status: 204 });
+  });
+  assert.deepEqual(result, { ok: false, reason: "invalid-url" });
+  assert.equal(called, false);
+});
+
+function validTimedPartner(overrides = {}) {
+  return {
+    businessName: "Security Test Plumbing",
+    contactName: "Security Tester",
+    phone: "5550102000",
+    email: "security@example.com",
+    primaryServiceAreas: "Dallas",
+    servicesOffered: "Emergency plumbing",
+    operatingHours: "Weekdays",
+    emergencyCapacity: "limited",
+    customerTypes: "residential-commercial",
+    insuranceStatus: "prefer-discuss",
+    preferredContactMethod: "email",
+    consent: "on",
+    formStartedAt: String(Date.now() - 10000),
+    submissionId: crypto.randomUUID(),
+    ...overrides
+  };
+}
+
+test("silently filters implausibly fast partner submissions", async () => {
+  let deliveries = 0;
+  const result = await handlePartnerApplicationSubmission(
+    validTimedPartner({ formStartedAt: String(Date.now()) }),
+    async () => {
+      deliveries += 1;
+      return { ok: true };
+    }
+  );
+  assert.equal(result.status, 200);
+  assert.equal(result.body.requestId, "partner_filtered");
+  assert.equal(deliveries, 0);
+});
+
+test("silently filters duplicate partner submission identifiers", async () => {
+  const submissionId = crypto.randomUUID();
+  let deliveries = 0;
+  const deliver = async () => {
+    deliveries += 1;
+    return { ok: true };
+  };
+  const first = await handlePartnerApplicationSubmission(validTimedPartner({ submissionId }), deliver);
+  const second = await handlePartnerApplicationSubmission(validTimedPartner({ submissionId }), deliver);
+  assert.equal(first.status, 200);
+  assert.equal(second.status, 200);
+  assert.equal(second.body.requestId, "partner_filtered");
+  assert.equal(deliveries, 1);
 });
