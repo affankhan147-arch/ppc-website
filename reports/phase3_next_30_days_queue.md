@@ -1,11 +1,14 @@
-# Phase 3 Next 30 Days Queue
+# Next 30 Days Organic Growth Queue
 
-Generated: 2026-07-14T16:41:02.934Z
-
-1. Owner verifies Search Console and exports query/page data.
-2. Owner provides approved analytics and call/form conversion data.
-3. Map position 8-30 queries to existing URLs; do not create mass city-service pages.
-4. Improve titles/descriptions only where Search Console shows meaningful impressions and weak CTR.
-5. Classify submitted-but-unindexed URLs with verified Search Console/Bing status.
-6. Verify provider and customer routing destinations end to end.
-7. Approve legitimate unpaid authority prospects; reject paid-link or unsupported-claim opportunities.
+1. Verify Search Console and Bing properties and export indexing/query baselines.
+2. Obtain a redacted call-tracking export with source, landing page, service, city, disposition, and qualification.
+3. Verify call-click events in the owner-approved analytics account without PII.
+4. Monitor production uptime, robots.txt, sitemap.xml, canonical integrity, and telephone links.
+5. Classify submitted-but-unindexed URLs only from verified webmaster-tool evidence.
+6. Optimize position 8-30 pages only when query/page data exists.
+7. Improve high-impression low-CTR snippets only when verified data exists.
+8. Review call quality and routing patterns by landing page, service, and city.
+9. Refresh content only where quality review or performance evidence supports it.
+10. Use only owner-approved unpaid outreach to promote relevant linkable assets.
+11. Count citations and editorial links only after public URL verification.
+12. Keep service-area pages truthful; never create fake offices, listings, reviews, or unsupported claims.

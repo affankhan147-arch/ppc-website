@@ -1,20 +1,25 @@
 # Traffic Stability Score
 
-Use this score only with verified inputs. Do not invent current values.
+Use this score only with verified inputs. Do not invent unavailable performance values.
 
-## Inputs
+## Verified Technical Inputs
 
-- Indexing coverage: verified indexed pages / submitted sitemap pages.
-- Impression trend: Search Console 28-day trend.
-- Click trend: Search Console 28-day trend.
-- CTR trend: Search Console CTR by high-impression pages.
-- Ranking spread: pages with position data across service, city, problem, cost, and guide clusters.
-- Conversion stability: organic form/call events by landing page.
-- Call quality: qualified calls / tracked calls.
-- Authority growth: verified live citations/editorial links only.
-- Technical health: build, QA, robots, sitemap, canonical, schema, mobile checks.
-- Content freshness: pages refreshed from verified decay or quality evidence.
+- Production DID: +1 844-397-8298.
+- Telephone URI: tel:+18443978298.
+- Live sitemap URLs: 118.
+- robots.txt and sitemap.xml: reachable.
+- Call-event endpoint: present in repository.
+- Verified live citations and editorial links: 0.
+- Automated outreach sent: 0.
+
+## Unavailable Performance Inputs
+
+- Search Console indexing, impressions, clicks, CTR, and average position.
+- Bing indexing and query exports.
+- Analytics realtime/debug delivery evidence.
+- Total calls, qualified calls, dispositions, and conversion rate.
+- Field Core Web Vitals and CrUX metrics.
 
 ## Current Score
 
-UNVERIFIED. Search Console, analytics, and call-quality data are not available in repository.
+DATA-LIMITED - NOT NUMERICALLY SCORED. Technical stability evidence exists, but traffic and conversion stability cannot be calculated until owner-controlled exports are supplied.
