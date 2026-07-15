@@ -1,6 +1,16 @@
 # Day 3 Session 1 Owner Blockers
 
-- approved tracking phone, lead destination, analytics IDs, Search Console verification, Bing verification, legal proof before license/insurance/review/rating/local-office/exact-price/response-time/guarantee claims.
-- Production call tracking vendor data: NOT AVAILABLE.
-- Qualified lead/call disposition data: NOT AVAILABLE.
-- Hosted environment values must be owner-approved before public claims or final conversion validation.
+## Current unresolved owner inputs
+
+- Search Console access or export: NOT AVAILABLE.
+- Bing Webmaster verification/export: NOT AVAILABLE.
+- Analytics property ID and production export: NOT AVAILABLE.
+- Production call-tracking vendor data: NOT AVAILABLE.
+- Qualified-call disposition data: NOT AVAILABLE.
+- Legal proof is required before publishing license, insurance, review, rating, local-office, exact-price, response-time, or guarantee claims.
+
+## Resolved
+
+- Production DID is configured: +1 844-397-8298.
+- Customer call path is live: tel:+18443978298.
+- Customer request forms have been removed.
