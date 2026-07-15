@@ -14,3 +14,19 @@ Live indexing data is not available in the repository. Search Console and Bing s
 ## Next Manual Search Console Action
 
 Inspect homepage first, then the selected service/cost/problem/checklist URLs listed in reports/day1_session2_url_inspection_list.csv after owner verification is complete.
+
+## 2026-07-16 PowerShell Revalidation
+
+- Session status: DATA-LIMITED
+- Priority URLs tested: 10
+- HTTP 200: 10/10
+- Present in live sitemap: 10/10
+- Production DID present: 10/10
+- tel:+18443978298 present: 10/10
+- Customer request form present: 0/10
+- Live sitemap URL count: 118
+- Technical indexing readiness: verified
+- Google indexed status: NOT AVAILABLE
+- Remaining owner requirement: Search Console access
+- Automatic bulk indexing submission: not performed
+- Previously planned internal links remain planned unless separately verified.
