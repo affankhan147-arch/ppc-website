@@ -65,13 +65,28 @@ function assertFooterHref(html) {
   );
 }
 
-test("home production HTML exposes the DID in header, mobile call button, and footer", () => {
+function assertPremiumHomepageContract({ relativePath, html }) {
+  for (const marker of [
+    "Speak With a Plumbing Coordinator Now",
+    "What Happens After You Call",
+    "Why Homeowners Use Plumbing Hands",
+    "Choose the Problem That Needs Attention"
+  ]) {
+    assert.ok(html.includes(marker), `home (${relativePath}) must render premium section marker: ${marker}.`);
+  }
+
+  assertCallButtonHref(html, "home-hero");
+  assertCallButtonHref(html, "home-final-cta");
+}
+
+test("home production HTML exposes the DID in premium conversion surfaces", () => {
   const page = findRenderedPage(
     "home",
     (html) => html.includes("Emergency Plumbing Help Across Dallas-Fort Worth") && html.includes('data-cta-location="header"')
   );
 
   assertPageContainsPhoneContract(page, "home");
+  assertPremiumHomepageContract(page);
   assertCallButtonHref(page.html, "header");
   assertCallButtonHref(page.html, "mobile-sticky-call-bar");
   assertFooterHref(page.html);
