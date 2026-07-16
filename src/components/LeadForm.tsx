@@ -36,7 +36,7 @@ export function LeadForm({
           Emergency request line
         </p>
         <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">
-          Speak With a Plumbing Coordinator Now
+          Call the Emergency Request Line Now
         </h2>
         <p className="mt-2 text-sm leading-6 text-slate-300">
           Call about {service} in {city}. No long form is required.
