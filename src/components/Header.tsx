@@ -16,8 +16,8 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 shadow-[0_8px_30px_rgba(8,27,44,.08)] backdrop-blur-xl">
       <div className="hidden bg-[#081b2c] text-white sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs font-bold">
-          <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-cyan-300" aria-hidden="true" /> Safety-first guidance for urgent plumbing problems</span>
-          <span className="text-slate-300">Dallas–Fort Worth provider connection</span>
+          <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-cyan-300" aria-hidden="true" /> Urgent plumbing help for leaks, drains, and sewer problems</span>
+          <span className="text-slate-300">Emergency Plumbing Service Across Dallas–Fort Worth</span>
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5">
@@ -27,7 +27,7 @@ export function Header() {
           </span>
           <span className="min-w-0">
             <span className="block truncate text-base font-black tracking-tight text-[#081b2c]">{siteConfig.brandName}</span>
-            <span className="block truncate text-xs font-semibold text-slate-500">DFW plumbing help</span>
+            <span className="block truncate text-xs font-semibold text-slate-500">DFW Emergency Plumbing Service</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-bold text-slate-700 lg:flex" aria-label="Primary navigation">
