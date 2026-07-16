@@ -2,14 +2,14 @@
 
 Date: 2026-07-17
 Repository: affankhan147-arch/ppc-website
-Branch: master
+Branch: deploy/public-site-recommendations-20260717 → master
 Vercel project: plumbinghands
 Vercel scope: affankhan147-1002s-projects
 Production domain: https://plumbinghands.com
 
 ## Deployment intent
 
-Force a fresh production build from the current master revision so the approved public copy and media fixes are deployed to the existing PlumbingHands Vercel project and custom domain.
+Trigger a fresh Vercel preview through a pull request, verify the approved public copy and media, then merge into the configured production branch so the PlumbingHands custom domain receives the same build.
 
 ## Required live markers
 
@@ -25,3 +25,7 @@ Force a fresh production build from the current master revision so the approved 
 - Transparent by design
 - Illustrative service photography
 - Availability depends on location, timing, and provider coverage.
+
+## Verification gate
+
+The task is complete only after the PR preview is Ready, the PR is merged into master, and the public domain serves all required markers without any forbidden marker.
