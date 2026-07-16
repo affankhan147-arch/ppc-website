@@ -68,7 +68,7 @@ function assertFooterHref(html) {
 test("home production HTML exposes the DID in header, mobile call button, and footer", () => {
   const page = findRenderedPage(
     "home",
-    (html) => html.includes("Emergency Plumbing Help Across Dallas-Fort Worth") && html.includes('data-cta-location="header"')
+    (html) => html.includes("Calm guidance when plumbing cannot wait.") && html.includes('data-cta-location="header"')
   );
 
   assertPageContainsPhoneContract(page, "home");
