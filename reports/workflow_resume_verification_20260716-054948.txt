@@ -1,0 +1,145 @@
+PLUMBINGHANDS WORKFLOW RESUME VERIFICATION
+
+Timestamp: 2026-07-16 05:49:48 +05:00
+Repository: affankhan147-arch/ppc-website
+Remote: https://github.com/affankhan147-arch/ppc-website.git
+Branch: codex/workflow-resume-20260716
+Starting commit: 9bd828dcc0b0cb3f4b3dadd9c39aece1ee21725b
+Expected starting commit: 9bd828dcc0b0cb3f4b3dadd9c39aece1ee21725b
+
+Selected unfinished task:
+Material workflow verification and command-center reconciliation for the preserved branch.
+The Day 3 design, public cleanup, visual asset, reusable blueprint, obsolete-softcopy cleanup,
+and cloud backup tasks are already completed by commits e52e1cd and c9311f8. No Day 3 app
+implementation was repeated.
+
+Current verified project state from evidence:
+- This branch starts at the requested commit 9bd828d and is synchronized with origin/codex/workflow-resume-20260716 before this report commit.
+- The branch preserves Day 3 command-center instruction files, but those instructions are stale as active work items.
+- Commit e52e1cd completed the Day 3 premium design cleanup and reusable blueprint work.
+- Commit c9311f8 created the full Day 1 Day 2 Day 3 cloud backup.
+- origin/master has newer Phase 3 and Phase 4 history, including Phase 3 closeout and Phase 4 Day 1 Irving relevance work.
+- The current branch is 1 commit ahead and 74 commits behind origin/master before this report commit.
+- Repository evidence says Phase 3 controlled execution is complete on origin/master, while owner-controlled measurement and external authority data remain unavailable.
+
+Evidence used:
+- git status --short --branch
+- git remote -v
+- git log --oneline -12
+- git branch -vv
+- git rev-parse HEAD
+- git rev-list --left-right --count codex/workflow-resume-20260716...origin/codex/workflow-resume-20260716
+- git rev-list --left-right --count codex/workflow-resume-20260716...origin/master
+- command-center/NEXT_CODEX_TASK.txt
+- command-center/DAY3_LAUNCH_QA_DESIGN_CLEANUP_CODEX_COMMAND.txt
+- command-center/DAY3_PREMIUM_DESIGN_BLUEPRINT_CLEANUP_CODEX_COMMAND.txt
+- git show --stat --name-status e52e1cd
+- git show --stat --name-status c9311f8
+- git show --stat --name-status 9bd828d
+- git show origin/master:reports/PlumbingHands_Phase3_Final_Closeout_2026-07-16.md
+- git show origin/master:reports/phase3_unresolved_tasks.md
+- git show origin/master:reports/phase3_next_30_days_queue.md
+- git show origin/master:command-center/CODEX_NIGHT_SHIFT_V2.txt
+- git show origin/master:package.json
+- reports/day3_launch_qa_report.md
+- reports/forbidden_terms_scan_report.md
+- reports/build_status.md
+- reports/deployment_notes.md
+- reports/day3_remaining_owner_inputs.md
+- reports/post_vercel_deployment_report.md
+- reports/indexnow_submission_report.md
+
+Files inspected:
+- README.md
+- package.json
+- package-lock.json
+- pnpm-lock.yaml
+- pnpm-workspace.yaml
+- next.config.mjs
+- .env.example
+- scripts/qa-check.mjs
+- src/data/site.ts
+- src/components/CallButton.tsx
+- src/components/LeadForm.tsx
+- src/app/api/lead/route.ts
+- src/app/api/call-event/route.ts
+- command-center/NEXT_CODEX_TASK.txt
+- command-center/DAY3_LAUNCH_QA_DESIGN_CLEANUP_CODEX_COMMAND.txt
+- command-center/DAY3_PREMIUM_DESIGN_BLUEPRINT_CLEANUP_CODEX_COMMAND.txt
+- reports/day3_launch_qa_report.md
+- reports/forbidden_terms_scan_report.md
+- reports/build_status.md
+- reports/deployment_notes.md
+- reports/day3_remaining_owner_inputs.md
+- reports/post_vercel_deployment_report.md
+- reports/indexnow_submission_report.md
+- PlumbingHands_Branch_Push_Status.txt (local untracked status snapshot, not committed)
+- PlumbingHands_Safe_Branch_Status.txt (local untracked status snapshot, not committed)
+- PlumbingHands_Workflow_Status.txt (local untracked status snapshot, not committed)
+
+Files changed:
+- reports/workflow_resume_verification_20260716-054948.txt
+
+Files intentionally not changed:
+- Application source files
+- package.json
+- package-lock.json
+- command-center files
+- local untracked root status snapshots
+- environment files or credentials
+
+Commands executed and results:
+- git status --short --branch: PASS. Branch is codex/workflow-resume-20260716 tracking origin/codex/workflow-resume-20260716. Pre-existing untracked root status snapshots remain.
+- git remote -v: PASS. origin fetch and push both target https://github.com/affankhan147-arch/ppc-website.git.
+- git log --oneline -12: PASS. HEAD starts at 9bd828d followed by c9311f8 and e52e1cd.
+- git branch -vv: PASS. Active branch is codex/workflow-resume-20260716.
+- git rev-parse HEAD: PASS. 9bd828dcc0b0cb3f4b3dadd9c39aece1ee21725b.
+- git fetch origin: PASS.
+- git rev-list --left-right --count codex/workflow-resume-20260716...origin/codex/workflow-resume-20260716: PASS. 0 0 before this report commit.
+- git rev-list --left-right --count codex/workflow-resume-20260716...origin/master: PASS. 1 74 before this report commit.
+- rg forbidden public terms in src and public: PASS. No matches found.
+- npm ci: PASS. Added 502 packages and audited 503 packages in 3m. npm reported 9 vulnerabilities (1 low, 2 moderate, 6 high) and allow-scripts warnings. No dependency fix was run because that would be outside this report-only task.
+- npm pkg get scripts: PASS. Available scripts are dev, build, sites:build, start, typecheck, qa, and reports.
+- npm pkg get scripts.test scripts.lint scripts."test:routing": PASS. Result was {}, confirming those scripts are not declared on this branch.
+- npm run typecheck: PASS. tsc --noEmit exited 0.
+- npm run qa: PASS. Output: QA checks passed.
+- npm run build: PASS. next build exited 0, compiled successfully, and generated 118 static pages with dynamic /api/call-event and /api/lead routes.
+- npm run sites:build: PASS. vinext build completed all 5 build stages.
+
+Unavailable checks on this branch:
+- npm test: not declared in package.json on this branch.
+- npm run lint: not declared in package.json on this branch.
+- npm run test:routing: not declared in package.json on this branch.
+- tests/: directory is not present on this branch.
+
+Build result:
+PASS. next build compiled successfully and generated 118 static pages.
+PASS. vinext build completed successfully.
+
+Unresolved blockers and watch items:
+- This branch is stale compared with origin/master: 1 commit ahead and 74 commits behind before this report commit.
+- origin/master contains later package-manager/test-script remediation, security hardening, Phase 3 closeout, and Phase 4 Day 1 work that are not present on this branch.
+- The preserved command-center Day 3 files are historical instructions, not evidence of unfinished Day 3 implementation.
+- Owner-controlled data remains unavailable: Search Console/Bing exports, analytics proof, call-tracking exports, qualified lead dispositions, and owner-approved outreach/legal claim evidence.
+- npm ci reported 9 audit vulnerabilities on this branch. No audit fix was applied because the selected task was report-only verification.
+- Local untracked root files are preserved and not committed: PlumbingHands_Branch_Push_Status.txt, PlumbingHands_Safe_Branch_Status.txt, PlumbingHands_Workflow_Status.txt.
+
+Ending commit at report generation time:
+9bd828dcc0b0cb3f4b3dadd9c39aece1ee21725b
+
+Note on ending commit:
+This report is intended to be committed after generation. The final pushed report commit is recorded in the Codex final response because a committed report cannot truthfully contain its own future commit hash.
+
+Final git status at report generation time:
+## codex/workflow-resume-20260716...origin/codex/workflow-resume-20260716
+?? PlumbingHands_Branch_Push_Status.txt
+?? PlumbingHands_Safe_Branch_Status.txt
+?? PlumbingHands_Workflow_Status.txt
+?? reports/workflow_resume_verification_20260716-054948.txt
+
+Recommended next action:
+Do not repeat Day 3 implementation. Either:
+1. integrate or recreate the later verified origin/master workflow changes on a properly reviewed codex branch, or
+2. if staying on origin/master, continue with owner-data-limited work only: production call-flow health, owner-approved call tracking and analytics evidence, Search Console/Bing data ingestion, then query-backed improvements.
+
+Human approval remains required before merging anything into master.
