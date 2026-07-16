@@ -1,0 +1,182 @@
+name: PlumbingHands Continuity Fix and Smoke
+
+on:
+  push:
+    branches:
+      - test/continuity-smoke-20260716
+
+permissions:
+  contents: write
+  statuses: write
+
+jobs:
+  fix-and-smoke:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out continuity branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/workflow-resume-20260716
+          fetch-depth: 0
+
+      - name: Apply minimal Windows PowerShell compatibility fix
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = 'command-center\PlumbingHands_Agent_Continuity.ps1'
+          $content = Get-Content -LiteralPath $path -Raw
+          $old = '[string]$RepositoryRoot = (Split-Path -Parent $PSScriptRoot),'
+          $new = '[string]$RepositoryRoot,'
+          if (-not $content.Contains($old)) { throw 'Expected RepositoryRoot parameter pattern was not found.' }
+          $content = $content.Replace($old, $new)
+
+          $anchor = "`$ErrorActionPreference = 'Stop'"
+          $insert = @(
+            "`$ErrorActionPreference = 'Stop'"
+            ''
+            'if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {'
+            '    $RepositoryRoot = Split-Path -Parent $PSScriptRoot'
+            '}'
+          ) -join [Environment]::NewLine
+          if (-not $content.Contains($anchor)) { throw 'Runtime initialization anchor was not found.' }
+          $content = $content.Replace($anchor, $insert)
+          Set-Content -LiteralPath $path -Value $content -Encoding UTF8 -NoNewline
+
+          git diff --check
+          git config user.name 'PlumbingHands Workflow Test'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -- $path
+          git commit -m 'fix: initialize continuity repository root at runtime'
+          "FIX_COMMIT=$(git rev-parse HEAD)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Run Status and Prepare on Windows PowerShell 5.1
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          New-Item -ItemType Directory -Path '.test-evidence' -Force | Out-Null
+          $controller = (Resolve-Path 'command-center\PlumbingHands_Agent_Continuity.ps1').Path
+          $task = (Join-Path $PWD 'command-center\continuity-smoke-task.txt')
+          @(
+            'REPOSITORY: affankhan147-arch/ppc-website'
+            'BRANCH: codex/workflow-resume-20260716'
+            'STATUS: ready-to-resume'
+            'TASK: Continuity controller Windows smoke test.'
+            'REQUIRED REPORT: reports/continuity_smoke_result.md'
+          ) | Set-Content -LiteralPath $task -Encoding UTF8
+
+          function Invoke-Controller {
+            param([string]$Name,[string[]]$ControllerArgs)
+            $output = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller @ControllerArgs 2>&1
+            $code = $LASTEXITCODE
+            $text = ($output | ForEach-Object { [string]$_ }) -join "`n"
+            $output | Set-Content -LiteralPath ".test-evidence\$Name.txt" -Encoding UTF8
+            if ($code -ne 0) { throw "$Name failed with exit code $code.`n$text" }
+            $text
+          }
+
+          $status = Invoke-Controller -Name '01-status' -ControllerArgs @('-Mode','Status','-TaskPath',$task,'-AllowDirtyWorktree')
+          if ($status -notmatch 'RESULT: STATUS VERIFIED') { throw 'Status marker missing.' }
+          Start-Sleep -Seconds 1
+
+          $prepare = Invoke-Controller -Name '02-prepare' -ControllerArgs @('-Mode','Prepare','-TaskPath',$task,'-AllowDirtyWorktree')
+          if ($prepare -notmatch 'RESULT: PREPARED') { throw 'Prepare marker missing.' }
+
+          $manifestFile = Get-ChildItem 'command-center\antigravity-queue' -Recurse -File -Filter continuity-manifest.json |
+            Where-Object {
+              try { (Get-Content $_.FullName -Raw | ConvertFrom-Json).source_task_path -eq 'command-center/continuity-smoke-task.txt' }
+              catch { $false }
+            } | Sort-Object LastWriteTimeUtc -Descending | Select-Object -First 1
+          if (-not $manifestFile) { throw 'Prepare did not create the expected manifest.' }
+          $manifest = Get-Content $manifestFile.FullName -Raw | ConvertFrom-Json
+          if ($manifest.repository -ne 'affankhan147-arch/ppc-website') { throw 'Manifest repository mismatch.' }
+          if ($manifest.branch -ne 'codex/workflow-resume-20260716') { throw 'Manifest branch mismatch.' }
+          if ($manifest.required_checks.Count -ne 3) { throw 'Manifest required-check count mismatch.' }
+          "BUNDLE_PATH=$($manifestFile.Directory.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "TASK_PATH=$task" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Run Resume and Verify with repository evidence
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $controller = (Resolve-Path 'command-center\PlumbingHands_Agent_Continuity.ps1').Path
+          'ephemeral substantive proof' | Set-Content 'src\data\continuitySmokeProof.txt' -Encoding UTF8
+          '# Continuity Smoke Result' | Set-Content 'reports\continuity_smoke_result.md' -Encoding UTF8
+          git add --all
+          git commit -m 'test: create ephemeral continuity verification evidence'
+
+          $resumeOutput = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller -Mode Resume -BundlePath $env:BUNDLE_PATH -AllowDirtyWorktree 2>&1
+          $resumeCode = $LASTEXITCODE
+          $resumeOutput | Set-Content '.test-evidence\03-resume.txt' -Encoding UTF8
+          $resumeText = ($resumeOutput | ForEach-Object { [string]$_ }) -join "`n"
+          if ($resumeCode -ne 0 -or $resumeText -notmatch 'RESULT: RESUME READY') { throw "Resume failed.`n$resumeText" }
+          if (-not (Test-Path (Join-Path $env:BUNDLE_PATH 'RESUME_CONTEXT.md'))) { throw 'RESUME_CONTEXT.md was not created.' }
+          Start-Sleep -Seconds 1
+
+          $verifyOutput = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller -Mode Verify -BundlePath $env:BUNDLE_PATH -AllowDirtyWorktree 2>&1
+          $verifyCode = $LASTEXITCODE
+          $verifyOutput | Set-Content '.test-evidence\04-verify.txt' -Encoding UTF8
+          $verifyText = ($verifyOutput | ForEach-Object { [string]$_ }) -join "`n"
+          if ($verifyCode -ne 0 -or $verifyText -notmatch 'RESULT: REPOSITORY EVIDENCE VERIFIED') { throw "Verify failed.`n$verifyText" }
+
+      - name: Verify safety guards
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $controller = (Resolve-Path 'command-center\PlumbingHands_Agent_Continuity.ps1').Path
+
+          'unrelated' | Set-Content 'unrelated-smoke.txt'
+          $dirty = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller -Mode Status -TaskPath $env:TASK_PATH 2>&1
+          $dirtyCode = $LASTEXITCODE
+          $dirty | Set-Content '.test-evidence\05-dirty-guard.txt' -Encoding UTF8
+          if ($dirtyCode -eq 0 -or (($dirty | ForEach-Object { [string]$_ }) -join "`n") -notmatch 'Working tree contains changes outside generated continuity artifacts') { throw 'Dirty-worktree guard did not fail correctly.' }
+          Remove-Item 'unrelated-smoke.txt' -Force
+
+          Add-Content -LiteralPath $env:TASK_PATH -Value 'TAMPERED AFTER PREPARE'
+          $hash = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller -Mode Resume -BundlePath $env:BUNDLE_PATH -AllowDirtyWorktree 2>&1
+          $hashCode = $LASTEXITCODE
+          $hash | Set-Content '.test-evidence\06-hash-guard.txt' -Encoding UTF8
+          if ($hashCode -eq 0 -or (($hash | ForEach-Object { [string]$_ }) -join "`n") -notmatch 'Source task changed after preparation') { throw 'Task-hash guard did not fail correctly.' }
+          git checkout -- 'command-center/continuity-smoke-task.txt'
+
+          $branch = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller -Mode Status -Branch master -TaskPath $env:TASK_PATH -AllowDirtyWorktree 2>&1
+          $branchCode = $LASTEXITCODE
+          $branch | Set-Content '.test-evidence\07-branch-guard.txt' -Encoding UTF8
+          if ($branchCode -eq 0 -or (($branch | ForEach-Object { [string]$_ }) -join "`n") -notmatch 'Branch mismatch') { throw 'Branch guard did not fail correctly.' }
+
+      - name: Push only the tested controller fix
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          git reset --hard $env:FIX_COMMIT
+          git clean -fd
+          if (git status --porcelain) { throw 'Working tree is not clean after smoke-test cleanup.' }
+          git fetch origin codex/workflow-resume-20260716
+          $remote = (git rev-parse origin/codex/workflow-resume-20260716).Trim()
+          $parent = (git rev-parse "$env:FIX_COMMIT^").Trim()
+          if ($remote -ne $parent) { throw 'Continuity branch moved during testing; refusing to push.' }
+          git push origin HEAD:codex/workflow-resume-20260716
+
+      - name: Upload smoke evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plumbinghands-continuity-fix-smoke-evidence
+          if-no-files-found: warn
+          path: .test-evidence/**
+
+      - name: Publish final smoke status
+        if: always()
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          TEST_SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+          SERVER_URL: ${{ github.server_url }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          $state = if ($env:JOB_STATUS -eq 'success') { 'success' } else { 'failure' }
+          $description = if ($state -eq 'success') { 'Controller fixed, fully tested, and pushed' } else { 'Fix-and-smoke run failed; inspect run evidence' }
+          $body = @{state=$state;context='PlumbingHands Continuity Fix and Smoke';description=$description;target_url="$env:SERVER_URL/$env:REPOSITORY/actions/runs/$env:RUN_ID"} | ConvertTo-Json
+          Invoke-RestMethod -Uri "https://api.github.com/repos/$env:REPOSITORY/statuses/$env:TEST_SHA" -Method Post -Headers @{Authorization="Bearer $env:GH_TOKEN";Accept='application/vnd.github+json';'X-GitHub-Api-Version'='2022-11-28'} -ContentType 'application/json' -Body $body | Out-Null
