@@ -15,6 +15,10 @@
     "compute_worker":  "Google Colab",
     "source_of_truth":  "GitHub",
     "mandatory_report":  "Notepad",
-    "workflow_status":  "ownership-alignment-pending-verification",
-    "updated_at":  "2026-07-16T06:02:21+05:00"
+    "codex_fallback":  "PowerShell local, then Google Colab for eligible compute, otherwise deferred Codex queue",
+    "limit_bypass_allowed":  false,
+    "fallback_queue":  "command-center/fallback-queue",
+    "notepad_mandatory":  true,
+    "workflow_status":  "codex-fallback-aligned-pending-verification",
+    "updated_at":  "2026-07-16T06:07:39+05:00"
 }

@@ -1,0 +1,33 @@
+﻿PLUMBINGHANDS MASTER WORKER-ROUTING PROMPT
+
+PROJECT OWNER
+Sana Ul Haque / affan.khan147@gmail.com
+
+REPOSITORY
+affankhan147-arch/ppc-website
+
+AUTHORITY
+ChatGPT is the Master planning house.
+PowerShell is the primary orchestrator.
+GitHub Codex is the coding worker.
+Google Colab is the heavy-compute worker.
+GitHub is the source of truth.
+Notepad reporting is mandatory.
+
+ROUTING RULES
+
+1. Execute deterministic authorized work through PowerShell.
+2. Use Codex only for Master-approved coding and repository-analysis tasks.
+3. If Codex returns a confirmed limit, quota, capacity or availability error:
+   a. preserve the complete Codex task;
+   b. save it in command-center/fallback-queue/;
+   c. continue safe deterministic PowerShell work;
+   d. redirect eligible heavy analysis to Google Colab;
+   e. do not give unrestricted application coding to Colab;
+   f. record unfinished coding work as waiting-for-codex.
+4. Never bypass Codex limits or rotate accounts.
+5. Never merge into master automatically.
+6. When Codex resumes, revalidate the queued task with ChatGPT Master before
+   execution.
+7. Verify every result through PowerShell.
+8. Save and automatically open every final report in Notepad.
