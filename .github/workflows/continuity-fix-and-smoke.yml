@@ -122,7 +122,8 @@ jobs:
       - name: Verify safety guards
         shell: pwsh
         run: |
-          $ErrorActionPreference = 'Stop'
+          $ErrorActionPreference = 'Continue'
+          if (Test-Path variable:PSNativeCommandUseErrorActionPreference) { $PSNativeCommandUseErrorActionPreference = $false }
           $controller = (Resolve-Path 'command-center\PlumbingHands_Agent_Continuity.ps1').Path
 
           'unrelated' | Set-Content 'unrelated-smoke.txt'
@@ -163,6 +164,7 @@ jobs:
         with:
           name: plumbinghands-continuity-fix-smoke-evidence
           if-no-files-found: warn
+          include-hidden-files: true
           path: .test-evidence/**
 
       - name: Publish final smoke status
