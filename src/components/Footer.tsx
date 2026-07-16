@@ -7,21 +7,22 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-[#102238] text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
+    <footer className="border-t border-white/10 bg-[#081b2c] text-white">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-[1.35fr_1fr_1fr_1fr]">
         <div>
-          <p className="text-lg font-black">{siteConfig.brandName}</p>
+          <p className="text-2xl font-black tracking-tight">{siteConfig.brandName}</p>
+          <p className="mt-2 font-serif text-xl text-cyan-100">Plumbing guidance for stressful moments.</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-200">{siteConfig.disclosure}</p>
           <a
             href={phoneConfig.href}
             data-phone-location="footer"
-            className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-md bg-orange-700 px-4 py-2 text-sm font-black text-white transition hover:bg-orange-800"
+            className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#e84d0e] px-5 py-3 text-sm font-black text-white shadow-lg transition hover:bg-[#bf360c]"
             aria-label={`Call ${phoneConfig.display} from footer`}
           >
             <PhoneCall className="h-4 w-4" aria-hidden="true" />
             Call {phoneConfig.display}
           </a>
-          <p className="mt-4 rounded-md border border-white/15 bg-white/10 p-3 text-xs leading-5 text-slate-200">
+          <p className="mt-5 rounded-xl border border-white/15 bg-white/[.07] p-4 text-xs leading-5 text-slate-200">
             Service availability may vary by location, timing, and provider coverage. Confirm pricing, credentials, and scope directly with the provider.
           </p>
         </div>
