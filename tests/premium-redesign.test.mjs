@@ -15,6 +15,7 @@ test("premium homepage uses the approved original photography", async () => {
     "homeowner-consultation.png",
     "service-van.webp",
     "provider-crew.webp",
+    "drain-cleaning.webp",
     "sewer-inspection.webp",
     "water-heater-inspection.webp",
     "toilet-repair.webp"
@@ -22,8 +23,18 @@ test("premium homepage uses the approved original photography", async () => {
 
   for (const asset of assets) {
     await access(new URL(`public/images/photography/${asset}`, root));
-    assert.match(home, new RegExp(`/images/photography/${asset.replace(".", "\\.")}`));
+    assert.match(`${home}\n${css}`, new RegExp(`/images/photography/${asset.replace(".", "\\.")}`));
   }
+});
+
+test("service photography is unique and uses stable cover frames", () => {
+  const serviceBlock = home.slice(home.indexOf("const servicePhotography"), home.indexOf("const capitalizeFirst"));
+  const sources = [...serviceBlock.matchAll(/src: "([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(sources.length, 6);
+  assert.equal(new Set(sources).size, 6);
+  assert.doesNotMatch(home, /<Image src=\{servicePhotography/);
+  assert.match(home, /className="media-cover diagnostic-photo"/);
+  assert.match(home, /className="service-photo"/);
 });
 
 test("redesign includes premium trust and conversion structure", () => {

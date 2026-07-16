@@ -33,7 +33,7 @@ const urgentCards = [
 
 const servicePhotography: Record<string, { src: string; alt: string }> = {
   "24-hour-emergency-plumber": { src: "/images/photography/service-van.webp", alt: "Illustrative unbranded plumbing service vehicle arriving at a DFW home" },
-  "emergency-drain-cleaning": { src: "/images/photography/sewer-inspection.webp", alt: "Illustrative plumbing professional inspecting a residential drain line" },
+  "emergency-drain-cleaning": { src: "/images/photography/drain-cleaning.webp", alt: "Illustrative plumbing professional inspecting a residential drain line" },
   "main-sewer-line-clog": { src: "/images/photography/sewer-inspection.webp", alt: "Illustrative camera inspection at a residential sewer cleanout" },
   "toilet-overflow-emergency": { src: "/images/photography/toilet-repair.webp", alt: "Illustrative plumbing professional inspecting a toilet tank" },
   "burst-pipe-emergency": { src: "/images/photography/plumbing-diagnostic.png", alt: "Illustrative close-up of a plumbing diagnostic inspection" },
@@ -115,9 +115,7 @@ export default function HomePage() {
       <div className="page-shell">
         <section className="content-section overflow-hidden p-0">
           <div className="grid lg:grid-cols-[.88fr_1.12fr]">
-            <div className="overflow-hidden bg-slate-100">
-              <Image src="/images/photography/plumbing-diagnostic.png" alt="Illustrative close-up of a plumbing diagnostic inspection beneath a sink" width={1536} height={1024} sizes="(min-width:1024px) 44vw, 100vw" className="h-full max-h-[520px] min-h-[280px] w-full object-cover" />
-            </div>
+            <div className="media-cover diagnostic-photo" role="img" aria-label="Illustrative close-up of a plumbing diagnostic inspection beneath a sink" />
             <div className="p-7 sm:p-10 lg:p-12">
               <p className="section-kicker">Useful before the call</p>
               <h2 className="display-title mt-3 text-4xl font-bold leading-tight text-[#081b2c]">Notice the pattern—not just the mess.</h2>
@@ -139,7 +137,7 @@ export default function HomePage() {
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {featuredServices.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group overflow-hidden">
-                <Image src={servicePhotography[service.slug].src} alt={servicePhotography[service.slug].alt} width={1536} height={1024} sizes="(min-width:1024px) 30vw, (min-width:768px) 48vw, 100vw" className="aspect-[16/8] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <div className="service-photo" role="img" aria-label={servicePhotography[service.slug].alt} style={{ backgroundImage: `url(${servicePhotography[service.slug].src})` }} />
                 <div className="p-5">
                   <h3 className="text-xl font-black leading-tight text-[#081b2c]">{capitalizeFirst(service.name)}</h3>
                   <p className="mt-2 line-clamp-3 leading-7 text-slate-600">{service.shortAnswer}</p>
@@ -162,15 +160,13 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="overflow-hidden bg-[#123b58]">
-              <Image src="/images/photography/homeowner-consultation.png" alt="Illustrative scene of a plumbing professional explaining a sink assessment to a homeowner" width={1536} height={1024} sizes="(min-width:1024px) 50vw, 100vw" className="h-full max-h-[520px] min-h-[300px] w-full object-cover" />
-            </div>
+            <div className="media-cover consultation-photo" role="img" aria-label="Illustrative scene of a plumbing professional explaining a sink assessment to a homeowner" />
           </div>
         </section>
 
         <section className="content-section overflow-hidden p-0">
           <div className="grid items-center lg:grid-cols-[1.08fr_.92fr]">
-            <Image src="/images/photography/provider-crew.webp" alt="Illustrative provider crew preparing tools beside an unbranded service vehicle" width={1536} height={1024} sizes="(min-width:1024px) 54vw, 100vw" className="h-full max-h-[420px] min-h-[270px] w-full object-cover" />
+            <div className="media-cover crew-photo" role="img" aria-label="Illustrative provider crew preparing tools beside an unbranded service vehicle" />
             <div className="p-7 sm:p-9">
               <p className="section-kicker">Prepared for the request</p>
               <h2 className="display-title mt-3 text-4xl font-bold leading-tight text-[#081b2c]">A professional arrival starts with clear details.</h2>

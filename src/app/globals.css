@@ -139,6 +139,21 @@ a.premium-card:hover {
   border-radius: inherit;
   pointer-events: none;
 }
+.media-cover, .service-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.media-cover { min-height: clamp(18rem, 34vw, 30rem); }
+.diagnostic-photo { background-image: url("/images/photography/plumbing-diagnostic.png"); }
+.consultation-photo { background-image: url("/images/photography/homeowner-consultation.png"); }
+.crew-photo { background-image: url("/images/photography/provider-crew.webp"); }
+.service-photo {
+  height: clamp(11rem, 18vw, 14rem);
+  border-bottom: 1px solid rgba(11, 36, 57, 0.11);
+  transition: transform 500ms ease;
+}
+a.premium-card:hover .service-photo { transform: scale(1.025); }
 .premium-form input, .premium-form select, .premium-form textarea { outline: none; width: 100%; min-width: 0; }
 .premium-form input:focus, .premium-form select:focus, .premium-form textarea:focus {
   border-color: var(--blue);
