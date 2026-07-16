@@ -8,7 +8,7 @@ Creates, resumes, and verifies a controlled Google Antigravity handoff for Plumb
 param(
     [ValidateSet('Status', 'Prepare', 'Resume', 'Verify')]
     [string]$Mode = 'Status',
-    [string]$RepositoryRoot = (Split-Path -Parent $PSScriptRoot),
+    [string]$RepositoryRoot,
     [string]$Branch = 'codex/workflow-resume-20260716',
     [string]$TaskPath,
     [string]$BundlePath,
@@ -17,6 +17,10 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
+    $RepositoryRoot = Split-Path -Parent $PSScriptRoot
+}
 
 $ExpectedRepository = 'affankhan147-arch/ppc-website'
 $ProjectOwner = 'Sana Ul Haque'
