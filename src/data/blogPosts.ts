@@ -39,7 +39,8 @@ const titles = [
   "Emergency Sewer Help in Garland: Signs and Next Steps",
   "Water Shutoff Valve Will Not Close During a Leak",
   "Emergency Leak Approval Checklist for Homeowners",
-  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore"
+  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore",
+  "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean"
 ];
 
 const serviceCycle = [
@@ -63,11 +64,14 @@ const slugify = (value: string) =>
 
 const slugOverrides: Record<string, string> = {
   "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore":
-    "7-plumbing-problems-you-should-never-ignore"
+    "7-plumbing-problems-you-should-never-ignore",
+  "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean":
+    "water-stain-ceiling-below-bathroom-dallas"
 };
 
 const relatedServiceOverrides: Record<string, string> = {
   "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore": "24-hour-emergency-plumber",
+  "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean": "burst-pipe-emergency",
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
   "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency"
 };
@@ -75,6 +79,8 @@ const relatedServiceOverrides: Record<string, string> = {
 const directAnswerOverrides: Record<string, string> = {
   "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore":
     "Multiple slow drains, whole-house pressure loss, unexplained moisture, sewer odors, and active leaks can point to plumbing problems Dallas–Fort Worth homeowners should check before they spread.",
+  "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean":
+    "A ceiling stain below a Dallas bathroom can come from a toilet seal, shower or tub drain, sink connection, waterproofing failure, or hidden supply pipe; timing fixture use can help narrow the source.",
   "Emergency Plumber Near Me Open Now: What to Do Before Help Arrives":
     "If a plumbing issue cannot wait, shut off water where safe, avoid using affected fixtures, document visible damage, and request an emergency provider connection with your city and problem type.",
   "Toilet Overflowing at Night in Dallas: Fast Steps for Homeowners":
