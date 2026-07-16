@@ -6,6 +6,8 @@ import { Menu, ShieldCheck, X } from "lucide-react";
 import { navigation, siteConfig } from "@/data/site";
 import { CallButton } from "@/components/CallButton";
 
+const mobileNavigation = [{ label: "Home", href: "/" }, ...navigation];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -49,7 +51,7 @@ export function Header() {
           aria-label="Mobile navigation"
         >
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-2 sm:grid-cols-3">
-            {navigation.map((item) => (
+            {mobileNavigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
