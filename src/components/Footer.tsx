@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-[1.35fr_1fr_1fr_1fr]">
         <div>
           <p className="text-2xl font-black tracking-tight">{siteConfig.brandName}</p>
-          <p className="mt-2 font-serif text-xl text-cyan-100">Plumbing guidance for stressful moments.</p>
+          <p className="mt-2 font-serif text-xl text-cyan-100">Emergency plumbing service for stressful moments.</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-200">{siteConfig.disclosure}</p>
           <a
             href={phoneConfig.href}
@@ -23,7 +23,7 @@ export function Footer() {
             Call {phoneConfig.display}
           </a>
           <p className="mt-5 rounded-xl border border-white/15 bg-white/[.07] p-4 text-xs leading-5 text-slate-200">
-            Service availability may vary by location, timing, and provider coverage. Confirm pricing, credentials, and scope directly with the provider.
+            Service availability varies by location and current coverage. Confirm pricing and work scope before service begins.
           </p>
         </div>
         <div>
