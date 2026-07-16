@@ -22,8 +22,8 @@ export function Footer() {
             <PhoneCall className="h-4 w-4" aria-hidden="true" />
             Call {phoneConfig.display}
           </a>
-          <p className="mt-5 rounded-xl border border-white/15 bg-white/[.07] p-4 text-xs leading-5 text-slate-200">
-            Service availability varies by location and current coverage. Confirm pricing and work scope before service begins.
+          <p className="mt-5 rounded-xl border border-white/15 bg-white/[.07] p-4 text-sm font-semibold leading-6 text-slate-200">
+            Fast help for urgent leaks, drains, sewer, pipe, toilet, and water-heater problems across Dallas–Fort Worth.
           </p>
         </div>
         <div>
