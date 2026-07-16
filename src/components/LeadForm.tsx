@@ -46,7 +46,7 @@ export function LeadForm({
             Share your location
           </h3>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Provide your city or ZIP so local service availability can be checked.
+            Provide your city or ZIP so the right local service can be discussed.
           </p>
         </article>
 
@@ -58,7 +58,7 @@ export function LeadForm({
             Discuss the next step
           </h3>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Speak by phone about availability and the appropriate next action.
+            Speak by phone about the plumbing service and the next action.
           </p>
         </article>
       </div>
@@ -72,9 +72,8 @@ export function LeadForm({
           Call {siteConfig.phoneDisplay}
         </a>
 
-        <p className="max-w-2xl text-xs leading-5 text-slate-600">
-          Availability depends on location, timing, and provider coverage.
-          Confirm pricing, credentials, and arrival details directly with the provider.
+        <p className="max-w-2xl text-sm font-semibold leading-6 text-slate-600">
+          Call now to discuss your plumbing problem and get the next service step started.
         </p>
       </div>
     </section>
