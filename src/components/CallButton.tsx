@@ -82,7 +82,7 @@ export function CallButton({
 
   return (
     <a
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-orange-700 px-5 py-3 text-base font-black text-white shadow-sm transition hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300 ${className}`}
+      className={`premium-call-button inline-flex min-h-12 items-center justify-center gap-2 px-5 py-3 text-base font-black text-white transition focus:outline-none focus-visible:ring-4 focus-visible:ring-orange-200 ${className}`}
       href={hasUsablePhone ? phoneConfig.href : "/contact"}
       data-call-event-name={eventName || inferEventName(location)}
       data-cta-location={location}
@@ -90,8 +90,10 @@ export function CallButton({
       onClick={handleClick}
       aria-label={`${label} from ${location}`}
     >
-      <PhoneCall className="h-4 w-4" aria-hidden="true" />
-      {label}
+      <span className="grid h-7 w-7 place-items-center rounded-full bg-white/15" aria-hidden="true">
+        <PhoneCall className="h-4 w-4" />
+      </span>
+      <span>{label}</span>
     </a>
   );
 }
