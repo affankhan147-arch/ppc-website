@@ -635,6 +635,47 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
     ]
   },
+  "main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options": {
+    checklistTitle: "How to recognize a likely main sewer clog",
+    checklistIntro:
+      "One slow sink usually points to a problem near that fixture. A main sewer restriction behaves differently: fixtures begin reacting to one another, and the lowest drain often shows the trouble first. The pattern matters more than any single gurgle.",
+    checklistItems: [
+      "Stop using water when flushing a toilet makes water rise in a tub or shower, laundry causes a floor drain to back up, or several fixtures slow down together.",
+      "Check the lowest fixtures and the outdoor cleanout from a safe distance. Do not remove a cleanout cap when wastewater is visible, overflowing, or may be under pressure.",
+      "Keep people and pets away from sewage. Do not run more water to test the line, and do not pour chemical cleaner into fixtures connected to an active backup.",
+      "Write down the fixture sequence: what was used first, where water appeared, whether it was clean or dirty, and whether the problem changes after heavy household water use.",
+      "Mention recurring clogs, recent drain work, known roots, property access, and whether the cleanout can be located. These details help a provider plan the first inspection without assuming the cause.",
+      "For apartments, restaurants, or shared buildings, report the backup promptly and note whether other units or common drains are affected. A shared-line problem needs different coordination than one bathroom clog."
+    ],
+    proofTitle: "What the first sewer visit may—and may not—resolve",
+    proofItems: [
+      "Ask whether the visit is for emergency containment, line clearing, camera inspection, cause diagnosis, cleanup coordination, or repair planning. These may be separate scopes.",
+      "Clearing a blockage can restore flow without proving why it formed. When the problem returns, ask what evidence supports roots, grease, damaged pipe, poor slope, or another suspected cause.",
+      "Confirm which access point and line segment the provider expects to work on, what happens if the cleanout is inaccessible, and whether a follow-up camera inspection is included or optional.",
+      "Confirm availability, credentials, dispatch or diagnostic charges, after-hours terms, and repair approval directly with the provider. Do not rely on guaranteed timing, exact pricing, or a diagnosis made before inspection."
+    ],
+    extraFaqs: [
+      {
+        question: "What is the clearest sign of a main sewer line clog in a Dallas home?",
+        answer:
+          "The strongest clue is more than one fixture reacting together—for example, a toilet flush causing water to rise in a tub, shower, floor drain, or outdoor cleanout. Stop water use when that pattern appears."
+      },
+      {
+        question: "Does clearing a main sewer clog fix the underlying problem?",
+        answer:
+          "Not always. Clearing may restore flow, while camera inspection or follow-up diagnosis may be needed to evaluate a recurring cause such as roots, buildup, damaged pipe, or access-related issues. Ask what the completed scope actually confirmed."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog help", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer backup help", href: "/services/sewer-backup-help" },
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Water backing up in the shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" },
+      { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
+      { label: "Sewer line clog cost factors", href: "/cost-guides/sewer-line-clog-cost-guide" }
+    ]
+  },
   "water-shutoff-valve-will-not-close-during-a-leak": {
     checklistTitle: "Failed shutoff leak checklist",
     checklistIntro:
