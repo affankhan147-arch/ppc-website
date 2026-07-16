@@ -7,7 +7,7 @@ export const phoneConfig = {
 
 export const siteConfig = {
   brandName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
-  serviceName: "Emergency Plumbing Help",
+  serviceName: "Emergency Plumbing Service",
   legalName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://plumbinghands.com",
   marketName: process.env.NEXT_PUBLIC_PRIMARY_MARKET || "Dallas-Fort Worth",
@@ -20,9 +20,9 @@ export const siteConfig = {
   fallbackPhoneE164: phoneConfig.e164,
   email: "partners@example.com",
   serviceStatement:
-    "Plumbing Hands helps you connect with available plumbing professionals serving your area.",
+    "Plumbing Hands helps homeowners request emergency plumbing service across Dallas-Fort Worth.",
   disclosure:
-    "Plumbing Hands helps you connect with available plumbing professionals serving your area.",
+    "Emergency plumbing service assistance for urgent leaks, drains, sewer, pipe, toilet, and water-heater problems across Dallas-Fort Worth.",
   legalDisclosure:
     "Plumbing Hands is a provider-connection website for service-area requests. A city, service, or city-service page should not be read as a claim that Plumbing Hands maintains a staffed office, address, local license, guaranteed availability, or arrival-time promise in that location.",
   ownerSetupNote:
