@@ -1,0 +1,3 @@
+"page","issue","evidence","action"
+"/partner-with-us","customer and provider flows were previously coupled","LeadForm replaced with PartnerApplicationForm and separate API route","Verify owner-approved provider routing destination."
+"/contact","customer lead destination owner-blocked","src/app/api/lead logs safe placeholder only","Owner supplies approved CRM/email/webhook destination."

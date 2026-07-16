@@ -2,7 +2,7 @@ import { CallButton } from "@/components/CallButton";
 import { FAQBlock, InternalLinks } from "@/components/PageSections";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, faqSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Emergency plumbing and drain cleaning FAQ",
@@ -15,7 +15,13 @@ export default function FAQPage() {
 
   return (
     <main className="page-shell">
-      <JsonLd data={[webPageSchema("/faq", "Emergency plumbing FAQ", "Urgent plumbing answers for Dallas-Fort Worth users."), faqSchema(faqs)]} />
+      <JsonLd
+        data={[
+          webPageSchema("/faq", "Emergency plumbing FAQ", "Urgent plumbing answers for Dallas-Fort Worth users."),
+          breadcrumbSchema([{ name: "FAQ", path: "/faq" }]),
+          faqSchema(faqs)
+        ]}
+      />
       <p className="section-kicker">Answer engine hub</p>
       <h1 className="mt-3 text-4xl font-black text-slate-950">Emergency plumbing and drain cleaning FAQ</h1>
       <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700">

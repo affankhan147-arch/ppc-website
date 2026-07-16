@@ -1,0 +1,3 @@
+"date","change","files","validation"
+"2026-07-14","Separated provider application flow from customer emergency request flow.","src/app/partner-with-us/page.tsx; src/components/PartnerApplicationForm.tsx; src/app/api/partner-application/route.ts; src/app/api/call-event/route.ts","typecheck/build/qa/lint/sites build passed"
+"2026-07-14","Refined public FAQ/city disclosure wording.","src/data/faqs.ts; src/app/cities/[citySlug]/page.tsx; src/app/cities/[citySlug]/[serviceSlug]/page.tsx; src/components/LeadForm.tsx","source scan and build passed"

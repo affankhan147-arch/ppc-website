@@ -1,0 +1,6 @@
+"url","old_snippet_source","new_snippet_direction","unsupported_claims_added"
+"/services/24-hour-emergency-plumber","service.shortAnswer","clear emergency criteria plus provider-confirmation wording","no"
+"/services/emergency-drain-cleaning","service.shortAnswer","wastewater/multi-fixture urgency and scope questions","no"
+"/services/main-sewer-line-clog","service.shortAnswer","main-line symptoms and stop-water guidance","no"
+"/cost-guides/emergency-plumbing-cost-dfw","guide.directAnswer","cost drivers and dispatch/diagnostic confirmation","no"
+"/problems/water-shutoff-valve-will-not-close","problem.directAnswer","failed shutoff safety and next-safe-valve path","no"

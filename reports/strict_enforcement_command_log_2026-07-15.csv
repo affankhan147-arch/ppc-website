@@ -1,0 +1,79 @@
+"label","command","status","exit_code","duration_ms","output_excerpt"
+"typecheck","pnpm run typecheck","PASS","0","10481",""
+"build","pnpm run build","PASS","0","38553","▲ Next.js 16.2.10 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 12.0s
+  Running TypeScript ...
+  Finished TypeScript in 12.0s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/125) ...
+  Generating static pages using 3 workers (31/125) 
+  Generating static pages using 3 workers (62/125) 
+  Generating static pages using 3 workers (93/125) 
+✓ Generating static pages using 3 workers (125/125) in 4.8s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/call-event
+├ ƒ /api/lead
+├ ƒ /api/partner-application
+├ ○ /blog
+├ ● /blog/[postSlug]
+│ ├ /blog/emergency-plumber-near-me-open-now-what-to-do-before-help-arrives
+│ ├ /blog/toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners
+│ ├ /blog/main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options
+│ └ [+29 more paths]
+├ ○ /cities
+├ ● /cities/[citySlug]
+│ ├ /cities/dallas
+│ ├ /cities/fort-worth
+│ ├ /cities/arlington
+│ └ [+27 more paths]
+├ ● /cities/[citySlug]/[serviceSlug]
+│ ├ /cities/dallas/24-hour-emergency-plumber
+│ ├ /cities/dallas/emergency-drain-cleaning
+│ ├ /cities/fort-worth/24-hour-emergency-plumber
+│ └ [+13 m"
+"qa","pnpm run qa","PASS","0","1807","QA checks passed."
+"eslint","pnpm exec eslint src scripts worker --max-warnings=0","PASS","0","21172",""
+"sites:build","pnpm run sites:build","PASS","0","13178","vinext build  (Vite 8.0.13)
+
+[34m[1/5] analyze client references...[39m
+[2Ktransforming...✓ 273 modules transformed.
+rendering chunks...
+[32m✓ built in 1.76s[39m
+[34m[2/5] analyze server references...[39m
+[2Ktransforming...✓ 121 modules transformed.
+rendering chunks...
+[32m✓ built in 539ms[39m
+[34m[3/5] build rsc environment...[39m
+[2Ktransforming...✓ 279 modules transformed.
+rendering chunks...
+computing gzip size...
+[32m✓ built in 1.64s[39m
+[34m[4/5] build client environment...[39m
+[2Ktransforming...✓ 1874 modules transformed.
+rendering chunks...
+computing gzip size...
+[32m✓ built in 2.83s[39m
+[34m[5/5] build ssr environment...[39m
+[2Ktransforming...✓ 127 modules transformed.
+rendering chunks...
+computing gzip size...
+[32m✓ built in 745ms[39m
+[0m
+  Route (app)
+  ┌ ? /                             
+  ├ λ /api/call-event               
+  ├ λ /api/lead                     
+  ├ λ /api/partner-application      
+  ├ ? /blog                         
+  ├ ƒ /blog/:postSlug               
+  ├ ? /cities                       
+  ├ ƒ /cities/:citySlug             
+  ├ ƒ /cities/:citySlug/:serviceSlug
+  ├ ? /contact                      
+  ├ ƒ /cost-guides/:guideS"

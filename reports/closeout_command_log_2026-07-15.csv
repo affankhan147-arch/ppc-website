@@ -1,0 +1,135 @@
+"label","command","status","exit_code","duration_ms","output_excerpt"
+"routing tests","npm run test:routing","PASS","0","1090","> ppc-lead-generation-platform@1.0.0 test:routing
+> node --test --experimental-strip-types tests/form-routing.test.mjs
+
+service_request_delivery_failed { requestId: 'request_mrl97bia_m0fqj5', reason: 'not-configured' }
+✔ fails honestly when a destination is not configured (2.3308ms)
+✔ keeps customer and partner destinations separate (31.0091ms)
+✔ reports a rejected webhook delivery (0.4366ms)
+✔ rejects invalid production webhook URLs (0.2596ms)
+✔ adds bearer authorization only when configured (1.0119ms)
+✔ lead route returns 400 for invalid input (3.1444ms)
+✔ lead route returns an honest 503 when delivery is not configured (1.8816ms)
+✔ partner honeypot filters without calling the webhook (2.3685ms)
+✔ routes successful customer and partner submissions to separate payload types (1.366ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.9362"
+"status tests","npm run test:status","PASS","0","803","> ppc-lead-generation-platform@1.0.0 test:status
+> node --test --experimental-strip-types tests/operational-status.test.mjs
+
+✔ reports owner-action-required without exposing destination values (1.2667ms)
+✔ reports configured surfaces as booleans and modes only (0.3286ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 172.5053"
+"typecheck","npm run typecheck","PASS","0","3312","> ppc-lead-generation-platform@1.0.0 typecheck
+> tsc --noEmit"
+"qa","npm run qa","PASS","0","726","> ppc-lead-generation-platform@1.0.0 qa
+> node scripts/qa-check.mjs
+
+QA checks passed."
+"eslint","npm run lint","PASS","0","14084","> ppc-lead-generation-platform@1.0.0 lint
+> eslint src scripts worker --max-warnings=0"
+"next build","npm run build","PASS","0","20946","> ppc-lead-generation-platform@1.0.0 build
+> next build
+
+▲ Next.js 16.2.10 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.3s
+  Running TypeScript ...
+  Finished TypeScript in 6.6s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/125) ...
+  Generating static pages using 3 workers (31/125) 
+  Generating static pages using 3 workers (62/125) 
+  Generating static pages using 3 workers (93/125) 
+✓ Generating static pages using 3 workers (125/125) in 3.3s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/call-event
+├ ƒ /api/health
+├ ƒ /api/lead
+├ ƒ /api/partner-application
+├ ○ /blog
+├ ● /blog/[postSlug]
+│ ├ /blog/emergency-plumber-near-me-open-now-what-to-do-before-help-arrives
+│ ├ /blog/toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners
+│ ├ /blog/main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options
+│ └ [+29 more paths]
+├ ○ /cities
+├ ● /cities/[citySlug]
+│ ├ /cities/dallas
+│ ├ /cities/fort-worth
+│ ├ /cities/arlington
+│ └ [+27 more paths]
+├ ● /cities/[citySlug]/[serviceSlug]
+│ ├ /cities/dallas/24-hour-emergency-plumber
+│ ├ /cities/dallas/emergency-drain-cleaning
+│ ├ /cities/fort-worth/24-hour-emergency-plumber
+│ └ [+13 more paths]
+├ ○ /contact
+├ ● /cost-guides/[guideSlug]
+│ ├ /cost-guides/emergency-plumbing-cost-dfw
+│ ├ "
+"sites build","npm run sites:build","PASS","0","11633","> ppc-lead-generation-platform@1.0.0 sites:build
+> vinext build
+
+
+  vinext build  (Vite 8.0.13)
+
+[34m[1/5] analyze client references...[39m
+[2Ktransforming...✓ 277 modules transformed.
+rendering chunks...
+[32m✓ built in 2.13s[39m
+[34m[2/5] analyze server references...[39m
+[2Ktransforming...✓ 121 modules transformed.
+rendering chunks...
+[32m✓ built in 318ms[39m
+[34m[3/5] build rsc environment...[39m
+[2Ktransforming...✓ 283 modules transformed.
+rendering chunks...
+computing gzip size...
+[32m✓ built in 1.72s[39m
+[34m[4/5] build client environment...[39m
+[2Ktransforming...✓ 1874 modules transformed.
+rendering chunks...
+computing gzip size...
+[32m✓ built in 2.50s[39m
+[34m[5/5] build ssr environment...[39m
+[2Ktransforming...✓ 127 modules transformed.
+rendering chunks...
+computing gzip size...
+[32m✓ built in 798ms[39m
+[0m
+  Route (app)
+  ┌ ? /                             
+  ├ λ /api/call-event               
+  ├ λ /api/health                   
+  ├ λ /api/lead                     
+  ├ λ /api/partner-application      
+  ├ ? /blog                         
+  ├ ƒ /blog/:postSlug               
+  ├ ? /cities                       
+  ├ ƒ /cities/:citySlug             
+  ├ ƒ /cities/:citySlug/:serviceSlug
+  ├ ? /contact                      
+  ├ ƒ /cost-guides/:guideSlug       
+  ├ ? /disclosure                   
+  ├ ? /faq                          
+  ├ ? /par"

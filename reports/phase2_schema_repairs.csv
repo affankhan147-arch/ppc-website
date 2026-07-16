@@ -1,0 +1,4 @@
+"affected file or URL","issue","status","repair","validation result"
+"src/lib/schema.tsx","Article schema unavailable","fixed","Added articleSchema helper without fake author/review/rating claims.","Blog article HTML includes Article JSON-LD."
+"/blog/[postSlug]","Article schema missing on blog posts","fixed","Article schema added to 30 generated posts.","Representative build output includes Article."
+"/faq /contact /partner-with-us /privacy /terms /disclosure","Breadcrumb/WebPage schema gaps","fixed","Added BreadcrumbList to FAQ/contact/partner/legal pages and WebPage schema to legal pages.","Build passes and JSON-LD parses in output crawl."

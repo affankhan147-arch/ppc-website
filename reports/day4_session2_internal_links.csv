@@ -1,0 +1,4 @@
+Source URL,Target URL,Anchor,Reason,Implemented
+/blog/water-shutoff-valve-will-not-close-during-a-leak,/problems/water-shutoff-valve-will-not-close,Water shutoff valve will not close,Connects guide to problem page.,yes
+/blog/water-shutoff-valve-will-not-close-during-a-leak,/services/burst-pipe-emergency,Burst pipe emergency,Routes urgent users to service page.,yes
+/blog/water-shutoff-valve-will-not-close-during-a-leak,/cost-guides/emergency-leak-repair-cost-dfw,Emergency leak repair cost,Routes cost questions to cost factors.,yes

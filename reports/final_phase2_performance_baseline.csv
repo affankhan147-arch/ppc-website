@@ -1,0 +1,7 @@
+"metric","value","source","status"
+"next_build","passed","pnpm run build","pass"
+"static_entries","125","Next build output","pass"
+"sites_build","passed","pnpm run sites:build","pass"
+"lighthouse_lcp","not run","No browser/Lighthouse tool used in this final pass","not measured"
+"lighthouse_cls","not run","No browser/Lighthouse tool used in this final pass","not measured"
+"lighthouse_inp","not run","No browser/Lighthouse tool used in this final pass","not measured"

@@ -1,0 +1,5 @@
+"cluster","risk","evidence","action"
+"priority city pages","medium","Previous Phase 2 reports identified template risk; final city copy now uses concise service-area guidance.","IMPROVE/MONITOR"
+"service/problem/cost safety guidance","low-medium","Shared emergency safety guidance is intentionally reused where safety requires consistency.","KEEP"
+"Search Console cannibalization","unknown","No verified Search Console export/API data is present in repository.","OWNER DATA REQUIRED"
+"blog/service overlap","medium","Existing phase3 content quality queue maps priority service and guide pages without new mass-generated URLs.","MONITOR"

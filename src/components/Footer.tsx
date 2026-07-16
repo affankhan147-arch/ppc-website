@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { siteConfig } from "@/data/site";
+import { PhoneCall } from "lucide-react";
+import { phoneConfig, siteConfig } from "@/data/site";
 import { cities } from "@/data/cities";
 import { services } from "@/data/services";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export function Footer() {
   return (
@@ -10,6 +12,15 @@ export function Footer() {
         <div>
           <p className="text-lg font-black">{siteConfig.brandName}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-200">{siteConfig.disclosure}</p>
+          <a
+            href={phoneConfig.href}
+            data-phone-location="footer"
+            className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-md bg-orange-700 px-4 py-2 text-sm font-black text-white transition hover:bg-orange-800"
+            aria-label={`Call ${phoneConfig.display} from footer`}
+          >
+            <PhoneCall className="h-4 w-4" aria-hidden="true" />
+            Call {phoneConfig.display}
+          </a>
           <p className="mt-4 rounded-md border border-white/15 bg-white/10 p-3 text-xs leading-5 text-slate-200">
             Service availability may vary by location, timing, and provider coverage. Confirm pricing, credentials, and scope directly with the provider.
           </p>
@@ -27,6 +38,9 @@ export function Footer() {
         <div>
           <p className="font-bold">Cities</p>
           <div className="mt-3 grid gap-2 text-sm text-slate-300">
+            <Link href="/cities" className="hover:text-white">
+              All DFW locations
+            </Link>
             {cities.slice(0, 6).map((city) => (
               <Link key={city.slug} href={`/cities/${city.slug}`} className="hover:text-white">
                 {city.name}
@@ -40,7 +54,10 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
             <Link href="/terms" className="hover:text-white">Terms</Link>
             <Link href="/disclosure" className="hover:text-white">Disclosure</Link>
-            <Link href="/partner-with-us" className="hover:text-white">Partner with us</Link>
+            <Link href="/blog" className="hover:text-white">Emergency guides</Link>
+            <TrackedLink href="/partner-with-us" className="hover:text-white" eventName="partner_route_click" ctaLocation="footer-partner-link" pageType="footer">
+              Partner with us
+            </TrackedLink>
           </div>
         </div>
       </div>

@@ -1,0 +1,3 @@
+"route_pattern","change","evidence"
+"/cities/[citySlug]","Replaced long defensive unverified-address wording with concise provider-coverage and confirmation language.","src/app/cities/[citySlug]/page.tsx"
+"/cities/[citySlug]/[serviceSlug]","Replaced long defensive unverified-address wording with concise provider-coverage and confirmation language.","src/app/cities/[citySlug]/[serviceSlug]/page.tsx"

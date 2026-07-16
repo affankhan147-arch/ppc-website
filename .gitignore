@@ -1,8 +1,11 @@
-﻿node_modules/
+node_modules/
 .next/
 out/
 dist/
-build/
+*.tsbuildinfo
+build/*
+!build/
+!build/sites-vite-plugin.ts
 .wrangler/
 .sites/
 .vercel/
@@ -18,5 +21,5 @@ secrets/
 *.p12
 .DS_Store
 Thumbs.db
-.vercel
 .env*
+.vercel

@@ -13,7 +13,7 @@ export function buildMetadata({ title, description, path }: SeoInput): Metadata 
   const fullTitle = title.includes(siteConfig.brandName) ? title : `${title} | ${siteConfig.brandName}`;
 
   return {
-    title: fullTitle,
+    title,
     description,
     alternates: {
       canonical

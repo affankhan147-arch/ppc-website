@@ -1,5 +1,5 @@
 import { FAQ } from "@/data/faqs";
-import { siteConfig } from "@/data/site";
+import { hasConfiguredPhone, siteConfig } from "@/data/site";
 import { joinUrl } from "@/lib/format";
 
 type JsonLdProps = {
@@ -16,14 +16,19 @@ export function JsonLd({ data }: JsonLdProps) {
 }
 
 export function organizationSchema() {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.legalName,
     url: siteConfig.baseUrl,
-    telephone: siteConfig.phoneE164,
-    description: siteConfig.disclosure
+    description: siteConfig.serviceStatement
   };
+
+  if (hasConfiguredPhone()) {
+    schema.telephone = siteConfig.phoneE164;
+  }
+
+  return schema;
 }
 
 export function webPageSchema(path: string, name: string, description: string) {
@@ -36,6 +41,25 @@ export function webPageSchema(path: string, name: string, description: string) {
     isPartOf: {
       "@type": "WebSite",
       name: siteConfig.brandName,
+      url: siteConfig.baseUrl
+    }
+  };
+}
+
+export function articleSchema(path: string, headline: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    url: joinUrl(siteConfig.baseUrl, path),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": joinUrl(siteConfig.baseUrl, path)
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
       url: siteConfig.baseUrl
     }
   };

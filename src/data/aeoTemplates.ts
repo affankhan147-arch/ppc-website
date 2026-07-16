@@ -9,7 +9,7 @@ export const aeoTemplates = {
     "Answer the urgent question near the top.",
     "Use question-based headings.",
     "Include clear steps and call guidance.",
-    "Avoid fake authority or unverifiable claims.",
+    "Avoid unverifiable authority or availability claims.",
     "Link to related service, city, problem, and cost pages."
   ]
 };

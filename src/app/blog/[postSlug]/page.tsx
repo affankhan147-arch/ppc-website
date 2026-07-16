@@ -2,12 +2,13 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { DirectAnswer, FAQBlock, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { blogPosts } from "@/data/blogPosts";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ postSlug: string }>;
@@ -33,8 +34,13 @@ export default async function BlogPostPage({ params }: Props) {
   const post = blogPosts.find((item) => item.slug === postSlug);
   if (!post) notFound();
   const relatedService = services.find((service) => service.slug === post.relatedServiceSlug);
+  const relatedPosts = blogPosts
+    .filter((item) => item.slug !== post.slug && item.category === post.category)
+    .slice(0, 3);
   const path = `/blog/${post.slug}`;
+  const enhancement = blogEnhancements[post.slug];
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
     {
       question: "What is the quick decision?",
       answer: post.directAnswer
@@ -52,11 +58,12 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd
         data={[
           webPageSchema(path, post.title, post.directAnswer),
-          breadcrumbSchema([{ name: "Blog", path: "/blog/emergency-plumber-near-me-open-now-what-to-do-before-help-arrives" }, { name: post.title, path }]),
+          articleSchema(path, post.title, post.directAnswer),
+          breadcrumbSchema([{ name: "Guides", path: "/blog" }, { name: post.title, path }]),
           faqSchema(faqs)
         ]}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog/emergency-plumber-near-me-open-now-what-to-do-before-help-arrives" }, { label: post.title, href: path }]} />
+      <Breadcrumbs items={[{ label: "Guides", href: "/blog" }, { label: post.title, href: path }]} />
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">{post.category}</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{post.title}</h1>
@@ -76,12 +83,34 @@ export default async function BlogPostPage({ params }: Props) {
               includes dirty water, or risks property damage, treat it as urgent and request provider guidance.
             </p>
           </section>
+          {enhancement ? (
+            <>
+              <InfoListSection
+                kicker="Checklist"
+                title={enhancement.checklistTitle}
+                intro={enhancement.checklistIntro}
+                items={enhancement.checklistItems}
+              />
+              <InfoListSection
+                kicker="Verification"
+                title={enhancement.proofTitle}
+                items={enhancement.proofItems}
+              />
+            </>
+          ) : null}
         </div>
         <LeadForm pageUrl={path} service={relatedService?.name || "Emergency plumbing"} city="Dallas" />
       </div>
       <LocalGuidance />
       <FAQBlock faqs={faqs} />
-      <InternalLinks extra={relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []} />
+      <InternalLinks
+        extra={[
+          { label: "Emergency plumbing guide hub", href: "/blog" },
+          ...(enhancement?.extraLinks || []),
+          ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
+          ...relatedPosts.map((item) => ({ label: item.title, href: `/blog/${item.slug}` }))
+        ]}
+      />
     </main>
   );
 }

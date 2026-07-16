@@ -1,0 +1,6 @@
+Rejected Opportunity Type,Reason,Policy
+Paid backlink package,Violates no paid backlinks rule.,reject automatically
+PBN or link farm,Manipulative and unsafe.,reject automatically
+Fake local citation,Would create fake address/profile claim.,reject automatically
+Spam blog comment/forum profile,Irrelevant or manipulative.,reject automatically
+Exact-match anchor exchange,Manipulative anchor abuse risk.,reject automatically

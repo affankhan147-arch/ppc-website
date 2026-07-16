@@ -1,0 +1,4 @@
+"source","status","evidence"
+"Existing Phase 2 orphan report","carried forward","reports/phase2_orphan_resolution.csv"
+"Live sampled pages","reviewed","reports/final_phase2_url_validation.csv"
+"Sitemap inventory","118 live URLs","reports/final_phase2_sitemap_validation.csv"

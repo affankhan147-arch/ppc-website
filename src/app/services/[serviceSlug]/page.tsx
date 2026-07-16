@@ -2,10 +2,11 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { CostFactors, DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
@@ -36,7 +37,10 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   const path = `/services/${service.slug}`;
+  const enhancement = serviceEnhancements[service.slug];
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
+    ...(serviceFaqEnhancements[service.slug] || []),
     ...service.faqSeed.map((question) => ({
       question,
       answer: `${service.shortAnswer} The safest next step is to stop water use where possible, describe the affected fixtures, and request a provider connection.`
@@ -77,7 +81,7 @@ export default async function ServicePage({ params }: Props) {
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
-            <CallButton location={`service-${service.slug}-top`} />
+            <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={service.name} />
           </div>
         </article>
         <LeadForm pageUrl={path} service={service.name} city="Dallas" />
@@ -91,6 +95,7 @@ export default async function ServicePage({ params }: Props) {
         intro="The matched provider can usually triage faster when the request includes clear, practical details."
         items={service.callPrep}
       />
+      <EnhancementSections enhancement={enhancement} />
 
       <section className="content-section">
         <p className="section-kicker">When to call</p>
@@ -123,6 +128,7 @@ export default async function ServicePage({ params }: Props) {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...(enhancement?.extraLinks || []),
           ...priorityCityLinks,
           ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
           ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])

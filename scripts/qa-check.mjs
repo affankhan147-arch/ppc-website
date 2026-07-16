@@ -6,10 +6,11 @@ const required = [
   "src/app/services/[serviceSlug]/page.tsx",
   "src/app/cities/[citySlug]/page.tsx",
   "src/app/cities/[citySlug]/[serviceSlug]/page.tsx",
-  "src/app/api/lead/route.ts",
   "src/app/api/call-event/route.ts",
+  "src/app/api/health/route.ts",
   "src/app/sitemap.ts",
   "src/app/robots.ts",
+  "src/lib/operationalStatus.ts",
   "reports/page_inventory.csv",
   "reports/page_inventory_day1.csv",
   "reports/aeo_page_audit.csv",
@@ -98,7 +99,7 @@ for (const file of sourceFiles) {
 }
 
 const callButton = readFileSync(join(process.cwd(), "src/components/CallButton.tsx"), "utf8");
-if (!callButton.includes("hasUsablePhone") || !callButton.includes("`tel:${siteConfig.phoneE164}`") || !callButton.includes('"/contact"')) {
+if (!callButton.includes("hasUsablePhone") || !callButton.includes("`tel:${phoneConfig.e164}`") || !callButton.includes('"/contact"')) {
   console.error("CallButton must use tel: for real phone numbers and /contact while the phone is a placeholder.");
   process.exit(1);
 }
@@ -106,6 +107,23 @@ if (!callButton.includes("hasUsablePhone") || !callButton.includes("`tel:${siteC
 const envExample = readFileSync(join(process.cwd(), ".env.example"), "utf8");
 if (!envExample.includes("SITE_DOMAIN=plumbinghands.com") || !envExample.includes("NEXT_PUBLIC_SITE_URL=https://plumbinghands.com")) {
   console.error(".env.example must point DNS-safe production guidance at plumbinghands.com.");
+  process.exit(1);
+}
+for (const requiredEnv of [
+  "LEAD_WEBHOOK_URL=",
+  "PARTNER_WEBHOOK_URL=",
+  "FORM_ROUTING_BEARER_TOKEN=",
+  "NEXT_PUBLIC_TRACKED_PHONE_E164=+1XXXXXXXXXX"
+]) {
+  if (!envExample.includes(requiredEnv)) {
+    console.error(`.env.example is missing required production-safe placeholder: ${requiredEnv}`);
+    process.exit(1);
+  }
+}
+
+const gitignore = readFileSync(join(process.cwd(), ".gitignore"), "utf8");
+if (!gitignore.includes("!.env.example")) {
+  console.error(".gitignore must keep .env.example trackable while real env files stay ignored.");
   process.exit(1);
 }
 

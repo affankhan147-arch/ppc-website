@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
+import { problemEnhancements, problemFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
@@ -36,7 +37,10 @@ export default async function ProblemPage({ params }: Props) {
   const relatedService = services.find((service) => service.slug === problem.relatedServiceSlug);
   const relatedCostGuide = costGuides.find((guide) => guide.slug === problem.relatedCostGuideSlug);
   const path = `/problems/${problem.slug}`;
+  const enhancement = problemEnhancements[problem.slug];
   const faqs = [
+    ...(enhancement?.extraFaqs || []),
+    ...(problemFaqEnhancements[problem.slug] || []),
     {
       question: `What should I do first if I see ${problem.title.toLowerCase()}?`,
       answer: problem.steps[0] || problem.directAnswer
@@ -61,7 +65,7 @@ export default async function ProblemPage({ params }: Props) {
           <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{problem.title}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-700">{problem.directAnswer}</p>
           <div className="mt-6">
-            <CallButton location={`problem-${problem.slug}-top`} />
+            <CallButton location={`problem-${problem.slug}-top`} pagePath={path} pageType="problem" service={relatedService?.name || "Emergency plumbing"} problem={problem.title} />
           </div>
         </article>
         <LeadForm pageUrl={path} service={relatedService?.name || "Emergency plumbing"} city="Dallas" />
@@ -74,6 +78,7 @@ export default async function ProblemPage({ params }: Props) {
         <p className="mt-3 leading-7 text-slate-700">{problem.whatItMeans}</p>
       </section>
       <EmergencySteps steps={problem.steps} />
+      <EnhancementSections enhancement={enhancement} />
       <section className="content-section">
         <p className="section-kicker">Warning signs</p>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
@@ -90,7 +95,7 @@ export default async function ProblemPage({ params }: Props) {
           <h2 className="mt-2 text-2xl font-black text-slate-950">Call from: {relatedService.name}</h2>
           <p className="mt-3 leading-7 text-slate-700">{relatedService.shortAnswer}</p>
           <div className="mt-5">
-            <CallButton location={`problem-${problem.slug}-service-cta`} />
+            <CallButton location={`problem-${problem.slug}-service-cta`} pagePath={path} pageType="problem" service={relatedService.name} problem={problem.title} />
           </div>
         </section>
       ) : null}
@@ -98,6 +103,7 @@ export default async function ProblemPage({ params }: Props) {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...(enhancement?.extraLinks || []),
           ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
           ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])
         ]}

@@ -1,7 +1,7 @@
-import { LeadForm } from "@/components/LeadForm";
+import { PartnerApplicationForm } from "@/components/PartnerApplicationForm";
 import { DirectAnswer } from "@/components/PageSections";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Provider partner inquiries",
@@ -12,7 +12,12 @@ export const metadata = buildMetadata({
 export default function PartnerPage() {
   return (
     <main className="page-shell">
-      <JsonLd data={webPageSchema("/partner-with-us", "Provider partner inquiries", "Partner inquiry page for plumbing providers and service partners.")} />
+      <JsonLd
+        data={[
+          webPageSchema("/partner-with-us", "Provider partner inquiries", "Partner inquiry page for plumbing providers and service partners."),
+          breadcrumbSchema([{ name: "Partner with us", path: "/partner-with-us" }])
+        ]}
+      />
       <div className="answer-grid">
         <article>
           <p className="section-kicker">Provider partners</p>
@@ -24,7 +29,7 @@ export default function PartnerPage() {
             Partners should provide real business details, owner-approved service areas, verified credential claims, clear availability rules, and capacity for urgent work.
           </DirectAnswer>
         </article>
-        <LeadForm pageUrl="/partner-with-us" service="Partner inquiry" city="Dallas-Fort Worth" />
+        <PartnerApplicationForm pageUrl="/partner-with-us" />
       </div>
       <section className="content-section">
         <p className="section-kicker">Partner quality rules</p>

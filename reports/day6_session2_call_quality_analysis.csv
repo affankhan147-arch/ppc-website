@@ -1,0 +1,8 @@
+"class","count","evidence","action"
+"qualified","NOT AVAILABLE","No call disposition export in repository","owner call-tracking required"
+"unqualified","NOT AVAILABLE","No call disposition export in repository","owner call-tracking required"
+"wrong_service","NOT AVAILABLE","No call disposition export in repository","owner call-tracking required"
+"wrong_location","NOT AVAILABLE","No call disposition export in repository","owner call-tracking required"
+"informational_only","NOT AVAILABLE","No call disposition export in repository","owner call-tracking required"
+"spam","NOT AVAILABLE","No call disposition export in repository","owner call-tracking required"
+"unknown","all live calls","No production call data","treat as owner-blocked"

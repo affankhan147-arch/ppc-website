@@ -1,0 +1,4 @@
+"test","actual_status","expected_status","result","response_excerpt"
+"customer invalid input no PII","400","400","PASS","{""ok"":false,""error"":""Invalid service request.""}"
+"partner invalid input no PII","400","400","PASS","{""ok"":false,""error"":""Invalid provider application.""}"
+"call-event safe test","200","200","PASS","{""ok"":true,""event"":{""eventName"":""phone_click"",""location"":""closeout-audit"",""ctaLocation"":""closeout-audit"",""pagePath"":""/contact"",""pageType"":""contact"",""city"":"""",""service"":"""",""problem"":"""",""deviceContext"":""server-audit"",""timestamp"":""2026-07-14T23:01:04.575Z"",""requestDestination"":""contact-form-placeholder"

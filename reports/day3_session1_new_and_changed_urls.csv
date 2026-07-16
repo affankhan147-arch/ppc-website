@@ -1,0 +1,8 @@
+"URL","Change Type","Page Type","Reason","Sitemap Status","Canonical Status","Robots Status","IndexNow Candidate","Validation Status"
+"/problems/water-shutoff-valve-will-not-close","New","Emergency problem page","Water shutoff valve emergency guidance","included","self canonical or unchanged canonical verified in build","indexable; no noindex added","yes","Build passed"
+"/cost-guides/emergency-leak-repair-cost-dfw","New","Cost decision guide","Leak repair cost factors without exact prices","included","self canonical or unchanged canonical verified in build","indexable; no noindex added","yes","Build passed"
+"/services/burst-pipe-emergency","Changed","Service support page","Leak isolation and shutoff valve support links","included","self canonical or unchanged canonical verified in build","indexable; no noindex added","yes","Build passed"
+"/cities/dallas","Changed","Local intent page","Dallas leak/drain triage and new internal links","included","self canonical or unchanged canonical verified in build","indexable; no noindex added","yes","Build passed"
+"/blog/best-questions-to-ask-before-you-book-an-emergency-plumber","Changed","Authority-ready guide","Emergency plumber booking checklist and claim-verification guidance","included","self canonical or unchanged canonical verified in build","indexable; no noindex added","yes","Build passed"
+"/","Changed","Homepage","New cost guide appears in cost guide list","included","self canonical or unchanged canonical verified in build","indexable; no noindex added","yes","Build passed"
+"/sitemap.xml","Changed","Indexing support","Sitemap includes new problem and cost guide URLs","route builds","not applicable","indexable; no noindex added","yes","Build passed"

@@ -1,0 +1,4 @@
+URL,Schema Type,Change,Evidence
+/blog/water-shutoff-valve-will-not-close-during-a-leak,Article,New blog URL receives articleSchema.,src/app/blog/[postSlug]/page.tsx
+/blog/water-shutoff-valve-will-not-close-during-a-leak,FAQPage,New guide receives FAQ schema from faqs array.,src/app/blog/[postSlug]/page.tsx
+/blog/water-shutoff-valve-will-not-close-during-a-leak,BreadcrumbList,New guide receives breadcrumb schema.,src/app/blog/[postSlug]/page.tsx

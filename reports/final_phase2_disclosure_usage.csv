@@ -1,0 +1,6 @@
+"route_or_file","usage_type","status","notes"
+"/disclosure","dedicated legal explanation","preserved","Full provider-connection explanation remains on dedicated disclosure page."
+"src/data/site.ts legalDisclosure","central legal statement","preserved","No fake office, address, license, guaranteed availability, or arrival-time claim added."
+"/cities/[citySlug]","ordinary commercial page","refined","Long defensive copy replaced with concise availability/provider-confirmation language."
+"/cities/[citySlug]/[serviceSlug]","ordinary commercial page","refined","Long defensive copy replaced with concise availability/provider-confirmation language."
+"/partner-with-us","provider page","truthful","Provider claims must be verified before use."

@@ -1,0 +1,5 @@
+"metric","value","evidence","status"
+"live_citations","0","reports/phase2_backlink_status.md and reports/backlink_tracker.csv","repository evidence"
+"live_editorial_links","0","reports/phase2_backlink_status.md and authority/outreach_tracker.csv","repository evidence"
+"pending_outreach","0 sent; owner review required","authority/outreach_tracker.csv","repository evidence"
+"rejected_paid_or_spam","tracked as reject","authority/day5_rejected_opportunities.csv","repository evidence"
