@@ -1,0 +1,100 @@
+name: Verify Vercel Deployment
+
+on:
+  deployment_status:
+
+permissions:
+  contents: write
+  deployments: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: verify-plumbinghands-${{ github.event.deployment.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      contains(github.event.deployment_status.environment_url, 'plumbinghands')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DEPLOYMENT_REF: ${{ github.event.deployment.ref }}
+      DEPLOYMENT_URL: ${{ github.event.deployment_status.environment_url }}
+      GH_TOKEN: ${{ github.token }}
+      VERIFY_PR: "16"
+    steps:
+      - name: Select verification URL
+        id: target
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$DEPLOYMENT_REF" = "master" ]; then
+            url="https://plumbinghands.com"
+          else
+            url="$DEPLOYMENT_URL"
+          fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Verifying $url for ref $DEPLOYMENT_REF"
+
+      - name: Verify approved public content
+        shell: bash
+        env:
+          VERIFY_URL: ${{ steps.target.outputs.url }}
+        run: |
+          set -euo pipefail
+          html="$(mktemp)"
+          for attempt in $(seq 1 20); do
+            status="$(curl -L -sS -o "$html" -w '%{http_code}' --max-time 45 "$VERIFY_URL" || true)"
+            if [ "$status" = "200" ] && grep -Fq "Urgent Plumbing Help When Every Minute Matters." "$html"; then
+              break
+            fi
+            echo "Attempt $attempt: HTTP $status or approved headline not visible yet."
+            sleep 15
+          done
+
+          test -s "$html"
+          grep -Fq "Urgent Plumbing Help When Every Minute Matters." "$html"
+          grep -Fq "Plumbing Service in Dallas–Fort Worth" "$html"
+          grep -Fq "Emergency Plumbing Service Across DFW." "$html"
+          grep -Fq "1 844-397-8298" "$html"
+          grep -Fq "tel:+18443978298" "$html"
+
+          for forbidden in \
+            "Dallas–Fort Worth plumbing connection" \
+            "Local pages without fake local-office claims." \
+            "Availability depends on location, timing, and provider coverage." \
+            "Confirm pricing, credentials, and arrival details directly with the provider." \
+            "Illustrative service photography" \
+            "Transparent by design"; do
+            if grep -Fq "$forbidden" "$html"; then
+              echo "Forbidden public wording remains: $forbidden"
+              exit 1
+            fi
+          done
+
+          echo "Approved PlumbingHands content verified at $VERIFY_URL"
+
+      - name: Merge verified preview into production
+        if: env.DEPLOYMENT_REF == 'deploy/vercel-production-verification-20260717'
+        shell: bash
+        run: |
+          gh pr merge "$VERIFY_PR" --repo "$GITHUB_REPOSITORY" --squash \
+            --subject "Deploy verified PlumbingHands public website" \
+            --body "Vercel preview passed the approved public-copy and phone checks."
+
+      - name: Record verification result
+        if: always()
+        shell: bash
+        env:
+          VERIFY_URL: ${{ steps.target.outputs.url }}
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            result="PASS"
+          else
+            result="FAIL"
+          fi
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${VERIFY_PR}/comments" \
+            -f body="Vercel deployment verification: **${result}**\n\nRef: \`${DEPLOYMENT_REF}\`\nURL: ${VERIFY_URL}\nWorkflow run: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
