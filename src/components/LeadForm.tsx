@@ -63,16 +63,16 @@ export function LeadForm({
         </article>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+      <div className="mt-6 flex flex-col items-start gap-3">
         <a
           href={siteConfig.phoneHref}
           data-phone-location="how-call-works"
-          className="inline-flex min-h-12 items-center justify-center rounded-md bg-slate-950 px-5 py-3 text-base font-black text-white transition hover:bg-slate-800"
+          className="inline-flex min-h-12 whitespace-nowrap items-center justify-center rounded-md bg-slate-950 px-5 py-3 text-base font-black text-white transition hover:bg-slate-800"
         >
           Call {siteConfig.phoneDisplay}
         </a>
 
-        <p className="text-xs leading-5 text-slate-600">
+        <p className="max-w-2xl text-xs leading-5 text-slate-600">
           Availability depends on location, timing, and provider coverage.
           Confirm pricing, credentials, and arrival details directly with the provider.
         </p>
