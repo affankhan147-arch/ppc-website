@@ -31,3 +31,27 @@ test("emergency plumber near me guide has a dedicated Phase 4 enhancement", () =
     assert.match(targetEnhancement, new RegExp(`href: \\"${href}\\"`));
   }
 });
+
+test("Dallas overnight toilet overflow guide has a dedicated Phase 4 enhancement", () => {
+  const slug = "toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners";
+  const enhancementStart = enhancementSource.indexOf(`"${slug}": {`);
+  assert.notEqual(enhancementStart, -1);
+
+  const nextEnhancement = enhancementSource.indexOf(
+    '  "water-shutoff-valve-will-not-close-during-a-leak": {',
+    enhancementStart
+  );
+  const targetEnhancement = enhancementSource.slice(enhancementStart, nextEnhancement);
+  const requiredDestinations = [
+    "/services/toilet-overflow-emergency",
+    "/problems/toilet-overflowing-will-not-stop",
+    "/services/emergency-drain-cleaning",
+    "/services/sewer-backup-help",
+    "/cities/dallas",
+    "/cost-guides/emergency-plumbing-cost-dfw"
+  ];
+
+  for (const href of requiredDestinations) {
+    assert.match(targetEnhancement, new RegExp(`href: \\"${href}\\"`));
+  }
+});
