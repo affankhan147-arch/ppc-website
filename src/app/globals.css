@@ -145,12 +145,14 @@ a.premium-card:hover {
   background-size: cover;
 }
 .media-cover { min-height: clamp(18rem, 34vw, 30rem); }
-.diagnostic-photo { background-image: url("/images/photography/plumbing-diagnostic.png"); }
-.consultation-photo { background-image: url("/images/photography/homeowner-consultation.png"); }
-.crew-photo { background-image: url("/images/photography/provider-crew.webp"); }
+.diagnostic-photo {
+  background-image: url("/images/photography/service-van.webp");
+  background-position: center center;
+}
 .service-photo {
   height: clamp(11rem, 18vw, 14rem);
   border-bottom: 1px solid rgba(11, 36, 57, 0.11);
+  background-color: var(--ink);
   transition: transform 500ms ease;
 }
 a.premium-card:hover .service-photo { transform: scale(1.025); }
