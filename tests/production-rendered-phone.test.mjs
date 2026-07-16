@@ -65,13 +65,44 @@ function assertFooterHref(html) {
   );
 }
 
+test("homepage source excludes corrupted media and internal defensive copy", () => {
+  const sourceFiles = [
+    "src/app/page.tsx",
+    "src/app/globals.css",
+    "src/components/Header.tsx"
+  ].map((path) => readFileSync(join(rootDir, path), "utf8")).join("\n");
+
+  for (const forbidden of [
+    "/images/photography/home-emergency-plumber.png",
+    "/images/photography/plumbing-diagnostic.png",
+    "/images/photography/homeowner-consultation.png",
+    "Illustrative service photography",
+    "people shown are not identified",
+    "fake local-office claims",
+    "Dallas–Fort Worth plumbing connection",
+    "Dallas–Fort Worth provider connection"
+  ]) {
+    assert.equal(sourceFiles.includes(forbidden), false, `Homepage source must not contain: ${forbidden}`);
+  }
+
+  for (const required of [
+    "Dallas–Fort Worth emergency plumbing service",
+    "Emergency Plumbing Service Across DFW.",
+    "/images/photography/provider-crew.webp",
+    "/images/hero/burst-pipe-emergency.svg"
+  ]) {
+    assert.ok(sourceFiles.includes(required), `Homepage source must contain: ${required}`);
+  }
+});
+
 test("home production HTML exposes the DID in header, mobile call button, and footer", () => {
   const page = findRenderedPage(
     "home",
-    (html) => html.includes("Calm guidance when plumbing cannot wait.") && html.includes('data-cta-location="header"')
+    (html) => html.includes("Urgent Plumbing Help When Every Minute Matters.") && html.includes('data-cta-location="header"')
   );
 
   assertPageContainsPhoneContract(page, "home");
+  assert.ok(page.html.includes("Emergency Plumbing Service Across DFW."), "Home must use service-focused DFW copy.");
   assertCallButtonHref(page.html, "header");
   assertCallButtonHref(page.html, "mobile-sticky-call-bar");
   assertFooterHref(page.html);
