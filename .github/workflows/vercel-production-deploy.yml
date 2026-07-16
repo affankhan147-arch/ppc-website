@@ -1,0 +1,60 @@
+name: Vercel Production Deploy
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "src/**"
+      - "public/**"
+      - "package.json"
+      - "package-lock.json"
+      - "next.config.*"
+      - ".github/workflows/vercel-production-deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: plumbinghands-vercel-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN || secrets.VERCEL_ACCESS_TOKEN || secrets.VERCEL_CLI_TOKEN }}
+      VERCEL_SCOPE: affankhan147-1002s-projects
+      VERCEL_PROJECT: plumbinghands
+    steps:
+      - name: Check out production source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Require Vercel credential
+        shell: bash
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "No Vercel token secret is configured for this repository."
+            exit 1
+          fi
+
+      - name: Link existing PlumbingHands project
+        run: >-
+          npx --yes vercel@latest link --yes
+          --project "$VERCEL_PROJECT"
+          --scope "$VERCEL_SCOPE"
+          --token "$VERCEL_TOKEN"
+
+      - name: Deploy current master to production
+        run: >-
+          npx --yes vercel@latest deploy --prod --yes
+          --scope "$VERCEL_SCOPE"
+          --token "$VERCEL_TOKEN"
