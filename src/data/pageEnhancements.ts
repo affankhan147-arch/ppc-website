@@ -595,6 +595,46 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
     ]
   },
+  "toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners": {
+    checklistTitle: "What to do when a toilet overflows at night",
+    checklistIntro:
+      "An overflowing toilet feels worse after hours because it is hard to know whether the problem can wait. Start by stopping incoming water and watching what the other fixtures do. That usually tells you more than another flush will.",
+    checklistItems: [
+      "Do not flush again. Turn the toilet's supply valve clockwise if it moves normally; stop if the valve is stuck, corroded, or begins leaking.",
+      "If clean water is still entering from the tank, remove the tank lid only if you can do so safely and lift the float to slow the refill. Do not reach into a bowl containing wastewater.",
+      "Keep children and pets away. Use towels only for clean water, and avoid direct contact when sewage or contaminated water is present.",
+      "Check the nearby tub or shower without running more water. Water already rising there, toilet gurgling, or more than one affected fixture can point to a deeper drain or sewer restriction.",
+      "In an apartment or shared building, tell property management promptly if water may reach another unit or several fixtures are affected. Note whether neighbors report similar symptoms.",
+      "Photograph visible water and record whether the shutoff worked, which fixtures reacted, and whether the water looked clean or dirty. Keep the toilet and connected fixtures unused while waiting."
+    ],
+    proofTitle: "How to decide whether it can wait until morning",
+    proofItems: [
+      "Request urgent help when water will not stop, the shutoff fails, wastewater spreads onto flooring, another drain backs up, or the home has no usable toilet.",
+      "A contained toilet with the supply off and no activity in other fixtures may be safer to leave unused until normal hours, but only the responding provider can confirm availability and timing for the address.",
+      "Ask whether the visit covers an isolated toilet clog, a tank or valve problem, or investigation of a possible branch or main sewer restriction. Those are different scopes.",
+      "Confirm dispatch, diagnostic, after-hours, clearing, fixture-repair, and cleanup charges before approving work. Avoid relying on a guaranteed arrival time or exact price that has not been confirmed directly."
+    ],
+    extraFaqs: [
+      {
+        question: "Can an overflowing toilet in Dallas wait until morning?",
+        answer:
+          "It may be reasonable to leave the toilet unused when the supply is fully off, the water is contained, no other fixture reacts, and another toilet is available. Seek urgent help when water continues rising, wastewater spreads, the valve fails, or several fixtures are involved."
+      },
+      {
+        question: "Should I plunge a toilet that is already overflowing?",
+        answer:
+          "First stop the incoming water and let the bowl level settle. A plunger may help an isolated clog, but stop if the bowl keeps rising, dirty water appears elsewhere, or the tub or shower reacts because the restriction may be deeper."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency toilet overflow help", href: "/services/toilet-overflow-emergency" },
+      { label: "Steps when a toilet will not stop overflowing", href: "/problems/toilet-overflowing-will-not-stop" },
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Sewer backup help", href: "/services/sewer-backup-help" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
+      { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
   "water-shutoff-valve-will-not-close-during-a-leak": {
     checklistTitle: "Failed shutoff leak checklist",
     checklistIntro:
