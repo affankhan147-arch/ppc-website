@@ -1,0 +1,196 @@
+name: PlumbingHands Continuity Smoke Test
+
+on:
+  push:
+    branches:
+      - test/continuity-smoke-20260716
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  continuity-smoke:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out smoke-test branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Exercise Status, Prepare, Resume, Verify, and safeguards
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $targetBranch = 'codex/workflow-resume-20260716'
+          $controller = Join-Path $PWD 'command-center\PlumbingHands_Agent_Continuity.ps1'
+          $evidence = Join-Path $PWD '.test-evidence'
+          New-Item -ItemType Directory -Path $evidence -Force | Out-Null
+
+          git fetch origin $targetBranch
+          git checkout -B $targetBranch "origin/$targetBranch"
+          if ((git branch --show-current).Trim() -ne $targetBranch) {
+            throw "Failed to check out $targetBranch"
+          }
+          if (git status --porcelain) {
+            throw 'The target branch checkout is not clean.'
+          }
+
+          $taskRelative = 'command-center/continuity-smoke-task.txt'
+          $task = Join-Path $PWD ($taskRelative -replace '/', '\')
+          @"
+          REPOSITORY: affankhan147-arch/ppc-website
+          BRANCH: codex/workflow-resume-20260716
+          STATUS: ready-to-resume
+          TASK: Continuity controller smoke test only.
+          REQUIRED REPORT: reports/continuity_smoke_result.md
+          "@ | Set-Content -LiteralPath $task -Encoding UTF8
+
+          function Invoke-Controller {
+            param(
+              [Parameter(Mandatory)][string]$Name,
+              [Parameter(Mandatory)][string[]]$Arguments,
+              [switch]$ExpectFailure,
+              [string]$ExpectedText
+            )
+
+            $output = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller @Arguments 2>&1
+            $code = $LASTEXITCODE
+            $outputPath = Join-Path $evidence ("{0}.txt" -f $Name)
+            $output | Set-Content -LiteralPath $outputPath -Encoding UTF8
+            $joined = ($output | ForEach-Object { [string]$_ }) -join "`n"
+
+            if ($ExpectFailure) {
+              if ($code -eq 0) { throw "$Name unexpectedly succeeded." }
+              if ($ExpectedText -and $joined -notmatch [regex]::Escape($ExpectedText)) {
+                throw "$Name failed, but not for the expected reason: $ExpectedText"
+              }
+            }
+            else {
+              if ($code -ne 0) { throw "$Name failed with exit code $code.`n$joined" }
+            }
+
+            Start-Sleep -Seconds 1
+            return $joined
+          }
+
+          $status = Invoke-Controller -Name '01-status' -Arguments @(
+            '-Mode', 'Status',
+            '-TaskPath', $task,
+            '-AllowDirtyWorktree'
+          )
+          if ($status -notmatch 'RESULT: STATUS VERIFIED') {
+            throw 'Status mode did not record verified status.'
+          }
+
+          $prepare = Invoke-Controller -Name '02-prepare' -Arguments @(
+            '-Mode', 'Prepare',
+            '-TaskPath', $task,
+            '-AllowDirtyWorktree'
+          )
+          if ($prepare -notmatch 'RESULT: PREPARED') {
+            throw 'Prepare mode did not record a prepared result.'
+          }
+
+          $manifestFile = Get-ChildItem (Join-Path $PWD 'command-center\antigravity-queue') -Recurse -File -Filter 'continuity-manifest.json' |
+            Where-Object {
+              try {
+                $m = Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Json
+                [string]$m.source_task_path -eq $taskRelative
+              }
+              catch { $false }
+            } |
+            Sort-Object LastWriteTimeUtc -Descending |
+            Select-Object -First 1
+
+          if ($null -eq $manifestFile) { throw 'Prepare did not create a matching continuity manifest.' }
+          $bundle = $manifestFile.Directory.FullName
+          $manifest = Get-Content -LiteralPath $manifestFile.FullName -Raw | ConvertFrom-Json
+          if ($manifest.repository -ne 'affankhan147-arch/ppc-website') { throw 'Manifest repository mismatch.' }
+          if ($manifest.branch -ne $targetBranch) { throw 'Manifest branch mismatch.' }
+          if ($manifest.required_checks.Count -ne 3) { throw 'Manifest required-check count mismatch.' }
+          foreach ($required in @('source-task.txt', 'ANTIGRAVITY_TASK.md', 'continuity-manifest.json')) {
+            if (-not (Test-Path -LiteralPath (Join-Path $bundle $required) -PathType Leaf)) {
+              throw "Missing prepared bundle file: $required"
+            }
+          }
+
+          New-Item -ItemType Directory -Path (Join-Path $PWD 'src\data') -Force | Out-Null
+          'ephemeral substantive continuity proof' | Set-Content -LiteralPath (Join-Path $PWD 'src\data\continuitySmokeProof.txt') -Encoding UTF8
+          @"
+          # Continuity Smoke Result
+
+          This report is generated only inside the isolated GitHub Actions runner.
+          "@ | Set-Content -LiteralPath (Join-Path $PWD 'reports\continuity_smoke_result.md') -Encoding UTF8
+
+          git config user.name 'PlumbingHands Continuity Test'
+          git config user.email 'actions@users.noreply.github.com'
+          git add --all
+          git commit -m 'test: create ephemeral continuity verification evidence'
+
+          $resume = Invoke-Controller -Name '03-resume' -Arguments @(
+            '-Mode', 'Resume',
+            '-BundlePath', $bundle,
+            '-AllowDirtyWorktree'
+          )
+          if ($resume -notmatch 'RESULT: RESUME READY') {
+            throw 'Resume mode did not record readiness.'
+          }
+          if (-not (Test-Path -LiteralPath (Join-Path $bundle 'RESUME_CONTEXT.md') -PathType Leaf)) {
+            throw 'Resume mode did not create RESUME_CONTEXT.md.'
+          }
+
+          $verify = Invoke-Controller -Name '04-verify' -Arguments @(
+            '-Mode', 'Verify',
+            '-BundlePath', $bundle,
+            '-AllowDirtyWorktree'
+          )
+          if ($verify -notmatch 'RESULT: REPOSITORY EVIDENCE VERIFIED') {
+            throw 'Verify mode did not validate repository evidence.'
+          }
+
+          'unrelated dirty file' | Set-Content -LiteralPath (Join-Path $PWD 'unrelated-smoke.txt') -Encoding UTF8
+          Invoke-Controller -Name '05-dirty-guard' -Arguments @(
+            '-Mode', 'Status',
+            '-TaskPath', $task
+          ) -ExpectFailure -ExpectedText 'Working tree contains changes outside generated continuity artifacts.' | Out-Null
+          Remove-Item -LiteralPath (Join-Path $PWD 'unrelated-smoke.txt') -Force
+
+          Add-Content -LiteralPath $task -Value 'TAMPERED AFTER PREPARE'
+          Invoke-Controller -Name '06-task-hash-guard' -Arguments @(
+            '-Mode', 'Resume',
+            '-BundlePath', $bundle,
+            '-AllowDirtyWorktree'
+          ) -ExpectFailure -ExpectedText 'Source task changed after preparation.' | Out-Null
+          git checkout -- $taskRelative
+
+          Invoke-Controller -Name '07-branch-guard' -Arguments @(
+            '-Mode', 'Status',
+            '-Branch', 'master',
+            '-TaskPath', $task,
+            '-AllowDirtyWorktree'
+          ) -ExpectFailure -ExpectedText 'Branch mismatch.' | Out-Null
+
+          @"
+          PLUMBINGHANDS CONTINUITY SMOKE TEST
+          Target branch: $targetBranch
+          Controller: command-center/PlumbingHands_Agent_Continuity.ps1
+          Positive modes: Status, Prepare, Resume, Verify
+          Negative safeguards: dirty worktree, source-task hash, branch mismatch
+          RESULT: PASSED
+          "@ | Set-Content -LiteralPath (Join-Path $evidence 'SUMMARY.txt') -Encoding UTF8
+
+          Get-Content -LiteralPath (Join-Path $evidence 'SUMMARY.txt')
+
+      - name: Upload smoke-test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plumbinghands-continuity-smoke-evidence
+          if-no-files-found: warn
+          path: |
+            .test-evidence/**
+            reports/agent_continuity_*.txt
+            command-center/antigravity-queue/**
