@@ -12,7 +12,12 @@ test("premium homepage uses the approved original photography", async () => {
   const assets = [
     "home-emergency-plumber.png",
     "plumbing-diagnostic.png",
-    "homeowner-consultation.png"
+    "homeowner-consultation.png",
+    "service-van.webp",
+    "provider-crew.webp",
+    "sewer-inspection.webp",
+    "water-heater-inspection.webp",
+    "toilet-repair.webp"
   ];
 
   for (const asset of assets) {
@@ -25,8 +30,12 @@ test("redesign includes premium trust and conversion structure", () => {
   assert.match(home, /What needs attention right now\?/);
   assert.match(home, /A clearer way to request plumbing help/);
   assert.match(home, /Illustrative service photography/);
+  assert.match(home, /servicePhotography/);
+  assert.match(home, /capitalizeFirst/);
   assert.match(header, /DFW plumbing help/);
   assert.match(footer, /Plumbing guidance for stressful moments/);
   assert.match(css, /--ink:/);
   assert.match(css, /\.trust-ribbon/);
+  assert.match(css, /h1::first-letter/);
+  assert.match(css, /margin-top: 1\.25rem/);
 });

@@ -31,6 +31,17 @@ const urgentCards = [
   { title: "Sewer symptoms are appearing", text: "Multiple fixtures, odor, or cleanout overflow need prompt attention.", icon: Wrench, href: "/services/main-sewer-line-clog" }
 ];
 
+const servicePhotography: Record<string, { src: string; alt: string }> = {
+  "24-hour-emergency-plumber": { src: "/images/photography/service-van.webp", alt: "Illustrative unbranded plumbing service vehicle arriving at a DFW home" },
+  "emergency-drain-cleaning": { src: "/images/photography/sewer-inspection.webp", alt: "Illustrative plumbing professional inspecting a residential drain line" },
+  "main-sewer-line-clog": { src: "/images/photography/sewer-inspection.webp", alt: "Illustrative camera inspection at a residential sewer cleanout" },
+  "toilet-overflow-emergency": { src: "/images/photography/toilet-repair.webp", alt: "Illustrative plumbing professional inspecting a toilet tank" },
+  "burst-pipe-emergency": { src: "/images/photography/plumbing-diagnostic.png", alt: "Illustrative close-up of a plumbing diagnostic inspection" },
+  "water-heater-emergency": { src: "/images/photography/water-heater-inspection.webp", alt: "Illustrative plumbing professional inspecting a residential water heater" }
+};
+
+const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);
+
 export const metadata = buildMetadata({
   title: "Emergency plumbing help across Dallas-Fort Worth",
   description: "Request urgent plumbing help across Dallas-Fort Worth for drain, sewer, pipe, toilet, and water-heater problems.",
@@ -53,11 +64,11 @@ export default function HomePage() {
         faqSchema(faqs)
       ]} />
 
-      <section className="hero-field min-h-[690px] text-white">
+      <section className="hero-field min-h-[620px] text-white">
         <div className="hero-photo">
           <Image src="/images/photography/home-emergency-plumber.png" alt="Illustrative scene of a plumbing professional inspecting a kitchen sink while a homeowner observes" fill sizes="100vw" className="object-cover object-center" priority />
         </div>
-        <div className="mx-auto flex min-h-[690px] max-w-7xl items-center px-4 py-16 lg:py-24">
+        <div className="mx-auto flex min-h-[620px] max-w-7xl items-center px-4 py-14 lg:py-20">
           <article className="max-w-3xl">
             <p className="eyebrow"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Dallas–Fort Worth plumbing connection</p>
             <h1 className="display-title mt-6 text-5xl font-bold leading-[.98] sm:text-6xl lg:text-7xl">
@@ -104,8 +115,8 @@ export default function HomePage() {
       <div className="page-shell">
         <section className="content-section overflow-hidden p-0">
           <div className="grid lg:grid-cols-[.88fr_1.12fr]">
-            <div className="relative min-h-[360px]">
-              <Image src="/images/photography/plumbing-diagnostic.png" alt="Illustrative close-up of a plumbing diagnostic inspection beneath a sink" fill sizes="(min-width:1024px) 44vw, 100vw" className="object-cover" />
+            <div className="overflow-hidden bg-slate-100">
+              <Image src="/images/photography/plumbing-diagnostic.png" alt="Illustrative close-up of a plumbing diagnostic inspection beneath a sink" width={1536} height={1024} sizes="(min-width:1024px) 44vw, 100vw" className="h-full max-h-[520px] min-h-[280px] w-full object-cover" />
             </div>
             <div className="p-7 sm:p-10 lg:p-12">
               <p className="section-kicker">Useful before the call</p>
@@ -126,12 +137,14 @@ export default function HomePage() {
             <Link href="/services/24-hour-emergency-plumber" className="inline-flex items-center gap-2 font-black text-[#0b7895]">Emergency plumber overview <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((service, index) => (
-              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group p-6">
-                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#e8f3f5] text-[#0b7895]">{index % 2 ? <Wrench className="h-7 w-7" aria-hidden="true" /> : <Droplets className="h-7 w-7" aria-hidden="true" />}</span>
-                <h3 className="mt-5 text-2xl font-black leading-tight text-[#081b2c]">{service.name}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{service.shortAnswer}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#e84d0e]">Explore this service <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+            {featuredServices.map((service) => (
+              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group overflow-hidden">
+                <Image src={servicePhotography[service.slug].src} alt={servicePhotography[service.slug].alt} width={1536} height={1024} sizes="(min-width:1024px) 30vw, (min-width:768px) 48vw, 100vw" className="aspect-[16/8] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <div className="p-5">
+                  <h3 className="text-xl font-black leading-tight text-[#081b2c]">{capitalizeFirst(service.name)}</h3>
+                  <p className="mt-2 line-clamp-3 leading-7 text-slate-600">{service.shortAnswer}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#e84d0e]">Explore this service <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+                </div>
               </Link>
             ))}
           </div>
@@ -149,8 +162,20 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="relative min-h-[390px]">
-              <Image src="/images/photography/homeowner-consultation.png" alt="Illustrative scene of a plumbing professional explaining a sink assessment to a homeowner" fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
+            <div className="overflow-hidden bg-[#123b58]">
+              <Image src="/images/photography/homeowner-consultation.png" alt="Illustrative scene of a plumbing professional explaining a sink assessment to a homeowner" width={1536} height={1024} sizes="(min-width:1024px) 50vw, 100vw" className="h-full max-h-[520px] min-h-[300px] w-full object-cover" />
+            </div>
+          </div>
+        </section>
+
+        <section className="content-section overflow-hidden p-0">
+          <div className="grid items-center lg:grid-cols-[1.08fr_.92fr]">
+            <Image src="/images/photography/provider-crew.webp" alt="Illustrative provider crew preparing tools beside an unbranded service vehicle" width={1536} height={1024} sizes="(min-width:1024px) 54vw, 100vw" className="h-full max-h-[420px] min-h-[270px] w-full object-cover" />
+            <div className="p-7 sm:p-9">
+              <p className="section-kicker">Prepared for the request</p>
+              <h2 className="display-title mt-3 text-4xl font-bold leading-tight text-[#081b2c]">A professional arrival starts with clear details.</h2>
+              <p className="mt-4 leading-7 text-slate-600">Share the affected fixture, urgency, and location so an available provider can confirm the right next step. Always confirm identity, credentials, pricing, and scope directly before work begins.</p>
+              <p className="mt-4 text-xs font-semibold text-slate-500">Illustrative service photography. People and vehicles shown are not represented as a specific PlumbingHands provider, employee, or customer.</p>
             </div>
           </div>
         </section>
