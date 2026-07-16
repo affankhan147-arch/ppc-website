@@ -53,32 +53,36 @@ jobs:
 
           echo "No repository token is configured. Starting Vercel OAuth device authorization."
           login_log="$(mktemp)"
-          script -q -e -c "npx --yes vercel@latest login --no-browser" /dev/null 2>&1 | tee "$login_log" &
+          script -q -e -c "npx --yes vercel@latest login" /dev/null >"$login_log" 2>&1 &
           login_pid=$!
 
-          auth_url=""
-          for _ in $(seq 1 90); do
-            auth_url="$(grep -Eo 'https://vercel\.com/[^[:space:]\033]+' "$login_log" | head -n 1 | tr -d '\r' || true)"
-            if [ -n "$auth_url" ]; then
-              break
-            fi
-            if ! kill -0 "$login_pid" 2>/dev/null; then
-              break
-            fi
-            sleep 2
-          done
+          sleep 15
+          clean_log="$(python3 - "$login_log" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+          text = Path(sys.argv[1]).read_text(errors='replace')
+          text = re.sub(r'\x1b\[[0-?]*[ -/]*[@-~]', '', text)
+          print(text[-6000:])
+          PY
+          )"
 
-          if [ -z "$auth_url" ]; then
-            echo "Vercel did not emit an authorization URL."
-            wait "$login_pid"
-            exit 1
+          auth_url="$(printf '%s\n' "$clean_log" | grep -Eo 'https://vercel\.com/[^[:space:]]+' | head -n 1 | tr -d '\r' || true)"
+          if [ -n "$auth_url" ]; then
+            comment="Temporary Vercel production authorization is ready: ${auth_url}\n\nApprove this short-lived device request. The runner will then deploy the current master revision to the existing plumbinghands production project automatically."
+          else
+            comment="Vercel device-login output did not contain a recognized URL. Diagnostic output:\n\n\`\`\`text\n${clean_log}\n\`\`\`"
           fi
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${AUTH_PR_NUMBER}/comments" -f body="$comment"
 
-          echo "::notice title=Vercel authorization required::$auth_url"
-          gh api "repos/${GITHUB_REPOSITORY}/issues/${AUTH_PR_NUMBER}/comments" \
-            -f body="Temporary Vercel production authorization is ready: ${auth_url}\n\nApprove this short-lived device request. The runner will then deploy the current master revision to the existing plumbinghands production project automatically."
-
+          set +e
           wait "$login_pid"
+          login_code=$?
+          set -e
+          if [ "$login_code" -ne 0 ]; then
+            echo "$clean_log"
+            exit "$login_code"
+          fi
 
       - name: Link existing PlumbingHands project
         shell: bash
