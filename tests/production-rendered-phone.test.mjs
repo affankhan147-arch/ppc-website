@@ -65,29 +65,35 @@ function assertFooterHref(html) {
   );
 }
 
-test("homepage source excludes corrupted media and internal defensive copy", () => {
+test("homepage source excludes corrupted media and defensive public copy", () => {
   const sourceFiles = [
     "src/app/page.tsx",
     "src/app/globals.css",
-    "src/components/Header.tsx"
+    "src/components/Header.tsx",
+    "src/components/LeadForm.tsx",
+    "src/components/Footer.tsx"
   ].map((path) => readFileSync(join(rootDir, path), "utf8")).join("\n");
 
   for (const forbidden of [
     "/images/photography/home-emergency-plumber.png",
     "/images/photography/plumbing-diagnostic.png",
     "/images/photography/homeowner-consultation.png",
-    "Illustrative service photography",
-    "people shown are not identified",
-    "fake local-office claims",
+    "Local pages without fake local-office claims.",
+    "Availability depends on location, timing, and provider coverage.",
+    "Confirm pricing, credentials, and arrival details directly with the provider.",
+    "Illustrative service photography. People and vehicles shown are not represented as a specific PlumbingHands provider, employee, or customer.",
+    "Transparent by design",
+    "Illustrative service photography; people shown are not identified as PlumbingHands employees or customers.",
     "Dallas–Fort Worth plumbing connection",
     "Dallas–Fort Worth provider connection"
   ]) {
-    assert.equal(sourceFiles.includes(forbidden), false, `Homepage source must not contain: ${forbidden}`);
+    assert.equal(sourceFiles.includes(forbidden), false, `Public source must not contain: ${forbidden}`);
   }
 
   for (const required of [
-    "Dallas–Fort Worth emergency plumbing service",
+    "Plumbing Service in Dallas–Fort Worth",
     "Emergency Plumbing Service Across DFW.",
+    "One call. Clear next steps.",
     "/images/photography/provider-crew.webp",
     "/images/hero/burst-pipe-emergency.svg"
   ]) {
@@ -102,6 +108,7 @@ test("home production HTML exposes the DID in header, mobile call button, and fo
   );
 
   assertPageContainsPhoneContract(page, "home");
+  assert.ok(page.html.includes("Plumbing Service in Dallas–Fort Worth"), "Home must use the approved Dallas-Fort Worth service wording.");
   assert.ok(page.html.includes("Emergency Plumbing Service Across DFW."), "Home must use service-focused DFW copy.");
   assertCallButtonHref(page.html, "header");
   assertCallButtonHref(page.html, "mobile-sticky-call-bar");
