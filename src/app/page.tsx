@@ -70,7 +70,7 @@ export default function HomePage() {
         </div>
         <div className="mx-auto flex min-h-[620px] max-w-7xl items-center px-4 py-14 lg:py-20">
           <article className="max-w-3xl">
-            <p className="eyebrow"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Dallas–Fort Worth emergency plumbing service</p>
+            <p className="eyebrow"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Plumbing Service in Dallas–Fort Worth</p>
             <h1 className="display-title mt-6 text-5xl font-bold leading-[.98] sm:text-6xl lg:text-7xl">
               Urgent Plumbing Help When Every Minute Matters.
             </h1>
@@ -178,7 +178,7 @@ export default function HomePage() {
         <section className="content-section soft-band">
           <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr]">
             <div>
-              <p className="section-kicker">Dallas–Fort Worth plumbing service</p>
+              <p className="section-kicker">Plumbing Service in Dallas–Fort Worth</p>
               <h2 className="display-title mt-3 text-4xl font-bold text-[#081b2c]">Emergency Plumbing Service Across DFW.</h2>
               <p className="mt-4 text-lg leading-8 text-slate-600">Choose your city to find emergency plumbing service for leaks, drains, sewers, toilets, pipes, and water heaters.</p>
               <div className="mt-6 grid grid-cols-2 gap-3">
