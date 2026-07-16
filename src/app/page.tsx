@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   AlertTriangle,
   ArrowRight,
@@ -13,11 +13,10 @@ import {
 } from "lucide-react";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
-import { FAQBlock, InternalLinks } from "@/components/PageSections";
-import { cities, priorityCityServiceCombos } from "@/data/cities";
+import { FAQBlock } from "@/components/PageSections";
+import { cities } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
-import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
@@ -25,48 +24,72 @@ import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema
 
 const urgentCards = [
   {
-    title: "Active leaks",
-    bullets: ["Closest shutoff valve", "Water away from electrical areas", "Fast leak request"],
+    title: "Active leak or burst pipe",
+    copy: "Shut off the closest safe valve and keep water away from electrical areas.",
+    action: "Get pipe emergency help",
     icon: Droplets,
-    href: "/faq"
+    href: "/services/burst-pipe-emergency"
   },
   {
-    title: "Drain backups",
-    bullets: ["Stop water use", "Sinks, tubs, toilets, floor drains", "Backup risk check"],
+    title: "Drain backup or standing water",
+    copy: "Stop using affected fixtures and avoid adding chemical drain cleaner.",
+    action: "Request drain cleaning help",
     icon: AlertTriangle,
-    href: "/faq"
+    href: "/services/emergency-drain-cleaning"
   },
   {
-    title: "Sewer symptoms",
-    bullets: ["Multiple slow drains", "Sewer odor", "Outdoor cleanout overflow"],
+    title: "Multiple fixtures or sewer symptoms",
+    copy: "Stop water use when toilets, tubs, or floor drains react together.",
+    action: "Review main sewer help",
     icon: Wrench,
-    href: "/faq"
+    href: "/services/main-sewer-line-clog"
   },
   {
-    title: "Essential fixture loss",
-    bullets: ["No usable toilet", "No hot water", "Unsafe water location"],
+    title: "Water heater leak or no hot water",
+    copy: "Turn off water and power or gas only when it is safe to do so.",
+    action: "Discuss water heater help",
     icon: Clock,
-    href: "/faq"
+    href: "/services/water-heater-emergency"
   }
 ];
 
-const howItWorks = [
-  "City, issue, urgency, contact number",
-  "Service-area and provider availability review",
-  "Pricing, credentials, scope confirmed directly"
+const trustPoints = [
+  {
+    title: "Safety-first guidance",
+    copy: "Immediate steps focus on limiting water damage and avoiding electrical or wastewater hazards.",
+    icon: ShieldCheck
+  },
+  {
+    title: "DFW request routing",
+    copy: "City and service paths help explain where assistance is needed before availability is discussed.",
+    icon: MapPin
+  },
+  {
+    title: "Direct provider confirmation",
+    copy: "Pricing, credentials, timing, diagnosis, and repair scope are confirmed directly before work.",
+    icon: CheckCircle2
+  }
+];
+
+const callProcess = [
+  {
+    title: "Explain what is happening",
+    copy: "Describe the affected fixture or pipe, whether water is active, and any immediate safety concern."
+  },
+  {
+    title: "Share your DFW location",
+    copy: "Provide the city or ZIP so current service-area and provider availability can be discussed."
+  },
+  {
+    title: "Confirm the next step",
+    copy: "Discuss timing and then confirm pricing, credentials, diagnosis, and scope directly with the provider."
+  }
 ];
 
 const coverageStats = [
-  [String(cities.length), "DFW service areas"],
-  [String(services.length), "urgent service types"],
-  [String(priorityCityServiceCombos.length), "priority local request paths"]
-];
-
-const localStructureBullets = [
-  "Service-area routing",
-  "Direct emergency answers",
-  "Cost-factor guidance",
-  "Clear provider coverage guidance"
+  [String(cities.length), "DFW city paths"],
+  [String(services.length), "plumbing service paths"],
+  [String(costGuides.length), "cost-factor guides"]
 ];
 
 export const metadata = buildMetadata({
@@ -80,17 +103,16 @@ export default function HomePage() {
   const faqs = [
     {
       question: "Can I request urgent plumbing help across Dallas-Fort Worth?",
-      answer:
-        siteConfig.serviceStatement
+      answer: siteConfig.serviceStatement
     },
     {
-      question: "How does Plumbing Hands describe service areas?",
+      question: "What should I confirm before approving emergency plumbing work?",
       answer:
-        "Service-area pages help visitors describe where plumbing help is needed. Availability, timing, pricing, credentials, and scope should be confirmed directly with the provider."
+        "Confirm provider availability, timing, credentials, diagnostic or dispatch charges, repair scope, and pricing directly before authorizing work."
     },
     ...emergencyFaqs,
     ...universalFaqs
-  ].slice(0, 8);
+  ].slice(0, 7);
 
   return (
     <main>
@@ -106,167 +128,226 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="hero-field">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:py-16">
-          <article className="self-center text-white">
-            <p className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-3 py-2 text-xs font-black uppercase tracking-normal text-cyan-100">
+      <section className="hero-field overflow-hidden">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:py-16 xl:py-20">
+          <article className="relative z-10 text-white">
+            <p className="premium-eyebrow">
               <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-              Dallas-Fort Worth service request help
+              Dallas-Fort Worth emergency request line
             </p>
-            <h1 className="mt-5 max-w-4xl text-3xl font-black leading-tight sm:text-5xl lg:text-6xl">
+
+            <h1 className="mt-5 max-w-4xl text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl">
               Emergency Plumbing Help Across Dallas-Fort Worth
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-100">
-              Find help for urgent drain, sewer, pipe, toilet, and water-heater problems. {siteConfig.serviceStatement}
+
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
+              Get clear next steps for urgent leaks, drain backups, sewer symptoms, toilet overflows, and water-heater problems—then call to discuss current provider availability.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <CallButton location="home-hero" label="Request Emergency Help" pagePath="/" pageType="homepage" service="Emergency plumbing" city={siteConfig.marketName} />
-              <Link
-                href="#services"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/25 px-5 py-3 text-sm font-black text-white transition hover:bg-white/10"
-              >
-                View Emergency Services <ArrowRight className="h-4 w-4" aria-hidden="true" />
+
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <CallButton
+                location="home-hero"
+                label={`Call ${siteConfig.phoneDisplay}`}
+                pagePath="/"
+                pageType="homepage"
+                service="Emergency plumbing"
+                city={siteConfig.marketName}
+                className="min-h-14 px-6 text-lg"
+              />
+              <Link href="#urgent-help" className="premium-secondary-button min-h-14 px-6 py-4 text-base font-black">
+                Choose your plumbing problem <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </Link>
             </div>
+
+            <p className="mt-4 flex items-center gap-2 text-sm font-bold text-cyan-100">
+              <PhoneCall className="h-4 w-4 text-orange-300" aria-hidden="true" />
+              Speak by phone—no long request form required.
+            </p>
+
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {["Transparent service areas", "Practical safety-first guidance", "Provider coverage varies"].map((item) => (
-                <div key={item} className="rounded-md border border-white/15 bg-white/10 p-3 text-sm font-bold text-slate-100">
-                  <CheckCircle2 className="mb-2 h-4 w-4 text-cyan-200" aria-hidden="true" />
-                  {item}
+              {[
+                "Safety-first emergency guidance",
+                "DFW service-area request paths",
+                "Provider details confirmed directly"
+              ].map((item) => (
+                <div key={item} className="hero-proof-card">
+                  <CheckCircle2 className="h-5 w-5 text-cyan-200" aria-hidden="true" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
           </article>
 
-          <aside className="grid gap-4">
-            <div className="overflow-hidden rounded-md border border-white/20 bg-white/10 shadow-2xl">
+          <aside className="relative z-10 grid gap-5">
+            <div className="hero-visual-panel relative overflow-hidden rounded-3xl border border-white/15 shadow-2xl">
               <Image
                 src="/images/hero/emergency-plumbing-abstract.svg"
                 alt=""
-                width={960}
-                height={320}
-                className="h-40 w-full object-cover"
+                width={1200}
+                height={520}
+                className="h-52 w-full object-cover sm:h-60"
                 priority
               />
+              <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/15 bg-slate-950/80 p-4 text-white backdrop-blur-md">
+                <p className="text-xs font-black uppercase tracking-[0.12em] text-cyan-200">Before you call</p>
+                <p className="mt-1 text-sm font-bold leading-6">
+                  Stop active water when safe, avoid wet electrical areas, and note which fixtures are affected.
+                </p>
+              </div>
             </div>
-            <div>
-              <LeadForm pageUrl="/" service="Emergency plumbing" city={siteConfig.marketName} />
-            </div>
+            <LeadForm pageUrl="/" service="emergency plumbing" city={siteConfig.marketName} />
           </aside>
         </div>
       </section>
 
-      <section className="mx-auto -mt-7 max-w-7xl px-4">
-        <div className="emergency-strip grid gap-3 p-3 sm:grid-cols-2 lg:grid-cols-4">
-          {urgentCards.map((card) => {
-            const Icon = card.icon;
-            return (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="rounded-md border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-md"
-              >
-                <Icon className="h-8 w-8 text-orange-600" aria-hidden="true" />
-                <h2 className="mt-3 text-xl font-black text-slate-950">{card.title}</h2>
-                <ul className="mt-3 grid gap-1.5 text-base font-semibold leading-6 text-slate-700">
-                  {card.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </Link>
-            );
-          })}
+      <section id="urgent-help" className="relative z-20 mx-auto -mt-8 max-w-7xl px-4">
+        <div className="premium-surface p-5 sm:p-7">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="section-kicker">Start with the urgent issue</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950">
+                Choose the Problem That Needs Attention
+              </h2>
+            </div>
+            <p className="max-w-xl text-sm leading-6 text-slate-600">
+              These links provide issue-specific safety guidance before you call. Avoid testing the problem by repeatedly running water.
+            </p>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {urgentCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <Link key={card.title} href={card.href} className="premium-card premium-card-link group p-5">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-orange-50 text-orange-700">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-4 text-xl font-black leading-tight text-slate-950">{card.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{card.copy}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-cyan-800">
+                    {card.action} <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       <div className="page-shell">
-        <section className="content-section soft-band">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <section className="content-section premium-trust-section">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
-              <p className="section-kicker">DFW request paths</p>
-              <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950">
-                Services by DFW location
+              <p className="section-kicker">A clearer way to request help</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                Why Homeowners Use Plumbing Hands
               </h2>
-              <ul className="mt-4 grid gap-2 text-lg font-bold text-slate-800">
-                {localStructureBullets.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-cyan-700" aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                Plumbing Hands combines practical emergency information with organized DFW service paths so callers can describe the problem clearly and confirm the right details before work begins.
+              </p>
+              <div className="mt-6 grid grid-cols-3 gap-3">
+                {coverageStats.map(([number, label]) => (
+                  <div key={label} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                    <p className="text-3xl font-black text-slate-950">{number}</p>
+                    <p className="mt-1 text-xs font-bold leading-5 text-slate-500">{label}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="grid gap-3 sm:grid-cols-3">
-              {coverageStats.map(([number, label]) => (
-                <div key={label} className="rounded-md border border-slate-200 bg-white p-5">
-                  <p className="text-4xl font-black text-slate-950">{number}</p>
-                  <p className="mt-2 text-base font-bold text-slate-600">{label}</p>
-                </div>
-              ))}
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {trustPoints.map((point) => {
+                const Icon = point.icon;
+                return (
+                  <article key={point.title} className="rounded-3xl border border-white/80 bg-white/90 p-5 shadow-lg backdrop-blur">
+                    <span className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-50 text-cyan-800">
+                      <Icon className="h-6 w-6" aria-hidden="true" />
+                    </span>
+                    <h3 className="mt-4 text-xl font-black text-slate-950">{point.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">{point.copy}</p>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
 
         <section id="services" className="content-section">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="section-kicker">Emergency services</p>
-              <h2 className="mt-2 text-3xl font-black text-slate-950">Request help by service need</h2>
+              <p className="section-kicker">Emergency plumbing services</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                Get Guidance for the Right Service Need
+              </h2>
             </div>
-            <Link href="/services/24-hour-emergency-plumber" className="text-sm font-black text-cyan-700 hover:text-cyan-900">
-              Start with emergency plumber <ArrowRight className="inline h-4 w-4" aria-hidden="true" />
+            <Link href="/services/24-hour-emergency-plumber" className="inline-flex items-center gap-2 text-sm font-black text-cyan-800 hover:text-cyan-950">
+              View emergency plumber guide <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((service, index) => (
-              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group bg-white p-5">
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {featuredServices.slice(0, 6).map((service, index) => (
+              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card premium-card-link group p-6">
                 <div className="flex items-start justify-between gap-4">
-                  <span className="grid h-14 w-14 place-items-center rounded-md bg-cyan-50 text-cyan-700">
+                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-cyan-50 text-cyan-800">
                     {index % 2 === 0 ? <Droplets className="h-7 w-7" aria-hidden="true" /> : <Wrench className="h-7 w-7" aria-hidden="true" />}
                   </span>
                   <ArrowRight className="h-5 w-5 text-slate-300 transition group-hover:translate-x-1 group-hover:text-orange-600" aria-hidden="true" />
                 </div>
-                <h3 className="mt-4 text-2xl font-black leading-tight text-slate-950">{service.name}</h3>
-                <ul className="mt-4 grid gap-2 text-base font-semibold leading-6 text-slate-700">
-                  {service.symptoms.slice(0, 3).map((symptom) => (
-                    <li key={symptom}>{symptom}</li>
-                  ))}
-                </ul>
+                <h3 className="mt-5 text-2xl font-black leading-tight text-slate-950">{service.name}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{service.shortAnswer}</p>
+                <p className="mt-5 text-xs font-black uppercase tracking-[0.1em] text-orange-700">Urgency: {service.urgency}</p>
               </Link>
             ))}
           </div>
         </section>
 
-        <section className="content-section">
-          <p className="section-kicker">Common urgent problems</p>
-          <h2 className="mt-2 text-3xl font-black text-slate-950">FAQ-style answers for stressful moments</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {problems.slice(0, 6).map((problem) => (
-              <Link key={problem.slug} href={`/problems/${problem.slug}`} className="premium-card bg-white p-5">
-                <AlertTriangle className="h-8 w-8 text-orange-600" aria-hidden="true" />
-                <h3 className="mt-3 text-xl font-black leading-tight text-slate-950">{problem.title}</h3>
-                <ul className="mt-3 grid gap-2 text-base font-semibold leading-6 text-slate-700">
-                  {problem.warningSigns.slice(0, 3).map((sign) => (
-                    <li key={sign}>{sign}</li>
-                  ))}
-                </ul>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="content-section">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <section className="content-section soft-band">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
-              <p className="section-kicker">Coverage area</p>
-              <h2 className="mt-2 text-3xl font-black text-slate-950">Emergency help by DFW location</h2>
-              <ul className="mt-4 grid gap-2 text-lg font-bold text-slate-800">
-                <li>Dallas, Fort Worth, Arlington, Plano, Irving</li>
-                <li>City-specific service request paths</li>
-                <li>Provider coverage confirmed directly</li>
-                <li>Provider details confirmed before work</li>
-              </ul>
-              <Link href="/cities" className="mt-5 inline-flex items-center gap-2 text-base font-black text-cyan-700 hover:text-cyan-900">
+              <p className="section-kicker">Simple phone process</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                What Happens After You Call
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                The call helps organize the urgent facts. It does not replace direct confirmation of provider availability, credentials, pricing, diagnosis, or scope.
+              </p>
+              <CallButton
+                location="home-process-cta"
+                label={`Call ${siteConfig.phoneDisplay}`}
+                pagePath="/"
+                pageType="homepage"
+                service="Emergency plumbing"
+                city={siteConfig.marketName}
+                className="mt-6"
+              />
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3">
+              {callProcess.map((step, index) => (
+                <article key={step.title} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <span className="grid h-11 w-11 place-items-center rounded-2xl bg-slate-950 text-base font-black text-white">
+                    {index + 1}
+                  </span>
+                  <h3 className="mt-5 text-xl font-black text-slate-950">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{step.copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="content-section">
+          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+            <div>
+              <p className="section-kicker">Dallas-Fort Worth coverage</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                Find Your DFW Service-Area Path
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                City pages help explain local request context without claiming a staffed Plumbing Hands office or guaranteed provider availability in that location.
+              </p>
+              <Link href="/cities" className="mt-5 inline-flex items-center gap-2 text-base font-black text-cyan-800 hover:text-cyan-950">
                 View all DFW locations <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </Link>
               <Image
@@ -274,14 +355,18 @@ export default function HomePage() {
                 alt=""
                 width={900}
                 height={520}
-                className="mt-6 rounded-md border border-slate-200 bg-white"
+                className="mt-6 w-full rounded-3xl border border-slate-200 bg-white shadow-sm"
               />
             </div>
+
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {cities.slice(0, 12).map((city) => (
-                <Link key={city.slug} href={`/cities/${city.slug}`} className="rounded-md border border-slate-200 bg-white p-5 font-bold text-slate-900 transition hover:border-cyan-400">
-                  <MapPin className="mb-3 h-6 w-6 text-cyan-700" aria-hidden="true" />
-                  <span className="text-xl font-black">{city.name}</span>
+              {cities.slice(0, 9).map((city) => (
+                <Link key={city.slug} href={`/cities/${city.slug}`} className="premium-card premium-card-link group p-5">
+                  <MapPin className="h-6 w-6 text-cyan-800" aria-hidden="true" />
+                  <h3 className="mt-4 text-xl font-black text-slate-950">{city.name}</h3>
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-[0.08em] text-slate-500 group-hover:text-cyan-800">
+                    View local request path <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                  </span>
                 </Link>
               ))}
             </div>
@@ -289,43 +374,66 @@ export default function HomePage() {
         </section>
 
         <section className="content-section">
-          <p className="section-kicker">Cost guides</p>
-          <h2 className="mt-2 text-3xl font-black text-slate-950">Pricing questions to ask before approving work</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {costGuides.map((guide) => (
-              <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card bg-white p-5">
-                <PhoneCall className="h-8 w-8 text-cyan-700" aria-hidden="true" />
-                <h3 className="mt-3 text-xl font-black leading-tight text-slate-950">{guide.title}</h3>
-                <ul className="mt-3 grid gap-2 text-base font-semibold leading-6 text-slate-700">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="section-kicker">Emergency cost guidance</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                Understand the Factors Before Approving Work
+              </h2>
+            </div>
+            <Link href="/cost-guides/emergency-plumbing-cost-dfw" className="inline-flex items-center gap-2 text-sm font-black text-cyan-800 hover:text-cyan-950">
+              Open the DFW cost guide <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {costGuides.slice(0, 3).map((guide) => (
+              <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card premium-card-link group p-6">
+                <PhoneCall className="h-7 w-7 text-orange-700" aria-hidden="true" />
+                <h3 className="mt-4 text-xl font-black leading-tight text-slate-950">{guide.title}</h3>
+                <ul className="mt-4 grid gap-2 text-sm leading-6 text-slate-600">
                   {guide.factors.slice(0, 3).map((factor) => (
-                    <li key={factor}>{factor}</li>
+                    <li key={factor} className="flex gap-2">
+                      <CheckCircle2 className="mt-1 h-4 w-4 flex-none text-cyan-700" aria-hidden="true" />
+                      <span>{factor}</span>
+                    </li>
                   ))}
                 </ul>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-cyan-800">
+                  Review cost factors <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+                </span>
               </Link>
             ))}
           </div>
         </section>
 
-        <section className="content-section soft-band">
-          <p className="section-kicker">How it works</p>
-          <h2 className="mt-2 text-3xl font-black text-slate-950">Simple request flow</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            {howItWorks.map((step, index) => (
-              <div key={step} className="premium-card bg-white p-5">
-                <span className="grid h-10 w-10 place-items-center rounded-md bg-orange-100 text-sm font-black text-orange-700">
-                  {index + 1}
-                </span>
-                <p className="mt-4 text-lg font-black leading-7 text-slate-800">{step}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 rounded-md border border-cyan-200 bg-white p-5">
-            <p className="font-bold leading-7 text-slate-800">{siteConfig.disclosure}</p>
+        <section className="premium-final-cta overflow-hidden rounded-[2rem] px-6 py-10 text-white shadow-2xl sm:px-10 lg:px-12">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="premium-eyebrow">
+                <PhoneCall className="h-4 w-4" aria-hidden="true" />
+                Emergency plumbing request line
+              </p>
+              <h2 className="mt-4 max-w-3xl text-3xl font-black leading-tight tracking-tight sm:text-4xl">
+                Water is spreading, a drain is backing up, or an essential fixture is unavailable?
+              </h2>
+              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200">
+                Call to explain the problem and location. Current provider availability varies, and all pricing, credentials, timing, and repair scope should be confirmed directly.
+              </p>
+            </div>
+            <CallButton
+              location="home-final-cta"
+              label={`Call ${siteConfig.phoneDisplay}`}
+              pagePath="/"
+              pageType="homepage"
+              service="Emergency plumbing"
+              city={siteConfig.marketName}
+              className="min-h-14 px-7 text-lg lg:min-w-72"
+            />
           </div>
         </section>
 
         <FAQBlock faqs={faqs} />
-        <InternalLinks />
       </div>
     </main>
   );
