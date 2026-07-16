@@ -38,7 +38,8 @@ const titles = [
   "Emergency Drain Cleaning in Frisco: What to Expect",
   "Emergency Sewer Help in Garland: Signs and Next Steps",
   "Water Shutoff Valve Will Not Close During a Leak",
-  "Emergency Leak Approval Checklist for Homeowners"
+  "Emergency Leak Approval Checklist for Homeowners",
+  "7 Plumbing Problems You Should Never Ignore"
 ];
 
 const serviceCycle = [
@@ -61,11 +62,14 @@ const slugify = (value: string) =>
     .replace(/^-|-$/g, "");
 
 const relatedServiceOverrides: Record<string, string> = {
+  "7 Plumbing Problems You Should Never Ignore": "24-hour-emergency-plumber",
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
   "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency"
 };
 
 const directAnswerOverrides: Record<string, string> = {
+  "7 Plumbing Problems You Should Never Ignore":
+    "Dripping faucets, slow drains, weak water pressure, running toilets, hidden moisture, unusual pipe noises, and sewer odors can signal plumbing problems that become more expensive when ignored.",
   "Emergency Plumber Near Me Open Now: What to Do Before Help Arrives":
     "If a plumbing issue cannot wait, shut off water where safe, avoid using affected fixtures, document visible damage, and request an emergency provider connection with your city and problem type.",
   "Toilet Overflowing at Night in Dallas: Fast Steps for Homeowners":
