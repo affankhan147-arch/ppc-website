@@ -1,0 +1,405 @@
+﻿CODEX FULL CONTROL COMMAND: Day 3 Launch QA, Public Copy Cleanup, and Professional Web Design Upgrade
+
+You are working in Full Control Mode.
+
+Repository:
+affankhan147-arch/ppc-website
+
+Branch:
+master
+
+Live domain:
+https://plumbinghands.com
+
+Current confirmed status:
+- Day 1 foundation completed.
+- Day 2 SEO/AEO content scale completed.
+- Google Search Console verified.
+- Google sitemap submitted.
+- Homepage indexing requested.
+- IndexNow key live.
+- 112 URLs submitted to IndexNow.
+- Bing manual setup is postponed.
+- Day 3 must focus on launch QA, public copy cleanup, and professional conversion-focused web design.
+- Do not do more indexing in this task.
+
+IMPORTANT PUBLIC WEBSITE RULE:
+The public website must look like a professional emergency plumbing help / provider-connection website.
+It must NOT expose internal business model, prompt text, project strategy, or technical architecture.
+
+FORBIDDEN PUBLIC-FACING WORDS/PHRASES:
+Search the whole public website and remove from any visitor-facing page, component, metadata, schema, visible text, black box, card, hero block, footer, FAQ, blog, route, and public report link:
+
+- Pay Per Call
+- pay per call
+- PPC
+- ppc
+- Reusable platform
+- reusable platform
+- Dallas plumbing is Version 1
+- Version 1
+- powered by data files
+- future home-service verticals
+- buyer routing
+- lead buyer
+- routing engine
+- call monetization
+- prompt
+- my prompt
+- internal strategy
+- Codex
+- ChatGPT
+- project blueprint
+- automation command
+- dashboard project
+- Ringba
+- API routing
+- data files so future home-service verticals can be added
+- “Services, cities, problem pages, cost guides, buyer routing, and AEO sections are powered by data files so future home-service verticals can be added without rewriting the whole site.”
+
+Internal docs inside ops/, reports/, command-center/, scripts/ may contain internal planning terms if needed, but NO public-facing route/page/component/metadata/schema should show these terms.
+
+PUBLIC POSITIONING TO USE INSTEAD:
+Use clean visitor-facing language such as:
+- Emergency plumbing help across Dallas-Fort Worth
+- Get connected with available plumbing help
+- Request emergency plumbing support
+- Find help for urgent drain, sewer, pipe, toilet, and water-heater problems
+- Plumbing Hands helps visitors request service from available providers/partners where available
+- Service availability may vary by location, timing, and provider coverage
+
+MANDATORY DISCLOSURE:
+Use clear honest disclosure:
+“Plumbing Hands helps connect visitors with available plumbing service providers or partners where available. We are not claiming a physical office in every city listed.”
+
+Do not claim:
+- licensed plumber
+- insured contractor
+- local office in every city
+- owned technician team
+- guaranteed 24/7 dispatcher
+- guaranteed price
+- fake reviews
+- fake ratings
+- fake awards
+- fake BBB accreditation
+- fake Google Business Profile
+- fake address
+
+MAIN DAY 3 OBJECTIVES:
+
+1. Pull latest master.
+
+Run:
+git pull origin master
+git status
+
+2. Full public copy cleanup.
+
+Search all public-facing files for forbidden terms.
+
+Likely public-facing locations include:
+- app/
+- pages/
+- src/
+- components/
+- public-facing data files
+- content/
+- lib metadata used on public pages
+- sitemap source data
+- schema source data
+- homepage components
+- service pages
+- city pages
+- city + service pages
+- problem pages
+- cost guides
+- FAQ pages
+- footer/header
+- CTA components
+
+Remove internal project text from the website.
+
+Specifically remove or rewrite any visible black/dark box/card containing wording like:
+
+“Reusable platform
+Dallas plumbing is Version 1
+Services, cities, problem pages, cost guides, buyer routing, and AEO sections are powered by data files so future home-service verticals can be added without rewriting the whole site.”
+
+Replace with professional visitor-facing trust/disclosure block:
+
+“Plumbing Hands helps Dallas-Fort Worth homeowners and businesses request urgent plumbing help. Service availability depends on location, timing, and provider coverage. Submit a request or call to get connected where help is available.”
+
+3. Professional competitor-inspired web design upgrade.
+
+Use these design inspirations as patterns only. Do not copy text, images, branding, reviews, logos, or layouts exactly.
+
+Competitor/reference design patterns:
+- Angi / Thumbtack: simple marketplace search + pro comparison flow
+- Mr. Rooter / Roto-Rooter: emergency call-first design
+- Yelp: reviews/listing trust format, but do not add fake reviews
+- HomeAdvisor: quote/request form flow
+
+Design goal:
+Create an extremely professional, conversion-focused emergency plumbing website.
+
+4. Homepage design structure.
+
+Upgrade homepage layout to this structure:
+
+HERO SECTION:
+- Emergency plumbing help across Dallas-Fort Worth
+- Strong headline
+- Short supporting text
+- Call button
+- Short lead form
+- Service area wording
+- Clear disclosure: connects visitors with available providers/partners where available
+- No internal business model wording
+- No “Pay Per Call”
+- No “PPC”
+- No “Reusable platform”
+
+ABOVE THE FOLD:
+- Phone CTA
+- Service area
+- Emergency services
+- Fast request form
+- Trust/disclosure mini-block
+- Mobile sticky CTA
+
+MIDDLE:
+- Service cards
+- Problem cards
+- City coverage cards
+- Cost guide cards
+- Trust/disclosure block
+- Why use Plumbing Hands
+- How it works in 3 simple steps:
+  1. Tell us the plumbing issue
+  2. Share your location and urgency
+  3. Get connected where service coverage is available
+
+BOTTOM:
+- FAQs
+- Internal links
+- Partner-with-us CTA
+- Legal/disclosure/footer
+- Privacy/terms/disclosure links
+
+5. Global design improvements.
+
+Improve:
+- Header clarity
+- CTA buttons
+- Hero section spacing
+- Service cards
+- Problem cards
+- Cost guide cards
+- City coverage section
+- Lead form visual hierarchy
+- Mobile sticky call/form CTA
+- Footer navigation
+- Disclosure visibility
+- Typography
+- Spacing
+- Contrast
+- Responsive design
+- Trust-focused visual polish
+
+Make it look like a polished real business website, not a generated template.
+
+6. Service page design improvements.
+
+Each main service page should look professional and conversion-focused:
+- Clear hero
+- Emergency CTA near top
+- Short lead form or form link
+- Direct answer block
+- What to do now
+- When to request help
+- Common causes
+- Cost factors
+- FAQ accordion/card section
+- Related services
+- Related problems
+- Related cities
+- Disclosure block
+
+7. City page design improvements.
+
+Each city page should:
+- Avoid fake office/address claims
+- Show service-area coverage wording
+- Have professional city/service cards
+- Link to relevant services
+- Link to related city + service pages
+- Include disclosure
+- Include CTA
+- Avoid doorway-page feel
+
+8. Problem and cost guide design improvements.
+
+Problem pages:
+- Better emergency first-step layout
+- “Do this now” cards
+- “Avoid these mistakes” cards
+- Related service CTA
+
+Cost guides:
+- Do not guarantee exact price
+- Use cost factors, not fake pricing promises
+- Clean table/card design
+- CTA to request help
+
+9. Mobile conversion QA.
+
+Check mobile layout:
+- Header not crowded
+- CTA visible
+- Form usable
+- Sticky CTA works
+- Cards stack cleanly
+- No horizontal overflow
+- Footer links readable
+- No large ugly black prompt/internal text boxes
+
+10. Schema and SEO QA.
+
+Keep:
+- WebPage schema
+- Service schema
+- FAQPage schema where appropriate
+- BreadcrumbList schema
+- Organization schema
+
+Do not add:
+- fake review schema
+- fake aggregateRating
+- fake LocalBusiness address
+- fake price schema
+- fake opening hours
+- fake license schema
+
+Check:
+- canonical URLs use https://plumbinghands.com
+- sitemap remains stable
+- robots remains correct
+- no Vercel preview URLs
+- no localhost URLs
+- no ChatGPT Sites URLs
+- no internal report URLs in sitemap
+
+11. Internal link QA.
+
+Check internal linking:
+- homepage to services/cities/problems/cost guides
+- service pages to related problems/cities/cost guides
+- city pages to relevant services
+- problem pages to service pages
+- cost guides to service pages
+- footer navigation clean
+
+Avoid excessive repeated exact-match anchors.
+
+12. Lead form and CTA QA.
+
+Check:
+- Lead form fields still work
+- /api/lead still works safely
+- /api/call-event still works safely
+- CTA buttons do not claim unavailable real phone tracking
+- Placeholder phone is acceptable only if clearly placeholder/internal or replaced with approved display
+- Public website should not look broken because of placeholder phone
+
+If no real phone number exists, use CTA wording like:
+“Request help online”
+“Submit service request”
+“Call option coming soon” only if necessary
+or keep placeholder hidden until real tracking number is supplied.
+
+13. Visual trust without fake proof.
+
+Add or improve trust blocks using honest claims:
+- Fast request process
+- Dallas-Fort Worth coverage focus
+- Emergency issue guidance
+- Transparent provider-connection disclosure
+- No fake review count
+- No fake star rating
+- No fake “licensed team” claim
+- No fake “serving since” claim unless verified
+
+14. Reports.
+
+Create/update:
+
+reports/day3_launch_qa_report.md
+reports/public_copy_cleanup_report.md
+reports/forbidden_terms_scan_report.md
+reports/conversion_design_gap_report.md
+reports/day3_design_improvement_report.md
+reports/day3_mobile_qa_report.md
+reports/day3_remaining_owner_inputs.md
+
+Reports must include:
+- forbidden terms found and removed
+- pages/components changed
+- design improvements made
+- mobile QA status
+- schema QA status
+- sitemap/robots status
+- remaining owner inputs
+- whether site is ready for controlled public growth
+- whether Bing setup can remain postponed
+
+15. Owner inputs still pending.
+
+Keep these as pending, not blockers for design QA:
+- real call tracking number
+- approved buyer routing/CRM endpoint
+- verified buyer list/service coverage
+- analytics IDs
+- business email setup
+- Bing Webmaster manual import
+- citation plan
+- relevant authority/backlink plan
+
+16. QA commands.
+
+Run:
+
+npm install
+npm run build
+
+If PowerShell blocks npm.ps1, use:
+npm.cmd install
+npm.cmd run build
+
+Run lint/test if available.
+If lint/test scripts are missing, report missing but do not fail only because they are absent.
+
+17. Live check after commit.
+
+After build passes and commit is pushed, verify:
+https://plumbinghands.com
+https://plumbinghands.com/robots.txt
+https://plumbinghands.com/sitemap.xml
+
+18. Commit and push.
+
+Only commit if build passes.
+
+Commit message:
+Complete Day 3 launch QA and professional design cleanup
+
+Final Codex response must include only:
+
+1. Build status
+2. Public forbidden terms removed
+3. Design improvements completed
+4. Pages/components changed
+5. Sitemap/robots status
+6. Remaining owner inputs
+7. Whether site is ready for controlled public growth
+8. Exact next recommended task
