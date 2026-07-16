@@ -67,7 +67,7 @@ function assertFooterHref(html) {
 
 function assertPremiumHomepageContract({ relativePath, html }) {
   for (const marker of [
-    "Speak With a Plumbing Coordinator Now",
+    "Call the Emergency Request Line Now",
     "What Happens After You Call",
     "Why Homeowners Use Plumbing Hands",
     "Choose the Problem That Needs Attention"
