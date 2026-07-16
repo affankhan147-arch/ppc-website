@@ -1,0 +1,17 @@
+﻿MASTER TASK: Phase 4 Session 1 long-tail content enhancement
+PROJECT OWNER: Sana Ul Haque / affan.khan147@gmail.com
+REPOSITORY: affankhan147-arch/ppc-website
+BRANCH: codex/workflow-resume-20260716
+ChatGPT is the Master planning house. PowerShell is the orchestrator. Codex is the coding worker. Do not select another task or expand scope.
+Read command-center/PROJECT_OWNERSHIP.md, command-center/MASTER_WORKFLOW.md, command-center/CODEX_WORKER_PROTOCOL.md and existing repository instructions.
+Enhance only the existing blog URL /blog/emergency-plumber-near-me-open-now-what-to-do-before-help-arrives with dedicated high-quality content instead of relying only on the shared blog template.
+Preserve the URL, canonical, approved DID +1 844-397-8298, truthful provider-connection disclosure, current routing, security controls and existing completed work.
+Cover immediate safe actions, water shutoff guidance, electrical/water safety, what information to prepare, common mistakes to avoid, realistic arrival/availability wording, when emergency services may be appropriate, and what happens after requesting plumbing help.
+Do not provide unsafe repair instructions, fake response times, fake prices, fake reviews, fake licensing, fake coverage or guaranteed availability.
+Add natural internal links to relevant emergency-plumber, drain, sewer, toilet, water-heater, DFW city and cost-guide pages. Avoid keyword stuffing and cannibalization.
+Inspect current blogPosts and pageEnhancements patterns. Make the smallest maintainable implementation. Do not create a duplicate URL.
+Create reports/phase4_session1_longtail_enhancement.md containing starting commit, evidence, changed files, internal links, keyword intent, truthfulness checks and exact verification results.
+Run npm test, npm run test:routing and npm run build. Do not commit if any required check fails.
+If all checks pass, commit with message: phase4 session1: enhance emergency plumber open-now guide
+Push only to codex/workflow-resume-20260716. Never merge into master and never create a pull request.
+Return the ending commit, changed files, test results, report path and blockers.
