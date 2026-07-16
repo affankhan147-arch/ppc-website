@@ -1,0 +1,50 @@
+name: PlumbingHands Continuity Status Probe
+
+on:
+  push:
+    branches:
+      - test/continuity-smoke-20260716
+
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  probe:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Clone workflow branch and run Status
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          TEST_SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+          SERVER_URL: ${{ github.server_url }}
+        run: |
+          $state = 'failure'
+          $description = 'Probe did not complete'
+          try {
+            git clone --branch codex/workflow-resume-20260716 --single-branch https://github.com/affankhan147-arch/ppc-website.git repo
+            Set-Location repo
+            $task = Join-Path $PWD 'command-center\continuity-smoke-task.txt'
+            @('REPOSITORY: affankhan147-arch/ppc-website','BRANCH: codex/workflow-resume-20260716','STATUS: ready-to-resume','TASK: Status probe','REQUIRED REPORT: reports/continuity_smoke_result.md') | Set-Content $task -Encoding UTF8
+            $controller = Join-Path $PWD 'command-center\PlumbingHands_Agent_Continuity.ps1'
+            $output = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $controller -Mode Status -TaskPath $task -AllowDirtyWorktree 2>&1
+            $code = $LASTEXITCODE
+            $text = ($output | ForEach-Object { [string]$_ }) -join ' | '
+            Write-Host $text
+            if ($code -ne 0) { throw "Status exit $code - $text" }
+            if ($text -notmatch 'RESULT: STATUS VERIFIED') { throw "Status marker absent - $text" }
+            $state = 'success'
+            $description = 'Status passed on Windows PowerShell 5.1'
+          }
+          catch {
+            $description = ($_.Exception.Message -replace '[\r\n]+',' ')
+            if ($description.Length -gt 135) { $description = $description.Substring(0,135) }
+            Write-Host "PROBE FAILURE: $description"
+          }
+          $body = @{state=$state;context='PlumbingHands Continuity Status Probe';description=$description;target_url="$env:SERVER_URL/$env:REPOSITORY/actions/runs/$env:RUN_ID"} | ConvertTo-Json
+          Invoke-RestMethod -Uri "https://api.github.com/repos/$env:REPOSITORY/statuses/$env:TEST_SHA" -Method Post -Headers @{Authorization="Bearer $env:GH_TOKEN";Accept='application/vnd.github+json';'X-GitHub-Api-Version'='2022-11-28'} -ContentType 'application/json' -Body $body | Out-Null
+          if ($state -ne 'success') { exit 1 }
