@@ -3,6 +3,8 @@ import { Menu, PhoneCall, ShieldCheck } from "lucide-react";
 import { navigation, siteConfig } from "@/data/site";
 import { CallButton } from "@/components/CallButton";
 
+const customerNavigation = navigation.filter((item) => item.label !== "Partners");
+
 export function Header() {
   return (
     <header className="site-header sticky top-0 z-40">
@@ -32,7 +34,7 @@ export function Header() {
           </Link>
 
           <nav className="hidden items-center gap-5 text-sm font-bold text-slate-600 lg:flex" aria-label="Primary navigation">
-            {navigation.filter((item) => item.label !== "Partners").map((item) => (
+            {customerNavigation.map((item) => (
               <Link key={item.href} className="transition hover:text-cyan-700" href={item.href}>
                 {item.label}
               </Link>
@@ -43,13 +45,26 @@ export function Header() {
             <CallButton location="header" label={`Call ${siteConfig.phoneDisplay}`} />
           </div>
 
-          <Link
-            className="inline-grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-cyan-300 hover:text-cyan-700 lg:hidden"
-            href="/contact"
-            aria-label="Open emergency request options"
-          >
-            <Menu className="h-5 w-5" aria-hidden="true" />
-          </Link>
+          <details className="group relative lg:hidden">
+            <summary
+              className="mobile-nav-summary inline-grid h-11 w-11 cursor-pointer list-none place-items-center rounded-xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-cyan-300 hover:text-cyan-700"
+              aria-label="Open website navigation"
+            >
+              <Menu className="h-5 w-5" aria-hidden="true" />
+            </summary>
+            <div className="absolute right-0 top-14 w-72 overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl">
+              <nav className="grid gap-1" aria-label="Mobile navigation">
+                {customerNavigation.map((item) => (
+                  <Link key={item.href} href={item.href} className="rounded-xl px-4 py-3 text-sm font-black text-slate-700 transition hover:bg-cyan-50 hover:text-cyan-800">
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-2 border-t border-slate-200 pt-3 sm:hidden">
+                <CallButton location="mobile-header-menu" label={`Call ${siteConfig.phoneDisplay}`} className="w-full" />
+              </div>
+            </div>
+          </details>
         </div>
       </div>
     </header>
