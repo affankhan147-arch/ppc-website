@@ -144,6 +144,7 @@ jobs:
           $branchCode = $LASTEXITCODE
           $branch | Set-Content '.test-evidence\07-branch-guard.txt' -Encoding UTF8
           if ($branchCode -eq 0 -or (($branch | ForEach-Object { [string]$_ }) -join "`n") -notmatch 'Branch mismatch') { throw 'Branch guard did not fail correctly.' }
+          exit 0
 
       - name: Push only the tested controller fix
         shell: pwsh
