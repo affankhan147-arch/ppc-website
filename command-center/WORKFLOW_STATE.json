@@ -1,0 +1,20 @@
+﻿{
+    "project":  "PlumbingHands SEO Project",
+    "project_owner":  "Sana Ul Haque",
+    "project_owner_email":  "affan.khan147@gmail.com",
+    "office_machine":  "Sunny\u0027s office machine",
+    "office_machine_work":  "All PlumbingHands SEO project work performed on Sunny\u0027s office machine belongs to Sana Ul Haque.",
+    "chatgpt_access_account":  "Zeeshan Munir shared ChatGPT account",
+    "chatgpt_role":  "Master planning house",
+    "repository":  "affankhan147-arch/ppc-website",
+    "branch":  "codex/workflow-resume-20260716",
+    "github_identity":  "affankhan147-arch",
+    "github_email":  "affan.khan147@gmail.com",
+    "primary_orchestrator":  "Windows PowerShell",
+    "coding_worker":  "GitHub Codex",
+    "compute_worker":  "Google Colab",
+    "source_of_truth":  "GitHub",
+    "mandatory_report":  "Notepad",
+    "workflow_status":  "ownership-alignment-pending-verification",
+    "updated_at":  "2026-07-16T06:02:21+05:00"
+}
