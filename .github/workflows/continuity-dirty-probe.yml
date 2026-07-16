@@ -1,0 +1,54 @@
+name: PlumbingHands Continuity Dirty Guard Probe
+
+on:
+  push:
+    branches:
+      - test/continuity-smoke-20260716
+
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  dirty-probe:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Run isolated dirty-worktree guard
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          TEST_SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+          SERVER_URL: ${{ github.server_url }}
+        run: |
+          $state = 'failure'
+          try {
+            git clone --branch codex/workflow-resume-20260716 --single-branch https://github.com/affankhan147-arch/ppc-website.git repo
+            Set-Location repo
+            $path = 'command-center\PlumbingHands_Agent_Continuity.ps1'
+            $content = Get-Content $path -Raw
+            $content = $content.Replace('[string]$RepositoryRoot = (Split-Path -Parent $PSScriptRoot),','[string]$RepositoryRoot,')
+            $anchor = "`$ErrorActionPreference = 'Stop'"
+            $insert = @("`$ErrorActionPreference = 'Stop'",'', 'if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {','    $RepositoryRoot = Split-Path -Parent $PSScriptRoot','}') -join [Environment]::NewLine
+            $content = $content.Replace($anchor,$insert)
+            Set-Content $path $content -Encoding UTF8 -NoNewline
+            $task = Join-Path $PWD 'command-center\continuity-smoke-task.txt'
+            @('REPOSITORY: affankhan147-arch/ppc-website','BRANCH: codex/workflow-resume-20260716','STATUS: ready-to-resume','TASK: Dirty probe') | Set-Content $task -Encoding UTF8
+            'unrelated' | Set-Content 'unrelated-smoke.txt'
+            $output = & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $path -Mode Status -TaskPath $task 2>&1
+            $code = $LASTEXITCODE
+            $text = ($output | ForEach-Object { [string]$_ }) -join "`n"
+            Write-Host "EXIT=$code"
+            Write-Host $text
+            if ($code -eq 0) { throw 'Dirty guard unexpectedly succeeded.' }
+            if ($text -notmatch 'Working tree contains changes outside generated continuity artifacts') { throw 'Dirty guard returned the wrong failure.' }
+            $state = 'success'
+          }
+          catch {
+            Write-Host "PROBE ERROR: $($_.Exception.Message)"
+          }
+          $body = @{state=$state;context='PlumbingHands Continuity Dirty Probe';description="Dirty probe $state";target_url="$env:SERVER_URL/$env:REPOSITORY/actions/runs/$env:RUN_ID"} | ConvertTo-Json
+          Invoke-RestMethod -Uri "https://api.github.com/repos/$env:REPOSITORY/statuses/$env:TEST_SHA" -Method Post -Headers @{Authorization="Bearer $env:GH_TOKEN";Accept='application/vnd.github+json';'X-GitHub-Api-Version'='2022-11-28'} -ContentType 'application/json' -Body $body | Out-Null
+          if ($state -ne 'success') { exit 1 }
