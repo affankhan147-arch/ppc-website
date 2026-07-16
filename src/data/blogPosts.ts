@@ -39,7 +39,7 @@ const titles = [
   "Emergency Sewer Help in Garland: Signs and Next Steps",
   "Water Shutoff Valve Will Not Close During a Leak",
   "Emergency Leak Approval Checklist for Homeowners",
-  "7 Plumbing Problems You Should Never Ignore"
+  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore"
 ];
 
 const serviceCycle = [
@@ -61,15 +61,20 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+const slugOverrides: Record<string, string> = {
+  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore":
+    "7-plumbing-problems-you-should-never-ignore"
+};
+
 const relatedServiceOverrides: Record<string, string> = {
-  "7 Plumbing Problems You Should Never Ignore": "24-hour-emergency-plumber",
+  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore": "24-hour-emergency-plumber",
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
   "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency"
 };
 
 const directAnswerOverrides: Record<string, string> = {
-  "7 Plumbing Problems You Should Never Ignore":
-    "Dripping faucets, slow drains, weak water pressure, running toilets, hidden moisture, unusual pipe noises, and sewer odors can signal plumbing problems that become more expensive when ignored.",
+  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore":
+    "Multiple slow drains, whole-house pressure loss, unexplained moisture, sewer odors, and active leaks can point to plumbing problems Dallas–Fort Worth homeowners should check before they spread.",
   "Emergency Plumber Near Me Open Now: What to Do Before Help Arrives":
     "If a plumbing issue cannot wait, shut off water where safe, avoid using affected fixtures, document visible damage, and request an emergency provider connection with your city and problem type.",
   "Toilet Overflowing at Night in Dallas: Fast Steps for Homeowners":
@@ -137,7 +142,7 @@ const directAnswerOverrides: Record<string, string> = {
 };
 
 export const blogPosts: BlogPost[] = titles.map((title, index) => ({
-  slug: slugify(title),
+  slug: slugOverrides[title] || slugify(title),
   title,
   directAnswer:
     directAnswerOverrides[title] ||

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AlertTriangle, CheckCircle2, Droplets, PhoneCall } from "lucide-react";
+import { AlertTriangle, Droplets, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
@@ -8,24 +8,20 @@ import { buildMetadata } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 const path = "/blog/7-plumbing-problems-you-should-never-ignore";
-const title = "7 Plumbing Problems You Should Never Ignore";
+const title = "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore";
 const description =
-  "From dripping faucets to sewage smells, learn seven plumbing warning signs homeowners should not ignore and when to request emergency help.";
+  "From dripping faucets to sewer odors, learn seven plumbing warning signs Dallas–Fort Worth homeowners should not ignore and when to request urgent help.";
 
-export const metadata = buildMetadata({
-  title,
-  description,
-  path
-});
+export const metadata = buildMetadata({ title, description, path });
 
 const emergencySigns = [
-  "A burst pipe or a leak that is spreading quickly",
-  "Water pooling or moving through the house",
-  "Sewage backing up into a sink, tub, or toilet",
-  "No usable water supply",
+  "A burst or actively leaking pipe",
+  "Water spreading through a wall, ceiling, or floor",
+  "Sewage backing up into the home",
   "A toilet that will not stop overflowing",
-  "A water heater that may be leaking",
-  "Any plumbing problem near electrical outlets or wiring"
+  "No usable water supply",
+  "A leaking water heater",
+  "Water near electrical outlets or equipment"
 ];
 
 export default function PlumbingProblemsArticlePage() {
@@ -50,54 +46,58 @@ export default function PlumbingProblemsArticlePage() {
       />
 
       <article className="mt-6 max-w-4xl">
-        <p className="section-kicker">Home plumbing guidance</p>
+        <p className="section-kicker">Dallas–Fort Worth homeowner guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-slate-700">
-          Nobody wakes up excited to deal with plumbing. A slow drain or a faucet that will not quite shut off is easy
-          to leave for next weekend. Then next weekend becomes next month, and suddenly there is water-stained drywall
-          or a repair bill that could have been smaller.
+          Most plumbing emergencies do not start with water pouring through the ceiling. They start small—a sink that
+          drains a little slower than usual, a toilet that runs when nobody has touched it, or a faint stain below the
+          upstairs bathroom.
         </p>
         <p className="mt-4 text-lg leading-8 text-slate-700">
-          Plumbing problems almost never fix themselves, and they rarely stay small. A hidden leak can still cause
-          damage. A quietly running toilet can still waste water. These seven warning signs are worth noticing early.
+          It is easy to leave these things for another day. Sometimes that is fine. Other times, the small symptom is
+          the only warning you get before the repair becomes far more disruptive. For Dallas–Fort Worth homeowners,
+          these seven plumbing warning signs are worth taking seriously.
         </p>
 
         <div className="mt-7">
           <DirectAnswer>
-            Dripping faucets, slow drains, weak water pressure, running toilets, unexplained dampness, unusual pipe
-            noises, and sewer odors can all point to problems that become more expensive when ignored.
+            Multiple slow drains, whole-house pressure loss, unexplained moisture, sewer odors, and active leaks can
+            point to plumbing problems that should be checked before they spread or affect essential fixtures.
           </DirectAnswer>
         </div>
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 1</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">A faucet that will not stop dripping</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">The faucet keeps dripping</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            That steady drip is more than an annoyance. It usually means a washer, cartridge, seal, or another part
-            inside the fixture has worn out. Depending on the faucet, the solution may be a small repair or a
-            replacement.
+            A dripping faucet is easy to tune out, especially when the sink still works normally. Inside the fixture,
+            though, a washer, seal, cartridge, or valve has probably stopped sealing properly. Left alone, the drip
+            can get worse, and water may begin collecting around the base or underneath the sink.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            A single drip can waste more water than it appears to, especially over several weeks. If corrosion or
-            excessive pressure is contributing to the problem, waiting can allow it to get worse.
+            Not every drip means a new faucet. Often, one worn component is responsible. Pay closer attention when the
+            handle becomes harder to turn, the cabinet feels damp, or several fixtures begin dripping at once. If
+            multiple faucets are affected, household water pressure may be part of the problem.
           </p>
         </section>
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 2</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Drains that take too long to empty</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">Several drains are slowing down</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A sluggish drain is often the early stage of a complete blockage. Kitchen drains collect grease and food
-            debris, while bathroom drains commonly collect hair, soap residue, and personal-care products.
+            One slow bathroom drain usually points to hair and soap near the fixture. A sluggish kitchen sink is often
+            grease or food debris. When multiple drains slow down around the same time, the restriction may be shared
+            or located farther down in the main sewer line.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            Chemical drain cleaners may create a temporary opening without removing the full obstruction, and some
-            products can be hard on older pipes. When several drains slow down together, the restriction may be
-            farther down the system or in the main sewer line.
+            Notice whether the fixtures seem connected. Does the toilet gurgle when the tub drains? Does the shower
+            back up while the washing machine runs? Repeated chemical cleaners may create a narrow opening without
+            clearing the entire blockage. If more than one drain is involved, reduce water use and request guidance
+            before it becomes a complete backup.
           </p>
           <Link
             href="/services/emergency-drain-cleaning"
-            className="mt-4 inline-flex items-center gap-2 font-black text-cyan-700 hover:text-cyan-900"
+            className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900"
           >
             Review emergency drain-cleaning options
           </Link>
@@ -105,84 +105,78 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 3</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Water pressure that has become weak</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">Water pressure drops throughout the house</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            Weak pressure turns ordinary jobs into chores. If the problem affects only one faucet, the aerator may
-            need cleaning or replacement. Whole-house pressure loss deserves a closer look.
+            Weak pressure at one faucet may be a clogged aerator. A sudden drop throughout the house deserves more
+            attention. Possible causes include a partially closed shutoff valve, a failing pressure regulator,
+            corroded pipes, municipal work, or a leak that has not become visible yet.
           </p>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-            {[
-              "Mineral buildup at a fixture",
-              "A shutoff valve that is not fully open",
-              "A failing pressure regulator",
-              "Corrosion inside older pipes",
-              "A leak that is not yet visible",
-              "A municipal supply issue"
-            ].map((item) => (
-              <li key={item} className="flex gap-2 rounded-md border border-slate-200 bg-white p-4 font-semibold text-slate-800">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-emerald-600" aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-3 leading-7 text-slate-700">
+            Check whether every fixture is affected and whether both hot and cold water are weak. Damp walls,
+            unusually soft ground outside, or unexplained water use can support the possibility of a hidden supply
+            leak.
+          </p>
         </section>
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 4</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">A toilet that keeps running</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">The toilet keeps running</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A running toilet is easy to miss because the fixture may still flush normally. Meanwhile, water continues
-            moving from the tank to the bowl. A worn flapper, misadjusted float, or failing fill valve is often
-            responsible.
+            A running toilet does not look urgent because it may still flush normally. That is exactly why the problem
+            can continue for weeks. A worn flapper, misadjusted float, or failing fill valve is often responsible.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            Simple adjustments can help, but repeated guesswork may leave the same problem running for weeks. If the
-            toilet will not stop filling or begins to overflow, close its supply valve if it is safe to do so.
+            If you hear the tank refill when nobody has used it, something is no longer sealing correctly. A new
+            flapper may help, but if it does not, the cause is probably elsewhere in the mechanism. If water rises
+            toward the rim, stop flushing and close the toilet supply valve if it is safe to reach.
           </p>
         </section>
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 5</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Water stains or dampness you cannot explain</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">A water stain appears below the bathroom</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A discolored ceiling patch, peeling paint, musty odor, warped flooring, or damp cabinet should not be
-            dismissed as cosmetic. These are common signs of water escaping somewhere out of view.
+            A ceiling stain is not merely cosmetic until you know where the water came from. The source could be a
+            leaking supply connection, failed toilet seal, bathtub overflow, drain connection, or damaged shower
+            waterproofing.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            Water can travel before it becomes visible, so the leak may not be directly behind the stain. Hidden
-            moisture can encourage mold and weaken building materials. The earlier the source is located, the smaller
-            the surrounding repair may be.
+            Water can travel along pipes and framing, so the mark may not sit directly below the leak. Peeling paint,
+            soft drywall, a musty odor, or a stain that grows after someone showers all deserve attention. A growing
+            patch or moisture near a light fixture should be handled promptly.
           </p>
         </section>
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 6</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Strange noises coming from the pipes</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">The pipes bang, whistle, or gurgle</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A loud bang after a faucet closes may be water hammer. Whistling may point to restricted flow or excessive
-            pressure. Gurgling from a drain can indicate a developing blockage or a venting problem.
+            Some plumbing noise is normal, but a new or repeated sound usually means something has changed. A bang
+            after closing a faucet may be water hammer. Whistling can point to restricted flow or high pressure.
+            Gurgling from a drain or toilet may indicate a developing clog or venting problem.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            These sounds do not always mean an emergency, but they do mean something has changed. Investigating the
-            cause early can help prevent pipe movement, repeated backups, or fixture damage.
+            Notice the pattern. Does the sound happen whenever the washing machine fills, or when someone uses the
+            shower? That timing often provides more useful diagnostic information than the sound alone.
           </p>
         </section>
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 7</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">A sewage smell in or around the house</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">The bathroom smells like sewage</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A sewer-like odor can come from a dry drain trap, a failing toilet seal, a blocked plumbing vent, or a
-            damaged sewer pipe. Running water into a rarely used drain may refill a dry trap. If the odor returns or
-            does not go away, the system should be inspected.
+            Sometimes the cause is simple: an unused drain can dry out at the trap and allow sewer odor into the room.
+            Run water into any rarely used sink, tub, shower, or floor drain. If the smell disappears and stays away,
+            the dry trap was probably the cause.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            Persistent sewer odors are not something to cover with air freshener. Keep people away from any wastewater
-            and reduce water use if several fixtures are also gurgling or backing up.
+            If the odor returns, a damaged toilet seal, blocked vent, drain buildup, or sewer-line problem may be
+            involved. A rocking toilet, regularly gurgling drains, wastewater, or an overflowing outdoor cleanout all
+            point to something beyond a dry trap.
           </p>
           <Link
             href="/services/sewer-backup-help"
-            className="mt-4 inline-flex items-center gap-2 font-black text-cyan-700 hover:text-cyan-900"
+            className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900"
           >
             Review sewer-backup warning signs
           </Link>
@@ -193,7 +187,11 @@ export default function PlumbingProblemsArticlePage() {
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">When it is an emergency</p>
           </div>
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Some plumbing problems should not wait</h2>
+          <h2 className="mt-3 text-2xl font-black text-slate-950">Some plumbing problems need urgent attention</h2>
+          <p className="mt-3 leading-7 text-slate-700">
+            The situation becomes urgent when there is a real risk of property damage, sewage exposure, electrical
+            danger, or complete loss of usable water service.
+          </p>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {emergencySigns.map((sign) => (
               <li key={sign} className="flex gap-2 font-semibold leading-6 text-slate-800">
@@ -203,27 +201,38 @@ export default function PlumbingProblemsArticlePage() {
             ))}
           </ul>
           <p className="mt-4 leading-7 text-slate-700">
-            If it is safe, close the affected fixture valve or the home&apos;s main water shutoff while requesting
-            help. Stay away from standing water near electrical equipment.
+            If you can reach the correct valve safely, shut off the affected fixture or the home&apos;s main water
+            supply. Stay clear of standing water near electrical equipment.
+          </p>
+        </section>
+
+        <section className="content-section">
+          <p className="section-kicker">Repair decisions</p>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">Can you fix the plumbing problem yourself?</h2>
+          <p className="mt-3 leading-7 text-slate-700">
+            Cleaning an aerator, refilling a dry trap, or making a small toilet adjustment may be reasonable for some
+            homeowners. Request professional help when you cannot identify the source, the problem keeps returning,
+            several fixtures are affected, water damage is spreading, sewage is present, or the issue is hidden behind
+            a wall or floor.
           </p>
         </section>
 
         <section className="content-section">
           <p className="section-kicker">Early action</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Small plumbing problems are usually cheaper to address early</h2>
+          <h2 className="mt-2 text-2xl font-black text-slate-950">Small warning signs are worth acting on</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            Many expensive plumbing repairs begin with a small sign that was easy to postpone. Paying attention to a
-            drip, slow drain, unusual smell, or unexplained stain can help protect the home and make the eventual
-            repair more manageable.
+            A slow drain does not always become a sewer backup, and a dripping faucet does not always signal a larger
+            pressure problem. Still, plumbing systems often give some warning before they fail outright. Catching the
+            change early usually means more time to compare options and less disruption to the home.
           </p>
         </section>
 
         <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
           <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Need plumbing help?</h2>
+          <h2 className="mt-3 text-2xl font-black text-slate-950">Need plumbing help in Dallas–Fort Worth?</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            Request help for a stubborn leak, clogged drain, running toilet, low pressure, sewer odor, or another
-            plumbing concern. {siteConfig.serviceStatement}
+            Whether it is a stubborn leak, several slow drains, a running toilet, or something you cannot quite
+            explain, Plumbing Hands can help you request assistance. {siteConfig.serviceStatement}
           </p>
           <div className="mt-5">
             <CallButton
@@ -247,7 +256,8 @@ export default function PlumbingProblemsArticlePage() {
           { label: "Emergency plumbing guide hub", href: "/blog" },
           { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
           { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
-          { label: "Dallas plumbing help", href: "/cities/dallas" }
+          { label: "Dallas plumbing help", href: "/cities/dallas" },
+          { label: "Fort Worth plumbing help", href: "/cities/fort-worth" }
         ]}
       />
     </main>
