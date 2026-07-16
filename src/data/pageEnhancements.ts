@@ -554,6 +554,47 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "emergency-plumber-near-me-open-now-what-to-do-before-help-arrives": {
+    checklistTitle: "What to do before emergency plumbing help arrives",
+    checklistIntro:
+      "When water is spreading or a fixture is backing up, the useful first steps are usually simple: stop adding water, make the area safer, and collect the details a provider will need. Do not take apart plumbing or force a valve while the problem is active.",
+    checklistItems: [
+      "Stop using the affected fixture. If several drains react together, pause toilets, sinks, showers, laundry, and the dishwasher until the cause is checked.",
+      "Use the nearest working shutoff only if it is easy to reach and turns normally. If it is corroded, leaking, or stuck, do not force it; move to the next safe upstream valve or the main shutoff.",
+      "Stay out of standing water near outlets, switches, lights, appliances, or the electrical panel. If water is close to electricity, keep clear and treat the situation as urgent.",
+      "Contain clean water with towels or a bucket when it is safe, move valuables away, and photograph visible damage. Avoid contact with wastewater or sewage.",
+      "Note what happened first, which fixtures are affected, whether the water is clean or dirty, and what changes when another fixture runs. That sequence can make phone triage more useful.",
+      "Have the service address, city or ZIP code, access instructions, parking details, and information about pets or locked areas ready when you request a provider connection."
+    ],
+    proofTitle: "What to confirm when requesting emergency help",
+    proofItems: [
+      "Ask whether a provider is actually available for your address and problem. Open-now searches do not guarantee a specific arrival time; timing depends on location, workload, access, and the provider's confirmation.",
+      "Clarify dispatch, diagnostic, after-hours, repair, parts, and cleanup charges before approving work. A phone estimate can change after diagnosis or hidden access is found.",
+      "Confirm licensing, insurance, warranty, and business details directly with the provider when those points matter to your decision.",
+      "Ask whether the first visit is expected to isolate the problem, complete a permanent repair, or arrange a follow-up. After submitting a request, keep the affected fixtures off and stay reachable for questions or arrival updates."
+    ],
+    extraFaqs: [
+      {
+        question: "How quickly can an emergency plumber arrive in Dallas–Fort Worth?",
+        answer:
+          "There is no reliable one-time answer for every address. Availability depends on the city, time, current calls, travel distance, access, and problem type. Confirm the arrival window directly with the provider before relying on it."
+      },
+      {
+        question: "What should I avoid while waiting for emergency plumbing help?",
+        answer:
+          "Do not keep flushing or running water to test a backup, pour chemical cleaner into standing water, force a stuck shutoff, touch wet electrical equipment, or enter an area contaminated by sewage."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber options", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Main sewer line clog help", href: "/services/main-sewer-line-clog" },
+      { label: "Toilet overflow emergency", href: "/services/toilet-overflow-emergency" },
+      { label: "Water heater emergency", href: "/services/water-heater-emergency" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
+      { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
   "water-shutoff-valve-will-not-close-during-a-leak": {
     checklistTitle: "Failed shutoff leak checklist",
     checklistIntro:
