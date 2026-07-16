@@ -1,3 +1,4 @@
+import { PhoneCall, ShieldCheck } from "lucide-react";
 import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer } from "@/components/PageSections";
@@ -20,25 +21,41 @@ export default function ContactPage() {
           breadcrumbSchema([{ name: "Contact", path: "/contact" }])
         ]}
       />
-      <div className="answer-grid">
-        <article>
-          <p className="section-kicker">Contact</p>
-          <h1 className="mt-3 text-4xl font-black text-slate-950">Request urgent plumbing help</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-700">
-            Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
-          </p>
-          <div className="mt-6">
-            <CallButton location="contact-top" pagePath="/contact" pageType="contact" service="Emergency plumbing" city="Dallas-Fort Worth" />
-          </div>
-          <DirectAnswer>
-            For active water, wastewater, or essential fixture problems, call if safe. Forms are useful when you can briefly describe the issue and your location.
-          </DirectAnswer>
-        </article>
-        <LeadForm pageUrl="/contact" service="Emergency plumbing" city="Dallas" />
-      </div>
-      <section className="content-section">
-        <p className="section-kicker">Service-area note</p>
-        <p className="mt-2 leading-7 text-slate-700">{siteConfig.disclosure}</p>
+
+      <section className="content-section premium-trust-section overflow-hidden">
+        <div className="answer-grid items-start">
+          <article>
+            <p className="section-kicker">
+              <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+              Emergency request line
+            </p>
+            <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">Request urgent plumbing help</h1>
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-700">
+              Call to explain your city, plumbing problem, and urgency. {siteConfig.serviceStatement}
+            </p>
+            <div className="mt-6">
+              <CallButton
+                location="contact-top"
+                label={`Call ${siteConfig.phoneDisplay}`}
+                pagePath="/contact"
+                pageType="contact"
+                service="Emergency plumbing"
+                city="Dallas-Fort Worth"
+                className="min-h-14 px-6 text-lg"
+              />
+            </div>
+            <div className="mt-6">
+              <DirectAnswer>
+                For active water, wastewater, or essential fixture problems, call when it is safe. Be ready to describe the affected fixture, current water conditions, and your location.
+              </DirectAnswer>
+            </div>
+            <p className="mt-5 flex items-start gap-2 text-sm font-bold leading-6 text-slate-600">
+              <PhoneCall className="mt-1 h-4 w-4 flex-none text-orange-700" aria-hidden="true" />
+              Availability depends on location, timing, and provider coverage. Confirm pricing, credentials, timing, and repair scope directly before authorizing work.
+            </p>
+          </article>
+          <LeadForm pageUrl="/contact" service="emergency plumbing" city={siteConfig.marketName} />
+        </div>
       </section>
     </main>
   );
