@@ -7,7 +7,6 @@ export type BlogPost = {
 };
 
 const titles = [
-  "7 Plumbing Problems You Should Never Ignore",
   "Emergency Plumber Near Me Open Now: What to Do Before Help Arrives",
   "Toilet Overflowing at Night in Dallas: Fast Steps for Homeowners",
   "Main Sewer Line Clogged in Dallas: Warning Signs and Fast Options",
@@ -39,7 +38,8 @@ const titles = [
   "Emergency Drain Cleaning in Frisco: What to Expect",
   "Emergency Sewer Help in Garland: Signs and Next Steps",
   "Water Shutoff Valve Will Not Close During a Leak",
-  "Emergency Leak Approval Checklist for Homeowners"
+  "Emergency Leak Approval Checklist for Homeowners",
+  "7 Plumbing Problems You Should Never Ignore"
 ];
 
 const serviceCycle = [
