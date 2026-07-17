@@ -554,6 +554,45 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "drain-backup-in-a-restaurant-what-owners-should-do-first": {
+    checklistTitle: "What to do first when a restaurant drain backs up",
+    checklistIntro:
+      "A drain backup in a restaurant carries higher stakes than a typical residential clog -- health code exposure, service disruption, and food safety are all on the line. Acting quickly and documenting the situation matters as much as clearing the blockage itself.",
+    checklistItems: [
+      "Shut off water to the affected fixture or line if possible, and stop using any drain, sink, or dishwasher connected to the same line until the cause is identified.",
+      "Move food, prep surfaces, and equipment away from the affected area if backup water or wastewater is present, and treat any contact area as contaminated until cleaned and sanitized.",
+      "If backup is affecting multiple fixtures -- a mop sink, dishwasher, and floor drain all backing up together, for example -- this typically points to a shared line or grease trap issue rather than one clogged drain.",
+      "Document the time the problem started, which fixtures are affected, and any recent events such as grease disposal, new equipment, or unusually high volume, since health inspectors or insurance may ask for this later.",
+      "Check whether local health code requires notifying a health department or temporarily closing affected areas of the kitchen -- this varies by city and situation, so confirm your specific requirement directly.",
+      "If the backup reaches guest-facing areas or creates an odor or safety issue, prioritize guest and staff safety over continuing normal service."
+    ],
+    proofTitle: "What to confirm when requesting commercial service",
+    proofItems: [
+      "Ask whether the provider has experience with commercial kitchen lines and grease traps specifically, since these differ from typical residential drain work.",
+      "Ask how quickly a provider can respond during business hours versus after close, since timing affects whether you need to pause service.",
+      "Clarify dispatch, diagnostic, and after-hours charges before approving work, and ask whether commercial-line service is priced differently than residential.",
+      "Ask whether the visit includes a camera inspection or grease trap assessment if the backup is recurring, rather than just a one-time clearing."
+    ],
+    extraFaqs: [
+      {
+        question: "Is a restaurant drain backup a health code issue?",
+        answer:
+          "It can be, depending on severity and location. Requirements vary by city and situation -- check with your local health department directly if you are unsure whether notification or closure is required."
+      },
+      {
+        question: "Why do restaurant drains clog more often than residential ones?",
+        answer:
+          "Grease, food particles, and high volume put more strain on commercial lines than typical residential use. Recurring clogs in the same drain often point to a grease trap or line issue that may need more than a one-time clearing."
+      }
+    ],
+    extraLinks: [
+      { label: "Commercial emergency plumbing", href: "/services/commercial-emergency-plumbing" },
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
+      { label: "Commercial drain backup guidance", href: "/blog/commercial-drain-backup-what-business-owners-should-do-first" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
   "no-usable-toilet-in-the-house-what-dfw-homeowners-should-do": {
     checklistTitle: "What to do when no toilet in the house is usable",
     checklistIntro:

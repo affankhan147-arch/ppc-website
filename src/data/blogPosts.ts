@@ -47,7 +47,8 @@ const titles = [
   "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide",
   "Emergency Plumber in Irving, TX: What to Know Before You Call",
   "Emergency Plumbing in McKinney, TX: What Homeowners Should Know",
-  "No Usable Toilet in the House: What DFW Homeowners Should Do"
+  "No Usable Toilet in the House: What DFW Homeowners Should Do",
+  "Drain Backup in a Restaurant: What Owners Should Do First"
 ];
 
 const serviceCycle = [
@@ -86,6 +87,8 @@ const slugOverrides: Record<string, string> = {
     "emergency-plumbing-mckinney-tx-what-homeowners-should-know",
   "No Usable Toilet in the House: What DFW Homeowners Should Do":
     "no-usable-toilet-in-the-house-what-dfw-homeowners-should-do",
+  "Drain Backup in a Restaurant: What Owners Should Do First":
+    "drain-backup-in-a-restaurant-what-owners-should-do-first",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
     "water-heater-making-popping-noise-dallas"
 };
@@ -101,7 +104,8 @@ const relatedServiceOverrides: Record<string, string> = {
   "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide": "water-heater-emergency",
   "Emergency Plumber in Irving, TX: What to Know Before You Call": "24-hour-emergency-plumber",
   "Emergency Plumbing in McKinney, TX: What Homeowners Should Know": "emergency-drain-cleaning",
-  "No Usable Toilet in the House: What DFW Homeowners Should Do": "toilet-overflow-emergency"
+  "No Usable Toilet in the House: What DFW Homeowners Should Do": "toilet-overflow-emergency",
+  "Drain Backup in a Restaurant: What Owners Should Do First": "commercial-emergency-plumbing"
 };
 
 const directAnswerOverrides: Record<string, string> = {
@@ -185,6 +189,8 @@ const directAnswerOverrides: Record<string, string> = {
     "McKinney homeowners facing a drain backup, leak, or no-hot-water situation can request an emergency plumbing connection with their address and problem details, then confirm availability, scope, and pricing directly with the matched provider.",
   "No Usable Toilet in the House: What DFW Homeowners Should Do":
     "When every toilet in the house is affected at once, that usually points to a shared drain or main sewer line problem rather than a single-fixture clog, and typically needs a broader diagnosis than one overflowing toilet alone.",
+  "Drain Backup in a Restaurant: What Owners Should Do First":
+    "A restaurant drain backup should be treated as urgent given health code, food safety, and service disruption risk -- stop using affected fixtures, document the situation, and request a commercial emergency plumbing connection with details about which lines are affected.",
   "Emergency Leak Approval Checklist for Homeowners":
     "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };
