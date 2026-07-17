@@ -24,21 +24,21 @@ import { siteConfig } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
+const serviceImages: Record<string, string> = {
+  "24-hour-emergency-plumber": "/images/services/service-24hr-emergency-plumber.jpg",
+  "emergency-drain-cleaning": "/images/services/service-emergency-drain-cleaning.jpg",
+  "main-sewer-line-clog": "/images/services/service-main-sewer-line-clog.jpg",
+  "toilet-overflow-emergency": "/images/services/service-toilet-overflow-emergency.jpg",
+  "burst-pipe-emergency": "/images/services/service-burst-pipe-emergency.jpg",
+  "water-heater-emergency": "/images/services/service-water-heater-emergency.jpg",
+};
+
 const urgentCards = [
   { title: "Water is actively leaking", text: "Find the nearest safe shutoff and protect electrical areas.", icon: Droplets, href: "/services/burst-pipe-emergency" },
   { title: "Drains are backing up", text: "Stop adding water and note which fixtures react together.", icon: AlertTriangle, href: "/services/emergency-drain-cleaning" },
   { title: "The toilet will not stop", text: "Close the supply valve if it turns normally and do not flush again.", icon: Clock3, href: "/services/toilet-overflow-emergency" },
   { title: "Sewer symptoms are appearing", text: "Multiple fixtures, odor, or cleanout overflow need prompt attention.", icon: Wrench, href: "/services/main-sewer-line-clog" }
 ];
-
-const servicePhotography: Record<string, { src: string; alt: string }> = {
-  "24-hour-emergency-plumber": { src: "/images/hero/emergency-plumbing-abstract.svg", alt: "Emergency plumbing service graphic with connected pipes and water flow" },
-  "emergency-drain-cleaning": { src: "/images/photography/drain-cleaning.webp", alt: "Plumbing professional inspecting a residential drain line" },
-  "main-sewer-line-clog": { src: "/images/photography/sewer-inspection.webp", alt: "Camera inspection at a residential sewer cleanout" },
-  "toilet-overflow-emergency": { src: "/images/photography/toilet-repair.webp", alt: "Plumbing professional inspecting a toilet tank" },
-  "burst-pipe-emergency": { src: "/images/hero/burst-pipe-emergency.svg", alt: "Burst pipe emergency shutoff and water-control graphic" },
-  "water-heater-emergency": { src: "/images/photography/water-heater-inspection.webp", alt: "Plumbing professional inspecting a residential water heater" }
-};
 
 const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);
 
@@ -136,7 +136,15 @@ export default function HomePage() {
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {featuredServices.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group overflow-hidden">
-                <div className="service-photo" role="img" aria-label={servicePhotography[service.slug].alt} style={{ backgroundImage: `url(${servicePhotography[service.slug].src})` }} />
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={serviceImages[service.slug] ?? "/images/hero/hero-emergency-plumber-repair.jpg"}
+                    alt={`${service.name} — professional plumber on the job`}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-5">
                   <h3 className="text-xl font-black leading-tight text-[#081b2c]">{capitalizeFirst(service.name)}</h3>
                   <p className="mt-2 line-clamp-3 leading-7 text-slate-600">{service.shortAnswer}</p>
