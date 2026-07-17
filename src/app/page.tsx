@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import {
   AlertTriangle,
@@ -66,7 +66,7 @@ export default function HomePage() {
 
       <section className="hero-field min-h-[620px] text-white">
         <div className="hero-photo">
-          <Image src="/images/photography/provider-crew.webp" alt="Plumbing service crew preparing equipment beside an unbranded service vehicle" fill sizes="100vw" className="object-cover object-center" priority />
+          <Image src="/images/hero/hero-emergency-plumber-repair.jpg" alt="Licensed emergency plumber actively repairing a pipe at a DFW home" fill sizes="100vw" className="object-cover object-center" priority />
         </div>
         <div className="mx-auto flex min-h-[620px] max-w-7xl items-center px-4 py-14 lg:py-20">
           <article className="max-w-3xl">
