@@ -33,6 +33,27 @@ const serviceImages: Record<string, string> = {
   "water-heater-emergency": "/images/services/service-water-heater-emergency.jpg",
 };
 
+const processImages: string[] = [
+  "/images/process/process-step1-call-for-help.jpg",
+  "/images/process/process-step2-team-dispatched.jpg",
+  "/images/process/process-step3-technician-consult.jpg",
+];
+
+const callProcess = [
+  {
+    title: "Explain what is happening",
+    copy: "Describe the affected fixture or pipe, whether water is active, and any immediate safety concern."
+  },
+  {
+    title: "Share your DFW location",
+    copy: "Provide the city or ZIP so current service-area and provider availability can be discussed."
+  },
+  {
+    title: "Confirm the next step",
+    copy: "Discuss timing and then confirm pricing, credentials, diagnosis, and scope directly with the provider."
+  }
+];
+
 const urgentCards = [
   { title: "Water is actively leaking", text: "Find the nearest safe shutoff and protect electrical areas.", icon: Droplets, href: "/services/burst-pipe-emergency" },
   { title: "Drains are backing up", text: "Stop adding water and note which fixtures react together.", icon: AlertTriangle, href: "/services/emergency-drain-cleaning" },
@@ -177,6 +198,33 @@ export default function HomePage() {
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {["Emergency-ready guidance", "Service organized by problem", "Coverage across Dallas–Fort Worth"].map((item) => (
               <div key={item} className="premium-card p-6"><CheckCircle2 className="h-8 w-8 text-[#0b7895]" aria-hidden="true" /><h3 className="mt-4 text-xl font-black text-[#081b2c]">{item}</h3></div>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-section">
+          <div className="text-center">
+            <p className="section-kicker">How it works</p>
+            <h2 className="display-title mx-auto mt-3 max-w-3xl text-4xl font-bold leading-tight text-[#081b2c]">Three Steps From Call To Confirmed Help.</h2>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {callProcess.map((step, index) => (
+              <article key={step.title} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={processImages[index] ?? processImages[0]}
+                    alt={`${step.title} — PlumbingHands technician`}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <span className="grid h-11 w-11 place-items-center rounded-2xl bg-slate-950 text-base font-black text-white">{index + 1}</span>
+                  <h3 className="mt-5 text-xl font-black text-slate-950">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{step.copy}</p>
+                </div>
+              </article>
             ))}
           </div>
         </section>
