@@ -22,6 +22,15 @@ import { siteConfig } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
+const serviceImages: Record<string, string> = {
+  "24-hour-emergency-plumber": "/images/services/service-24hr-emergency-plumber.jpg",
+  "emergency-drain-cleaning": "/images/services/service-emergency-drain-cleaning.jpg",
+  "main-sewer-line-clog": "/images/services/service-main-sewer-line-clog.jpg",
+  "toilet-overflow-emergency": "/images/services/service-toilet-overflow-emergency.jpg",
+  "burst-pipe-emergency": "/images/services/service-burst-pipe-emergency.jpg",
+  "water-heater-emergency": "/images/services/service-water-heater-emergency.jpg",
+};
+
 const urgentCards = [
   {
     title: "Active leak or burst pipe",
@@ -287,8 +296,16 @@ export default function HomePage() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {featuredServices.slice(0, 6).map((service, index) => (
-              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card premium-card-link group p-6">
-                <div className="flex items-start justify-between gap-4">
+              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card premium-card-link group overflow-hidden p-0">
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={serviceImages[service.slug] ?? "/images/hero/hero-emergency-plumber-repair.jpg"}
+                    alt={service.name + " - professional plumber on the job"}
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex items-start justify-between gap-4 p-6">
                   <span className="grid h-14 w-14 place-items-center rounded-2xl bg-cyan-50 text-cyan-800">
                     {index % 2 === 0 ? <Droplets className="h-7 w-7" aria-hidden="true" /> : <Wrench className="h-7 w-7" aria-hidden="true" />}
                   </span>
