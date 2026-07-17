@@ -31,6 +31,12 @@ const serviceImages: Record<string, string> = {
   "water-heater-emergency": "/images/services/service-water-heater-emergency.jpg",
 };
 
+const processImages: string[] = [
+  "/images/process/process-step1-call-for-help.jpg",
+  "/images/process/process-step2-team-dispatched.jpg",
+  "/images/process/process-step3-technician-consult.jpg",
+];
+
 const urgentCards = [
   {
     title: "Active leak or burst pipe",
@@ -342,12 +348,22 @@ export default function HomePage() {
 
             <div className="grid gap-4 md:grid-cols-3">
               {callProcess.map((step, index) => (
-                <article key={step.title} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                <article key={step.title} className="rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+                  <div className="relative h-32 w-full overflow-hidden">
+                    <Image
+                      src={processImages[index] ?? processImages[0]}
+                      alt={step.title + " - PlumbingHands technician"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
                   <span className="grid h-11 w-11 place-items-center rounded-2xl bg-slate-950 text-base font-black text-white">
                     {index + 1}
                   </span>
                   <h3 className="mt-5 text-xl font-black text-slate-950">{step.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{step.copy}</p>
+                </div>
                 </article>
               ))}
             </div>
