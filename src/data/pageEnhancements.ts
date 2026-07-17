@@ -554,6 +554,45 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "water-heater-leaking-in-dallas-emergency-signs-to-watch": {
+    checklistTitle: "Signs a leaking water heater needs urgent attention",
+    checklistIntro:
+      "Not every water heater leak is the same emergency. Some signs point to something that should be addressed right away, while others may allow more time to arrange service -- knowing the difference helps you respond appropriately.",
+    checklistItems: [
+      "Water actively pooling around the base of the tank, especially if it is increasing rather than staying the same size, generally points to an active leak that needs prompt attention.",
+      "A gas odor near a gas water heater is always urgent regardless of whether water is visible -- leave the area, avoid switches or flames, and treat this as a safety issue first.",
+      "Water near electrical components, outlets, or the unit's power connection on an electric water heater should be treated as urgent due to shock risk -- avoid contact with the area.",
+      "Popping, rumbling, or unusual sounds combined with visible leaking can point to sediment buildup or internal tank stress, and is worth mentioning when requesting service.",
+      "A leak that appears suddenly after years of normal operation is different from a slow drip that has been present for a while -- note how the leak started when describing the problem.",
+      "If the leak is from a fitting or valve rather than the tank body itself, it is often a different, sometimes less urgent situation than a tank-body leak -- try to identify the source before calling if it is safe to look."
+    ],
+    proofTitle: "What to do while waiting for service",
+    proofItems: [
+      "Turn off the water heater's power source (electric) or gas supply if it is safe and reachable, since a leaking unit should not be left running unattended.",
+      "Close the cold-water inlet valve if you can reach it safely, to reduce continued water flow into a leaking tank.",
+      "Contain the water with towels or a shallow container if it is safe to do so, and move nearby items away from the spreading water.",
+      "Avoid using hot water from the unit until it has been assessed, and keep the area clear until a provider has evaluated the source of the leak."
+    ],
+    extraFaqs: [
+      {
+        question: "Can a leaking water heater be repaired instead of replaced?",
+        answer:
+          "Sometimes. A leak from a fitting, valve, or connection is often repairable, while a leak from the tank body itself generally is not. The specific source determines the options."
+      },
+      {
+        question: "How urgent is a water heater leak really?",
+        answer:
+          "It depends on the cause. Gas odor, water near electrical components, or a rapidly growing leak should be treated as urgent. A slow, contained leak may allow more time, but the tank should still be assessed soon since tank-body leaks typically worsen over time."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency", href: "/services/water-heater-emergency" },
+      { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "Repair or replace decision guide", href: "/blog/leaking-water-heater-repair-or-replace-dfw" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
+    ]
+  },
   "emergency-plumbing-cost-guide-for-dallas-homeowners": {
     checklistTitle: "What actually drives emergency plumbing cost in Dallas",
     checklistIntro:
