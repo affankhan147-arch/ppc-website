@@ -554,6 +554,45 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "emergency-plumber-irving-tx-what-to-know": {
+    checklistTitle: "What to know before requesting emergency plumbing help in Irving",
+    checklistIntro:
+      "Irving homeowners dealing with a plumbing emergency face the same core questions as anywhere in DFW: what is actually happening, what to do before help arrives, and what to confirm before approving work. A few details are worth having ready when you request service.",
+    checklistItems: [
+      "Identify the type of problem clearly when requesting help -- active leak, backup, no hot water, or burst pipe are different situations that may need different equipment or urgency.",
+      "Have your Irving address, nearest cross street, and any access details such as gate codes, parking restrictions, or locked areas ready, since these affect how quickly a provider can actually reach the property.",
+      "If the problem involves water backing up from more than one fixture at once, mention that specifically -- it can point to a main line issue rather than a single-fixture clog.",
+      "Shut off water at the nearest safe valve if there is active flow, and avoid using affected fixtures until the cause is identified.",
+      "Note whether the property is a single-family home, townhome, or apartment, since shared plumbing lines in multi-unit buildings can affect how a problem is diagnosed and who else may need to be notified.",
+      "If the issue happened outside normal business hours, mention that directly, since after-hours availability and pricing structure can differ from daytime service."
+    ],
+    proofTitle: "Questions to confirm before approving work in Irving",
+    proofItems: [
+      "Ask whether a provider is actually available for your specific Irving address right now, rather than assuming a general DFW search result guarantees coverage.",
+      "Clarify dispatch, diagnostic, and after-hours charges before approving a visit.",
+      "Ask what the visit is expected to accomplish -- stopping an active leak, full diagnosis, or a complete repair -- since these are different scopes.",
+      "Confirm licensing, insurance, and any warranty terms directly with the provider if those details matter for your decision."
+    ],
+    extraFaqs: [
+      {
+        question: "Is emergency plumbing help actually available in Irving at night or on weekends?",
+        answer:
+          "Availability depends on current provider capacity and demand at the time of the request. Confirm directly when you request service rather than assuming coverage."
+      },
+      {
+        question: "What plumbing problems count as an emergency in Irving?",
+        answer:
+          "Active leaks, sewage backups, burst pipes, no hot water, and situations affecting multiple fixtures at once are generally treated as urgent. A single slow drain with no other symptoms may be less time-sensitive, but a provider can help you judge that directly."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Irving service area", href: "/cities/irving" }
+    ]
+  },
   "water-heater-leaking-in-dallas-emergency-signs-to-watch": {
     checklistTitle: "Signs a leaking water heater needs urgent attention",
     checklistIntro:
