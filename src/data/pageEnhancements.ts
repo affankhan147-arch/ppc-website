@@ -554,6 +554,47 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "hydro-jetting-vs-drain-snaking-dfw": {
+    checklistTitle: "How to think about hydro jetting versus drain snaking",
+    checklistIntro:
+      "Both methods clear blocked drains, but they work differently and are not always interchangeable. Understanding the difference can help you ask better questions when requesting service, even though the final decision should come from a provider assessment of your specific line.",
+    checklistItems: [
+      "Snaking uses a flexible cable to break through or hook a clog at a specific point in the line. It is typically faster and lower-cost for an isolated blockage like hair, wipes, or a single object.",
+      "Hydro jetting uses high-pressure water to clean the full interior wall of the pipe, not just punch through one blockage point. It is more commonly used for grease buildup, recurring clogs at the same spot, or tree root intrusion.",
+      "A single clog that has never happened before in that location is often a reasonable case for snaking first. Repeated clogging in the same drain, especially over weeks or months, is a common reason a provider may recommend jetting or a camera inspection instead.",
+      "Older or more fragile pipe materials may affect which method a provider considers safe. This is a question to ask directly rather than assume, since not every line is a good candidate for jetting.",
+      "If a provider recommends a camera inspection before either method, that is generally to confirm the actual condition and material of the pipe rather than guessing from symptoms alone.",
+      "Note whether the slow drain affects only one fixture or several at once, and whether water backs up elsewhere when you run one drain -- both details help a provider judge which approach fits."
+    ],
+    proofTitle: "Questions to ask before approving either service",
+    proofItems: [
+      "Ask whether the recommendation is based on a visual camera inspection or on the symptoms you described over the phone, since that affects how confident the recommendation is.",
+      "Ask what happens if jetting or snaking does not fully resolve the clog on the first attempt, and whether a follow-up visit or different method would be needed.",
+      "Clarify dispatch, diagnostic, and service charges separately for camera inspection, snaking, and jetting before approving work, since these are often priced differently.",
+      "If root intrusion or a damaged pipe section is suspected, ask whether jetting is expected to be a temporary clearing measure or part of a longer-term plan, since these are different outcomes."
+    ],
+    extraFaqs: [
+      {
+        question: "Is hydro jetting safe for all pipes?",
+        answer:
+          "Not universally. Pipe age, material, and existing damage can affect whether jetting is appropriate. This is something to confirm with the provider assessing your specific line rather than assume either way."
+      },
+      {
+        question: "Why does my drain keep clogging in the same spot?",
+        answer:
+          "Recurring clogs at the same location often point to a structural cause such as grease buildup, a partial obstruction, a bellied pipe, or root intrusion, rather than a one-time blockage. A camera inspection is typically how this gets confirmed."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
+      { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
+      { label: "Bathtub drain backing up", href: "/problems/bathtub-drain-backing-up" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+    ]
+  },
   "plumber-or-water-restoration-company-first": {
     checklistTitle: "How to sequence a plumber and a restoration company after a leak",
     checklistIntro:

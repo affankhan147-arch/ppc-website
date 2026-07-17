@@ -42,7 +42,8 @@ const titles = [
   "7 Plumbing Warning Signs Dallasâ€“Fort Worth Homeowners Shouldn't Ignore",
   "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means",
-  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe"
+  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe",
+  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?"
 ];
 
 const serviceCycle = [
@@ -71,6 +72,8 @@ const slugOverrides: Record<string, string> = {
     "water-stain-ceiling-below-bathroom-dallas",
   "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe":
     "plumber-or-water-restoration-company-first",
+  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?":
+    "hydro-jetting-vs-drain-snaking-dfw",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
     "water-heater-making-popping-noise-dallas"
 };
@@ -81,7 +84,8 @@ const relatedServiceOverrides: Record<string, string> = {
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means": "water-heater-emergency",
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
   "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency",
-  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe": "burst-pipe-emergency"
+  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe": "burst-pipe-emergency",
+  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?": "emergency-drain-cleaning"
 };
 
 const directAnswerOverrides: Record<string, string> = {
@@ -155,6 +159,8 @@ const directAnswerOverrides: Record<string, string> = {
     "If a shutoff valve will not close during a leak, avoid forcing it hard enough to break, look for another upstream valve, and request urgent help.",
   "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe":
     "After a burst pipe or major leak, the plumbing side usually needs to be controlled first -- stopping the water source and addressing the pipe -- before a water-restoration company can safely dry the space and check for hidden moisture or mold risk.",
+  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?":
+    "Drain snaking breaks through or pulls out a specific clog and is often used for a single blockage, while hydro jetting uses pressurized water to scour the full interior of the pipe and is more often used for recurring buildup, grease, or root intrusion; a camera inspection or provider assessment usually determines which is appropriate.",
   "Emergency Leak Approval Checklist for Homeowners":
     "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };
