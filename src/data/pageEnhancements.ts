@@ -554,6 +554,45 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "emergency-plumbing-cost-guide-for-dallas-homeowners": {
+    checklistTitle: "What actually drives emergency plumbing cost in Dallas",
+    checklistIntro:
+      "Emergency plumbing cost is rarely a single flat number. It depends on several separate factors that a provider typically evaluates before quoting a final price -- understanding these can help you ask better questions when requesting service.",
+    checklistItems: [
+      "Dispatch and diagnostic fees are usually charged separately from the repair itself, and after-hours, weekend, or holiday timing can change these baseline charges.",
+      "The type of problem matters -- a simple drain clog is typically less involved than a suspected main sewer line issue, a burst pipe, or a water heater replacement, each with different labor and parts requirements.",
+      "Access difficulty affects cost. A fixture that is easy to reach is generally less labor-intensive than one behind a wall, under a slab, or in a crawl space.",
+      "Parts and materials vary by what is needed -- a simple fitting replacement is priced differently than a full water heater unit or a significant pipe section.",
+      "Whether the visit resolves the problem in one trip or requires a follow-up visit for parts or additional diagnosis can affect total cost.",
+      "Emergency or after-hours timing itself is often a separate line item from the repair work, independent of how complex the repair turns out to be."
+    ],
+    proofTitle: "How to get a clearer emergency plumbing quote",
+    proofItems: [
+      "Ask whether the phone estimate is a range or a firm number, and whether it could change after in-person diagnosis.",
+      "Request an itemized breakdown separating dispatch, diagnostic, labor, parts, and any after-hours charges rather than accepting a single bundled number.",
+      "Ask directly whether emergency or after-hours timing changes the pricing method used, since this is common but not always stated upfront.",
+      "If multiple problems are found during the visit, ask how additional work beyond the original request would be priced and approved before it proceeds."
+    ],
+    extraFaqs: [
+      {
+        question: "Why do emergency plumbing quotes vary so much between providers?",
+        answer:
+          "Providers differ in how they structure dispatch fees, labor rates, and after-hours charges, and the specific diagnosis for your problem also affects the final price. Comparing itemized breakdowns rather than single bundled numbers makes quotes easier to evaluate."
+      },
+      {
+        question: "Is emergency service always more expensive than scheduling during business hours?",
+        answer:
+          "Often, but not universally -- this depends on the provider's specific after-hours policy. Ask directly whether timing affects the price for your situation."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
+    ]
+  },
   "roto-rooter-vs-local-emergency-plumber-in-dallas-which-should-you-call": {
     checklistTitle: "How to think about a national chain versus a local emergency plumber",
     checklistIntro:
