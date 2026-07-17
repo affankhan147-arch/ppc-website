@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import {
   AlertTriangle,
@@ -141,7 +141,7 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
-              Get clear next steps for urgent leaks, drain backups, sewer symptoms, toilet overflows, and water-heater problems—then call to discuss current provider availability.
+              Get clear next steps for urgent leaks, drain backups, sewer symptoms, toilet overflows, and water-heater problemsâ€”then call to discuss current provider availability.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -161,7 +161,7 @@ export default function HomePage() {
 
             <p className="mt-4 flex items-center gap-2 text-sm font-bold text-cyan-100">
               <PhoneCall className="h-4 w-4 text-orange-300" aria-hidden="true" />
-              Speak by phone—no long request form required.
+              Speak by phoneâ€”no long request form required.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -181,8 +181,8 @@ export default function HomePage() {
           <aside className="relative z-10 grid gap-5">
             <div className="hero-visual-panel relative overflow-hidden rounded-3xl border border-white/15 shadow-2xl">
               <Image
-                src="/images/hero/emergency-plumbing-abstract.svg"
-                alt=""
+                src="/images/hero/hero-emergency-plumber-repair.jpg"
+                alt="Licensed emergency plumber actively repairing a pipe at a DFW home"
                 width={1200}
                 height={520}
                 className="h-52 w-full object-cover sm:h-60"
