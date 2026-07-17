@@ -554,6 +554,46 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "no-usable-toilet-in-the-house-what-dfw-homeowners-should-do": {
+    checklistTitle: "What to do when no toilet in the house is usable",
+    checklistIntro:
+      "Having every toilet out of service at once is a different situation than one overflowing fixture. It usually points to a shared drain or main line problem rather than something isolated to a single toilet, and it changes how quickly help is needed.",
+    checklistItems: [
+      "Stop flushing any toilet in the house. Repeated attempts on a shared-line problem can push water and waste further into the home rather than clearing anything.",
+      "Check whether other fixtures -- tubs, showers, or floor drains -- are also backing up or gurgling. If they are, this strengthens the likelihood of a main line or branch line issue rather than a single clogged toilet.",
+      "Avoid using sinks, the dishwasher, or the washing machine until the cause is identified, since additional water can worsen a shared drain backup.",
+      "If wastewater has reached flooring or living space, keep people and pets away from the area and avoid direct contact with contaminated water.",
+      "Note when the problem started, which fixture was affected first, and whether anything unusual happened recently -- flushed items, heavy rain, or a nearby sewer smell -- since this detail helps with phone triage.",
+      "If the home has only one bathroom or limited access to a working toilet elsewhere, mention that when requesting help, since it affects how the situation is prioritized."
+    ],
+    proofTitle: "What to confirm when requesting help",
+    proofItems: [
+      "Describe clearly that every toilet is affected, not just one, since this changes what a provider expects to find and may affect equipment brought to the visit.",
+      "Ask whether the visit will include a camera inspection if a main or shared line problem is suspected, rather than just a single-fixture clearing attempt.",
+      "Clarify dispatch, diagnostic, and after-hours charges before approving work, and ask how pricing differs between a single-fixture clog and a main-line issue.",
+      "Ask what happens if the first visit does not fully resolve the backup, and whether a follow-up would be needed."
+    ],
+    extraFaqs: [
+      {
+        question: "Why would all the toilets in my house stop working at once?",
+        answer:
+          "This usually points to a blockage in a shared drain line or the main sewer line rather than a problem with one toilet specifically, since all fixtures on that line are affected simultaneously."
+      },
+      {
+        question: "Is a whole-house toilet backup more urgent than a single overflowing toilet?",
+        answer:
+          "It is generally treated as more urgent, since it can indicate a larger line problem and often leaves no usable toilet in the home. Describe the full situation when requesting help so it can be prioritized appropriately."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
+      { label: "Toilet overflow emergency", href: "/services/toilet-overflow-emergency" },
+      { label: "Sewer backup help", href: "/services/sewer-backup-help" },
+      { label: "Toilet overflowing will not stop", href: "/problems/toilet-overflowing-will-not-stop" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+    ]
+  },
   "emergency-plumbing-mckinney-tx-what-homeowners-should-know": {
     checklistTitle: "What McKinney homeowners should know before requesting emergency plumbing help",
     checklistIntro:

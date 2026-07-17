@@ -46,7 +46,8 @@ const titles = [
   "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?",
   "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide",
   "Emergency Plumber in Irving, TX: What to Know Before You Call",
-  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know"
+  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know",
+  "No Usable Toilet in the House: What DFW Homeowners Should Do"
 ];
 
 const serviceCycle = [
@@ -83,6 +84,8 @@ const slugOverrides: Record<string, string> = {
     "emergency-plumber-irving-tx-what-to-know",
   "Emergency Plumbing in McKinney, TX: What Homeowners Should Know":
     "emergency-plumbing-mckinney-tx-what-homeowners-should-know",
+  "No Usable Toilet in the House: What DFW Homeowners Should Do":
+    "no-usable-toilet-in-the-house-what-dfw-homeowners-should-do",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
     "water-heater-making-popping-noise-dallas"
 };
@@ -97,7 +100,8 @@ const relatedServiceOverrides: Record<string, string> = {
   "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?": "emergency-drain-cleaning",
   "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide": "water-heater-emergency",
   "Emergency Plumber in Irving, TX: What to Know Before You Call": "24-hour-emergency-plumber",
-  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know": "emergency-drain-cleaning"
+  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know": "emergency-drain-cleaning",
+  "No Usable Toilet in the House: What DFW Homeowners Should Do": "toilet-overflow-emergency"
 };
 
 const directAnswerOverrides: Record<string, string> = {
@@ -179,6 +183,8 @@ const directAnswerOverrides: Record<string, string> = {
     "Irving homeowners dealing with an active leak, backup, or burst pipe can request an emergency plumbing connection by describing the problem, the address, and how urgent the situation is, then confirming availability and pricing directly with the matched provider.",
   "Emergency Plumbing in McKinney, TX: What Homeowners Should Know":
     "McKinney homeowners facing a drain backup, leak, or no-hot-water situation can request an emergency plumbing connection with their address and problem details, then confirm availability, scope, and pricing directly with the matched provider.",
+  "No Usable Toilet in the House: What DFW Homeowners Should Do":
+    "When every toilet in the house is affected at once, that usually points to a shared drain or main sewer line problem rather than a single-fixture clog, and typically needs a broader diagnosis than one overflowing toilet alone.",
   "Emergency Leak Approval Checklist for Homeowners":
     "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };
