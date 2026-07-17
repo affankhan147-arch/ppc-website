@@ -554,6 +554,45 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "emergency-plumbing-mckinney-tx-what-homeowners-should-know": {
+    checklistTitle: "What McKinney homeowners should know before requesting emergency plumbing help",
+    checklistIntro:
+      "A plumbing emergency in McKinney follows the same basic triage as anywhere in DFW -- stop the water, describe the problem clearly, and confirm details before approving work. A few local specifics are worth knowing when you request service.",
+    checklistItems: [
+      "Describe the specific problem when requesting help -- a slow drain, an active backup, no hot water, and a burst pipe are different situations that may call for different equipment or urgency.",
+      "Have your McKinney address, nearest cross street, and any access notes ready, since these affect how a provider plans the visit and estimates arrival.",
+      "If more than one fixture is affected at the same time, mention that specifically -- it often points toward a shared or main line issue rather than an isolated clog.",
+      "Shut off water at the nearest safe valve if water is actively flowing, and avoid using affected fixtures until the source is identified.",
+      "Note whether the property is newer construction or an older home, since pipe material and age can affect what a provider expects to find during diagnosis.",
+      "If the problem started after a specific event -- heavy rain, a renovation, or new appliance installation -- mention that timing, since it can help narrow down the cause."
+    ],
+    proofTitle: "Questions to confirm before approving work in McKinney",
+    proofItems: [
+      "Ask whether a provider is actually available for your specific McKinney address at the time you are requesting help, rather than assuming general DFW coverage applies.",
+      "Clarify dispatch, diagnostic, and after-hours charges before approving a visit.",
+      "Ask whether the visit is expected to fully resolve the problem or whether a follow-up may be needed for parts or further diagnosis.",
+      "Confirm licensing, insurance, and warranty terms directly with the provider if those details matter for your decision."
+    ],
+    extraFaqs: [
+      {
+        question: "How do I know if a plumbing problem in McKinney is urgent?",
+        answer:
+          "Active leaks, sewage backups, burst pipes, and no hot water are generally treated as urgent. A single slow drain with no other symptoms may be less time-sensitive, but a provider can help you judge that when you describe the situation."
+      },
+      {
+        question: "Does McKinney have the same emergency plumbing coverage as Dallas or Fort Worth?",
+        answer:
+          "Coverage and availability can vary by provider and by time of request. Confirm availability for your specific address directly rather than assuming coverage is identical across every DFW city."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "McKinney service area", href: "/cities/mckinney" }
+    ]
+  },
   "emergency-plumber-irving-tx-what-to-know": {
     checklistTitle: "What to know before requesting emergency plumbing help in Irving",
     checklistIntro:

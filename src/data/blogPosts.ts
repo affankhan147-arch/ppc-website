@@ -45,7 +45,8 @@ const titles = [
   "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe",
   "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?",
   "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide",
-  "Emergency Plumber in Irving, TX: What to Know Before You Call"
+  "Emergency Plumber in Irving, TX: What to Know Before You Call",
+  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know"
 ];
 
 const serviceCycle = [
@@ -80,6 +81,8 @@ const slugOverrides: Record<string, string> = {
     "leaking-water-heater-repair-or-replace-dfw",
   "Emergency Plumber in Irving, TX: What to Know Before You Call":
     "emergency-plumber-irving-tx-what-to-know",
+  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know":
+    "emergency-plumbing-mckinney-tx-what-homeowners-should-know",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
     "water-heater-making-popping-noise-dallas"
 };
@@ -93,7 +96,8 @@ const relatedServiceOverrides: Record<string, string> = {
   "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe": "burst-pipe-emergency",
   "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?": "emergency-drain-cleaning",
   "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide": "water-heater-emergency",
-  "Emergency Plumber in Irving, TX: What to Know Before You Call": "24-hour-emergency-plumber"
+  "Emergency Plumber in Irving, TX: What to Know Before You Call": "24-hour-emergency-plumber",
+  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know": "emergency-drain-cleaning"
 };
 
 const directAnswerOverrides: Record<string, string> = {
@@ -173,6 +177,8 @@ const directAnswerOverrides: Record<string, string> = {
     "A water heater leaking from a fitting, valve, or connection is sometimes repairable, while a leak from the tank body itself generally is not; age, tank condition, and leak location are the main factors a provider will check before recommending repair or replacement.",
   "Emergency Plumber in Irving, TX: What to Know Before You Call":
     "Irving homeowners dealing with an active leak, backup, or burst pipe can request an emergency plumbing connection by describing the problem, the address, and how urgent the situation is, then confirming availability and pricing directly with the matched provider.",
+  "Emergency Plumbing in McKinney, TX: What Homeowners Should Know":
+    "McKinney homeowners facing a drain backup, leak, or no-hot-water situation can request an emergency plumbing connection with their address and problem details, then confirm availability, scope, and pricing directly with the matched provider.",
   "Emergency Leak Approval Checklist for Homeowners":
     "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };
