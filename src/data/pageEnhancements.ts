@@ -1,4 +1,4 @@
-import type { FAQ } from "@/data/faqs";
+﻿import type { FAQ } from "@/data/faqs";
 
 export type EnhancementLink = {
   label: string;
@@ -554,6 +554,47 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "plumber-or-water-restoration-company-first": {
+    checklistTitle: "How to sequence a plumber and a restoration company after a leak",
+    checklistIntro:
+      "When a pipe bursts or a leak spreads beyond a single fixture, homeowners are often unsure whether to call a plumber, a water-restoration company, or both. The short answer is usually both, but not at the same time -- the order matters.",
+    checklistItems: [
+      "Shut off water at the nearest safe valve or the main shutoff first. Neither a plumber nor a restoration company can work safely while water is still actively flowing.",
+      "Call a plumber first when the source of the water is still active or unknown -- a visible burst pipe, a fitting that will not stop leaking, or water appearing without a clear cause. The plumbing side typically needs to be stopped and diagnosed before drying work can be planned properly.",
+      "Call a water-restoration company first, or at the same time, when the leak has already been stopped and the concern is standing water, soaked flooring, drywall, or insulation, especially if water has been present for more than a few hours.",
+      "If you are not sure which situation applies, describe what you are seeing -- active flow, visible pipe damage, or standing water with no ongoing leak -- when you request help, since that detail affects which provider is dispatched first.",
+      "Photograph the damage before cleanup begins if you may need it for insurance, and avoid running fans or dehumidifiers over standing water until you know whether it is clean or contaminated.",
+      "Keep the affected area clear of foot traffic and electrical equipment until both the water source and the standing water have been assessed."
+    ],
+    proofTitle: "What to confirm before approving plumbing or restoration work",
+    proofItems: [
+      "Ask whether the plumber's visit is expected to stop the leak, complete a full repair, or require a follow-up visit -- those are different scopes with different timelines.",
+      "Ask a restoration company whether their assessment includes moisture readings behind walls or under flooring, not just visible surface water, since hidden moisture is a common source of later mold issues.",
+      "Clarify separately what each company charges for dispatch, diagnosis, and after-hours service before approving work from either side.",
+      "If both a plumber and a restoration company are involved, confirm who is documenting the timeline and cause of the leak, since that record can matter for insurance."
+    ],
+    extraFaqs: [
+      {
+        question: "Do I need both a plumber and a water-restoration company after a leak?",
+        answer:
+          "Not always. A contained leak caught quickly may only need plumbing repair. Restoration is more likely needed when water has been present long enough to soak flooring, drywall, or insulation, or when the source was hidden and ran for an unknown period."
+      },
+      {
+        question: "Will my homeowners insurance cover both services?",
+        answer:
+          "That depends on your policy and the cause of the leak. Confirm coverage details directly with your insurance provider before assuming either service is included."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Water heater emergency", href: "/services/water-heater-emergency" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Burst pipe first steps", href: "/problems/burst-pipe-first-steps" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
+    ]
+  },
   "emergency-plumber-near-me-open-now-what-to-do-before-help-arrives": {
     checklistTitle: "What to do before emergency plumbing help arrives",
     checklistIntro:
@@ -575,7 +616,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     ],
     extraFaqs: [
       {
-        question: "How quickly can an emergency plumber arrive in Dallas–Fort Worth?",
+        question: "How quickly can an emergency plumber arrive in Dallasâ€“Fort Worth?",
         answer:
           "There is no reliable one-time answer for every address. Availability depends on the city, time, current calls, travel distance, access, and problem type. Confirm the arrival window directly with the provider before relying on it."
       },
@@ -647,7 +688,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Mention recurring clogs, recent drain work, known roots, property access, and whether the cleanout can be located. These details help a provider plan the first inspection without assuming the cause.",
       "For apartments, restaurants, or shared buildings, report the backup promptly and note whether other units or common drains are affected. A shared-line problem needs different coordination than one bathroom clog."
     ],
-    proofTitle: "What the first sewer visit may—and may not—resolve",
+    proofTitle: "What the first sewer visit mayâ€”and may notâ€”resolve",
     proofItems: [
       "Ask whether the visit is for emergency containment, line clearing, camera inspection, cause diagnosis, cleanup coordination, or repair planning. These may be separate scopes.",
       "Clearing a blockage can restore flow without proving why it formed. When the problem returns, ask what evidence supports roots, grease, damaged pipe, poor slope, or another suspected cause.",
@@ -658,7 +699,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       {
         question: "What is the clearest sign of a main sewer line clog in a Dallas home?",
         answer:
-          "The strongest clue is more than one fixture reacting together—for example, a toilet flush causing water to rise in a tub, shower, floor drain, or outdoor cleanout. Stop water use when that pattern appears."
+          "The strongest clue is more than one fixture reacting togetherâ€”for example, a toilet flush causing water to rise in a tub, shower, floor drain, or outdoor cleanout. Stop water use when that pattern appears."
       },
       {
         question: "Does clearing a main sewer clog fix the underlying problem?",

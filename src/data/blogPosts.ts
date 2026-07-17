@@ -1,4 +1,4 @@
-export type BlogPost = {
+﻿export type BlogPost = {
   slug: string;
   title: string;
   directAnswer: string;
@@ -39,9 +39,10 @@ const titles = [
   "Emergency Sewer Help in Garland: Signs and Next Steps",
   "Water Shutoff Valve Will Not Close During a Leak",
   "Emergency Leak Approval Checklist for Homeowners",
-  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore",
+  "7 Plumbing Warning Signs Dallasâ€“Fort Worth Homeowners Shouldn't Ignore",
   "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean",
-  "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means"
+  "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means",
+  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe"
 ];
 
 const serviceCycle = [
@@ -64,25 +65,28 @@ const slugify = (value: string) =>
     .replace(/^-|-$/g, "");
 
 const slugOverrides: Record<string, string> = {
-  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore":
+  "7 Plumbing Warning Signs Dallasâ€“Fort Worth Homeowners Shouldn't Ignore":
     "7-plumbing-problems-you-should-never-ignore",
   "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean":
     "water-stain-ceiling-below-bathroom-dallas",
+  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe":
+    "plumber-or-water-restoration-company-first",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
     "water-heater-making-popping-noise-dallas"
 };
 
 const relatedServiceOverrides: Record<string, string> = {
-  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore": "24-hour-emergency-plumber",
+  "7 Plumbing Warning Signs Dallasâ€“Fort Worth Homeowners Shouldn't Ignore": "24-hour-emergency-plumber",
   "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean": "burst-pipe-emergency",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means": "water-heater-emergency",
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
-  "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency"
+  "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency",
+  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe": "burst-pipe-emergency"
 };
 
 const directAnswerOverrides: Record<string, string> = {
-  "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore":
-    "Multiple slow drains, whole-house pressure loss, unexplained moisture, sewer odors, and active leaks can point to plumbing problems Dallas–Fort Worth homeowners should check before they spread.",
+  "7 Plumbing Warning Signs Dallasâ€“Fort Worth Homeowners Shouldn't Ignore":
+    "Multiple slow drains, whole-house pressure loss, unexplained moisture, sewer odors, and active leaks can point to plumbing problems Dallasâ€“Fort Worth homeowners should check before they spread.",
   "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean":
     "A ceiling stain below a Dallas bathroom can come from a toilet seal, shower or tub drain, sink connection, waterproofing failure, or hidden supply pipe; timing fixture use can help narrow the source.",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
@@ -149,6 +153,8 @@ const directAnswerOverrides: Record<string, string> = {
     "Emergency sewer help in Garland is appropriate when wastewater appears, an outdoor cleanout overflows, drains gurgle, or several fixtures slow down together.",
   "Water Shutoff Valve Will Not Close During a Leak":
     "If a shutoff valve will not close during a leak, avoid forcing it hard enough to break, look for another upstream valve, and request urgent help.",
+  "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe":
+    "After a burst pipe or major leak, the plumbing side usually needs to be controlled first -- stopping the water source and addressing the pipe -- before a water-restoration company can safely dry the space and check for hidden moisture or mold risk.",
   "Emergency Leak Approval Checklist for Homeowners":
     "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };
