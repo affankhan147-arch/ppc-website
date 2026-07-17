@@ -43,7 +43,8 @@ const titles = [
   "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means",
   "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe",
-  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?"
+  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?",
+  "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide"
 ];
 
 const serviceCycle = [
@@ -74,6 +75,8 @@ const slugOverrides: Record<string, string> = {
     "plumber-or-water-restoration-company-first",
   "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?":
     "hydro-jetting-vs-drain-snaking-dfw",
+  "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide":
+    "leaking-water-heater-repair-or-replace-dfw",
   "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means":
     "water-heater-making-popping-noise-dallas"
 };
@@ -85,7 +88,8 @@ const relatedServiceOverrides: Record<string, string> = {
   "Water Shutoff Valve Will Not Close During a Leak": "burst-pipe-emergency",
   "Emergency Leak Approval Checklist for Homeowners": "burst-pipe-emergency",
   "Plumber or Water-Restoration Company First? What to Call After a Leak or Burst Pipe": "burst-pipe-emergency",
-  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?": "emergency-drain-cleaning"
+  "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?": "emergency-drain-cleaning",
+  "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide": "water-heater-emergency"
 };
 
 const directAnswerOverrides: Record<string, string> = {
@@ -161,6 +165,8 @@ const directAnswerOverrides: Record<string, string> = {
     "After a burst pipe or major leak, the plumbing side usually needs to be controlled first -- stopping the water source and addressing the pipe -- before a water-restoration company can safely dry the space and check for hidden moisture or mold risk.",
   "Hydro Jetting vs. Drain Snaking: Which Does Your DFW Drain Actually Need?":
     "Drain snaking breaks through or pulls out a specific clog and is often used for a single blockage, while hydro jetting uses pressurized water to scour the full interior of the pipe and is more often used for recurring buildup, grease, or root intrusion; a camera inspection or provider assessment usually determines which is appropriate.",
+  "Leaking Water Heater: Repair or Replace? A DFW Homeowner's Decision Guide":
+    "A water heater leaking from a fitting, valve, or connection is sometimes repairable, while a leak from the tank body itself generally is not; age, tank condition, and leak location are the main factors a provider will check before recommending repair or replacement.",
   "Emergency Leak Approval Checklist for Homeowners":
     "Before approving emergency leak work, confirm whether water is isolated, what access is needed, what repair scope is included, and what cleanup or restoration work is separate."
 };

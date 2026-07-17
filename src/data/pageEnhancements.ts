@@ -554,6 +554,46 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "leaking-water-heater-repair-or-replace-dfw": {
+    checklistTitle: "What to check before deciding between repair and replacement",
+    checklistIntro:
+      "A leaking water heater does not automatically mean replacement, but it does not automatically mean a simple repair either. The leak location and the unit's age and condition are what actually determine the options.",
+    checklistItems: [
+      "Turn off the water heater's power source (electric) or gas supply, and the cold-water inlet valve if it is safe and reachable, since a leaking unit should not be left running unattended.",
+      "Try to identify where the water is coming from: a fitting or connection at the top, the pressure relief valve, the drain valve near the bottom, or the tank body itself. Each points to a different likely cause.",
+      "A leak from a fitting, valve, or connection is often repairable, sometimes without replacing the unit, since these are individual parts rather than the tank itself.",
+      "A leak from the tank body -- water seeping from the metal shell rather than a connection point -- generally means the tank has failed internally and is typically not repairable regardless of the unit's age.",
+      "Note the unit's approximate age if you know it. Many tank water heaters are designed for roughly 8 to 12 years of service, and age becomes a relevant factor once a tank-body leak is suspected.",
+      "Contain the leaking water, protect nearby flooring and belongings, and avoid using hot water from the unit until it has been assessed."
+    ],
+    proofTitle: "Questions to ask before approving repair or replacement",
+    proofItems: [
+      "Ask the provider to identify the specific leak source before recommending repair or replacement, rather than assuming based on the unit's age alone.",
+      "If replacement is recommended, ask about sizing for your household, warranty terms, and whether code-required updates such as venting or strapping are included in the quote.",
+      "If repair is recommended, ask whether the repair addresses the root cause or is likely to be temporary, especially on an older unit.",
+      "Clarify dispatch, diagnostic, and after-hours charges separately from the repair or replacement cost itself before approving work."
+    ],
+    extraFaqs: [
+      {
+        question: "Can a leaking water heater be dangerous?",
+        answer:
+          "It can be, depending on the cause. Gas odor, scorching, unusual sounds under pressure, or water near electrical components should be treated as urgent regardless of whether the unit is otherwise old or new."
+      },
+      {
+        question: "How long can I wait before replacing a leaking water heater?",
+        answer:
+          "That depends on the leak source and severity. A confirmed tank-body leak generally will not stop on its own and tends to worsen, so most homeowners do not wait long once that specific cause is confirmed."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency", href: "/services/water-heater-emergency" },
+      { label: "Water heater leaking emergency", href: "/problems/water-heater-leaking-emergency" },
+      { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
+    ]
+  },
   "hydro-jetting-vs-drain-snaking-dfw": {
     checklistTitle: "How to think about hydro jetting versus drain snaking",
     checklistIntro:
