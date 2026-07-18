@@ -107,7 +107,7 @@ export default function HomePage() {
             <div className="trust-ribbon mt-10 grid gap-1 rounded-2xl p-3 sm:grid-cols-3">
               {["Emergency phone line", "DFW plumbing service", "Clear next steps"].map((item) => (
                 <div key={item} className="flex items-center gap-2 rounded-xl px-3 py-3 text-sm font-bold text-slate-100">
-                  <CheckCircle2 className="h-4 w-4 flex-none text-cyan-300" aria-hidden="true" /> {item}
+                  <CheckCircle2 className="h-4 w-4 flex-none text-copper" aria-hidden="true" /> {item}
                 </div>
               ))}
             </div>
@@ -122,7 +122,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {urgentCards.map(({ title, text, icon: Icon, href }) => (
               <Link key={title} href={href} className="premium-card group p-5">
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-orange-50 text-[#e84d0e]"><Icon className="h-6 w-6" aria-hidden="true" /></span>
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-copper/15 text-copper"><Icon className="h-6 w-6" aria-hidden="true" /></span>
                 <h3 className="mt-4 text-lg font-black leading-tight text-[#081b2c]">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-[#0b7895]">See safe next steps <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
@@ -282,3 +282,4 @@ export default function HomePage() {
     </main>
   );
 }
+

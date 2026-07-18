@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PhoneCall } from "lucide-react";
 import { phoneConfig, siteConfig } from "@/data/site";
 import { cities } from "@/data/cities";
@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-[1.35fr_1fr_1fr_1fr]">
         <div>
           <p className="text-2xl font-black tracking-tight">{siteConfig.brandName}</p>
-          <p className="mt-2 font-serif text-xl text-cyan-100">Emergency plumbing service for stressful moments.</p>
+          <p className="mt-2 font-serif text-xl text-[#e8c4a0]">Emergency plumbing service for stressful moments.</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-200">{siteConfig.disclosure}</p>
           <a
             href={phoneConfig.href}
@@ -23,7 +23,7 @@ export function Footer() {
             Call {phoneConfig.display}
           </a>
           <p className="mt-5 rounded-xl border border-white/15 bg-white/[.07] p-4 text-sm font-semibold leading-6 text-slate-200">
-            Fast help for urgent leaks, drains, sewer, pipe, toilet, and water-heater problems across Dallas–Fort Worth.
+            Fast help for urgent leaks, drains, sewer, pipe, toilet, and water-heater problems across Dallasâ€“Fort Worth.
           </p>
         </div>
         <div>
@@ -65,3 +65,4 @@ export function Footer() {
     </footer>
   );
 }
+
