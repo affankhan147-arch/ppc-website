@@ -586,7 +586,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Commercial emergency plumbing", href: "/services/commercial-emergency-plumbing" },
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
       { label: "Commercial drain backup guidance", href: "/blog/commercial-drain-backup-what-business-owners-should-do-first" },
@@ -626,7 +625,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     ],
     extraLinks: [
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
-      { label: "Toilet overflow emergency", href: "/services/toilet-overflow-emergency" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" },
       { label: "Toilet overflowing will not stop", href: "/problems/toilet-overflowing-will-not-stop" },
       { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
@@ -665,7 +663,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
@@ -704,7 +701,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
       { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
@@ -782,7 +778,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
       { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
       { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
@@ -860,7 +855,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Water heater emergency", href: "/services/water-heater-emergency" },
       { label: "Water heater leaking emergency", href: "/problems/water-heater-leaking-emergency" },
       { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
       { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
@@ -900,7 +894,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
       { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
       { label: "Bathtub drain backing up", href: "/problems/bathtub-drain-backing-up" },
@@ -941,7 +934,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "Water heater emergency", href: "/services/water-heater-emergency" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
       { label: "Burst pipe first steps", href: "/problems/burst-pipe-first-steps" },
