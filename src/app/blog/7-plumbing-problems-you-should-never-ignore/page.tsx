@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { AlertTriangle, Droplets, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -8,9 +8,9 @@ import { buildMetadata } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 const path = "/blog/7-plumbing-problems-you-should-never-ignore";
-const title = "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore";
+const title = "7 Plumbing Warning Signs Dallasâ€“Fort Worth Homeowners Shouldn't Ignore";
 const description =
-  "From dripping faucets to sewer odors, learn seven plumbing warning signs Dallas–Fort Worth homeowners should not ignore and when to request urgent help.";
+  "From dripping faucets to sewer odors, learn seven plumbing warning signs Dallasâ€“Fort Worth homeowners should not ignore and when to request urgent help.";
 
 export const metadata = buildMetadata({ title, description, path });
 
@@ -46,16 +46,16 @@ export default function PlumbingProblemsArticlePage() {
       />
 
       <article className="mt-6 max-w-4xl">
-        <p className="section-kicker">Dallas–Fort Worth homeowner guide</p>
+        <p className="section-kicker">Dallasâ€“Fort Worth homeowner guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-slate-700">
-          Most plumbing emergencies do not start with water pouring through the ceiling. They start small—a sink that
+          Most plumbing emergencies do not start with water pouring through the ceiling. They start smallâ€”a sink that
           drains a little slower than usual, a toilet that runs when nobody has touched it, or a faint stain below the
           upstairs bathroom.
         </p>
         <p className="mt-4 text-lg leading-8 text-slate-700">
           It is easy to leave these things for another day. Sometimes that is fine. Other times, the small symptom is
-          the only warning you get before the repair becomes far more disruptive. For Dallas–Fort Worth homeowners,
+          the only warning you get before the repair becomes far more disruptive. For Dallasâ€“Fort Worth homeowners,
           these seven plumbing warning signs are worth taking seriously.
         </p>
 
@@ -97,7 +97,7 @@ export default function PlumbingProblemsArticlePage() {
           </p>
           <Link
             href="/services/emergency-drain-cleaning"
-            className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900"
+            className="mt-4 inline-flex font-black text-copper hover:text-[#e0a76c]"
           >
             Review emergency drain-cleaning options
           </Link>
@@ -176,14 +176,14 @@ export default function PlumbingProblemsArticlePage() {
           </p>
           <Link
             href="/services/sewer-backup-help"
-            className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900"
+            className="mt-4 inline-flex font-black text-copper hover:text-[#e0a76c]"
           >
             Review sewer-backup warning signs
           </Link>
         </section>
 
-        <section className="content-section rounded-md border border-orange-200 bg-orange-50 p-6">
-          <div className="flex items-center gap-2 text-orange-700">
+        <section className="content-section rounded-md border border-copper/30 bg-copper/10 p-6">
+          <div className="flex items-center gap-2 text-copper">
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">When it is an emergency</p>
           </div>
@@ -195,7 +195,7 @@ export default function PlumbingProblemsArticlePage() {
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {emergencySigns.map((sign) => (
               <li key={sign} className="flex gap-2 font-semibold leading-6 text-slate-800">
-                <Droplets className="mt-0.5 h-5 w-5 flex-none text-orange-600" aria-hidden="true" />
+                <Droplets className="mt-0.5 h-5 w-5 flex-none text-copper" aria-hidden="true" />
                 {sign}
               </li>
             ))}
@@ -227,9 +227,9 @@ export default function PlumbingProblemsArticlePage() {
           </p>
         </section>
 
-        <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
-          <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Need plumbing help in Dallas–Fort Worth?</h2>
+        <section className="content-section rounded-md border border-white/15 bg-navy-soft/40 p-6">
+          <PhoneCall className="h-7 w-7 text-copper" aria-hidden="true" />
+          <h2 className="mt-3 text-2xl font-black text-slate-950">Need plumbing help in Dallasâ€“Fort Worth?</h2>
           <p className="mt-3 leading-7 text-slate-700">
             Whether it is a stubborn leak, several slow drains, a running toilet, or something you cannot quite
             explain, Plumbing Hands can help you request assistance. {siteConfig.serviceStatement}
@@ -263,3 +263,4 @@ export default function PlumbingProblemsArticlePage() {
     </main>
   );
 }
+

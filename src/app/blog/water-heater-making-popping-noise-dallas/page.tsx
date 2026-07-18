@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { AlertTriangle, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -43,7 +43,7 @@ export default function WaterHeaterPoppingNoisePage() {
         <p className="section-kicker">Dallas water-heater guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-slate-700">
-          A water heater does not usually start making noise for no reason. It builds slowly—a faint crackle at first,
+          A water heater does not usually start making noise for no reason. It builds slowlyâ€”a faint crackle at first,
           then sharper pops or a low rumble whenever the unit kicks on to heat.
         </p>
         <p className="mt-4 text-lg leading-8 text-slate-700">
@@ -53,7 +53,7 @@ export default function WaterHeaterPoppingNoisePage() {
         </p>
         <p className="mt-4 text-lg leading-8 text-slate-700">
           That does not mean every noisy water heater is about to fail. But a new or worsening sound is worth paying
-          attention to—especially alongside leaking, rusty water, inconsistent temperatures, or anything related to
+          attention toâ€”especially alongside leaking, rusty water, inconsistent temperatures, or anything related to
           gas or electricity.
         </p>
 
@@ -85,7 +85,7 @@ export default function WaterHeaterPoppingNoisePage() {
           <p className="section-kicker">Mineral buildup</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">Why Dallas water heaters build sediment</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            Dallas–Fort Worth water contains dissolved minerals. Each time that water is heated, some minerals can
+            Dallasâ€“Fort Worth water contains dissolved minerals. Each time that water is heated, some minerals can
             separate and settle inside the tank.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
@@ -148,7 +148,7 @@ export default function WaterHeaterPoppingNoisePage() {
             scorching, wet electrical components, or a breaker that repeatedly trips are not routine sediment
             symptoms and require more urgent attention.
           </p>
-          <Link href="/blog/water-heater-leaking-in-dallas-emergency-signs-to-watch" className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900">
+          <Link href="/blog/water-heater-leaking-in-dallas-emergency-signs-to-watch" className="mt-4 inline-flex font-black text-copper hover:text-[#e0a76c]">
             Review Dallas water-heater leak warning signs
           </Link>
         </section>
@@ -172,7 +172,7 @@ export default function WaterHeaterPoppingNoisePage() {
           <p className="section-kicker">Maintenance decision</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">Should you flush a noisy water heater yourself?</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            Flushing can clear loose sediment, but it is not always the right first move—especially with an older tank.
+            Flushing can clear loose sediment, but it is not always the right first moveâ€”especially with an older tank.
             A heater that has not been maintained in years may have a weakened drain valve or sediment that has
             hardened into scale. Opening that valve can reveal a leak or leave you with a valve that will not close
             fully afterward.
@@ -204,8 +204,8 @@ export default function WaterHeaterPoppingNoisePage() {
           </p>
         </section>
 
-        <section className="content-section rounded-md border border-orange-200 bg-orange-50 p-6">
-          <div className="flex items-center gap-2 text-orange-700">
+        <section className="content-section rounded-md border border-copper/30 bg-copper/10 p-6">
+          <div className="flex items-center gap-2 text-copper">
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">Emergency warning signs</p>
           </div>
@@ -227,7 +227,7 @@ export default function WaterHeaterPoppingNoisePage() {
           <p className="section-kicker">Provider questions</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">How do you get an honest diagnosis?</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A real diagnosis should say more than “it is old” or “probably sediment.” Ask where the provider believes
+            A real diagnosis should say more than â€œit is oldâ€ or â€œprobably sediment.â€ Ask where the provider believes
             the noise originates and whether sediment has been confirmed or remains a possibility. Ask whether flushing
             makes sense for this tank&apos;s condition and whether the burner, elements, valves, and connections were
             actually checked.
@@ -249,17 +249,17 @@ export default function WaterHeaterPoppingNoisePage() {
           <p className="mt-3 leading-7 text-slate-700">
             Notice when the sound starts, whether it follows hot-water use, and whether moisture, corrosion,
             overheating, or gas odor appears with it. Those details are more useful for diagnosis than simply knowing
-            the heater is “making a noise.”
+            the heater is â€œmaking a noise.â€
           </p>
         </section>
 
-        <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
-          <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
+        <section className="content-section rounded-md border border-white/15 bg-navy-soft/40 p-6">
+          <PhoneCall className="h-7 w-7 text-copper" aria-hidden="true" />
           <h2 className="mt-3 text-2xl font-black text-slate-950">Need help with a noisy water heater in Dallas?</h2>
           <p className="mt-3 leading-7 text-slate-700">
             If your water heater is popping, rumbling, leaking, or not producing reliable hot water, Plumbing Hands can
             help you request assistance from available plumbing professionals serving Dallas and the surrounding
-            Dallas–Fort Worth area.
+            Dallasâ€“Fort Worth area.
           </p>
           <div className="mt-5">
             <CallButton
@@ -289,3 +289,4 @@ export default function WaterHeaterPoppingNoisePage() {
     </main>
   );
 }
+

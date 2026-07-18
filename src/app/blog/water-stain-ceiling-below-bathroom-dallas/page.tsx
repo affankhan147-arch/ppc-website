@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { AlertTriangle, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -39,14 +39,14 @@ export default function WaterStainBelowBathroomPage() {
         <p className="section-kicker">Dallas ceiling-leak guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-slate-700">
-          A water stain on the ceiling below a bathroom usually starts small—a faint yellow or brown mark that looks
+          A water stain on the ceiling below a bathroom usually starts smallâ€”a faint yellow or brown mark that looks
           dry and stays the same size for days. It is easy to write off.
         </p>
         <p className="mt-4 text-lg leading-8 text-slate-700">
           Then someone showers, flushes, or fills the tub, and the stain gets noticeably darker. That timing is the
           clue. A stain below a bathroom often traces back to a plumbing leak, failed fixture seal, or waterproofing
           problem above it. The source can be small, but water may travel through flooring, insulation, and framing
-          before it becomes visible—which is why the stain and the actual leak are not always in the same place.
+          before it becomes visibleâ€”which is why the stain and the actual leak are not always in the same place.
         </p>
         <p className="mt-4 text-lg leading-8 text-slate-700">
           For Dallas homeowners, catching the source early can mean the difference between a limited repair and a
@@ -103,7 +103,7 @@ export default function WaterStainBelowBathroomPage() {
             damage the seal and may point to a flange or subfloor problem. If the stain changes after flushing, stop
             using that toilet until it is checked.
           </p>
-          <Link href="/services/toilet-overflow-emergency" className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900">
+          <Link href="/services/toilet-overflow-emergency" className="mt-4 inline-flex font-black text-copper hover:text-[#e0a76c]">
             Review urgent toilet problems
           </Link>
         </section>
@@ -170,7 +170,7 @@ export default function WaterStainBelowBathroomPage() {
             reason. Bubbling paint or softening drywall adds to the concern.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
-            If water is actively dripping or spreading quickly, locate the home&apos;s main shutoff valve—but operate it
+            If water is actively dripping or spreading quickly, locate the home&apos;s main shutoff valveâ€”but operate it
             only if it is safe to reach.
           </p>
         </section>
@@ -193,7 +193,7 @@ export default function WaterStainBelowBathroomPage() {
           <p className="section-kicker">Intermittent leak</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">A dry ceiling stain may not mean the problem is solved</h2>
           <p className="mt-3 leading-7 text-slate-700">
-            A stain that stops growing might mean the leak is gone. It might also be intermittent—active only during a
+            A stain that stops growing might mean the leak is gone. It might also be intermittentâ€”active only during a
             long shower, deep bath, particular flush, or when a connection shifts under use.
           </p>
           <p className="mt-3 leading-7 text-slate-700">
@@ -203,8 +203,8 @@ export default function WaterStainBelowBathroomPage() {
           </p>
         </section>
 
-        <section className="content-section rounded-md border border-orange-200 bg-orange-50 p-6">
-          <div className="flex items-center gap-2 text-orange-700">
+        <section className="content-section rounded-md border border-copper/30 bg-copper/10 p-6">
+          <div className="flex items-center gap-2 text-copper">
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">Emergency warning signs</p>
           </div>
@@ -264,12 +264,12 @@ export default function WaterStainBelowBathroomPage() {
           </p>
         </section>
 
-        <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
-          <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
+        <section className="content-section rounded-md border border-white/15 bg-navy-soft/40 p-6">
+          <PhoneCall className="h-7 w-7 text-copper" aria-hidden="true" />
           <h2 className="mt-3 text-2xl font-black text-slate-950">Need help with a ceiling leak in Dallas?</h2>
           <p className="mt-3 leading-7 text-slate-700">
             If a water stain has appeared below your bathroom, Plumbing Hands can help you request assistance from
-            available plumbing professionals serving Dallas and surrounding Dallas–Fort Worth communities.
+            available plumbing professionals serving Dallas and surrounding Dallasâ€“Fort Worth communities.
           </p>
           <div className="mt-5">
             <CallButton
@@ -299,3 +299,4 @@ export default function WaterStainBelowBathroomPage() {
     </main>
   );
 }
+
