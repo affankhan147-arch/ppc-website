@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -59,13 +59,13 @@ export default function CitiesPage() {
             <ul className="mt-5 grid gap-3 text-lg font-bold text-slate-800 sm:grid-cols-2">
               {hubBullets.map((item) => (
                 <li key={item} className="flex gap-2 rounded-md border border-slate-200 bg-white p-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-cyan-700" aria-hidden="true" />
+                  <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-copper" aria-hidden="true" />
                   <span className="min-w-0">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="min-w-0 rounded-md border border-cyan-200 bg-white p-5">
+          <div className="min-w-0 rounded-md border border-white/15 bg-navy-soft/40 p-5">
             <p className="text-lg font-black text-slate-950">Request path</p>
             <ul className="mt-3 grid gap-2 text-base font-semibold text-slate-700">
               <li>Choose location</li>
@@ -85,7 +85,7 @@ export default function CitiesPage() {
             <p className="section-kicker">Locations</p>
             <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">DFW city service areas</h2>
           </div>
-          <Link href="/services/24-hour-emergency-plumber" className="text-base font-black text-cyan-700 hover:text-cyan-900">
+          <Link href="/services/24-hour-emergency-plumber" className="text-base font-black text-copper hover:text-[#e0a76c]">
             Start with emergency plumber <ArrowRight className="inline h-5 w-5" aria-hidden="true" />
           </Link>
         </div>
@@ -95,10 +95,10 @@ export default function CitiesPage() {
             <Link
               key={city.slug}
               href={`/cities/${city.slug}`}
-              className="premium-card group min-w-0 bg-white p-5 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-xl"
+              className="premium-card group min-w-0 p-5 transition hover:-translate-y-0.5 hover:border-copper/50 hover:shadow-xl"
             >
               <div className="flex items-start gap-3">
-                <span className="grid h-12 w-12 flex-none place-items-center rounded-md bg-cyan-50 text-cyan-700">
+                <span className="grid h-12 w-12 flex-none place-items-center rounded-md bg-copper/15 text-copper">
                   <MapPin className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <div className="min-w-0">
@@ -112,7 +112,7 @@ export default function CitiesPage() {
                   <li key={serviceName}>{serviceName}</li>
                 ))}
               </ul>
-              <span className="mt-4 inline-flex items-center gap-2 text-base font-black text-cyan-700 group-hover:text-cyan-900">
+              <span className="mt-4 inline-flex items-center gap-2 text-base font-black text-copper group-hover:text-[#e0a76c]">
                 Open {city.name} page <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </span>
             </Link>
@@ -122,3 +122,4 @@ export default function CitiesPage() {
     </main>
   );
 }
+
