@@ -1,4 +1,4 @@
-export const phoneConfig = {
+﻿export const phoneConfig = {
   did: "+1 844-397-8298",
   display: "1 844-397-8298",
   e164: "+18443978298",
@@ -36,9 +36,6 @@ export function hasConfiguredPhone(value: string = siteConfig.phoneE164) {
 export const navigation = [
   { label: "Services", href: "/services/24-hour-emergency-plumber" },
   { label: "Cities", href: "/cities" },
-  { label: "Costs", href: "/cost-guides/emergency-plumbing-cost-dfw" },
-  { label: "Guides", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Partners", href: "/partner-with-us" },
-  { label: "Contact", href: "/contact" }
+  { label: "Guides", href: "/blog" }
 ];
+
