@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export function Breadcrumbs({ items }: { items: { label: string; href: string }[] }) {
   return (
-    <nav className="text-sm font-semibold text-slate-600" aria-label="Breadcrumb">
+    <nav className="text-sm font-semibold text-slate-400" aria-label="Breadcrumb">
       <ol className="flex flex-wrap gap-2">
-        <li><Link href="/" className="hover:text-slate-900">Home</Link></li>
+        <li><Link href="/" className="hover:text-white">Home</Link></li>
         {items.map((item) => (
           <li key={item.href} className="before:mr-2 before:content-['/']">
-            <Link href={item.href} className="hover:text-slate-900">{item.label}</Link>
+            <Link href={item.href} className="hover:text-white">{item.label}</Link>
           </li>
         ))}
       </ol>

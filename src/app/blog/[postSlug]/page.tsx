@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -7,6 +8,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
+import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
@@ -33,6 +35,8 @@ export default async function BlogPostPage({ params }: Props) {
   const { postSlug } = await params;
   const post = blogPosts.find((item) => item.slug === postSlug);
   if (!post) notFound();
+  const postIndex = blogPosts.findIndex((item) => item.slug === post.slug);
+  const heroImage = getArticleImage(post.relatedServiceSlug, postIndex);
   const relatedService = services.find((service) => service.slug === post.relatedServiceSlug);
   const relatedPosts = blogPosts
     .filter((item) => item.slug !== post.slug && item.category === post.category)
@@ -66,8 +70,18 @@ export default async function BlogPostPage({ params }: Props) {
       <Breadcrumbs items={[{ label: "Guides", href: "/blog" }, { label: post.title, href: path }]} />
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">{post.category}</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{post.title}</h1>
-        <p className="mt-4 text-lg leading-8 text-slate-700">{post.directAnswer}</p>
+        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{post.title}</h1>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={heroImage}
+            alt={post.title}
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+        <p className="mt-6 text-lg leading-8 text-slate-300">{post.directAnswer}</p>
         <div className="mt-6">
           <CallButton location={`blog-${post.slug}-top`} />
         </div>
@@ -77,8 +91,8 @@ export default async function BlogPostPage({ params }: Props) {
           <DirectAnswer>{post.directAnswer}</DirectAnswer>
           <section className="content-section">
             <p className="section-kicker">Decision guide</p>
-            <h2 className="mt-2 text-2xl font-black text-slate-950">How to decide what happens next</h2>
-            <p className="mt-3 leading-7 text-slate-700">
+            <h2 className="mt-2 text-2xl font-black text-white">How to decide what happens next</h2>
+            <p className="mt-3 leading-7 text-slate-300">
               Start by identifying whether the issue is isolated to one fixture or affects several drains. If the problem is spreading,
               includes dirty water, or risks property damage, treat it as urgent and request provider guidance.
             </p>
