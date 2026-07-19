@@ -7,12 +7,12 @@ import {
   Clock3,
   Droplets,
   MapPin,
-  PhoneCall,
   SearchCheck,
   ShieldCheck,
   Wrench
 } from "lucide-react";
 import { CallButton } from "@/components/CallButton";
+import { LeadForm } from "@/components/LeadForm";
 import { FAQBlock, InternalLinks } from "@/components/PageSections";
 import { cities } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
@@ -20,6 +20,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
+import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
@@ -36,21 +37,6 @@ const processImages: string[] = [
   "/images/process/process-step1-call-for-help.jpg",
   "/images/process/process-step2-team-dispatched.jpg",
   "/images/process/process-step3-technician-consult.jpg",
-];
-
-const callProcess = [
-  {
-    title: "Explain what is happening",
-    copy: "Describe the affected fixture or pipe, whether water is active, and any immediate safety concern."
-  },
-  {
-    title: "Share your DFW location",
-    copy: "Provide the city or ZIP so current service-area and provider availability can be discussed."
-  },
-  {
-    title: "Confirm the next step",
-    copy: "Discuss timing and then confirm pricing, credentials, diagnosis, and scope directly with the provider."
-  }
 ];
 
 const urgentCards = [
@@ -121,7 +107,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {urgentCards.map(({ title, text, icon: Icon, href }) => (
               <Link key={title} href={href} className="premium-card group p-5">
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-[#0F1F1D] text-[#F0B429]"><Icon className="h-6 w-6" aria-hidden="true" /></span>
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-[#0F1F1D] text-[#F0B429"><Icon className="h-6 w-6" aria-hidden="true" /></span>
                 <h3 className="mt-4 text-lg font-black leading-tight text-white">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-[#4FD1C5]">See safe next steps <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
@@ -207,12 +193,12 @@ export default function HomePage() {
             <h2 className="display-title mx-auto mt-3 max-w-3xl text-4xl font-bold leading-tight text-white">Three Steps From Call To Confirmed Help.</h2>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {callProcess.map((step, index) => (
-              <article key={step.title} className="overflow-hidden rounded-3xl border border-white/10 bg-[#16302C] shadow-sm">
+            {["Explain what is happening", "Share your DFW location", "Confirm the next step"].map((title, index) => (
+              <article key={title} className="overflow-hidden rounded-3xl border border-white/10 bg-[#16302C] shadow-sm">
                 <div className="relative h-40 w-full overflow-hidden">
                   <Image
                     src={processImages[index] ?? processImages[0]}
-                    alt={`${step.title} - PlumbingHands technician`}
+                    alt={`${title} - PlumbingHands technician`}
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover"
@@ -220,13 +206,14 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#F0B429] text-base font-black text-[#1A1300]">{index + 1}</span>
-                  <h3 className="mt-5 text-xl font-black text-white">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">{step.copy}</p>
+                  <h3 className="mt-5 text-xl font-black text-white">{title}</h3>
                 </div>
               </article>
             ))}
           </div>
         </section>
+
+        <LeadForm pageUrl="/" service="Emergency plumbing" city={siteConfig.marketName} />
 
         <section className="content-section soft-band">
           <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr]">
@@ -250,8 +237,22 @@ export default function HomePage() {
           <p className="section-kicker">Practical cost guidance</p>
           <h2 className="display-title mt-2 text-4xl font-bold text-white">Know What Can Change The Scope.</h2>
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {costGuides.map((guide) => (
-              <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card p-6"><PhoneCall className="h-7 w-7 text-[#4FD1C5]" aria-hidden="true" /><h3 className="mt-4 text-xl font-black text-white">{guide.title}</h3><p className="mt-3 leading-7 text-slate-300">{guide.directAnswer}</p></Link>
+            {costGuides.map((guide, index) => (
+              <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card group overflow-hidden">
+                <div className="relative h-32 w-full overflow-hidden">
+                  <Image
+                    src={getArticleImage(guide.relatedServiceSlug, index)}
+                    alt={guide.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-black text-white">{guide.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-300">{guide.directAnswer}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -260,8 +261,22 @@ export default function HomePage() {
           <p className="section-kicker">Homeowner guidance</p>
           <h2 className="display-title mt-2 text-4xl font-bold text-white">Answers For The Moment Something Changes.</h2>
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {problems.slice(0, 6).map((problem) => (
-              <Link key={problem.slug} href={`/problems/${problem.slug}`} className="premium-card p-6"><AlertTriangle className="h-7 w-7 text-[#F0B429]" aria-hidden="true" /><h3 className="mt-4 text-xl font-black text-white">{problem.title}</h3><p className="mt-3 leading-7 text-slate-300">{problem.directAnswer}</p></Link>
+            {problems.slice(0, 6).map((problem, index) => (
+              <Link key={problem.slug} href={`/problems/${problem.slug}`} className="premium-card group overflow-hidden">
+                <div className="relative h-32 w-full overflow-hidden">
+                  <Image
+                    src={getArticleImage(problem.relatedServiceSlug, index)}
+                    alt={problem.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-black text-white">{problem.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-300">{problem.directAnswer}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
