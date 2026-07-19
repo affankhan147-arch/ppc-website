@@ -14,6 +14,7 @@ export function Footer() {
           <p className="mt-2 font-serif text-xl text-[#4FD1C5]">Emergency plumbing service for stressful moments.</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">{siteConfig.disclosure}</p>
           
+            <a
             href={phoneConfig.href}
             data-phone-location="footer"
             className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#F0B429] px-5 py-3 text-sm font-black text-[#1A1300] shadow-lg transition hover:bg-[#d99f1f]"

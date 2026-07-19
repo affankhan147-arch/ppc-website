@@ -65,6 +65,7 @@ export function LeadForm({
 
       <div className="mt-6 flex flex-col items-start gap-3">
         
+          <a
           href={siteConfig.phoneHref}
           data-phone-location="how-call-works"
           className="inline-flex min-h-12 whitespace-nowrap items-center justify-center rounded-xl bg-[#F0B429] px-6 py-3 text-base font-black text-[#1A1300] shadow-lg transition hover:-translate-y-0.5 hover:bg-[#d99f1f]"

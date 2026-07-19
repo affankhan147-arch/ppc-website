@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { PhoneCall } from "lucide-react";
 import { hasConfiguredPhone, phoneConfig } from "@/data/site";
