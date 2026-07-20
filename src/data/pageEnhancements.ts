@@ -1,4 +1,4 @@
-﻿import type { FAQ } from "@/data/faqs";
+import type { FAQ } from "@/data/faqs";
 
 export type EnhancementLink = {
   label: string;
@@ -504,6 +504,170 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
+  },
+"fort-worth/24-hour-emergency-plumber": {
+    decisionTitle: "Fort Worth emergency plumbing decision guide",
+    decisionIntro: "Fort Worth mixes historic pier-and-beam homes in areas like Fairmount and Ryan Place with newer slab construction farther north and west toward Alliance, so crawlspace access is a real factor for some dispatches.",
+    decisionItems: [
+      "Mention if the home has a crawlspace or pier-and-beam foundation, since this can change how a provider accesses the affected supply line.",
+      "Share whether the property is in an older central Fort Worth neighborhood or a newer far-north/west subdivision, since pipe material and age often differ.",
+      "Describe the fixture affected and whether the shutoff is reachable in a crawlspace or a standard interior location.",
+      "Ask whether the provider has crawlspace access equipment if the home is pier-and-beam."
+    ],
+    providerTitle: "What a Fort Worth provider may check",
+    providerItems: [
+      "Crawlspace access and condition if the home is pier-and-beam construction.",
+      "Galvanized supply line condition in older central Fort Worth homes.",
+      "Water pressure and PEX manifold condition in newer far-north construction.",
+      "Whether the issue is isolated to one fixture or affects a shared supply line."
+    ],
+    safetyTitle: "When to treat it as urgent in Fort Worth",
+    safetyItems: [
+      "Water pooling in a crawlspace, which can be harder to notice than a slab leak.",
+      "Water near electrical panels or outlets in older homes with dated wiring.",
+      "A shutoff valve that will not close in a hard-to-reach crawlspace location.",
+      "Any leak spreading toward wood-framed flooring common in pier-and-beam construction."
+    ],
+    preventionTitle: "Fort Worth-specific prevention notes",
+    preventionItems: [
+      "Pier-and-beam homes benefit from periodic crawlspace inspection since leaks there are less visible than slab leaks.",
+      "Galvanized supply lines in homes built before the 1960s are past typical service life and worth discussing proactively.",
+      "Note whether your home is pier-and-beam or slab when requesting service so the right equipment is dispatched."
+    ],
+    extraFaqs: [
+      {
+        question: "Does a pier-and-beam foundation change emergency plumbing service in Fort Worth?",
+        answer: "It can. Crawlspace access, older galvanized piping, and less visible leak paths are more common in pier-and-beam homes than in slab construction, so mention your foundation type when requesting help."
+      }
+    ],
+    extraLinks: [
+      { label: "Fort Worth service area", href: "/cities/fort-worth" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "fort-worth/emergency-drain-cleaning": {
+    decisionTitle: "Fort Worth drain backup decision guide",
+    decisionIntro: "Older Fort Worth neighborhoods near the historic core often still have original cast-iron or clay sewer laterals, which are more prone to root intrusion than the PVC lines common in newer far-north subdivisions.",
+    decisionItems: [
+      "Mention if your home is in an older central Fort Worth neighborhood, since cast-iron and clay laterals are more root-intrusion-prone.",
+      "Share whether the backup is a single fixture or multiple fixtures reacting together.",
+      "Note any mature trees near the sewer line path, since root intrusion is a common cause in established neighborhoods.",
+      "Ask whether a camera inspection is appropriate given the home's age and pipe material."
+    ],
+    providerTitle: "What a Fort Worth drain provider may check",
+    providerItems: [
+      "Pipe material (cast iron, clay, or PVC) based on the home's construction era.",
+      "Root intrusion likelihood given mature tree coverage in older neighborhoods.",
+      "Cleanout access and location, which can vary between historic and newer construction.",
+      "Whether the backup pattern suggests a fixture clog or a lateral-line restriction."
+    ],
+    safetyTitle: "When Fort Worth drain issues are urgent",
+    safetyItems: [
+      "Multiple fixtures backing up together, common when older laterals restrict flow.",
+      "Wastewater reaching a crawlspace in pier-and-beam homes, which can go unnoticed longer.",
+      "Sewage odor combined with slow drains in older cast-iron piped homes.",
+      "Any outdoor cleanout overflow near mature trees, a common root-intrusion signal."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Fort Worth",
+    preventionItems: [
+      "Homes with cast-iron or clay laterals benefit from periodic camera inspection to catch root intrusion early.",
+      "Avoid planting new trees directly over known sewer line paths in older neighborhoods.",
+      "Ask the provider to note pipe material found during service for future reference."
+    ],
+    extraFaqs: [
+      {
+        question: "Why do older Fort Worth neighborhoods see more drain root intrusion?",
+        answer: "Many homes near the historic core still have original cast-iron or clay sewer laterals, which are more susceptible to root intrusion over time than modern PVC piping used in newer construction."
+      }
+    ],
+    extraLinks: [
+      { label: "Fort Worth service area", href: "/cities/fort-worth" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "arlington/24-hour-emergency-plumber": {
+    decisionTitle: "Arlington emergency plumbing decision guide",
+    decisionIntro: "Most Arlington homes date to the 1970s-90s slab-construction boom, meaning original copper supply lines are now 40-50 years old, a common age range for pinhole leaks to start appearing.",
+    decisionItems: [
+      "Mention your home's approximate build decade, since aging original copper is a common source of Arlington emergency calls.",
+      "Note if you're near UTA or the entertainment district, where higher-density multi-family plumbing can complicate shutoff access.",
+      "Describe whether the leak is a pinhole spray or a larger failure, since these are handled differently.",
+      "Ask whether the provider commonly sees aging-copper pinhole leaks in Arlington's housing stock."
+    ],
+    providerTitle: "What an Arlington provider may check",
+    providerItems: [
+      "Copper supply line age and condition, especially in 1970s-90s construction.",
+      "Whether pinhole leaks are isolated or a sign of broader line degradation.",
+      "Shutoff valve accessibility in higher-density areas near UTA and the entertainment district.",
+      "Water pressure, which can accelerate aging-copper failure."
+    ],
+    safetyTitle: "When to treat it as urgent in Arlington",
+    safetyItems: [
+      "A pinhole leak that is spraying or spreading rather than dripping slowly.",
+      "Multiple small leaks appearing close together, suggesting broader copper line aging.",
+      "Water near electrical areas in homes with original 1970s-90s wiring.",
+      "Any leak in a shared-wall or multi-family property near the UTA corridor."
+    ],
+    preventionTitle: "Arlington-specific prevention notes",
+    preventionItems: [
+      "Homes with original copper supply lines from the 1970s-90s are in the typical age range for pinhole leaks and worth monitoring proactively.",
+      "High water pressure can accelerate copper aging; ask a provider whether a pressure check is worthwhile.",
+      "Track any small leaks over time since isolated pinholes can indicate wider line degradation."
+    ],
+    extraFaqs: [
+      {
+        question: "Why do Arlington homes see more copper pinhole leaks?",
+        answer: "Much of Arlington was built during the 1970s-90s slab-construction boom, so original copper supply lines are now 40-50 years old, a typical age range for pinhole leaks to begin appearing."
+      }
+    ],
+    extraLinks: [
+      { label: "Arlington service area", href: "/cities/arlington" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "arlington/emergency-drain-cleaning": {
+    decisionTitle: "Arlington drain backup decision guide",
+    decisionIntro: "Arlington's dense 1970s-90s subdivisions often share municipal lines installed in the same construction window, so cluster-area drain and main-line issues aren't uncommon.",
+    decisionItems: [
+      "Mention if neighbors have reported similar drain issues recently, since shared-era municipal lines can fail in clusters.",
+      "Note whether the backup affects one fixture or several, especially in entertainment-district commercial properties.",
+      "Describe if the property is residential or a UTA-area rental, since shared building drains complicate diagnosis.",
+      "Ask whether recent neighborhood-wide line work might be relevant to a recurring backup."
+    ],
+    providerTitle: "What an Arlington drain provider may check",
+    providerItems: [
+      "Whether the backup pattern matches other reports in the same subdivision.",
+      "Shared or branch line configuration common in 1970s-90s developments.",
+      "Commercial line capacity for entertainment-district restaurants and venues.",
+      "Rental or multi-tenant property considerations near UTA."
+    ],
+    safetyTitle: "When Arlington drain issues are urgent",
+    safetyItems: [
+      "Multiple fixtures backing up together in dense subdivision housing.",
+      "Business restroom or kitchen backups during entertainment-district event hours.",
+      "Wastewater reaching shared areas in multi-tenant UTA-area properties.",
+      "Any cleanout overflow suggesting a shared-line rather than single-property issue."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Arlington",
+    preventionItems: [
+      "Ask neighbors if similar issues have occurred, since shared-era lines can fail around the same time.",
+      "UTA-area rental properties benefit from documented drain history for landlord coordination.",
+      "Entertainment-district businesses should schedule preventive drain maintenance around high-traffic event periods."
+    ],
+    extraFaqs: [
+      {
+        question: "Why might several Arlington homes have drain problems around the same time?",
+        answer: "Much of Arlington was developed in dense phases during the 1970s-90s, so homes in the same subdivision often share municipal lines installed in the same window, meaning cluster-area issues can occur."
+      }
+    ],
+    extraLinks: [
+      { label: "Arlington service area", href: "/cities/arlington" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
   }
 };
 
@@ -963,7 +1127,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     ],
     extraFaqs: [
       {
-        question: "How quickly can an emergency plumber arrive in Dallasâ€“Fort Worth?",
+        question: "How quickly can an emergency plumber arrive in Dallas–Fort Worth?",
         answer:
           "There is no reliable one-time answer for every address. Availability depends on the city, time, current calls, travel distance, access, and problem type. Confirm the arrival window directly with the provider before relying on it."
       },
@@ -1035,7 +1199,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Mention recurring clogs, recent drain work, known roots, property access, and whether the cleanout can be located. These details help a provider plan the first inspection without assuming the cause.",
       "For apartments, restaurants, or shared buildings, report the backup promptly and note whether other units or common drains are affected. A shared-line problem needs different coordination than one bathroom clog."
     ],
-    proofTitle: "What the first sewer visit mayâ€”and may notâ€”resolve",
+    proofTitle: "What the first sewer visit may—and may not—resolve",
     proofItems: [
       "Ask whether the visit is for emergency containment, line clearing, camera inspection, cause diagnosis, cleanup coordination, or repair planning. These may be separate scopes.",
       "Clearing a blockage can restore flow without proving why it formed. When the problem returns, ask what evidence supports roots, grease, damaged pipe, poor slope, or another suspected cause.",
@@ -1046,7 +1210,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       {
         question: "What is the clearest sign of a main sewer line clog in a Dallas home?",
         answer:
-          "The strongest clue is more than one fixture reacting togetherâ€”for example, a toilet flush causing water to rise in a tub, shower, floor drain, or outdoor cleanout. Stop water use when that pattern appears."
+          "The strongest clue is more than one fixture reacting together—for example, a toilet flush causing water to rise in a tub, shower, floor drain, or outdoor cleanout. Stop water use when that pattern appears."
       },
       {
         question: "Does clearing a main sewer clog fix the underlying problem?",
