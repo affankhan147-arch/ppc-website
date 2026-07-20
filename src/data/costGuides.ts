@@ -67,8 +67,9 @@ export const costGuides: CostGuide[] = [
     rangeGuidance: "A visible supply-line leak, a failed shutoff valve, a ceiling leak, and a hidden wall or slab leak can involve different diagnosis and access work. Restoration, drying, drywall, and flooring are usually separate from plumbing repair.",
     factors: ["active water status", "shutoff valve condition", "leak location", "wall or ceiling access", "pipe material", "after-hours timing"],
     questionsToAsk: ["Can the water be isolated safely?", "Is leak access included or separate?", "Is this a temporary stop or a permanent repair?", "What restoration work is outside the plumbing scope?"],
-    relatedServiceSlug: "24-hour-emergency-plumber",
+    relatedServiceSlug: "burst-pipe-emergency",
     relatedProblemSlugs: ["water-shutoff-valve-will-not-close", "ceiling-leak-from-plumbing", "burst-pipe-first-steps"]
   }
 ];
+
 

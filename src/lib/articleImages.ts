@@ -1,4 +1,4 @@
-export const serviceHeroImages: Record<string, string> = {
+﻿export const serviceHeroImages: Record<string, string> = {
   "24-hour-emergency-plumber": "/images/services/service-24hr-emergency-plumber.jpg",
   "emergency-drain-cleaning": "/images/services/service-emergency-drain-cleaning.jpg",
   "main-sewer-line-clog": "/images/services/service-main-sewer-line-clog.jpg",
@@ -24,5 +24,10 @@ export function getArticleImage(serviceSlug: string | undefined, seedIndex: numb
     return serviceHeroImages[serviceSlug];
   }
   const safeIndex = ((seedIndex % fallbackPhotos.length) + fallbackPhotos.length) % fallbackPhotos.length;
+  return fallbackPhotos[safeIndex];
+}
+
+export function getGridImage(index: number) {
+  const safeIndex = ((index % fallbackPhotos.length) + fallbackPhotos.length) % fallbackPhotos.length;
   return fallbackPhotos[safeIndex];
 }

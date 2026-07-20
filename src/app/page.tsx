@@ -20,7 +20,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
-import { getArticleImage } from "@/lib/articleImages";
+import { getArticleImage, getGridImage } from "@/lib/articleImages";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
@@ -241,7 +241,7 @@ export default function HomePage() {
               <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card group overflow-hidden">
                 <div className="relative h-32 w-full overflow-hidden">
                   <Image
-                    src={getArticleImage(guide.relatedServiceSlug, index)}
+                    src={getGridImage(index)}
                     alt={guide.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -265,7 +265,7 @@ export default function HomePage() {
               <Link key={problem.slug} href={`/problems/${problem.slug}`} className="premium-card group overflow-hidden">
                 <div className="relative h-32 w-full overflow-hidden">
                   <Image
-                    src={getArticleImage(problem.relatedServiceSlug, index)}
+                    src={getGridImage(index)}
                     alt={problem.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -294,4 +294,5 @@ export default function HomePage() {
     </main>
   );
 }
+
 
