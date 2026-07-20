@@ -668,6 +668,386 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
+  },
+"plano/24-hour-emergency-plumber": {
+    decisionTitle: "Plano emergency plumbing decision guide",
+    decisionIntro: "West Plano's 1990s-2000s growth brought tankless water heaters and PEX manifold systems, while East and Central Plano's older 1970s-80s homes still commonly run traditional copper and galvanized lines.",
+    decisionItems: [
+      "Mention whether your home is in West Plano's newer construction or East/Central Plano's older neighborhoods, since plumbing systems differ significantly.",
+      "Describe your water heater type (tankless vs. tank) if that's related to the emergency.",
+      "Note whether a PEX manifold or traditional copper system is affected, if known.",
+      "Ask whether the provider has experience with both older copper systems and newer tankless/PEX setups."
+    ],
+    providerTitle: "What a Plano provider may check",
+    providerItems: [
+      "Tankless water heater or PEX manifold condition in newer West Plano homes.",
+      "Traditional copper or galvanized line condition in older East/Central Plano homes.",
+      "Whether the home's plumbing system matches its construction era.",
+      "Water pressure, which affects both older and newer systems differently."
+    ],
+    safetyTitle: "When to treat it as urgent in Plano",
+    safetyItems: [
+      "Tankless water heater malfunction affecting hot water across a newer West Plano home.",
+      "Aging copper failure in an older East/Central Plano property.",
+      "Any water near electrical panels regardless of home age.",
+      "PEX manifold failure affecting multiple fixtures simultaneously."
+    ],
+    preventionTitle: "Plano-specific prevention notes",
+    preventionItems: [
+      "West Plano homeowners with tankless systems benefit from periodic professional maintenance checks.",
+      "East/Central Plano homeowners with original copper lines should monitor for early pinhole signs.",
+      "Know which plumbing generation your home has when requesting service for faster diagnosis."
+    ],
+    extraFaqs: [
+      { question: "Does Plano's plumbing differ between older and newer neighborhoods?", answer: "Yes. West Plano's 1990s-2000s growth commonly includes tankless water heaters and PEX manifold systems, while East and Central Plano's older 1970s-80s homes more often have traditional copper and galvanized lines." }
+    ],
+    extraLinks: [
+      { label: "Plano service area", href: "/cities/plano" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" }
+    ]
+  },
+  "plano/emergency-drain-cleaning": {
+    decisionTitle: "Plano drain backup decision guide",
+    decisionIntro: "Plano's mature tree canopy, especially in older East and Central sections near Downtown Plano, is a common cause of sewer lateral root intrusion not typically seen in newer West Plano construction.",
+    decisionItems: [
+      "Mention if your property is in an older, tree-lined section of Plano, since root intrusion is a more likely cause there.",
+      "Note whether the backup is recurring, which can point to established root growth in the sewer line.",
+      "Describe whether nearby trees are close to the suspected sewer line path.",
+      "Ask whether a camera inspection is warranted given the neighborhood's tree maturity."
+    ],
+    providerTitle: "What a Plano drain provider may check",
+    providerItems: [
+      "Root intrusion likelihood based on tree proximity to the sewer lateral.",
+      "Pipe material and age, which varies between older and newer Plano sections.",
+      "Cleanout location and accessibility.",
+      "Whether recurring backups suggest an established root-intrusion pattern."
+    ],
+    safetyTitle: "When Plano drain issues are urgent",
+    safetyItems: [
+      "Recurring backups in older, tree-lined neighborhoods suggesting active root intrusion.",
+      "Multiple fixtures affected at once in either older or newer sections.",
+      "Any sewage odor near mature landscaping close to the home.",
+      "Outdoor cleanout overflow near known tree root systems."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Plano",
+    preventionItems: [
+      "Older, tree-lined Plano properties benefit from periodic root-intrusion inspection.",
+      "Avoid planting new trees directly over sewer line paths in established neighborhoods.",
+      "Track recurring backup patterns to help a provider assess root growth over time."
+    ],
+    extraFaqs: [
+      { question: "Why do older Plano neighborhoods see more root intrusion than newer ones?", answer: "Mature tree canopy in East and Central Plano, especially near Downtown Plano, creates more root-intrusion risk for older sewer laterals than the younger trees and newer piping typical of West Plano." }
+    ],
+    extraLinks: [
+      { label: "Plano service area", href: "/cities/plano" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "irving/24-hour-emergency-plumber": {
+    decisionTitle: "Irving emergency plumbing decision guide",
+    decisionIntro: "Irving spans older neighborhoods near the original Las Colinas development with aging copper supply lines, alongside newer high-density multi-family and townhome construction closer to DFW Airport with more complex shared-line coordination.",
+    decisionItems: [
+      "Mention if your property is in an older Las Colinas-area home or a newer multi-family/townhome property.",
+      "For multi-family or townhome properties, note whether other units may be affected, since shared lines add coordination complexity.",
+      "Describe the fixture and whether the shutoff is accessible without HOA or property management involvement.",
+      "Ask whether the provider has experience with shared-line multi-family emergencies near the DFW Airport corridor."
+    ],
+    providerTitle: "What an Irving provider may check",
+    providerItems: [
+      "Aging copper condition in older Las Colinas-area homes.",
+      "Shared-line configuration in newer multi-family and townhome construction.",
+      "Whether HOA or property management coordination is needed before work begins.",
+      "Access considerations unique to airport-corridor high-density development."
+    ],
+    safetyTitle: "When to treat it as urgent in Irving",
+    safetyItems: [
+      "Aging copper leaks in original Las Colinas-area homes.",
+      "Shared-line failures affecting multiple units in newer townhome or multi-family properties.",
+      "Any water reaching common areas in multi-tenant buildings.",
+      "Situations requiring immediate HOA or property manager notification."
+    ],
+    preventionTitle: "Irving-specific prevention notes",
+    preventionItems: [
+      "Original Las Colinas-area homes with aging copper benefit from proactive monitoring.",
+      "Multi-family and townhome owners should know their HOA's emergency plumbing coordination process in advance.",
+      "Keep property management contact details ready for shared-line emergencies."
+    ],
+    extraFaqs: [
+      { question: "Does Irving's plumbing situation differ between older and newer properties?", answer: "Yes. Older homes near the original Las Colinas development often have aging copper supply lines, while newer multi-family and townhome construction closer to DFW Airport involves more shared-line and HOA-coordination complexity." }
+    ],
+    extraLinks: [
+      { label: "Irving service area", href: "/cities/irving" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "irving/emergency-drain-cleaning": {
+    decisionTitle: "Irving drain backup decision guide",
+    decisionIntro: "Newer multi-family and townhome construction near DFW Airport often means shared drain lines, so a backup in one unit can point to a building-wide issue rather than an isolated clog.",
+    decisionItems: [
+      "For multi-family or townhome properties, ask neighbors or property management if others are experiencing similar backups.",
+      "Describe whether the property is an older Las Colinas-area single-family home or newer shared-line construction.",
+      "Note whether the backup involves a shared branch line serving multiple units.",
+      "Ask whether property management needs to be looped in before service begins."
+    ],
+    providerTitle: "What an Irving drain provider may check",
+    providerItems: [
+      "Whether the backup is isolated to one unit or affects a shared branch line.",
+      "Pipe material and condition in older Las Colinas-area homes.",
+      "Access and coordination requirements for multi-family or townhome properties.",
+      "Cleanout location, which can be shared in denser newer developments."
+    ],
+    safetyTitle: "When Irving drain issues are urgent",
+    safetyItems: [
+      "Multiple units affected simultaneously in shared-line construction.",
+      "Backup reaching common areas of multi-family or townhome properties.",
+      "Any sewage odor in older Las Colinas-area homes with aging laterals.",
+      "Situations requiring urgent property management notification."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Irving",
+    preventionItems: [
+      "Multi-family residents should report recurring backups to property management promptly for pattern tracking.",
+      "Older Las Colinas-area homeowners should monitor for early root-intrusion signs.",
+      "Keep a record of shared-line issues to help identify building-wide patterns."
+    ],
+    extraFaqs: [
+      { question: "Why might a drain backup in Irving affect more than one unit?", answer: "Newer multi-family and townhome construction near DFW Airport commonly uses shared branch lines, so a backup can originate from a shared line rather than being isolated to a single unit." }
+    ],
+    extraLinks: [
+      { label: "Irving service area", href: "/cities/irving" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "garland/24-hour-emergency-plumber": {
+    decisionTitle: "Garland emergency plumbing decision guide",
+    decisionIntro: "Garland's housing stock is predominantly 1960s-80s construction in northeast Dallas County, putting original copper and galvanized supply lines in a similar aging range to neighboring Mesquite and Richardson.",
+    decisionItems: [
+      "Mention your home's approximate build decade, since Garland's older housing stock commonly has aging original supply lines.",
+      "Describe whether the leak is from a supply line, fixture, or water heater connection.",
+      "Note if the property is near Lake Ray Hubbard, where some newer construction differs from central Garland's older homes.",
+      "Ask whether the provider is familiar with Garland's mix of established and newer construction."
+    ],
+    providerTitle: "What a Garland provider may check",
+    providerItems: [
+      "Copper or galvanized supply line age in 1960s-80s construction.",
+      "Whether the property is in an older central area or newer Lake Ray Hubbard-adjacent development.",
+      "Water heater age and condition, a common factor in this housing stock's emergency calls.",
+      "Shutoff valve accessibility and condition given typical home age."
+    ],
+    safetyTitle: "When to treat it as urgent in Garland",
+    safetyItems: [
+      "Aging supply line leaks in original 1960s-80s construction.",
+      "Water heater failures in homes with original 1980s-era units still in service.",
+      "Any water near older electrical systems common in this housing stock's age.",
+      "Leaks that spread quickly in slab-foundation homes typical of the era."
+    ],
+    preventionTitle: "Garland-specific prevention notes",
+    preventionItems: [
+      "Homes with original 1960s-80s supply lines are in a common age range for aging-related leaks.",
+      "Water heaters from this construction era should be checked for age and condition proactively.",
+      "Know your home's approximate build decade when requesting emergency service."
+    ],
+    extraFaqs: [
+      { question: "Why does Garland see aging-pipe emergency calls similar to neighboring cities?", answer: "Garland's housing stock is predominantly 1960s-80s construction, putting original copper and galvanized supply lines in a similar aging range to nearby Mesquite and Richardson." }
+    ],
+    extraLinks: [
+      { label: "Garland service area", href: "/cities/garland" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "garland/emergency-drain-cleaning": {
+    decisionTitle: "Garland drain backup decision guide",
+    decisionIntro: "Garland's established 1960s-80s neighborhoods often have mature trees near original clay or cast-iron sewer laterals, a common root-intrusion combination in this part of northeast Dallas County.",
+    decisionItems: [
+      "Mention whether your home is in an older, tree-lined section of Garland, since root intrusion is a likely cause there.",
+      "Note if the backup is recurring, which points toward established root growth rather than a one-time clog.",
+      "Describe which fixtures are affected and whether an outdoor cleanout is accessible.",
+      "Ask whether a camera inspection is worthwhile given the neighborhood's age and tree coverage."
+    ],
+    providerTitle: "What a Garland drain provider may check",
+    providerItems: [
+      "Clay or cast-iron lateral condition common in 1960s-80s construction.",
+      "Root intrusion likelihood based on mature tree proximity.",
+      "Cleanout access and location for older Garland properties.",
+      "Whether the backup pattern suggests fixture-level or main-line restriction."
+    ],
+    safetyTitle: "When Garland drain issues are urgent",
+    safetyItems: [
+      "Recurring backups in older, tree-lined neighborhoods suggesting active root intrusion.",
+      "Multiple fixtures reacting together, common with main-line restrictions in aging laterals.",
+      "Sewage odor combined with slow drains in original clay-pipe homes.",
+      "Any outdoor cleanout overflow near mature landscaping."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Garland",
+    preventionItems: [
+      "Older Garland properties with clay or cast-iron laterals benefit from periodic root-intrusion inspection.",
+      "Avoid new tree plantings directly over known sewer line paths.",
+      "Track recurring backup timing to help identify root-growth patterns."
+    ],
+    extraFaqs: [
+      { question: "Why do older Garland neighborhoods see recurring drain root intrusion?", answer: "Established 1960s-80s neighborhoods often pair mature trees with original clay or cast-iron sewer laterals, a common combination for root intrusion in this part of Dallas County." }
+    ],
+    extraLinks: [
+      { label: "Garland service area", href: "/cities/garland" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "frisco/24-hour-emergency-plumber": {
+    decisionTitle: "Frisco emergency plumbing decision guide",
+    decisionIntro: "Frisco's housing stock is overwhelmingly 2000s-2020s construction, meaning most homes have modern PEX plumbing rather than aging copper, but rapid growth also means new-construction settling issues in the first few years.",
+    decisionItems: [
+      "Mention your home's approximate build year, since Frisco's newer construction has different common failure points than older DFW cities.",
+      "Describe whether the issue may be related to new-construction settling, common in homes under 5 years old.",
+      "Note if the property is in a dense HOA-governed subdivision, since access and shutoff coordination can differ.",
+      "Ask whether the provider is familiar with newer PEX systems common in Frisco construction."
+    ],
+    providerTitle: "What a Frisco provider may check",
+    providerItems: [
+      "PEX manifold and fitting condition in newer construction.",
+      "New-construction settling effects on supply lines in homes under 5 years old.",
+      "HOA-related access considerations in dense subdivisions.",
+      "Tankless or high-efficiency water heater systems common in newer builds."
+    ],
+    safetyTitle: "When to treat it as urgent in Frisco",
+    safetyItems: [
+      "PEX fitting failures affecting multiple fixtures in newer homes.",
+      "New-construction settling issues causing unexpected leaks in homes under warranty.",
+      "Water near modern electrical or smart-home systems common in newer construction.",
+      "Any leak in a dense HOA subdivision affecting neighboring properties."
+    ],
+    preventionTitle: "Frisco-specific prevention notes",
+    preventionItems: [
+      "Newer homes under builder warranty should have plumbing issues documented for potential warranty claims.",
+      "New-construction settling in the first few years can stress fittings; monitor for early signs.",
+      "Know your HOA's process for plumbing emergencies affecting shared areas."
+    ],
+    extraFaqs: [
+      { question: "Does Frisco's newer construction change what plumbing emergencies look like?", answer: "Yes. Most Frisco homes are 2000s-2020s construction with modern PEX plumbing, so common issues relate more to new-construction settling and PEX fittings than the aging copper seen in older DFW cities." }
+    ],
+    extraLinks: [
+      { label: "Frisco service area", href: "/cities/frisco" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "frisco/emergency-drain-cleaning": {
+    decisionTitle: "Frisco drain backup decision guide",
+    decisionIntro: "Frisco's newer PVC sewer lines are less prone to root intrusion than older DFW cities, so recurring drain backups in Frisco more often point to construction debris, grease, or fixture-level clogs than root intrusion.",
+    decisionItems: [
+      "Mention if the home is newer construction, since PVC lines make root intrusion less likely than in older cities.",
+      "Describe whether the backup started shortly after move-in, which can point to construction debris in new lines.",
+      "Note whether the property is part of a dense HOA subdivision with shared drain infrastructure.",
+      "Ask whether the provider checks for construction-related debris in newer-home diagnostics."
+    ],
+    providerTitle: "What a Frisco drain provider may check",
+    providerItems: [
+      "Construction debris likelihood in homes backed up shortly after completion.",
+      "PVC line condition, which is generally more resistant to root intrusion than older pipe materials.",
+      "Grease or fixture-level clog patterns common in newer kitchens.",
+      "Shared subdivision drain infrastructure in dense HOA developments."
+    ],
+    safetyTitle: "When Frisco drain issues are urgent",
+    safetyItems: [
+      "Backup shortly after moving into new construction, suggesting debris left during building.",
+      "Multiple fixtures affected in a shared-infrastructure HOA subdivision.",
+      "Kitchen grease-related backups affecting newer high-use kitchens.",
+      "Any backup that recurs despite newer PVC piping, worth investigating further."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Frisco",
+    preventionItems: [
+      "New homeowners should have drains checked for construction debris shortly after move-in if issues appear.",
+      "Manage grease disposal carefully in newer kitchens to avoid buildup in modern lines.",
+      "Report recurring issues to your builder if within the warranty period."
+    ],
+    extraFaqs: [
+      { question: "Why would a newer Frisco home have a drain backup if root intrusion is less common?", answer: "In new construction, backups more often result from leftover construction debris, grease buildup, or fixture-level clogs rather than root intrusion, since Frisco's newer PVC lines are more resistant to roots than older pipe materials." }
+    ],
+    extraLinks: [
+      { label: "Frisco service area", href: "/cities/frisco" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "mckinney/24-hour-emergency-plumber": {
+    decisionTitle: "McKinney emergency plumbing decision guide",
+    decisionIntro: "McKinney combines a historic downtown core with older homes and rapid 2000s-2020s suburban growth similar to Frisco, so pipe age and material vary significantly by neighborhood.",
+    decisionItems: [
+      "Mention whether your home is in historic downtown McKinney or a newer suburban subdivision, since plumbing age differs significantly.",
+      "For older downtown homes, note if original supply lines are still in service.",
+      "For newer subdivisions, describe whether the issue may relate to PEX fittings or new-construction settling.",
+      "Ask the provider whether their experience covers both McKinney's historic core and its newer growth areas."
+    ],
+    providerTitle: "What a McKinney provider may check",
+    providerItems: [
+      "Original supply line age and material in historic downtown homes.",
+      "PEX and modern fitting condition in newer suburban construction.",
+      "Whether the property's age matches typical issues for that construction era.",
+      "Access considerations that differ between historic and newer neighborhoods."
+    ],
+    safetyTitle: "When to treat it as urgent in McKinney",
+    safetyItems: [
+      "Aging supply line failures in historic downtown McKinney homes.",
+      "PEX fitting or new-construction issues in newer suburban subdivisions.",
+      "Any water near older electrical systems in historic-area homes.",
+      "Leaks affecting multiple fixtures regardless of neighborhood age."
+    ],
+    preventionTitle: "McKinney-specific prevention notes",
+    preventionItems: [
+      "Historic downtown McKinney homeowners should be aware of original supply line age.",
+      "Newer subdivision homeowners under warranty should document issues for builder follow-up.",
+      "Know whether your home is in the historic core or newer growth area when requesting service."
+    ],
+    extraFaqs: [
+      { question: "Does McKinney's mix of old and new construction affect emergency plumbing service?", answer: "Yes. McKinney combines a historic downtown core with older homes and rapid modern suburban growth, so pipe age and material can vary significantly depending on which part of the city your property is in." }
+    ],
+    extraLinks: [
+      { label: "McKinney service area", href: "/cities/mckinney" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "mckinney/emergency-drain-cleaning": {
+    decisionTitle: "McKinney drain backup decision guide",
+    decisionIntro: "Historic downtown McKinney's older sewer laterals face more root-intrusion risk from mature trees than the newer PVC lines common in McKinney's rapidly developed outer subdivisions.",
+    decisionItems: [
+      "Mention whether your property is in historic downtown McKinney or a newer outer subdivision.",
+      "For downtown properties, note any mature trees near the suspected sewer line path.",
+      "For newer subdivisions, describe whether the backup started shortly after construction, suggesting debris rather than root intrusion.",
+      "Ask whether a camera inspection is warranted given your neighborhood's age."
+    ],
+    providerTitle: "What a McKinney drain provider may check",
+    providerItems: [
+      "Root intrusion likelihood in older downtown laterals near mature trees.",
+      "Construction debris likelihood in newer subdivision homes.",
+      "Pipe material differences between historic core and newer growth areas.",
+      "Cleanout access, which varies between older and newer neighborhood layouts."
+    ],
+    safetyTitle: "When McKinney drain issues are urgent",
+    safetyItems: [
+      "Recurring backups in historic downtown homes suggesting root intrusion.",
+      "Backup shortly after move-in in newer subdivisions, suggesting construction debris.",
+      "Multiple fixtures affected together regardless of neighborhood.",
+      "Sewage odor combined with slow drains in older downtown properties."
+    ],
+    preventionTitle: "Reducing repeat drain issues in McKinney",
+    preventionItems: [
+      "Historic downtown homeowners should consider periodic root-intrusion inspection.",
+      "Newer subdivision homeowners should report early backups to their builder if within warranty.",
+      "Know your neighborhood's construction era to help a provider anticipate the likely cause."
+    ],
+    extraFaqs: [
+      { question: "Why would drain issues differ between downtown McKinney and newer McKinney subdivisions?", answer: "Historic downtown McKinney has older sewer laterals more prone to root intrusion from mature trees, while newer outer subdivisions typically have PVC lines where debris or fixture-level clogs are more common causes." }
+    ],
+    extraLinks: [
+      { label: "McKinney service area", href: "/cities/mckinney" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
   }
 };
 
