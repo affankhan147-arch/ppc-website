@@ -1,4 +1,4 @@
-﻿export type BlogPost = {
+export type BlogPost = {
   slug: string;
   title: string;
   directAnswer: string;
@@ -204,3 +204,13 @@ export const blogPosts: BlogPost[] = titles.map((title, index) => ({
   category: index % 3 === 0 ? "Cost and decision guides" : index % 3 === 1 ? "Emergency steps" : "Drain and sewer guidance",
   relatedServiceSlug: relatedServiceOverrides[title] || serviceCycle[index % serviceCycle.length]
 }));
+
+export const propertyManagerTriageSheetPost: BlogPost = {
+  slug: "property-manager-plumbing-emergency-triage-sheet",
+  title: "Property Manager Plumbing Emergency Triage Sheet: A DFW Decision Checklist",
+  directAnswer: "This triage sheet helps DFW property managers and maintenance coordinators sort tenant-reported plumbing issues into emergency, urgent, and routine categories, gather the right information before dispatching a provider, and document the incident for lease and unit-history records.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(propertyManagerTriageSheetPost);
