@@ -1755,6 +1755,47 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Partner with us", href: "/partner-with-us" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" }
     ]
+  },
+  "how-to-verify-a-texas-plumbers-license": {
+    checklistTitle: "How to check a plumber's license status in Texas",
+    checklistIntro: "Texas plumbers are licensed through the Texas State Board of Plumbing Examiners (TSBPE), which maintains a free public search covering every license type. Here is the actual process.",
+    checklistItems: [
+      "Go to the TSBPE's Public License Search (accessible from tsbpe.texas.gov under 'Find a license/registration', or directly at vo.licensing.hpc.texas.gov/datamart/selSearchType.do).",
+      "Choose Search by Name if you only have a company or individual name, or Search by License Number if you have it - TSBPE recommends license number search when available for the most precise match.",
+      "Select 'Texas State Board of Plumbing Examiners' from the Board dropdown, then choose 'Plumbing - Licensed or Registered'.",
+      "Review the license status shown: current or expired, along with the expiration date and effective rank date.",
+      "Check for a Certificate of Insurance (COI) status and expiration date, which is separate from the license itself and required for anyone contracting plumbing work to the public.",
+      "Note the license rank - Master Plumber, Journeyman Plumber, Tradesman Plumber-Limited, or Apprentice - since a company offering plumbing services must have a licensed Responsible Master Plumber associated with it, not just any plumber on staff.",
+      "Check the Disciplinary Actions section if present, which TSBPE makes available with downloadable documentation for any formal complaints."
+    ],
+    proofTitle: "What the license rank actually means for who's doing your work",
+    proofItems: [
+      "A Master Plumber has the highest individual license rank and can supervise others, but a company itself still needs a designated Responsible Master Plumber on file with TSBPE to legally contract plumbing work to the public.",
+      "A Journeyman Plumber can perform plumbing work but typically under a Master Plumber's supervision depending on the specific task and local requirements.",
+      "A Tradesman Plumber-Limited Licensee has a more restricted scope of work than a Journeyman or Master.",
+      "An Apprentice is registered, not independently licensed, and should be working under direct supervision.",
+      "If you can't find a company's Responsible Master Plumber listed, that's worth asking about directly before authorizing work."
+    ],
+    extraFaqs: [
+      {
+        question: "Is TDLR the same as the board that licenses Texas plumbers?",
+        answer: "Not exactly. Plumbers are licensed by the Texas State Board of Plumbing Examiners (TSBPE), a distinct board, though it operates alongside TDLR-regulated trades like electricians and HVAC technicians. The TSBPE has its own separate public license search."
+      },
+      {
+        question: "Is checking a plumber's license actually free?",
+        answer: "Yes. The TSBPE's Public License Search is free and available to anyone, with no account or login required to look up a license status."
+      },
+      {
+        question: "Does a valid license guarantee good work?",
+        answer: "A valid, current license confirms someone met Texas's minimum legal requirements to perform plumbing work - it does not by itself guarantee quality, availability, or pricing, which are still worth confirming directly with any provider."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
+      { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" },
+      { label: "Best questions to ask before you book an emergency plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },
+      { label: "Partner with us", href: "/partner-with-us" }
+    ]
   }
 };
 
