@@ -214,3 +214,14 @@ export const propertyManagerTriageSheetPost: BlogPost = {
 };
 
 blogPosts.push(propertyManagerTriageSheetPost);
+
+
+export const licenseVerificationPost: BlogPost = {
+  slug: "how-to-verify-a-texas-plumbers-license",
+  title: "How to Verify a Texas Plumber's License Before Hiring",
+  directAnswer: "Texas plumbers are licensed by the Texas State Board of Plumbing Examiners (TSBPE), not TDLR directly, and anyone can check a license status for free using the TSBPE's official Public License Search - here is exactly how to do it and what the results mean.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(licenseVerificationPost);
