@@ -1719,6 +1719,42 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
       { label: "Failed shutoff leak checklist", href: "/blog/water-shutoff-valve-will-not-close-during-a-leak" }
     ]
+  },
+  "property-manager-plumbing-emergency-triage-sheet": {
+    checklistTitle: "How to triage a tenant plumbing report in under two minutes",
+    checklistIntro: "Use this order of questions when a tenant calls or submits a maintenance request about a plumbing issue, to sort severity quickly before deciding whether to dispatch emergency service.",
+    checklistItems: [
+      "Ask first whether water is actively spreading or contained, since active spread changes the timeline regardless of which fixture is involved.",
+      "Ask whether the water is clean or appears to be wastewater, since contaminated water changes both urgency and any tenant relocation considerations.",
+      "Ask whether more than one unit or a shared wall or ceiling is affected, since multi-unit exposure changes dispatch priority and who else needs notification.",
+      "Ask whether the tenant has already attempted a shutoff and whether it worked, before assuming a technician needs to locate one on arrival.",
+      "Note whether the unit has occupants who would be significantly affected by loss of water, such as infants, elderly residents, or anyone with mobility limitations.",
+      "Confirm access details - gate codes, pets, tenant availability - before dispatch to avoid a wasted trip."
+    ],
+    proofTitle: "Documentation to capture for every plumbing incident",
+    proofItems: [
+      "Date and time the tenant first reported the issue, and date and time dispatch was requested - gaps here matter for lease-related disputes.",
+      "Photos from the tenant if safely obtainable, before any cleanup begins.",
+      "Which unit or units and specific fixture were affected.",
+      "Whether the provider's diagnosis attributed the cause to tenant use, normal wear, or a building-wide issue, since this affects cost allocation.",
+      "Any temporary accommodation or unit access changes made as a result of the incident."
+    ],
+    extraFaqs: [
+      {
+        question: "Should property managers keep a written triage checklist for maintenance staff?",
+        answer: "Many find it useful, since a consistent set of questions reduces both response-time inconsistency and missed documentation, though procedures should be adapted to each property's specific staffing and vendor relationships."
+      },
+      {
+        question: "What plumbing issues typically justify after-hours dispatch for rental properties?",
+        answer: "Active leaks, sewage backups, complete loss of water, and issues affecting multiple units are commonly treated as after-hours emergencies, though each property's policy and lease terms determine the specific threshold."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
+      { label: "Commercial emergency plumbing", href: "/services/commercial-emergency-plumbing" },
+      { label: "Partner with us", href: "/partner-with-us" },
+      { label: "Sewer backup help", href: "/services/sewer-backup-help" }
+    ]
   }
 };
 
