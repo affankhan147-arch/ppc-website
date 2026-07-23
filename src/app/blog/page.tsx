@@ -12,7 +12,7 @@ import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema
 export const metadata = buildMetadata({
   title: "Emergency plumbing guides",
   description:
-    "Practical emergency plumbing, drain, sewer, cost, and decision guides for Dallas-Fort Worth homeowners.",
+    "Practical emergency plumbing, drain, sewer, cost, and decision guides for Dallas-Fort Worth homeowners, covering symptoms and safe next steps.",
   path: "/blog"
 });
 

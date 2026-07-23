@@ -11,7 +11,7 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = buildMetadata({
   title: "Dallas-Fort Worth plumbing service areas",
   description:
-    "Browse Dallas-Fort Worth service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help.",
+    "Browse all 30 Dallas-Fort Worth service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help, organized by city.",
   path: "/cities"
 });
 
