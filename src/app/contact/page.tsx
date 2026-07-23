@@ -7,7 +7,7 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Request urgent plumbing help",
-  description: "Contact page for Dallas-Fort Worth emergency plumbing and drain cleaning service requests.",
+  description: "Contact page for Dallas-Fort Worth emergency plumbing and drain cleaning service requests - share your city, problem, and urgency to get connected with an available provider.",
   path: "/contact"
 });
 

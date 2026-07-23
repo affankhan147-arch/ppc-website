@@ -3,7 +3,7 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Terms of use",
-  description: "Terms of use for the Dallas-Fort Worth emergency plumbing service request website.",
+  description: "Terms of use for the Dallas-Fort Worth emergency plumbing service request website, outlining how the provider connection service works and your responsibilities as a user.",
   path: "/terms"
 });
 
