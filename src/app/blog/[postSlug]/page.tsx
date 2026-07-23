@@ -9,7 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props) {
   if (!post) return {};
   return buildMetadata({
     title: post.title,
-    description: post.directAnswer,
+    description: truncateForMeta(post.directAnswer),
     path: `/blog/${post.slug}`
   });
 }

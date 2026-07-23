@@ -9,7 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityServiceEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props) {
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
   return buildMetadata({
     title: `${service.name} in ${city.name}, TX`,
-    description: `${service.shortAnswer} Local service-area guidance for ${city.name}, TX with provider availability reminders.`,
+    description: truncateForMeta(`${service.shortAnswer} Local service-area guidance for ${city.name}, TX with provider availability reminders.`),
     path: `/cities/${city.slug}/${service.slug}`
   });
 }

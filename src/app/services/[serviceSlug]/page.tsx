@@ -9,7 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props) {
   if (!service) return {};
   return buildMetadata({
     title: `${service.name} in Dallas-Fort Worth`,
-    description: service.shortAnswer,
+    description: truncateForMeta(service.shortAnswer),
     path: `/services/${service.slug}`
   });
 }

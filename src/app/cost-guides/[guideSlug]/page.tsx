@@ -8,7 +8,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { costGuides } from "@/data/costGuides";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
   if (!guide) return {};
   return buildMetadata({
     title: guide.title,
-    description: guide.directAnswer,
+    description: truncateForMeta(guide.directAnswer),
     path: `/cost-guides/${guide.slug}`
   });
 }

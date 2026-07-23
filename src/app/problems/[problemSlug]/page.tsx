@@ -10,7 +10,7 @@ import { problemEnhancements, problemFaqEnhancements } from "@/data/pageEnhancem
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props) {
   if (!problem) return {};
   return buildMetadata({
     title: problem.title,
-    description: problem.directAnswer,
+    description: truncateForMeta(problem.directAnswer),
     path: `/problems/${problem.slug}`
   });
 }
