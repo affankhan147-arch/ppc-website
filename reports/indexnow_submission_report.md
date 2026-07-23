@@ -1,39 +1,52 @@
 ﻿# IndexNow Submission Report
 
-Time: 07/12/2026 03:18:47
+Time: 07/24/2026 02:59:42
 Mode: SUBMIT
 Host: plumbinghands.com
 Key location: https://plumbinghands.com/71caa58028ccda2a65b0b5b39144de06c0d64c297e2c19d36045dad417ebc26b.txt
 Sitemap: https://plumbinghands.com/sitemap.xml
-URL count: 112
+URL count: 139
 
-Submission status: 202
+Submission status: 200
 Response content:
 
 Submitted URLs:
 - https://plumbinghands.com/
+- https://plumbinghands.com/blog
 - https://plumbinghands.com/blog/24-hour-plumber-in-plano-when-the-problem-cannot-wait
+- https://plumbinghands.com/blog/7-plumbing-problems-you-should-never-ignore
 - https://plumbinghands.com/blog/bathtub-backing-up-when-toilet-flushes-what-causes-it
 - https://plumbinghands.com/blog/best-questions-to-ask-before-you-book-an-emergency-plumber
 - https://plumbinghands.com/blog/burst-pipe-in-dallas-what-to-shut-off-first
+- https://plumbinghands.com/blog/can-homeowners-legally-do-their-own-plumbing-in-texas
 - https://plumbinghands.com/blog/commercial-drain-backup-what-business-owners-should-do-first
 - https://plumbinghands.com/blog/dallas-hard-water-and-drain-problems-what-homeowners-should-know
 - https://plumbinghands.com/blog/dallas-storms-and-sewer-backups-what-to-check-after-heavy-rain
+- https://plumbinghands.com/blog/drain-backup-in-a-restaurant-what-owners-should-do-first
 - https://plumbinghands.com/blog/drain-cleaning-cost-guide-for-dallas-homeowners
 - https://plumbinghands.com/blog/drain-smell-in-bathroom-sewer-gas-or-simple-clog
 - https://plumbinghands.com/blog/emergency-drain-cleaning-cost-in-dallas-what-affects-the-price
 - https://plumbinghands.com/blog/emergency-drain-cleaning-in-fort-worth-fast-homeowner-guide
 - https://plumbinghands.com/blog/emergency-drain-cleaning-in-frisco-what-to-expect
+- https://plumbinghands.com/blog/emergency-leak-approval-checklist-for-homeowners
 - https://plumbinghands.com/blog/emergency-plumber-in-plano-when-to-call-now
+- https://plumbinghands.com/blog/emergency-plumber-irving-tx-what-to-know
 - https://plumbinghands.com/blog/emergency-plumber-near-me-open-now-what-to-do-before-help-arrives
 - https://plumbinghands.com/blog/emergency-plumber-vs-regular-plumber-what-is-the-difference
 - https://plumbinghands.com/blog/emergency-plumbing-cost-guide-for-dallas-homeowners
 - https://plumbinghands.com/blog/emergency-plumbing-in-arlington-tx-common-night-and-weekend-problems
+- https://plumbinghands.com/blog/emergency-plumbing-mckinney-tx-what-homeowners-should-know
 - https://plumbinghands.com/blog/emergency-sewer-help-in-garland-signs-and-next-steps
 - https://plumbinghands.com/blog/how-long-should-emergency-drain-cleaning-take
 - https://plumbinghands.com/blog/how-to-know-if-a-clogged-drain-is-actually-a-sewer-line-problem
+- https://plumbinghands.com/blog/how-to-verify-a-texas-plumbers-license
+- https://plumbinghands.com/blog/hydro-jetting-vs-drain-snaking-dfw
 - https://plumbinghands.com/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help
+- https://plumbinghands.com/blog/leaking-water-heater-repair-or-replace-dfw
 - https://plumbinghands.com/blog/main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options
+- https://plumbinghands.com/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do
+- https://plumbinghands.com/blog/plumber-or-water-restoration-company-first
+- https://plumbinghands.com/blog/property-manager-plumbing-emergency-triage-sheet
 - https://plumbinghands.com/blog/roto-rooter-vs-local-emergency-plumber-in-dallas-which-should-you-call
 - https://plumbinghands.com/blog/same-day-drain-cleaning-in-dallas-what-to-expect
 - https://plumbinghands.com/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call
@@ -41,18 +54,26 @@ Submitted URLs:
 - https://plumbinghands.com/blog/toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners
 - https://plumbinghands.com/blog/toilet-shower-and-sink-backing-up-together-what-it-means
 - https://plumbinghands.com/blog/water-heater-leaking-in-dallas-emergency-signs-to-watch
+- https://plumbinghands.com/blog/water-heater-making-popping-noise-dallas
+- https://plumbinghands.com/blog/water-shutoff-valve-will-not-close-during-a-leak
+- https://plumbinghands.com/blog/water-stain-ceiling-below-bathroom-dallas
 - https://plumbinghands.com/blog/what-counts-as-a-plumbing-emergency
+- https://plumbinghands.com/cities
 - https://plumbinghands.com/cities/allen
 - https://plumbinghands.com/cities/arlington
 - https://plumbinghands.com/cities/arlington/24-hour-emergency-plumber
 - https://plumbinghands.com/cities/arlington/emergency-drain-cleaning
 - https://plumbinghands.com/cities/bedford
 - https://plumbinghands.com/cities/carrollton
+- https://plumbinghands.com/cities/carrollton/24-hour-emergency-plumber
+- https://plumbinghands.com/cities/carrollton/emergency-drain-cleaning
 - https://plumbinghands.com/cities/cedar-hill
 - https://plumbinghands.com/cities/dallas
 - https://plumbinghands.com/cities/dallas/24-hour-emergency-plumber
 - https://plumbinghands.com/cities/dallas/emergency-drain-cleaning
 - https://plumbinghands.com/cities/denton
+- https://plumbinghands.com/cities/denton/24-hour-emergency-plumber
+- https://plumbinghands.com/cities/denton/emergency-drain-cleaning
 - https://plumbinghands.com/cities/desoto
 - https://plumbinghands.com/cities/duncanville
 - https://plumbinghands.com/cities/euless
@@ -74,6 +95,8 @@ Submitted URLs:
 - https://plumbinghands.com/cities/irving/emergency-drain-cleaning
 - https://plumbinghands.com/cities/keller
 - https://plumbinghands.com/cities/lewisville
+- https://plumbinghands.com/cities/lewisville/24-hour-emergency-plumber
+- https://plumbinghands.com/cities/lewisville/emergency-drain-cleaning
 - https://plumbinghands.com/cities/mansfield
 - https://plumbinghands.com/cities/mckinney
 - https://plumbinghands.com/cities/mckinney/24-hour-emergency-plumber
@@ -83,6 +106,8 @@ Submitted URLs:
 - https://plumbinghands.com/cities/plano/24-hour-emergency-plumber
 - https://plumbinghands.com/cities/plano/emergency-drain-cleaning
 - https://plumbinghands.com/cities/richardson
+- https://plumbinghands.com/cities/richardson/24-hour-emergency-plumber
+- https://plumbinghands.com/cities/richardson/emergency-drain-cleaning
 - https://plumbinghands.com/cities/rockwall
 - https://plumbinghands.com/cities/rowlett
 - https://plumbinghands.com/cities/southlake
@@ -91,6 +116,7 @@ Submitted URLs:
 - https://plumbinghands.com/contact
 - https://plumbinghands.com/cost-guides/burst-pipe-emergency-cost-guide
 - https://plumbinghands.com/cost-guides/drain-cleaning-cost-dfw
+- https://plumbinghands.com/cost-guides/emergency-leak-repair-cost-dfw
 - https://plumbinghands.com/cost-guides/emergency-plumbing-cost-dfw
 - https://plumbinghands.com/cost-guides/sewer-line-clog-cost-guide
 - https://plumbinghands.com/cost-guides/water-heater-emergency-cost-guide
@@ -112,6 +138,7 @@ Submitted URLs:
 - https://plumbinghands.com/problems/washing-machine-drain-backing-up
 - https://plumbinghands.com/problems/water-backing-up-in-shower-and-toilet
 - https://plumbinghands.com/problems/water-heater-leaking-emergency
+- https://plumbinghands.com/problems/water-shutoff-valve-will-not-close
 - https://plumbinghands.com/services/24-hour-emergency-plumber
 - https://plumbinghands.com/services/burst-pipe-emergency
 - https://plumbinghands.com/services/commercial-emergency-plumbing

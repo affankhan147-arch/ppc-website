@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import {
   AlertTriangle,
@@ -20,7 +20,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
-import { getArticleImage, getGridImage } from "@/lib/articleImages";
+import { getGridImage } from "@/lib/articleImages";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 

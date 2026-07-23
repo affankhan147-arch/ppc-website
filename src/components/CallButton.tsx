@@ -1,4 +1,5 @@
 "use client";
+import { sendGAEvent } from "@next/third-parties/google";
 
 import { PhoneCall } from "lucide-react";
 import { hasConfiguredPhone, phoneConfig } from "@/data/site";
@@ -72,6 +73,18 @@ export function CallButton({
   }
 
   function handleClick() {
+    const resolvedEventName = eventName || inferEventName(location);
+    const pathname = pagePath || (typeof window === "undefined" ? "" : window.location.pathname);
+
+    sendGAEvent("event", resolvedEventName, {
+      location,
+      page_path: pathname,
+      page_type: pageType || inferPageType(pathname),
+      city: city || "",
+      service: service || "",
+      problem: problem || ""
+    });
+
     const callEventUrl = buildCallEventUrl();
     if (navigator.sendBeacon) {
       navigator.sendBeacon(callEventUrl);
