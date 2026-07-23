@@ -19,6 +19,13 @@ export function generateStaticParams() {
   return cities.map((city) => ({ citySlug: city.slug }));
 }
 
+function buildCityDescription(city: (typeof cities)[number]) {
+  const base = `Request emergency plumbing and drain cleaning help serving ${city.name}, TX, covering ${city.areaHint}.`;
+  if (base.length <= 158) return base;
+  const shortBase = `Request emergency plumbing and drain cleaning help serving ${city.name}, TX and nearby ${city.countyHint} areas.`;
+  return shortBase.length <= 158 ? shortBase : shortBase.slice(0, 155).trimEnd() + "...";
+}
+
 export async function generateMetadata({ params }: Props) {
   const { citySlug } = await params;
   const city = cities.find((item) => item.slug === citySlug);
@@ -26,7 +33,7 @@ export async function generateMetadata({ params }: Props) {
   const isIrving = city.slug === "irving";
   return buildMetadata({
     title: isIrving ? "Emergency Plumber Irving, TX" : `Emergency plumbing help in ${city.name}, TX`,
-    description: isIrving ? "Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available plumbing professional. Coverage varies." : `Request emergency plumbing and drain cleaning help serving ${city.name}, TX with clear service-area guidance.`,
+    description: isIrving ? "Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available local plumbing professional serving your area. Coverage and pricing vary by provider." : buildCityDescription(city),
     path: `/cities/${city.slug}`
   });
 }
