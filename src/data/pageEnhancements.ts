@@ -1048,6 +1048,47 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
+  },
+  "dallas/24-hour-emergency-plumber": {
+    decisionTitle: "Dallas emergency plumbing decision guide",
+    decisionIntro: "Dallas sits on Blackland Prairie expansive clay soil, which shifts noticeably with seasonal moisture changes and can stress underground supply lines, especially in older neighborhoods with original cast iron or galvanized piping.",
+    decisionItems: [
+      "Mention if your home is in an older central Dallas neighborhood like Lakewood, the M Streets, or Oak Cliff, since original piping material differs from newer construction.",
+      "Note whether you've noticed any foundation cracks or door/window sticking recently, since clay-soil movement can be a contributing factor to underground pipe stress.",
+      "Describe whether the leak or issue is at a fixture, or appears to be affecting an underground or slab-level line.",
+      "Ask whether the provider has experience with expansive-soil-related plumbing issues common to the Dallas area."
+    ],
+    providerTitle: "What a Dallas provider may check",
+    providerItems: [
+      "Original cast iron or galvanized supply line condition in older central Dallas homes.",
+      "Whether recent foundation movement may be a contributing factor to the current issue.",
+      "Slab leak indicators if the home has slab foundation construction, common across most of Dallas.",
+      "Water pressure and pipe material differences between older and newer construction eras."
+    ],
+    safetyTitle: "When to treat it as urgent in Dallas",
+    safetyItems: [
+      "Water pooling near the foundation, which can worsen existing clay-soil movement.",
+      "A warm spot on flooring that could indicate a hot water slab leak.",
+      "Water near electrical panels or outlets, more common in older homes with dated wiring.",
+      "Any shutoff valve that will not close fully during an active leak."
+    ],
+    preventionTitle: "Dallas-specific prevention notes",
+    preventionItems: [
+      "Homes over 40 years old in central Dallas neighborhoods often still have original galvanized or cast iron supply lines worth discussing proactively.",
+      "Seasonal clay-soil movement means foundation and plumbing issues can be worth monitoring together, not just separately.",
+      "Note your home's approximate age and foundation type when requesting service so the right expertise is dispatched."
+    ],
+    extraFaqs: [
+      {
+        question: "Does Dallas clay soil actually affect home plumbing?",
+        answer: "Expansive clay soil common across the Dallas area shifts with seasonal moisture changes, which can put stress on underground and slab-level supply lines over time, particularly in older homes. This is a real regional factor worth mentioning when describing a plumbing issue."
+      }
+    ],
+    extraLinks: [
+      { label: "Dallas service area", href: "/cities/dallas" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
   }
 };
 
