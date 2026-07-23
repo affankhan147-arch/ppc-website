@@ -1707,37 +1707,37 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   },
   "euless/emergency-drain-cleaning": {
     decisionTitle: "Euless emergency drain cleaning decision guide",
-    decisionIntro: "Euless's established neighborhoods, particularly 1970s-80s construction like Heritage Place, often have original cast iron sewer lines now 40+ years old, a genuine factor in drain backups alongside the HEB area's expansive clay soil.",
+    decisionIntro: "Euless has a notable concentration of 1980s-era multi-family and apartment properties like Enclave at Bear Creek alongside single-family homes, meaning shared-line drain issues affecting multiple units are a genuinely relevant consideration here.",
     decisionItems: [
-      "Mention if your home is in an established neighborhood like Heritage Place, since original cast iron sewer lines from that era are now well past typical service life.",
-      "Note whether trees near the sewer line path could be a factor in a recurring backup.",
-      "Ask whether camera inspection is included to confirm whether the cause is material deterioration or blockage.",
-      "Describe whether one fixture or multiple fixtures are affected."
+      "Mention if you're in a multi-family or apartment property from the 1980s era, since shared drain lines behave differently than a single-family home's plumbing.",
+      "Ask whether neighboring units are also experiencing drain issues, which can indicate a shared-line problem in older multi-family buildings.",
+      "Note whether your property manager has been notified if you're in a rental affected by a drain backup.",
+      "Describe whether the issue is isolated to your unit or appears to affect the building more broadly."
     ],
     providerTitle: "What a Euless drain provider may check",
     providerItems: [
-      "Cast iron sewer line condition typical of 1970s-80s Euless construction.",
-      "Root intrusion likelihood in established neighborhoods with mature landscaping.",
-      "Whether the blockage pattern suggests a fixture-level or main-line issue.",
-      "Clay-soil-related contributing factors given the HEB area's expansive soil."
+      "Whether the property is served by a shared line common in 1980s-era multi-family buildings.",
+      "Aging cast iron and galvanized piping condition typical of that construction era.",
+      "Whether neighboring units report similar issues, pointing to a shared-line cause.",
+      "Standard single-family blockage assessment for properties outside multi-family buildings."
     ],
     safetyTitle: "When to treat it as urgent in Euless",
     safetyItems: [
-      "Multiple fixtures backing up together.",
+      "Multiple units or fixtures backing up together in a multi-family property.",
       "Sewage odor with slow drains.",
       "An outdoor cleanout overflowing.",
-      "Recurring backups suggesting root intrusion or advancing pipe deterioration."
+      "Recurring backups suggesting a shared-line issue needing broader attention."
     ],
     preventionTitle: "Euless-specific prevention notes",
     preventionItems: [
-      "Homes from the 1970s-80s construction era with original cast iron sewer lines benefit from periodic camera inspection.",
-      "Ask about hydro jetting for recurring blockages tied to root intrusion or scale buildup.",
-      "Keep records of recurring issues to help determine whether line replacement is more cost-effective than repeated repair."
+      "Multi-family property managers benefit from tracking whether drain issues are isolated or affect multiple units.",
+      "Older 1980s-era buildings with original piping benefit from periodic proactive assessment.",
+      "Renters should document and report drain issues to property management promptly given shared-line considerations."
     ],
     extraFaqs: [
       {
-        question: "Are cast iron sewer lines common in older Euless neighborhoods?",
-        answer: "Yes, particularly in 1970s-80s neighborhoods like Heritage Place. These original cast iron lines are now old enough that material deterioration and root intrusion are both genuine, common factors in drain backups."
+        question: "Does living in a Euless apartment affect how drain backups are handled?",
+        answer: "Multi-family properties, particularly older 1980s-era buildings common in Euless, often have shared drain lines, meaning a backup in one unit can be connected to issues in neighboring units. This is worth mentioning when requesting service, and property management should generally be notified alongside any repair request."
       }
     ],
     extraLinks: [
