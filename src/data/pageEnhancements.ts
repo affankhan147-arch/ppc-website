@@ -2165,6 +2165,43 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Best questions to ask before you book an emergency plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },
       { label: "Partner with us", href: "/partner-with-us" }
     ]
+  },
+  "can-homeowners-legally-do-their-own-plumbing-in-texas": {
+    checklistTitle: "What the Texas homestead plumbing exemption actually covers",
+    checklistIntro: "Texas Occupations Code Section 1301.051 is the actual law behind this - here is what it covers and, just as importantly, what it does not.",
+    checklistItems: [
+      "The property must be your homestead - meaning you own it AND occupy it as your primary residence. This does not apply to rental properties, vacation homes, or property you don't personally live in.",
+      "You must be the one doing the work. You cannot hire an unlicensed friend, handyman, or contractor and claim the homestead exemption on their behalf - that's illegal regardless of who's holding the wrench.",
+      "Gas line work is excluded entirely. TSBPE requires a licensed plumber for gas line work regardless of homestead status, given the explosion and carbon monoxide risk.",
+      "Connecting to public or municipal utility systems is excluded. You cannot legally make a new tap on a public water main or connect a drain line directly to a municipal sewer system yourself, even on your own homestead.",
+      "Permits and inspections still typically apply. The exemption removes the licensing requirement, not the permit requirement - check with your local building department before starting work.",
+      "Water heater installation and service work has additional restrictions under some readings of the exemption - confirm with your local permitting office before assuming this falls under general homestead work."
+    ],
+    proofTitle: "Why this distinction matters beyond just legality",
+    proofItems: [
+      "Unpermitted or non-code-compliant plumbing work is a real issue at resale - Texas seller's disclosure law (Property Code 5.008) requires disclosing known work done without required permits, and buyers' inspectors routinely flag this.",
+      "Work done outside the exemption's limits (by a non-owner, on a rental, or involving gas lines) performed without a license can result in TSBPE penalties up to $5,000 per violation per day for the unlicensed party.",
+      "Insurance claims can be affected by unpermitted or improperly performed plumbing work, particularly if it later causes water damage."
+    ],
+    extraFaqs: [
+      {
+        question: "Does the Texas homestead plumbing exemption apply to rental properties I own?",
+        answer: "No. The exemption specifically requires the property to be your own occupied primary residence. Rental properties, even ones you personally own, require a licensed plumber for any plumbing work."
+      },
+      {
+        question: "Can I do my own water heater installation under the homestead exemption?",
+        answer: "This is a genuinely nuanced area - some legal guidance indicates water heater installation and service work is treated differently than general plumbing repairs. Confirm directly with your local permitting office before assuming this falls under the general homestead exemption."
+      },
+      {
+        question: "What happens if I do plumbing work on a rental property without a license?",
+        answer: "This falls outside the homestead exemption entirely, meaning it's unlicensed plumbing work subject to TSBPE enforcement, which can include administrative penalties up to $5,000 per violation per day."
+      }
+    ],
+    extraLinks: [
+      { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" },
+      { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
+      { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" }
+    ]
   }
 };
 
