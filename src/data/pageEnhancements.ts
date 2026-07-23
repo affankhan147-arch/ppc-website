@@ -1089,6 +1089,334 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
       { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
     ]
+  },
+  "denton/24-hour-emergency-plumber": {
+    decisionTitle: "Denton emergency plumbing decision guide",
+    decisionIntro: "Denton is a university town built around UNT and Texas Woman's University, meaning high-turnover rental housing sits alongside historic homes in the Oak-Hickory district (built 1890s-1950s) and newer developments like Robson Ranch and Rayzor Ranch.",
+    decisionItems: [
+      "Mention if your property is a rental near UNT or TWU, since high-turnover housing can have deferred maintenance history worth flagging.",
+      "Note if your home is in the Oak-Hickory Historic District or another older central Denton neighborhood, since original galvanized piping is common there.",
+      "Ask whether the provider is familiar with Denton's expansive clay soil and its effect on underground supply lines.",
+      "Share whether the issue involves an older fixture or supply line versus a newer PEX-plumbed home."
+    ],
+    providerTitle: "What a Denton provider may check",
+    providerItems: [
+      "Original galvanized supply line condition in homes built before 1980 near the historic downtown square.",
+      "Rental-property maintenance history if the property serves student housing.",
+      "Clay-soil-related slab leak indicators given Denton's expansive soil conditions.",
+      "Water heater scale buildup in newer developments with harder water, like Robson Ranch."
+    ],
+    safetyTitle: "When to treat it as urgent in Denton",
+    safetyItems: [
+      "Water pooling near the foundation during Denton's dry-to-wet seasonal soil cycles.",
+      "A warm spot on flooring that could indicate a slab leak.",
+      "Water damage in a rental property affecting multiple tenants.",
+      "Any shutoff valve that will not close during an active leak."
+    ],
+    preventionTitle: "Denton-specific prevention notes",
+    preventionItems: [
+      "Homes built before 1980 near the historic downtown square often still have original galvanized piping worth discussing proactively.",
+      "Rental property owners benefit from documenting plumbing condition between tenant turnovers given the university-driven rental cycle.",
+      "Newer Denton developments with harder water may benefit from water softener discussion to protect fixtures long-term."
+    ],
+    extraFaqs: [
+      {
+        question: "Does Denton's university population affect plumbing service needs?",
+        answer: "High rental turnover near UNT and TWU means many Denton properties see frequent tenant changes, which can affect maintenance history and how quickly issues get noticed and reported. This is worth mentioning if you're a landlord or property manager requesting service."
+      }
+    ],
+    extraLinks: [
+      { label: "Denton service area", href: "/cities/denton" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "denton/emergency-drain-cleaning": {
+    decisionTitle: "Denton emergency drain cleaning decision guide",
+    decisionIntro: "Older Denton neighborhoods near the historic downtown square may still have original clay or cast iron sewer lines, while the city's expansive clay soil adds root-intrusion and soil-shift risk regardless of construction era.",
+    decisionItems: [
+      "Mention if your home is in an older central Denton neighborhood, since original clay or cast iron sewer lines behave differently than modern PVC.",
+      "Note if trees are near the sewer line path, since root intrusion is a common issue in established Denton neighborhoods.",
+      "Describe whether the backup affects one fixture or multiple, since this affects urgency and diagnosis.",
+      "Ask whether camera inspection is included given Denton's mix of older and newer sewer infrastructure."
+    ],
+    providerTitle: "What a Denton drain provider may check",
+    providerItems: [
+      "Sewer line material and age, particularly in homes near the historic downtown area.",
+      "Root intrusion likelihood given mature tree growth in established neighborhoods.",
+      "Whether clay-soil movement has contributed to the current blockage.",
+      "Rental-property-specific considerations if the property serves student housing."
+    ],
+    safetyTitle: "When to treat it as urgent in Denton",
+    safetyItems: [
+      "Multiple fixtures backing up at once, suggesting a main line issue.",
+      "Sewage odor combined with slow drains.",
+      "An outdoor cleanout overflowing.",
+      "Backup affecting a rental property with tenants present."
+    ],
+    preventionTitle: "Denton-specific prevention notes",
+    preventionItems: [
+      "Older sewer lines near the historic downtown benefit from periodic camera inspection to catch root intrusion early.",
+      "Landlords with student rentals should document drain condition between tenant turnovers.",
+      "Avoid pouring grease down drains given the city's own guidance on grease-related clogs."
+    ],
+    extraFaqs: [
+      {
+        question: "Are older Denton sewer lines more prone to backups?",
+        answer: "Homes near Denton's historic downtown square with original clay or cast iron sewer lines can be more susceptible to root intrusion and material deterioration than newer PVC systems, though any sewer line can develop issues over time."
+      }
+    ],
+    extraLinks: [
+      { label: "Denton service area", href: "/cities/denton" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "lewisville/24-hour-emergency-plumber": {
+    decisionTitle: "Lewisville emergency plumbing decision guide",
+    decisionIntro: "Lewisville's housing stock spans the 1970s through today, and homes built from the late 1970s through the mid-1990s frequently have polybutylene supply lines - gray plastic pipe now prone to age-related failure - a genuinely distinct factor from newer PEX-plumbed construction.",
+    decisionItems: [
+      "Mention your home's approximate build decade, since polybutylene supply lines (common late 1970s-mid 1990s) behave very differently than PEX or copper.",
+      "Ask directly whether the provider can identify polybutylene pipe on the visit, since it's not always obvious without direct inspection.",
+      "Note if you're in an older Lewisville neighborhood like Valley Ridge or Vista Ridge versus a newer area like Castle Hills.",
+      "Describe whether the leak is at a fixture connection or appears to be a broader supply line issue."
+    ],
+    providerTitle: "What a Lewisville provider may check",
+    providerItems: [
+      "Polybutylene supply line presence and condition in homes from the relevant construction era.",
+      "Whether a full or partial re-pipe makes more sense than a spot repair for aging polybutylene systems.",
+      "Clay-soil-related slab leak indicators given Denton County's expansive soil.",
+      "Water hardness effects on fixtures, moderate but present in Lewisville's municipal supply."
+    ],
+    safetyTitle: "When to treat it as urgent in Lewisville",
+    safetyItems: [
+      "Any sudden pressure loss in a home known or suspected to have polybutylene piping, since these can fail without much warning.",
+      "Water pooling near the foundation.",
+      "A warm spot on flooring suggesting a slab leak.",
+      "Any shutoff valve that will not close during an active leak."
+    ],
+    preventionTitle: "Lewisville-specific prevention notes",
+    preventionItems: [
+      "Homes built in the polybutylene era (roughly late 1970s to mid-1990s) benefit from a proactive pipe material identification visit before a failure occurs.",
+      "Ask about whole-home re-pipe options if multiple polybutylene-related issues have already occurred.",
+      "Root intrusion is a common issue in older Lewisville neighborhoods with mature trees - worth mentioning for recurring drain issues."
+    ],
+    extraFaqs: [
+      {
+        question: "What is polybutylene pipe and why does it matter in Lewisville?",
+        answer: "Polybutylene is a gray plastic supply pipe widely installed in homes built from the late 1970s through the mid-1990s. It's known for age-related failures, and Lewisville has a significant amount of housing stock from that exact era, making pipe material identification a genuinely useful first step for many service calls."
+      }
+    ],
+    extraLinks: [
+      { label: "Lewisville service area", href: "/cities/lewisville" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "lewisville/emergency-drain-cleaning": {
+    decisionTitle: "Lewisville emergency drain cleaning decision guide",
+    decisionIntro: "Lewisville's older neighborhoods combine decades of mature tree growth with expansive clay soil, making root intrusion one of the most common drain and sewer issues in the city's established areas.",
+    decisionItems: [
+      "Mention if mature trees are near your sewer line path, since root intrusion is a frequent cause of backups in older Lewisville neighborhoods.",
+      "Note your home's approximate age and neighborhood, since this affects likely pipe material and root-intrusion risk.",
+      "Ask whether camera inspection is included, since it's the clearest way to confirm root intrusion versus another cause.",
+      "Describe whether this is a first-time or recurring backup, since recurring issues often point to root intrusion needing a different approach."
+    ],
+    providerTitle: "What a Lewisville drain provider may check",
+    providerItems: [
+      "Root intrusion likelihood given mature tree growth common in established Lewisville neighborhoods.",
+      "Sewer line material and condition relative to the home's construction era.",
+      "Whether clay-soil movement has contributed to a line separation or blockage.",
+      "Recurring blockage patterns that may indicate a need for hydro jetting versus standard snaking."
+    ],
+    safetyTitle: "When to treat it as urgent in Lewisville",
+    safetyItems: [
+      "Multiple fixtures backing up together, suggesting a main line issue.",
+      "Sewage odor with slow drains.",
+      "An outdoor cleanout overflowing.",
+      "Backup that returns quickly after initial clearing, suggesting root intrusion."
+    ],
+    preventionTitle: "Lewisville-specific prevention notes",
+    preventionItems: [
+      "Older neighborhoods with mature trees benefit from periodic camera inspection to catch root intrusion before it causes a full backup.",
+      "Ask about hydro jetting for recurring blockages, since it addresses buildup more thoroughly than snaking alone.",
+      "Keep a record of recurring drain issues to help the provider identify patterns."
+    ],
+    extraFaqs: [
+      {
+        question: "Why do older Lewisville neighborhoods see more root intrusion?",
+        answer: "Decades of mature tree growth combined with the area's expansive clay soil creates conditions where tree roots seek moisture through small cracks in aging sewer lines, a pattern more common in established neighborhoods than in newer developments."
+      }
+    ],
+    extraLinks: [
+      { label: "Lewisville service area", href: "/cities/lewisville" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "carrollton/24-hour-emergency-plumber": {
+    decisionTitle: "Carrollton emergency plumbing decision guide",
+    decisionIntro: "Carrollton was built rapidly in the 1970s and early 1980s by large tract developers, giving much of the city a fairly consistent construction era with shared plumbing material patterns across neighborhoods.",
+    decisionItems: [
+      "Mention your home's approximate build decade, since Carrollton's rapid 1970s-80s tract development means many homes share similar original plumbing materials.",
+      "Ask whether the provider has experience with the galvanized or early PVC piping common to homes from this construction era.",
+      "Note whether your neighborhood is one of the city's original tract developments or a newer infill or redevelopment area.",
+      "Describe the affected fixture and whether the issue seems isolated or part of a broader pressure or supply issue."
+    ],
+    providerTitle: "What a Carrollton provider may check",
+    providerItems: [
+      "Original supply line material typical of Carrollton's 1970s-80s tract-built housing stock.",
+      "Whether a newer infill or remodeled property has updated plumbing not reflected in the home's original age.",
+      "Clay-soil-related slab leak indicators consistent with the broader North Dallas County area.",
+      "Water pressure consistency across the home, which can flag aging supply line issues."
+    ],
+    safetyTitle: "When to treat it as urgent in Carrollton",
+    safetyItems: [
+      "Water pooling near the foundation.",
+      "A warm spot on flooring suggesting a slab leak.",
+      "Any shutoff valve that will not close during an active leak.",
+      "Water near electrical outlets or panels in original 1970s-80s construction."
+    ],
+    preventionTitle: "Carrollton-specific prevention notes",
+    preventionItems: [
+      "Homes from Carrollton's original tract-development era benefit from a proactive pipe material check if not already updated.",
+      "Ask whether a prior remodel included plumbing updates, since this affects what a provider should expect on arrival.",
+      "Note your home's build era when requesting service so the right expertise is dispatched."
+    ],
+    extraFaqs: [
+      {
+        question: "Does Carrollton's rapid 1970s development affect plumbing today?",
+        answer: "Much of Carrollton was built quickly during a concentrated tract-development period in the 1970s and early 1980s, meaning many original homes share similar plumbing materials and are now reaching a similar age where issues become more common."
+      }
+    ],
+    extraLinks: [
+      { label: "Carrollton service area", href: "/cities/carrollton" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "carrollton/emergency-drain-cleaning": {
+    decisionTitle: "Carrollton emergency drain cleaning decision guide",
+    decisionIntro: "Carrollton's concentrated 1970s-80s tract-development era means many original sewer lines are now reaching an age where cast iron or clay pipe deterioration becomes a more common factor in drain backups.",
+    decisionItems: [
+      "Mention your home's approximate build era, since original sewer line material from Carrollton's tract-development period is now aging into higher-risk territory.",
+      "Note whether trees near the sewer line path could be a factor in a recurring backup.",
+      "Ask whether camera inspection is included to confirm whether the cause is material deterioration or blockage.",
+      "Describe whether one fixture or multiple fixtures are affected."
+    ],
+    providerTitle: "What a Carrollton drain provider may check",
+    providerItems: [
+      "Original sewer line material condition typical of the city's 1970s-80s construction era.",
+      "Root intrusion likelihood in established neighborhoods with mature landscaping.",
+      "Whether the blockage pattern suggests a fixture-level or main-line issue.",
+      "Camera inspection findings to confirm material deterioration versus a clearable blockage."
+    ],
+    safetyTitle: "When to treat it as urgent in Carrollton",
+    safetyItems: [
+      "Multiple fixtures backing up together.",
+      "Sewage odor with slow drains.",
+      "An outdoor cleanout overflowing.",
+      "Recurring backups suggesting a deeper material or root-intrusion issue."
+    ],
+    preventionTitle: "Carrollton-specific prevention notes",
+    preventionItems: [
+      "Homes from the original tract-development era benefit from periodic sewer line camera inspection given typical pipe age.",
+      "Ask about hydro jetting for recurring blockages tied to aging cast iron or clay pipe.",
+      "Keep a record of recurring issues to help the provider identify whether replacement is more cost-effective than repeated repair."
+    ],
+    extraFaqs: [
+      {
+        question: "Is cast iron or clay sewer pipe common in Carrollton?",
+        answer: "Given the concentrated 1970s-80s tract-development period across much of Carrollton, cast iron and clay sewer pipe from that era are common and are now old enough that material deterioration is a real factor to consider alongside typical blockage causes."
+      }
+    ],
+    extraLinks: [
+      { label: "Carrollton service area", href: "/cities/carrollton" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "richardson/24-hour-emergency-plumber": {
+    decisionTitle: "Richardson emergency plumbing decision guide",
+    decisionIntro: "Richardson's residential development peaked between the 1960s and 1980s - median home age around 45 years - meaning most homes were originally plumbed with galvanized steel supply lines, now well past typical service life.",
+    decisionItems: [
+      "Mention your home's approximate age, since Richardson's housing stock skews toward the 1960s-1980s era with original galvanized supply lines.",
+      "Ask whether discolored water or reduced pressure has been noticed, both signs of aging galvanized pipe.",
+      "Note whether your home is in an established Richardson neighborhood or a newer redevelopment area, particularly near the Telecom Corridor.",
+      "Describe the affected fixture and how long the issue has been occurring."
+    ],
+    providerTitle: "What a Richardson provider may check",
+    providerItems: [
+      "Galvanized steel supply line condition given the city's median home age around 45 years.",
+      "Water hardness effects from NTMWD municipal water, which can accelerate scale buildup and fixture wear.",
+      "Clay-soil-related slab leak indicators given seasonal foundation movement common to the area.",
+      "Whether a full or partial re-pipe makes sense given the home's age and current pipe condition."
+    ],
+    safetyTitle: "When to treat it as urgent in Richardson",
+    safetyItems: [
+      "Persistent discolored (orange or brown) water suggesting advanced galvanized pipe corrosion.",
+      "Water pooling near the foundation.",
+      "A warm spot on flooring suggesting a slab leak.",
+      "Any shutoff valve that will not close during an active leak."
+    ],
+    preventionTitle: "Richardson-specific prevention notes",
+    preventionItems: [
+      "Homes built before 1990 with original galvanized or cast iron plumbing are past typical service life and worth a proactive assessment.",
+      "NTMWD water hardness makes periodic water heater flushing worth discussing to extend fixture life.",
+      "Note your home's build era when requesting service so the right expertise and equipment are dispatched."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does Richardson see so many aging-pipe plumbing calls?",
+        answer: "Richardson's residential development was concentrated between the 1960s and 1980s, and the median home age of around 45 years means a large share of the housing stock still has original galvanized steel or cast iron plumbing that is now well past typical service life."
+      }
+    ],
+    extraLinks: [
+      { label: "Richardson service area", href: "/cities/richardson" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "richardson/emergency-drain-cleaning": {
+    decisionTitle: "Richardson emergency drain cleaning decision guide",
+    decisionIntro: "Richardson's mature, established neighborhoods combine decades of tree growth with aging cast iron sewer lines from the city's 1960s-1980s development peak, making root intrusion and material deterioration common joint factors.",
+    decisionItems: [
+      "Mention your home's approximate age, since original cast iron sewer lines from Richardson's development era are now well past typical service life.",
+      "Note whether mature trees are near the sewer line path, a common contributing factor in established neighborhoods.",
+      "Ask whether camera inspection is included to distinguish root intrusion from material deterioration.",
+      "Describe whether the backup is isolated to one fixture or affects multiple drains."
+    ],
+    providerTitle: "What a Richardson drain provider may check",
+    providerItems: [
+      "Cast iron sewer line condition given the city's 1960s-1980s development-era housing stock.",
+      "Root intrusion likelihood given decades of mature tree growth in established neighborhoods.",
+      "Whether the blockage pattern suggests a fixture-level or main-line issue.",
+      "Camera inspection findings to determine repair versus replacement scope."
+    ],
+    safetyTitle: "When to treat it as urgent in Richardson",
+    safetyItems: [
+      "Multiple fixtures backing up together.",
+      "Sewage odor with slow drains.",
+      "An outdoor cleanout overflowing.",
+      "Recurring backups suggesting root intrusion or advancing pipe deterioration."
+    ],
+    preventionTitle: "Richardson-specific prevention notes",
+    preventionItems: [
+      "Homes with original cast iron sewer lines from the city's development era benefit from periodic camera inspection.",
+      "Ask about hydro jetting for recurring blockages tied to root intrusion or scale buildup.",
+      "Keep records of recurring issues to help determine whether line replacement is more cost-effective than repeated repair."
+    ],
+    extraFaqs: [
+      {
+        question: "Are cast iron sewer lines common in Richardson?",
+        answer: "Given Richardson's residential development peaked between the 1960s and 1980s, cast iron sewer lines from that era are common across many established neighborhoods and are now old enough that material deterioration is a genuine factor alongside typical root intrusion."
+      }
+    ],
+    extraLinks: [
+      { label: "Richardson service area", href: "/cities/richardson" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
   }
 };
 
