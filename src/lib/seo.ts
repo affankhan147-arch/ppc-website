@@ -32,3 +32,10 @@ export function buildMetadata({ title, description, path }: SeoInput): Metadata 
     }
   };
 }
+
+export function truncateForMeta(text: string, max = 158): string {
+  if (text.length <= max) return text;
+  const truncated = text.slice(0, max - 1);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return (lastSpace > 100 ? truncated.slice(0, lastSpace) : truncated).trimEnd() + "...";
+}
