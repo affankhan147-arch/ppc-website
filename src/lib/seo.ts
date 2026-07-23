@@ -33,12 +33,26 @@ export function buildMetadata({ title, description, path }: SeoInput): Metadata 
   };
 }
 
+function renderedEntityLength(text: string): number {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/'/g, "&#x27;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").length;
+}
+
 export function truncateForMeta(text: string, max = 158): string {
-  if (text.length <= max) return text;
+  if (renderedEntityLength(text) <= max) return text;
   const ellipsis = "...";
-  const contentMax = max - ellipsis.length;
-  const truncated = text.slice(0, contentMax);
-  const lastSpace = truncated.lastIndexOf(" ");
-  const finalContent = lastSpace > 100 ? truncated.slice(0, lastSpace) : truncated;
-  return finalContent.trimEnd() + ellipsis;
+  let candidate = text;
+  while (renderedEntityLength(candidate) + ellipsis.length > max && candidate.length > 0) {
+    const lastSpace = candidate.lastIndexOf(" ");
+    if (lastSpace <= 0) {
+      candidate = candidate.slice(0, -1);
+      continue;
+    }
+    candidate = candidate.slice(0, lastSpace);
+  }
+  return candidate.trimEnd() + ellipsis;
 }
