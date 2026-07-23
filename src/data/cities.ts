@@ -41,10 +41,6 @@ export const cities: City[] = [
 ];
 
 export const futureCities: City[] = [
-  { slug: "phoenix", name: "Phoenix", marketSlug: "phoenix-metro", countyHint: "Maricopa County", areaHint: "future market placeholder", priority: 3 },
-  { slug: "mesa", name: "Mesa", marketSlug: "phoenix-metro", countyHint: "Maricopa County", areaHint: "future market placeholder", priority: 3 },
-  { slug: "chandler", name: "Chandler", marketSlug: "phoenix-metro", countyHint: "Maricopa County", areaHint: "future market placeholder", priority: 3 },
-  { slug: "scottsdale", name: "Scottsdale", marketSlug: "phoenix-metro", countyHint: "Maricopa County", areaHint: "future market placeholder", priority: 3 }
 ];
 
 export const priorityCityServiceCombos = [
