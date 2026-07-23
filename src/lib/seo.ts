@@ -35,7 +35,10 @@ export function buildMetadata({ title, description, path }: SeoInput): Metadata 
 
 export function truncateForMeta(text: string, max = 158): string {
   if (text.length <= max) return text;
-  const truncated = text.slice(0, max - 1);
+  const ellipsis = "...";
+  const contentMax = max - ellipsis.length;
+  const truncated = text.slice(0, contentMax);
   const lastSpace = truncated.lastIndexOf(" ");
-  return (lastSpace > 100 ? truncated.slice(0, lastSpace) : truncated).trimEnd() + "...";
+  const finalContent = lastSpace > 100 ? truncated.slice(0, lastSpace) : truncated;
+  return finalContent.trimEnd() + ellipsis;
 }
