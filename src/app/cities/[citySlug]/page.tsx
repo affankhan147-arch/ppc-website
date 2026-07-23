@@ -20,10 +20,17 @@ export function generateStaticParams() {
 }
 
 function buildCityDescription(city: (typeof cities)[number]) {
-  const base = `Request emergency plumbing and drain cleaning help serving ${city.name}, TX, covering ${city.areaHint}.`;
-  if (base.length <= 158) return base;
-  const shortBase = `Request emergency plumbing and drain cleaning help serving ${city.name}, TX and nearby ${city.countyHint} areas.`;
-  return shortBase.length <= 158 ? shortBase : shortBase.slice(0, 155).trimEnd() + "...";
+  const candidates = [
+    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX, covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
+    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX, covering ${city.areaHint}.`,
+    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX and nearby ${city.countyHint} areas. Confirm coverage and pricing with the provider.`,
+    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX and nearby ${city.countyHint} areas.`
+  ];
+  const ideal = candidates.find((c) => c.length >= 120 && c.length <= 158);
+  if (ideal) return ideal;
+  const fitting = candidates.filter((c) => c.length <= 158).sort((a, b) => b.length - a.length)[0];
+  if (fitting) return fitting;
+  return candidates[candidates.length - 1].slice(0, 155).trimEnd() + "...";
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -33,7 +40,7 @@ export async function generateMetadata({ params }: Props) {
   const isIrving = city.slug === "irving";
   return buildMetadata({
     title: isIrving ? "Emergency Plumber Irving, TX" : `Emergency plumbing help in ${city.name}, TX`,
-    description: isIrving ? "Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available local plumbing professional serving your area. Coverage and pricing vary by provider." : buildCityDescription(city),
+    description: isIrving ? "Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available plumbing professional serving your area." : buildCityDescription(city),
     path: `/cities/${city.slug}`
   });
 }
