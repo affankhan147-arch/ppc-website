@@ -1379,37 +1379,37 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   },
   "richardson/emergency-drain-cleaning": {
     decisionTitle: "Richardson emergency drain cleaning decision guide",
-    decisionIntro: "Richardson's mature, established neighborhoods combine decades of tree growth with aging cast iron sewer lines from the city's 1960s-1980s development peak, making root intrusion and material deterioration common joint factors.",
+    decisionIntro: "Richardson's Telecom Corridor area has a notably higher density of apartments and multi-family housing than neighboring cities, meaning shared-line drain issues and NTMWD's mineral-heavy water both play a bigger role here than in single-family-dominant areas.",
     decisionItems: [
-      "Mention your home's approximate age, since original cast iron sewer lines from Richardson's development era are now well past typical service life.",
-      "Note whether mature trees are near the sewer line path, a common contributing factor in established neighborhoods.",
-      "Ask whether camera inspection is included to distinguish root intrusion from material deterioration.",
-      "Describe whether the backup is isolated to one fixture or affects multiple drains."
+      "Mention if you're in a multi-family or apartment property near the Telecom Corridor, since shared drain lines behave differently than a standalone home's plumbing.",
+      "Ask whether NTMWD water hardness has contributed to mineral buildup narrowing the pipe over time, a factor separate from a one-time blockage.",
+      "Note whether neighboring units are also experiencing drain issues, which can indicate a shared-line problem rather than an isolated one.",
+      "Describe whether this is a first-time issue or a recurring one tied to scale buildup."
     ],
     providerTitle: "What a Richardson drain provider may check",
     providerItems: [
-      "Cast iron sewer line condition given the city's 1960s-1980s development-era housing stock.",
-      "Root intrusion likelihood given decades of mature tree growth in established neighborhoods.",
-      "Whether the blockage pattern suggests a fixture-level or main-line issue.",
-      "Camera inspection findings to determine repair versus replacement scope."
+      "Whether the property is served by a shared line common in multi-family Telecom Corridor buildings.",
+      "Mineral scale buildup from NTMWD's harder water narrowing pipe diameter over time.",
+      "Whether neighboring units report similar issues, pointing to a shared-line cause.",
+      "Standard blockage assessment for single-family properties outside the denser corridor areas."
     ],
     safetyTitle: "When to treat it as urgent in Richardson",
     safetyItems: [
-      "Multiple fixtures backing up together.",
+      "Multiple units or fixtures backing up together in a multi-family property.",
       "Sewage odor with slow drains.",
       "An outdoor cleanout overflowing.",
-      "Recurring backups suggesting root intrusion or advancing pipe deterioration."
+      "Recurring backups suggesting scale buildup or a shared-line issue needing broader attention."
     ],
     preventionTitle: "Richardson-specific prevention notes",
     preventionItems: [
-      "Homes with original cast iron sewer lines from the city's development era benefit from periodic camera inspection.",
-      "Ask about hydro jetting for recurring blockages tied to root intrusion or scale buildup.",
-      "Keep records of recurring issues to help determine whether line replacement is more cost-effective than repeated repair."
+      "Multi-family property managers benefit from tracking whether drain issues are isolated or affect multiple units.",
+      "NTMWD's harder water makes periodic drain maintenance more relevant here than in softer-water areas.",
+      "Ask about descaling or hydro jetting for recurring mineral-related blockages."
     ],
     extraFaqs: [
       {
-        question: "Are cast iron sewer lines common in Richardson?",
-        answer: "Given Richardson's residential development peaked between the 1960s and 1980s, cast iron sewer lines from that era are common across many established neighborhoods and are now old enough that material deterioration is a genuine factor alongside typical root intrusion."
+        question: "Does Richardson's harder water affect drain clogs?",
+        answer: "NTMWD water serving Richardson is on the harder side for the region, and mineral buildup can gradually narrow pipe diameter over years, contributing to blockages alongside more typical causes like grease or debris."
       }
     ],
     extraLinks: [
