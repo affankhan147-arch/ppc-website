@@ -1871,37 +1871,37 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   },
   "hurst/emergency-drain-cleaning": {
     decisionTitle: "Hurst emergency drain cleaning decision guide",
-    decisionIntro: "Hurst's mix of established 1960s-70s residential neighborhoods and a busy commercial corridor along Pipeline Road means both aging cast iron drain lines and higher-use commercial drain systems are genuinely relevant considerations here.",
+    decisionIntro: "Hurst's commercial corridor along Pipeline Road and Precinct Line Road sees meaningfully higher drain volume than a typical residential street, meaning grease and high-use buildup are genuinely relevant here alongside standard residential causes.",
     decisionItems: [
-      "Mention whether your property is residential or part of the Pipeline Road/Precinct Line commercial corridor.",
-      "Note your home's approximate age, since cast iron drain stacks from the 1960s-70s era are now well past typical service life.",
-      "Ask whether camera inspection is included to confirm the cause of the backup.",
-      "Describe whether the issue is isolated to one fixture or affects multiple drains."
+      "Mention whether your property is residential or part of the Pipeline Road or Precinct Line commercial corridor, since drain demands differ significantly.",
+      "For commercial properties, ask whether grease trap condition has been checked recently, a common contributing factor along this corridor.",
+      "Note whether the backup affects a single fixture or the broader commercial drain system.",
+      "Ask whether camera inspection is included to confirm the specific cause."
     ],
     providerTitle: "What a Hurst drain provider may check",
     providerItems: [
-      "Cast iron drain stack condition typical of Hurst's original 1960s-70s development.",
-      "Commercial-corridor-specific drain demands for properties near Pipeline Road.",
-      "Root intrusion likelihood in established residential neighborhoods.",
-      "Camera inspection findings to determine repair versus replacement scope."
+      "Grease trap condition and cleaning history for commercial properties along the Pipeline Road corridor.",
+      "Higher-volume drain wear patterns typical of busy commercial routes.",
+      "Standard cast iron drain stack condition for residential properties from the 1960s-70s era.",
+      "Whether the blockage pattern suggests a fixture-level or main-line issue."
     ],
     safetyTitle: "When to treat it as urgent in Hurst",
     safetyItems: [
-      "Multiple fixtures backing up together.",
+      "Multiple fixtures backing up together, especially in a commercial setting affecting operations.",
       "Sewage odor with slow drains.",
       "An outdoor cleanout overflowing.",
-      "Recurring backups affecting a commercial property's operations."
+      "Recurring backups affecting a commercial property's daily operations."
     ],
     preventionTitle: "Hurst-specific prevention notes",
     preventionItems: [
-      "Original 1960s-70s homes with cast iron drain stacks benefit from periodic camera inspection.",
-      "Commercial properties along Pipeline Road benefit from more frequent preventive drain maintenance given higher use.",
-      "Ask about hydro jetting for recurring blockages tied to root intrusion or commercial-volume buildup."
+      "Commercial properties along Pipeline Road benefit from a regular grease trap maintenance schedule.",
+      "Residential properties from the 1960s-70s era benefit from periodic cast iron drain line assessment.",
+      "Ask about hydro jetting for recurring commercial-volume-related blockages."
     ],
     extraFaqs: [
       {
-        question: "Do Hurst's commercial corridor properties have different drain needs?",
-        answer: "Yes. Properties along busy commercial routes like Pipeline Road and Precinct Line Road typically see higher drain use than residential properties, which can mean more frequent preventive maintenance is worthwhile compared to a standard home."
+        question: "Do Hurst commercial properties need different drain maintenance than homes?",
+        answer: "Yes. Businesses along Hurst's Pipeline Road and Precinct Line Road corridor typically see higher drain volume and grease-related buildup than residential properties, making a regular grease trap and drain maintenance schedule genuinely worthwhile."
       }
     ],
     extraLinks: [
@@ -2035,37 +2035,37 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   },
   "southlake/emergency-drain-cleaning": {
     decisionTitle: "Southlake emergency drain cleaning decision guide",
-    decisionIntro: "Southlake's larger custom homes often have more extensive drain systems and higher fixture counts than a standard DFW home, while the area's notably hard water contributes to mineral scale buildup over time.",
+    decisionIntro: "Southlake's larger custom and estate homes often have extended drain runs and multiple bathroom wings, meaning identifying which section of a genuinely larger system is affected matters more here than in a standard-sized home.",
     decisionItems: [
-      "Mention your home's approximate size and fixture count, since larger Southlake homes can have more extensive drain systems to diagnose.",
-      "Ask whether the provider addresses mineral scale buildup specifically, given the area's notably hard water.",
-      "Note whether the backup affects a specific zone or the broader home.",
-      "Describe whether this is a first-time or recurring issue."
+      "Mention your home's approximate size and layout, since larger Southlake homes often have separate drain runs for different wings.",
+      "Note whether the backup affects a single bathroom wing, the kitchen, or appears to be a whole-home issue.",
+      "Ask whether the provider maps out which drain run is affected before beginning work, given the more extensive system layout common here.",
+      "Describe whether this is the first issue in this specific area or a recurring one."
     ],
     providerTitle: "What a Southlake drain provider may check",
     providerItems: [
-      "Mineral scale buildup from the area's notably hard water (15-25 grains per gallon).",
-      "Extended drain system layout typical of larger custom homes.",
-      "Whether the blockage is isolated to one zone or affects multiple areas.",
-      "Camera inspection findings to determine repair versus replacement scope."
+      "Which specific drain run or wing is affected in a larger, multi-section home layout.",
+      "Extended drain line length and routing typical of larger custom-built properties.",
+      "Whether the issue is isolated to one section or indicates a broader system concern.",
+      "Camera inspection findings to map the affected run before recommending repair scope."
     ],
     safetyTitle: "When to treat it as urgent in Southlake",
     safetyItems: [
-      "Multiple fixtures or zones backing up together.",
+      "Multiple bathrooms or wings backing up together, suggesting a shared main line issue.",
       "Sewage odor with slow drains.",
       "An outdoor cleanout overflowing.",
-      "Recurring backups suggesting scale buildup or a broader system issue."
+      "Recurring backups isolated to the same wing or run."
     ],
     preventionTitle: "Southlake-specific prevention notes",
     preventionItems: [
-      "Consider whole-home water treatment given the area's notably hard water and its effect on drain scale buildup over time.",
-      "Larger homes benefit from a documented drain maintenance schedule given the more extensive system layout.",
-      "Ask about descaling or hydro jetting for recurring mineral-related blockages."
+      "Larger homes benefit from knowing which drain run serves which part of the house, useful information to have ready before any service call.",
+      "Ask your provider to document which section was serviced for future reference given the home's more complex layout.",
+      "Consider periodic camera inspection for older sections of extended drain runs."
     ],
     extraFaqs: [
       {
-        question: "Why do larger Southlake homes see more drain maintenance needs?",
-        answer: "More extensive drain systems with higher fixture counts, combined with the area's notably hard water contributing to mineral scale buildup, mean larger custom homes here often benefit from more proactive drain maintenance than a standard-sized home."
+        question: "Does a larger Southlake home complicate drain cleaning?",
+        answer: "It can add a diagnostic step - larger custom homes often have separate drain runs for different wings or bathrooms, so identifying which specific run is affected is a genuinely relevant first step before any clearing work begins, more so than in a standard-sized home."
       }
     ],
     extraLinks: [
