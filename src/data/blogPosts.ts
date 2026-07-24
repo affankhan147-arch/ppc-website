@@ -280,3 +280,14 @@ export const suddenLowWaterPressurePost: BlogPost = {
 };
 
 blogPosts.push(suddenLowWaterPressurePost);
+
+
+export const garbageDisposalHummingPost: BlogPost = {
+  slug: "garbage-disposal-humming-not-turning-what-it-means",
+  title: "Garbage Disposal Humming but Not Turning: What It Means",
+  directAnswer: "A disposal that hums but does not spin usually means the motor is receiving power but the blades are jammed or the motor has overheated and tripped its internal reset - turn off and unplug the unit before attempting to clear a jam with an Allen wrench in the bottom center hole, and stop if you smell burning or the hum continues after a jam is cleared.",
+  category: "Emergency steps",
+  relatedServiceSlug: "sink-and-shower-drain-backup"
+};
+
+blogPosts.push(garbageDisposalHummingPost);
