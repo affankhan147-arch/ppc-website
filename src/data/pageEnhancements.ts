@@ -2858,6 +2858,44 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" }
     ]
+  },
+  "does-homeowners-insurance-cover-a-plumbing-leak-in-texas": {
+    checklistTitle: "The real test Texas insurers use: sudden vs. gradual",
+    checklistIntro: "\"Sudden and accidental\" is the central coverage test in Texas water damage claims - here is how that distinction actually gets decided, and what documentation matters.",
+    checklistItems: [
+      "A single, abrupt event - a supply line snapping, a water heater failing outright - is generally treated as covered. A slow leak that develops over weeks or months is generally treated as a maintenance exclusion, even if you were unaware of it.",
+      "Insurance typically covers the resulting water damage (flooring, drywall, belongings) - not the cost to repair or replace the faulty pipe or fixture itself, which is treated as a separate maintenance cost.",
+      "Standard sewer or drain backups from tree roots or blockages are usually NOT covered under a standard policy - this typically requires a separate water backup endorsement added to the policy.",
+      "Mold resulting from a covered water event may be eligible for compensation, but coverage is often limited with specific dollar caps, and may require its own endorsement.",
+      "Freeze-related burst pipes can be denied if the home wasn't reasonably maintained during cold weather - for example, leaving heat off during a winter trip is sometimes treated as a maintenance failure.",
+      "Adjusters look for specific evidence of a sudden event: no prior service calls at the same location, clean water without signs of long-term biological growth, and ideally a plumber's written statement identifying an acute failure rather than chronic corrosion."
+    ],
+    proofTitle: "What actually helps a claim get approved",
+    proofItems: [
+      "Shut off the water and take reasonable steps to limit further damage as soon as the issue is found - policies generally expect this.",
+      "Document the timeline with photos, dated notes, and even past water bills if relevant, to help establish the damage was sudden rather than long-developing.",
+      "Get a professional plumbing diagnosis - a licensed plumber's assessment of the actual failure cause is often what separates an approved claim from a denied one.",
+      "Ask your specific insurer about water backup and service line coverage as optional add-ons if you don't already have them, since standard policies commonly exclude these."
+    ],
+    extraFaqs: [
+      {
+        question: "Does Texas homeowners insurance cover a slab leak?",
+        answer: "It depends on the cause. If the leak resulted from a sudden pipe failure, standard coverage often applies to the resulting damage. If the leak developed gradually or traces back to corrosion, age, or deferred maintenance, insurers typically deny that portion of the claim - this is why a professional diagnosis of the actual cause matters."
+      },
+      {
+        question: "Will my insurance cover a sewer backup in Texas?",
+        answer: "Usually not under a standard policy. Sewer and drain backups, including those caused by tree root intrusion, are commonly excluded unless you've added a specific water backup or sewer line endorsement to your policy."
+      },
+      {
+        question: "Does insurance pay to fix the pipe that caused the leak, or just the damage?",
+        answer: "Typically just the resulting water damage - repairing walls, floors, and affected belongings. The cost of the plumbing repair itself (fixing or replacing the failed pipe or fixture) is generally treated as a separate maintenance expense, not covered by the water damage claim."
+      }
+    ],
+    extraLinks: [
+      { label: "Plumber or water-restoration company first?", href: "/blog/plumber-or-water-restoration-company-first" },
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
+    ]
   }
 };
 
