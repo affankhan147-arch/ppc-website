@@ -302,3 +302,14 @@ export const tanklessWaterHeaterTroubleshootingPost: BlogPost = {
 };
 
 blogPosts.push(tanklessWaterHeaterTroubleshootingPost);
+
+
+export const outdoorFaucetFreezeDamagePost: BlogPost = {
+  slug: "outdoor-faucet-hose-bib-leaking-after-freeze-dallas",
+  title: "Outdoor Faucet or Hose Bib Leaking After a Freeze in Dallas",
+  directAnswer: "A hose bib that leaks or will not shut off tightly after a freeze often means the internal stem or seat cracked from ice expansion inside the pipe, which may not show until the faucet is used again - shut off the dedicated interior valve if one exists, avoid running the outdoor faucet further, and check for water intrusion into the wall behind it before the next use.",
+  category: "Prevention",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(outdoorFaucetFreezeDamagePost);
