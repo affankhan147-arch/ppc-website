@@ -2199,37 +2199,37 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   },
   "the-colony/emergency-drain-cleaning": {
     decisionTitle: "The Colony emergency drain cleaning decision guide",
-    decisionIntro: "The Colony's older lakeside neighborhoods near Lake Lewisville often have aging drain lines, while the city's consistently hard, Denton County-wide water contributes to mineral scale buildup across every construction era.",
+    decisionIntro: "The Colony's 23 miles of Lake Lewisville shoreline means many properties are close enough to the water table that drainage grading and elevation relative to the lake genuinely affects how backups develop and where water goes if a line fails.",
     decisionItems: [
-      "Mention whether your home is in an older lakeside area or newer development, since drain line age varies significantly between them.",
-      "Ask whether the provider addresses mineral scale buildup specifically, given the area's consistently hard water.",
-      "Note whether the backup is a first-time or recurring issue.",
-      "Describe whether one fixture or multiple fixtures are affected."
+      "Mention how close your property is to the lakefront or a drainage easement, since elevation relative to the water table can affect backup severity.",
+      "Note whether recent heavy rain or high lake levels preceded the backup, which can be a contributing factor for lake-adjacent properties.",
+      "Ask whether the provider checks exterior grading and drainage flow as part of the assessment for lake-proximity properties.",
+      "Describe whether the issue is isolated to one fixture or affects the broader home."
     ],
     providerTitle: "What a The Colony drain provider may check",
     providerItems: [
-      "Drain line age and condition, varying significantly between older lakeside and newer subdivision homes.",
-      "Mineral scale buildup from the area's consistently hard water.",
-      "Whether the blockage pattern suggests a fixture-level or main-line issue.",
+      "Property elevation and grading relative to Lake Lewisville for lake-adjacent homes.",
+      "Whether recent rain or lake level changes may have contributed to the backup.",
+      "Standard fixture-level and main-line blockage assessment for properties farther from the shoreline.",
       "Camera inspection findings to determine repair versus replacement scope."
     ],
     safetyTitle: "When to treat it as urgent in The Colony",
     safetyItems: [
-      "Multiple fixtures backing up together.",
+      "Multiple fixtures backing up together, especially following heavy rain near the lake.",
       "Sewage odor with slow drains.",
-      "An outdoor cleanout overflowing.",
-      "Recurring backups suggesting an aging-line or scale-related issue."
+      "An outdoor cleanout overflowing, particularly relevant for lower-elevation lakefront properties.",
+      "Recurring backups following rain events for lake-adjacent homes."
     ],
     preventionTitle: "The Colony-specific prevention notes",
     preventionItems: [
-      "Older lakeside homes benefit from periodic drain line camera inspection.",
-      "Consider a water softener given the area's consistently hard water and its effect on drain scale buildup.",
-      "Ask about hydro jetting for recurring mineral-related blockages."
+      "Lake-adjacent properties benefit from confirming exterior drainage grading directs water away from the home.",
+      "Ask whether your property's elevation relative to the lake has been a factor in past drainage issues.",
+      "Properties farther from the shoreline should follow standard drain maintenance practices for the DFW area."
     ],
     extraFaqs: [
       {
-        question: "Do older parts of The Colony have different drain needs than newer areas?",
-        answer: "Yes. Older neighborhoods closer to the Lake Lewisville shoreline tend to have aging drain lines requiring more attention than the newer subdivisions on the city's growing edges, though hard water affects both areas equally."
+        question: "Does living near Lake Lewisville affect drain backup risk in The Colony?",
+        answer: "It can. Properties closer to the shoreline or at lower elevation relative to the lake may see backup issues connected to drainage grading, heavy rain, or lake level changes in ways that properties farther from the water typically don't experience."
       }
     ],
     extraLinks: [
