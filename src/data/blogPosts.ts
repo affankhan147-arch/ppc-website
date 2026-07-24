@@ -258,3 +258,14 @@ export const frozenPipesPreventionPost: BlogPost = {
 };
 
 blogPosts.push(frozenPipesPreventionPost);
+
+
+export const slabLeakWarningSignsPost: BlogPost = {
+  slug: "slab-leak-warning-signs-dallas-fort-worth-homeowners",
+  title: "Slab Leak Warning Signs Dallas-Fort Worth Homeowners Should Know",
+  directAnswer: "DFW sits on expansive clay soil that shifts with moisture changes, which is a common contributor to slab leaks - watch for an unexplained spike in your water bill, warm spots on flooring, the sound of running water when everything is off, cracks in walls or flooring, or unexplained moisture and mold under carpet, and request an evaluation before the leak causes structural damage.",
+  category: "Prevention",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(slabLeakWarningSignsPost);
