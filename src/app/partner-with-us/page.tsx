@@ -1,11 +1,11 @@
 import { PartnerApplicationForm } from "@/components/PartnerApplicationForm";
 import { DirectAnswer } from "@/components/PageSections";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Provider partner inquiries",
-  description: "Partner inquiry page for licensed plumbing providers and service partners in Dallas-Fort Worth interested in receiving qualified local emergency plumbing leads.",
+  description: truncateForMeta("Partner inquiry page for licensed plumbing providers and service partners in Dallas-Fort Worth interested in receiving qualified local emergency plumbing leads."),
   path: "/partner-with-us"
 });
 

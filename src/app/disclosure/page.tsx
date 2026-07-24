@@ -1,10 +1,10 @@
 import { siteConfig } from "@/data/site";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Provider connection disclosure",
-  description: "Disclosure for the Dallas-Fort Worth emergency plumbing service request website, explaining the provider connection model and how service requests are routed to local plumbers.",
+  description: truncateForMeta("Disclosure for the Dallas-Fort Worth emergency plumbing service request website, explaining the provider connection model and how service requests are routed to local plumbers."),
   path: "/disclosure"
 });
 

@@ -1,9 +1,9 @@
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Privacy policy",
-  description: "Privacy policy for the Dallas-Fort Worth emergency plumbing service request website, covering what information is collected and how it is used when you request help.",
+  description: truncateForMeta("Privacy policy for the Dallas-Fort Worth emergency plumbing service request website, covering what information is collected and how it is used when you request help."),
   path: "/privacy"
 });
 

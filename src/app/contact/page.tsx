@@ -2,12 +2,12 @@ import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer } from "@/components/PageSections";
 import { siteConfig } from "@/data/site";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Request urgent plumbing help",
-  description: "Contact page for Dallas-Fort Worth emergency plumbing and drain cleaning service requests - share your city, problem, and urgency to get connected with an available provider.",
+  description: truncateForMeta("Contact page for Dallas-Fort Worth emergency plumbing and drain cleaning service requests - share your city, problem, and urgency to get connected with an available provider."),
   path: "/contact"
 });
 
