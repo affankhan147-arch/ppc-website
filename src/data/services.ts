@@ -12,6 +12,7 @@ export type Service = {
   costDiscussion: string;
   costFactors: string[];
   faqSeed: string[];
+  image?: string;
 };
 
 export const services: Service[] = [
@@ -164,6 +165,168 @@ export const services: Service[] = [
     costDiscussion: "Shared drain backup cost depends on where the blockage sits and whether the main line is involved. Ask whether the provider is clearing a fixture branch or diagnosing a wider line issue.",
     costFactors: ["shared line access", "clog depth", "equipment", "repeat issue", "building layout"],
     faqSeed: ["Why do sink and shower drains back up together?", "Is it a main line problem?", "Should I snake it myself?"]
+  }
+,
+  {
+    slug: "emergency-plumbing-under-200-dallas",
+    name: "emergency plumbing under $200 Dallas",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Emergency plumbing under $200 in Dallas covers diagnosis and affordable fixes.",
+    urgency: "High",
+    symptoms: ["active leak", "no water"],
+    steps: ["Shut off", "Call"],
+    callPrep: ["Address"],
+    commonCauses: ["freeze", "clog"],
+    mistakesToAvoid: ["Do not wait"],
+    costDiscussion: "Affordable emergency fixes.",
+    costFactors: ["severity"],
+    faqSeed: ["What costs under $200?"],
+    image: "/images/services/service-24hr-emergency-plumber.jpg"
+  },
+  {
+    slug: "same-day-emergency-plumber-dfw",
+    name: "same-day emergency plumber DFW",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Same-day emergency plumber in DFW connects urgent needs to available providers.",
+    urgency: "High",
+    symptoms: ["urgent leak"],
+    steps: ["Call now"],
+    callPrep: ["City"],
+    commonCauses: ["pipe break"],
+    mistakesToAvoid: ["Do not wait"],
+    costDiscussion: "Same-day dispatch included.",
+    costFactors: ["availability"],
+    faqSeed: ["How fast?"],
+    image: "/images/services/service-24hr-emergency-plumber.jpg"
+  },
+  {
+    slug: "toilet-backup-emergency-repair-dallas",
+    name: "toilet backup emergency repair Dallas",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Toilet backup emergency repair stops overflow and restores safe use.",
+    urgency: "High",
+    symptoms: ["overflow"],
+    steps: ["Turn off supply"],
+    callPrep: ["Location"],
+    commonCauses: ["clog"],
+    mistakesToAvoid: ["Do not flush"],
+    costDiscussion: "Depends on blockage depth.",
+    costFactors: ["location"],
+    faqSeed: ["Main line issue?"],
+    image: "/images/services/service-toilet-overflow-emergency.jpg"
+  },
+  {
+    slug: "water-heater-not-heating-emergency-service",
+    name: "water heater not heating emergency service",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Water heater not heating diagnosis finds why hot water is gone.",
+    urgency: "Medium",
+    symptoms: ["no hot water"],
+    steps: ["Check breaker"],
+    callPrep: ["Type"],
+    commonCauses: ["element"],
+    mistakesToAvoid: ["Do not relight"],
+    costDiscussion: "Repair or replace.",
+    costFactors: ["age"],
+    faqSeed: ["How old?"],
+    image: "/images/services/service-water-heater-emergency.jpg"
+  },
+  {
+    slug: "burst-pipe-emergency-what-to-do-first",
+    name: "burst pipe emergency what to do first",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Burst pipe: shut off main valve, protect electrical, call immediately.",
+    urgency: "High",
+    symptoms: ["water spray"],
+    steps: ["Shut off main"],
+    callPrep: ["Location"],
+    commonCauses: ["freeze"],
+    mistakesToAvoid: ["Do not leave on"],
+    costDiscussion: "Depends on access.",
+    costFactors: ["access"],
+    faqSeed: ["Where is main?"],
+    image: "/images/services/service-burst-pipe-emergency.jpg"
+  }
+,
+  {
+    slug: "emergency-plumbing-under-200-dallas",
+    name: "emergency plumbing under $200 Dallas",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Emergency plumbing under $200 in Dallas covers diagnosis and affordable fixes.",
+    urgency: "High",
+    symptoms: ["active leak", "no water"],
+    steps: ["Shut off", "Call"],
+    callPrep: ["Address"],
+    commonCauses: ["freeze", "clog"],
+    mistakesToAvoid: ["Do not wait"],
+    costDiscussion: "Affordable emergency fixes.",
+    costFactors: ["severity"],
+    faqSeed: ["What costs under $200?"],
+    image: "/images/services/service-24hr-emergency-plumber.jpg"
+  },
+  {
+    slug: "same-day-emergency-plumber-dfw",
+    name: "same-day emergency plumber DFW",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Same-day emergency plumber in DFW connects urgent needs to available providers.",
+    urgency: "High",
+    symptoms: ["urgent leak"],
+    steps: ["Call now"],
+    callPrep: ["City"],
+    commonCauses: ["pipe break"],
+    mistakesToAvoid: ["Do not wait"],
+    costDiscussion: "Same-day dispatch included.",
+    costFactors: ["availability"],
+    faqSeed: ["How fast?"],
+    image: "/images/services/service-24hr-emergency-plumber.jpg"
+  },
+  {
+    slug: "toilet-backup-emergency-repair-dallas",
+    name: "toilet backup emergency repair Dallas",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Toilet backup emergency repair stops overflow and restores safe use.",
+    urgency: "High",
+    symptoms: ["overflow"],
+    steps: ["Turn off supply"],
+    callPrep: ["Location"],
+    commonCauses: ["clog"],
+    mistakesToAvoid: ["Do not flush"],
+    costDiscussion: "Depends on blockage depth.",
+    costFactors: ["location"],
+    faqSeed: ["Main line issue?"],
+    image: "/images/services/service-toilet-overflow-emergency.jpg"
+  },
+  {
+    slug: "water-heater-not-heating-emergency-service",
+    name: "water heater not heating emergency service",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Water heater not heating diagnosis finds why hot water is gone.",
+    urgency: "Medium",
+    symptoms: ["no hot water"],
+    steps: ["Check breaker"],
+    callPrep: ["Type"],
+    commonCauses: ["element"],
+    mistakesToAvoid: ["Do not relight"],
+    costDiscussion: "Repair or replace.",
+    costFactors: ["age"],
+    faqSeed: ["How old?"],
+    image: "/images/services/service-water-heater-emergency.jpg"
+  },
+  {
+    slug: "burst-pipe-emergency-what-to-do-first",
+    name: "burst pipe emergency what to do first",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Burst pipe: shut off main valve, protect electrical, call immediately.",
+    urgency: "High",
+    symptoms: ["water spray"],
+    steps: ["Shut off main"],
+    callPrep: ["Location"],
+    commonCauses: ["freeze"],
+    mistakesToAvoid: ["Do not leave on"],
+    costDiscussion: "Depends on access.",
+    costFactors: ["access"],
+    faqSeed: ["Where is main?"],
+    image: "/images/services/service-burst-pipe-emergency.jpg"
   }
 ];
 
