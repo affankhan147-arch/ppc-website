@@ -247,3 +247,14 @@ export const insuranceCoveragePost: BlogPost = {
 };
 
 blogPosts.push(insuranceCoveragePost);
+
+
+export const frozenPipesPreventionPost: BlogPost = {
+  slug: "frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze",
+  title: "Frozen Pipes in Dallas-Fort Worth: Prevention Steps Before the Next Freeze",
+  directAnswer: "DFW homes are more freeze-vulnerable than northern climates because pipes are often less insulated and run through attics, garages, and exterior walls that are not built for extended sub-freezing temperatures - during a hard freeze warning, drip exposed faucets, keep cabinet doors open under sinks, disconnect hoses, and know where the main shutoff valve is before a pipe cracks.",
+  category: "Prevention",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(frozenPipesPreventionPost);
