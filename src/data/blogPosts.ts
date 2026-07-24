@@ -269,3 +269,14 @@ export const slabLeakWarningSignsPost: BlogPost = {
 };
 
 blogPosts.push(slabLeakWarningSignsPost);
+
+
+export const suddenLowWaterPressurePost: BlogPost = {
+  slug: "sudden-low-water-pressure-in-dallas-home-what-it-means",
+  title: "Sudden Low Water Pressure in Your Dallas Home: What It Means",
+  directAnswer: "Gradual pressure loss is often a fixture, aerator, or municipal-side issue, but a sudden drop in water pressure across the whole house can point to a hidden leak, a failing pressure regulator, or a break in the main line - if the drop is sudden and affects multiple fixtures at once, treat it as a signal worth checking rather than something to ignore.",
+  category: "Prevention",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(suddenLowWaterPressurePost);
