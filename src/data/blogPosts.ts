@@ -291,3 +291,14 @@ export const garbageDisposalHummingPost: BlogPost = {
 };
 
 blogPosts.push(garbageDisposalHummingPost);
+
+
+export const tanklessWaterHeaterTroubleshootingPost: BlogPost = {
+  slug: "tankless-water-heater-not-producing-hot-water-troubleshooting",
+  title: "Tankless Water Heater Not Producing Hot Water: What to Check First",
+  directAnswer: "A tankless unit with no hot water can point to a tripped breaker or gas supply issue, a clogged inlet filter restricting flow below the unit's activation threshold, or a demand that exceeds the unit's sizing during simultaneous use - check the power/gas supply and error code display first, since most tankless units show a diagnostic code that narrows the cause before a technician visit is needed.",
+  category: "Emergency steps",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(tanklessWaterHeaterTroubleshootingPost);
