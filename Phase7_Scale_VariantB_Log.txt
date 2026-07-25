@@ -1,0 +1,15 @@
+﻿--- PHASE 7: SCALING VARIANT B ACROSS ALL PAGES ---
+[PASS] Changed directory to: C:\Users\dell\Documents\plumbinghands-live-master
+Searching for target files...
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Raw'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Raw'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Raw'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Raw'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Raw'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Raw'.
+
+--- SCALING SUMMARY ---
+Total files processed: 29
+Files updated with Variant B: 0
+Failed updates: 6
+[WARN] No files were updated. Deployment skipped.

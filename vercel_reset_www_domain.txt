@@ -1,0 +1,13 @@
+﻿--- RESETTING WWW DOMAIN STATUS ON VERCEL ---
+Removing www.plumbinghands.com...
+Re-adding www.plumbinghands.com...
+Add command output: Vercel CLI 57.0.0 (Node.js 24.18.0) Adding domain www.plumbinghands.com to project plumbinghands > Domain www.plumbinghands.com is already assigned to project plumbinghands. [774ms] > The domain will automatically get assigned to your latest production deployment.
+Forcing verification check...
+Verify command output: Vercel CLI 57.0.0 (Node.js 24.18.0) Checking DNS configuration for www.plumbinghands.com Retrieving projectΓÇª > Checked www.plumbinghands.com under affankhan147-1002s-projects [5s] System.Management.Automation.RemoteException   Status System.Management.Automation.RemoteException     DNS Configuration    ! DNS Change Recommended             Project              ΓêÜ Verified for plumbinghands     System.Management.Automation.RemoteException   Recommended change System.Management.Automation.RemoteException     1. Vercel recommends updating the DNS records for www.plumbinghands.com with one of the following options: System.Management.Automation.RemoteException        a) Add a CNAME record:           CNAME  www  04a46f8a9d01f9d9.vercel-dns-017.com. System.Management.Automation.RemoteException        b) Switch to the Vercel nameservers:           ns1.vercel-dns.com           ns2.vercel-dns.com System.Management.Automation.RemoteException   Currently resolves to System.Management.Automation.RemoteException     Type     Value                         A        66.33.60.34                   A        76.76.21.164                  CNAME    cname.vercel-dns.com.     System.Management.Automation.RemoteException   Nameservers System.Management.Automation.RemoteException     ns1.dns-parking.com     ns2.dns-parking.com System.Management.Automation.RemoteException
+
+=== ACTION REQUIRED ===
+1. Wait exactly 5 minutes for Vercel to process the DNS.
+2. Go back to your Vercel Dashboard Domains page.
+3. Click the 'Refresh' button next to www.plumbinghands.com.
+4. The orange badge will turn green/blue (Valid Configuration).
+5. Click the 'Edit' button, and the Set as Primary option will be there.

@@ -1,0 +1,14 @@
+﻿--- PHASE 7: FINAL VARIANT B SCALING (PS 5.1 COMPATIBLE) ---
+[PASS] Changed directory to: C:\Users\dell\Documents\plumbinghands-live-master
+Checking src/data/site.ts ...
+[INFO] src/data/site.ts does not contain the Hero/CTA strings. Searching elsewhere...
+
+[FAIL] Could not find the Hero/CTA strings anywhere in your source files.
+
+--- MANUAL ACTION REQUIRED ---
+The strings may be in an environment variable (NEXT_PUBLIC_SITE_URL) or a server-side config.
+Please search your entire project for the old phrases:
+   - 'Urgent Plumbing Help When Every Minute Matters.'
+   - 'Call for emergency plumbing help'
+Once you locate the file, simply replace those lines manually, run 'git add .', 'git commit', 'git push', and Vercel will auto-deploy.
+Then run the verification script to confirm the change is live.

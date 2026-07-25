@@ -1,0 +1,17 @@
+﻿--- PHASE 7: SCALING VARIANT B (CORRECTED) ---
+[PASS] Changed directory to: C:\Users\dell\Documents\plumbinghands-live-master
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Encoding'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Encoding'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Encoding'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Encoding'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Encoding'.
+[FAIL] Could not process page.tsx. Error: A parameter cannot be found that matches parameter name 'Encoding'.
+
+--- SCALING SUMMARY ---
+Total files processed: 29
+Files updated with Variant B: 0
+Failed updates: 6
+[WARN] No files were updated. The old strings might not exist in any source file. Deployment skipped.
+
+Hint: If you don't see the old H1/CTA in your files, it might be coming from a data file (e.g., site.ts) or an environment variable.
+Check your src/data/site.ts or src/lib/ files for the strings.

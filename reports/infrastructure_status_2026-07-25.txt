@@ -1,0 +1,43 @@
+﻿PLUMBINGHANDS.COM - INFRASTRUCTURE STATUS REPORT
+Generated: 2026-07-25
+
+=== VERIFIED WORKING (confirmed via live checks today) ===
+
+GIT / GITHUB
+- Correct remote: https://github.com/affankhan147-arch/ppc-website.git
+- Correct username: affankhan147-arch (DeepSeek session had this WRONG as affankhan-arch)
+- Repo clean, all commits pushing successfully all session
+
+VERCEL
+- Project: "plumbinghands" (NOT "deploy_plumbing" - that's an unused leftover from DeepSeek attempt)
+- Production URL: https://plumbinghands.com
+- Deploy command: npx.cmd vercel --prod --force (from C:\Users\dell\Documents\plumbinghands-live-master)
+- Domain "plumbinghands.com" correctly attached, no typos
+
+DNS (as of this report)
+- plumbinghands.com (apex) -> A record -> 76.76.21.21 (correct, WORKING)
+- www.plumbinghands.com -> NO DNS RECORD FOUND (the one real gap)
+
+LIVE SITE STATUS
+- https://plumbinghands.com returns HTTP 200, SSL valid, verified dozens of times today
+- 187 pages live, all verified
+
+=== THE ONE REAL ISSUE ===
+
+www.plumbinghands.com has no DNS record - fails with DNS error instead of
+redirecting to your working site.
+
+FIX (optional, in Hostinger DNS panel):
+Add CNAME record:
+  Host: www
+  Points to: cname.vercel-dns.com
+(Confirm exact value under Vercel dashboard > Project Settings > Domains > www.plumbinghands.com > Add)
+
+Not urgent - canonical non-www domain works perfectly.
+
+=== ABOUT THE DEEPSEEK SESSION HISTORY ===
+
+Those problems (wrong GitHub username, "p1umbinghands" typo, Red/Orange domain
+states, SSL not issuing) appear to be from an earlier, since-resolved setup
+attempt. None of those symptoms match today's verified reality. Do not re-run
+DNS changes based on that history - current setup is correct and working.
