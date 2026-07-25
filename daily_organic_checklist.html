@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Organic Checklist – PlumbingHands</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #1A4D8F; }
+    .task { margin: 8px 0; }
+    .done { text-decoration: line-through; color: #888; }
+    button { margin-top: 20px; padding: 10px 20px; background: #1A4D8F; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #143A6F; }
+  </style>
+</head>
+<body>
+  <h1>✅ Daily Organic Checklist</h1>
+  <p>Check off each task as you complete it today.</p>
+  <div id="tasks">
+    <label class="task"><input type="checkbox" /> Check Google Search Console for impressions/clicks</label>
+    <label class="task"><input type="checkbox" /> Verify plumbinghands.com loads correctly</label>
+    <label class="task"><input type="checkbox" /> Reply to any outreach emails</label>
+    <label class="task"><input type="checkbox" /> Send 1 new outreach email (property manager / HOA)</label>
+    <label class="task"><input type="checkbox" /> Review sitemap.xml for indexing status</label>
+    <label class="task"><input type="checkbox" /> Log any calls received in Notepad or CSV</label>
+  </div>
+  <button onclick="saveChecklist()">Save Progress</button>
+  <script>
+    function saveChecklist() {
+      const checks = document.querySelectorAll('input[type="checkbox"]');
+      let state = [];
+      checks.forEach((c, i) => state.push(c.checked ? '1' : '0'));
+      localStorage.setItem('plumbinghandChecklist', state.join(''));
+      alert('Progress saved locally!');
+    }
+    const saved = localStorage.getItem('plumbinghandChecklist');
+    if (saved) {
+      const checks = document.querySelectorAll('input[type="checkbox"]');
+      saved.split('').forEach((val, i) => {
+        if (i < checks.length) checks[i].checked = (val === '1');
+      });
+    }
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', function() {
+        this.parentElement.classList.toggle('done', this.checked);
+      });
+    });
+  </script>
+</body>
+</html>
