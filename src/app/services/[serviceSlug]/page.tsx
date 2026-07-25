@@ -9,6 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
+import { blogPosts } from "@/data/blogPosts";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
@@ -50,6 +51,7 @@ export default async function ServicePage({ params }: Props) {
   ].slice(0, 8);
   const relatedProblems = problems.filter((problem) => problem.relatedServiceSlug === service.slug).slice(0, 3);
   const relatedCostGuide = costGuides.find((guide) => guide.relatedServiceSlug === service.slug);
+  const relatedBlogPosts = blogPosts.filter((post) => post.relatedServiceSlug === service.slug).slice(0, 3);
   const priorityCityLinks = priorityCityServiceCombos
     .filter((combo) => combo.serviceSlug === service.slug)
     .slice(0, 4)
@@ -131,7 +133,8 @@ export default async function ServicePage({ params }: Props) {
           ...(enhancement?.extraLinks || []),
           ...priorityCityLinks,
           ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
-          ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])
+          ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : []),
+          ...relatedBlogPosts.map((post) => ({ label: post.title, href: `/blog/${post.slug}` }))
         ]}
       />
     </main>
