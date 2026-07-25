@@ -346,3 +346,14 @@ export const scaldingWaterMixingValvePost: BlogPost = {
 };
 
 blogPosts.push(scaldingWaterMixingValvePost);
+
+
+export const anodeRodMaintenancePost: BlogPost = {
+  slug: "water-heater-anode-rod-signs-it-needs-replacing-dallas",
+  title: "Water Heater Anode Rod: Signs It Needs Replacing in Dallas",
+  directAnswer: "The anode rod is a sacrificial metal rod that corrodes instead of the tank, and Dallas' harder water can accelerate its breakdown faster than in areas with softer water - rotten-egg smelling hot water, a rod pulled out heavily corroded or coated in calcium, or a tank nearing its expected lifespan without a documented rod replacement are the clearest signs to have it checked.",
+  category: "Prevention",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(anodeRodMaintenancePost);
