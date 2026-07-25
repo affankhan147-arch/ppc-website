@@ -324,3 +324,14 @@ export const expansionTankFailurePost: BlogPost = {
 };
 
 blogPosts.push(expansionTankFailurePost);
+
+
+export const pilotLightWontStayLitPost: BlogPost = {
+  slug: "water-heater-pilot-light-wont-stay-lit-dallas",
+  title: "Water Heater Pilot Light Won't Stay Lit: What It Usually Means",
+  directAnswer: "A pilot light that will not stay lit is most often a worn thermocouple that fails to signal the gas valve to stay open, though a dirty pilot orifice, a draft in the burner compartment, or a failing gas control valve can also cause it - if you smell gas at any point while checking this, stop immediately and follow the gas safety steps rather than continuing to relight it yourself.",
+  category: "Emergency steps",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(pilotLightWontStayLitPost);
