@@ -313,3 +313,14 @@ export const outdoorFaucetFreezeDamagePost: BlogPost = {
 };
 
 blogPosts.push(outdoorFaucetFreezeDamagePost);
+
+
+export const expansionTankFailurePost: BlogPost = {
+  slug: "water-heater-expansion-tank-failure-signs-dallas",
+  title: "Water Heater Expansion Tank Failure Signs Dallas Homeowners Should Know",
+  directAnswer: "Many Dallas-Fort Worth water heaters use a closed system with a pressure-reducing valve, which typically requires an expansion tank to absorb pressure from heated water - warning signs of a failed expansion tank include water dripping from the temperature-and-pressure relief valve, a waterlogged tank that sounds heavy or does not rattle when tapped, or unusually high water pressure readings inside the home.",
+  category: "Prevention",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(expansionTankFailurePost);
