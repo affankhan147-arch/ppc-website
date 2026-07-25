@@ -131,10 +131,10 @@ export default async function ServicePage({ params }: Props) {
       <InternalLinks
         extra={[
           ...(enhancement?.extraLinks || []),
-          ...priorityCityLinks,
-          ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
-          ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : []),
-          ...relatedBlogPosts.map((post) => ({ label: post.title, href: `/blog/${post.slug}` }))
+          ...relatedBlogPosts.map((post) => ({ label: post.title, href: `/blog/${post.slug}` })),
+          ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : []),
+          ...relatedProblems.slice(0, 2).map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
+          ...priorityCityLinks.slice(0, 2)
         ]}
       />
     </main>
