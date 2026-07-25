@@ -335,3 +335,14 @@ export const pilotLightWontStayLitPost: BlogPost = {
 };
 
 blogPosts.push(pilotLightWontStayLitPost);
+
+
+export const scaldingWaterMixingValvePost: BlogPost = {
+  slug: "shower-water-suddenly-scalding-or-freezing-what-it-means",
+  title: "Shower Water Suddenly Scalding or Freezing: What It Means",
+  directAnswer: "Sudden temperature swings in a shower usually point to a failing pressure-balancing or thermostatic mixing valve that can no longer regulate hot and cold water properly, especially if the swing happens when another fixture in the home is used at the same time - treat repeated scalding swings as a safety issue, not just an inconvenience, particularly in homes with children or elderly occupants.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(scaldingWaterMixingValvePost);
