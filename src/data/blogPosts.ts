@@ -357,3 +357,14 @@ export const anodeRodMaintenancePost: BlogPost = {
 };
 
 blogPosts.push(anodeRodMaintenancePost);
+
+
+export const highWaterPressurePost: BlogPost = {
+  slug: "high-water-pressure-in-dallas-home-hidden-pipe-damage-risk",
+  title: "High Water Pressure in Your Dallas Home: A Hidden Pipe Damage Risk",
+  directAnswer: "A pressure-reducing valve (PRV) that fails typically fails open rather than closed, which lets municipal supply pressure run unchecked into the home's pipes, water heater, and appliances - banging pipes, running toilets, dripping faucets with no visible cause, and a shortened water heater lifespan can all point to unregulated high pressure that a plumber can confirm with a simple gauge test at an outdoor hose bib.",
+  category: "Prevention",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(highWaterPressurePost);
