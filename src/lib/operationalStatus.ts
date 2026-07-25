@@ -26,7 +26,7 @@ function phoneStatus(env: Environment) {
 }
 
 function siteBase(env: Environment) {
-  return (env.NEXT_PUBLIC_SITE_URL || "https://www.plumbinghands.com").replace(/\/+$/, "");
+  return (env.NEXT_PUBLIC_SITE_URL || "https://plumbinghands.com").replace(/\/+$/, "");
 }
 
 export function getOperationalStatus(env: Environment = process.env) {
