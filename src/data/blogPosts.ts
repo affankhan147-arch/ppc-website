@@ -368,3 +368,14 @@ export const highWaterPressurePost: BlogPost = {
 };
 
 blogPosts.push(highWaterPressurePost);
+
+
+export const waterMeterLeakDetectionPost: BlogPost = {
+  slug: "how-to-check-your-water-meter-for-a-hidden-leak-dallas",
+  title: "How to Check Your Water Meter for a Hidden Leak in Dallas",
+  directAnswer: "With all water fixtures and appliances off, locate your water meter and watch the small leak-indicator dial or triangle - if it is spinning with everything off, water is flowing somewhere in the system, and comparing two meter readings taken an hour apart with no water use confirms whether a hidden leak exists before it shows up as a high bill or visible damage.",
+  category: "Prevention",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(waterMeterLeakDetectionPost);
