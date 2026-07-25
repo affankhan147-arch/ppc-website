@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlumbingHands Backlink Outreach Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; }
+        h1 { color: #1A4D8F; border-bottom: 2px solid #E8622C; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .status-pending { color: orange; font-weight: bold; }
+        .status-sent { color: blue; font-weight: bold; }
+        .status-got-link { color: green; font-weight: bold; }
+        .actions { margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 5px; }
+        input[type="text"] { padding: 8px; width: 200px; }
+        button { padding: 8px 15px; background: #1A4D8F; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #143A6F; }
+    </style>
+</head>
+<body>
+    <h1>🔗 Backlink & Outreach Tracker</h1>
+    <p>Use this dashboard to track your manual outreach for DFW emergency water-shutoff guide.</p>
+    
+    <div class="actions">
+        <h3>Add New Prospect</h3>
+        <input type="text" id="pName" placeholder="Company/Name">
+        <input type="text" id="pUrl" placeholder="Website URL">
+        <input type="text" id="pEmail" placeholder="Contact Email">
+        <button onclick="addProspect()">Add to List</button>
+    </div>
+
+    <table id="prospectTable">
+        <thead>
+            <tr>
+                <th>Prospect</th>
+                <th>URL</th>
+                <th>Email</th>
+                <th>Sent Date</th>
+                <th>Follow-up</th>
+                <th>Response</th>
+                <th>Link?</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+    <button style="margin-top:10px; background:#E8622C;" onclick="exportCSV()">Export Updated CSV</button>
+
+    <script>
+        let data = [];
+
+        function loadCSV() {
+            const raw = localStorage.getItem('backlinkData');
+            if (raw) {
+                data = JSON.parse(raw);
+                renderTable();
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem('backlinkData', JSON.stringify(data));
+        }
+
+        function addProspect() {
+            const name = document.getElementById('pName').value;
+            const url = document.getElementById('pUrl').value;
+            const email = document.getElementById('pEmail').value;
+            if (!name || !url) return alert("Name and URL are required.");
+            data.push({
+                name: name,
+                url: url,
+                email: email,
+                sent: "",
+                followup: "",
+                response: "",
+                link: "",
+                notes: ""
+            });
+            saveData();
+            renderTable();
+            document.getElementById('pName').value = "";
+            document.getElementById('pUrl').value = "";
+            document.getElementById('pEmail').value = "";
+        }
+
+        function updateField(index, field, value) {
+            data[index][field] = value;
+            saveData();
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = "";
+            data.forEach((row, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = 
+                    <td></td>
+                    <td><a href="" target="_blank"></a></td>
+                    <td></td>
+                    <td><input type="date" value="" onchange="updateField(, 'sent', this.value)"></td>
+                    <td><input type="date" value="" onchange="updateField(, 'followup', this.value)"></td>
+                    <td>
+                        <select onchange="updateField(, 'response', this.value)">
+                            <option value=""></option>
+                            <option value="No Reply">No Reply</option>
+                            <option value="Interested">Interested</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select onchange="updateField(, 'link', this.value)">
+                            <option value=""></option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button onclick="data.splice(,1); saveData(); renderTable();">Delete</button>
+                    </td>
+                ;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function exportCSV() {
+            let csv = "Prospect Name,Website URL,Contact Email,Email Sent Date,Follow-up Date,Response Received,Backlink Acquired,Notes\n";
+            data.forEach(r => {
+                csv += "","","","","","","",""\n;
+            });
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'backlink_prospects_export.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        loadCSV();
+        // Pre-populate with a sample if empty
+        if (data.length === 0) {
+            data.push({ name: "DFW Property Manager Association", url: "https://example-pma.org", email: "contact@pma.org", sent: "", followup: "", response: "", link: "", notes: "" });
+            saveData();
+            renderTable();
+        }
+    </script>
+</body>
+</html>
