@@ -173,3 +173,9 @@ a.premium-card:hover .service-photo { transform: scale(1.025); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+html.dark, html[data-theme='dark'] { body, h1, h2, h3, p { color: #ffffff !important; } }
+
+html.dark, html[data-theme='dark'] { body, h1, h2, h3, p { color: #ffffff !important; } }
+
+html.dark, html[data-theme='dark'] { body, h1, h2, h3, p { color: #ffffff !important; } }

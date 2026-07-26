@@ -72,7 +72,7 @@ export default function HomePage() {
 
       <section className="hero-field min-h-[620px] text-white">
         <div className="hero-photo">
-          <Image src="/images/hero/hero-emergency-plumber-repair.jpg" alt="Licensed emergency plumber actively repairing a pipe at a DFW home" fill sizes="100vw" className="object-cover object-center" priority />
+          <Image src="/images/hero/hero-plumber.jpg" alt="Licensed emergency plumber actively repairing a pipe at a DFW home" fill sizes="100vw" className="object-cover object-center" priority />
         </div>
         <div className="mx-auto flex min-h-[620px] max-w-7xl items-center px-4 py-14 lg:py-20">
           <article className="max-w-3xl">
@@ -144,7 +144,7 @@ export default function HomePage() {
               <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group overflow-hidden">
                 <div className="relative h-40 w-full overflow-hidden">
                   <Image
-                    src={serviceImages[service.slug] ?? "/images/hero/hero-emergency-plumber-repair.jpg"}
+                    src={serviceImages[service.slug] ?? "/images/hero//images/hero/hero-plumber.jpg"}
                     alt={`${service.name} - professional plumber on the job`}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
