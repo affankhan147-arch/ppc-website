@@ -9,7 +9,7 @@ export const siteConfig = {
   brandName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
   serviceName: "Emergency Plumbing Service",
   legalName: process.env.NEXT_PUBLIC_BRAND_NAME || "Plumbing Hands",
-  baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.plumbinghands.com",
+  baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://plumbinghands.com",
   marketName: process.env.NEXT_PUBLIC_PRIMARY_MARKET || "Dallas-Fort Worth",
   state: "Texas",
   primaryVertical: "Emergency plumbing and drain cleaning",
