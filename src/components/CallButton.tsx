@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { sendGAEvent } from "@next/third-parties/google";
 
 import { PhoneCall } from "lucide-react";
@@ -95,7 +95,7 @@ export function CallButton({
 
   return (
     <a
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#F0B429] px-5 py-3 text-base font-black text-white shadow-[0_10px_28px_rgba(240,180,41,.28)] transition hover:-translate-y-0.5 hover:bg-[#d99f1f] hover:shadow-[0_14px_34px_rgba(240,180,41,.34)] focus:outline-none focus:ring-4 focus:ring-[#4FD1C5]/30 ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#F0B429] px-5 py-3 text-base font-black text-[#1A1300] shadow-[0_10px_28px_rgba(240,180,41,.28)] transition hover:-translate-y-0.5 hover:bg-[#d99f1f] hover:shadow-[0_14px_34px_rgba(240,180,41,.34)] focus:outline-none focus:ring-4 focus:ring-[#4FD1C5]/30 ${className}`}
       href={hasUsablePhone ? phoneConfig.href : "/contact"}
       data-call-event-name={eventName || inferEventName(location)}
       data-cta-location={location}

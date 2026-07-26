@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { AlertTriangle, ArrowRight, CheckCircle2, HelpCircle, MapPin, WalletCards } from "lucide-react";
 import { FAQ } from "@/data/faqs";
@@ -9,7 +9,7 @@ import { siteConfig } from "@/data/site";
 export function DirectAnswer({ children }: { children: ReactNode }) {
   return (
     <section className="rounded-md border border-[#4FD1C5]/25 bg-[#16302C] p-5">
-      <p className="text-sm font-black uppercase tracking-normal text-white">Quick answer</p>
+      <p className="text-sm font-black uppercase tracking-normal text-[#4FD1C5]">Quick answer</p>
       <div className="mt-2 text-lg font-semibold leading-7 text-white">{children}</div>
     </section>
   );
@@ -22,7 +22,7 @@ export function EmergencySteps({ steps }: { steps: string[] }) {
       <ol className="mt-4 grid gap-3 md:grid-cols-2">
         {steps.map((step, index) => (
           <li key={step} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
-            <span className="text-xs font-black text-white">Step {index + 1}</span>
+            <span className="text-xs font-black text-[#F0B429]">Step {index + 1}</span>
             <p className="mt-1 font-semibold text-white">{step}</p>
           </li>
         ))}
@@ -35,11 +35,11 @@ export function CostFactors({ factors }: { factors: string[] }) {
   return (
     <section className="content-section">
       <div className="section-kicker"><WalletCards className="h-4 w-4" aria-hidden="true" /> Cost factors</div>
-      <p className="mt-3 text-white">Pricing should be confirmed directly with the matched provider before work starts. Common factors include:</p>
+      <p className="mt-3 text-slate-300">Pricing should be confirmed directly with the matched provider before work starts. Common factors include:</p>
       <ul className="mt-4 grid gap-2 sm:grid-cols-2">
         {factors.map((factor) => (
-          <li key={factor} className="flex gap-2 rounded-md bg-[#0F1F1D] p-3 text-sm font-semibold text-white">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-white" aria-hidden="true" />
+          <li key={factor} className="flex gap-2 rounded-md bg-[#0F1F1D] p-3 text-sm font-semibold text-slate-200">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-[#4FD1C5]" aria-hidden="true" />
             {factor}
           </li>
         ))}
@@ -63,10 +63,10 @@ export function InfoListSection({
     <section className="content-section">
       <p className="section-kicker">{kicker}</p>
       <h2 className="mt-2 text-2xl font-black text-white">{title}</h2>
-      {intro ? <p className="mt-3 leading-7 text-white">{intro}</p> : null}
+      {intro ? <p className="mt-3 leading-7 text-slate-300">{intro}</p> : null}
       <ul className="mt-4 grid gap-3 md:grid-cols-2">
         {items.map((item) => (
-          <li key={item} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 font-semibold leading-6 text-white">
+          <li key={item} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 font-semibold leading-6 text-slate-200">
             {item}
           </li>
         ))}
@@ -79,7 +79,7 @@ export function LocalGuidance({ cityName = "Dallas-Fort Worth" }: { cityName?: s
   return (
     <section className="content-section">
       <div className="section-kicker"><MapPin className="h-4 w-4" aria-hidden="true" /> Local service-area guidance</div>
-      <p className="mt-3 leading-7 text-white">
+      <p className="mt-3 leading-7 text-slate-300">
         This page is written for homeowners and property managers in {cityName}. {siteConfig.serviceStatement} Availability, pricing,
         credentials, and arrival details should be confirmed directly with the matched provider.
       </p>
@@ -127,7 +127,7 @@ export function FAQBlock({ faqs }: { faqs: FAQ[] }) {
         {faqs.map((faq) => (
           <details key={faq.question} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
             <summary className="cursor-pointer font-bold text-white">{faq.question}</summary>
-            <p className="mt-2 leading-7 text-white">{faq.answer}</p>
+            <p className="mt-2 leading-7 text-slate-300">{faq.answer}</p>
           </details>
         ))}
       </div>
