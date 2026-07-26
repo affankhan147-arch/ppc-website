@@ -39,7 +39,7 @@ export default function BlogHubPage() {
       <section className="mt-6 answer-grid">
         <article>
           <p className="section-kicker">Guide hub</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">Emergency plumbing guides</h1>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">Emergency plumbing guides</h1>
           <p className="mt-4 text-lg leading-8 text-white">
             Fast, practical explainers for Dallas-Fort Worth homeowners comparing urgent plumbing symptoms, cost factors,
             service options, and safe next steps before requesting provider help.
@@ -50,7 +50,7 @@ export default function BlogHubPage() {
         </article>
         <aside className="rounded-md border border-cyan-200 bg-cyan-50 p-5">
           <SearchCheck className="h-6 w-6 text-cyan-800" aria-hidden="true" />
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Start with the symptom</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">Start with the symptom</h2>
           <p className="mt-3 leading-7 text-white">
             If water is active, wastewater is present, or several fixtures are affected, stop water use where safe and
             use a service page or contact path instead of only reading.
@@ -62,7 +62,7 @@ export default function BlogHubPage() {
         <section key={category} className="content-section">
           <div className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-cyan-700" aria-hidden="true" />
-            <h2 className="text-2xl font-black text-slate-950">{category}</h2>
+            <h2 className="text-2xl font-black text-white">{category}</h2>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts
@@ -74,7 +74,7 @@ export default function BlogHubPage() {
                     <p className="text-xs font-black uppercase tracking-normal text-cyan-700">
                       {service?.name || "Emergency plumbing"}
                     </p>
-                    <h3 className="mt-3 text-lg font-black leading-6 text-slate-950">{post.title}</h3>
+                    <h3 className="mt-3 text-lg font-black leading-6 text-white">{post.title}</h3>
                     <p className="mt-3 line-clamp-3 text-sm leading-6 text-white">{post.directAnswer}</p>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-cyan-700">
                       Read guide <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />

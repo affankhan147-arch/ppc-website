@@ -37,7 +37,7 @@ export default function WaterStainBelowBathroomPage() {
 
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Dallas ceiling-leak guide</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
+        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-white">
           A water stain on the ceiling below a bathroom usually starts smallâ€”a faint yellow or brown mark that looks
           dry and stays the same size for days. It is easy to write off.
@@ -63,7 +63,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Common causes</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">What usually causes a water stain below a bathroom?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">What usually causes a water stain below a bathroom?</h2>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {[
               "A leaking toilet seal or supply connection",
@@ -87,7 +87,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Toilet clues</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Is the toilet causing the ceiling stain?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Is the toilet causing the ceiling stain?</h2>
           <p className="mt-3 leading-7 text-white">
             Toilets can leak without leaving a puddle on the bathroom floor. The wax seal underneath can fail and let
             small amounts of water escape with every flush. The leak can also come from the supply line, shutoff valve,
@@ -110,7 +110,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Shower clues</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Could the shower be leaking through the ceiling?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Could the shower be leaking through the ceiling?</h2>
           <p className="mt-3 leading-7 text-white">
             Showers can fail at more points than most people expect: a loose drain connection, cracked grout, leaking
             valve, damaged pan beneath the tile, or water escaping around a door or curtain that no longer seals.
@@ -128,7 +128,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Bathtub clues</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Why does the ceiling stain appear after a bath?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Why does the ceiling stain appear after a bath?</h2>
           <p className="mt-3 leading-7 text-white">
             A bathtub has several possible leak points: the drain, overflow assembly, faucet connections, supply pipes,
             and the seam where the tub meets the wall.
@@ -143,7 +143,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Sink clues</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Could a bathroom sink be the source?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Could a bathroom sink be the source?</h2>
           <p className="mt-3 leading-7 text-white">
             Yes. Sink leaks can collect inside the vanity before reaching the floor or ceiling below. By the time a
             stain appears downstairs, the cabinet may have been damp for a while.
@@ -158,7 +158,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Hidden supply leak</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Could a hidden pipe leak without any fixture being used?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Could a hidden pipe leak without any fixture being used?</h2>
           <p className="mt-3 leading-7 text-white">
             Not every stain is tied to a fixture. A pressurized supply pipe inside the wall or ceiling can leak
             continuously, whether anyone is using the bathroom or not. That makes it especially important to address,
@@ -177,7 +177,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Tracing the source</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Why is the leak not directly above the stain?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Why is the leak not directly above the stain?</h2>
           <p className="mt-3 leading-7 text-white">
             Water does not always fall straight down. It may follow a pipe, floor joist, sloped subfloor, or cable before
             soaking into drywall. The visible stain can be several feet from the actual failure.
@@ -191,7 +191,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Intermittent leak</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">A dry ceiling stain may not mean the problem is solved</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">A dry ceiling stain may not mean the problem is solved</h2>
           <p className="mt-3 leading-7 text-white">
             A stain that stops growing might mean the leak is gone. It might also be intermittentâ€”active only during a
             long shower, deep bath, particular flush, or when a connection shifts under use.
@@ -208,7 +208,7 @@ export default function WaterStainBelowBathroomPage() {
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">Emergency warning signs</p>
           </div>
-          <h2 className="mt-3 text-2xl font-black text-slate-950">When does a ceiling leak become an emergency?</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">When does a ceiling leak become an emergency?</h2>
           <p className="mt-3 leading-7 text-white">
             Request urgent help when water is dripping through the ceiling, the stain is expanding quickly, the
             ceiling is sagging or bulging, or moisture is near a light fixture, outlet, or wiring. A soft bathroom floor,
@@ -223,7 +223,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">While you wait</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">What should you do while waiting for help?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">What should you do while waiting for help?</h2>
           <p className="mt-3 leading-7 text-white">
             If it is safe, stop using the fixture you suspect, move valuables away from the affected ceiling, and set a
             container under active dripping. Photograph the stain and note whether it changes after particular fixture
@@ -238,7 +238,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Provider scope</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Plumber first, or a restoration company?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Plumber first, or a restoration company?</h2>
           <p className="mt-3 leading-7 text-white">
             A plumber typically identifies and stops the water source. Drywall, insulation, flooring, and mold-related
             work may be a separate scope handled by another provider.
@@ -252,7 +252,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section">
           <p className="section-kicker">Do not wait</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Do not ignore a water stain below the bathroom</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Do not ignore a water stain below the bathroom</h2>
           <p className="mt-3 leading-7 text-white">
             A ceiling stain can come from something as limited as a loose sink connection. It can also be the first
             visible sign of a leaking pipe, failed toilet seal, or shower that has leaked quietly for months. What
@@ -266,7 +266,7 @@ export default function WaterStainBelowBathroomPage() {
 
         <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
           <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Need help with a ceiling leak in Dallas?</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">Need help with a ceiling leak in Dallas?</h2>
           <p className="mt-3 leading-7 text-white">
             If a water stain has appeared below your bathroom, Plumbing Hands can help you request assistance from
             available plumbing professionals serving Dallas and surrounding Dallasâ€“Fort Worth communities.

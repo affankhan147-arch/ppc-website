@@ -18,7 +18,7 @@ export default function DisclosurePage() {
         ]}
       />
       <p className="section-kicker">Disclosure</p>
-      <h1 className="mt-3 text-4xl font-black text-slate-950">Provider connection disclosure</h1>
+      <h1 className="mt-3 text-4xl font-black text-white">Provider connection disclosure</h1>
       <div className="content-section space-y-4 leading-7 text-white">
         <p>{siteConfig.legalDisclosure}</p>
         <p>No page on this site should be read as a verified Google Business Profile, physical office listing, review, license, insurance statement, or response-time commitment unless verified proof is stated on that page.</p>

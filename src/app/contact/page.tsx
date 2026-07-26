@@ -23,7 +23,7 @@ export default function ContactPage() {
       <div className="answer-grid">
         <article>
           <p className="section-kicker">Contact</p>
-          <h1 className="mt-3 text-4xl font-black text-slate-950">Request urgent plumbing help</h1>
+          <h1 className="mt-3 text-4xl font-black text-white">Request urgent plumbing help</h1>
           <p className="mt-4 text-lg leading-8 text-white">
             Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
           </p>

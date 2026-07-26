@@ -41,7 +41,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Dallas water-heater guide</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
+        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-white">
           A water heater does not usually start making noise for no reason. It builds slowlyâ€”a faint crackle at first,
           then sharper pops or a low rumble whenever the unit kicks on to heat.
@@ -67,7 +67,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Likely cause</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Why is my water heater popping?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Why is my water heater popping?</h2>
           <p className="mt-3 leading-7 text-white">
             Popping and rumbling most often come from sediment buildup at the bottom of a tank-style heater. As the
             burner or elements heat the tank, water trapped underneath that sediment layer starts to boil. The bubbles
@@ -83,7 +83,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Mineral buildup</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Why Dallas water heaters build sediment</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Why Dallas water heaters build sediment</h2>
           <p className="mt-3 leading-7 text-white">
             Dallasâ€“Fort Worth water contains dissolved minerals. Each time that water is heated, some minerals can
             separate and settle inside the tank.
@@ -103,7 +103,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Sound pattern</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">What does sediment actually sound like?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">What does sediment actually sound like?</h2>
           <p className="mt-3 leading-7 text-white">
             People describe it as popping, rumbling, bubbling, knocking, or a sound like a kettle beginning to boil.
             The sound itself matters less than when it happens.
@@ -121,7 +121,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Heating cycle</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Why does it get louder after hot-water use?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Why does it get louder after hot-water use?</h2>
           <p className="mt-3 leading-7 text-white">
             A shower, dishwasher cycle, or hot-water laundry load sends cold replacement water into the tank and
             triggers another heating cycle. If sediment sits at the bottom, water trapped underneath it heats up and
@@ -136,7 +136,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Risk level</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Is a popping water heater dangerous?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Is a popping water heater dangerous?</h2>
           <p className="mt-3 leading-7 text-white">
             Not automatically. Many units continue operating with some sediment present. The problem is that sound
             alone cannot reveal how much buildup exists or what condition the rest of the tank is in. Heavy sediment
@@ -155,7 +155,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Pipe comparison</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Could the noise actually be coming from the pipes?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Could the noise actually be coming from the pipes?</h2>
           <p className="mt-3 leading-7 text-white">
             Yes. Pipe noise is often mistaken for water-heater noise. A sharp bang after a valve closes is usually
             water hammer. Ticking from nearby pipes may be hot metal expanding against framing. Vibration can mean a
@@ -170,7 +170,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Maintenance decision</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Should you flush a noisy water heater yourself?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Should you flush a noisy water heater yourself?</h2>
           <p className="mt-3 leading-7 text-white">
             Flushing can clear loose sediment, but it is not always the right first moveâ€”especially with an older tank.
             A heater that has not been maintained in years may have a weakened drain valve or sediment that has
@@ -192,7 +192,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Repair or replacement</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Does a noisy water heater need to be replaced?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Does a noisy water heater need to be replaced?</h2>
           <p className="mt-3 leading-7 text-white">
             Not necessarily. Noise alone is not a reason to replace a water heater. If the tank is structurally sound,
             the cause may be manageable sediment or a serviceable component.
@@ -209,7 +209,7 @@ export default function WaterHeaterPoppingNoisePage() {
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">Emergency warning signs</p>
           </div>
-          <h2 className="mt-3 text-2xl font-black text-slate-950">When does a noisy water heater become an emergency?</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">When does a noisy water heater become an emergency?</h2>
           <p className="mt-3 leading-7 text-white">
             Request urgent help if water is spreading from the tank, you smell gas, see soot or abnormal burner flames,
             notice wet or scorched electrical components, or see the pressure-relief valve releasing substantial
@@ -225,7 +225,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Provider questions</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">How do you get an honest diagnosis?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">How do you get an honest diagnosis?</h2>
           <p className="mt-3 leading-7 text-white">
             A real diagnosis should say more than â€œit is oldâ€ or â€œprobably sediment.â€ Ask where the provider believes
             the noise originates and whether sediment has been confirmed or remains a possibility. Ask whether flushing
@@ -241,7 +241,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section">
           <p className="section-kicker">Do not wait</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Do not wait out a new water-heater sound</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Do not wait out a new water-heater sound</h2>
           <p className="mt-3 leading-7 text-white">
             Some ticking during normal heating and cooling may be harmless. Persistent popping, rumbling, or knocking
             is different, especially when it becomes louder or the heater&apos;s performance changes.
@@ -255,7 +255,7 @@ export default function WaterHeaterPoppingNoisePage() {
 
         <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
           <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Need help with a noisy water heater in Dallas?</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">Need help with a noisy water heater in Dallas?</h2>
           <p className="mt-3 leading-7 text-white">
             If your water heater is popping, rumbling, leaking, or not producing reliable hot water, Plumbing Hands can
             help you request assistance from available plumbing professionals serving Dallas and the surrounding

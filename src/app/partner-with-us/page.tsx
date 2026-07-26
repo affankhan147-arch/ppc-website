@@ -21,7 +21,7 @@ export default function PartnerPage() {
       <div className="answer-grid">
         <article>
           <p className="section-kicker">Provider partners</p>
-          <h1 className="mt-3 text-4xl font-black text-slate-950">Provider partner inquiries</h1>
+          <h1 className="mt-3 text-4xl font-black text-white">Provider partner inquiries</h1>
           <p className="mt-4 text-lg leading-8 text-white">
             This page is for real plumbing providers and service partners who can respond to urgent plumbing, drain, sewer, pipe, toilet, and water-heater requests.
           </p>

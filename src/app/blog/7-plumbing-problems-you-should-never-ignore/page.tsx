@@ -47,7 +47,7 @@ export default function PlumbingProblemsArticlePage() {
 
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Dallasâ€“Fort Worth homeowner guide</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{title}</h1>
+        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
         <p className="mt-5 text-lg leading-8 text-white">
           Most plumbing emergencies do not start with water pouring through the ceiling. They start smallâ€”a sink that
           drains a little slower than usual, a toilet that runs when nobody has touched it, or a faint stain below the
@@ -68,7 +68,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 1</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">The faucet keeps dripping</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">The faucet keeps dripping</h2>
           <p className="mt-3 leading-7 text-white">
             A dripping faucet is easy to tune out, especially when the sink still works normally. Inside the fixture,
             though, a washer, seal, cartridge, or valve has probably stopped sealing properly. Left alone, the drip
@@ -83,7 +83,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 2</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Several drains are slowing down</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Several drains are slowing down</h2>
           <p className="mt-3 leading-7 text-white">
             One slow bathroom drain usually points to hair and soap near the fixture. A sluggish kitchen sink is often
             grease or food debris. When multiple drains slow down around the same time, the restriction may be shared
@@ -105,7 +105,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 3</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Water pressure drops throughout the house</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Water pressure drops throughout the house</h2>
           <p className="mt-3 leading-7 text-white">
             Weak pressure at one faucet may be a clogged aerator. A sudden drop throughout the house deserves more
             attention. Possible causes include a partially closed shutoff valve, a failing pressure regulator,
@@ -120,7 +120,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 4</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">The toilet keeps running</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">The toilet keeps running</h2>
           <p className="mt-3 leading-7 text-white">
             A running toilet does not look urgent because it may still flush normally. That is exactly why the problem
             can continue for weeks. A worn flapper, misadjusted float, or failing fill valve is often responsible.
@@ -134,7 +134,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 5</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">A water stain appears below the bathroom</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">A water stain appears below the bathroom</h2>
           <p className="mt-3 leading-7 text-white">
             A ceiling stain is not merely cosmetic until you know where the water came from. The source could be a
             leaking supply connection, failed toilet seal, bathtub overflow, drain connection, or damaged shower
@@ -149,7 +149,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 6</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">The pipes bang, whistle, or gurgle</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">The pipes bang, whistle, or gurgle</h2>
           <p className="mt-3 leading-7 text-white">
             Some plumbing noise is normal, but a new or repeated sound usually means something has changed. A bang
             after closing a faucet may be water hammer. Whistling can point to restricted flow or high pressure.
@@ -163,7 +163,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Warning sign 7</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">The bathroom smells like sewage</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">The bathroom smells like sewage</h2>
           <p className="mt-3 leading-7 text-white">
             Sometimes the cause is simple: an unused drain can dry out at the trap and allow sewer odor into the room.
             Run water into any rarely used sink, tub, shower, or floor drain. If the smell disappears and stays away,
@@ -187,7 +187,7 @@ export default function PlumbingProblemsArticlePage() {
             <AlertTriangle className="h-5 w-5" aria-hidden="true" />
             <p className="text-sm font-black uppercase">When it is an emergency</p>
           </div>
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Some plumbing problems need urgent attention</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">Some plumbing problems need urgent attention</h2>
           <p className="mt-3 leading-7 text-white">
             The situation becomes urgent when there is a real risk of property damage, sewage exposure, electrical
             danger, or complete loss of usable water service.
@@ -208,7 +208,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Repair decisions</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Can you fix the plumbing problem yourself?</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Can you fix the plumbing problem yourself?</h2>
           <p className="mt-3 leading-7 text-white">
             Cleaning an aerator, refilling a dry trap, or making a small toilet adjustment may be reasonable for some
             homeowners. Request professional help when you cannot identify the source, the problem keeps returning,
@@ -219,7 +219,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section">
           <p className="section-kicker">Early action</p>
-          <h2 className="mt-2 text-2xl font-black text-slate-950">Small warning signs are worth acting on</h2>
+          <h2 className="mt-2 text-2xl font-black text-white">Small warning signs are worth acting on</h2>
           <p className="mt-3 leading-7 text-white">
             A slow drain does not always become a sewer backup, and a dripping faucet does not always signal a larger
             pressure problem. Still, plumbing systems often give some warning before they fail outright. Catching the
@@ -229,7 +229,7 @@ export default function PlumbingProblemsArticlePage() {
 
         <section className="content-section rounded-md border border-cyan-200 bg-cyan-50 p-6">
           <PhoneCall className="h-7 w-7 text-cyan-800" aria-hidden="true" />
-          <h2 className="mt-3 text-2xl font-black text-slate-950">Need plumbing help in Dallasâ€“Fort Worth?</h2>
+          <h2 className="mt-3 text-2xl font-black text-white">Need plumbing help in Dallasâ€“Fort Worth?</h2>
           <p className="mt-3 leading-7 text-white">
             Whether it is a stubborn leak, several slow drains, a running toilet, or something you cannot quite
             explain, Plumbing Hands can help you request assistance. {siteConfig.serviceStatement}
