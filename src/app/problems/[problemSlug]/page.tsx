@@ -2,7 +2,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
@@ -113,7 +112,6 @@ export default async function ProblemPage({ params }: Props) {
             </>
           ) : null}
         </div>
-        <LeadForm pageUrl={path} service={relatedService?.name || "Emergency plumbing"} city="Dallas" />
       </div>
       <LocalGuidance />
       <FAQBlock faqs={faqs} />

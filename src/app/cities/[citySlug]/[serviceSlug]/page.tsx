@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { LeadForm } from "@/components/LeadForm";
 import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { cities, isPriorityCityService, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
@@ -72,18 +71,17 @@ export default async function CityServicePage({ params }: Props) {
         ]}
       />
       <Breadcrumbs items={[{ label: city.name, href: `/cities/${city.slug}` }, { label: service.name, href: path }]} />
-      <div className="mt-6 answer-grid">
+      <div className="mt-6">
         <article>
           <p className="section-kicker">City plus service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{service.name} in {city.name}, TX</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-700">
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{service.name} in {city.name}, TX</h1>
+          <p className="mt-4 text-lg leading-8 text-slate-300">
             Local guidance for {city.name} homeowners and property managers who need {service.name}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
           </p>
           <div className="mt-6">
             <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={service.name} />
           </div>
         </article>
-        <LeadForm pageUrl={path} service={service.name} city={city.name} />
       </div>
 
       <DirectAnswer>

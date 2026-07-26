@@ -12,7 +12,6 @@ import {
   Wrench
 } from "lucide-react";
 import { CallButton } from "@/components/CallButton";
-import { LeadForm } from "@/components/LeadForm";
 import { FAQBlock, InternalLinks } from "@/components/PageSections";
 import { cities } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
@@ -213,7 +212,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <LeadForm pageUrl="/" service="Emergency plumbing" city={siteConfig.marketName} />
 
         <section className="content-section soft-band">
           <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr]">

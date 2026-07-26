@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { LeadForm } from "@/components/LeadForm";
 import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
@@ -75,18 +74,17 @@ export default async function ServicePage({ params }: Props) {
         ]}
       />
       <Breadcrumbs items={[{ label: "Services", href: "/services/24-hour-emergency-plumber" }, { label: service.name, href: path }]} />
-      <div className="mt-6 answer-grid">
+      <div className="mt-6">
         <article>
           <p className="section-kicker">{service.urgency} urgency service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">{service.name} in Dallas-Fort Worth</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-700">
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{service.name} in Dallas-Fort Worth</h1>
+          <p className="mt-4 text-lg leading-8 text-slate-300">
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
             <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={service.name} />
           </div>
         </article>
-        <LeadForm pageUrl={path} service={service.name} city="Dallas" />
       </div>
 
       <DirectAnswer>{service.shortAnswer}</DirectAnswer>
@@ -101,10 +99,10 @@ export default async function ServicePage({ params }: Props) {
 
       <section className="content-section">
         <p className="section-kicker">When to call</p>
-        <h2 className="mt-2 text-2xl font-black text-slate-950">Signs this service should not wait</h2>
+        <h2 className="mt-2 text-2xl font-black text-white">Signs this service should not wait</h2>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {service.symptoms.map((symptom) => (
-            <li key={symptom} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-800">{symptom}</li>
+            <li key={symptom} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-200">{symptom}</li>
           ))}
         </ul>
       </section>
@@ -122,8 +120,8 @@ export default async function ServicePage({ params }: Props) {
       />
       <section className="content-section">
         <p className="section-kicker">Cost discussion</p>
-        <h2 className="mt-2 text-2xl font-black text-slate-950">Cost factors to confirm before work starts</h2>
-        <p className="mt-3 leading-7 text-slate-700">{service.costDiscussion}</p>
+        <h2 className="mt-2 text-2xl font-black text-white">Cost factors to confirm before work starts</h2>
+        <p className="mt-3 leading-7 text-slate-300">{service.costDiscussion}</p>
       </section>
       <CostFactors factors={service.costFactors} />
       <LocalGuidance />

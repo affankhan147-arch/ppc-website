@@ -39,8 +39,8 @@ export default function BlogHubPage() {
       <section className="mt-6 answer-grid">
         <article>
           <p className="section-kicker">Guide hub</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-slate-950">Emergency plumbing guides</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-700">
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">Emergency plumbing guides</h1>
+          <p className="mt-4 text-lg leading-8 text-slate-300">
             Fast, practical explainers for Dallas-Fort Worth homeowners comparing urgent plumbing symptoms, cost factors,
             service options, and safe next steps before requesting provider help.
           </p>
@@ -62,7 +62,7 @@ export default function BlogHubPage() {
         <section key={category} className="content-section">
           <div className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-cyan-700" aria-hidden="true" />
-            <h2 className="text-2xl font-black text-slate-950">{category}</h2>
+            <h2 className="text-2xl font-black text-white">{category}</h2>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts
