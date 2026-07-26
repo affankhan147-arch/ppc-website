@@ -1,4 +1,4 @@
-﻿import { CallButton } from "@/components/CallButton";
+import { CallButton } from "@/components/CallButton";
 import { FAQBlock, InternalLinks } from "@/components/PageSections";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -23,8 +23,8 @@ export default function FAQPage() {
         ]}
       />
       <p className="section-kicker">Answer engine hub</p>
-      <h1 className="mt-3 text-4xl font-black text-white">Emergency plumbing and drain cleaning FAQ</h1>
-      <p className="mt-4 max-w-3xl text-lg leading-8 text-white">
+      <h1 className="mt-3 text-4xl font-black text-slate-950">Emergency plumbing and drain cleaning FAQ</h1>
+      <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
         Short answers for urgent homeowner decisions, written with transparent service-area language and clear provider-availability reminders.
       </p>
       <div className="mt-6">

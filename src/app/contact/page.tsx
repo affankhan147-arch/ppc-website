@@ -1,4 +1,4 @@
-﻿import { CallButton } from "@/components/CallButton";
+import { CallButton } from "@/components/CallButton";
 import { LeadForm } from "@/components/LeadForm";
 import { DirectAnswer } from "@/components/PageSections";
 import { siteConfig } from "@/data/site";
@@ -23,8 +23,8 @@ export default function ContactPage() {
       <div className="answer-grid">
         <article>
           <p className="section-kicker">Contact</p>
-          <h1 className="mt-3 text-4xl font-black text-white">Request urgent plumbing help</h1>
-          <p className="mt-4 text-lg leading-8 text-white">
+          <h1 className="mt-3 text-4xl font-black text-slate-950">Request urgent plumbing help</h1>
+          <p className="mt-4 text-lg leading-8 text-slate-700">
             Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
           </p>
           <div className="mt-6">
@@ -38,7 +38,7 @@ export default function ContactPage() {
       </div>
       <section className="content-section">
         <p className="section-kicker">Service-area note</p>
-        <p className="mt-2 leading-7 text-white">{siteConfig.disclosure}</p>
+        <p className="mt-2 leading-7 text-slate-700">{siteConfig.disclosure}</p>
       </section>
     </main>
   );

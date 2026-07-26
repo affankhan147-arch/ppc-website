@@ -1,4 +1,4 @@
-﻿import { buildMetadata, truncateForMeta } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
@@ -17,8 +17,8 @@ export default function PrivacyPage() {
         ]}
       />
       <p className="section-kicker">Legal</p>
-      <h1 className="mt-3 text-4xl font-black text-white">Privacy policy</h1>
-      <div className="content-section space-y-4 leading-7 text-white">
+      <h1 className="mt-3 text-4xl font-black text-slate-950">Privacy policy</h1>
+      <div className="content-section space-y-4 leading-7 text-slate-700">
         <p>This site may collect form details such as name, phone, city, service need, urgency, message, page URL, and UTM data for service request handling and reporting.</p>
         <p>Do not submit sensitive account credentials, payment details, medical information, or private documents through the form.</p>
         <p>Analytics and tracking identifiers should be added only through owner-approved environment variables or hosting settings.</p>
