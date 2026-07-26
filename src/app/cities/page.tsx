@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -56,7 +56,7 @@ export default function CitiesPage() {
             <h1 className="mt-3 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">
               Emergency plumbing help by DFW location
             </h1>
-            <ul className="mt-5 grid gap-3 text-lg font-bold text-slate-800 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-3 text-lg font-bold text-white sm:grid-cols-2">
               {hubBullets.map((item) => (
                 <li key={item} className="flex gap-2 rounded-md border border-slate-200 bg-white p-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-cyan-700" aria-hidden="true" />
@@ -67,7 +67,7 @@ export default function CitiesPage() {
           </div>
           <div className="min-w-0 rounded-md border border-cyan-200 bg-white p-5">
             <p className="text-lg font-black text-slate-950">Request path</p>
-            <ul className="mt-3 grid gap-2 text-base font-semibold text-slate-700">
+            <ul className="mt-3 grid gap-2 text-base font-semibold text-white">
               <li>Choose location</li>
               <li>Select urgent service need</li>
               <li>Confirm pricing, credentials, and scope directly</li>
@@ -103,10 +103,10 @@ export default function CitiesPage() {
                 </span>
                 <div className="min-w-0">
                   <h3 className="text-2xl font-black text-slate-950">{city.name}</h3>
-                  <p className="mt-1 text-base font-bold text-slate-600">{city.countyHint}</p>
+                  <p className="mt-1 text-base font-bold text-white">{city.countyHint}</p>
                 </div>
               </div>
-              <ul className="mt-4 grid gap-2 text-base font-semibold text-slate-700">
+              <ul className="mt-4 grid gap-2 text-base font-semibold text-white">
                 <li>{city.areaHint}</li>
                 {serviceNamesForCity(city.slug).map((serviceName) => (
                   <li key={serviceName}>{serviceName}</li>

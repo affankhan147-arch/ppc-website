@@ -179,3 +179,9 @@ html.dark, html[data-theme='dark'] { body, h1, h2, h3, p { color: #ffffff !impor
 html.dark, html[data-theme='dark'] { body, h1, h2, h3, p { color: #ffffff !important; } }
 
 html.dark, html[data-theme='dark'] { body, h1, h2, h3, p { color: #ffffff !important; } }
+
+/* START: FORCE WHITE TEXT ON ALL ELEMENTS - DO NOT REMOVE */
+html, body, h1, h2, h3, h4, h5, h6, p, span, div, li, a, button, input, textarea {
+    color: #ffffff !important;
+}
+/* END: FORCE WHITE TEXT */
