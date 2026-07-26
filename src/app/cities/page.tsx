@@ -95,14 +95,14 @@ export default function CitiesPage() {
             <Link
               key={city.slug}
               href={`/cities/${city.slug}`}
-              className="premium-card group min-w-0 bg-white p-5 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-xl"
+              className="premium-card group min-w-0 p-5 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-xl"
             >
               <div className="flex items-start gap-3">
                 <span className="grid h-12 w-12 flex-none place-items-center rounded-md bg-cyan-50 text-cyan-700">
                   <MapPin className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <div className="min-w-0">
-                  <h3 className="text-2xl font-black text-slate-950">{city.name}</h3>
+                  <h3 className="text-2xl font-black text-white">{city.name}</h3>
                   <p className="mt-1 text-base font-bold text-slate-600">{city.countyHint}</p>
                 </div>
               </div>

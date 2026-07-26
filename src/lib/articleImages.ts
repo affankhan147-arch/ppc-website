@@ -8,8 +8,6 @@
 };
 
 const fallbackPhotos = [
-  "/images/photography/home-emergency-plumber.png",
-  "/images/photography/plumbing-diagnostic.png",
   "/images/photography/drain-cleaning.webp",
   "/images/photography/sewer-inspection.webp",
   "/images/photography/toilet-repair.webp",

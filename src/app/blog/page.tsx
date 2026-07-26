@@ -70,12 +70,12 @@ export default function BlogHubPage() {
               .map((post) => {
                 const service = services.find((item) => item.slug === post.relatedServiceSlug);
                 return (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="premium-card group bg-white p-5">
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="premium-card group p-5">
                     <p className="text-xs font-black uppercase tracking-normal text-cyan-700">
                       {service?.name || "Emergency plumbing"}
                     </p>
-                    <h3 className="mt-3 text-lg font-black leading-6 text-slate-950">{post.title}</h3>
-                    <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{post.directAnswer}</p>
+                    <h3 className="mt-3 text-lg font-black leading-6 text-white">{post.title}</h3>
+                    <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-300">{post.directAnswer}</p>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-cyan-700">
                       Read guide <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
                     </span>
