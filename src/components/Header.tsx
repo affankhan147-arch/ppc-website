@@ -16,8 +16,8 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-[#0F1F1D]/95 shadow-[0_8px_30px_rgba(0,0,0,.3)] backdrop-blur-xl">
       <div className="hidden bg-[#0B1917] text-white sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs font-bold">
-          <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-[#4FD1C5]" aria-hidden="true" /> Urgent plumbing help for leaks, drains, and sewer problems</span>
-          <span className="text-slate-400">Plumbing Service in Dallas-Fort Worth</span>
+          <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-white" aria-hidden="true" /> Urgent plumbing help for leaks, drains, and sewer problems</span>
+          <span className="text-white">Plumbing Service in Dallas-Fort Worth</span>
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5">
@@ -27,12 +27,12 @@ export function Header() {
           </span>
           <span className="min-w-0">
             <span className="block truncate text-base font-black tracking-tight text-white">{siteConfig.brandName}</span>
-            <span className="block truncate text-xs font-semibold text-slate-400">Dallas-Fort Worth Plumbing Service</span>
+            <span className="block truncate text-xs font-semibold text-white">Dallas-Fort Worth Plumbing Service</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-5 text-sm font-bold text-slate-300 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-5 text-sm font-bold text-white lg:flex" aria-label="Primary navigation">
           {navigation.map((item) => (
-            <Link key={item.href} className="relative py-2 transition hover:text-[#F0B429]" href={item.href}>
+            <Link key={item.href} className="relative py-2 transition hover:text-white" href={item.href}>
               {item.label}
             </Link>
           ))}
