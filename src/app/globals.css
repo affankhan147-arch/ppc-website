@@ -173,18 +173,3 @@ a.premium-card:hover .service-photo { transform: scale(1.025); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-
-/* START: SMART CONTRAST - White text on dark backgrounds only */
-html.dark main, html.dark article, html.dark section,
-html.dark .dark-bg, .dark main, .dark article, .dark section {
-    color: #ffffff !important;
-}
-html.dark h1, html.dark h2, html.dark h3, html.dark p,
-html.dark li, html.dark .text-content {
-    color: #ffffff !important;
-}
-/* Ensure light-background elements stay dark */
-.light-bg, .white-box, .yellow-btn, .card-light {
-    color: #1a1a1a !important;
-}
-/* END: SMART CONTRAST */
