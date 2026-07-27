@@ -102,7 +102,7 @@ export default async function ServicePage({ params }: Props) {
         <h2 className="mt-2 text-2xl font-black text-white">Signs this service should not wait</h2>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {service.symptoms.map((symptom) => (
-            <li key={symptom} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-200">{symptom}</li>
+            <li key={symptom} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-800">{symptom}</li>
           ))}
         </ul>
       </section>
