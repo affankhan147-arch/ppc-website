@@ -35,7 +35,7 @@ export default function PartnerPage() {
         <p className="section-kicker">Partner quality rules</p>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {["Service area match", "Real business information", "Clear availability", "Urgent request capacity", "Verified credential claims only", "Owner-approved compliance claims"].map((rule) => (
-            <li key={rule} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-200">{rule}</li>
+            <li key={rule} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-800">{rule}</li>
           ))}
         </ul>
       </section>

@@ -117,7 +117,7 @@ export default async function CityPage({ params }: Props) {
         <h2 className="mt-2 text-2xl font-black text-white">Urgent service options for {city.name}</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Link key={service.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-white hover:border-emerald-400" href={`/services/${service.slug}`}>
+            <Link key={service.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400" href={`/services/${service.slug}`}>
               {service.name}
             </Link>
           ))}
@@ -141,7 +141,7 @@ export default async function CityPage({ params }: Props) {
         <h2 className="mt-2 text-2xl font-black text-white">Nearby DFW locations</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {nearbyCities.map((nearby) => (
-            <Link key={nearby.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-white hover:border-emerald-400" href={`/cities/${nearby.slug}`}>
+            <Link key={nearby.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400" href={`/cities/${nearby.slug}`}>
               {nearby.name}
             </Link>
           ))}

@@ -74,7 +74,7 @@ export default function WaterStainBelowBathroomPage() {
               "Failed caulk or waterproofing around the shower",
               "Condensation from plumbing or poor ventilation"
             ].map((item) => (
-              <li key={item} className="rounded-md border border-slate-200 bg-white p-4 font-semibold leading-6 text-slate-200">
+              <li key={item} className="rounded-md border border-slate-200 bg-white p-4 font-semibold leading-6 text-slate-800">
                 {item}
               </li>
             ))}
