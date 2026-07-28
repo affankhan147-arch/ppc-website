@@ -38,7 +38,295 @@ export const cities: City[] = [
   { slug: "desoto", name: "DeSoto", marketSlug: "dallas-fort-worth", countyHint: "Dallas County", areaHint: "DeSoto and nearby Best Southwest communities", priority: 2 },
   { slug: "duncanville", name: "Duncanville", marketSlug: "dallas-fort-worth", countyHint: "Dallas County", areaHint: "Duncanville and southwest Dallas County areas", priority: 2 },
   { slug: "wylie", name: "Wylie", marketSlug: "dallas-fort-worth", countyHint: "Collin, Dallas, and Rockwall counties", areaHint: "Wylie and nearby northeast DFW communities", priority: 2 }
-];
+,
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  },
+  {
+    slug: "houston",
+    name: "Houston",
+    marketSlug: "houston",
+    countyHint: "Harris County",
+    areaHint: "Greater Houston area, including Harris, Fort Bend, and Montgomery counties",
+    priority: 1
+  },
+  {
+    slug: "austin",
+    name: "Austin",
+    marketSlug: "austin",
+    countyHint: "Travis County",
+    areaHint: "Central Texas, including Travis, Williamson, and Hays counties",
+    priority: 1
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    marketSlug: "san-antonio",
+    countyHint: "Bexar County",
+    areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
+    priority: 1
+  }];
 
 export const futureCities: City[] = [
 ];
@@ -92,7 +380,79 @@ export const priorityCityServiceCombos = [
   { citySlug: "allen", serviceSlug: "emergency-drain-cleaning" },
   { citySlug: "rockwall", serviceSlug: "24-hour-emergency-plumber" },
   { citySlug: "rockwall", serviceSlug: "emergency-drain-cleaning" }
-];
+,
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "houston", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "houston", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" }];
 
 export function isPriorityCityService(citySlug: string, serviceSlug: string) {
   return priorityCityServiceCombos.some((combo) => combo.citySlug === citySlug && combo.serviceSlug === serviceSlug);
