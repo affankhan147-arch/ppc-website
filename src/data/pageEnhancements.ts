@@ -1,4 +1,5 @@
 import type { FAQ } from "@/data/faqs";
+import { dfwAdditionalCityServiceEnhancements } from "./cityServiceEnhancementsDFWAdditional";
 import { texasCityServiceEnhancements } from "./cityServiceEnhancementsTexas";
 
 export type EnhancementLink = {
@@ -458,6 +459,7 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const cityServiceEnhancements: Record<string, PageEnhancement> = {
+  ...dfwAdditionalCityServiceEnhancements,
   ...texasCityServiceEnhancements,
   "dallas/emergency-drain-cleaning": {
     decisionTitle: "Dallas drain backup decision guide",
