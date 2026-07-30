@@ -50,7 +50,9 @@ export function cityServicePath(citySlug: string, serviceSlug: string) {
 }
 
 export function getAllInventoryPages(): InventoryPage[] {
-  const legalPages: InventoryPage[] = [
+  const legalPages: InventoryPage[,
+[object Object],
+[object Object]] = [
     { kind: "home", title: `${siteConfig.brandName} | Emergency Plumbing Connections`, path: "/", h1: "Emergency plumbing help across Dallas-Fort Worth", description: "Connect with local emergency plumbing and drain cleaning providers across Dallas-Fort Worth." },
     { kind: "city-index", title: "Dallas-Fort Worth Plumbing Service Areas", path: "/cities", h1: "Emergency plumbing help by DFW location", description: "Browse Dallas-Fort Worth service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help." },
     { kind: "blog", title: "Emergency Plumbing Guides", path: "/blog", h1: "Emergency plumbing guides", description: "Helpful emergency plumbing, drain, sewer, cost, and decision guides for Dallas-Fort Worth homeowners." },
