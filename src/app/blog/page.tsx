@@ -6,13 +6,12 @@ import { FAQBlock, InternalLinks } from "@/components/PageSections";
 import { blogPosts } from "@/data/blogPosts";
 import { emergencyFaqs } from "@/data/faqs";
 import { services } from "@/data/services";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Emergency plumbing guides",
-  description:
-    "Practical emergency plumbing, drain, sewer, cost, and decision guides for Dallas-Fort Worth homeowners, covering symptoms and safe next steps.",
+  description: truncateForMeta("Practical emergency plumbing, drain, sewer, cost, and decision guides for Dallas-Fort Worth homeowners, covering symptoms and safe next steps."),
   path: "/blog"
 });
 

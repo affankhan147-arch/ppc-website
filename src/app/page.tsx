@@ -20,7 +20,7 @@ import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 import { getGridImage } from "@/lib/articleImages";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 const serviceImages: Record<string, string> = {
@@ -49,7 +49,7 @@ const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value
 
 export const metadata = buildMetadata({
   title: "Emergency plumbing service across Dallas-Fort Worth",
-  description: "Call for emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems.",
+  description: truncateForMeta("Call for emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
   path: "/"
 });
 

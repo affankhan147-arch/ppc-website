@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { siteConfig } from "@/data/site";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 const path = "/blog/water-heater-making-popping-noise-dallas";
@@ -14,8 +14,7 @@ const description =
 
 export const metadata = buildMetadata({
   title: "Water Heater Making Popping Noises in Dallas: Causes and What to Do",
-  description,
-  path
+  description: truncateForMeta(description), path
 });
 
 export default function WaterHeaterPoppingNoisePage() {

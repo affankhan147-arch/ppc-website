@@ -5,13 +5,12 @@ import { CallButton } from "@/components/CallButton";
 import { cities, getPriorityServiceSlugsForCity } from "@/data/cities";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/site";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Dallas-Fort Worth plumbing service areas",
-  description:
-    "Browse all 30 Dallas-Fort Worth service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help, organized by city.",
+  description: truncateForMeta("Browse all 30 Dallas-Fort Worth service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help, organized by city."),
   path: "/cities"
 });
 

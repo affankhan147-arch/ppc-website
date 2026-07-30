@@ -7,7 +7,7 @@ import { cities, getNearbyCities, getPriorityServiceSlugsForCity } from "@/data/
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityPageEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props) {
   const isIrving = city.slug === "irving";
   return buildMetadata({
     title: isIrving ? "Emergency Plumber Irving, TX" : `Emergency plumbing help in ${city.name}, TX`,
-    description: isIrving ? "Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available plumbing professional serving your area." : buildCityDescription(city),
+    description: isIrving ? truncateForMeta("Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available plumbing professional serving your area.") : truncateForMeta(buildCityDescription(city)),
     path: `/cities/${city.slug}`
   });
 }
