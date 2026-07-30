@@ -3,9 +3,9 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 
 export const metadata = buildMetadata({
-  title: "Partner with PlumbingHands – Referral Program",
+  title: "Partner with PlumbingHands – Referral Partnership",
   description: truncateForMeta(
-    "Become a referral partner with PlumbingHands. We connect DFW homeowners with trusted emergency plumbers. Partners earn commissions for qualified referrals."
+    "Become a referral partner with PlumbingHands. We connect DFW homeowners with trusted emergency plumbers. Partners gain visibility and mutual referrals."
   ),
   path: "/partners"
 });
@@ -18,7 +18,7 @@ export default function PartnersPage() {
           webPageSchema(
             "/partners",
             "Partner with PlumbingHands",
-            "Become a referral partner with PlumbingHands and earn commissions for qualified emergency plumbing referrals across DFW."
+            "Become a referral partner with PlumbingHands and gain mutual referrals and visibility."
           ),
           breadcrumbSchema([
             { name: "Home", path: "/" },
@@ -29,13 +29,13 @@ export default function PartnersPage() {
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Referral Program</div>
+          <div className="section-kicker">Referral Partnership</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Partner with PlumbingHands
           </h1>
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
-            <p>Become a trusted partner and earn commissions for every qualified emergency plumbing referral you send our way.</p>
+            <p>Work with us to provide reliable emergency plumbing service to homeowners across DFW. We offer mutual visibility and referral exchange for qualified partners.</p>
           </div>
 
           <section className="mb-10">
@@ -54,7 +54,8 @@ export default function PartnersPage() {
             <ol className="list-decimal list-inside text-slate-300 space-y-3">
               <li>You refer a homeowner with an emergency plumbing issue (24‑hour plumber, drain cleaning, sewer backup, etc.).</li>
               <li>We confirm the referral and connect the homeowner with a trusted provider.</li>
-              <li>Once the job is completed and accepted, you earn a commission (we'll discuss rates directly).</li>
+              <li>We reciprocate by featuring your business on our partner page and linking to your website.</li>
+              <li>We also mention your service in relevant content where appropriate (with your consent).</li>
             </ol>
           </section>
 
@@ -72,7 +73,7 @@ export default function PartnersPage() {
             <h3 className="text-xl font-semibold text-white mb-2">Ready to Partner?</h3>
             <p className="text-slate-300 mb-4">Call us today or fill out the contact form below to get started.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+1234567890" className="inline-block bg-[#F0B429] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#d49f20] transition">
+              <a href="tel:18443978298" className="inline-block bg-[#F0B429] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#d49f20] transition">
                 Call Now
               </a>
               <a href="/contact" className="inline-block border border-[#F0B429] text-[#F0B429] font-semibold px-6 py-3 rounded-lg hover:bg-[#F0B429] hover:text-black transition">
