@@ -130,7 +130,11 @@ export const priorityCityServiceCombos = [
   { citySlug: "cedar-hill", serviceSlug: "24-hour-emergency-plumber" },
   { citySlug: "cedar-hill", serviceSlug: "emergency-drain-cleaning" },
   { citySlug: "desoto", serviceSlug: "24-hour-emergency-plumber" },
-  { citySlug: "desoto", serviceSlug: "emergency-drain-cleaning" }];
+  { citySlug: "desoto", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "duncanville", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "duncanville", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "wylie", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "wylie", serviceSlug: "emergency-drain-cleaning" }];
 
 export function isPriorityCityService(citySlug: string, serviceSlug: string) {
   return priorityCityServiceCombos.some((combo) => combo.citySlug === citySlug && combo.serviceSlug === serviceSlug);

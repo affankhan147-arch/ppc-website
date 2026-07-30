@@ -1,4 +1,5 @@
 import type { FAQ } from "@/data/faqs";
+import { dfwAdditionalCityServiceEnhancements5 } from "./cityServiceEnhancementsDFWAdditional5";
 import { dfwAdditionalCityServiceEnhancements4 } from "./cityServiceEnhancementsDFWAdditional4";
 import { dfwAdditionalCityServiceEnhancements3 } from "./cityServiceEnhancementsDFWAdditional3";
 import { dfwAdditionalCityServiceEnhancements2 } from "./cityServiceEnhancementsDFWAdditional2";
@@ -462,6 +463,7 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const cityServiceEnhancements: Record<string, PageEnhancement> = {
+  ...dfwAdditionalCityServiceEnhancements5,
   ...dfwAdditionalCityServiceEnhancements4,
   ...dfwAdditionalCityServiceEnhancements3,
   ...dfwAdditionalCityServiceEnhancements2,
