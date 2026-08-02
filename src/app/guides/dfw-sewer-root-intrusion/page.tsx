@@ -84,7 +84,7 @@ export default function SewerRootGuidePage() {
               Prevention is more cost‑effective than repair. Homeowners can:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2">
-              <li>Have a sewer camera inspection every 2‑3 years to catch early root intrusion.</li>
+              <li>Schedule periodic sewer camera inspections, especially for homes with mature trees near the sewer line path or older pipes, to catch root intrusion before it causes a full blockage.</li>
               <li>Avoid planting large trees near the sewer line path.</li>
               <li>Install a backwater valve to protect against sewer backups during heavy rain or municipal line overflows.</li>
             </ul>
