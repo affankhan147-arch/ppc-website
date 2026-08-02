@@ -1,29 +1,29 @@
-import { buildMetadata, truncateForMeta } from "@/lib/seo";
+﻿import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 
 export const metadata = buildMetadata({
-  title: "DFW Slab Leaks: Why Dallas-Fort Worth Homes Get Them & How They're Found",
+  title: "Slab Leaks in DFW – What Homeowners Need to Know",
   description: truncateForMeta(
-    "Why expansive clay soil makes Dallas-Fort Worth uniquely prone to slab leaks, and the detection methods plumbers use to find them without guesswork."
+    "A research-backed guide explaining why slab leaks are uniquely common in Dallas-Fort Worth, how they're diagnosed, and what homeowners can do."
   ),
   path: "/guides/dfw-slab-leaks"
 });
 
-export default function DfwSlabLeaksGuidePage() {
+export default function SlabLeaksGuidePage() {
   return (
     <>
       <JsonLd
         data={[
           webPageSchema(
             "/guides/dfw-slab-leaks",
-            "DFW Slab Leaks: Why Dallas-Fort Worth Homes Get Them & How They're Found",
-            "Why expansive clay soil makes Dallas-Fort Worth uniquely prone to slab leaks, and the detection methods plumbers use to find them without guesswork."
+            "Slab Leaks in DFW – What Homeowners Need to Know",
+            "A research-backed guide explaining why slab leaks are uniquely common in Dallas-Fort Worth, how they're diagnosed, and what homeowners can do."
           ),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Guides", path: "/guides" },
-            { name: "DFW Slab Leaks", path: "/guides/dfw-slab-leaks" }
+            { name: "Slab Leaks in DFW", path: "/guides/dfw-slab-leaks" }
           ])
         ]}
       />
@@ -32,80 +32,97 @@ export default function DfwSlabLeaksGuidePage() {
         <div className="premium-card max-w-4xl mx-auto">
           <div className="section-kicker">Research Guide</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            DFW Slab Leaks:<br />
-            <span className="text-[#F0B429]">Why They Happen Here, and How They're Actually Found</span>
+            Slab Leaks in DFW:<br />
+            <span className="text-[#F0B429]">What Homeowners Need to Know</span>
           </h1>
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
-            <p>This guide is for informational purposes only and does not constitute engineering, structural, or legal advice. A licensed plumber and, where foundation movement is suspected, a structural engineer should evaluate your specific property.</p>
+            <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>
           </div>
 
+          { /* REMOTE SECTION 1 (actual improved text from remote) */ }
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why DFW?</h2>
             <p className="text-slate-300 mb-4">
-              Slab leaks are not evenly distributed across the country — Dallas-Fort Worth sees them at a disproportionately high rate, and the reason is underfoot. Much of the Metroplex sits on the <strong>Blackland Prairie</strong>, a band of dark, clay-rich soil that runs from North Texas down through Central Texas. This clay is highly expansive: it swells significantly when it absorbs water and shrinks when it dries out, and DFW's swing between heavy spring rains and prolonged summer drought puts that clay through a punishing annual cycle.
+              Slab leaks are not evenly distributed across the country — they are heavily concentrated in regions with expansive clay soils. The Dallas-Fort Worth metroplex sits squarely on the Blackland Prairie, a geological formation known for its highly reactive clay. This clay expands when wet and shrinks when dry, a cycle that repeats with every rain and drought. Over decades, this constant movement puts immense stress on concrete slab foundations and the plumbing lines embedded beneath them.
             </p>
             <p className="text-slate-300 mb-4">
-              That movement doesn't stay in the yard. As the soil beneath a slab foundation swells and contracts unevenly, it flexes the concrete above it, and the copper or CPVC supply lines running through or under that slab flex with it. Over years of this cycle, joints work loose, pipe walls fatigue, and fittings crack — which is why slab leaks in DFW are so often a foundation-soil problem wearing a plumbing disguise.
+              The impact is well documented. According to research published by the American Society of Civil Engineers (ASCE), expansive soils cause more financial damage to structures in the United States each year than earthquakes, floods, hurricanes, and tornadoes combined. While the exact dollar figure varies by study — estimates range from $2 billion to $15 billion annually — the comparison itself is consistently cited across engineering literature.
             </p>
             <p className="text-slate-300 mb-4">
-              This isn't a minor regional nuisance. Expansive soils are widely cited in geotechnical literature as causing more annual damage to structures nationwide than tornadoes, floods, hurricanes, and earthquakes combined — with damage estimates that vary by study and by year, generally falling somewhere in the range of roughly $2 billion to $15 billion annually. Texas, and the Blackland Prairie corridor specifically, is one of the regions most responsible for those figures.
+              DFW’s own history with this problem is not abstract. A survey conducted in Dallas County alone identified 8,470 residential foundation failures in a single year (1974), with 98% of those failures occurring in expansive soils (Wray, 1989). More than fifty years later, the same clay continues to shift under the same neighborhoods, and the same shrink‑swell cycle remains the primary driver of foundation movement across the Metroplex.
             </p>
-            <p className="text-slate-300 mb-4">
-              The scale of the problem locally isn't new. A widely cited historical data point comes from Dallas County in 1974, when an estimated 8,470 residential foundation failures were recorded in a single year — with roughly 98% of them occurring on expansive soils. That figure traces back to research by W.K. Wray (1989) and has been referenced in ASCE-affiliated geotechnical engineering literature on expansive soil damage ever since.
+            <p className="text-slate-300">
+              For homeowners, the practical takeaway is clear: a slab leak in DFW is rarely just a pipe that happened to fail. It is the intersection of two realities — aging infrastructure reaching the end of its service life, and decades of soil movement stressing that pipe at exactly the point where it finally gives way.
             </p>
-            <p className="text-sm text-slate-400">
-              Sources: expansive soil damage-cost ranges and the Dallas County 1974 failure count are drawn from geotechnical engineering literature on expansive soils, including W.K. Wray (1989), as referenced in ASCE-affiliated publications.
+            <p className="text-slate-400 text-sm mt-4">
+              <strong>Sources:</strong> ASCE research on expansive soil damage; Wray, 1989, Dallas County foundation failure survey; multiple industry sources.
             </p>
           </section>
 
+          { /* REMOTE SECTION 2 (actual improved text with numbered subsections) */ }
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Diagnosis & Detection</h2>
             <p className="text-slate-300 mb-4">
-              Because a slab leak is hidden under concrete, finding it accurately — before any demolition happens — is the difference between a contained repair and an unnecessarily torn-up floor. Plumbers typically work through detection methods in roughly this order, from simplest to most invasive.
+              A slab leak does not always announce itself dramatically. In many cases, the signs are subtle enough to be mistaken for normal wear and tear — which is why thousands of gallons of water can be lost under a foundation before a homeowner becomes aware of the problem.
             </p>
-
-            <h3 className="text-lg font-medium text-white mt-6 mb-2">1. Water Meter Self-Test</h3>
             <p className="text-slate-300 mb-4">
-              The first and simplest check a homeowner can do themselves: shut off every fixture and water-using appliance in the house, then watch the water meter. If the dial keeps moving with everything off, water is escaping somewhere in the system — this doesn't confirm a slab leak specifically, but it's the trigger that justifies calling a plumber for further diagnosis.
+              The most common early indicators include unexplained water bill increases, warm spots on floors, foundation cracks, and the sound of running water when all fixtures are turned off. Each of these deserves attention, especially when two or more appear together.
             </p>
-
-            <h3 className="text-lg font-medium text-white mt-6 mb-2">2. Acoustic Listening Devices</h3>
             <p className="text-slate-300 mb-4">
-              Water escaping a pressurized line under a slab creates a faint, distinct sound. Ground microphones and acoustic listening equipment amplify that sound through the concrete and soil, letting a technician narrow the leak's location to a general area before any more precise (or invasive) method is used.
+              When a slab leak is suspected, professional leak detection is the next step. The following methods are used by plumbers and foundation specialists to locate leaks without unnecessary demolition:
             </p>
-
-            <h3 className="text-lg font-medium text-white mt-6 mb-2">3. Thermal Imaging</h3>
-            <p className="text-slate-300 mb-4">
-              Infrared cameras detect temperature differences at the slab surface. This method is especially effective for hot water line leaks, since escaping hot water warms the concrete directly above it in a way that's easy to spot on a thermal scan — often producing a clear, visible "hot spot" without any invasive testing at all.
-            </p>
-
-            <h3 className="text-lg font-medium text-white mt-6 mb-2">4. Pressure Testing</h3>
-            <p className="text-slate-300 mb-4">
-              Isolating sections of the plumbing system and pressurizing them (often with air or water) lets a technician monitor for pressure drop. A dropping section points directly to which line — hot or cold, and roughly which run — is compromised, helping confirm findings from acoustic or thermal methods.
-            </p>
-
-            <h3 className="text-lg font-medium text-white mt-6 mb-2">5. Video Pipe Inspection</h3>
-            <p className="text-slate-300 mb-4">
-              A camera fed through accessible plumbing lines can visually confirm cracks, corrosion, or joint failures inside the pipe itself. This is more commonly used on drain and sewer lines than pressurized supply lines, but it remains a useful confirmation tool where access allows it.
-            </p>
-
-            <h3 className="text-lg font-medium text-white mt-6 mb-2">6. Tracer Gas & Slab Penetration</h3>
-            <p className="text-slate-300 mb-4">
-              When other methods can't pinpoint the leak precisely enough, a non-toxic tracer gas can be introduced into the line and detected as it escapes through the slab — often the most precise non-invasive option available. Only after all of the above has narrowed the location as tightly as possible does a plumber move to slab penetration: opening the concrete at a specific, targeted point rather than guessing.
-            </p>
-
+            <ol className="list-decimal list-inside text-slate-300 space-y-3">
+              <li><strong>Water Meter Self-Test</strong> – Turn off all water-using fixtures and observe the meter. If the meter continues to spin, a hidden leak is likely.</li>
+              <li><strong>Acoustic Listening</strong> – A sensitive microphone placed on the slab or near plumbing lines can detect the sound of water escaping through cracks in the pipe. This method is effective for locating leaks that are not visible.</li>
+              <li><strong>Thermal Imaging</strong> – A thermal camera identifies temperature differences in the slab. Hot water leaks appear as warm patches, while cold water leaks may show as cooler areas. This non‑invasive technique can quickly narrow down the search area.</li>
+              <li><strong>Pressure Testing</strong> – The plumber isolates the suspected line and applies pressure. If the pressure drops over time, a leak is confirmed. This method is often used in conjunction with other diagnostics.</li>
+              <li><strong>Video Pipe Inspection</strong> – A small camera is inserted into the plumbing line to visually inspect for cracks, corrosion, or blockages. This provides a direct look at the pipe’s interior condition.</li>
+              <li><strong>Tracer Gas & Slab Penetration</strong> – In some cases, a harmless tracer gas is introduced into the pipe, and a detector is used to pinpoint the exact leak location. This method is highly accurate and minimizes the need for exploratory demolition.</li>
+            </ol>
             <p className="text-slate-300 mt-4">
-              This is a diagnosis-first sequence deliberately: each step exists to make the next one — and any eventual repair — smaller, more targeted, and less disruptive to the home.
+              Homeowners should ask any provider they call which methods they use and whether they offer an initial inspection fee that can be credited toward future work. A professional diagnosis before any claim is filed is one of the most important steps a homeowner can take.
+            </p>
+          </section>
+
+          { /* LOCAL SECTIONS 3 & 4 (unchanged, approved) */ }
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: The Insurance Gray Area</h2>
+            <p className="text-slate-300 mb-4">
+              When a slab leak is discovered, the first question many homeowners ask is: <em>"Will my insurance cover this?"</em> The answer depends on one critical distinction: <strong>was the leak sudden and accidental, or did it develop gradually over time?</strong>
+            </p>
+            <p className="text-slate-300 mb-4">
+              Multiple industry sources — including restoration companies, public adjusters, and legal guidance — consistently confirm the same pattern:
+            </p>
+            <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
+              <li>A slab leak that results from an abrupt pipe failure — such as a pressure spike, sudden corrosion breakthrough, or physical impact — typically qualifies as sudden and accidental. In such cases, the resulting property damage (flooring, drywall, cabinets) is generally covered under a standard homeowners policy, subject to the policy's limits and deductible.</li>
+              <li>The repair or replacement of the pipe itself, however, is almost never covered. This is treated as a maintenance item, consistent with the general insurance principle established in the Texas Department of Insurance's own guidance.</li>
+              <li>Insurers investigate physical evidence to determine the timeline of the leak. Extensive mold growth, deep saturation of flooring, and moisture that has penetrated far into subfloor framing all point toward a gradual leak, which is typically excluded from coverage. A claim discovered through a routine inspection or a sudden water bill spike — without those extended‑exposure signs — supports a finding of sudden and accidental damage.</li>
+            </ul>
+            <p className="text-slate-300">
+              While there is no single TDI publication dedicated specifically to slab leaks, the agency's general guidance on water damage claims — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases and should be cited alongside industry practice.
             </p>
           </section>
 
           <section className="mb-10">
-            <p className="text-slate-400 text-sm italic">More sections coming soon.</p>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: What Homeowners Can Do</h2>
+            <p className="text-slate-300 mb-4">
+              If you suspect a slab leak, taking the right steps in the right order can make a significant difference in how your claim is handled and whether coverage is approved. The following guidance is drawn from consistent recommendations across multiple industry sources.
+            </p>
+            <ol className="list-decimal list-inside text-slate-300 space-y-3 mb-4">
+              <li><strong>Get a professional leak‑detection diagnosis <em>before</em> filing a claim.</strong> A documented, dated report from a licensed plumber that identifies the cause and timeline of the leak is the single strongest piece of evidence you can provide to an adjuster.</li>
+              <li><strong>Photograph and date everything as you find it.</strong> Take clear photos of the leak location, any visible water damage, and the surrounding area before any cleanup or repair work begins.</li>
+              <li><strong>Be careful with recorded statements or examinations under oath.</strong> One source specifically warns that describing "I noticed something a while back" can be used by the insurer to argue the loss was gradual, even if the actual leak was recent.</li>
+              <li><strong>Weigh the cost of filing a claim against paying out of pocket.</strong> Multiple sources note that filing a claim can raise your premiums at renewal. For smaller, contained leaks, it may be more cost‑effective to handle the repair and cleanup yourself.</li>
+              <li><strong>If you file, document everything.</strong> Keep copies of the plumber's diagnosis, all photos, and any correspondence with your insurance company. A well‑documented claim is much harder to deny than one that relies on verbal descriptions.</li>
+            </ol>
+            <p className="text-slate-300">
+              These steps don't guarantee a claim will be approved — but they significantly improve your chances by presenting a clear, consistent, professionally supported timeline of the event, rather than leaving the adjuster to interpret ambiguous evidence.
+            </p>
           </section>
 
           <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
-            <p><strong>Suspect a slab leak?</strong> Call PlumbingHands — DFW's trusted emergency plumber, available 24/7.</p>
+            <p><strong>Have a plumbing emergency?</strong> Call PlumbingHands – DFW’s trusted emergency plumber, available 24/7.</p>
           </div>
 
           <div className="mt-10">
