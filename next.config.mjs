@@ -45,6 +45,11 @@ const nextConfig = {
         destination: 'https://plumbinghands.com/:path*',
         permanent: true,
       },
+      {
+        source: '/cost-guides/emergency-plumbing-cost-dfw',
+        destination: '/guides/dfw-emergency-plumbing-costs',
+        permanent: true,
+      },
     ];
   },
 };
