@@ -45,6 +45,15 @@ const urgentCards = [
   { title: "Sewer symptoms are appearing", text: "Multiple fixtures, odor, or cleanout overflow need prompt attention.", icon: Wrench, href: "/services/main-sewer-line-clog" }
 ];
 
+const cityEmergencyLinks = [
+  { title: "Dallas Emergency Plumber", description: "24/7 emergency plumbing service in Dallas, TX.", href: "/cities/dallas/24-hour-emergency-plumber" },
+  { title: "Plano Emergency Plumber", description: "Fast response for emergency plumbing in Plano.", href: "/cities/plano/24-hour-emergency-plumber" },
+  { title: "McKinney Emergency Plumber", description: "Reliable emergency plumbers serving McKinney.", href: "/cities/mckinney/24-hour-emergency-plumber" },
+  { title: "Frisco Emergency Plumber", description: "Emergency plumbing services in Frisco, TX.", href: "/cities/frisco/24-hour-emergency-plumber" },
+  { title: "Arlington Emergency Plumber", description: "24-hour plumbing help for Arlington residents.", href: "/cities/arlington/24-hour-emergency-plumber" },
+  { title: "Fort Worth Emergency Plumber", description: "Emergency plumbers ready in Fort Worth, TX.", href: "/cities/fort-worth/24-hour-emergency-plumber" }
+];
+
 const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);
 
 export const metadata = buildMetadata({
@@ -159,6 +168,22 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+<section className="content-section">
+  <p className="section-kicker">Emergency plumbers by city</p>
+  <h2 className="display-title mt-2 text-4xl font-bold text-white">Find Emergency Plumbing Help Near You.</h2>
+  <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {cityEmergencyLinks.map((link) => (
+      <Link key={link.href} href={link.href} className="premium-card group p-5">
+        <span className="grid h-12 w-12 place-items-center rounded-xl bg-[#0F1F1D] text-[#F0B429]"><MapPin className="h-6 w-6" aria-hidden="true" /></span>
+        <h3 className="mt-4 text-lg font-black leading-tight text-white">{link.title}</h3>
+        <p className="mt-2 text-sm leading-6 text-slate-300">{link.description}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-[#4FD1C5]">View this city <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+      </Link>
+    ))}
+  </div>
+</section>
+
 
         <section className="content-section dark-band">
           <div className="mx-auto max-w-5xl text-center">
