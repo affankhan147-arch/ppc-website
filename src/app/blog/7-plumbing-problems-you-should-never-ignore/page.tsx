@@ -8,7 +8,7 @@ import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 const path = "/blog/7-plumbing-problems-you-should-never-ignore";
-const title = "7 Plumbing Warning Signs Dallas–Fort Worth Homeowners Shouldn't Ignore";
+const title = "7 Plumbing Warning Signs DFW Homeowners Shouldn't Ignore";
 const description =
   "From dripping faucets to sewer odors, learn seven plumbing warning signs Dallas–Fort Worth homeowners should not ignore and when to request urgent help.";
 

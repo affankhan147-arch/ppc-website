@@ -8,12 +8,12 @@ import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 const path = "/blog/water-heater-making-popping-noise-dallas";
-const title = "Water Heater Making Popping Noises in Dallas: What the Sound Usually Means";
+const title = "Water Heater Popping Noises in Dallas: What It Means";
 const description =
   "Learn why a water heater pops or rumbles in Dallas, when sediment is the likely cause, and which warning signs mean it needs urgent help.";
 
 export const metadata = buildMetadata({
-  title: "Water Heater Making Popping Noises in Dallas: Causes and What to Do",
+  title: "Water Heater Popping Noises in Dallas: What It Means",
   description: truncateForMeta(description), path
 });
 

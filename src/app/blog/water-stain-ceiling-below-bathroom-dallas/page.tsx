@@ -8,11 +8,11 @@ import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 const path = "/blog/water-stain-ceiling-below-bathroom-dallas";
-const title = "Water Stain on the Ceiling Below a Bathroom in Dallas: What It Could Mean";
+const title = "Water Stain on Ceiling Below a Dallas Bathroom: Causes";
 const description =
   "See what can cause a water stain on the ceiling below a bathroom in Dallas, how to narrow down the source, and when it is a real emergency.";
 
-export const metadata = buildMetadata({ title: "Water Stain Below Bathroom in Dallas: Causes and Next Steps", description: truncateForMeta(description), path });
+export const metadata = buildMetadata({ title: "Water Stain on Ceiling Below a Dallas Bathroom: Causes", description: truncateForMeta(description), path });
 
 export default function WaterStainBelowBathroomPage() {
   return (
