@@ -52,6 +52,9 @@ const cityEmergencyLinks = [
   { title: "Frisco Emergency Plumber", description: "Emergency plumbing services in Frisco, TX.", href: "/cities/frisco/24-hour-emergency-plumber" },
   { title: "Arlington Emergency Plumber", description: "24-hour plumbing help for Arlington residents.", href: "/cities/arlington/24-hour-emergency-plumber" },
   { title: "Fort Worth Emergency Plumber", description: "Emergency plumbers ready in Fort Worth, TX.", href: "/cities/fort-worth/24-hour-emergency-plumber" }
+,
+  { title: "Carrollton Emergency Plumber", description: "24/7 emergency plumbing service in Carrollton, TX.", href: "/cities/carrollton/24-hour-emergency-plumber" },
+  { title: "Mansfield Emergency Drain Cleaning", description: "Fast emergency drain cleaning service in Mansfield, TX.", href: "/cities/mansfield/emergency-drain-cleaning" }
 ];
 
 const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);
