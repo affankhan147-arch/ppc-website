@@ -136,7 +136,14 @@ export function FAQBlock({ faqs }: { faqs: FAQ[] }) {
 }
 
 export function InternalLinks({ extra = [] }: { extra?: { label: string; href: string }[] }) {
-  const links = [...extra, ...internalLinkGroups].slice(0, 8);
+  const seen = new Set<string>();
+  const links = [...extra, ...internalLinkGroups]
+    .filter((link) => {
+      if (seen.has(link.href)) return false;
+      seen.add(link.href);
+      return true;
+    })
+    .slice(0, 8);
   return (
     <section className="content-section">
       <div className="section-kicker"><ArrowRight className="h-4 w-4" aria-hidden="true" /> Related emergency plumbing resources</div>
