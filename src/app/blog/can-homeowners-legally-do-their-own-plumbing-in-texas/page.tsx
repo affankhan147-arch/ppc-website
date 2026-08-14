@@ -47,6 +47,16 @@ const faqs = [
     question: "What happens if I skip the permit or do work the exemption doesn't cover?",
     answer:
       "Unpermitted or improperly performed work can create problems well beyond the original job: a homeowners insurance claim can be denied if the damage traces back to unpermitted work, the issue can surface as a defect during a home sale inspection and delay or kill the sale, and you may be required to open up finished walls or flooring later to bring the work up to code retroactively."
+  },
+  {
+    question: "What's the penalty for someone practicing plumbing without a license in Texas?",
+    answer:
+      "Performing plumbing work for compensation without a TSBPE license (i.e., not covered by the homestead exemption) is a regulatory violation that the Texas State Board of Plumbing Examiners can pursue with administrative penalties, cease-and-desist action, and fines. This applies to unlicensed individuals or contractors doing paid plumbing work - it is separate from a homeowner legally exercising their own homestead exemption, which carries no such penalty as long as it's the owner's own labor on their own primary residence."
+  },
+  {
+    question: "Does the homestead exemption apply to a manufactured or mobile home?",
+    answer:
+      "It applies to the property owner's homestead - the home you own and occupy as your primary residence - which generally includes manufactured and mobile homes on land you own and occupy as your primary residence. Manufactured housing also has its own separate state regulations (through the Texas Department of Housing and Community Affairs) that can affect what modifications are allowed, so confirm your specific situation before starting any plumbing work, especially anything connecting to a public water or sewer system."
   }
 ];
 
@@ -163,6 +173,49 @@ export default function DiyPlumbingLegalityPage() {
               . Other DFW cities - Fort Worth, Plano, Arlington, Frisco, McKinney, and the rest - each run their own permit process
               with their own thresholds for what needs a permit versus what counts as minor repair. Before starting any project beyond
               a like-for-like fixture swap, check with your specific city&apos;s building or permits department.
+            </p>
+          </section>
+
+          <section className="content-section mt-8">
+            <p className="section-kicker">Quick reference</p>
+            <h2 className="mt-2 text-2xl font-black text-white">Permit Offices for Major DFW Cities</h2>
+            <p className="mt-3 leading-7 text-slate-300">
+              Every DFW city sets its own permit thresholds, so the fastest way to confirm whether your specific project needs one
+              is to check directly with your city&apos;s permit office before you start. Here are the official permit pages for the
+              largest cities in the metro:
+            </p>
+            <div className="mt-4 overflow-hidden rounded-md border border-white/10">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-[#0F1F1D] text-slate-200">
+                  <tr>
+                    <th className="px-4 py-3 font-black">City</th>
+                    <th className="px-4 py-3 font-black">Official Permit Page</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/10">
+                  {[
+                    { city: "Dallas", href: "https://dallascityhall.com/departments/sustainabledevelopment/buildinginspection/Pages/building_inspection_faqs.aspx" },
+                    { city: "Fort Worth", href: "https://www.fortworthtexas.gov/departments/development-services/permits/residential-building-permit" },
+                    { city: "Plano", href: "https://www.plano.gov/273/Permits" },
+                    { city: "Arlington", href: "https://www.arlingtontx.gov/City-Services/Permits" },
+                    { city: "Frisco", href: "https://www.friscotexas.gov/1696/Residential-Permits" },
+                    { city: "McKinney", href: "https://www.mckinneytexas.org/3350/Home-Repairs-Permit-Information" }
+                  ].map((row) => (
+                    <tr key={row.city} className="text-slate-300">
+                      <td className="px-4 py-3 font-semibold text-white">{row.city}</td>
+                      <td className="px-4 py-3">
+                        <a href={row.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#4FD1C5] underline">
+                          {row.city} permit office
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-slate-400">
+              Permit thresholds and self-service categories change from time to time - confirm current requirements directly with
+              your city before starting work, especially for anything beyond a like-for-like fixture swap.
             </p>
           </section>
 
