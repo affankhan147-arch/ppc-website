@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -9,6 +10,7 @@ import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancem
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { blogPosts } from "@/data/blogPosts";
+import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
@@ -85,6 +87,16 @@ export default async function ServicePage({ params }: Props) {
             <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={service.name} />
           </div>
         </article>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={getArticleImage(service.slug, services.findIndex((item) => item.slug === service.slug))}
+            alt={`${service.name} in Dallas-Fort Worth - provider responding to an active service call`}
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       <DirectAnswer>{service.shortAnswer}</DirectAnswer>

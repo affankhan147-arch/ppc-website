@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { CostFactors, DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuideEnhancements, costGuideFaqEnhancements } from "@/data/pageEnhancements";
+import { getArticleImage } from "@/lib/articleImages";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { costGuides } from "@/data/costGuides";
 import { problems } from "@/data/problems";
@@ -67,6 +69,16 @@ export default async function CostGuidePage({ params }: Props) {
         <p className="mt-6 text-lg leading-8 text-slate-300">{guide.directAnswer}</p>
         <div className="mt-6">
           <CallButton location={`cost-guide-${guide.slug}-top`} />
+        </div>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={getArticleImage(guide.relatedServiceSlug, costGuides.findIndex((item) => item.slug === guide.slug))}
+            alt={`${guide.title} - Dallas-Fort Worth plumbing cost reference photo`}
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
         </div>
       </article>
       <div className="mt-8 answer-grid">

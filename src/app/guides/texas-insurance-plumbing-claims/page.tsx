@@ -1,6 +1,8 @@
-﻿import { buildMetadata, truncateForMeta } from "@/lib/seo";
+﻿import Image from "next/image";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
+import { getArticleImage } from "@/lib/articleImages";
 
 export const metadata = buildMetadata({
   title: "Texas Homeowners Insurance & Plumbing Claims – What’s Covered?",
@@ -38,6 +40,17 @@ export default function InsuranceGuidePage() {
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute legal or insurance advice. Always review your specific policy and consult with your insurance provider or a qualified professional.</p>
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+            <Image
+              src={getArticleImage(undefined, 6)}
+              alt="Homeowner reviewing a plumbing insurance claim with a consultant in Texas"
+              fill
+              sizes="(min-width: 1024px) 56rem, 100vw"
+              className="object-cover"
+              priority
+            />
           </div>
 
           <section className="mb-10">

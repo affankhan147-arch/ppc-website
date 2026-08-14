@@ -1,4 +1,5 @@
-﻿import { buildMetadata, truncateForMeta } from "@/lib/seo";
+﻿import Image from "next/image";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 
@@ -38,6 +39,17 @@ export default function GasLineGuidePage() {
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, gas, or legal advice. Always consult a licensed professional for your specific situation.</p>
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+            <Image
+              src="/images/photography/plumbing-diagnostic.jpg"
+              alt="Plumber inspecting a gas line connection and pressure setup in a DFW home"
+              fill
+              sizes="(min-width: 1024px) 56rem, 100vw"
+              className="object-cover"
+              priority
+            />
           </div>
 
           <section className="mb-10">
