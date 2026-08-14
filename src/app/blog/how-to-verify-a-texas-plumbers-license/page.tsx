@@ -1,10 +1,11 @@
-import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
-import { buildMetadata, truncateForMeta } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
+import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { AlertTriangle, Info, Shield, CheckCircle, XCircle } from "lucide-react";
 
@@ -13,6 +14,39 @@ const title = "How to Verify a Texas Plumber's License (Official TSBPE Search)";
 const description = "Step-by-step guide to using the Texas State Board of Plumbing Examiners license search tool, plus what results mean and red flags to watch for.";
 
 export const metadata: Metadata = buildMetadata({ title, description, path });
+
+const faqs = [
+  {
+    question: "Is it illegal to hire an unlicensed plumber in Texas?",
+    answer:
+      "Yes - with one narrow exception: the Texas Occupations Code allows a homeowner to perform their own plumbing work on their own occupied primary residence (DIY). That exemption does not extend to hiring someone else to do the work for you. If you hire an unlicensed individual to perform plumbing work - even on your own home - you are not covered by the homeowner exemption, and that person is operating illegally. In addition, hiring an unlicensed plumber for any rental property, commercial building, or gas/utility work is explicitly forbidden and can result in fines and liability."
+  },
+  {
+    question: "What happens if a plumber doesn't have insurance?",
+    answer:
+      "Without liability insurance, you are personally responsible for any property damage, injuries, or code violations that occur during the work. That could cost you far more than the original repair."
+  },
+  {
+    question: "How often do plumber licenses expire?",
+    answer:
+      "Texas plumber licenses have a fixed expiration date printed on the license and shown in the TSBPE search results. Renewal periods are established by the Texas State Board of Plumbing Examiners. To be certain, always check the license's expiration date directly in the search result - that is the authoritative source."
+  },
+  {
+    question: "Can I verify a plumber's license by phone?",
+    answer:
+      "Yes. The TSBPE provides a phone number for license verification: (512) 936-5200. However, the online search is faster and gives you immediate access to all details."
+  },
+  {
+    question: "What does \"Apprentice\" mean?",
+    answer:
+      "An apprentice is a trainee working under a licensed plumber. They may not work independently; a Master or Journeyman plumber must supervise them. If the person arriving at your door is an apprentice, ask who will be supervising them."
+  },
+  {
+    question: "Does the TSBPE search show if a plumber has been sued?",
+    answer:
+      "It does not show civil lawsuits, but it does list disciplinary actions taken by the board. For legal disputes, you may need to check public court records separately."
+  }
+];
 
 export default function LicenseVerificationPage() {
   return (
@@ -23,12 +57,23 @@ export default function LicenseVerificationPage() {
         breadcrumbSchema([
           { name: "Guides", path: "/blog" },
           { name: title, path }
-        ])
+        ]),
+        faqSchema(faqs)
       ]} />
       <Breadcrumbs items={[
         { label: "Guides", href: "/blog" },
         { label: "Verify a Texas Plumber's License", href: path }
       ]} />
+      <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <Image
+          src={getArticleImage("24-hour-emergency-plumber", 1)}
+          alt="Licensed Texas plumber's badge and paperwork being reviewed before a job"
+          fill
+          sizes="(min-width: 1024px) 56rem, 100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
       <DirectAnswer>
         <p>
           To verify a Texas plumber's license:
@@ -42,7 +87,7 @@ export default function LicenseVerificationPage() {
       </DirectAnswer>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Step-by-Step Search Process</h2>
+        <h2 className="text-2xl font-bold text-white">Step-by-Step Search Process</h2>
         <div className="mt-4 space-y-4">
           <div>
             <h3 className="font-semibold">1. Open the search portal</h3>
@@ -68,7 +113,7 @@ export default function LicenseVerificationPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">What the Results Mean</h2>
+        <h2 className="text-2xl font-bold text-white">What the Results Mean</h2>
         <div className="mt-4 space-y-3">
           <div>
             <h3 className="font-semibold">License Status</h3>
@@ -112,12 +157,12 @@ export default function LicenseVerificationPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Homeowner Exemption (Texas Occupations Code)</h2>
+        <h2 className="text-2xl font-bold text-white">Homeowner Exemption (Texas Occupations Code)</h2>
         <p className="mt-2">You may see plumbers advertise that they can do work without a license under a "homeowner exemption". However, the Texas Occupations Code allows <strong>unlicensed DIY work only on your own occupied primary residence</strong>. This exemption does <strong>not</strong> apply to rental properties, commercial buildings, or homes you do not personally occupy. If you hire someone claiming exemption for a non-eligible property, you could be held liable for code violations or unsafe work.</p>
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Red Flags to Watch For</h2>
+        <h2 className="text-2xl font-bold text-white">Red Flags to Watch For</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div className="p-4 border border-red-200 rounded-lg bg-red-50">
             <div className="flex items-start gap-3">
@@ -159,7 +204,7 @@ export default function LicenseVerificationPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-6">
           <div>
             <h3 className="font-semibold">Is it illegal to hire an unlicensed plumber in Texas?</h3>
@@ -189,7 +234,7 @@ export default function LicenseVerificationPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Next Steps for Hiring</h2>
+        <h2 className="text-2xl font-bold text-white">Next Steps for Hiring</h2>
         <ul className="list-disc ml-6 mt-2 space-y-1">
           <li>Always verify the plumber's license and COI before signing any contract.</li>
           <li>Get at least two written estimates for major work.</li>
