@@ -50,6 +50,16 @@ const nextConfig = {
         destination: '/guides/dfw-emergency-plumbing-costs',
         permanent: true,
       },
+      {
+        source: '/blog/main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options',
+        destination: '/blog/main-sewer-line-clogged-in-dallas-warning-signs',
+        permanent: true,
+      },
+      {
+        source: '/blog/toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners',
+        destination: '/blog/toilet-overflowing-at-night-in-dallas-fast-steps',
+        permanent: true,
+      },
     ];
   },
 };
