@@ -78,7 +78,7 @@ export default function InsuranceCoveragePage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">What's Typically Covered vs. Excluded</h2>
+        <h2 className="text-2xl font-bold text-white">What's Typically Covered vs. Excluded</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div className="p-4 border border-green-200 rounded-lg bg-green-50">
             <div className="flex items-start gap-3">
@@ -111,35 +111,35 @@ export default function InsuranceCoveragePage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">The "Sudden and Accidental" Rule</h2>
+        <h2 className="text-2xl font-bold text-white">The "Sudden and Accidental" Rule</h2>
         <p className="mt-2">
           Almost every coverage decision comes back to this one distinction. A pipe that bursts and floods a room in minutes is sudden and accidental - that's the scenario homeowners insurance is built for. A pipe that has been weeping slowly behind a wall for months, showing up only as a gradually rising water bill or a faint musty smell, is treated as a maintenance failure the homeowner should have caught, not a covered loss. If you notice a sudden spike in your water bill, that's actually a useful data point for a claim - it helps establish that the leak has a specific, recent onset rather than being long-term.
         </p>
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Slab Leaks and DFW's Clay Soil</h2>
+        <h2 className="text-2xl font-bold text-white">Slab Leaks and DFW's Clay Soil</h2>
         <p className="mt-2">
           North Texas sits on expansive clay soil that shifts as it absorbs and loses moisture, and that movement is a well-documented contributor to slab leaks in the region. That creates a genuine gray area for insurance purposes: insurers generally exclude damage caused by soil or foundation movement, but they generally do cover a straightforward pipe defect. The trouble is telling the two apart after the fact. A licensed plumber's diagnostic report - ideally including how and where the pipe failed - is the strongest piece of documentation you can bring to that conversation with your insurer. See our guide on <Link href="/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" className="text-teal-700 underline">slab leak warning signs DFW homeowners should know</Link> for what to watch for before it becomes a claim at all.
         </p>
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Mold Coverage Is Often Capped, Not Excluded Outright</h2>
+        <h2 className="text-2xl font-bold text-white">Mold Coverage Is Often Capped, Not Excluded Outright</h2>
         <p className="mt-2">
           Most Texas homeowners carry an HO-A policy, which only covers water damage from a leak that was sudden and accidental - the same rule as above applies to any resulting mold. Even when a policy does cover mold remediation, that coverage is typically capped at a set dollar amount rather than paid in full, so a bigger mold problem following a covered leak can still leave you with real out-of-pocket cost. Ask your insurer for your policy's specific mold sublimit rather than assuming a "covered" leak means unlimited mold coverage too.
         </p>
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Your Duty to Maintain the Property</h2>
+        <h2 className="text-2xl font-bold text-white">Your Duty to Maintain the Property</h2>
         <p className="mt-2">
           Insurers can deny or reduce a claim if the damage resulted from a homeowner ignoring an obvious, ongoing problem - leaving heat off during a hard freeze and letting pipes burst, or continuing to use a fixture after noticing a slow leak or pressure drop, are common examples. Keeping your thermostat at a reasonable minimum during freeze warnings and addressing warning signs (dropping water pressure, an unexplained bill spike, visible moisture) promptly is both good practice and part of what an insurer expects before they'll treat a loss as sudden and accidental rather than neglected.
         </p>
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Claim Timeline and Your Rights in Texas</h2>
+        <h2 className="text-2xl font-bold text-white">Claim Timeline and Your Rights in Texas</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
             <div className="flex items-start gap-3">
@@ -163,7 +163,7 @@ export default function InsuranceCoveragePage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Strengthening a Claim</h2>
+        <h2 className="text-2xl font-bold text-white">Strengthening a Claim</h2>
         <ul className="list-disc ml-6 mt-2 space-y-1">
           <li>Act quickly once you notice the leak - delay can itself be used to argue the damage was not sudden</li>
           <li>Photograph the damage, the source if visible, and any water bill spike before cleanup starts</li>
@@ -173,7 +173,7 @@ export default function InsuranceCoveragePage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-6">
           {faqs.map((faq) => (
             <div key={faq.question}>

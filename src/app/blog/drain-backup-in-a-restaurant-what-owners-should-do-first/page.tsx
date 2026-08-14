@@ -78,7 +78,7 @@ export default function DrainBackupRestaurantPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">The First 15 Minutes</h2>
+        <h2 className="text-2xl font-bold text-white">The First 15 Minutes</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
             <div className="flex items-start gap-3">
@@ -120,7 +120,7 @@ export default function DrainBackupRestaurantPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Why Restaurant Drains Back Up Differently Than Home Drains</h2>
+        <h2 className="text-2xl font-bold text-white">Why Restaurant Drains Back Up Differently Than Home Drains</h2>
         <p className="mt-2">
           A home kitchen sink backup is usually a single clogged trap or branch line. A restaurant kitchen runs through a grease trap (also called a grease interceptor) first - a dedicated container that is supposed to let fats, oils, and grease (often shortened to FOG in city code documents) cool, separate, and stay out of the sewer line, while wastewater continues on to the main sewer connection. When a restaurant backs up, the cause is more often one of three things: the grease trap itself is full or near capacity, grease has hardened somewhere in the line between the kitchen and the trap, or - less commonly but more seriously - the main line past the trap has its own blockage or damage.
         </p>
@@ -130,7 +130,7 @@ export default function DrainBackupRestaurantPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">DFW City Grease Trap Requirements (What We Could Verify)</h2>
+        <h2 className="text-2xl font-bold text-white">DFW City Grease Trap Requirements (What We Could Verify)</h2>
         <div className="mt-4 space-y-4">
           <div>
             <h3 className="font-semibold">Dallas</h3>
@@ -151,7 +151,7 @@ export default function DrainBackupRestaurantPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Grease Trap Backup vs. Main Sewer Line Backup: How to Tell</h2>
+        <h2 className="text-2xl font-bold text-white">Grease Trap Backup vs. Main Sewer Line Backup: How to Tell</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div className="p-4 border border-orange-200 rounded-lg bg-orange-50">
             <h3 className="font-semibold text-orange-800">Points to a grease trap issue</h3>
@@ -178,14 +178,14 @@ export default function DrainBackupRestaurantPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Plumber, Grease Hauler, or Restoration Company First?</h2>
+        <h2 className="text-2xl font-bold text-white">Plumber, Grease Hauler, or Restoration Company First?</h2>
         <p className="mt-2">
           For a straightforward full trap, call your licensed grease hauler. For anything involving a suspected line blockage, damaged trap, or backup that a routine pumping did not fix, that is a plumbing call. If wastewater has already spread onto flooring, into walls, or under equipment, the plumbing side generally needs to be controlled first - stopping the source and clearing the line - before a water-restoration company can safely dry the space and check for hidden moisture. See our guide on <Link href="/blog/plumber-or-water-restoration-company-first" className="text-teal-700 underline">who to call first after a leak or backup</Link> for more on that sequencing.
         </p>
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-6">
           {faqs.map((faq) => (
             <div key={faq.question}>
@@ -197,7 +197,7 @@ export default function DrainBackupRestaurantPage() {
       </section>
 
       <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-gray-900">Requesting Commercial Emergency Plumbing</h2>
+        <h2 className="text-2xl font-bold text-white">Requesting Commercial Emergency Plumbing</h2>
         <p className="mt-2">
           When you request help, have the affected fixtures, how long the backup has been happening, and your last known grease trap cleaning date ready - it helps a provider triage whether this looks like a trap, line, or main sewer issue before they arrive.
         </p>
