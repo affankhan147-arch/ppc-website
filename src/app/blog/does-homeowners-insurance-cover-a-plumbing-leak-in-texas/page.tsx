@@ -145,7 +145,7 @@ export default function InsuranceCoveragePage() {
             <div className="flex items-start gap-3">
               <FileClock className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
-                <h3 className="font-semibold">15 + 15 day rule</h3>
+                <h3 className="font-semibold text-slate-950">15 + 15 day rule</h3>
                 <p className="text-sm text-slate-700">Texas requires insurers to begin investigating a written claim within 15 days of receiving it, then accept or reject it within another 15 days once they have what they need to decide.</p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function InsuranceCoveragePage() {
             <div className="flex items-start gap-3">
               <ShieldQuestion className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
-                <h3 className="font-semibold">The CLUE database</h3>
+                <h3 className="font-semibold text-slate-950">The CLUE database</h3>
                 <p className="text-sm text-slate-700">Water and mold claims are recorded in the CLUE database, visible to future insurers (and sometimes buyers), which can affect future premiums - worth weighing for a small leak where paying out of pocket is an option.</p>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function InsuranceCoveragePage() {
       </section>
 
       <section className="content-section mt-8">
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-slate-300">
           This page provides general information, not insurance or legal advice. Coverage details vary by insurer, policy form, and endorsements - always confirm your specific coverage directly with your insurance agent or company before making decisions based on this guide.
         </p>
         <div className="mt-4">

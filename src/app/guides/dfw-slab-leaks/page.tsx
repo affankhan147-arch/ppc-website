@@ -126,7 +126,12 @@ export default function SlabLeaksGuidePage() {
           </div>
 
           <div className="mt-10">
-            <InternalLinks />
+            <InternalLinks
+              extra={[
+                { label: "Polybutylene Pipe Replacement Guide", href: "/guides/dfw-polybutylene-pipe-replacement" },
+                { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" }
+              ]}
+            />
           </div>
         </div>
       </div>

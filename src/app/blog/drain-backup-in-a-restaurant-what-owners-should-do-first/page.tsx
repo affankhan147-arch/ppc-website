@@ -84,7 +84,7 @@ export default function DrainBackupRestaurantPage() {
             <div className="flex items-start gap-3">
               <Clock className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
-                <h3 className="font-semibold">Stop using affected fixtures</h3>
+                <h3 className="font-semibold text-slate-950">Stop using affected fixtures</h3>
                 <p className="text-sm text-slate-700">Every sink, floor drain, or dishwasher run adds more water to a line that is already backing up, and can push contaminated water further into the kitchen.</p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function DrainBackupRestaurantPage() {
             <div className="flex items-start gap-3">
               <ShieldAlert className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
-                <h3 className="font-semibold">Keep the area clear</h3>
+                <h3 className="font-semibold text-slate-950">Keep the area clear</h3>
                 <p className="text-sm text-slate-700">Block off the affected section from staff and customers. Wastewater backup - especially anything touching a floor drain tied to the sewer side - is a contamination risk, not just a mess.</p>
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function DrainBackupRestaurantPage() {
             <div className="flex items-start gap-3">
               <FileWarning className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
-                <h3 className="font-semibold">Document before cleanup starts</h3>
+                <h3 className="font-semibold text-slate-950">Document before cleanup starts</h3>
                 <p className="text-sm text-slate-700">Photos and a short written timeline (when it started, which fixtures, how far it spread) help with insurance, an inspector's questions, and giving a provider accurate information before dispatch.</p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function DrainBackupRestaurantPage() {
             <div className="flex items-start gap-3">
               <AlertTriangle className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
-                <h3 className="font-semibold">Decide if you need to close a section</h3>
+                <h3 className="font-semibold text-slate-950">Decide if you need to close a section</h3>
                 <p className="text-sm text-slate-700">If wastewater has reached food prep, storage, or a customer-facing area, that section should close until it is cleaned and the cause is resolved - this is a health code call, not just an operations one.</p>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function DrainBackupRestaurantPage() {
             <p className="mt-1">Sizes grease trap requirements based on the number and type of plumbing fixtures connected, and may require an undersized existing trap to be replaced. Neglected traps that contribute to a sanitary sewer overflow can carry city fines described as reaching into the thousands of dollars, on top of cleanup costs.</p>
           </div>
         </div>
-        <p className="mt-3 text-sm text-slate-600">
+        <p className="mt-3 text-sm text-slate-300">
           City ordinances change, and exact intervals, sizing tables, and fine amounts vary by city and over time - confirm current requirements directly with your city's water utilities or pretreatment program before relying on any specific number here.
         </p>
       </section>
