@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { AlertTriangle, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -55,6 +57,17 @@ export default function WaterHeaterPoppingNoisePage() {
           attention to—especially alongside leaking, rusty water, inconsistent temperatures, or anything related to
           gas or electricity.
         </p>
+
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={getArticleImage("water-heater-emergency", 5)}
+            alt="Tank-style water heater in a Dallas home being checked for popping or rumbling noises"
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
 
         <div className="mt-7">
           <DirectAnswer>

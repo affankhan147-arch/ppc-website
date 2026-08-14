@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -52,6 +54,17 @@ export default function WaterStainBelowBathroomPage() {
           For Dallas homeowners, catching the source early can mean the difference between a limited repair and a
           ceiling that has to be opened more extensively.
         </p>
+
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={getArticleImage("burst-pipe-emergency", 2)}
+            alt="Water stain forming on a ceiling below a bathroom in a Dallas home"
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
 
         <div className="mt-7">
           <DirectAnswer>
