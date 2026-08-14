@@ -54,7 +54,10 @@ const cityEmergencyLinks = [
   { title: "Fort Worth Emergency Plumber", description: "Emergency plumbers ready in Fort Worth, TX.", href: "/cities/fort-worth/24-hour-emergency-plumber" }
 ,
   { title: "Carrollton Emergency Plumber", description: "24/7 emergency plumbing service in Carrollton, TX.", href: "/cities/carrollton/24-hour-emergency-plumber" },
-  { title: "Mansfield Emergency Drain Cleaning", description: "Fast emergency drain cleaning service in Mansfield, TX.", href: "/cities/mansfield/emergency-drain-cleaning" }
+  { title: "Mansfield Emergency Drain Cleaning", description: "Fast emergency drain cleaning service in Mansfield, TX.", href: "/cities/mansfield/emergency-drain-cleaning" },
+  { title: "Houston Emergency Plumber", description: "24/7 emergency plumbing service in Houston, TX.", href: "/cities/houston/24-hour-emergency-plumber" },
+  { title: "Austin Emergency Plumber", description: "24/7 emergency plumbing service in Austin, TX.", href: "/cities/austin/24-hour-emergency-plumber" },
+  { title: "San Antonio Emergency Plumber", description: "24/7 emergency plumbing service in San Antonio, TX.", href: "/cities/san-antonio/24-hour-emergency-plumber" }
 ];
 
 const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);

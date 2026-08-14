@@ -9,8 +9,8 @@ import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Dallas-Fort Worth plumbing service areas",
-  description: truncateForMeta("Browse all 30 Dallas-Fort Worth service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help, organized by city."),
+  title: "Texas plumbing service areas: DFW, Houston, Austin, San Antonio",
+  description: truncateForMeta("Browse all 33 Texas service-area pages across Dallas-Fort Worth, Houston, Austin, and San Antonio for emergency plumbing, drain, sewer, leak, toilet, and water-heater help, organized by city."),
   path: "/cities"
 });
 
@@ -38,8 +38,8 @@ export default function CitiesPage() {
         data={[
           webPageSchema(
             path,
-            "Emergency plumbing help by DFW location",
-            "Dallas-Fort Worth service-area hub for urgent plumbing, drain, sewer, leak, toilet, and water-heater requests."
+            "Emergency plumbing help by Texas location",
+            "Texas service-area hub covering Dallas-Fort Worth, Houston, Austin, and San Antonio for urgent plumbing, drain, sewer, leak, toilet, and water-heater requests."
           ),
           breadcrumbSchema([{ name: "Cities", path }])
         ]}
@@ -50,10 +50,10 @@ export default function CitiesPage() {
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div className="min-w-0">
             <p className="section-kicker">
-              <ShieldCheck className="h-4 w-4" aria-hidden="true" /> DFW service areas
+              <ShieldCheck className="h-4 w-4" aria-hidden="true" /> Texas service areas
             </p>
             <h1 className="mt-3 text-3xl font-black leading-tight text-white sm:text-4xl">
-              Emergency plumbing help by DFW location
+              Emergency plumbing help by Texas location
             </h1>
             <ul className="mt-5 grid gap-3 text-lg font-bold text-slate-800 sm:grid-cols-2">
               {hubBullets.map((item) => (
@@ -82,7 +82,7 @@ export default function CitiesPage() {
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <p className="section-kicker">Locations</p>
-            <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">DFW city service areas</h2>
+            <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">Texas city service areas</h2>
           </div>
           <Link href="/services/24-hour-emergency-plumber" className="text-base font-black text-cyan-700 hover:text-cyan-900">
             Start with emergency plumber <ArrowRight className="inline h-5 w-5" aria-hidden="true" />

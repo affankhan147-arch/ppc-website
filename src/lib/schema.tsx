@@ -23,9 +23,7 @@ export function organizationSchema() {
     name: siteConfig.legalName,
     url: siteConfig.baseUrl,
     description: siteConfig.serviceStatement,
-    areaServed: cities
-      .filter((city) => city.marketSlug === "dallas-fort-worth")
-      .map((city) => ({ "@type": "City", name: city.name })),
+    areaServed: cities.map((city) => ({ "@type": "City", name: city.name })),
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
