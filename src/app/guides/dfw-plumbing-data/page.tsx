@@ -7,7 +7,7 @@ import { getArticleImage } from "@/lib/articleImages";
 export const metadata = buildMetadata({
   title: "DFW Plumbing Emergency Data Report",
   description: truncateForMeta(
-    "An original, sourced data report on Dallas-Fort Worth water hardness by city, winter freeze-event frequency, and the population growth driving local plumbing demand."
+    "An original, sourced data report on Dallas-Fort Worth water hardness by city, winter freeze frequency, and the population growth driving plumbing demand."
   ),
   path: "/guides/dfw-plumbing-data"
 });
@@ -20,7 +20,7 @@ export default function DfwPlumbingDataPage() {
           webPageSchema(
             "/guides/dfw-plumbing-data",
             "DFW Plumbing Emergency Data Report",
-            "An original, sourced data report on Dallas-Fort Worth water hardness by city, winter freeze-event frequency, and the population growth driving local plumbing demand."
+            "An original, sourced data report on Dallas-Fort Worth water hardness by city, winter freeze frequency, and the population growth driving plumbing demand."
           ),
           breadcrumbSchema([
             { name: "Home", path: "/" },

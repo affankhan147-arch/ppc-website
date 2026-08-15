@@ -6,7 +6,7 @@ import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema
 
 export const metadata = buildMetadata({
   title: "Emergency plumbing and drain cleaning FAQ",
-  description: truncateForMeta("Answer-ready FAQ hub for urgent plumbing, drain, sewer, cost, and provider connection questions across Dallas-Fort Worth, covering safety steps and what counts as an emergency."),
+  description: truncateForMeta("Answer-ready FAQ hub for urgent plumbing, drain, sewer, and cost questions across Dallas-Fort Worth, covering safety steps and what counts as an emergency."),
   path: "/faq"
 });
 

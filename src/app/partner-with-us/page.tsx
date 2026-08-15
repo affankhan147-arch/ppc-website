@@ -5,7 +5,7 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Provider partner inquiries",
-  description: truncateForMeta("Partner inquiry page for licensed plumbing providers and service partners in Dallas-Fort Worth interested in receiving qualified local emergency plumbing leads."),
+  description: truncateForMeta("Partner inquiry page for licensed plumbing providers in Dallas-Fort Worth interested in receiving qualified local emergency plumbing leads."),
   path: "/partner-with-us"
 });
 

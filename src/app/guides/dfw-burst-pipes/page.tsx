@@ -7,7 +7,7 @@ import { getArticleImage } from "@/lib/articleImages";
 export const metadata = buildMetadata({
   title: "Burst Pipes in DFW: Causes, Costs & First Steps",
   description: truncateForMeta(
-    "A research-backed guide to why burst pipes are so common in Dallas-Fort Worth, what Winter Storm Uri showed about the real risk, insurance coverage, and the first steps that limit damage."
+    "A research-backed guide to why burst pipes are common in Dallas-Fort Worth, what Winter Storm Uri showed, and the first steps that limit damage."
   ),
   path: "/guides/dfw-burst-pipes"
 });
@@ -20,7 +20,7 @@ export default function BurstPipesGuidePage() {
           webPageSchema(
             "/guides/dfw-burst-pipes",
             "Burst Pipes in DFW: Why They Happen and What To Do First",
-            "A research-backed guide to why burst pipes are so common in Dallas-Fort Worth, what Winter Storm Uri showed about the real risk, insurance coverage, and the first steps that limit damage."
+            "A research-backed guide to why burst pipes are common in Dallas-Fort Worth, what Winter Storm Uri showed, and the first steps that limit damage."
           ),
           breadcrumbSchema([
             { name: "Home", path: "/" },

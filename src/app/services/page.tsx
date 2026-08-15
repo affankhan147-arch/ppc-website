@@ -14,7 +14,7 @@ import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema
 export const metadata = buildMetadata({
   title: "24/7 Emergency Plumbing Services in Dallas-Fort Worth",
   description: truncateForMeta(
-    "Browse 24/7 emergency plumbing services across Dallas-Fort Worth: burst pipes, drain cleaning, sewer line help, water heaters, and toilet emergencies. Request a same-day provider connection."
+    "Browse 24/7 emergency plumbing services across Dallas-Fort Worth: burst pipes, drain cleaning, sewer lines, water heaters, and toilet emergencies."
   ),
   path: "/services"
 });

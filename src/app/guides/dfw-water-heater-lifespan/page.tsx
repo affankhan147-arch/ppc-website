@@ -7,7 +7,7 @@ import { getArticleImage } from "@/lib/articleImages";
 export const metadata = buildMetadata({
   title: "DFW Water Heater Lifespan: How Long They Last",
   description: truncateForMeta(
-    "A research-backed guide to how long tank and tankless water heaters last, why DFW's hard water shortens that lifespan, and the maintenance that actually extends it."
+    "A research-backed guide to how long tank and tankless water heaters last, why DFW hard water shortens that lifespan, and maintenance that extends it."
   ),
   path: "/guides/dfw-water-heater-lifespan"
 });
@@ -20,7 +20,7 @@ export default function WaterHeaterLifespanGuidePage() {
           webPageSchema(
             "/guides/dfw-water-heater-lifespan",
             "Water Heater Lifespan & Maintenance in DFW",
-            "A research-backed guide to how long tank and tankless water heaters last, why DFW's hard water shortens that lifespan, and the maintenance that actually extends it."
+            "A research-backed guide to how long tank and tankless water heaters last, why DFW hard water shortens that lifespan, and maintenance that extends it."
           ),
           breadcrumbSchema([
             { name: "Home", path: "/" },
