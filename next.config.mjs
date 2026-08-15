@@ -60,6 +60,31 @@ const nextConfig = {
         destination: '/blog/toilet-overflowing-at-night-in-dallas-fast-steps',
         permanent: true,
       },
+      {
+        source: '/services/burst-pipe-emergency-what-to-do-first',
+        destination: '/services/burst-pipe-emergency',
+        permanent: true,
+      },
+      {
+        source: '/services/water-heater-not-heating-emergency-service',
+        destination: '/services/water-heater-emergency',
+        permanent: true,
+      },
+      {
+        source: '/services/same-day-emergency-plumber-dfw',
+        destination: '/services/same-day-plumber-connection',
+        permanent: true,
+      },
+      {
+        source: '/services/toilet-backup-emergency-repair-dallas',
+        destination: '/services/toilet-overflow-emergency',
+        permanent: true,
+      },
+      {
+        source: '/services/emergency-plumbing-under-200-dallas',
+        destination: '/services/24-hour-emergency-plumber',
+        permanent: true,
+      },
     ];
   },
 };

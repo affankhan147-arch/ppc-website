@@ -3240,11 +3240,44 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
 };
 
 export const serviceFaqEnhancements: Record<string, FAQ[]> = {
+  "water-heater-emergency": [
+    {
+      question: "Is a water heater that stopped heating an emergency?",
+      answer:
+        "A water heater with no hot water is usually not as urgent as an active leak, but it still warrants a same-day request, especially in colder months. Check the breaker or gas pilot first, note the tank's age and type, and avoid relighting gas if you smell gas before calling."
+    }
+  ],
+  "same-day-plumber-connection": [
+    {
+      question: "How fast is same-day plumber connection service?",
+      answer:
+        "Same-day connection routes your request to available local providers the same day when possible, but exact arrival time depends on provider schedules, distance, and current demand. Confirm timing directly with the matched provider rather than assuming a fixed window."
+    }
+  ],
+  "toilet-overflow-emergency": [
+    {
+      question: "What if my toilet backup will not stop even after shutting the valve?",
+      answer:
+        "If the toilet supply valve is closed but water keeps rising or backs into a tub or shower, the blockage is likely deeper than the toilet trap and may involve the main line. Stop using other fixtures and request urgent service rather than continuing to plunge."
+    }
+  ],
+  "24-hour-emergency-plumber": [
+    {
+      question: "Is there a lower-cost option for a smaller emergency plumbing issue?",
+      answer:
+        "Pricing depends on diagnosis, timing, and scope, so there is no fixed under-$200 guarantee. Ask the matched provider for a diagnostic and dispatch estimate up front so you know what a smaller, non-structural issue is likely to cost before work begins."
+    }
+  ],
   "burst-pipe-emergency": [
     {
       question: "What leak details should I include in the request?",
       answer:
         "Include whether water is still active, which shutoff worked, where water is visible, whether electrical areas are nearby, and whether walls, ceilings, cabinets, or floors are wet."
+    },
+    {
+      question: "What should I do first if a pipe bursts?",
+      answer:
+        "Shut off the main water valve first, then turn off electricity near standing water if it is safe to reach the breaker. Open a low faucet to relieve pressure in the line, and avoid touching wet switches or outlets before help arrives."
     }
   ],
   "main-sewer-line-clog": [
