@@ -34,7 +34,7 @@ export function hasConfiguredPhone(value: string = siteConfig.phoneE164) {
 }
 
 export const navigation = [
-  { label: "Services", href: "/services/24-hour-emergency-plumber" },
+  { label: "Services", href: "/services" },
   { label: "Cities", href: "/cities" },
   { label: "Guides", href: "/blog" }
 ];

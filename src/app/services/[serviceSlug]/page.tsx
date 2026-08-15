@@ -71,13 +71,13 @@ export default async function ServicePage({ params }: Props) {
           webPageSchema(path, `${displayName} in Dallas-Fort Worth`, service.shortAnswer),
           serviceSchema(displayName, path, service.shortAnswer),
           breadcrumbSchema([
-            { name: "Services", path: "/services/24-hour-emergency-plumber" },
+            { name: "Services", path: "/services" },
             { name: displayName, path }
           ]),
           faqSchema(faqs)
         ]}
       />
-      <Breadcrumbs items={[{ label: "Services", href: "/services/24-hour-emergency-plumber" }, { label: displayName, href: path }]} />
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: displayName, href: path }]} />
       <div className="mt-6">
         <article>
           <p className="section-kicker">{service.urgency} urgency service page</p>

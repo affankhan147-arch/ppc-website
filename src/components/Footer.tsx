@@ -3,6 +3,7 @@ import { PhoneCall } from "lucide-react";
 import { phoneConfig, siteConfig } from "@/data/site";
 import { cities } from "@/data/cities";
 import { services } from "@/data/services";
+import { titleCase } from "@/lib/format";
 import { TrackedLink } from "@/components/TrackedLink";
 
 export function Footer() {
@@ -30,9 +31,12 @@ export function Footer() {
         <div>
           <p className="font-bold">Services</p>
           <div className="mt-3 grid gap-2 text-sm text-slate-400">
+            <Link href="/services" className="hover:text-[#4FD1C5]">
+              All services
+            </Link>
             {services.slice(0, 6).map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="hover:text-[#4FD1C5]">
-                {service.name}
+                {titleCase(service.name)}
               </Link>
             ))}
           </div>

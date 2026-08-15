@@ -5,6 +5,7 @@ import { CallButton } from "@/components/CallButton";
 import { cities, getPriorityServiceSlugsForCity } from "@/data/cities";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/site";
+import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
@@ -24,9 +25,10 @@ const hubBullets = [
 function serviceNamesForCity(citySlug: string) {
   const priorityNames = getPriorityServiceSlugsForCity(citySlug)
     .map((serviceSlug) => services.find((service) => service.slug === serviceSlug)?.name)
-    .filter((name): name is string => Boolean(name));
+    .filter((name): name is string => Boolean(name))
+    .map((name) => titleCase(name));
 
-  return priorityNames.length ? priorityNames : ["Emergency plumbing", "Drain cleaning"];
+  return priorityNames.length ? priorityNames : ["Emergency Plumbing", "Drain Cleaning"];
 }
 
 export default function CitiesPage() {
@@ -84,8 +86,8 @@ export default function CitiesPage() {
             <p className="section-kicker">Locations</p>
             <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">Texas city service areas</h2>
           </div>
-          <Link href="/services/24-hour-emergency-plumber" className="text-base font-black text-cyan-700 hover:text-cyan-900">
-            Start with emergency plumber <ArrowRight className="inline h-5 w-5" aria-hidden="true" />
+          <Link href="/services" className="text-base font-black text-cyan-700 hover:text-cyan-900">
+            Browse all services <ArrowRight className="inline h-5 w-5" aria-hidden="true" />
           </Link>
         </div>
 

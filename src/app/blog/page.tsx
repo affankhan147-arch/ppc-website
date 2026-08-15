@@ -88,7 +88,7 @@ export default function BlogHubPage() {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
-          { label: "Emergency service options", href: "/services/24-hour-emergency-plumber" },
+          { label: "Emergency service options", href: "/services" },
           { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
           { label: "Dallas service area", href: "/cities/dallas" }
         ]}
