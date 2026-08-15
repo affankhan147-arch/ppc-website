@@ -20,6 +20,7 @@ import { problems } from "@/data/problems";
 import { featuredServices, services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 import { getGridImage } from "@/lib/articleImages";
+import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
@@ -60,8 +61,6 @@ const cityEmergencyLinks = [
   { title: "San Antonio Emergency Plumber", description: "24/7 emergency plumbing service in San Antonio, TX.", href: "/cities/san-antonio/24-hour-emergency-plumber" }
 ];
 
-const capitalizeFirst = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);
-
 export const metadata = buildMetadata({
   title: "Emergency plumbing service across Dallas-Fort Worth",
   description: truncateForMeta("Call for emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
@@ -71,10 +70,11 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   const faqs = [
     { question: "Can I request emergency plumbing service across Dallas-Fort Worth?", answer: siteConfig.serviceStatement },
+    { question: "Do you connect homeowners with 24 hour plumbers or a 24/7 plumber?", answer: "Yes. Plumbing Hands connects Dallas-Fort Worth homeowners with 24 hour plumbers and 24/7 plumber support, including same day plumber service for problems that can't wait until regular business hours." },
     { question: "What plumbing problems can I call about?", answer: "Call about active leaks, drain backups, sewer symptoms, toilet overflows, burst pipes, failed shutoff valves, and urgent water-heater problems." },
     ...emergencyFaqs,
     ...universalFaqs
-  ].slice(0, 8);
+  ].slice(0, 9);
 
   return (
     <main>
@@ -151,7 +151,7 @@ export default function HomePage() {
         <section id="services" className="content-section">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div><p className="section-kicker">Emergency plumbing services</p><h2 className="display-title mt-2 text-4xl font-bold text-white">Help Organized Around Your Plumbing Problem.</h2></div>
-            <Link href="/services/24-hour-emergency-plumber" className="inline-flex items-center gap-2 font-black text-[#4FD1C5]">Emergency plumber overview <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+            <Link href="/services" className="inline-flex items-center gap-2 font-black text-[#4FD1C5]">Browse all 24/7 emergency plumbing services <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {featuredServices.map((service) => (
@@ -159,14 +159,14 @@ export default function HomePage() {
                 <div className="relative h-40 w-full overflow-hidden">
                   <Image
                     src={serviceImages[service.slug] ?? "/images/hero/hero-emergency-plumber-repair.jpg"}
-                    alt={`${service.name} - professional plumber on the job`}
+                    alt={`${titleCase(service.name)} - professional plumber on the job`}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-black leading-tight text-white">{capitalizeFirst(service.name)}</h3>
+                  <h3 className="text-xl font-black leading-tight text-white">{titleCase(service.name)}</h3>
                   <p className="mt-2 line-clamp-3 leading-7 text-slate-300">{service.shortAnswer}</p>
                   <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#F0B429]">Explore this service <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
                 </div>
@@ -208,7 +208,7 @@ export default function HomePage() {
           <div className="text-center">
             <p className="section-kicker">Built for urgent plumbing needs</p>
             <h2 className="display-title mx-auto mt-3 max-w-4xl text-4xl font-bold leading-tight text-white">Professional Plumbing Help Starts With One Clear Call.</h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">From the first safety step to choosing the right service, Plumbing Hands keeps the process focused on the problem that needs attention.</p>
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">From the first safety step to choosing the right service, Plumbing Hands connects you with 24 hour plumbers and same day plumber service near you, so emergency plumbing help is never far away across Dallas-Fort Worth.</p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {["Emergency-ready guidance", "Service organized by problem", "Coverage across Dallas-Fort Worth"].map((item) => (
