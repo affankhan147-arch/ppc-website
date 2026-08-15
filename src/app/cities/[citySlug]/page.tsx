@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -7,6 +8,8 @@ import { cities, getNearbyCities, getPriorityServiceSlugsForCity } from "@/data/
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityPageEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
+import { getArticleImage } from "@/lib/articleImages";
+import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
@@ -92,6 +95,16 @@ export default async function CityPage({ params }: Props) {
             <CallButton location={`city-${city.slug}-top`} pagePath={path} pageType="city" city={city.name} service="Emergency plumbing" />
           </div>
         </article>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={getArticleImage(undefined, cities.findIndex((item) => item.slug === city.slug))}
+            alt={`Emergency plumbing service in ${city.name}, TX`}
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       <DirectAnswer>
@@ -118,7 +131,7 @@ export default async function CityPage({ params }: Props) {
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link key={service.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400" href={`/services/${service.slug}`}>
-              {service.name}
+              {titleCase(service.name)}
             </Link>
           ))}
         </div>
@@ -130,7 +143,7 @@ export default async function CityPage({ params }: Props) {
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {cityServiceLinks.map((service) => (
               <Link key={service.slug} className="rounded-md border border-emerald-200 bg-emerald-50 p-4 font-bold text-emerald-950 hover:border-emerald-500" href={`/cities/${city.slug}/${service.slug}`}>
-                {service.name} in {city.name}
+                {titleCase(service.name)} in {city.name}
               </Link>
             ))}
           </div>
@@ -152,7 +165,7 @@ export default async function CityPage({ params }: Props) {
       <InternalLinks
         extra={[
           ...(enhancement?.extraLinks || []),
-          ...services.slice(0, 4).map((service) => ({ label: service.name, href: `/services/${service.slug}` })),
+          ...services.slice(0, 4).map((service) => ({ label: titleCase(service.name), href: `/services/${service.slug}` })),
           ...nearbyCities.map((nearby) => ({ label: `Emergency plumbing in ${nearby.name}`, href: `/cities/${nearby.slug}` }))
         ]}
       />

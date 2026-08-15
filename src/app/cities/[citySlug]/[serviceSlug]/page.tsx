@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -8,6 +9,8 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityServiceEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
+import { getArticleImage } from "@/lib/articleImages";
+import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
@@ -27,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
   return buildMetadata({
-    title: `${service.name} in ${city.name}, TX`,
+    title: `${titleCase(service.name)} in ${city.name}, TX`,
     description: truncateForMeta(`${service.shortAnswer} Local service-area guidance for ${city.name}, TX with provider availability reminders.`),
     path: `/cities/${city.slug}/${service.slug}`
   });
@@ -39,6 +42,7 @@ export default async function CityServicePage({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) notFound();
 
+  const displayName = titleCase(service.name);
   const path = `/cities/${city.slug}/${service.slug}`;
   const enhancement = cityServiceEnhancements[`${city.slug}/${service.slug}`];
   const relatedProblems = problems.filter((problem) => problem.relatedServiceSlug === service.slug).slice(0, 2);
@@ -46,7 +50,7 @@ export default async function CityServicePage({ params }: Props) {
   const faqs = [
     ...(enhancement?.extraFaqs || []),
     {
-      question: `When should I call for ${service.name} in ${city.name}?`,
+      question: `When should I call for ${displayName} in ${city.name}?`,
       answer: `Call when the problem risks property damage, wastewater exposure, fixture shutdown, or worsening backup symptoms. ${service.shortAnswer}`
     },
     {
@@ -61,27 +65,37 @@ export default async function CityServicePage({ params }: Props) {
     <main className="page-shell">
       <JsonLd
         data={[
-          webPageSchema(path, `${service.name} in ${city.name}`, service.shortAnswer),
-          serviceSchema(`${service.name} in ${city.name}`, path, service.shortAnswer),
+          webPageSchema(path, `${displayName} in ${city.name}`, service.shortAnswer),
+          serviceSchema(`${displayName} in ${city.name}`, path, service.shortAnswer),
           breadcrumbSchema([
             { name: city.name, path: `/cities/${city.slug}` },
-            { name: service.name, path }
+            { name: displayName, path }
           ]),
           faqSchema(faqs)
         ]}
       />
-      <Breadcrumbs items={[{ label: city.name, href: `/cities/${city.slug}` }, { label: service.name, href: path }]} />
+      <Breadcrumbs items={[{ label: city.name, href: `/cities/${city.slug}` }, { label: displayName, href: path }]} />
       <div className="mt-6">
         <article>
           <p className="section-kicker">City plus service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{service.name} in {city.name}, TX</h1>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{displayName} in {city.name}, TX</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
-            Local guidance for {city.name} homeowners and property managers who need {service.name}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
+            Local guidance for {city.name} homeowners and property managers who need {displayName.toLowerCase()}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
           </p>
           <div className="mt-6">
-            <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={service.name} />
+            <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={displayName} />
           </div>
         </article>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <Image
+            src={getArticleImage(service.slug, priorityCityServiceCombos.findIndex((combo) => combo.citySlug === city.slug && combo.serviceSlug === service.slug))}
+            alt={`${displayName} in ${city.name}, TX - provider responding to an active service call`}
+            fill
+            sizes="(min-width: 1024px) 56rem, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       <DirectAnswer>
@@ -112,7 +126,7 @@ export default async function CityServicePage({ params }: Props) {
         extra={[
           ...(enhancement?.extraLinks || []),
           { label: `${city.name} emergency plumbing`, href: `/cities/${city.slug}` },
-          { label: `${service.name} service page`, href: `/services/${service.slug}` },
+          { label: `${displayName} service page`, href: `/services/${service.slug}` },
           ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` })),
           ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])
         ]}
