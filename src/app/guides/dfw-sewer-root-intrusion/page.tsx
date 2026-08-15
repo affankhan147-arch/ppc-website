@@ -129,7 +129,14 @@ export default function SewerRootGuidePage() {
           </div>
 
           <div className="mt-10">
-            <InternalLinks />
+            <InternalLinks
+              extra={[
+                { label: "Main Sewer Line Clog Service", href: "/services/main-sewer-line-clog" },
+                { label: "Sewer Line Clog Cost Guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+                { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
+              ]}
+            />
           </div>
         </div>
       </div>

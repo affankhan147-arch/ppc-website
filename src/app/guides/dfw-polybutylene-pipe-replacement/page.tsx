@@ -161,7 +161,8 @@ export default function PolybutylenePipeGuidePage() {
                 { label: "DFW Slab Leaks Guide", href: "/guides/dfw-slab-leaks" },
                 { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" },
                 { label: "DFW Emergency Plumbing Costs", href: "/guides/dfw-emergency-plumbing-costs" },
-                { label: "Burst-Pipe Emergency", href: "/services/burst-pipe-emergency" }
+                { label: "Burst-Pipe Emergency", href: "/services/burst-pipe-emergency" },
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
               ]}
             />
           </div>

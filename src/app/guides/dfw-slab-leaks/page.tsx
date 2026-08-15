@@ -142,7 +142,8 @@ export default function SlabLeaksGuidePage() {
             <InternalLinks
               extra={[
                 { label: "Polybutylene Pipe Replacement Guide", href: "/guides/dfw-polybutylene-pipe-replacement" },
-                { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" }
+                { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" },
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
               ]}
             />
           </div>

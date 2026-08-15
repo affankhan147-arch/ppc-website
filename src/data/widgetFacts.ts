@@ -1,8 +1,8 @@
 // Real, cited single-value facts used to power free embeddable badges under
 // /tools. Every value here must trace back to a real, cited source already
-// published on the site (guides/dfw-plumbing-data, guides/dfw-burst-pipes,
-// guides/dfw-water-heater-lifespan) - do not add a fact without a real
-// source, since this data feeds public embeddable widgets.
+// published on the site (the research guides under /guides, or a cited
+// blog post) - do not add a fact without a real source, since this data
+// feeds public embeddable widgets.
 
 export type WidgetFact = {
   slug: string;
@@ -40,6 +40,48 @@ export const widgetFacts: WidgetFact[] = [
     value: "15-20 years typical",
     sourceNote: "A.O. Smith / Hotwater.com manufacturer guidance.",
     linkPath: "/guides/dfw-water-heater-lifespan"
+  },
+  {
+    slug: "dfw-slab-leak-risk",
+    label: "Slab Leak Risk Factor",
+    value: "Expansive clay soil - primary driver of DFW foundation failures",
+    sourceNote: "ASCE research on expansive soil damage; Wray (1989) Dallas County foundation failure survey.",
+    linkPath: "/guides/dfw-slab-leaks"
+  },
+  {
+    slug: "polybutylene-pipe-era",
+    label: "Polybutylene Pipe Era",
+    value: "Installed 1978-1995 - still common in older DFW homes",
+    sourceNote: "Cox v. Shell class-action settlement (1995); polybutylene production history.",
+    linkPath: "/guides/dfw-polybutylene-pipe-replacement"
+  },
+  {
+    slug: "polybutylene-repipe-cost",
+    label: "PB Pipe Re-Pipe Cost",
+    value: "$4,000-$15,000 typical range in DFW",
+    sourceNote: "Typical DFW full re-pipe cost range published in our polybutylene pipe guide.",
+    linkPath: "/guides/dfw-polybutylene-pipe-replacement"
+  },
+  {
+    slug: "dfw-sewer-lateral-responsibility",
+    label: "Sewer Lateral Responsibility",
+    value: "Property line to house: almost always the homeowner's",
+    sourceNote: "City of Dallas wastewater code; Fort Worth and Arlington Water Utilities policy language.",
+    linkPath: "/guides/dfw-sewer-root-intrusion"
+  },
+  {
+    slug: "gas-leak-safe-distance",
+    label: "Gas Leak Safe Distance",
+    value: "Evacuate 100-350 ft - never investigate a leak yourself",
+    sourceNote: "University safety office and gas utility emergency protocol guidance.",
+    linkPath: "/guides/dfw-gas-line-safety"
+  },
+  {
+    slug: "tx-plumber-license-verify",
+    label: "Verify a TX Plumber License",
+    value: "Free via TSBPE - online search or (512) 936-5200",
+    sourceNote: "Texas State Board of Plumbing Examiners (TSBPE) public license search tool.",
+    linkPath: "/blog/how-to-verify-a-texas-plumbers-license"
   }
 ];
 

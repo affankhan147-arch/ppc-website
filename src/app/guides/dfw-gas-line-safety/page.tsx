@@ -121,7 +121,13 @@ export default function GasLineGuidePage() {
           </div>
 
           <div className="mt-10">
-            <InternalLinks />
+            <InternalLinks
+              extra={[
+                { label: "How to Verify a Texas Plumber's License", href: "/blog/how-to-verify-a-texas-plumbers-license" },
+                { label: "Emergency Plumbing Services", href: "/services" },
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
+              ]}
+            />
           </div>
         </div>
       </div>
