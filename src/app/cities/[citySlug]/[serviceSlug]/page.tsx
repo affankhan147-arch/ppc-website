@@ -80,7 +80,8 @@ export default async function CityServicePage({ params }: Props) {
           <p className="section-kicker">City plus service page</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-white">{displayName} in {city.name}, TX</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
-            Local guidance for {city.name} homeowners and property managers who need {displayName.toLowerCase()}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
+            Searching for {displayName.toLowerCase()} near {city.name}, available 24 hours a day? Local guidance for {city.name} homeowners and
+            property managers who need {displayName.toLowerCase()}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
           </p>
           <div className="mt-6">
             <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={displayName} />
