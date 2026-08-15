@@ -23,10 +23,10 @@ export function generateStaticParams() {
 
 function buildCityDescription(city: (typeof cities)[number]) {
   const candidates = [
-    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX, covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
-    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX, covering ${city.areaHint}.`,
-    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX and nearby ${city.countyHint} areas. Confirm coverage and pricing with the provider.`,
-    `Request emergency plumbing and drain cleaning help serving ${city.name}, TX and nearby ${city.countyHint} areas.`
+    `Request an emergency plumber serving ${city.name}, TX for plumbing and drain cleaning help, covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
+    `Request an emergency plumber serving ${city.name}, TX for plumbing and drain cleaning help, covering ${city.areaHint}.`,
+    `Request an emergency plumber serving ${city.name}, TX and nearby ${city.countyHint} areas. Confirm coverage and pricing with the provider.`,
+    `Request an emergency plumber serving ${city.name}, TX and nearby ${city.countyHint} areas.`
   ];
   const ideal = candidates.find((c) => c.length >= 120 && c.length <= 158);
   if (ideal) return ideal;
@@ -39,10 +39,9 @@ export async function generateMetadata({ params }: Props) {
   const { citySlug } = await params;
   const city = cities.find((item) => item.slug === citySlug);
   if (!city) return {};
-  const isIrving = city.slug === "irving";
   return buildMetadata({
-    title: isIrving ? "Emergency Plumber Irving, TX" : `Emergency plumbing help in ${city.name}, TX`,
-    description: isIrving ? truncateForMeta("Need emergency plumbing help in Irving, TX? Call Plumbing Hands to request a connection with an available plumbing professional serving your area.") : truncateForMeta(buildCityDescription(city)),
+    title: `Emergency Plumber in ${city.name}, TX`,
+    description: truncateForMeta(buildCityDescription(city)),
     path: `/cities/${city.slug}`
   });
 }
@@ -52,7 +51,7 @@ export default async function CityPage({ params }: Props) {
   const city = cities.find((item) => item.slug === citySlug);
   if (!city) notFound();
 
-  const pageHeading = city.slug === "irving" ? "Emergency Plumber Help in Irving, TX" : `Emergency plumbing help in ${city.name}`;
+  const pageHeading = `Emergency Plumber in ${city.name}, TX`;
   const path = `/cities/${city.slug}`;
   const priorityServiceSlugs = getPriorityServiceSlugsForCity(city.slug);
   const enhancement = cityPageEnhancements[city.slug];
