@@ -2464,6 +2464,163 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "emergency-drain-cleaning-cost-in-dallas-price-factors": {
+    checklistTitle: "What actually drives emergency drain cleaning price",
+    checklistIntro:
+      "Two drain cleaning calls can end up priced very differently depending on where the clog is, how it is accessed, and what equipment the job actually needs -- here is what to expect before a technician arrives.",
+    checklistItems: [
+      "Clog location matters most: a single fixture trap is generally quicker and less involved than a shared branch line or the main sewer line.",
+      "Access affects labor time -- a drain reachable through an accessible cleanout is typically faster than one requiring fixture removal or attic or crawlspace access.",
+      "Timing changes the price. After-hours, overnight, and weekend dispatch commonly carries a different rate than a scheduled daytime visit.",
+      "Equipment scales with the problem -- a standard cable auger handles most single-fixture clogs, while a deeper or recurring blockage may call for hydro jetting or a camera inspection.",
+      "Recurring clogs in the same location often justify a camera inspection to identify the real cause, which is a separate line item from basic clearing.",
+      "Cleanup scope can add cost if wastewater reached flooring or cabinetry and needs to be addressed beyond the drain itself."
+    ],
+    proofTitle: "Questions that clarify the actual quote",
+    proofItems: [
+      "Ask whether the quote is for clearing only or includes a camera inspection if the clog is recurring.",
+      "Ask what the after-hours or emergency dispatch fee is, separate from the clearing charge itself.",
+      "Confirm whether the price assumes a standard fixture clog or accounts for the possibility of a main-line issue.",
+      "Ask what happens -- and what it costs -- if the first attempt does not fully clear the blockage."
+    ],
+    extraFaqs: [
+      {
+        question: "Why do drain cleaning quotes vary so much between companies?",
+        answer:
+          "Differences usually come down to what is included -- some quotes cover clearing only, while others bundle diagnosis, camera inspection, or a return-visit guarantee. Ask what is included before comparing numbers directly."
+      }
+    ],
+    extraLinks: [
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Same-day drain cleaning in Dallas", href: "/blog/same-day-drain-cleaning-in-dallas-what-to-expect" }
+    ]
+  },
+  "sewer-backup-in-fort-worth-what-it-means-and-who-to-call": {
+    checklistTitle: "What a sewer backup in Fort Worth actually means",
+    checklistIntro:
+      "A sewer backup is different from a typical fixture clog because it can involve contaminated water and sometimes points to a city-side issue rather than something inside the home -- knowing which one you are dealing with changes who to call first.",
+    checklistItems: [
+      "Stop all water use in the home immediately -- more water going down any drain can push a backup further into the house.",
+      "Check the lowest drain in the home first -- a basement floor drain or ground-floor bathroom is usually the earliest place a sewer backup shows up.",
+      "Look at the outdoor cleanout if you can safely access it. Standing wastewater there points toward the main line rather than a single fixture.",
+      "Treat any backed-up water as contaminated -- avoid direct contact, and keep children and pets away from the area entirely.",
+      "If backups are affecting more than one property nearby, the issue may be on the city side of the sewer main rather than your private line, which changes who is responsible.",
+      "Document when the backup started and which fixtures were affected, since this detail helps determine whether it is a private-line or city-side issue."
+    ],
+    proofTitle: "Who to call and what to confirm",
+    proofItems: [
+      "If the issue appears isolated to your home, request a provider who can run a camera inspection to confirm whether the blockage is on your private line.",
+      "If neighbors are reporting the same issue at the same time, that is worth mentioning to the city as well as to your plumber.",
+      "Ask whether the visit includes clearing, diagnosis, or both, since a sewer backup often needs both to be resolved.",
+      "Confirm cleanup and sanitizing expectations separately from the plumbing repair itself, since backed-up wastewater needs different handling than clean water."
+    ],
+    extraLinks: [
+      { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
+      { label: "Sewer smell in bathroom", href: "/problems/sewer-smell-in-bathroom" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+    ]
+  },
+  "bathtub-backing-up-when-toilet-flushes-what-causes-it": {
+    checklistTitle: "Why a tub backs up when the toilet is flushed",
+    checklistIntro:
+      "This specific pattern -- water rising in the tub right as the toilet flushes -- is a classic sign of a shared drain restriction, and it is worth understanding why before assuming it is just a slow tub drain.",
+    checklistItems: [
+      "In most homes, the tub and toilet share part of the same drain line before it joins the main sewer line, so a restriction downstream affects both fixtures together.",
+      "When the toilet flushes, it pushes a large volume of water through the shared line at once -- if that line is partially blocked, the water finds the next lowest opening, which is often the tub drain.",
+      "A single occurrence might be a temporary clog; if it happens every time the toilet flushes, the restriction is likely a consistent partial blockage rather than something random.",
+      "Check whether the tub drains normally on its own between flushes -- if it does, that supports a shared-line theory rather than a problem isolated to the tub.",
+      "Gurgling from the tub drain right before or after the water rises is a common accompanying sign of a partially blocked shared line.",
+      "Avoid running the tub and flushing the toilet at the same time until the cause is identified, since it can worsen the backup temporarily."
+    ],
+    proofTitle: "What to confirm when requesting service",
+    proofItems: [
+      "Describe the exact pattern -- tub rises specifically when the toilet flushes -- since this detail helps a technician anticipate a shared-line issue before arriving.",
+      "Ask whether a camera inspection is recommended given the pattern, rather than a single-fixture clearing attempt.",
+      "Ask what the visit would cost if the issue turns out to be in the shared branch line versus isolated to one fixture.",
+      "Confirm whether other bathroom fixtures should be avoided until the technician arrives."
+    ],
+    extraLinks: [
+      { label: "Sink and shower drain backup service", href: "/services/sink-and-shower-drain-backup" },
+      { label: "Bathtub drain backing up", href: "/problems/bathtub-drain-backing-up" },
+      { label: "Toilet, shower, and sink backing up together", href: "/blog/toilet-shower-and-sink-backing-up-together-what-it-means" }
+    ]
+  },
+  "kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help": {
+    checklistTitle: "Signs a Dallas kitchen sink backup needs more than a plunger",
+    checklistIntro:
+      "Kitchen sink backups often start small -- water draining slower than usual -- but a few specific signs mean it is time to stop DIY attempts and get the line looked at properly.",
+    checklistItems: [
+      "Water backing up into a second basin when only one side is used usually means the blockage is past the trap, not in the disposal or basket strainer.",
+      "A disposal that runs normally but the sink still will not drain points to a clog further down the branch line rather than a disposal problem.",
+      "Gurgling from a nearby drain -- a dishwasher air gap or a floor drain -- when the sink is used suggests a shared-line restriction.",
+      "Grease, coffee grounds, and starchy food waste are common contributors to kitchen line buildup in Dallas homes, and repeated clogs in the same spot often trace back to this.",
+      "A foul odor from the drain even when water is running normally can indicate organic buildup coating the inside of the pipe.",
+      "If a plunger or store-bought drain cleaner has already been tried without lasting results, avoid repeating chemical treatments and have the line checked instead."
+    ],
+    proofTitle: "What to confirm before booking drain help",
+    proofItems: [
+      "Mention whether a chemical drain cleaner was already used, since this affects what precautions a technician takes when opening the line.",
+      "Ask whether the visit includes checking the branch line beyond the trap, not just the immediate sink drain.",
+      "Ask about pricing if a disposal issue turns out to be the actual cause rather than the drain line itself.",
+      "Confirm whether recurring service in the same spot points toward recommending a camera inspection."
+    ],
+    extraLinks: [
+      { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "same-day-drain-cleaning-in-dallas-what-to-expect": {
+    checklistTitle: "What actually happens during a same-day drain cleaning visit",
+    checklistIntro:
+      "Same-day service does not mean skipping steps -- it means a provider fits the same triage and clearing process into the current day rather than scheduling it out. Here is what the visit typically involves.",
+    checklistItems: [
+      "Expect a few quick questions up front -- which fixture is affected, how long it has been slow, and whether other drains are involved -- before a technician is dispatched.",
+      "A technician will usually check the affected fixture first, then determine whether the clog is local or likely further down a shared line.",
+      "Standard clearing typically starts with a cable auger for a single-fixture clog before escalating to hydro jetting or a camera inspection if needed.",
+      "If the clog does not clear with standard methods, expect a conversation about next steps -- camera inspection, main-line access, or a follow-up visit -- rather than the visit stalling with no explanation.",
+      "Ask what the visit includes if the first clearing attempt does not fully resolve the issue, since same-day does not always mean same-visit.",
+      "Cleanup of the immediate work area is typically included, but broader water damage cleanup is usually a separate scope."
+    ],
+    proofTitle: "What to confirm before the technician arrives",
+    proofItems: [
+      "Ask for a realistic arrival window for same-day service rather than assuming it means immediate.",
+      "Clarify dispatch and diagnostic fees before the technician starts work.",
+      "Ask what equipment will be brought based on the symptoms you described, so you know what to expect.",
+      "Confirm whether a warranty applies to the clearing if the clog returns shortly after."
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Same-day plumber connection", href: "/services/same-day-plumber-connection" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "24-hour-plumber-in-plano-when-the-problem-cannot-wait": {
+    checklistTitle: "When a plumbing problem in Plano genuinely cannot wait",
+    checklistIntro:
+      "Not every plumbing issue needs a call at 2 a.m., but a few specific situations are worth treating as urgent rather than waiting for regular business hours.",
+    checklistItems: [
+      "Active water spreading across flooring or into walls should be treated as urgent regardless of the time of day.",
+      "A toilet that will not stop rising even after the supply valve is closed needs prompt attention rather than repeated plunging.",
+      "No hot water at all during cold weather is a higher priority than the same issue during mild months, especially for households with young children or elderly residents.",
+      "Multiple drains backing up together points toward a shared or main-line issue, which tends to worsen the longer it is left unaddressed.",
+      "A burst or actively leaking pipe should be treated as urgent -- shut off the main valve and request help rather than trying to patch it temporarily.",
+      "A single slow drain with no other symptoms can usually wait until normal business hours without meaningful risk."
+    ],
+    proofTitle: "What to confirm when calling for 24-hour help in Plano",
+    proofItems: [
+      "Confirm the provider is actually dispatching to Plano at the time you are calling, not just listed as covering the general DFW area.",
+      "Ask about after-hours dispatch fees up front, since these typically differ from daytime rates.",
+      "Describe the problem specifically so the right equipment is brought on the first visit.",
+      "Ask for a realistic arrival estimate rather than assuming 24-hour means immediate."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumber in Plano: when to call now", href: "/blog/emergency-plumber-in-plano-when-to-call-now" },
+      { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" }
+    ]
+  },
   "drain-backup-in-a-restaurant-what-owners-should-do-first": {
     checklistTitle: "What to do first when a restaurant drain backs up",
     checklistIntro:
@@ -2694,7 +2851,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
     ]
   },
-  "roto-rooter-vs-local-emergency-plumber-in-dallas-which-should-you-call": {
+  "roto-rooter-vs-local-emergency-plumber-in-dallas": {
     checklistTitle: "How to think about a national chain versus a local emergency plumber",
     checklistIntro:
       "Both a national chain and a local emergency plumber can handle drain and plumbing emergencies in Dallas, but they differ in dispatch model, pricing structure, and availability. The right choice often comes down to what matters most for your specific situation.",
@@ -2852,7 +3009,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
     ]
   },
-  "emergency-plumber-near-me-open-now-what-to-do-before-help-arrives": {
+  "emergency-plumber-near-me-open-now-before-help-arrives": {
     checklistTitle: "What to do before emergency plumbing help arrives",
     checklistIntro:
       "When water is spreading or a fixture is backing up, the useful first steps are usually simple: stop adding water, make the area safer, and collect the details a provider will need. Do not take apart plumbing or force a valve while the problem is active.",
@@ -2893,7 +3050,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
     ]
   },
-  "toilet-overflowing-at-night-in-dallas-fast-steps-for-homeowners": {
+  "toilet-overflowing-at-night-in-dallas-fast-steps": {
     checklistTitle: "What to do when a toilet overflows at night",
     checklistIntro:
       "An overflowing toilet feels worse after hours because it is hard to know whether the problem can wait. Start by stopping incoming water and watching what the other fixtures do. That usually tells you more than another flush will.",
@@ -2933,7 +3090,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
     ]
   },
-  "main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options": {
+  "main-sewer-line-clogged-in-dallas-warning-signs": {
     checklistTitle: "How to recognize a likely main sewer clog",
     checklistIntro:
       "One slow sink usually points to a problem near that fixture. A main sewer restriction behaves differently: fixtures begin reacting to one another, and the lowest drain often shows the trouble first. The pattern matters more than any single gurgle.",
