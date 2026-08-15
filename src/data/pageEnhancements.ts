@@ -3423,7 +3423,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
-      { label: "Commercial drain backup guidance", href: "/blog/commercial-drain-backup-what-business-owners-should-do-first" },
+      { label: "Commercial drain backup guidance", href: "/blog/commercial-drain-backup-what-business-owners-should-do" },
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   },
