@@ -128,7 +128,11 @@ export default function InsuranceGuidePage() {
           </div>
 
           <div className="mt-10">
-            <InternalLinks />
+            <InternalLinks
+              extra={[
+                { label: "Water Heater Lifespan & Maintenance in DFW", href: "/guides/dfw-water-heater-lifespan" }
+              ]}
+            />
           </div>
         </div>
       </div>
