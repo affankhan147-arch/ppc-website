@@ -37,6 +37,10 @@ const faqs = [
   {
     question: "Will my business insurance cover a restaurant drain backup?",
     answer: "Many commercial property policies cover sudden water or sewage backup damage under a specific backup/overflow endorsement, but this is often an add-on rather than standard coverage, and policies frequently exclude damage caused by a lack of maintenance (like a neglected grease trap). Review your policy's sewer/drain backup endorsement and maintenance-exclusion language directly with your insurance agent before you assume a backup is covered."
+  },
+  {
+    question: "Who provides emergency commercial plumbing for a restaurant kitchen backup?",
+    answer: "Plumbing Hands connects Dallas-Fort Worth restaurants with commercial emergency plumbing providers for kitchen drain and grease-trap-adjacent line backups - the plumbing side of the problem (diagnosing whether it's a line blockage, a trap installation issue, or a main sewer problem, and clearing it), not the grease trap pumping itself, which is a licensed liquid waste hauler's job. Have your affected fixtures, how long the backup has been happening, and your last known grease trap cleaning date ready when you request service."
   }
 ];
 
