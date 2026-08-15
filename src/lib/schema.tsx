@@ -104,6 +104,20 @@ export function faqSchema(faqs: FAQ[]) {
   };
 }
 
+export function howToSchema(name: string, description: string, steps: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      text: step
+    }))
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",

@@ -9,7 +9,7 @@ import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, howToSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ postSlug: string }>;
@@ -63,7 +63,10 @@ export default async function BlogPostPage({ params }: Props) {
           webPageSchema(path, post.title, post.directAnswer),
           articleSchema(path, post.title, post.directAnswer),
           breadcrumbSchema([{ name: "Guides", path: "/blog" }, { name: post.title, path }]),
-          faqSchema(faqs)
+          faqSchema(faqs),
+          ...(enhancement
+            ? [howToSchema(enhancement.checklistTitle, enhancement.checklistIntro, enhancement.checklistItems)]
+            : [])
         ]}
       />
       <Breadcrumbs items={[{ label: "Guides", href: "/blog" }, { label: post.title, href: path }]} />
