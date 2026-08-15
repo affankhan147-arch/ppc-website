@@ -136,7 +136,8 @@ export default function WaterHeaterLifespanGuidePage() {
                 { label: "Water Heater Emergency Service", href: "/services/water-heater-emergency" },
                 { label: "Water Heater Emergency Cost Guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
                 { label: "Water Heater Making a Popping Noise? Here's Why", href: "/blog/water-heater-making-popping-noise-dallas" },
-                { label: "DFW Emergency Plumbing Cost Guide", href: "/guides/dfw-emergency-plumbing-costs" }
+                { label: "DFW Emergency Plumbing Cost Guide", href: "/guides/dfw-emergency-plumbing-costs" },
+                { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" }
               ]}
             />
           </div>

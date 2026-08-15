@@ -133,7 +133,8 @@ export default function BurstPipesGuidePage() {
                 { label: "Burst Pipe Emergency Service", href: "/services/burst-pipe-emergency" },
                 { label: "Burst Pipe Emergency Cost Guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
                 { label: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement" },
-                { label: "Texas Homeowners Insurance & Plumbing Claims Guide", href: "/guides/texas-insurance-plumbing-claims" }
+                { label: "Texas Homeowners Insurance & Plumbing Claims Guide", href: "/guides/texas-insurance-plumbing-claims" },
+                { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" }
               ]}
             />
           </div>
