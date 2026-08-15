@@ -134,7 +134,8 @@ export default function BurstPipesGuidePage() {
                 { label: "Burst Pipe Emergency Cost Guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
                 { label: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement" },
                 { label: "Texas Homeowners Insurance & Plumbing Claims Guide", href: "/guides/texas-insurance-plumbing-claims" },
-                { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" }
+                { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
               ]}
             />
           </div>

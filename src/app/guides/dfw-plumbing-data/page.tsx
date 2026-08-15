@@ -115,6 +115,7 @@ export default function DfwPlumbingDataPage() {
                 { label: "DFW Water Heater Lifespan Guide", href: "/guides/dfw-water-heater-lifespan" },
                 { label: "Burst Pipes in DFW", href: "/guides/dfw-burst-pipes" },
                 { label: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement" },
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" },
                 { label: "DFW Service Areas", href: "/cities" }
               ]}
             />

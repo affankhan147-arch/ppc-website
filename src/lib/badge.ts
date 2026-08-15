@@ -17,8 +17,10 @@ function estimateTextWidth(text: string, fontSize: number) {
 }
 
 export function buildHardnessBadgeSvg(cityName: string, rangeLabel: string, classification: string) {
-  const label = "Water Hardness";
-  const value = `${cityName}: ${rangeLabel} GPG (${classification})`;
+  return buildLabelValueBadgeSvg("Water Hardness", `${cityName}: ${rangeLabel} GPG (${classification})`);
+}
+
+export function buildLabelValueBadgeSvg(label: string, value: string) {
   const fontSize = 12;
   const paddingX = 10;
   const labelWidth = estimateTextWidth(label, fontSize) + paddingX * 2;
