@@ -8,11 +8,13 @@ import { siteConfig } from "@/data/site";
 export type PageKind =
   | "home"
   | "service"
+  | "service-index"
   | "city-index"
   | "city"
   | "city-service"
   | "problem"
   | "cost-guide"
+  | "guide"
   | "blog"
   | "legal"
   | "faq";
@@ -50,8 +52,18 @@ export function cityServicePath(citySlug: string, serviceSlug: string) {
 }
 
 export function getAllInventoryPages(): InventoryPage[] {
+  const guidePages: InventoryPage[] = [
+    { kind: "guide", title: "Texas Homeowners Insurance & Plumbing Claims Guide", path: "/guides/texas-insurance-plumbing-claims", h1: "Texas Homeowners Insurance guide", description: "A research-backed guide explaining what Texas homeowners insurance covers (and doesn't cover) when a plumbing leak occurs, with real TDI sources." },
+    { kind: "guide", title: "Slab Leaks in DFW - What Homeowners Need to Know", path: "/guides/dfw-slab-leaks", h1: "Slab Leaks in DFW", description: "A research-backed guide explaining why slab leaks are uniquely common in Dallas-Fort Worth, how they're diagnosed, and what homeowners can do." },
+    { kind: "guide", title: "Polybutylene Pipe in DFW - Identification, Insurance, Replacement", path: "/guides/dfw-polybutylene-pipe-replacement", h1: "Polybutylene Pipe in DFW", description: "A research-backed guide to polybutylene (PB) pipe: how to identify it, why DFW homes are at added risk, insurance implications, and real replacement costs." },
+    { kind: "guide", title: "Sewer Line Maintenance & Root Intrusion in DFW", path: "/guides/dfw-sewer-root-intrusion", h1: "Sewer Line Maintenance & Root Intrusion in DFW", description: "A research-backed guide explaining why DFW sewer lines are uniquely prone to root intrusion, how it's diagnosed, and what homeowners can do." },
+    { kind: "guide", title: "Gas Line Safety & Capacity in DFW - What Homeowners Need to Know", path: "/guides/dfw-gas-line-safety", h1: "Gas Line Safety & Capacity in DFW", description: "A research-backed guide explaining gas line capacity, safety steps, and what homeowners should know before adding outdoor kitchens or pool heaters in DFW." },
+    { kind: "guide", title: "DFW Emergency Plumbing Cost Guide - What Homeowners Can Expect to Pay", path: "/guides/dfw-emergency-plumbing-costs", h1: "DFW Emergency Plumbing Cost Guide", description: "A research-backed guide explaining how emergency plumbing pricing works in Dallas-Fort Worth, with realistic cost ranges for common services." },
+    { kind: "guide", title: "Water Heater Lifespan & Maintenance in DFW - How Long They Really Last", path: "/guides/dfw-water-heater-lifespan", h1: "Water Heater Lifespan in DFW", description: "A research-backed guide to how long tank and tankless water heaters last, why DFW's hard water shortens that lifespan, and the maintenance that actually extends it." }
+  ];
+
   const legalPages: InventoryPage[] = [
-    { kind: "legal", title: "Texas Homeowners Insurance & Plumbing Claims Guide", path: "/guides/texas-insurance-plumbing-claims", h1: "Texas Homeowners Insurance: What’s Actually Covered in a Plumbing Leak?", description: "A research-backed guide explaining what Texas homeowners insurance covers (and doesn't cover) when a plumbing leak occurs, with real TDI sources." },
+    { kind: "service-index", title: "24/7 Emergency Plumbing Services in Dallas-Fort Worth", path: "/services", h1: "24/7 Emergency Plumbing Services in Dallas-Fort Worth", description: "Browse every 24/7 emergency plumbing, drain cleaning, and sewer line service available across Dallas-Fort Worth." },
     { kind: "legal", title: "Partner with PlumbingHands", path: "/partners", h1: "Partner with PlumbingHands", description: "Become a referral partner with PlumbingHands. We connect DFW homeowners with trusted emergency plumbers. Partners gain visibility and mutual referrals." },
     { kind: "home", title: `${siteConfig.brandName} | Emergency Plumbing Connections`, path: "/", h1: "Emergency plumbing help across Dallas-Fort Worth", description: "Connect with local emergency plumbing and drain cleaning providers across Dallas-Fort Worth." },
     { kind: "city-index", title: "Texas Plumbing Service Areas", path: "/cities", h1: "Emergency plumbing help by Texas location", description: "Browse Dallas-Fort Worth, Houston, Austin, and San Antonio service-area pages for emergency plumbing, drain, sewer, leak, toilet, and water-heater help." },
@@ -117,5 +129,5 @@ export function getAllInventoryPages(): InventoryPage[] {
     description: post.directAnswer
   }));
 
-  return [...legalPages, ...servicePages, ...cityPages, ...cityServicePages, ...problemPages, ...costPages, ...blogPages];
+  return [...legalPages, ...guidePages, ...servicePages, ...cityPages, ...cityServicePages, ...problemPages, ...costPages, ...blogPages];
 }
