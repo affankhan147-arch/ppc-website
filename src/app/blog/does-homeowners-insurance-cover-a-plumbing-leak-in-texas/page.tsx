@@ -12,7 +12,7 @@ import { CheckCircle2, XCircle, FileClock, ShieldQuestion } from "lucide-react";
 const path = "/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas";
 const title = "Does Homeowners Insurance Cover a Plumbing Leak in Texas?";
 const description = truncateForMeta(
-  "Texas homeowners insurance generally covers sudden burst-pipe damage but excludes gradual leaks and pipe repair. What's covered, what isn't, and how to claim."
+  "Texas homeowners insurance covers sudden burst-pipe damage but excludes gradual leaks and pipe repairs. Here is what is covered and how to file a claim."
 );
 
 const faqs = [
