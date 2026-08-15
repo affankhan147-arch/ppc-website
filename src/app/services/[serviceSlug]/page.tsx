@@ -11,6 +11,7 @@ import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { blogPosts } from "@/data/blogPosts";
 import { getArticleImage } from "@/lib/articleImages";
+import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!service) return {};
   return buildMetadata({
-    title: `${service.name} in Dallas-Fort Worth`,
+    title: `${titleCase(service.name)} in Dallas-Fort Worth`,
     description: truncateForMeta(service.shortAnswer),
     path: `/services/${service.slug}`
   });
@@ -38,6 +39,7 @@ export default async function ServicePage({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!service) notFound();
 
+  const displayName = titleCase(service.name);
   const path = `/services/${service.slug}`;
   const enhancement = serviceEnhancements[service.slug];
   const faqs = [
@@ -58,7 +60,7 @@ export default async function ServicePage({ params }: Props) {
     .slice(0, 4)
     .map((combo) => {
       const city = cities.find((item) => item.slug === combo.citySlug);
-      return city ? { label: `${service.name} in ${city.name}`, href: `/cities/${city.slug}/${service.slug}` } : null;
+      return city ? { label: `${displayName} in ${city.name}`, href: `/cities/${city.slug}/${service.slug}` } : null;
     })
     .filter((link): link is { label: string; href: string } => Boolean(link));
 
@@ -66,31 +68,31 @@ export default async function ServicePage({ params }: Props) {
     <main className="page-shell">
       <JsonLd
         data={[
-          webPageSchema(path, `${service.name} in Dallas-Fort Worth`, service.shortAnswer),
-          serviceSchema(service.name, path, service.shortAnswer),
+          webPageSchema(path, `${displayName} in Dallas-Fort Worth`, service.shortAnswer),
+          serviceSchema(displayName, path, service.shortAnswer),
           breadcrumbSchema([
             { name: "Services", path: "/services/24-hour-emergency-plumber" },
-            { name: service.name, path }
+            { name: displayName, path }
           ]),
           faqSchema(faqs)
         ]}
       />
-      <Breadcrumbs items={[{ label: "Services", href: "/services/24-hour-emergency-plumber" }, { label: service.name, href: path }]} />
+      <Breadcrumbs items={[{ label: "Services", href: "/services/24-hour-emergency-plumber" }, { label: displayName, href: path }]} />
       <div className="mt-6">
         <article>
           <p className="section-kicker">{service.urgency} urgency service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{service.name} in Dallas-Fort Worth</h1>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{displayName} in Dallas-Fort Worth</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
-            <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={service.name} />
+            <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={displayName} />
           </div>
         </article>
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
             src={getArticleImage(service.slug, services.findIndex((item) => item.slug === service.slug))}
-            alt={`${service.name} in Dallas-Fort Worth - provider responding to an active service call`}
+            alt={`${displayName} in Dallas-Fort Worth - provider responding to an active service call`}
             fill
             sizes="(min-width: 1024px) 56rem, 100vw"
             className="object-cover"
@@ -121,7 +123,7 @@ export default async function ServicePage({ params }: Props) {
 
       <InfoListSection
         kicker="Common causes"
-        title={`Why ${service.name} issues happen`}
+        title={`Why ${displayName} issues happen`}
         intro="The exact cause requires diagnosis, but these are common patterns Dallas-Fort Worth homeowners and managers report."
         items={service.commonCauses}
       />
