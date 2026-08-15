@@ -66,6 +66,10 @@ export default async function CityPage({ params }: Props) {
       answer: `Yes. This page helps route urgent plumbing and drain requests in ${city.name} to available plumbing professionals serving the area where coverage is available.`
     },
     {
+      question: `Is there a 24-hour plumber near me in ${city.name}?`,
+      answer: `Requests for ${city.name} are routed to available providers around the clock, but confirm actual arrival timing directly -- 24-hour coverage means the request can be submitted any time, not that a technician is guaranteed to be on-site instantly.`
+    },
+    {
       question: `How should I use the ${city.name} service-area page?`,
       answer: "Use it to request help for a local plumbing issue. Service availability depends on provider coverage in your area."
     },
@@ -88,7 +92,8 @@ export default async function CityPage({ params }: Props) {
           <p className="section-kicker">Local service-area guidance</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
-            For urgent leaks, drain backups, sewer line symptoms, overflows, and water heater problems in {city.name} and nearby {city.countyHint} areas.
+            Looking for a 24-hour plumber near {city.name}? This page routes urgent leaks, drain backups, sewer line symptoms, overflows, and
+            water heater problems in {city.name} and nearby {city.countyHint} areas to available providers, day or night.
           </p>
           <div className="mt-6">
             <CallButton location={`city-${city.slug}-top`} pagePath={path} pageType="city" city={city.name} service="Emergency plumbing" />
@@ -120,6 +125,7 @@ export default async function CityPage({ params }: Props) {
           "Older fixtures, high-use bathrooms, apartment buildings, restaurants, and slab plumbing can all create urgent calls.",
           "Drain and sewer symptoms should be treated faster when several fixtures react at once.",
           "Active leaks should be shut off at the fixture valve or main valve when safe.",
+          "Requests submitted after hours or on weekends are routed the same way as daytime requests -- 24-hour coverage does not mean guaranteed instant arrival, so confirm timing directly.",
           "Pricing, arrival, and licensing should be confirmed directly with the matched provider."
         ]}
       />

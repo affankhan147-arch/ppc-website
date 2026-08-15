@@ -53,7 +53,7 @@ export const costGuides: CostGuide[] = [
   {
     slug: "burst-pipe-emergency-cost-guide",
     title: "Burst pipe emergency cost guide",
-    directAnswer: "Burst pipe emergency cost depends on pipe location, access, material, whether water is still active, and whether walls, ceilings, or slabs are involved.",
+    directAnswer: "Burst pipe repair cost depends on pipe location, access, material, whether water is still active, and whether walls, ceilings, or slabs are involved -- this is the same question as \"how much does it cost to fix a burst pipe,\" just answered from the factors that actually move the price.",
     rangeGuidance: "Visible pipe repairs are different from leaks hidden behind drywall, under slab, or above ceilings. Water mitigation, drywall, and restoration may be separate from plumbing repair.",
     factors: ["pipe location", "material", "access", "water shutoff", "surface repair coordination", "after-hours timing"],
     questionsToAsk: ["Is water fully shut off?", "What access is needed?", "Is restoration included or separate?", "What caused the break if known?"],
