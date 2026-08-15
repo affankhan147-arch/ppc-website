@@ -264,7 +264,8 @@ export default function DiyPlumbingLegalityPage() {
           { label: "DFW Emergency Water Shutoff Guide", href: "/assets/dfw-water-shutoff-guide.html" },
           { label: "24-Hour Emergency Plumber", href: "/services/24-hour-emergency-plumber" },
           { label: "Emergency Plumber Dallas", href: "/cities/dallas/24-hour-emergency-plumber" },
-          { label: "Emergency Plumber Fort Worth", href: "/cities/fort-worth/24-hour-emergency-plumber" }
+          { label: "Emergency Plumber Fort Worth", href: "/cities/fort-worth/24-hour-emergency-plumber" },
+          { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
         ]}
       />
     </main>

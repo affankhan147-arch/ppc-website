@@ -91,6 +91,14 @@ export const widgetFacts: WidgetFact[] = [
     category: "safety-trust"
   },
   {
+    slug: "tx-diy-plumbing-legality",
+    label: "DIY Plumbing Legality (TX)",
+    value: "Tex. Occ. Code Sec. 1301.051 - owner-occupied homestead only",
+    sourceNote: "Texas Occupations Code Section 1301.051 homestead exemption, cited in our DIY plumbing legality guide.",
+    linkPath: "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas",
+    category: "safety-trust"
+  },
+  {
     slug: "tank-water-heater-lifespan",
     label: "Tank Water Heater Lifespan",
     value: "8-12 years typical",
