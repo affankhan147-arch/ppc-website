@@ -47,15 +47,15 @@ const urgentCards = [
 ];
 
 const homeGuides = [
-  { title: "Burst Pipes in DFW", href: "/guides/dfw-burst-pipes", description: "Why burst pipes are so common in DFW, what Winter Storm Uri showed about the real risk, and the first steps that limit damage." },
-  { title: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data", description: "Original, sourced data on DFW water hardness by city, winter freeze-event frequency, and the population growth driving local plumbing demand." },
-  { title: "Water Heater Lifespan in DFW", href: "/guides/dfw-water-heater-lifespan", description: "How long tank and tankless water heaters really last, why DFW's hard water shortens that, and the maintenance that extends it." },
+  { title: "Burst Pipes in DFW", href: "/guides/dfw-burst-pipes", description: "Why burst pipes are common in DFW, what Winter Storm Uri showed, and the first steps that limit damage." },
+  { title: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data", description: "Original, sourced data on DFW water hardness, winter freeze frequency, and the population growth driving demand." },
+  { title: "Water Heater Lifespan in DFW", href: "/guides/dfw-water-heater-lifespan", description: "How long tank and tankless water heaters last, why DFW hard water shortens that, and how to extend it." },
   { title: "DFW Emergency Plumbing Cost Guide", href: "/guides/dfw-emergency-plumbing-costs", description: "Realistic cost ranges for common emergency plumbing services across Dallas-Fort Worth." },
-  { title: "Slab Leaks in DFW", href: "/guides/dfw-slab-leaks", description: "Why slab leaks are uniquely common in DFW, how they're diagnosed, and what homeowners can do." },
-  { title: "Texas Homeowners Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims", description: "What Texas homeowners insurance covers, and doesn't cover, when a plumbing leak occurs, with real TDI sources." },
-  { title: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement", description: "How to identify polybutylene pipe, why DFW homes are at added risk, and real replacement costs." },
-  { title: "Gas Line Safety & Capacity in DFW", href: "/guides/dfw-gas-line-safety", description: "Gas line capacity and safety steps homeowners should know before adding outdoor kitchens or pool heaters." },
-  { title: "Sewer Line Maintenance & Root Intrusion", href: "/guides/dfw-sewer-root-intrusion", description: "Why DFW sewer lines are prone to root intrusion, how it's diagnosed, and what homeowners can do." }
+  { title: "Slab Leaks in DFW", href: "/guides/dfw-slab-leaks", description: "Why slab leaks are common in DFW, how they are diagnosed, and what homeowners can do about them." },
+  { title: "Texas Homeowners Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims", description: "What Texas homeowners insurance covers, and does not cover, for a plumbing leak, with real TDI sources." },
+  { title: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement", description: "How to identify polybutylene pipe, why DFW homes are at risk, and real replacement costs." },
+  { title: "Gas Line Safety & Capacity in DFW", href: "/guides/dfw-gas-line-safety", description: "Gas line capacity and safety steps to know before adding an outdoor kitchen or pool heater." },
+  { title: "Sewer Line Maintenance & Root Intrusion", href: "/guides/dfw-sewer-root-intrusion", description: "Why DFW sewer lines are prone to root intrusion, how it is diagnosed, and what homeowners can do." }
 ];
 
 const cityEmergencyLinks = [
