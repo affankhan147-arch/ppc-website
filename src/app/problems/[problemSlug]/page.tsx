@@ -118,6 +118,7 @@ export default async function ProblemPage({ params }: Props) {
       <InternalLinks
         extra={[
           { label: "All homeowner problems", href: "/problems" },
+          { label: "Free Emergency Warning-Sign Checklist Badges", href: "/tools/problem-checklists" },
           ...(enhancement?.extraLinks || []),
           ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
           ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : [])

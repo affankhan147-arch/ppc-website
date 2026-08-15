@@ -29,6 +29,11 @@ const tools = [
     title: "Cost Guide Checklist Badges",
     href: "/tools/cost-guide-checklists",
     description: "Embeddable badges showing how many key questions to ask before approving repair work, by issue type."
+  },
+  {
+    title: "Emergency Warning-Sign Checklists",
+    href: "/tools/problem-checklists",
+    description: "Embeddable badges highlighting the warning signs for burst pipes, sewer backups, water heater leaks, and more."
   }
 ];
 
