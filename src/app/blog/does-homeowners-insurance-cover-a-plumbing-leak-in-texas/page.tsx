@@ -12,7 +12,7 @@ import { CheckCircle2, XCircle, FileClock, ShieldQuestion } from "lucide-react";
 const path = "/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas";
 const title = "Does Homeowners Insurance Cover a Plumbing Leak in Texas?";
 const description = truncateForMeta(
-  "Texas homeowners insurance covers sudden burst-pipe damage but excludes gradual leaks and pipe repairs. Here is what is covered and how to file a claim."
+  "Does home insurance cover plumbing leaks in Texas? Sudden burst-pipe damage is generally covered, but gradual leaks and pipe repairs are excluded. Here is what is covered and how to file a claim."
 );
 
 const faqs = [
@@ -63,7 +63,7 @@ export default function InsuranceCoveragePage() {
 
       <DirectAnswer>
         <p>
-          Texas homeowners insurance generally covers water damage from a sudden, accidental plumbing failure like a burst pipe, but typically excludes gradual leaks, wear-and-tear, and standard sewer backups. Even on an approved claim, the policy usually covers the resulting water damage - not the cost to repair the pipe itself. This article is general information, not insurance advice; always confirm your specific policy's language with your insurer or agent before you rely on it.
+          Does home insurance cover plumbing leaks? In Texas, homeowners insurance generally covers water damage from a sudden, accidental plumbing failure like a burst pipe, but typically excludes gradual leaks, wear-and-tear, and standard sewer backups. Even on an approved claim, the policy usually covers the resulting water damage - not the cost to repair the pipe itself. This article is general information, not insurance advice; always confirm your specific policy's language with your insurer or agent before you rely on it.
         </p>
       </DirectAnswer>
 

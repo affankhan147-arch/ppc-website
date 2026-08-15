@@ -13,7 +13,7 @@ export const costGuides: CostGuide[] = [
   {
     slug: "emergency-plumbing-cost-dfw",
     title: "Emergency plumber cost in Dallas-Fort Worth",
-    directAnswer: "Emergency plumber cost in Dallas-Fort Worth depends on diagnosis, timing, access, parts, severity, and the provider's own pricing. Confirm any dispatch or diagnostic fee before work starts.",
+    directAnswer: "Emergency plumber cost in Dallas-Fort Worth -- also searched as 24 hour plumber cost or emergency plumber near me cost -- depends on diagnosis, timing, access, parts, severity, and the provider's own pricing. Confirm any dispatch or diagnostic fee before work starts.",
     rangeGuidance: "General emergency plumbing visits may involve a service or diagnostic charge plus repair labor and parts. After-hours timing, active water damage, wall or ceiling access, and specialty parts can change the final cost.",
     factors: ["after-hours timing", "diagnostic work", "parts", "access difficulty", "water damage risk", "fixture or pipe location"],
     questionsToAsk: ["Is there a dispatch or diagnostic fee?", "What is included before repair approval?", "Can you explain options before work starts?", "Does pricing change after hours?"],
@@ -43,7 +43,7 @@ export const costGuides: CostGuide[] = [
   {
     slug: "water-heater-emergency-cost-guide",
     title: "Water heater emergency cost guide",
-    directAnswer: "Water heater emergency cost depends on whether the issue is a repairable part, a connection leak, a tank failure, or a replacement need.",
+    directAnswer: "Water heater emergency cost -- also asked as hot water heater repair cost or no hot water emergency cost -- depends on whether the issue is a repairable part, a connection leak, a tank failure, or a replacement need.",
     rangeGuidance: "Age, capacity, fuel type, access, code requirements, and whether the tank is actively leaking all affect cost. Confirm repair versus replacement options before approving work.",
     factors: ["tank age", "leak source", "part availability", "replacement size", "fuel type", "code requirements"],
     questionsToAsk: ["Is the tank itself leaking?", "Can the issue be repaired safely?", "What size and type is being priced?", "Are code upgrades or disposal separate?"],
