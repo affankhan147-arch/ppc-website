@@ -2464,6 +2464,244 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "garbage-disposal-humming-not-turning-what-it-means": {
+    checklistTitle: "What to do when a garbage disposal hums but will not spin",
+    checklistIntro:
+      "A humming disposal usually means the motor has power but the blades cannot turn -- either from a jam or an overheating shutoff. Working through this safely, in order, resolves most cases without a service call.",
+    checklistItems: [
+      "Turn off and unplug the disposal, or switch off the breaker if it is hardwired, before doing anything else -- never reach into the disposal while it is powered.",
+      "Look for the small hex-shaped hole in the bottom center of the unit. Insert an Allen wrench and turn it firmly back and forth to manually free the jammed blades.",
+      "If no Allen wrench came with the unit, a standard 1/4-inch hex wrench from a hardware store typically fits most residential disposals.",
+      "Once the blades turn freely by hand, check inside the disposal chamber (with power still off) for the object causing the jam, such as a utensil, bone fragment, or fibrous food scrap.",
+      "Many disposals have a small red reset button on the underside of the unit -- press it after clearing the jam, since a tripped overheat protection switch will also prevent the motor from running.",
+      "Restore power and test with water running. If it hums again immediately or does not run at all, stop and treat it as a motor or electrical issue rather than continuing to force it."
+    ],
+    proofTitle: "When to stop and call for service instead",
+    proofItems: [
+      "If you smell burning at any point, unplug the unit immediately and do not attempt to reset it again -- this points to a motor issue beyond a simple jam.",
+      "If the humming continues after clearing a visible jam and resetting, the motor itself may have failed and typically needs replacement rather than repair.",
+      "Ask a technician whether your model is repairable or has reached a point where replacement makes more sense, based on age and the specific failure.",
+      "If the disposal trips the breaker repeatedly rather than just its own internal reset, treat that as an electrical issue that needs professional attention."
+    ],
+    extraLinks: [
+      { label: "Sink and shower drain backup service", href: "/services/sink-and-shower-drain-backup" },
+      { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
+      { label: "Kitchen sink backing up in Dallas: signs you need drain help", href: "/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help" }
+    ]
+  },
+  "tankless-water-heater-not-producing-hot-water-troubleshooting": {
+    checklistTitle: "First checks when a tankless water heater stops producing hot water",
+    checklistIntro:
+      "Tankless units fail differently than tank-style water heaters -- most have a diagnostic error code display that narrows the cause quickly, so checking that first can save an unnecessary service call.",
+    checklistItems: [
+      "Check the unit's display panel for an error code first -- most tankless water heaters show a specific code that points directly to the likely cause.",
+      "Confirm the power supply (electric ignition models) or gas supply is not interrupted -- a tripped breaker or a closed gas valve is a common, easily fixed cause.",
+      "Check the cold-water inlet filter, if your model has an accessible one -- a clogged filter can restrict flow below the unit's minimum activation threshold, preventing it from firing.",
+      "If hot water works at low demand but fails when multiple fixtures run at once, the unit may be undersized for simultaneous use rather than malfunctioning.",
+      "Very cold incoming water temperatures during winter can occasionally push a unit's heating capacity to its limit, which can look like a failure but may be a sizing or demand issue.",
+      "If the unit short-cycles or produces lukewarm water intermittently rather than no hot water at all, that pattern is worth describing specifically when requesting service."
+    ],
+    proofTitle: "What to confirm before booking a technician visit",
+    proofItems: [
+      "Note the exact error code displayed, if any, since this speeds up diagnosis significantly before the technician arrives.",
+      "Confirm whether the issue happens with single-fixture use or only during simultaneous multi-fixture demand.",
+      "Ask whether inlet filter cleaning is something you can safely do yourself or whether it requires a service visit.",
+      "Ask how the unit's sizing compares to your household's typical simultaneous hot water demand if this keeps happening."
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" }
+    ]
+  },
+  "outdoor-faucet-hose-bib-leaking-after-freeze-dallas": {
+    checklistTitle: "What to do about a hose bib leaking after a freeze",
+    checklistIntro:
+      "Freeze damage to an outdoor faucet often does not show up until the faucet is used again, since the crack happens from ice expansion inside the pipe well before any leak is visible.",
+    checklistItems: [
+      "If you have a dedicated interior shutoff valve for the outdoor faucet, close it before using the faucet again, since a cracked internal stem may not seal properly.",
+      "Check for water intrusion or damp spots on the interior wall behind the faucet, which can indicate the crack is releasing water into the wall cavity rather than just outside.",
+      "Avoid running the outdoor faucet at full pressure until it has been checked, since this can push more water through a cracked section.",
+      "If the faucet will not shut off tightly no matter how far you turn the handle, stop trying to force it and treat it as needing repair rather than continuing to use it.",
+      "Frost-free hose bibs are designed to reduce freeze risk by moving the shutoff point further inside the wall, but they can still fail if a hose was left attached during a freeze, which traps water in the section that is supposed to drain.",
+      "Disconnect hoses before every freeze warning going forward, since a connected hose is one of the most common reasons a frost-free faucet still freezes."
+    ],
+    proofTitle: "What to confirm when requesting repair",
+    proofItems: [
+      "Mention whether you were able to close an interior shutoff valve, since this affects how urgent the repair is.",
+      "Ask whether the repair is a simple stem or washer replacement or requires replacing the full hose bib assembly.",
+      "Ask about checking for water damage inside the wall if you noticed any dampness, separate from the faucet repair itself.",
+      "Confirm pricing for the specific repair versus a full hose bib replacement before work begins."
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Frozen pipes in DFW: prevention before the next freeze", href: "/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze" },
+      { label: "Free live DFW freeze watch widget", href: "/tools/freeze-watch-widget" }
+    ]
+  },
+  "water-heater-expansion-tank-failure-signs-dallas": {
+    checklistTitle: "Signs a water heater expansion tank has failed",
+    checklistIntro:
+      "Many DFW homes have a closed plumbing system with a pressure-reducing valve, which typically requires an expansion tank to safely absorb pressure created as water heats. A failed expansion tank can cause problems throughout the home's plumbing, not just at the water heater.",
+    checklistItems: [
+      "Water dripping from the temperature-and-pressure relief valve on the water heater is one of the clearest signs of excess pressure, which a failed expansion tank can no longer absorb.",
+      "A waterlogged expansion tank feels heavy and does not make a hollow sound when tapped -- a properly working tank should sound hollow on the top half where the air charge sits.",
+      "Unusually high water pressure readings inside the home, checked at an outdoor hose bib with a simple gauge, can point to a system no longer regulating pressure properly.",
+      "Banging or hammering sounds in the pipes when water shuts off suddenly can be related to pressure issues that an expansion tank is meant to help absorb.",
+      "A visibly bulging, corroded, or leaking expansion tank should be treated as failed regardless of other symptoms.",
+      "If your home does not have an expansion tank but has a pressure-reducing valve installed, that combination is generally considered a setup worth having evaluated."
+    ],
+    proofTitle: "What to confirm about your expansion tank",
+    proofItems: [
+      "Ask a technician to check the tank's air charge and confirm whether it needs recharging or full replacement.",
+      "Ask what your home's static water pressure reads and whether it is within a safe range for the plumbing system.",
+      "Confirm whether your home's plumbing is a closed system requiring an expansion tank, since not every home configuration needs one.",
+      "Ask how tank replacement is priced and how long a typical expansion tank lasts before needing replacement."
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "High water pressure in your Dallas home: hidden risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" }
+    ]
+  },
+  "water-heater-pilot-light-wont-stay-lit-dallas": {
+    checklistTitle: "Why a water heater pilot light will not stay lit",
+    checklistIntro:
+      "A pilot light that keeps going out has a few common causes, most often related to the thermocouple, but a gas smell at any point changes the response entirely.",
+    checklistItems: [
+      "If you smell gas at any point while checking the pilot light, stop immediately, leave the gas valve as is, ventilate the area, and do not attempt to relight it yourself -- treat this as a safety issue first.",
+      "A worn thermocouple is the most common cause of a pilot that will not stay lit -- this small sensor is supposed to signal the gas valve to stay open once it senses the pilot flame, and it wears out over time.",
+      "A dirty or partially blocked pilot orifice can prevent a stable flame from forming, which can look similar to a thermocouple issue but has a different fix.",
+      "A draft in the burner compartment, sometimes from a nearby vent or gap, can blow out a pilot light that would otherwise stay lit.",
+      "Follow the manufacturer's relighting instructions exactly, usually printed on a label on the unit, and never bypass the built-in safety sequence.",
+      "If the pilot relights but goes out again within a few minutes every time, that pattern strongly suggests a thermocouple replacement rather than a one-time fluke."
+    ],
+    proofTitle: "What to confirm before requesting service",
+    proofItems: [
+      "Describe exactly how long the pilot stays lit before going out, since this timing detail helps narrow down thermocouple versus other causes.",
+      "Ask whether a thermocouple replacement is something typically done same-visit or requires a specific part to be ordered for your model.",
+      "If you smelled gas, mention that explicitly when requesting service so it is treated with appropriate urgency.",
+      "Ask about the age of your water heater, since a very old unit may be better replaced than repeatedly repaired."
+    ],
+    extraFaqs: [
+      {
+        question: "Is it safe to try relighting the pilot myself?",
+        answer:
+          "Following the manufacturer's printed instructions to relight a pilot is generally considered a normal homeowner task. If you smell gas at any point, however, stop immediately and do not attempt to relight it -- that changes the situation from a routine task to a safety issue."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
+      { label: "Leaking water heater: repair or replace?", href: "/blog/leaking-water-heater-repair-or-replace-dfw" }
+    ]
+  },
+  "shower-water-suddenly-scalding-or-freezing-what-it-means": {
+    checklistTitle: "Why shower water suddenly swings hot or cold",
+    checklistIntro:
+      "Sudden temperature swings in a shower are usually a valve problem, not a fluke, and repeated occurrences are worth treating as a safety issue rather than just an inconvenience.",
+    checklistItems: [
+      "A pressure-balancing or thermostatic mixing valve is designed to keep shower temperature steady even when another fixture in the home draws water -- when this valve fails, temperature swings are the most common symptom.",
+      "Check whether the swing happens specifically when a toilet is flushed or another fixture is used elsewhere in the home. That pattern strongly points to a failing mixing valve rather than a water heater issue.",
+      "If the swings happen randomly with no clear trigger, that can point toward a different valve failure or, less commonly, a water heater issue.",
+      "Treat repeated scalding swings as a safety concern, particularly in households with young children, elderly residents, or anyone with reduced mobility or sensation.",
+      "A valve that has simply worn out over years of normal use is common and not necessarily a sign of anything else wrong with the plumbing system.",
+      "Avoid using the shower until the valve is checked if scalding swings have happened more than once, especially with children in the household."
+    ],
+    proofTitle: "What to confirm when requesting a valve repair",
+    proofItems: [
+      "Describe whether the swings are triggered by another fixture being used, since this detail helps the technician diagnose the valve type and failure quickly.",
+      "Ask whether your specific valve model is repairable with a cartridge replacement or requires a full valve replacement.",
+      "Ask how long a typical shower valve lasts and whether this looks like normal wear for the age of your home.",
+      "If children or elderly household members use this shower regularly, mention that so the urgency is properly understood."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Sink and shower drain backup service", href: "/services/sink-and-shower-drain-backup" }
+    ]
+  },
+  "water-heater-anode-rod-signs-it-needs-replacing-dallas": {
+    checklistTitle: "Signs a water heater anode rod needs replacing",
+    checklistIntro:
+      "The anode rod is a sacrificial metal rod inside the tank designed to corrode instead of the tank itself, and Dallas' harder water can wear it down faster than in areas with softer water -- watching for the signs can meaningfully extend a tank's life.",
+    checklistItems: [
+      "A rotten-egg smell in hot water specifically -- but not cold water -- is a classic sign of anode rod breakdown reacting with bacteria in the tank, and is one of the most common reasons homeowners first investigate.",
+      "If a rod is pulled for inspection and found heavily corroded, coated in calcium buildup, or reduced to a thin core, it has likely stopped protecting the tank effectively and should be replaced.",
+      "A tank nearing the middle or later part of its expected lifespan with no documented anode rod replacement is worth having checked, since a spent rod accelerates tank corrosion.",
+      "Rusty or discolored hot water, without an obvious explanation elsewhere in the plumbing, can also point toward tank corrosion related to a depleted rod.",
+      "Homes with a water softener installed can sometimes see faster anode rod depletion, since softened water can be more corrosive to certain rod materials.",
+      "Replacing an anode rod before it is fully spent is generally far less expensive than the tank failure it is meant to prevent."
+    ],
+    proofTitle: "What to confirm about anode rod service",
+    proofItems: [
+      "Ask whether your specific tank's anode rod is accessible for inspection and replacement, since some tank designs make this easier than others.",
+      "Ask what rod material is recommended for Dallas' water hardness and whether a different material would last longer for your situation.",
+      "Confirm how anode rod replacement is priced separately from a full water heater service visit.",
+      "Ask how much longer a tank's typical lifespan can be extended by keeping up with anode rod replacement."
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Leaking water heater: repair or replace?", href: "/blog/leaking-water-heater-repair-or-replace-dfw" },
+      { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" }
+    ]
+  },
+  "high-water-pressure-in-dallas-home-hidden-pipe-damage-risk": {
+    checklistTitle: "How high water pressure can quietly damage a Dallas home's plumbing",
+    checklistIntro:
+      "A pressure-reducing valve that fails typically fails open rather than closed, which means municipal supply pressure runs unregulated into the home rather than the failure being obvious right away.",
+    checklistItems: [
+      "Banging pipes, sometimes called water hammer, that happen when a faucet or valve shuts off quickly can be a sign of unregulated high pressure rather than just loose piping.",
+      "A running toilet that keeps refilling with no obvious cause can be related to a fill valve struggling to handle pressure above its design range.",
+      "Dripping faucets with no visible wear or an unusually short lifespan on fixtures can point toward pressure running consistently higher than fixtures are rated for.",
+      "A water heater that seems to be failing earlier than expected can sometimes trace back to sustained high pressure stressing the tank, rather than the tank itself being defective.",
+      "A simple gauge test at an outdoor hose bib, which a plumber can perform quickly, confirms actual pressure -- most residential systems are designed for pressure in a specific safe range, and a reading well above that range is worth addressing.",
+      "If you have noticed several of these signs together rather than just one, that combination strengthens the case for a pressure check rather than treating each symptom separately."
+    ],
+    proofTitle: "What to confirm when checking for high pressure",
+    proofItems: [
+      "Ask for the actual gauge reading at your hose bib, not just a general assessment, so you know exactly where your pressure stands.",
+      "Ask whether your home has a pressure-reducing valve installed and, if so, whether it is functioning correctly.",
+      "If a PRV needs replacement, ask how that is priced and whether an expansion tank should be checked or added at the same time.",
+      "Ask whether any of the fixture symptoms you noticed are consistent with pressure-related stress specifically."
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Water heater expansion tank failure signs", href: "/blog/water-heater-expansion-tank-failure-signs-dallas" },
+      { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" }
+    ]
+  },
+  "how-to-check-your-water-meter-for-a-hidden-leak-dallas": {
+    checklistTitle: "How to check your water meter for a hidden leak",
+    checklistIntro:
+      "This is one of the simplest checks a homeowner can do without any tools, and it can confirm a hidden leak before it shows up as a high water bill or visible damage.",
+    checklistItems: [
+      "Turn off every water fixture and appliance in the home -- faucets, the ice maker line, sprinkler system, washing machine -- so nothing is drawing water during the test.",
+      "Locate your water meter, typically near the street in a small in-ground box or on an exterior wall, and open the cover.",
+      "Look for a small leak-indicator dial, triangle, or spinner on the meter face -- if it is moving with everything off, water is flowing somewhere in the system.",
+      "As a more precise check, note the exact reading, wait at least one hour without using any water, and check the reading again -- any change confirms water is being used somewhere.",
+      "If the indicator shows movement or the reading changed, the next step is narrowing down whether the leak is inside the home, in the yard between the meter and the house, or at a specific fixture.",
+      "A leak between the meter and the house is sometimes on the homeowner's side of responsibility depending on local utility rules, which is worth confirming with your water provider."
+    ],
+    proofTitle: "What to do once a hidden leak is confirmed",
+    proofItems: [
+      "Ask a plumber whether they use acoustic leak-detection equipment to pinpoint the leak's location without unnecessary digging or demolition.",
+      "Ask what the evaluation and detection process typically costs before committing to further work.",
+      "If the leak appears to be underground between the meter and the house, ask specifically what repair options exist for that type of leak.",
+      "Keep your meter reading notes, since they can help document the timeline if the leak is relevant to an insurance claim or utility dispute."
+    ],
+    extraFaqs: [
+      {
+        question: "What if the meter dial is not moving but my water bill is still unusually high?",
+        answer:
+          "A stable meter with everything off suggests there is no continuous leak at the moment of testing, but an intermittent leak -- one that only happens during certain times or specific fixture use -- can still cause a high bill. Comparing bills month over month and checking again at different times can help catch an intermittent issue."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
+      { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" }
+    ]
+  },
   "what-counts-as-a-plumbing-emergency": {
     checklistTitle: "How to tell if your plumbing issue counts as an emergency",
     checklistIntro:
