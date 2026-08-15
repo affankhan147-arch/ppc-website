@@ -2,7 +2,7 @@ import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { siteConfig } from "@/data/site";
-import { widgetFacts } from "@/data/widgetFacts";
+import { categoryLabels, categoryOrder, getWidgetFactsByCategory } from "@/data/widgetFacts";
 
 export const metadata = buildMetadata({
   title: "Free DFW Plumbing Data Badges (Embeddable)",
@@ -61,31 +61,49 @@ export default function DfwDataBadgesPage() {
             </p>
           </div>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a badge, copy the code</h2>
-            <div className="space-y-8">
-              {widgetFacts.map((fact) => {
-                const alt = `${fact.label}: ${fact.value} - Data by Plumbing Hands`;
-                const code = embedSnippet(fact.slug, fact.linkPath, alt);
-                return (
-                  <div key={fact.slug} className="border border-[#1A3A38] rounded-xl p-4">
-                    <p className="text-white font-semibold mb-2">{fact.label}</p>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`/api/widgets/facts/${fact.slug}`}
-                      alt={alt}
-                      height={26}
-                      className="mb-2"
-                    />
-                    <p className="text-slate-400 text-xs mb-3">Source: {fact.sourceNote}</p>
-                    <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto">
-                      <code>{code}</code>
-                    </pre>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <nav className="mb-8 flex flex-wrap gap-2">
+            {categoryOrder.map((category) => (
+              <a
+                key={category}
+                href={`#${category}`}
+                className="rounded-full border border-[#1A3A38] px-4 py-1.5 text-sm font-semibold text-slate-300 hover:border-[#F0B429] hover:text-[#F0B429]"
+              >
+                {categoryLabels[category]}
+              </a>
+            ))}
+          </nav>
+
+          {categoryOrder.map((category) => {
+            const facts = getWidgetFactsByCategory(category);
+            if (facts.length === 0) return null;
+            return (
+              <section key={category} id={category} className="mb-10 scroll-mt-24">
+                <h2 className="text-xl font-semibold text-[#F0B429] mb-4">{categoryLabels[category]}</h2>
+                <div className="space-y-8">
+                  {facts.map((fact) => {
+                    const alt = `${fact.label}: ${fact.value} - Data by Plumbing Hands`;
+                    const code = embedSnippet(fact.slug, fact.linkPath, alt);
+                    return (
+                      <div key={fact.slug} className="border border-[#1A3A38] rounded-xl p-4">
+                        <p className="text-white font-semibold mb-2">{fact.label}</p>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={`/api/widgets/facts/${fact.slug}`}
+                          alt={alt}
+                          height={26}
+                          className="mb-2"
+                        />
+                        <p className="text-slate-400 text-xs mb-3">Source: {fact.sourceNote}</p>
+                        <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto">
+                          <code>{code}</code>
+                        </pre>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
 
           <div className="mt-10">
             <InternalLinks
