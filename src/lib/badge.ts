@@ -20,7 +20,15 @@ export function buildHardnessBadgeSvg(cityName: string, rangeLabel: string, clas
   return buildLabelValueBadgeSvg("Water Hardness", `${cityName}: ${rangeLabel} GPG (${classification})`);
 }
 
-export function buildLabelValueBadgeSvg(label: string, value: string) {
+export type BadgeVariant = "default" | "danger" | "safe";
+
+const VARIANT_STYLES: Record<BadgeVariant, { bg: string; text: string }> = {
+  default: { bg: "#F0B429", text: "#0F1F1D" },
+  danger: { bg: "#DC2626", text: "#FFFFFF" },
+  safe: { bg: "#16A34A", text: "#FFFFFF" }
+};
+
+export function buildLabelValueBadgeSvg(label: string, value: string, variant: BadgeVariant = "default") {
   const fontSize = 12;
   const paddingX = 10;
   const labelWidth = estimateTextWidth(label, fontSize) + paddingX * 2;
@@ -28,13 +36,14 @@ export function buildLabelValueBadgeSvg(label: string, value: string) {
   const height = 26;
   const totalWidth = labelWidth + valueWidth;
   const ariaLabel = escapeXml(`${label}: ${value}`);
+  const { bg, text } = VARIANT_STYLES[variant];
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}" role="img" aria-label="${ariaLabel}">
   <rect width="${totalWidth}" height="${height}" rx="4" fill="#0F1F1D"/>
-  <rect x="${labelWidth}" width="${valueWidth}" height="${height}" rx="4" fill="#F0B429"/>
-  <rect x="${labelWidth}" width="6" height="${height}" fill="#F0B429"/>
+  <rect x="${labelWidth}" width="${valueWidth}" height="${height}" rx="4" fill="${bg}"/>
+  <rect x="${labelWidth}" width="6" height="${height}" fill="${bg}"/>
   <text x="${labelWidth / 2}" y="${height / 2 + 4}" fill="#FFFFFF" font-family="Verdana, Geneva, sans-serif" font-size="${fontSize}" text-anchor="middle">${escapeXml(label)}</text>
-  <text x="${labelWidth + valueWidth / 2}" y="${height / 2 + 4}" fill="#0F1F1D" font-family="Verdana, Geneva, sans-serif" font-size="${fontSize}" font-weight="bold" text-anchor="middle">${escapeXml(value)}</text>
-  <text x="${totalWidth - 4}" y="${height - 4}" fill="#0F1F1D" font-family="Verdana, Geneva, sans-serif" font-size="7" text-anchor="end" opacity="0.5">plumbinghands.com</text>
+  <text x="${labelWidth + valueWidth / 2}" y="${height / 2 + 4}" fill="${text}" font-family="Verdana, Geneva, sans-serif" font-size="${fontSize}" font-weight="bold" text-anchor="middle">${escapeXml(value)}</text>
+  <text x="${totalWidth - 4}" y="${height - 4}" fill="${text}" font-family="Verdana, Geneva, sans-serif" font-size="7" text-anchor="end" opacity="0.5">plumbinghands.com</text>
 </svg>`;
 }

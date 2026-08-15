@@ -19,6 +19,16 @@ const tools = [
     title: "DFW Data Badges",
     href: "/tools/dfw-data-badges",
     description: "Embeddable badges for winter freeze risk, population growth, and water heater lifespan."
+  },
+  {
+    title: "Freeze Watch Widget (Live)",
+    href: "/tools/freeze-watch-widget",
+    description: "A live, auto-updating freeze-risk badge sourced directly from the National Weather Service forecast."
+  },
+  {
+    title: "Cost Guide Checklist Badges",
+    href: "/tools/cost-guide-checklists",
+    description: "Embeddable badges showing how many key questions to ask before approving repair work, by issue type."
   }
 ];
 

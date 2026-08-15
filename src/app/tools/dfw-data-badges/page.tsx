@@ -91,6 +91,8 @@ export default function DfwDataBadgesPage() {
             <InternalLinks
               extra={[
                 { label: "Free DFW Water Hardness Widget", href: "/tools/water-hardness-widget" },
+                { label: "Free DFW Freeze Watch Widget (Live)", href: "/tools/freeze-watch-widget" },
+                { label: "Free DFW Cost Guide Checklist Badges", href: "/tools/cost-guide-checklists" },
                 { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
                 { label: "Burst Pipes in DFW", href: "/guides/dfw-burst-pipes" },
                 { label: "DFW Water Heater Lifespan Guide", href: "/guides/dfw-water-heater-lifespan" }

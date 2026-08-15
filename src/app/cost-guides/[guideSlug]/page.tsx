@@ -110,6 +110,7 @@ export default async function CostGuidePage({ params }: Props) {
       <InternalLinks
         extra={[
           { label: "All cost guides", href: "/cost-guides" },
+          { label: "Free Cost Guide Checklist Badges (Embeddable)", href: "/tools/cost-guide-checklists" },
           ...(enhancement?.extraLinks || []),
           ...(relatedService ? [{ label: relatedService.name, href: `/services/${relatedService.slug}` }] : []),
           ...relatedProblems.map((problem) => ({ label: problem.title, href: `/problems/${problem.slug}` }))
