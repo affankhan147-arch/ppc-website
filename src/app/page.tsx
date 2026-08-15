@@ -62,8 +62,8 @@ const cityEmergencyLinks = [
 ];
 
 export const metadata = buildMetadata({
-  title: "Emergency plumbing service across Dallas-Fort Worth",
-  description: truncateForMeta("Call for emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
+  title: "24/7 Emergency Plumber in Dallas-Fort Worth",
+  description: truncateForMeta("Call for 24/7 emergency plumber and emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
   path: "/"
 });
 
@@ -79,7 +79,7 @@ export default function HomePage() {
   return (
     <main>
       <JsonLd data={[
-        webPageSchema("/", "Emergency plumbing service across Dallas-Fort Worth", "Call for emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
+        webPageSchema("/", "24/7 Emergency Plumber in Dallas-Fort Worth", "Call for 24/7 emergency plumber and emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
         breadcrumbSchema([{ name: "Home", path: "/" }]),
         faqSchema(faqs)
       ]} />
