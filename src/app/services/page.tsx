@@ -156,6 +156,10 @@ export default function ServicesHubPage() {
           { label: "All DFW service areas", href: "/cities" },
           { label: "DFW Emergency Plumbing Cost Guide", href: "/guides/dfw-emergency-plumbing-costs" },
           { label: "Water Heater Lifespan & Maintenance in DFW", href: "/guides/dfw-water-heater-lifespan" },
+          { label: "Burst Pipes in DFW: Causes, Costs, First Steps", href: "/guides/dfw-burst-pipes" },
+          { label: "Slab Leaks in DFW", href: "/guides/dfw-slab-leaks" },
+          { label: "Sewer Line Maintenance & Root Intrusion", href: "/guides/dfw-sewer-root-intrusion" },
+          { label: "Gas Line Safety & Capacity in DFW", href: "/guides/dfw-gas-line-safety" },
           { label: "Emergency plumbing guides", href: "/blog" }
         ]}
       />

@@ -46,6 +46,18 @@ const urgentCards = [
   { title: "Sewer symptoms are appearing", text: "Multiple fixtures, odor, or cleanout overflow need prompt attention.", icon: Wrench, href: "/services/main-sewer-line-clog" }
 ];
 
+const homeGuides = [
+  { title: "Burst Pipes in DFW", href: "/guides/dfw-burst-pipes", description: "Why burst pipes are so common in DFW, what Winter Storm Uri showed about the real risk, and the first steps that limit damage." },
+  { title: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data", description: "Original, sourced data on DFW water hardness by city, winter freeze-event frequency, and the population growth driving local plumbing demand." },
+  { title: "Water Heater Lifespan in DFW", href: "/guides/dfw-water-heater-lifespan", description: "How long tank and tankless water heaters really last, why DFW's hard water shortens that, and the maintenance that extends it." },
+  { title: "DFW Emergency Plumbing Cost Guide", href: "/guides/dfw-emergency-plumbing-costs", description: "Realistic cost ranges for common emergency plumbing services across Dallas-Fort Worth." },
+  { title: "Slab Leaks in DFW", href: "/guides/dfw-slab-leaks", description: "Why slab leaks are uniquely common in DFW, how they're diagnosed, and what homeowners can do." },
+  { title: "Texas Homeowners Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims", description: "What Texas homeowners insurance covers, and doesn't cover, when a plumbing leak occurs, with real TDI sources." },
+  { title: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement", description: "How to identify polybutylene pipe, why DFW homes are at added risk, and real replacement costs." },
+  { title: "Gas Line Safety & Capacity in DFW", href: "/guides/dfw-gas-line-safety", description: "Gas line capacity and safety steps homeowners should know before adding outdoor kitchens or pool heaters." },
+  { title: "Sewer Line Maintenance & Root Intrusion", href: "/guides/dfw-sewer-root-intrusion", description: "Why DFW sewer lines are prone to root intrusion, how it's diagnosed, and what homeowners can do." }
+];
+
 const cityEmergencyLinks = [
   { title: "Dallas Emergency Plumber", description: "24/7 emergency plumbing service in Dallas, TX.", href: "/cities/dallas/24-hour-emergency-plumber" },
   { title: "Plano Emergency Plumber", description: "Fast response for emergency plumbing in Plano.", href: "/cities/plano/24-hour-emergency-plumber" },
@@ -305,6 +317,21 @@ export default function HomePage() {
                   <h3 className="text-xl font-black text-white">{problem.title}</h3>
                   <p className="mt-3 leading-7 text-slate-300">{problem.directAnswer}</p>
                 </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-section">
+          <p className="section-kicker">Research-backed guides</p>
+          <h2 className="display-title mt-2 text-4xl font-bold text-white">DFW Plumbing Guides &amp; Local Data.</h2>
+          <p className="mt-4 text-lg leading-8 text-slate-300">Sourced, in-depth guides on the plumbing issues that hit Dallas-Fort Worth homes hardest -- from burst pipes and slab leaks to insurance coverage and water heater lifespan.</p>
+          <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {homeGuides.map((guide) => (
+              <Link key={guide.href} href={guide.href} className="premium-card group p-6">
+                <h3 className="text-xl font-black leading-tight text-white">{guide.title}</h3>
+                <p className="mt-3 leading-7 text-slate-300">{guide.description}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#F0B429]">Read the guide <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
               </Link>
             ))}
           </div>
