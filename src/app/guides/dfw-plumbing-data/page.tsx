@@ -74,6 +74,9 @@ export default function DfwPlumbingDataPage() {
             <p className="text-slate-300 mb-4">
               Practically, this means the large majority of DFW homes fall well above the 3 GPG threshold where a water softener is generally recommended - and homes without one should expect faster mineral buildup in water heaters, faster loss of fixture flow rate, and more frequent aerator and showerhead cleaning.
             </p>
+            <p className="text-slate-300 mb-4">
+              Real estate agents, home inspectors, and local bloggers are welcome to use our free, embeddable <a href="/tools/water-hardness-widget" className="text-[#F0B429] underline">water hardness widget</a> - a small badge showing the sourced GPG range for any DFW-area city, ready to copy onto your own site.
+            </p>
           </section>
 
           <section className="mb-10">
