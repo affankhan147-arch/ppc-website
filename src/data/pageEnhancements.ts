@@ -2464,6 +2464,270 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "what-counts-as-a-plumbing-emergency": {
+    checklistTitle: "How to tell if your plumbing issue counts as an emergency",
+    checklistIntro:
+      "Not every plumbing problem needs to be treated the same way. A few clear categories help separate what genuinely cannot wait from what can safely be scheduled for a regular appointment.",
+    checklistItems: [
+      "Active water damage -- water spreading across a floor, dripping through a ceiling, or pooling near electrical areas -- should be treated as urgent regardless of the hour.",
+      "Sewage exposure, including a backed-up toilet or drain releasing wastewater into living space, counts as an emergency due to health and contamination risk.",
+      "Loss of essential use, such as no working toilet in the house or no hot water during cold weather, generally rises to the level of an emergency.",
+      "Safety risks -- a gas odor near a water heater, or water near an electrical panel or outlet -- should always be treated as urgent and handled with caution.",
+      "Business interruption from a commercial plumbing failure, especially one affecting health code compliance or customer safety, is typically treated as urgent.",
+      "A single slow drain, a minor drip, or a cosmetic issue with no active water usually does not require emergency dispatch and can be scheduled normally."
+    ],
+    proofTitle: "What to confirm if you are unsure whether your situation qualifies",
+    proofItems: [
+      "Describe your specific symptoms plainly to the provider and ask directly whether it qualifies for emergency dispatch.",
+      "Ask about the cost difference between emergency and standard scheduling so you can weigh urgency against price if the situation is borderline.",
+      "If the problem could worsen while waiting -- for example, a slow leak near electrical wiring -- treat that possibility as a reason to lean toward urgency.",
+      "Reassess if symptoms change; a non-urgent issue can become urgent if it is left unaddressed."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumber vs regular plumber: the difference", href: "/blog/emergency-plumber-vs-regular-plumber-what-is-the-difference" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "signs-your-main-drain-needs-same-day-service": {
+    checklistTitle: "Signs a main drain issue needs same-day service",
+    checklistIntro:
+      "A main drain problem does not always announce itself with a full backup right away. A few earlier warning signs are worth acting on before the situation escalates.",
+    checklistItems: [
+      "Several fixtures draining slower than usual at the same time, even if none has fully backed up yet, is an early sign worth addressing same-day.",
+      "A toilet or shower that backs up specifically when a different fixture is used points to a shared-line restriction that tends to worsen with continued use.",
+      "An outdoor cleanout showing any sign of overflow or standing wastewater should prompt same-day service, not a wait-and-see approach.",
+      "Sewer odor noticeable indoors, especially combined with slow drainage, is a signal that should not be ignored until it becomes a full backup.",
+      "Gurgling in one fixture triggered by using a different fixture elsewhere in the house indicates a shared-line issue building pressure.",
+      "A clog that keeps returning in the same spot despite repeated home remedies typically means the real blockage is further down the line and needs professional attention."
+    ],
+    proofTitle: "What to confirm when requesting same-day main drain service",
+    proofItems: [
+      "Describe the full pattern of symptoms, not just the most recent one, so the technician understands whether this looks like a developing main-line issue.",
+      "Ask whether a camera inspection is recommended given the symptoms, rather than a basic clearing attempt alone.",
+      "Clarify same-day availability for your specific address and the pricing difference versus standard scheduling.",
+      "Ask what happens if the visit confirms a main-line issue -- what the next steps and typical cost range look like."
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" }
+    ]
+  },
+  "toilet-shower-and-sink-backing-up-together-what-it-means": {
+    checklistTitle: "What it means when the toilet, shower, and sink all back up together",
+    checklistIntro:
+      "When more than one fixture backs up at the same time, the cause is almost always downstream of any single fixture -- understanding why helps you respond correctly instead of treating each fixture separately.",
+    checklistItems: [
+      "Fixtures that share a drain line will all be affected when that shared line is blocked, which is why a toilet, shower, and sink can all act up at once.",
+      "Stop using every affected fixture, not just the most obviously backed-up one, since continued use anywhere on the shared line can worsen the backup.",
+      "Check whether the backup follows a specific trigger -- for example, only when the toilet flushes -- since this detail helps narrow down where the restriction is.",
+      "An outdoor cleanout overflowing alongside multiple indoor fixtures backing up strongly confirms a main-line rather than fixture-level issue.",
+      "Avoid running the washing machine or dishwasher during a multi-fixture backup, since these add significant water volume to an already-restricted line.",
+      "Treat this pattern as more urgent than a single slow drain, since it typically indicates a larger blockage that will not resolve on its own."
+    ],
+    proofTitle: "What to confirm when requesting help for a multi-fixture backup",
+    proofItems: [
+      "Describe clearly that multiple fixtures are affected together, since this changes what equipment and approach the technician plans for.",
+      "Ask whether a camera inspection will be part of the visit given the multi-fixture pattern.",
+      "Ask about pricing for main-line diagnosis and clearing versus a single-fixture clog, since these are usually different scopes.",
+      "Confirm what to avoid using in the home until the technician arrives."
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Bathtub backing up when toilet flushes", href: "/blog/bathtub-backing-up-when-toilet-flushes-what-causes-it" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+    ]
+  },
+  "emergency-drain-cleaning-in-fort-worth-fast-homeowner-guide": {
+    checklistTitle: "A fast guide to emergency drain cleaning in Fort Worth",
+    checklistIntro:
+      "When a drain backs up in Fort Worth, the first few decisions -- which fixtures to stop using, what to check, and what to say when requesting help -- matter more than trying to fix it yourself first.",
+    checklistItems: [
+      "Identify which fixture is affected and stop using it immediately, along with anything connected to the same branch line.",
+      "Check nearby fixtures for gurgling or slow drainage, since this tells you whether the issue looks local or shared.",
+      "Avoid chemical drain cleaners on a backup that has already been sitting for a while, since they can complicate a technician's diagnosis and are less effective on deeper clogs.",
+      "If the clog is recurring in the same location, mention that clearly, since it often means the real cause is further down the line.",
+      "Check the outdoor cleanout if accessible, since standing water there points toward a main-line issue rather than a single fixture.",
+      "Have your Fort Worth address and a clear description of the symptoms ready before requesting service."
+    ],
+    proofTitle: "What to confirm before booking service in Fort Worth",
+    proofItems: [
+      "Confirm the provider is actually dispatching to your Fort Worth address at the time you are requesting help.",
+      "Ask about dispatch and diagnostic fees before approving work.",
+      "Ask whether the visit includes a camera inspection if the symptoms suggest a main-line issue.",
+      "Confirm what happens if the first clearing attempt does not resolve the backup."
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "emergency-plumber-in-plano-when-to-call-now": {
+    checklistTitle: "When to call an emergency plumber in Plano right now",
+    checklistIntro:
+      "A few specific situations in Plano homes are worth calling about immediately rather than waiting -- here is how to recognize them and what to have ready when you call.",
+    checklistItems: [
+      "Water actively spreading across a floor or dripping through a ceiling should prompt an immediate call.",
+      "A toilet that keeps rising even after the supply valve is closed needs urgent attention rather than repeated plunging.",
+      "A water heater leaking near electrical components, or any gas odor near a gas unit, is a safety issue that should not wait.",
+      "Multiple drains backing up together at once points to a shared or main-line issue that tends to worsen over time.",
+      "No hot water during cold weather, especially in homes with young children or elderly residents, is a higher priority than the same issue in mild weather.",
+      "A single dripping faucet or slow drain with no other symptoms can typically wait for a regular appointment."
+    ],
+    proofTitle: "What to confirm when calling now",
+    proofItems: [
+      "Confirm the provider is dispatching to your Plano address at the current time, not just listed as covering the general area.",
+      "Ask about after-hours dispatch fees if calling outside normal business hours.",
+      "Describe the problem specifically so the right equipment is brought on the first visit.",
+      "Ask for a realistic arrival estimate rather than assuming immediate arrival."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "24-hour plumber in Plano: when the problem cannot wait", href: "/blog/24-hour-plumber-in-plano-when-the-problem-cannot-wait" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "emergency-drain-cleaning-in-frisco-what-to-expect": {
+    checklistTitle: "What to expect from emergency drain cleaning in Frisco",
+    checklistIntro:
+      "Frisco homes range from newer construction to older properties, and drain cleaning expectations can differ slightly based on the home's age and layout -- here is what a typical visit involves.",
+    checklistItems: [
+      "Expect a few triage questions first -- which fixture is affected, how long it has been slow, and whether other drains show symptoms -- before dispatch.",
+      "Newer Frisco homes often have more accessible cleanouts, which can make standard clearing faster than in older properties with limited access.",
+      "A technician will typically start with a cable auger for a single-fixture clog before considering hydro jetting or a camera inspection for anything more involved.",
+      "If the clog is recurring, mention that clearly, since it often points toward a cause that a single clearing will not fully resolve.",
+      "Ask about the plan if the clog does not clear with standard methods -- this should be discussed before, not after, the visit stalls.",
+      "Cleanup of the immediate work area is typically included, though broader water damage cleanup is usually separate."
+    ],
+    proofTitle: "What to confirm before the visit in Frisco",
+    proofItems: [
+      "Confirm dispatch and diagnostic fees before work begins.",
+      "Ask what equipment will be brought based on the symptoms described.",
+      "Ask whether a warranty applies if the clog returns shortly after clearing.",
+      "Confirm whether same-day service is realistically available for your specific address and time."
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Same-day drain cleaning in Dallas: what to expect", href: "/blog/same-day-drain-cleaning-in-dallas-what-to-expect" }
+    ]
+  },
+  "emergency-sewer-help-in-garland-signs-and-next-steps": {
+    checklistTitle: "Signs you need emergency sewer help in Garland",
+    checklistIntro:
+      "Sewer issues tend to build gradually before becoming a full backup -- recognizing the early signs in a Garland home can mean the difference between a contained fix and a much bigger cleanup.",
+    checklistItems: [
+      "Multiple drains slowing down together, rather than just one, is one of the clearest early signs of a shared or main-line issue.",
+      "An outdoor cleanout with any sign of overflow or standing wastewater should be treated as urgent -- stop indoor water use immediately.",
+      "Gurgling from a drain when a different fixture is used elsewhere in the house points toward a partially blocked shared line.",
+      "Sewer odor indoors, especially combined with slow drainage, should not be dismissed as just a smell -- it is often an early sewer-line signal.",
+      "A backup that follows heavy rain may point to a line that is already marginal and gets pushed over the edge by added water volume.",
+      "Recurring clogs in the same fixture despite repeated clearing attempts usually mean the real blockage is further down the line."
+    ],
+    proofTitle: "What to confirm before requesting sewer help in Garland",
+    proofItems: [
+      "Describe the full pattern of symptoms, including timing and which fixtures are affected, when requesting service.",
+      "Ask whether a camera inspection is recommended given the symptoms described.",
+      "Confirm dispatch, diagnostic, and after-hours fees before approving work.",
+      "Ask what the next steps and approximate cost look like if the visit confirms a main-line issue."
+    ],
+    extraLinks: [
+      { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+    ]
+  },
+  "frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze": {
+    checklistTitle: "How to prepare DFW pipes before the next hard freeze",
+    checklistIntro:
+      "DFW homes are more vulnerable to frozen pipes than homes in colder climates, mainly because they are not built with the same level of insulation for extended sub-freezing temperatures. A few preparation steps before a freeze warning can prevent a burst pipe.",
+    checklistItems: [
+      "Drip exposed faucets -- especially those on exterior walls -- during a hard freeze warning to keep water moving through the line and reduce the chance of a full freeze.",
+      "Open cabinet doors under sinks located on exterior walls so warmer room air can reach the pipes underneath.",
+      "Disconnect and drain garden hoses before a freeze, and if you have a dedicated shutoff for outdoor faucets, use it.",
+      "Know the location of your main water shutoff valve before a freeze happens, not during an active pipe break.",
+      "Pipes running through an attic, garage, or exterior wall are the most vulnerable in DFW homes -- if you know your home has exposed runs like this, consider additional insulation before winter.",
+      "If you are traveling during a freeze warning, keep the heat on at a reasonable minimum temperature rather than turning it off completely."
+    ],
+    proofTitle: "What to do if a pipe still freezes or bursts",
+    proofItems: [
+      "If a faucet stops producing water during a freeze, treat it as a possible frozen pipe and avoid using open flame to thaw it yourself.",
+      "If a pipe has already burst, shut off the main valve immediately and request emergency service rather than attempting a temporary patch.",
+      "Ask a technician whether pipe insulation or rerouting is worth considering for a specific pipe that froze this season, to reduce the risk next winter.",
+      "Document any freeze-related damage with photos, since this can matter for an insurance claim depending on how the freeze is classified."
+    ],
+    extraFaqs: [
+      {
+        question: "Why are DFW homes more vulnerable to frozen pipes than homes in colder states?",
+        answer:
+          "Homes built for a milder climate typically use less pipe insulation and route more plumbing through unconditioned spaces like attics and garages, since extended hard freezes are less common. When a hard freeze does happen, those under-insulated runs are more exposed than they would be in a home built for consistently cold winters."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Free live DFW freeze watch widget", href: "/tools/freeze-watch-widget" },
+      { label: "Burst pipe in Dallas: what to shut off first", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" }
+    ]
+  },
+  "slab-leak-warning-signs-dallas-fort-worth-homeowners": {
+    checklistTitle: "Slab leak warning signs worth acting on early",
+    checklistIntro:
+      "DFW's expansive clay soil shifts with moisture changes, which is a recognized contributor to slab leaks in the area. Catching the early signs matters because a slab leak left unaddressed can lead to structural damage over time.",
+    checklistItems: [
+      "An unexplained spike in the water bill, with no obvious change in household water use, is one of the most common early indicators.",
+      "A warm spot on the flooring, especially over a hot water line, can indicate a leak beneath the slab even without visible moisture yet.",
+      "The sound of running water when every fixture in the house is off is a strong sign worth investigating immediately.",
+      "Cracks appearing in walls, flooring, or the foundation itself, particularly if they are new or worsening, can be connected to slab movement from a leak.",
+      "Unexplained moisture, mold, or a musty smell under carpet or flooring, without an obvious surface source, deserves a professional evaluation.",
+      "A drop in water pressure combined with any of the above signs strengthens the case for having a leak-detection assessment done soon."
+    ],
+    proofTitle: "What to confirm when requesting a slab leak evaluation",
+    proofItems: [
+      "Ask whether the provider uses acoustic or other leak-detection equipment to locate a slab leak without unnecessary demolition.",
+      "Ask what the evaluation process looks like and what it costs before committing to further work.",
+      "Confirm what repair options exist if a leak is found -- spot repair versus rerouting -- and how location and access affect that choice.",
+      "Ask whether the water bill spike or symptoms you noticed are consistent with what they typically see in confirmed slab leak cases."
+    ],
+    extraFaqs: [
+      {
+        question: "Why is DFW clay soil connected to slab leaks?",
+        answer:
+          "Expansive clay soil common in North Texas shifts as it absorbs and releases moisture, which can put stress on pipes running beneath a home's foundation over time. This is a widely recognized regional contributor, though not every slab leak is soil-related."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
+      { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
+    ]
+  },
+  "sudden-low-water-pressure-in-dallas-home-what-it-means": {
+    checklistTitle: "What sudden low water pressure actually means",
+    checklistIntro:
+      "Gradual pressure loss over time is usually a fixture or municipal-side issue, but a sudden drop affecting the whole house is a different situation worth checking rather than ignoring.",
+    checklistItems: [
+      "Check whether the pressure drop affects a single fixture or the entire house -- a single-fixture issue is often a clogged aerator or a partially closed valve, while a whole-house drop points to something further upstream.",
+      "A sudden, whole-house pressure drop can indicate a hidden leak somewhere in the system, since water escaping the line reduces pressure available at fixtures.",
+      "A failing pressure regulator can cause a sudden drop as well, particularly if it fails toward the closed position rather than open.",
+      "A break in the main line, whether on your property or closer to the street, can cause a sudden and significant pressure loss.",
+      "If neighbors are also experiencing a sudden drop, the cause may be on the municipal side rather than something inside your home.",
+      "Check your water meter for movement with all fixtures off -- if it is moving, water is flowing somewhere in the system even though nothing is being used."
+    ],
+    proofTitle: "What to confirm when requesting a pressure diagnosis",
+    proofItems: [
+      "Describe whether the drop is sudden or gradual and whether it affects one fixture or the whole house, since this significantly narrows the likely cause.",
+      "Ask whether a leak-detection check is included as part of the diagnosis given a sudden pressure drop.",
+      "Ask what a pressure regulator test involves and what it would cost to replace if it is found to be failing.",
+      "Confirm whether checking for a main-line issue is part of the visit or would require a separate appointment."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" }
+    ]
+  },
   "emergency-plumbing-in-arlington-tx-night-and-weekend-issues": {
     checklistTitle: "How to triage plumbing issues in Arlington after hours",
     checklistIntro:
