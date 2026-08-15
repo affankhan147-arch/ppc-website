@@ -27,7 +27,7 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   images: {
-    unoptimized: true
+    formats: ['image/avif', 'image/webp']
   },
   async headers() {
     return [
