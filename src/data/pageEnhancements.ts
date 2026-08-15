@@ -2464,6 +2464,272 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
+  "emergency-plumbing-in-arlington-tx-night-and-weekend-issues": {
+    checklistTitle: "How to triage plumbing issues in Arlington after hours",
+    checklistIntro:
+      "Nights and weekends are when plumbing problems feel the most stressful, mainly because regular options are not open. A quick triage helps you decide what genuinely needs urgent attention versus what can wait until Monday.",
+    checklistItems: [
+      "A toilet overflow that will not stop even after the supply valve is closed should be treated as urgent regardless of the day or time.",
+      "A drain backup affecting more than one fixture at once -- especially combined with gurgling or odor -- points toward a shared line issue that tends to get worse if left alone.",
+      "A water heater leak involving visible pooling, a gas smell, or water near electrical components is urgent; a unit that simply stopped heating is usually less time-critical.",
+      "A burst or actively spraying pipe needs the main valve shut off immediately and should not wait for regular hours.",
+      "A stuck shutoff valve during an active leak is its own urgent situation -- look for an alternate upstream valve rather than forcing the stuck one.",
+      "A single slow drain or a dripping faucet with no other symptoms can typically wait for a weekday appointment without meaningful risk."
+    ],
+    proofTitle: "What to confirm before approving after-hours work in Arlington",
+    proofItems: [
+      "Ask about after-hours or weekend dispatch fees specifically, since these are commonly higher than standard daytime rates.",
+      "Confirm the provider is actually dispatching to your Arlington address at that specific time rather than assuming general coverage.",
+      "Describe the problem clearly so the technician arrives with the right equipment for a leak, backup, or water-heater issue.",
+      "Ask what happens if the issue needs a follow-up visit during business hours for parts or further diagnosis."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" }
+    ]
+  },
+  "burst-pipe-in-dallas-what-to-shut-off-first": {
+    checklistTitle: "What to shut off first when a pipe bursts",
+    checklistIntro:
+      "The order of steps matters during a burst pipe -- stopping the water source comes before anything else, and a few follow-up steps can limit how much damage happens before help arrives.",
+    checklistItems: [
+      "Shut off the main water valve first, not just the valve nearest the burst. A burst pipe can be fed from more than one direction depending on where it is in the system.",
+      "If the burst is near an electrical outlet, panel, or fixture, turn off power to that area at the breaker if it is safe to reach -- do not touch a wet outlet or switch directly.",
+      "Open a low faucet in the house after shutting off the main valve to relieve remaining pressure in the lines and slow any continued dripping from the burst point.",
+      "Move furniture, electronics, and belongings away from the spreading water as quickly as you safely can.",
+      "If the burst is inside a wall or ceiling, resist the urge to cut into it yourself -- note the approximate location and let the technician assess it.",
+      "Take photos of the damage and the shutoff valve position before cleanup begins, since this documentation can matter for an insurance claim."
+    ],
+    proofTitle: "What to confirm when requesting burst pipe help",
+    proofItems: [
+      "Confirm the main valve is fully closed and mention this when requesting help, since it changes what the technician expects on arrival.",
+      "Ask about dispatch and diagnostic fees before approving work, especially for an after-hours burst pipe call.",
+      "Ask whether the visit covers the pipe repair itself, water extraction, or both, since these are often separate scopes.",
+      "If water reached drywall, flooring, or cabinetry, ask whether the provider coordinates with restoration services or whether that is a separate call."
+    ],
+    extraFaqs: [
+      {
+        question: "Why shut off the main valve instead of just the nearest one?",
+        answer:
+          "A nearby shutoff may only control part of the system. The main valve stops all incoming water, which is the safest first step until the exact source of the burst is confirmed."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Burst pipe first steps", href: "/problems/burst-pipe-first-steps" },
+      { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Plumber or water-restoration company first?", href: "/blog/plumber-or-water-restoration-company-first" }
+    ]
+  },
+  "drain-smell-in-bathroom-sewer-gas-or-simple-clog": {
+    checklistTitle: "Is that bathroom drain smell sewer gas or just a clog?",
+    checklistIntro:
+      "A bathroom drain odor has a few common causes, and telling them apart usually comes down to a couple of quick checks before assuming the worst.",
+    checklistItems: [
+      "Check drains that are used infrequently first -- a guest bathroom or a floor drain. A dry trap (the water seal in the P-trap has evaporated) is one of the most common, simplest causes of sewer odor and is fixed by running water through the drain for a minute.",
+      "If running water clears the smell temporarily but it returns within a day or two, that points toward a slow drain accumulating organic buildup rather than a dry trap.",
+      "A smell that persists even after the trap has been refreshed, especially combined with gurgling, can point toward a venting issue or a partial blockage further down the line.",
+      "Check whether the smell is isolated to one drain or noticeable throughout the bathroom -- a single-drain smell is more likely local, while a room-wide odor can suggest a vent stack issue.",
+      "A strong sewer smell combined with slow drainage in more than one fixture is a stronger signal of a shared-line or main-line issue rather than a simple dry trap.",
+      "Avoid masking the smell with heavy chemical treatments before identifying the cause, since this can make diagnosis harder for a technician."
+    ],
+    proofTitle: "What to confirm before booking a drain-smell diagnosis",
+    proofItems: [
+      "Mention which specific drains were checked and whether refreshing the trap resolved the smell, since this narrows down the likely cause.",
+      "Ask whether a smoke test or camera inspection is appropriate if a venting issue is suspected.",
+      "Ask what a standard visit for drain odor typically includes versus what would require an additional diagnostic step.",
+      "Confirm pricing separately for a simple trap or drain-cleaning fix versus a deeper venting or line inspection."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does an unused bathroom drain start to smell?",
+        answer:
+          "Every drain relies on a small amount of standing water in the P-trap to block sewer gas from entering the room. If a drain goes unused for weeks, that water can evaporate, breaking the seal and letting odor through -- running water through it for a minute usually resolves this."
+      }
+    ],
+    extraLinks: [
+      { label: "Sewer smell in bathroom", href: "/problems/sewer-smell-in-bathroom" },
+      { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
+      { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" }
+    ]
+  },
+  "is-a-clogged-drain-actually-a-sewer-line-problem": {
+    checklistTitle: "How to tell a fixture clog from a sewer line problem",
+    checklistIntro:
+      "Most slow drains are exactly what they look like -- a local clog in that fixture. But a specific set of signs points toward something bigger happening in the main sewer line, and it is worth checking for these before assuming it is a simple fix.",
+    checklistItems: [
+      "A single fixture draining slowly, with no other symptoms elsewhere in the house, is most often a local clog rather than a sewer-line issue.",
+      "Multiple fixtures slowing down or backing up around the same time is a much stronger signal of a shared or main-line restriction.",
+      "Water backing up into a lower fixture -- a tub or floor drain -- when a toilet is flushed elsewhere points toward the shared line rather than the fixture itself.",
+      "An outdoor cleanout showing signs of overflow or standing wastewater is one of the clearest sewer-line indicators and should stop indoor water use.",
+      "Gurgling that happens in one fixture when a different fixture is used is a sign of air movement through a partially blocked shared line.",
+      "A clog that returns quickly after clearing, especially in the same spot, often means the real blockage is further down the line than the initial clearing reached."
+    ],
+    proofTitle: "What to confirm before deciding which service you need",
+    proofItems: [
+      "Describe exactly which fixtures are affected and in what pattern, since this detail helps determine whether a local or main-line visit is appropriate.",
+      "Ask whether a camera inspection is recommended given the symptoms described, rather than assuming a standard clearing will resolve it.",
+      "Ask how pricing differs between a single-fixture clearing and a main-line diagnosis and repair.",
+      "If you are unsure, ask the provider directly which scenario your symptoms match before approving a specific service."
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Main sewer line clogged in Dallas: warning signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" }
+    ]
+  },
+  "emergency-plumber-vs-regular-plumber-what-is-the-difference": {
+    checklistTitle: "How emergency and regular plumbing appointments actually differ",
+    checklistIntro:
+      "The terms sound like a marketing distinction, but there are real practical differences in how the two types of visits are dispatched, priced, and scoped -- worth knowing before you decide which one you need.",
+    checklistItems: [
+      "Emergency service is generally reserved for time-sensitive situations: active leaks, backups, overflows, no hot water in cold weather, or a failed essential fixture with no workaround.",
+      "Regular appointments typically fit planned repairs, installations, or situations where a short delay does not risk additional damage.",
+      "Emergency dispatch usually carries different pricing than a scheduled visit, including possible after-hours or same-day fees.",
+      "Emergency visits prioritize stopping the immediate problem, while a regular appointment can plan for a fuller repair or replacement from the start.",
+      "If you are unsure which category your issue falls into, describe the symptoms plainly -- active water, backup, or loss of essential use versus a slow, contained issue -- and let the provider help you decide.",
+      "A problem that starts as non-urgent can become urgent if it is left unaddressed, so reassess if symptoms change or worsen."
+    ],
+    proofTitle: "Questions that clarify which type of visit you need",
+    proofItems: [
+      "Ask directly whether your specific symptoms qualify as an emergency dispatch or would be handled as a standard appointment.",
+      "Compare dispatch and diagnostic fees for each option before deciding, since the cost difference can be significant.",
+      "Ask how quickly a regular appointment could realistically be scheduled if your issue does not require emergency dispatch.",
+      "If the situation changes while you are waiting for a scheduled appointment, ask whether you can upgrade to emergency service."
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" },
+      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+    ]
+  },
+  "how-long-should-emergency-drain-cleaning-take": {
+    checklistTitle: "How long emergency drain cleaning realistically takes",
+    checklistIntro:
+      "Timing expectations vary a lot depending on what the technician actually finds, so it helps to know what affects duration rather than assuming every visit takes the same amount of time.",
+    checklistItems: [
+      "A single-fixture clog with easy access to the cleanout is usually the fastest scenario, often resolved within the initial visit.",
+      "Clogs requiring fixture removal, attic, or crawlspace access add time before clearing even begins.",
+      "If a cable auger does not clear the blockage, moving to hydro jetting or a camera inspection adds meaningful time to the visit.",
+      "A recurring clog in the same location often calls for a camera inspection to identify the actual cause, which extends the visit beyond basic clearing.",
+      "Main-line clogs generally take longer than fixture-level clogs due to the added diagnostic and access steps involved.",
+      "Cleanup time after the blockage is cleared depends on how much water or wastewater reached the surrounding area."
+    ],
+    proofTitle: "What to ask about timing before the visit",
+    proofItems: [
+      "Ask for a realistic time estimate based on the specific symptoms you describe, rather than a generic number.",
+      "Ask what would extend the visit -- for example, if the first clearing attempt does not work.",
+      "Confirm whether a follow-up visit would be needed for a camera inspection or further work, and how that is scheduled.",
+      "Ask whether pricing changes based on how long the visit takes or whether it is a flat rate for the described problem."
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Same-day drain cleaning in Dallas", href: "/blog/same-day-drain-cleaning-in-dallas-what-to-expect" }
+    ]
+  },
+  "commercial-drain-backup-what-business-owners-should-do": {
+    checklistTitle: "What business owners should do during a commercial drain backup",
+    checklistIntro:
+      "A drain backup at a business carries different stakes than a residential one -- customers, staff, and operations are all affected, so the response needs to move quickly on more than one front at once.",
+    checklistItems: [
+      "Stop using any fixture connected to the affected line immediately, including sinks, floor drains, and any equipment tied to the same drain.",
+      "Block off the affected area from customers and staff if wastewater is present, treating it as contaminated until cleaned and sanitized.",
+      "Identify whether the backup affects one fixture or several -- multiple fixtures backing up together usually points to a shared line or main-line issue rather than something isolated.",
+      "Document the time the backup started, which areas are affected, and any recent events -- new equipment, unusual volume, or recent service -- that might be relevant.",
+      "Check whether local regulations require notifying a health department or temporarily closing affected areas, since this varies by business type and city.",
+      "Prioritize customer and staff safety over continuing normal operations if the backup creates a safety or sanitation issue."
+    ],
+    proofTitle: "What to confirm when requesting commercial help",
+    proofItems: [
+      "Ask whether the provider has experience with your specific type of commercial line, since equipment and food-service lines differ from standard plumbing.",
+      "Ask about response time during business hours versus after close, since this affects whether you need to pause operations.",
+      "Clarify dispatch, diagnostic, and after-hours pricing for commercial service before approving work.",
+      "Ask whether the visit includes a camera inspection if the backup is recurring, rather than a one-time clearing only."
+    ],
+    extraLinks: [
+      { label: "Commercial emergency plumbing service", href: "/services/commercial-emergency-plumbing" },
+      { label: "Drain backup in a restaurant: what owners should do first", href: "/blog/drain-backup-in-a-restaurant-what-owners-should-do-first" },
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
+  "dallas-hard-water-and-drain-problems-homeowners-should-know": {
+    checklistTitle: "How Dallas hard water contributes to drain and fixture issues",
+    checklistIntro:
+      "Dallas-area water is on the harder side, which does not usually cause a sudden backup by itself, but it contributes to buildup over time that makes existing drain and fixture problems worse.",
+    checklistItems: [
+      "Mineral scale from hard water can build up on the interior of pipes over years, gradually narrowing the effective diameter and making fixtures more prone to slow drainage.",
+      "Fixtures like faucet aerators and showerheads are the most visibly affected -- reduced flow or spotty spray patterns are early, low-stakes signs of scale buildup.",
+      "Water heaters accumulate sediment faster in hard water areas, which can shorten tank lifespan and contribute to the popping or rumbling sounds some Dallas homeowners notice.",
+      "Hard water alone does not typically cause a sudden clog -- a sudden backup is much more likely to be a discrete blockage than a gradual mineral issue.",
+      "If drains have been slowing gradually over months rather than suddenly, ask a technician whether scale buildup is a contributing factor when they inspect the line.",
+      "A whole-house water softener is one option some homeowners consider to reduce long-term scale buildup, though it is a separate decision from fixing an existing drain problem."
+    ],
+    proofTitle: "What to ask if you suspect hard water is contributing to drain issues",
+    proofItems: [
+      "Ask whether a slow-draining fixture shows visible scale buildup during inspection, which would support a hard-water contribution.",
+      "Ask whether recurring water heater issues might be sediment-related given local water hardness, separate from any drain concern.",
+      "Clarify that a sudden backup is being treated as an active blockage rather than assumed to be a hard-water issue, since these need different fixes.",
+      "If considering a water softener, ask whether it is relevant to your specific issue or a separate long-term consideration."
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" }
+    ]
+  },
+  "dallas-storms-and-sewer-backups-what-to-check": {
+    checklistTitle: "What to check after heavy Dallas rain for sewer backup risk",
+    checklistIntro:
+      "Heavy rain can push a marginal sewer line into a full backup, especially in older lines or homes with known drainage issues -- a quick check after a storm can catch a problem before it spreads indoors.",
+    checklistItems: [
+      "Check the lowest drain in the home first -- a basement floor drain or ground-floor bathroom typically shows backup signs earliest.",
+      "Look at toilets for slow flushing, bubbling, or water rising higher than usual, which can indicate pressure building in the main line.",
+      "If you have an outdoor cleanout, check whether it shows signs of standing water or overflow without removing the cap.",
+      "Avoid running large amounts of water -- laundry, dishwasher, multiple showers -- during or right after very heavy rain if your home has a history of backup issues.",
+      "A backwater valve, if your home has one, is designed to prevent city-side sewer surges from pushing into your home during heavy rain -- if you are unsure whether your home has one, that is worth asking a plumber.",
+      "If backup symptoms appear during or after a storm, stop water use and treat it as urgent rather than waiting to see if it resolves on its own."
+    ],
+    proofTitle: "What to confirm if storm-related backup risk is a recurring concern",
+    proofItems: [
+      "Ask whether a backwater valve is installed and functioning if backups have happened during past heavy rain events.",
+      "Ask for a camera inspection if backups recur specifically during or after storms, since this pattern often points to a specific weak point in the line.",
+      "Clarify whether recurring storm-related backups are a private-line issue or connected to a broader city-side drainage concern.",
+      "Ask what preventive options exist if this has happened more than once at your property."
+    ],
+    extraLinks: [
+      { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" }
+    ]
+  },
+  "drain-cleaning-cost-guide-for-dallas-homeowners": {
+    checklistTitle: "What determines drain cleaning cost for Dallas homeowners",
+    checklistIntro:
+      "Drain cleaning cost depends heavily on where the blockage is and what it takes to reach it -- understanding the main cost drivers helps you evaluate a quote rather than just comparing a single number.",
+    checklistItems: [
+      "A single-fixture clog with accessible cleanout is generally the least expensive scenario, since it needs less time and simpler equipment.",
+      "A shared branch line or main sewer line clog typically costs more due to added diagnostic time and equipment such as hydro jetting or a camera.",
+      "Access difficulty -- attic runs, crawlspace access, or fixture removal -- adds labor time regardless of the clog's underlying cause.",
+      "After-hours, weekend, or emergency dispatch commonly carries a different rate structure than a scheduled daytime appointment.",
+      "A camera inspection, when recommended for a recurring or main-line clog, is typically a separate line item from basic clearing.",
+      "Cleanup costs can apply if wastewater reached flooring or cabinetry beyond the immediate drain area."
+    ],
+    proofTitle: "Questions that make a drain cleaning quote easier to compare",
+    proofItems: [
+      "Ask whether the quote includes camera inspection or is for clearing only, since this is the most common source of price differences between quotes.",
+      "Ask about the dispatch and diagnostic fee separately from the clearing charge.",
+      "Confirm whether the quoted price assumes a fixture-level clog or accounts for the possibility of a main-line issue.",
+      "Ask what the plan and pricing would be if the first clearing attempt does not fully resolve the blockage."
+    ],
+    extraLinks: [
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Emergency drain cleaning cost in Dallas: price factors", href: "/blog/emergency-drain-cleaning-cost-in-dallas-price-factors" }
+    ]
+  },
   "emergency-drain-cleaning-cost-in-dallas-price-factors": {
     checklistTitle: "What actually drives emergency drain cleaning price",
     checklistIntro:
