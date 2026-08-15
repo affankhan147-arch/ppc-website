@@ -35,7 +35,7 @@ export const services: Service[] = [
     slug: "emergency-drain-cleaning",
     name: "emergency drain cleaning",
     categorySlug: "drain-cleaning",
-    shortAnswer: "Emergency drain cleaning is needed when wastewater is backing up, more than one fixture is affected, or a clog blocks a kitchen, bathroom, or business from operating.",
+    shortAnswer: "Emergency drain cleaning, also called emergency drain service, is needed when wastewater is backing up, more than one fixture is affected, or a clog blocks a kitchen, bathroom, or business from operating.",
     urgency: "High",
     symptoms: ["multiple slow drains", "standing water", "sewage odor", "gurgling fixtures", "overflowing cleanout"],
     steps: ["Stop running water into the clogged line.", "Do not add chemical drain cleaner after backup starts.", "Note which fixtures are affected.", "Request same-day drain help."],
