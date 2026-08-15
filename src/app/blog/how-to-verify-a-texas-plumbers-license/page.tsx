@@ -45,6 +45,11 @@ const faqs = [
     question: "Does the TSBPE search show if a plumber has been sued?",
     answer:
       "It does not show civil lawsuits, but it does list disciplinary actions taken by the board. For legal disputes, you may need to check public court records separately."
+  },
+  {
+    question: "Is a Texas plumber's license verified through TDLR or TSBPE?",
+    answer:
+      "TSBPE. The Texas Department of Licensing and Regulation (TDLR) oversees many other Texas trades and occupations, but plumbing is regulated separately by the Texas State Board of Plumbing Examiners (TSBPE). If you search \"TDLR plumbing license lookup,\" you won't find plumber records there - use the TSBPE search tool linked above instead."
   }
 ];
 
