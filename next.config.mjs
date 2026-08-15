@@ -46,11 +46,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/cost-guides/emergency-plumbing-cost-dfw',
-        destination: '/guides/dfw-emergency-plumbing-costs',
-        permanent: true,
-      },
-      {
         source: '/blog/main-sewer-line-clogged-in-dallas-warning-signs-and-fast-options',
         destination: '/blog/main-sewer-line-clogged-in-dallas-warning-signs',
         permanent: true,
