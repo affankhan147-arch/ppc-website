@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/schema";
@@ -11,7 +11,9 @@ import { AlertTriangle, Clock, ShieldAlert, FileWarning } from "lucide-react";
 
 const path = "/blog/drain-backup-in-a-restaurant-what-owners-should-do-first";
 const title = "Drain Backup in a Restaurant: What Owners Should Do First";
-const description = "A restaurant drain or grease trap backup is a health-code and business-interruption emergency, not just a maintenance issue. Here is what to do in the first 15 minutes, what DFW cities require for grease traps, and how to tell a grease trap problem from a main sewer line problem.";
+const description = truncateForMeta(
+  "A restaurant drain or grease trap backup is a health-code emergency, not just maintenance. What to do in the first 15 minutes, and DFW grease trap rules."
+);
 
 const faqs = [
   {

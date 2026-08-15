@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/schema";
@@ -11,7 +11,9 @@ import { CheckCircle2, XCircle, FileClock, ShieldQuestion } from "lucide-react";
 
 const path = "/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas";
 const title = "Does Homeowners Insurance Cover a Plumbing Leak in Texas?";
-const description = "Texas homeowners insurance generally covers sudden, accidental water damage from a burst pipe, but excludes gradual leaks, the pipe repair itself, and often foundation movement - here is what's typically covered, what isn't, and how to document a claim.";
+const description = truncateForMeta(
+  "Texas homeowners insurance generally covers sudden burst-pipe damage but excludes gradual leaks and pipe repair. What's covered, what isn't, and how to claim."
+);
 
 const faqs = [
   {
