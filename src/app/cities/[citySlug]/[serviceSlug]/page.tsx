@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props) {
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
   return buildMetadata({
     title: `${titleCase(service.name)} in ${city.name}, TX`,
-    description: truncateForMeta(`${service.shortAnswer} Local service-area guidance for ${city.name}, TX with provider availability reminders.`),
+    description: truncateForMeta(`${titleCase(service.name)} in ${city.name}, TX: ${service.shortAnswer}`),
     path: `/cities/${city.slug}/${service.slug}`
   });
 }
