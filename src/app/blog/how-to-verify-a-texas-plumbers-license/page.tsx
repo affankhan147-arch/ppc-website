@@ -50,6 +50,16 @@ const faqs = [
     question: "Is a Texas plumber's license verified through TDLR or TSBPE?",
     answer:
       "TSBPE. The Texas Department of Licensing and Regulation (TDLR) oversees many other Texas trades and occupations, but plumbing is regulated separately by the Texas State Board of Plumbing Examiners (TSBPE). If you search \"TDLR plumbing license lookup,\" you won't find plumber records there - use the TSBPE search tool linked above instead."
+  },
+  {
+    question: "How do I look up a Master Plumber or Journeyman plumber's license specifically?",
+    answer:
+      "Use the same TSBPE Public License Search tool linked above - the rank (Master Plumber, Journeyman Plumber, Tradesman Plumber-Limited, or Apprentice) is shown directly in the search results, so there's no separate search for each rank. If you already have a license number, searching by number is the fastest way to confirm both the rank and current status in a single step."
+  },
+  {
+    question: "I only have a plumber's license number, not their name - can I still search?",
+    answer:
+      "Yes. Select \"Search by License Number\" instead of \"Search by Name\" on the TSBPE portal - the TSBPE recommends this option because it's more precise and avoids mix-ups when multiple plumbers share a similar name."
   }
 ];
 
@@ -234,6 +244,18 @@ export default function LicenseVerificationPage() {
           <div>
             <h3 className="font-semibold">Does the TSBPE search show if a plumber has been sued?</h3>
             <p className="mt-1">It does not show civil lawsuits, but it does list <strong>disciplinary actions</strong> taken by the board. For legal disputes, you may need to check public court records separately.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">Is a Texas plumber's license verified through TDLR or TSBPE?</h3>
+            <p className="mt-1"><strong>TSBPE.</strong> The Texas Department of Licensing and Regulation (TDLR) oversees many other Texas trades and occupations, but plumbing is regulated separately by the Texas State Board of Plumbing Examiners (TSBPE). If you search "TDLR plumbing license lookup," you won't find plumber records there - use the TSBPE search tool linked above instead.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">How do I look up a Master Plumber or Journeyman plumber's license specifically?</h3>
+            <p className="mt-1">Use the same TSBPE Public License Search tool linked above - the rank (<strong>Master Plumber</strong>, <strong>Journeyman Plumber</strong>, <strong>Tradesman Plumber-Limited</strong>, or <strong>Apprentice</strong>) is shown directly in the search results, so there's no separate search for each rank. If you already have a license number, searching by number is the fastest way to confirm both the rank and current status in a single step.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">I only have a plumber's license number, not their name - can I still search?</h3>
+            <p className="mt-1">Yes. Select <strong>"Search by License Number"</strong> instead of "Search by Name" on the TSBPE portal - the TSBPE recommends this option because it's more precise and avoids mix-ups when multiple plumbers share a similar name.</p>
           </div>
         </div>
       </section>
