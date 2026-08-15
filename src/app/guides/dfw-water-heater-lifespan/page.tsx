@@ -5,7 +5,7 @@ import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
 export const metadata = buildMetadata({
-  title: "Water Heater Lifespan & Maintenance in DFW - How Long They Really Last",
+  title: "DFW Water Heater Lifespan: How Long They Last",
   description: truncateForMeta(
     "A research-backed guide to how long tank and tankless water heaters last, why DFW's hard water shortens that lifespan, and the maintenance that actually extends it."
   ),

@@ -10,7 +10,7 @@ import { siteConfig } from "@/data/site";
 import { AlertTriangle, Info, Shield, CheckCircle, XCircle } from "lucide-react";
 
 const path = "/blog/how-to-verify-a-texas-plumbers-license";
-const title = "How to Verify a Texas Plumber's License (Official TSBPE Search)";
+const title = "How to Verify a Texas Plumber’s License";
 const description = "Step-by-step guide to using the Texas State Board of Plumbing Examiners license search tool, plus what results mean and red flags to watch for.";
 
 export const metadata: Metadata = buildMetadata({ title, description, path });

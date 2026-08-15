@@ -1,11 +1,11 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
 export const metadata = buildMetadata({
-  title: "DFW Emergency Plumbing Cost Guide – What Homeowners Can Expect to Pay",
+  title: "DFW Emergency Plumbing Cost Guide",
   description: truncateForMeta(
     "A research-backed guide explaining how emergency plumbing pricing works in Dallas-Fort Worth, with realistic cost ranges for common services."
   ),

@@ -10,7 +10,7 @@ import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Texas plumbing service areas: DFW, Houston, Austin, San Antonio",
+  title: "DFW, Houston, Austin & San Antonio Plumbing Areas",
   description: truncateForMeta("Browse all 33 Texas service-area pages across Dallas-Fort Worth, Houston, Austin, and San Antonio for emergency plumbing, drain, sewer, leak, toilet, and water-heater help, organized by city."),
   path: "/cities"
 });

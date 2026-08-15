@@ -1,10 +1,10 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 
 export const metadata = buildMetadata({
-  title: "Polybutylene Pipe in DFW – Identification, Insurance, Replacement",
+  title: "Polybutylene Pipe in DFW: Risks & Replacement",
   description: truncateForMeta(
     "A research-backed guide to polybutylene (PB) pipe: how to identify it, why DFW homes are at added risk, insurance implications, and real replacement costs."
   ),

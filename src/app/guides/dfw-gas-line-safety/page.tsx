@@ -1,10 +1,10 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 
 export const metadata = buildMetadata({
-  title: "Gas Line Safety & Capacity in DFW – What Homeowners Need to Know",
+  title: "Gas Line Safety in DFW: What to Know",
   description: truncateForMeta(
     "A research-backed guide explaining gas line capacity, safety steps, and what homeowners should know before adding outdoor kitchens or pool heaters in DFW."
   ),

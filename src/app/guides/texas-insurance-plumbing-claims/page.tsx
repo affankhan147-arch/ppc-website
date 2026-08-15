@@ -1,11 +1,11 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
 export const metadata = buildMetadata({
-  title: "Texas Homeowners Insurance & Plumbing Claims – What’s Covered?",
+  title: "Texas Homeowners Insurance & Plumbing Claims",
   description: truncateForMeta(
     "A research-backed guide explaining what Texas homeowners insurance covers (and doesn't cover) when a plumbing leak occurs, with real TDI sources."
   ),
