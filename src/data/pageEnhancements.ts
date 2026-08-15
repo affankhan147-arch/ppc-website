@@ -217,7 +217,8 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
-      { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
+      { label: "Dallas emergency plumbing help", href: "/cities/dallas" },
+      { label: "Burst pipe guide: causes, costs, and first steps", href: "/guides/dfw-burst-pipes" }
     ]
   }
 };
