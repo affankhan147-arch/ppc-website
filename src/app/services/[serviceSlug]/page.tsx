@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!service) return {};
   return buildMetadata({
-    title: `${titleCase(service.name)} in Dallas-Fort Worth`,
-    description: truncateForMeta(service.shortAnswer),
+    title: `24/7 ${titleCase(service.name)} in Dallas-Fort Worth`,
+    description: truncateForMeta(`Need ${service.name} in Dallas-Fort Worth? ${service.shortAnswer}`),
     path: `/services/${service.slug}`
   });
 }

@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
   return buildMetadata({
-    title: `${titleCase(service.name)} in ${city.name}, TX`,
-    description: truncateForMeta(`${titleCase(service.name)} in ${city.name}, TX: ${service.shortAnswer}`),
+    title: `24/7 ${titleCase(service.name)} in ${city.name}, TX`,
+    description: truncateForMeta(`Need ${titleCase(service.name)} in ${city.name}? ${service.shortAnswer}`),
     path: `/cities/${city.slug}/${service.slug}`
   });
 }
