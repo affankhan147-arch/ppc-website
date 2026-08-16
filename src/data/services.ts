@@ -80,7 +80,7 @@ export const services: Service[] = [
     slug: "burst-pipe-emergency",
     name: "burst pipe emergency",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "For a burst pipe, shut off the main water valve, protect electrical areas, and request emergency plumbing help as soon as possible.",
+    shortAnswer: "For a burst pipe -- a common reason people search for a burst pipe plumber -- shut off the main water valve, protect electrical areas, and request emergency plumbing help as soon as possible.",
     urgency: "High",
     symptoms: ["water spraying", "ceiling leak", "wall swelling", "sudden pressure loss", "water meter spinning"],
     steps: ["Shut off the main water valve.", "Turn off electricity near standing water if safe.", "Open a low faucet to drain pressure.", "Call for urgent pipe help."],
