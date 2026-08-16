@@ -1,0 +1,104 @@
+TASK 48 — "Don't Wait 2 Weeks" Premium Audit: FAQ Rich Results + Schema + CWV
+Date: 2026-08-16
+Site: www.plumbinghands.com ONLY (per standing rule #11)
+
+TRIGGER
+Task 47 noted: "if CTR doesn't move in a couple weeks, check whether FAQ rich
+snippets are actually rendering." User: "why don't we improve it to premium
+level and save our 2 weeks time?" -- i.e. do the investigation now instead
+of waiting on a calendar.
+
+FINDING #1 — FAQ (and HowTo) rich results are DEAD, confirmed via live web
+search (not stale training knowledge):
+- May 7, 2026: Google stopped displaying FAQ rich results in Search entirely.
+- June 2026: Google removes the FAQ filter, rich-result report, and Rich
+  Results Test support for FAQ.
+- August 2026 (this month): Search Console API support for FAQ ends.
+- This is the final step of a 3-year pullback that started restricting FAQ
+  rich results in August 2023.
+- HowTo rich results were similarly restricted back in August 2023 (mobile
+  only, narrow eligibility) -- and this site's howToSchema (used in
+  blogEnhancements) is subject to that same restriction.
+- Per Search Engine Journal (citing Google's own documentation): keeping
+  FAQPage/HowTo schema causes no harm, but produces zero visible SEO
+  benefit going forward. No action required either way -- waiting 2 weeks
+  to "check if it's rendering" would have been checking a feature Google
+  turned off site-wide, not something specific to this site. Good call
+  skipping the wait -- there was nothing to observe.
+Source: https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429/
+
+FINDING #2 — Organization/LocalBusiness schema is already properly
+implemented, and deliberately NOT "upgraded" to a more specific type:
+- src/lib/schema.tsx organizationSchema() is live site-wide (injected in
+  src/app/layout.tsx on every page) with real telephone, areaServed (every
+  city in cities.ts), and openingHoursSpecification 24/7.
+- Considered upgrading @type from "Organization" to the more specific
+  schema.org "Plumber" type (a LocalBusiness subtype Google recognizes for
+  local-service categorization). Decided AGAINST this: src/data/site.ts's
+  own legalDisclosure explicitly states "Plumbing Hands is a
+  provider-connection website... should not be read as a claim that
+  Plumbing Hands maintains a staffed office, address, local license, [or]
+  guaranteed availability... in that location." Marking the entity as
+  schema.org "Plumber" would contradict that disclosure and risk a
+  misleading-markup issue with Google. "Organization" is the correct,
+  honest type for a referral/lead-gen platform (same pattern used by sites
+  like Angi/Thumbtack) -- left unchanged. This is a case where the "premium"
+  move is deliberately NOT changing something, to stay accurate.
+
+FINDING #3 — Core Web Vitals / Performance: no regression from this
+session's content work, one legitimate pre-existing opportunity flagged.
+Ran fresh Lighthouse (not relying on the 2026-08-15 cache) against the
+correct canonical apex URL (https://plumbinghands.com/ -- no www, matching
+siteConfig.baseUrl and everything in the sitemap/canonicals):
+  Performance: 80   (previous baseline: 85 -- within normal run-to-run
+                      variance for a live network Lighthouse run)
+  SEO: 100
+  Best Practices: 96
+  LCP: 2.2s (good, under the 2.5s threshold)
+  CLS: 0 (perfect)
+  FCP: 1.4s (good)
+  TBT: 720ms (this run) / 430ms (2026-08-15 baseline) -- consistently in
+       the "needs improvement/poor" range across both valid same-domain
+       runs, worth a dedicated pass later but not a today-sized fix without
+       proper JS bundle profiling.
+A first lighthouse run against https://www.plumbinghands.com/ (the www
+subdomain) produced an alarming Performance 54 with LCP 5.9s -- traced this
+down before reporting it: www.plumbinghands.com correctly 308-redirects to
+the canonical apex domain (one hop, by design, matching how the whole site's
+canonicals/sitemap/internal links are already built around the apex domain)
+-- Googlebot and real visitors never experience this extra hop since nothing
+site-wide links to the www version. The bad score was purely a test-URL
+artifact, not a real site issue -- verified with curl -IL redirect tracing
+before concluding anything, rather than reporting a false regression.
+
+NO CODE CHANGES MADE THIS TASK
+This was a verification/audit task, not a build task. Everything checked
+was either (a) confirmed already correctly implemented (Organization
+schema), (b) confirmed already dead/no-action-needed (FAQ/HowTo rich
+results), or (c) confirmed as pre-existing and not a today-sized fix (TBT).
+No unverified or risky changes were made, consistent with not fabricating
+schema types the business disclosure contradicts, and not "fixing" a
+performance regression that turned out to be a test artifact.
+
+BUILD / VERIFY
+No build/deploy needed (no source changes). Diagnostic PowerShell scripts
+run this task, each with pass/fail-style console output captured:
+  Task48_FindOrgSchemaUsage.ps1 -- confirmed organizationSchema() usage
+  Task48_LighthouseCheck.ps1 / Task48_LighthouseCheck2.ps1 -- Lighthouse runs
+  Task48_ParseLighthouse.ps1/2/3.ps1 -- score extraction
+  Task48_RedirectCheck.ps1 -- confirmed single-hop, by-design redirects only
+  Task48_lighthouse_homepage_2026-08-16.json (www, redirect artifact -- kept
+    for the record showing why it was discarded)
+  Task48_lighthouse_homepage_apex_2026-08-16.json (canonical apex, the valid
+    reading)
+
+STATUS: COMPLETE. Direct answer to "why wait 2 weeks": there was nothing to
+wait for -- FAQ rich results are permanently gone as of this month, confirmed
+via current web search, not assumption. Schema markup is already correct and
+was deliberately left alone where "upgrading" it would have meant a mildly
+misleading claim. Site performance has no real regression from this
+session's work. The one legitimate open item (TBT 400-700ms) is flagged for
+a dedicated, properly-scoped performance pass rather than a blind fix here.
+
+Sources:
+- https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429/
