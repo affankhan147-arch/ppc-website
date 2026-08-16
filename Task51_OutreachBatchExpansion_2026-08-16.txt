@@ -1,0 +1,45 @@
+TASK 51 - BACKLINK OUTREACH: LARGER PROSPECT BATCH (completes Task #3)
+Date: 2026-08-16
+
+Rebuilt backlink_prospects.csv from scratch with real, verified data - the
+old dfw_prospects_initial.csv (51 "prospects") was corrupted PowerShell
+Hashtable debug output, not real data (see Task50 correction). This new
+CSV is the valid tracker going forward; the old file is deprecated.
+
+TOTAL TRACKED PROSPECTS: 34 (up from 10 originally researched)
+
+NEW THIS ROUND - 6 real, verified-email prospects researched via live web
+search + contact-page fetch, personalized outreach drafted as Gmail
+DRAFTS (NOT sent - new recipients need your go-ahead first):
+
+1. Bronze Star Home Inspections - nick@bronzestarhi.com - home inspector,
+   DFW metroplex. Angle: water-shutoff guide for post-inspection packets.
+2. Nations Best Home Inspections - owner@nationsbestinspections.com -
+   home inspector, 60+ DFW cities. Same angle.
+3. Buffalo Property Inspections - team@buffalopropertyinspections.com -
+   home inspector, Dallas County. Same angle.
+4. Zeus Restoration - info@zeusrestoration.com - water damage restoration,
+   DFW/Royse City. Angle: water-shutoff guide + referral partnership.
+5. Harrison Insurance Agency - info@harrisoninsurance.com - Dallas
+   insurance agency. Angle: Texas insurance/plumbing claims guide.
+6. Greater Fort Worth Association of REALTORS (GFWAR) -
+   support@gfwar.org - ~5,000 members. Angle: water-shutoff guide for
+   new-homeowner welcome packets.
+
+ALSO RESEARCHED, NO PUBLIC EMAIL FOUND (contact-form/phone only - added
+to tracker for a future form-submission round, none submitted this task
+since that also needs a permission ask): MetroTex Association of
+REALTORS, Inspect360, Lockwood Property Management, Regent Restoration,
+Allen Thomas Group (Dallas), Insurance Source of Dallas, Sheaner
+Insurance Agency, Assign Property Management, Doan Restoration, Water
+Damage Restoration Dallas (WDR).
+
+STATUS SUMMARY ACROSS ALL 34 TRACKED PROSPECTS:
+- 8 emails actually delivered (12 messages incl. follow-ups/duplicates)
+- 2 contact forms passed, 1 failed (not retried)
+- 6 new prospects drafted and ready to send pending your approval
+- 14 prospects identified but not yet contacted (10 no-email/form-only +
+  4 from the original list: Dalworth, Apex, Omega + Restored Rite)
+
+NEXT STEP: reply with a go-ahead to send the 6 new drafts, and/or approve
+a contact-form submission round for the 10 form-only prospects.
