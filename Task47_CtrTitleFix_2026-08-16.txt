@@ -1,0 +1,76 @@
+TASK 47 — CTR Fix for High-Impression Zero-Click Pages
+Date: 2026-08-16
+Site: www.plumbinghands.com ONLY (per standing rule #11)
+
+TRIGGER
+Flagged in Task 46 close-out: "emergency drain service" gets 364 impressions
+at position 9.4 (already ranks well) but 0 clicks -- a title/meta-description
+problem, not a keyword-coverage problem. User: "resolve this now."
+
+DIAGNOSIS
+Queries.csv's "Top queries" report blends position/impressions across every
+page that received an impression for that literal query -- it does not name
+a single URL. Cross-referencing Pages.csv confirmed the real, addressable
+pattern: the city+service combo pages for drain cleaning carry real impression
+volume with 0 clicks across the board --
+  Mansfield: 284 imp, pos 24.3, 0 clicks
+  Lewisville: 129 imp, pos 36.5, 0 clicks
+  Rockwall: 96 imp, pos 35.0, 0 clicks
+  Grand Prairie: 87 imp, pos 25.6, 0 clicks
+  /services/emergency-drain-cleaning: 34 imp, pos 48.4, 0 clicks
+This 0-click pattern is not unique to drain cleaning -- essentially every
+query and page pulled from GSC data across this whole session's work has
+shown 0 clicks despite reasonable positions, which points to weak title/
+meta-description appeal as a site-wide pattern, not a one-off.
+
+The two blog posts that plausibly also serve for "emergency drain service"
+(drain-backup-in-a-restaurant, pos 9.1; same-day-drain-cleaning-in-dallas,
+pos 10.9) already have specific, well-targeted titles for their own
+sub-topics (restaurant grease-trap emergencies, same-day expectations) --
+left those alone rather than diluting them for a generic term they aren't
+really about.
+
+FIX (template-level, same leverage strategy as prior tasks)
+1. src/app/services/[serviceSlug]/page.tsx generateMetadata
+   - title: "{Service} in Dallas-Fort Worth" -> "24/7 {Service} in
+     Dallas-Fort Worth" (all 10 service pages)
+   - description: now opens "Need {service} in Dallas-Fort Worth? ..."
+     (question-format hook matching searcher intent, a known CTR lever)
+2. src/app/cities/[citySlug]/[serviceSlug]/page.tsx generateMetadata
+   - title: "{Service} in {City}, TX" -> "24/7 {Service} in {City}, TX"
+     (covers all ~67 live city+service combo pages, including every drain
+     cleaning combo listed above)
+   - description: now opens "Need {Service} in {City}? ..."
+"24/7" is accurate and consistent with existing site language (the city page
+FAQ added in Task 45 already clarifies 24-hour means request availability,
+not guaranteed instant arrival) -- not an overpromise.
+
+BUILD / DEPLOY / VERIFY
+- npm run build: clean, 0 errors (Task47_CtrTitleFix_BuildLog.txt)
+- git fetch/compare before AND after edits: local == origin/master both
+  times, no collision with concurrent session
+- staged specific files only (never git add -A)
+- commit 3850a97 pushed to origin/master
+- vercel ls confirmed Ready/Production ~1 min after push
+- Live HTTP verification against www.plumbinghands.com
+  (Task47_LiveVerify_Log.txt), 5/5 checks PASS:
+  PASS: service page title live
+  PASS: service page description live
+  PASS: Mansfield combo title live
+  PASS: Lewisville combo title live
+  PASS: Rockwall combo description live
+
+STATUS: COMPLETE. Title/meta-description CTR hooks are now live across all
+10 service pages and all ~67 city+service combo pages, covering every drain
+cleaning page implicated in the flagged issue plus every other service and
+city combo site-wide (burst pipe, sewer, water heater, etc. all benefit from
+the same fix).
+
+FOLLOW-UP NOTE FOR A FUTURE SESSION
+Since the 0-click pattern shows up across nearly every query/page pulled
+this whole session (not just drain cleaning), it's worth watching GSC data
+after this deploys to see whether CTR actually moves. If it doesn't move
+meaningfully in a few weeks, the next lever to pull is probably schema/rich
+results (FAQ rich snippets are already implemented via faqSchema, but it's
+worth confirming they're actually rendering in Google's Rich Results Test)
+rather than further title/description tweaking.
