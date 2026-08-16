@@ -1,0 +1,93 @@
+TASK 46 — Drain/License Keyword Saturation Close-out + Problems.ts Premium Upgrade
+Date: 2026-08-16
+Site: www.plumbinghands.com ONLY (per standing rule #11)
+
+TRIGGER
+User: "do what required to make them long tail key word saturated" (referring to
+drain-cleaning-cost-dfw and the license page, deliberately deferred in Task 45)
+"and improve problems.ts to premium level for swift optimization"
+
+PART 1 — DRAIN-CLEANING-COST-DFW (src/data/costGuides.ts)
+GSC data pulled fresh from Queries.csv (1000 rows) showed the DRAIN cluster
+alone totals 170 matched queries / 1413 impressions, and license cluster 66
+queries / 182 impressions -- both real, just lower per-query volume than the
+Round 1/2 clusters, which is why they were deferred, not ignored.
+- directAnswer now opens with "How much does drain cleaning cost?" (direct
+  match to the exact-match query at position 91.3, 0 clicks)
+- rangeGuidance now naturally includes "emergency drain cleaning cost" and
+  "24 hour drain cleaning cost" (matches "24 hour drain cleaning service near
+  me", 25 impressions, and the broader "emergency drain cleaning service"
+  cluster, 22+ impressions)
+
+PART 2 — LICENSE PAGE (how-to-verify-a-texas-plumbers-license/page.tsx)
+Added 2 new FAQs (to both the schema-feeding const array AND the rendered
+JSX FAQ section, since that section is hand-written per-FAQ, not mapped):
+- "How do I renew a Texas plumbing license?" -- matches "renew texas plumbing
+  license" (11 impressions, position 45.8, 0 clicks) and "renew plumbing
+  license in texas" (4 impressions, position 44.2)
+- "How do I get a plumbing license in Texas?" -- matches "how to get a
+  plumbing license in texas" (3 impressions, position 80 -- the single worst
+  ranking query in the whole license cluster despite the page's strong
+  existing content)
+Both FAQs are answered accurately and honestly redirect to TSBPE as the
+actual licensing authority, since this site is a referral/directory service,
+not the licensing board -- avoids any misleading E-A-T-damaging overreach.
+
+PART 3 — PROBLEMS.TS PREMIUM UPGRADE (the main piece of this task)
+Discovery: src/data/pageEnhancements.ts already has a `PageEnhancement` type
+(decisionTitle/Intro/Items, providerTitle/Items, safetyTitle/Items,
+preventionTitle/Items, extraFaqs, extraLinks) used extensively for services
+and 2 of the 15 problems (water-backing-up-in-shower-and-toilet and
+water-shutoff-valve-will-not-close) -- but the other 13 problem pages were
+rendering WITHOUT this richer content layer at all (the page template
+silently skips the whole enhancement block when none exists).
+
+Added a new export `additionalProblemEnhancements` (13 full entries) covering
+every remaining problem:
+  sewer-smell-in-bathroom, toilet-overflowing-will-not-stop,
+  kitchen-sink-backing-up, bathtub-drain-backing-up, floor-drain-backing-up,
+  gurgling-toilet-and-slow-drains, main-sewer-line-signs,
+  burst-pipe-first-steps, water-heater-leaking-emergency,
+  no-hot-water-emergency, ceiling-leak-from-plumbing,
+  outdoor-cleanout-overflowing, washing-machine-drain-backing-up
+
+Each entry has 4 decision items, 4 provider-diagnosis items, 4 safety
+boundaries, 3 prevention items, 1-2 extra FAQs, and 2-4 internal links --
+matching the depth already used for the "premium" 2. Updated
+src/app/problems/[problemSlug]/page.tsx to look up
+`problemEnhancements[slug] || additionalProblemEnhancements[slug]` so every
+one of the 15 problem pages now renders the full decision-support / provider
+/ safety / prevention / extra-FAQ layer instead of the bare template.
+
+Keyword alignment folded into the new content (from fresh GSC pulls):
+- kitchen-sink-backing-up: "kitchen sink backup" (16 imp, pos 58.6),
+  "kitchen sink backing up but no clog" (3 imp), "emergency kitchen sink
+  backing up" (4 imp, pos 16.8 -- already ranks well, reinforced not chased)
+- bathtub-drain-backing-up: direct match to "bathtub drain backing up"
+- All 13 new extraFaqs use natural, humanized "why does X happen" framing
+  consistent with real long-tail question phrasing rather than keyword-stuffed
+  headers.
+
+BUILD / DEPLOY / VERIFY
+- npm run build: clean, 0 errors (Task46_ProblemsUpgrade_BuildLog.txt)
+- git fetch/compare before AND after edits: local == origin/master both
+  times, no collision with concurrent session
+- staged specific files only (never git add -A)
+- commit 1085c3e pushed to origin/master
+- vercel ls confirmed Ready/Production ~1 min after push
+- Live HTTP verification against www.plumbinghands.com
+  (Task46_LiveVerify_Log.txt), 7/7 checks PASS:
+  PASS: drain cleaning cost guide live
+  PASS: license renewal FAQ live
+  PASS: license how-to-get FAQ live
+  PASS: kitchen sink premium enhancement live
+  PASS: bathtub premium enhancement live
+  PASS: washing machine premium enhancement live
+  PASS: no hot water premium enhancement live
+
+STATUS: COMPLETE. drain-cleaning-cost-dfw and the license page are now
+keyword-saturated in line with Round 1/2 method. All 15 problem pages on
+www.plumbinghands.com now carry the full premium enhancement layer
+(previously only 2 of 15 did) -- decision support, provider-diagnosis detail,
+explicit safety boundaries, prevention guidance, and extra FAQs, all
+naturally aligned to real Search Console long-tail demand.
