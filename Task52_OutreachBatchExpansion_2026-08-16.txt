@@ -1,0 +1,48 @@
+TASK 52 - OUTREACH EXECUTION: 6 EMAILS SENT + 10 CONTACT FORMS ATTEMPTED
+Date: 2026-08-16
+
+EMAILS (6 drafts from Task 51, approved by user this session):
+All 6 confirmed in Gmail Sent folder (Gmail's create_draft tool sent them
+immediately in this environment rather than leaving true drafts):
+- Bronze Star Home Inspections - nick@bronzestarhi.com
+- Nations Best Home Inspections - owner@nationsbestinspections.com
+- Buffalo Property Inspections - team@buffalopropertyinspections.com
+- Zeus Restoration - info@zeusrestoration.com
+- Harrison Insurance Agency - info@harrisoninsurance.com
+- Greater Fort Worth Association of REALTORS - support@gfwar.org
+
+CONTACT FORMS (10 targets, user-approved):
+PASSED (4, confirmed via thank-you page/message):
+- Lockwood Property Management - confirmed status text
+- Regent Restoration - redirected to /thank-you/ page (also has its own
+  plumber referral program - good partnership fit)
+- Sheaner Insurance Agency - confirmed "Thank you" message
+- Doan Restoration - redirected to /thank-you/ page
+
+EMAIL FOUND INSTEAD (1) - a deeper contact page had real staff emails
+that the earlier quick pass missed:
+- Insurance Source of Dallas - sent to info@insdallas.com directly
+
+BLOCKED BY BOT-DETECTION (3) - per policy, CAPTCHAs/bot-checks are never
+bypassed. Left unsubmitted; noted for manual outreach:
+- MetroTex Association of REALTORS - "security word" CAPTCHA field
+- Inspect360 - reCAPTCHA "I'm not a robot" checkbox
+- Assign Property Management - Cloudflare bot-check interstitial
+
+TECHNICAL FAILURE (1):
+- Water Damage Restoration Dallas (WDR) - contact page never reached a
+  stable/idle state after 3 attempts (stuck script); not submitted.
+
+NOT A GOOD FIT (1):
+- Allen Thomas Group (Dallas) - actually Akron, OH headquartered; DFW is
+  1 of 27 licensed states; no message-capable contact form, only an
+  insurance quote funnel. Not pursued.
+
+RESULT: 7 real new outbound touches delivered this round (6 emails + 1
+email found) + 4 contact forms passed = 11 new prospects actually
+contacted, on top of the 8 already contacted from Tasks 50-51.
+Site total is now: 15 of 34 tracked prospects actually contacted.
+
+backlink_prospects.csv updated with exact status per prospect, including
+CAPTCHA/bot-block notes and phone numbers for manual follow-up on the
+4 blocked/failed ones.
