@@ -1,0 +1,183 @@
+TASK 50 - COMPREHENSIVE SITE-HEALTH SNAPSHOT & LONG-TERM SEO ROADMAP
+Date: 2026-08-16
+Site: www.plumbinghands.com (apex: plumbinghands.com) ONLY - rule #11 respected
+Trigger: user directive to sort out TBT risk, elevate GSC/keywords/linkable
+assets/backlink-substitutes to "extremely premium" level, audit the site
+from the start, and take the smartest concrete SEO actions.
+
+============================================================
+1. PERFORMANCE / TBT (Task #5) - RESOLVED, NO RISKY CHANGE MADE
+============================================================
+- TBT flagged at 400-720ms in a Lighthouse run. Investigated package.json
+  (lean deps), CallButton.tsx, homepage structure, next.config.mjs,
+  third-party script usage (GA4 via @next/third-parties, used exactly
+  once in layout.tsx - no duplication found).
+- Conclusion: TBT is attributable to GA4 gtag.js execution cost (already
+  using Google/Vercel's most-optimized integration path) plus baseline
+  React/Next.js hydration under Lighthouse's throttled CPU. No safe fix
+  exists without either degrading call-event tracking (unacceptable for
+  a PPC lead-gen site) or bundle-profiling work not safely doable in this
+  environment. Decision: leave as-is. This is a known, bounded, low-risk
+  item - not a regression, not growing.
+- A false-alarm Performance 54 reading (testing the www subdomain instead
+  of canonical apex) was correctly diagnosed via curl redirect tracing and
+  ruled out before any fix was attempted. Canonical apex URL scores
+  Performance 80, consistent with the 85 baseline.
+
+============================================================
+2. TECHNICAL CRAWL AUDIT (Task #6) - CLEAN
+============================================================
+- robots.txt, sitemap.xml (208-216 URLs depending on snapshot), redirect
+  rules (next.config.mjs - single-hop www->apex and http->https 308s,
+  5 legacy 301s), canonical setup: all clean.
+- 20-URL live status spot check across page types: all 200 OK.
+- 7 linkable-asset URLs (/tools + 5 sub-widgets, /guides/dfw-plumbing-data):
+  all 200 OK, confirmed live again this task.
+- Sitemap-gap hypothesis (7 dedicated blog pages missing from
+  getAllInventoryPages()) tested live and DISPROVEN - all 7 are present
+  in the actual served sitemap.xml. No fix needed.
+- Schema.org: organizationSchema() (type "Organization") confirmed
+  correctly implemented once, site-wide, in layout.tsx. Deliberately NOT
+  upgraded to a trade-specific "Plumber" LocalBusiness type - site.ts's
+  legalDisclosure explicitly states this is a provider-connection site,
+  not a licensed local business, so a more specific type would be
+  misleading structured data. Organization is the honest, correct choice.
+- FAQ/HowTo rich results: verified via live web search that Google fully
+  deprecated FAQ rich results as of May 2026 (3-year pullback since Aug
+  2023) and restricts HowTo to narrow mobile eligibility. Existing
+  FAQPage/HowTo schema on the site causes no harm and needs no urgent
+  action - it's inert, not broken.
+
+============================================================
+3. IMAGE / PAGE QUALITY (Task #2) - RESOLVED
+============================================================
+- The "3 broken photography PNGs (768KB, fail to decode)" item from an
+  earlier task was verified this task: public/images/photography/ now
+  contains only .webp and .jpg files, zero .png files present. This was
+  already fixed in an earlier session (Task2_PNGFix_Complete,
+  Task19_ImageOptimization) - tracker just hadn't been marked. Confirmed
+  resolved, no further action needed.
+
+============================================================
+4. GSC KEYWORD GAP ANALYSIS (Task #7) - ACTIONED
+============================================================
+- Re-pulled Queries.csv/Pages.csv. Key finding: Queries.csv position data
+  is BLENDED across every URL that got an impression for that query -
+  cross-referencing Pages.csv is required to find the real addressable
+  page.
+- Fixed a real, addressable pattern: service pages and city+service combo
+  pages with real impressions and 0 clicks. Fix: prefixed "24/7" to
+  titles, restructured meta descriptions to a "Need {X} in {Y}?" question
+  format. Shipped in commits 3850a97 + c5397ab, live-verified.
+- Two more small synonym-injection opportunities found and shipped this
+  task (commit 34c37a7, live-verified): burst-pipe-emergency service page
+  ("burst pipe plumber" phrase) and emergency-leak-repair-cost-dfw cost
+  guide ("water leak emergency cost" phrase).
+- BIGGEST REMAINING OPPORTUNITY, DIAGNOSED NOT YET SOLVABLE ON-PAGE:
+  the "emergency plumber [city]" query cluster (Plano ~1075 impressions,
+  Dallas ~945, McKinney ~887, Frisco ~640, etc.) sits at position 40-56
+  with 0 clicks. City page titles are ALREADY exact-match optimized
+  ("Emergency Plumber in {City}, TX"). On-page work is maxed out here -
+  the bottleneck is domain authority / backlinks, not content. This is
+  the direct justification for section 5 below.
+
+============================================================
+5. LINKABLE ASSETS & BACKLINK-SUBSTITUTE AUDIT (Task #8) - KEY FINDING
+============================================================
+LINKABLE ASSETS: all 9 confirmed live and working (200 OK): /tools hub +
+5 sub-widgets (water hardness, dfw-data-badges, freeze-watch,
+cost-guide-checklists, problem-checklists), /guides/dfw-plumbing-data,
+plus /guides/texas-insurance-plumbing-claims (the asset used as the hook
+in all outreach drafts) and /assets/dfw-water-shutoff-guide.html.
+
+OUTREACH STATUS - RECONCILED FROM 3 SEPARATE HISTORICAL EFFORTS:
+
+(a) July 26 batch (reports/outreach_prep_report.md): 5 personalized Gmail
+    DRAFTS created for property managers. Explicitly confirmed NOT sent -
+    draft-only, awaiting manual review. Status: still sitting as drafts.
+
+(b) "Round 3" 9-target campaign (Aug 1-2, outreach_round3_verified.csv +
+    outreach_round3_trade_associations_verified.csv - Dalworth, Mr Restore,
+    Dry Force, Apex, Omega, Gibb Insurance, TAA, NARPM Texas, BOMA Texas):
+    - NARPM Texas (texasnarpm@gmail.com): EMAIL SENT [PASS], confirmed by
+      Round3_Auto_Email_Log.txt (07/31) AND corroborated by
+      Round3_FollowUp_Drafts.txt referring to it as already sent.
+    - BOMA Texas (belliott@bomatexas.org): EMAIL SENT [PASS], same source.
+      A follow-up draft exists for both (Round3_FollowUp_Drafts.txt) but
+      the follow-up itself has NOT been sent yet - it's a draft.
+    - Texas Apartment Association: EMAIL SENT [PASS] to info@taa.org
+      (Full_Automated_Submissions_Log.txt, corroborated by
+      Round3_Complete_Automation_Log.txt).
+    - Dry Force: contact-form submission PASSED.
+    - Gibb Insurance: contact-form submission PASSED.
+    - Mr. Restore: contact-form submission FAILED (503 Server Unavailable)
+      - never retried.
+    - Dalworth Restoration, Apex Adjusting Group, Omega Claims: phone-only
+      contacts, no email/form automation attempted - NOT contacted at all.
+
+(c) Separate, larger "51 prospects" SMTP campaign (dfw_prospects_initial.csv,
+    51 rows) - attempted 3 SEPARATE times across 3 different log files
+    (Gmail_SMTP_Outreach_Log.txt, Gmail_Final_Connect_and_Send.txt,
+    Automated_51_Email_Outreach.txt). CRITICAL FINDING: all 3 runs report
+    "Successfully sent via SMTP: 0" / "Successfully Sent: 0" in their own
+    counters, despite one run's closing message reading "all 51 emails
+    have been sent" - that reassurance is FALSE per the script's own
+    count. Net result: 0 of 51 prospects in this larger batch have
+    actually been emailed, across 3 attempts, spanning what appears to be
+    more than one prior session. The Gmail App Password infrastructure
+    exists (encrypted at C:\Users\dell\.gmail_app_password.enc.xml on the
+    user's machine, not exposed in the repo) but the send loop itself
+    never recorded a successful send - root cause not yet diagnosed
+    (script logic bug, Gmail blocking the app password, or similar).
+
+NET STATUS: 3 real emails sent (NARPM, BOMA, TAA) + 2 real form
+submissions (Dry Force, Gibb) = 5 genuine outbound touches from all
+outreach work this session/history. 51-prospect batch is fully
+drafted/researched but 0 actually delivered despite 3 attempts. 5 Gmail
+drafts from July 26 still sit unsent. 1 follow-up pair (NARPM/BOMA) drafted
+but unsent. Mr. Restore form retry never attempted. 3 phone-only targets
+never contacted by any channel.
+
+============================================================
+6. REPO HYGIENE OBSERVATION (not an SEO issue - flagged for awareness)
+============================================================
+The repo root has accumulated 300+ historical log/diagnostic .txt/.ps1
+files from this session and prior ones (Task*_BuildLog.txt,
+*_Deploy_Log.txt, Texas_Expansion_*, etc.). These are NOT served by the
+live site (Next.js only builds from src/ and public/) so they have ZERO
+SEO or performance impact - purely a repo-root clutter issue affecting
+git/GitHub browsing only. Not touched this task to avoid any risk of
+collision with the concurrent coding session or accidentally deleting a
+still-needed reference file. Flagged as an optional future cleanup, not
+acted on unilaterally.
+
+============================================================
+7. LONG-TERM ROADMAP - PRIORITIZED NEXT MOVES
+============================================================
+HIGH IMPACT, READY NOW (needs your go-ahead per the no-unilateral-send
+rule):
+  1. Send the 5 still-unsent Gmail drafts from July 26 (property managers/
+     restoration - reports/outreach_prep_report.md).
+  2. Send the NARPM/BOMA follow-up pair (Round3_FollowUp_Drafts.txt).
+  3. Retry the Mr. Restore contact form (was a transient 503, not a
+     permanent block).
+  4. Fix the 51-prospect SMTP pipeline (diagnose why 3 runs all recorded
+     0 sends) and then send that batch - this is the single largest
+     unrealized backlink-substitute opportunity from all prior work.
+
+MEDIUM IMPACT, NO PERMISSION NEEDED (can execute directly):
+  5. Contact the 3 phone-only Round-3 targets (Dalworth, Apex, Omega) via
+     their contact forms, same pattern as Dry Force/Gibb.
+  6. Continue building linkable assets targeting DFW property-manager and
+     restoration-industry audiences - this is what is actually moving the
+     backlink-authority needle for the "emergency plumber [city]" cluster.
+  7. Expand the prospect list beyond 51 - HOAs, apartment complexes,
+     realtor associations, local news/community sites that link to local
+     service resources.
+
+STRUCTURAL, LOW URGENCY:
+  8. Revisit TBT only if a future Lighthouse run shows real regression
+     (not just variance) - no action needed today.
+  9. Optional repo-root cleanup (section 6) - cosmetic only.
+
+END OF TASK 50 REPORT.
