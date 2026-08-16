@@ -5,7 +5,7 @@ import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
-import { problemEnhancements, problemFaqEnhancements } from "@/data/pageEnhancements";
+import { problemEnhancements, additionalProblemEnhancements, problemFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
@@ -43,7 +43,7 @@ export default async function ProblemPage({ params }: Props) {
   const relatedService = services.find((service) => service.slug === problem.relatedServiceSlug);
   const relatedCostGuide = costGuides.find((guide) => guide.slug === problem.relatedCostGuideSlug);
   const path = `/problems/${problem.slug}`;
-  const enhancement = problemEnhancements[problem.slug];
+  const enhancement = problemEnhancements[problem.slug] || additionalProblemEnhancements[problem.slug];
   const faqs = [
     ...(problemFaqEnhancements[problem.slug] || []),
     ...(enhancement?.extraFaqs || []),

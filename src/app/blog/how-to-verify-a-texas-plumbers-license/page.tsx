@@ -60,6 +60,16 @@ const faqs = [
     question: "I only have a plumber's license number, not their name - can I still search?",
     answer:
       "Yes. Select \"Search by License Number\" instead of \"Search by Name\" on the TSBPE portal - the TSBPE recommends this option because it's more precise and avoids mix-ups when multiple plumbers share a similar name."
+  },
+  {
+    question: "How do I renew a Texas plumbing license?",
+    answer:
+      "Renewal is handled directly through the TSBPE, not through this site - plumbers renew online through the same TSBPE portal used for license search, and must meet the board's continuing education requirements before their license expires. If you're checking a plumber's status rather than renewing your own license, the fastest way is to search their name or license number and look at the expiration date shown in the results."
+  },
+  {
+    question: "How do I get a plumbing license in Texas?",
+    answer:
+      "Texas plumbing licensing follows a tiered path set by the TSBPE: Apprentice, then Tradesman Plumber-Limited or Journeyman Plumber after required hours and exams, then Master Plumber. Each tier has its own experience, exam, and continuing education requirements set by the board - the TSBPE website (tsbpe.texas.gov) has the current requirements and application steps, since this site is a plumbing directory and referral service, not the licensing authority."
   }
 ];
 
@@ -256,6 +266,14 @@ export default function LicenseVerificationPage() {
           <div>
             <h3 className="font-semibold">I only have a plumber's license number, not their name - can I still search?</h3>
             <p className="mt-1">Yes. Select <strong>"Search by License Number"</strong> instead of "Search by Name" on the TSBPE portal - the TSBPE recommends this option because it's more precise and avoids mix-ups when multiple plumbers share a similar name.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">How do I renew a Texas plumbing license?</h3>
+            <p className="mt-1">Renewal is handled directly through the TSBPE, not through this site - plumbers renew online through the same TSBPE portal used for license search, and must meet the board's continuing education requirements before their license expires. If you're checking a plumber's status rather than renewing your own license, the fastest way is to search their name or license number and look at the expiration date shown in the results.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">How do I get a plumbing license in Texas?</h3>
+            <p className="mt-1">Texas plumbing licensing follows a tiered path set by the TSBPE: <strong>Apprentice</strong>, then <strong>Tradesman Plumber-Limited</strong> or <strong>Journeyman Plumber</strong> after required hours and exams, then <strong>Master Plumber</strong>. Each tier has its own experience, exam, and continuing education requirements set by the board - the TSBPE website (tsbpe.texas.gov) has the current requirements and application steps, since this site is a plumbing directory and referral service, not the licensing authority.</p>
           </div>
         </div>
       </section>

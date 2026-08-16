@@ -323,6 +323,575 @@ export const problemEnhancements: Record<string, PageEnhancement> = {
   }
 };
 
+export const additionalProblemEnhancements: Record<string, PageEnhancement> = {
+  "sewer-smell-in-bathroom": {
+    decisionTitle: "How to judge a bathroom sewer smell",
+    decisionIntro:
+      "A sewer smell by itself can be a simple dry-trap fix, but the same odor paired with slow or gurgling drains often points to a deeper drainage restriction that is worth checking before it turns into a backup.",
+    decisionItems: [
+      "Run water in every drain and the shower to see whether a dry trap alone explains the smell.",
+      "Treat the odor as higher priority if it returns quickly after running water in unused fixtures.",
+      "Note whether the smell is strongest near a specific drain, the toilet base, or a floor drain.",
+      "Ask whether the visit covers a trap or seal check versus a full drain and vent inspection."
+    ],
+    providerTitle: "What a provider may check for sewer odor",
+    providerItems: [
+      "Whether infrequently used drains (guest bathroom, floor drain) have dried out.",
+      "Toilet wax ring seal and base for a slow leak that lets sewer gas escape.",
+      "Vent stack function, since a blocked roof vent can pull sewer gas into the home.",
+      "Whether the odor is isolated or paired with slow drainage elsewhere in the house."
+    ],
+    safetyTitle: "When a bathroom odor becomes urgent",
+    safetyItems: [
+      "Stop and call if the odor is sudden, strong, and paired with slow drains in more than one fixture.",
+      "Do not seal off drains permanently as a workaround for persistent odor.",
+      "Do not mix cleaning chemicals while investigating the smell.",
+      "Treat any visible backup alongside the odor as a sewer-line concern, not just an odor issue."
+    ],
+    preventionTitle: "Reducing recurring bathroom odor",
+    preventionItems: [
+      "Run water in guest bathrooms and floor drains every few weeks to keep traps filled.",
+      "Have a wax ring or toilet base leak checked if the odor is strongest near the toilet.",
+      "Mention any recent renovation or vent work, since disturbed venting is a common odor cause."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my bathroom smell like sewer gas but the drains seem fine?",
+        answer:
+          "A dry trap in a rarely used drain, or a slow leak at the toilet's wax ring seal, can let sewer gas into the room even when nothing is visibly backing up. Running water in unused drains is the fastest way to rule this out."
+      }
+    ],
+    extraLinks: [
+      { label: "Sewer backup help", href: "/services/sewer-backup-help" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Gurgling toilet and slow drains", href: "/problems/gurgling-toilet-and-slow-drains" }
+    ]
+  },
+  "toilet-overflowing-will-not-stop": {
+    decisionTitle: "How to decide the next step for a toilet that won't stop overflowing",
+    decisionIntro:
+      "Most nonstop overflows are stopped by the toilet's own supply valve, but how the water behaves after that tells you whether it's a simple fixture issue or something deeper in the drain line.",
+    decisionItems: [
+      "Confirm the toilet supply valve actually stops the water before troubleshooting anything else.",
+      "Watch whether a tub or shower backs up when the toilet is used, which points past the fixture itself.",
+      "Treat repeated overflow after clearing as a sign the clog was not fully resolved.",
+      "Ask whether the visit covers just the toilet trap or a wider branch-line check."
+    ],
+    providerTitle: "What a provider may check on an overflowing toilet",
+    providerItems: [
+      "Whether the fill valve, flapper, or float is causing the tank to keep overfilling the bowl.",
+      "Whether the clog sits in the toilet trap or further down the branch line.",
+      "Whether other fixtures react when the toilet is flushed.",
+      "Condition of the toilet's own shutoff valve for future emergencies."
+    ],
+    safetyTitle: "When to stop and call instead of continuing to plunge",
+    safetyItems: [
+      "Stop if dirty water keeps rising instead of draining after each attempt.",
+      "Stop if a tub, shower, or second toilet reacts when this toilet is flushed.",
+      "Stop if the shutoff valve will not fully close and water keeps running.",
+      "Do not use chemical drain cleaner in a bowl that is already overflowing."
+    ],
+    preventionTitle: "Reducing repeat toilet overflow",
+    preventionItems: [
+      "Keep a plunger and know the location of the toilet's own shutoff valve.",
+      "Avoid flushing wipes, paper towels, or excess paper that commonly cause fixture clogs.",
+      "Ask the provider whether a failing fill valve or float contributed, since that's a preventable repeat cause."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my toilet keep overflowing even after I plunge it?",
+        answer:
+          "If plunging clears the bowl but it fills and overflows again on the next flush, the clog may not be fully cleared, or the restriction may be past the toilet trap in the branch line. A provider can confirm with a closer look before you keep flushing and risking another overflow."
+      }
+    ],
+    extraLinks: [
+      { label: "Toilet overflow emergency service", href: "/services/toilet-overflow-emergency" },
+      { label: "Emergency plumbing cost in DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
+    ]
+  },
+  "kitchen-sink-backing-up": {
+    decisionTitle: "How to read a kitchen sink backup",
+    decisionIntro:
+      "A kitchen sink backup -- one of the most commonly searched plumbing problems -- is usually a local grease or food-debris clog, but if the dishwasher backs up too, or the sink is backing up with no visible clog, the cause is often further down the shared branch line.",
+    decisionItems: [
+      "Check whether the dishwasher backs up into the sink, which points to a shared drain issue.",
+      "If the sink is backing up but no clog is visible in the strainer, treat it as a branch-line question rather than a surface blockage.",
+      "Note whether the smell is grease-like, which often means buildup rather than an object.",
+      "Ask whether the visit covers disposal, trap, or a deeper branch-line inspection."
+    ],
+    providerTitle: "What a provider may check for a kitchen sink backup",
+    providerItems: [
+      "Garbage disposal function and whether it is humming, stalling, or jammed.",
+      "P-trap and drain line for grease and food-debris buildup.",
+      "Whether the dishwasher drain line ties into the same clogged branch.",
+      "Whether the backup is isolated to the kitchen or connects to a wider drain issue."
+    ],
+    safetyTitle: "When to stop DIY attempts on a kitchen sink",
+    safetyItems: [
+      "Stop running the disposal into standing water.",
+      "Do not add chemical drain cleaner after a backup has already started.",
+      "Stop if the dishwasher or another fixture starts reacting too.",
+      "Do not force apart trap fittings if you are unsure of the drain line condition."
+    ],
+    preventionTitle: "Reducing repeat kitchen sink backups",
+    preventionItems: [
+      "Never pour grease or oil down the kitchen drain, even with hot water.",
+      "Run the disposal with cold water and avoid fibrous scraps that wrap around the blades.",
+      "Ask the provider what caused a backup with no visible clog so it can be addressed at the source."
+    ],
+    extraFaqs: [
+      {
+        question: "Why is my kitchen sink backing up but there's no clog?",
+        answer:
+          "A kitchen sink can back up without a visible clog in the strainer when the blockage sits further down the branch line -- often grease buildup that has narrowed the pipe gradually rather than a single object. That usually needs a closer look at the trap and branch line rather than repeated plunging."
+      },
+      {
+        question: "Is a kitchen sink backup an emergency?",
+        answer:
+          "It becomes more urgent if the dishwasher backs up too, water reaches the cabinet or floor, or the backup keeps returning after clearing -- those patterns suggest more than a simple surface clog."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Sink and shower drain backup", href: "/services/sink-and-shower-drain-backup" }
+    ]
+  },
+  "bathtub-drain-backing-up": {
+    decisionTitle: "How to read a bathtub drain backing up",
+    decisionIntro:
+      "Bathtubs sit low in the drain system, so they often show a backup first even when the actual restriction is elsewhere -- watching whether the toilet reacts is the fastest way to tell a local tub clog from a shared-line issue.",
+    decisionItems: [
+      "Check whether the toilet bubbles or gurgles when the tub drains, which points past the tub itself.",
+      "Note whether the water in the tub is clean and slow versus dirty, which changes the urgency.",
+      "Treat a backup that returns quickly after clearing as a sign of a deeper cause.",
+      "Ask whether the visit covers the tub trap only or the shared bathroom branch line."
+    ],
+    providerTitle: "What a provider may check for a bathtub drain backup",
+    providerItems: [
+      "Hair and soap buildup at the tub drain and overflow assembly.",
+      "Whether the toilet or another fixture reacts when the tub is used.",
+      "Trap and branch-line condition for the bathroom group of fixtures.",
+      "Whether a camera inspection is warranted if the backup keeps returning."
+    ],
+    safetyTitle: "When to stop DIY attempts on a bathtub drain",
+    safetyItems: [
+      "Stop using nearby fixtures if the tub backup worsens.",
+      "Avoid chemical drain cleaner once standing water is present in the tub.",
+      "Stop if the toilet reacts when the tub drains, since that suggests a shared-line issue.",
+      "Do not remove drain hardware without knowing whether the line is under backup pressure."
+    ],
+    preventionTitle: "Reducing repeat bathtub drain backups",
+    preventionItems: [
+      "Use a hair catcher and clear it regularly to reduce the most common tub clog cause.",
+      "Address slow tub drainage early, before it becomes a full backup.",
+      "Ask the provider whether the cause was isolated to the tub or shared with other bathroom fixtures."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my bathtub drain keep backing up?",
+        answer:
+          "Hair and soap buildup is the most common cause of a bathtub drain backing up, but if it returns quickly after clearing, or the toilet reacts when the tub drains, the restriction may be in the shared branch line rather than the tub drain itself."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Sink and shower drain backup", href: "/services/sink-and-shower-drain-backup" }
+    ]
+  },
+  "floor-drain-backing-up": {
+    decisionTitle: "How to read a floor drain backup",
+    decisionIntro:
+      "Floor drains sit at the lowest point in the plumbing system, so a backup there often means water pressure from a restriction elsewhere is being forced out at the lowest available opening.",
+    decisionItems: [
+      "Note whether the backup started during laundry, a shower, or toilet use elsewhere in the home.",
+      "Treat sewer odor at the floor drain as a stronger sign of a main-line issue.",
+      "Check whether the backup is limited to the floor drain area or spreading.",
+      "Ask whether the visit covers the floor drain itself or a wider main-line inspection."
+    ],
+    providerTitle: "What a provider may check for a floor drain backup",
+    providerItems: [
+      "Whether laundry, showers, or toilets upstream trigger the floor drain backup.",
+      "Cleanout access near the floor drain and whether it shows signs of restriction.",
+      "Whether the backup pattern points to a branch line or the main sewer line.",
+      "Cleanup needs if wastewater has already reached the floor."
+    ],
+    safetyTitle: "When to stop and call for a floor drain backup",
+    safetyItems: [
+      "Stop all water use, especially laundry, once the floor drain is backing up.",
+      "Keep people and pets away from any standing water at the drain.",
+      "Do not remove the floor drain cover while backup pressure is active.",
+      "Do not assume mopping up water resolves the underlying cause."
+    ],
+    preventionTitle: "Reducing repeat floor drain backups",
+    preventionItems: [
+      "Avoid running large laundry loads back-to-back if the drain has backed up recently.",
+      "Ask what triggered the backup so recurring root or grease causes can be addressed.",
+      "Keep the floor drain area clear so a returning backup is noticed quickly."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my floor drain back up when I do laundry?",
+        answer:
+          "Laundry sends a large volume of water quickly. If the main line or a shared branch is partially restricted, the floor drain -- being the lowest opening -- is often where that extra water shows up first."
+      }
+    ],
+    extraLinks: [
+      { label: "Sewer backup help", href: "/services/sewer-backup-help" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Washing machine drain backing up", href: "/problems/washing-machine-drain-backing-up" }
+    ]
+  },
+  "gurgling-toilet-and-slow-drains": {
+    decisionTitle: "How to read gurgling and slow drains together",
+    decisionIntro:
+      "A single slow drain is often just a local clog, but gurgling paired with slow drainage in more than one fixture is usually air trying to move through a restricted line -- an early warning worth acting on before it becomes a full backup.",
+    decisionItems: [
+      "List every fixture that gurgles or drains slowly, since the pattern points to where the restriction likely sits.",
+      "Treat gurgling that happens right after a toilet flush as a stronger main-line warning sign.",
+      "Reduce household water use until the pattern is checked, since more water raises backup risk.",
+      "Ask whether the visit covers venting, a branch line, or the main sewer line."
+    ],
+    providerTitle: "What a provider may check for gurgling and slow drains",
+    providerItems: [
+      "Whether the vent stack is blocked, which can cause gurgling without a true clog.",
+      "Which fixtures gurgle together and in what sequence.",
+      "Cleanout access for a possible main-line restriction.",
+      "Whether a camera inspection is warranted before the pattern worsens."
+    ],
+    safetyTitle: "When gurgling and slow drains become urgent",
+    safetyItems: [
+      "Treat it as urgent if gurgling happens across more than one room.",
+      "Stop water use if a tub or floor drain starts to rise.",
+      "Do not add chemical drain cleaner to multiple slow drains at once.",
+      "Do not wait for visible wastewater before requesting help."
+    ],
+    preventionTitle: "Reducing recurring gurgling and slow drains",
+    preventionItems: [
+      "Address a single slow drain early, before it spreads to other fixtures.",
+      "Ask whether recurring gurgling points to roots or a vent issue that needs a permanent fix.",
+      "Keep notes on which fixtures gurgle and when, since the pattern helps diagnosis."
+    ],
+    extraFaqs: [
+      {
+        question: "Is a gurgling toilet always a sign of a main sewer line problem?",
+        answer:
+          "Not always, but gurgling combined with slow drainage in other fixtures is one of the earliest and most reliable warning signs of a main-line restriction, and it's worth checking before it turns into a full backup."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" }
+    ]
+  },
+  "main-sewer-line-signs": {
+    decisionTitle: "How to confirm the signs point to the main line",
+    decisionIntro:
+      "The clearest confirmation of a main sewer line issue is more than one fixture reacting together -- a single slow drain is usually local, but a toilet-and-tub pattern or a cleanout overflow points to the shared line leaving the property.",
+    decisionItems: [
+      "Count how many fixtures are affected, since a wider pattern raises the likelihood of a main-line issue.",
+      "Check the outdoor cleanout from a safe distance for overflow or standing water.",
+      "Mention recent heavy rain, since it can surcharge an already-restricted main line.",
+      "Ask whether the visit includes camera inspection to confirm the exact cause and location."
+    ],
+    providerTitle: "What a provider may check for main-line signs",
+    providerItems: [
+      "Which fixtures react together and in what order.",
+      "Outdoor cleanout condition and accessibility.",
+      "Whether roots, grease, a belly in the line, or a foreign object is the likely cause.",
+      "Line depth and access needs before recommending clearing versus repair."
+    ],
+    safetyTitle: "When main-line signs become urgent",
+    safetyItems: [
+      "Treat sewage appearing indoors as urgent, not something to wait out.",
+      "Stop using every fixture in the home once multiple bathrooms are affected.",
+      "Do not open a pressurized cleanout cap yourself.",
+      "Keep people and pets away from any wastewater until it's addressed."
+    ],
+    preventionTitle: "Reducing future main-line problems",
+    preventionItems: [
+      "Ask whether root intrusion was found, since that often means periodic maintenance going forward.",
+      "Keep records of past main-line service for faster diagnosis next time.",
+      "Address early warning signs, like a single gurgling toilet, before they escalate."
+    ],
+    extraFaqs: [
+      {
+        question: "How do I know if it's the main sewer line and not just one fixture?",
+        answer:
+          "The strongest sign is more than one fixture reacting together -- for example, a toilet flush causing water to rise in a tub, shower, or floor drain -- rather than a single slow or clogged fixture."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" }
+    ]
+  },
+  "burst-pipe-first-steps": {
+    decisionTitle: "How to prioritize the first few minutes",
+    decisionIntro:
+      "The first priority with a burst pipe is stopping the water, not finding the break -- shutting off the main valve buys time to assess damage safely before repair work starts.",
+    decisionItems: [
+      "Go straight to the main shutoff if water is spreading quickly rather than searching for a smaller valve.",
+      "Treat any water near outlets, switches, or plugged-in equipment as an electrical risk first.",
+      "Open a low faucet after the shutoff to relieve remaining pressure in the line.",
+      "Photograph visible damage once it's safe, since it helps both the plumber and any insurance claim."
+    ],
+    providerTitle: "What a provider may need to know first",
+    providerItems: [
+      "Whether the main shutoff is already closed and water flow has stopped.",
+      "Where water is appearing -- ceiling, wall, floor, or exterior.",
+      "Pipe material if visible or known from the home's age.",
+      "Whether ceiling, wall, or slab access will likely be needed."
+    ],
+    safetyTitle: "What not to do right after a pipe bursts",
+    safetyItems: [
+      "Do not leave the main water on while you look for the source.",
+      "Do not touch wet switches, outlets, or breaker panels.",
+      "Do not rely on tape or clamps to hold back active pressure.",
+      "Do not wait if a ceiling is bulging or sagging."
+    ],
+    preventionTitle: "Reducing future burst-pipe risk",
+    preventionItems: [
+      "Know your main shutoff location before an emergency happens.",
+      "Ask the provider whether freeze exposure, corrosion, or pressure was the cause, since that can guide prevention.",
+      "Address small drips or pressure issues before they become a full break."
+    ],
+    extraFaqs: [
+      {
+        question: "Should I try to find the leak before shutting off the water?",
+        answer:
+          "No -- shut off the main water valve first. Finding the exact source matters less than stopping the flow, and every extra minute of active water increases the damage and the eventual repair scope."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Burst pipe guide: causes, costs, and first steps", href: "/guides/dfw-burst-pipes" }
+    ]
+  },
+  "water-heater-leaking-emergency": {
+    decisionTitle: "How to decide the urgency of a leaking water heater",
+    decisionIntro:
+      "A slow drip from a fitting is a different situation than a tank actively leaking or spreading water near electrical components -- knowing which one you're looking at determines how quickly to act.",
+    decisionItems: [
+      "Check whether the leak is from a valve or connection versus the tank body itself.",
+      "Treat any water near the breaker panel or wiring as an electrical risk first.",
+      "Note rust streaks or popping sounds, which often mean the tank itself is failing.",
+      "Ask whether the visit covers diagnosis only or repair and replacement options."
+    ],
+    providerTitle: "What a provider may check on a leaking water heater",
+    providerItems: [
+      "Whether the leak is from a valve, fitting, or the tank itself.",
+      "Signs of tank corrosion, rust, or sediment buildup shortening its life.",
+      "Gas or electrical connections for safety before any repair work.",
+      "Whether repair is realistic or replacement is the safer long-term option."
+    ],
+    safetyTitle: "Safety boundaries for a leaking water heater",
+    safetyItems: [
+      "If you smell gas strongly or continuously, leave the house and call 911 or your gas utility from outside.",
+      "Do not touch electrical parts near standing water.",
+      "Do not relight a gas pilot if you are unsure it's safe.",
+      "Do not assume every tank leak can be repaired instead of replaced."
+    ],
+    preventionTitle: "Reducing future water heater emergencies",
+    preventionItems: [
+      "Know the age of your water heater, since tanks typically have a limited service life.",
+      "Watch for early signs like rust-colored water or popping sounds before a full leak develops.",
+      "Ask the provider for a realistic timeline if replacement is recommended instead of repair."
+    ],
+    extraFaqs: [
+      {
+        question: "Is a leaking hot water heater always an emergency?",
+        answer:
+          "It's urgent when water is actively spreading, the tank shows rust or corrosion, or the leak is near electrical components. A very slow drip from a fitting may be lower urgency, but it's still worth having checked before it worsens."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
+      { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" }
+    ]
+  },
+  "no-hot-water-emergency": {
+    decisionTitle: "How to decide if no hot water is an emergency",
+    decisionIntro:
+      "Losing hot water is often an inconvenience, but it becomes urgent quickly when it's paired with a gas smell, a tripped breaker, visible leaking, or affects a business or vulnerable household members.",
+    decisionItems: [
+      "Treat any gas odor alongside no hot water as urgent and unsafe to investigate yourself.",
+      "Check for water around the base of the heater, which changes this from an inconvenience to a leak issue.",
+      "Consider who is affected -- infants, elderly, or medical needs raise the urgency.",
+      "Ask whether the visit covers diagnosis of the element, pilot, or control system."
+    ],
+    providerTitle: "What a provider may check for no hot water",
+    providerItems: [
+      "Breaker, thermostat, or heating element function for electric units.",
+      "Pilot light, gas supply, and control valve for gas units.",
+      "Whether sediment buildup is reducing heating efficiency.",
+      "Overall unit age and condition to judge repair versus replacement."
+    ],
+    safetyTitle: "Safety boundaries when there's no hot water",
+    safetyItems: [
+      "If you smell gas strongly or continuously, leave the house and call 911 or your gas utility from outside.",
+      "Do not keep resetting a breaker that trips repeatedly.",
+      "Do not bypass safety controls on a gas or electric unit.",
+      "Do not assume replacement is needed before a diagnosis confirms it."
+    ],
+    preventionTitle: "Reducing future no-hot-water emergencies",
+    preventionItems: [
+      "Have sediment buildup checked periodically, since it reduces heating efficiency over time.",
+      "Note the unit's age, since aging elements and thermostats are a common preventable cause.",
+      "Ask what caused the failure so a repeat issue can be avoided."
+    ],
+    extraFaqs: [
+      {
+        question: "Why did my hot water suddenly stop working?",
+        answer:
+          "A tripped breaker, a failed heating element, a gas or pilot issue, or sediment buildup are the most common causes. Checking the breaker only if it's safe to do so is a reasonable first step before requesting help."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "Water heater leaking emergency", href: "/problems/water-heater-leaking-emergency" }
+    ]
+  },
+  "ceiling-leak-from-plumbing": {
+    decisionTitle: "How to prioritize a ceiling leak",
+    decisionIntro:
+      "A ceiling leak often hides its true source above the visible drip, so the safest approach is reducing water flow and electrical risk first, rather than trying to trace the exact cause yourself.",
+    decisionItems: [
+      "Avoid any light fixture, fan, or switch near the wet area until power is confirmed safe.",
+      "Shut off water if the source is identifiable and reachable safely.",
+      "Move belongings out from under the leak to limit secondary damage.",
+      "Ask whether the visit covers leak diagnosis, repair, or both, since ceiling access may be a separate step."
+    ],
+    providerTitle: "What a provider may check for a ceiling leak",
+    providerItems: [
+      "Upstairs fixtures, pipes, or the water heater as a possible source.",
+      "Extent of ceiling and drywall saturation before opening access.",
+      "Whether the leak is active or residual from a stopped source.",
+      "Whether restoration or drywall repair needs to be coordinated separately."
+    ],
+    safetyTitle: "Safety boundaries for a ceiling leak",
+    safetyItems: [
+      "Do not poke or puncture bulging drywall near light fixtures.",
+      "Do not use upstairs fixtures until the source is identified.",
+      "Do not assume a ceiling stain is old without checking if it's still active.",
+      "Treat a sagging ceiling as urgent, not something to monitor."
+    ],
+    preventionTitle: "Reducing future ceiling leaks",
+    preventionItems: [
+      "Ask what caused the leak so upstairs fixtures or pipes can be checked for related risk.",
+      "Address small ceiling stains early, before they indicate a larger active leak.",
+      "Keep photos of the damage for insurance purposes before repairs begin."
+    ],
+    extraFaqs: [
+      {
+        question: "What's dripping from my ceiling if there's no plumbing directly above?",
+        answer:
+          "Water can travel along joists and framing before it appears, so a ceiling leak doesn't always sit directly under the source. A provider traces the path from the upstairs fixture or pipe rather than assuming the drip marks the exact location."
+      }
+    ],
+    extraLinks: [
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" }
+    ]
+  },
+  "outdoor-cleanout-overflowing": {
+    decisionTitle: "How to respond to an overflowing cleanout",
+    decisionIntro:
+      "An overflowing outdoor cleanout is one of the clearest main-sewer-line warning signs, since it means wastewater cannot move normally past that point in the line.",
+    decisionItems: [
+      "Stop all indoor water use once the cleanout is visibly overflowing.",
+      "View the cleanout only from a safe distance, without removing the cap.",
+      "Note whether indoor drains are also slow or gurgling at the same time.",
+      "Ask whether the visit includes camera inspection to confirm the exact blockage location."
+    ],
+    providerTitle: "What a provider may check for a cleanout overflow",
+    providerItems: [
+      "Line condition between the cleanout and the city connection.",
+      "Whether roots, grease, or a structural issue (belly, collapse) is the cause.",
+      "Whether indoor fixtures are also affected, confirming a main-line restriction.",
+      "Depth and access needs before recommending clearing or repair."
+    ],
+    safetyTitle: "Safety boundaries for an overflowing cleanout",
+    safetyItems: [
+      "Never remove a cleanout cap that is under pressure.",
+      "Keep people and pets away from wastewater around the cleanout.",
+      "Do not keep running water indoors hoping it will drain through.",
+      "Treat indoor sewage appearance alongside the overflow as urgent."
+    ],
+    preventionTitle: "Reducing future cleanout overflow",
+    preventionItems: [
+      "Ask whether roots were found, since tree root intrusion often needs periodic maintenance.",
+      "Keep the cleanout area accessible and visible for early detection next time.",
+      "Address early indoor warning signs, like a single gurgling drain, before they escalate to overflow."
+    ],
+    extraFaqs: [
+      {
+        question: "Is it safe to open the cleanout cap myself to check the line?",
+        answer:
+          "No -- if the line is backed up, the cap may be under pressure and removing it can release wastewater unexpectedly. View it from a safe distance and let a provider handle direct access."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" }
+    ]
+  },
+  "washing-machine-drain-backing-up": {
+    decisionTitle: "How to read a washing machine drain backup",
+    decisionIntro:
+      "Laundry sends a large volume of water into the drain very quickly, so a standpipe or floor-drain backup during the spin cycle often reveals a partial blockage that smaller fixtures haven't yet exposed.",
+    decisionItems: [
+      "Stop the washer immediately rather than running another cycle to test it.",
+      "Check whether a nearby floor drain also backs up, which points to a shared line issue.",
+      "Note whether the backup happens every cycle or only with larger loads.",
+      "Ask whether the visit covers the laundry branch line specifically or a wider drain check."
+    ],
+    providerTitle: "What a provider may check for a washing machine drain backup",
+    providerItems: [
+      "Standpipe height and connection for proper drainage.",
+      "Lint, debris, or buildup in the laundry branch line.",
+      "Whether the laundry line ties into a shared branch with other fixtures.",
+      "Whether the issue is isolated to laundry or connects to a main-line restriction."
+    ],
+    safetyTitle: "What not to do with a washing machine drain backup",
+    safetyItems: [
+      "Do not run another laundry cycle to test whether it clears.",
+      "Do not push overflow water toward floor drains.",
+      "Do not add chemical cleaner to a standpipe with standing water.",
+      "Stop if nearby fixtures start gurgling during the laundry cycle."
+    ],
+    preventionTitle: "Reducing repeat washing machine drain backups",
+    preventionItems: [
+      "Avoid washing very large loads back-to-back if backup has happened recently.",
+      "Ask whether lint buildup or a branch-line restriction was the cause.",
+      "Keep the standpipe area clear so a returning backup is noticed early."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my washing machine drain overflow every time I do laundry?",
+        answer:
+          "A repeat backup every cycle usually means a partial blockage in the laundry branch line rather than a one-time fluke, since laundry pushes more water through the drain at once than most other fixtures."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "Floor drain backing up", href: "/problems/floor-drain-backing-up" }
+    ]
+  }
+};
+
 export const costGuideEnhancements: Record<string, PageEnhancement> = {
   "emergency-plumbing-cost-dfw": {
     decisionTitle: "How to compare emergency plumbing scopes",
