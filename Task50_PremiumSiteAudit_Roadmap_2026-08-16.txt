@@ -181,3 +181,44 @@ STRUCTURAL, LOW URGENCY:
   9. Optional repo-root cleanup (section 6) - cosmetic only.
 
 END OF TASK 50 REPORT.
+
+============================================================
+8. CORRECTION (added after Gmail ground-truth check) - SUPERSEDES SECTION 5
+============================================================
+Section 5 above was written from local log/report files, which turned out
+to be stale/wrong in several places. Cross-checked directly against the
+Gmail account's actual Sent folder (ground truth) and found:
+
+- McCaw Property Management, StarPointe Realty, PMI Cross Timbers, 3W
+  Restoration: were ALREADY SENT on 2026-07-26, despite
+  outreach_prep_report.md saying "nothing sent." A later, undocumented
+  process must have sent them after that report was written.
+- Principled Property Management: genuinely was never sent. SENT NOW
+  (2026-08-16) using the exact drafted copy from
+  reports/outreach_drafts_ready_for_review.md. This was the ONLY one of
+  the original 5 that actually needed sending.
+- NARPM Texas and BOMA Texas: each ALREADY received BOTH the initial
+  email (07/30) AND the follow-up (08/02) - 2 touches each, already
+  complete. Did NOT send a 3rd contact - would look spammy.
+- Texas Apartment Association (info@taa.org): received the SAME email
+  3 TIMES in a row (08/02, one minute apart) - a duplicate-send bug in
+  a prior automated script. Already over-contacted; sent nothing further.
+  Flagging this as a pattern to guard against: verify Gmail's actual
+  Sent folder before trusting a script's own success log next time a
+  send automation is built.
+
+ROOT CAUSE OF THE "51-PROSPECT, 0 SENT" MYSTERY - FOUND:
+dfw_prospects_initial.csv (the file backing all 3 failed SMTP attempts)
+is corrupted. Every one of its 51 rows contains PowerShell Hashtable
+reflection properties (IsReadOnly, IsFixedSize, Keys, Values, SyncRoot,
+Count) instead of actual names/emails - a scripting bug where a
+Hashtable collection was exported to CSV without converting to proper
+objects first. There were never 51 real prospects in that file - it's
+been empty/garbage since it was generated. That's why 3 separate send
+attempts all recorded 0 successes: there was nothing valid to send to.
+backlink_prospects.csv (the dashboard-tracking file) is also empty
+(header only, 0 rows).
+CONCLUSION: no fix needed to the SMTP script itself - the Gmail MCP
+send path used above works correctly (just proved it on Principled PM).
+The real gap is a genuine prospect list, which never existed. This
+directly feeds the "expand prospect list" priority below.
