@@ -1,0 +1,79 @@
+TASK 53: REAL GOVERNMENT/INSTITUTIONAL CITATION HYPERLINKS ADDED TO 6 GUIDE PAGES
+Date: 2026-08-19
+Site: www.plumbinghands.com ONLY (rule #11 respected - UHP not touched)
+Commit: 964abf7 | Deployed live, verified.
+
+TRIGGER
+User showed 10 screenshots of Madison, AL and Athens, AL .gov permit/utility
+pages and asked: "look at government official pages some one added in its
+website. did you? if not add pages like this." This exact question had
+already been asked once before (see Task37 on the UrgentHomePros project,
+2026-08-19), where it was interpreted as: does the site have real, clickable
+outbound links to authoritative government/institutional sources (the
+"backlink substitute" pattern), not literal government permit pages copied
+from another city. Applied the same interpretation here, scoped to
+plumbinghands.com only.
+
+WHAT WAS ALREADY IN PLACE (confirmed, not re-done)
+- /blog/how-to-verify-a-texas-plumbers-license already deep-links to
+  tsbpe.texas.gov and the TSBPE license-search portal (from an earlier
+  session).
+- /blog/can-homeowners-legally-do-their-own-plumbing-in-texas already has a
+  "Permit Offices for Major DFW Cities" table linking to the real .gov permit
+  pages of Dallas/Fort Worth/Plano/Arlington/Frisco/McKinney (Task 3).
+- /guides/texas-insurance-plumbing-claims already cites tdi.texas.gov.
+
+GAP FOUND (concrete, verified via repo-wide search)
+Repo-wide search for real ".gov" hyperlinks in src/ found only 6 files with
+real links (the 3 above, plus src/lib/weather.ts's API config and one line in
+pageEnhancements.ts). Six of the nine /guides/ data-guide pages named real
+government/institutional sources in plain text - TDI, TSBPE, National Weather
+Service, City of Dallas code, Fort Worth's Priority Repair Program, Arlington
+Water Utilities, City of Frisco code - WITHOUT a single real <a href> link.
+Same class of gap as Task37 found on UrgentHomePros.
+
+FIX SHIPPED (8 real, individually verified hyperlinks across 6 files)
+1. dfw-burst-pipes/page.tsx - "Texas Department of Insurance" (2 mentions)
+   now links to https://www.tdi.texas.gov/blog/does-insurance-cover-water-
+   damage-caused-by-burst-pipes.html and the TDI storm-claims FAQ.
+2. dfw-gas-line-safety/page.tsx - "TSBPE" (2 mentions) now links to
+   https://tsbpe.texas.gov and the TSBPE public license-search portal.
+3. dfw-polybutylene-pipe-replacement/page.tsx - TDI water-damage guidance and
+   TSBPE license mentions now linked to the same two verified URLs.
+4. dfw-slab-leaks/page.tsx - "the agency's general guidance on water damage
+   claims" (TDI) now linked.
+5. dfw-sewer-root-intrusion/page.tsx - the City of Dallas quote is now linked
+   directly to the real ordinance: Dallas City Code Sec. 49-24 (Service
+   Connections) on codelibrary.amlegal.com - verified via WebFetch that the
+   ordinance text matches the quote already on the site. Fort Worth's
+   "Priority Repair Program" now links to the real, verified
+   fortworthtexas.gov program page (confirmed it covers sewer/water line
+   breaks for income-eligible homeowners). Arlington Water Utilities now
+   links to the department's official arlingtontx.gov page.
+6. dfw-water-heater-lifespan/page.tsx - Dallas Water Utilities hardness claim
+   now links to the real City of Dallas Water Quality Report PDF
+   (dallascityhall.com). "City of Frisco, TX water heater installation
+   requirements" now links to the verified friscotexas.gov residential
+   permits page.
+
+VERIFICATION METHOD
+Every URL was checked via WebSearch + WebFetch BEFORE being added - confirmed
+each is a real, currently-live official government/institutional page whose
+content actually matches the claim being cited next to it (not just a
+domain-name guess). No URL was invented.
+
+PROCESS
+git-safety-checked (origin/master HEAD matched before and after editing - no
+collision with the concurrent session), clean build (Task53_BuildLog.txt, no
+errors), staged only the 6 changed files, committed (964abf7), pushed,
+Vercel deploy confirmed Ready, live-verified all 8 links present in
+production HTML via curl.exe + Select-String on all 6 pages - 8/8 passed.
+
+NOT DONE (flagged, not urgent)
+- dfw-emergency-plumbing-costs cites HomeAdvisor/Angi (not government
+  sources) - lower priority, different pattern, left alone this round.
+- dfw-plumbing-data already names "National Weather Service" without a link;
+  not fixed this round (candidate for a future pass - same pattern).
+- No literal Madison/Athens AL-style page was created; the government-page
+  pattern that actually fits plumbinghands.com's referral-service model is
+  citation links to authoritative sources, which is what was done.
