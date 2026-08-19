@@ -1,0 +1,55 @@
+TASK 62: IndexNow ping + GSC manual indexing requests for newly-linked pages
+Date: 2026-08-19
+Site: www.plumbinghands.com (only)
+
+CONTEXT
+-------
+Follows Task 61 (internal-linking fix for /partners and /problems, deployed
+as commit 9c0669b). To accelerate Google discovering the new links rather
+than waiting for a natural re-crawl, ran two acceleration levers.
+
+1. INDEXNOW PING
+-----------------
+Submitted via https://api.indexnow.org/indexnow (key
+029ac481cd255dbc944722e7fdad116f, verified at
+/029ac481cd255dbc944722e7fdad116f.txt):
+- https://plumbinghands.com/partners
+- https://plumbinghands.com/problems
+- https://plumbinghands.com/
+- https://plumbinghands.com/services
+- https://plumbinghands.com/partner-with-us
+Response: HTTP 200 (accepted). Note: IndexNow is consumed mainly by Bing
+and other IndexNow-participating engines, not Google directly - included
+as a low-cost complementary signal.
+
+2. GSC MANUAL "REQUEST INDEXING" (Google-specific, quota-limited ~10-12/day)
+------------------------------------------------------------------------------
+Used the URL Inspection tool on the verified property
+(https://plumbinghands.com/) to request indexing for 3 URLs, all
+confirmed "Indexing requested - added to priority crawl queue":
+1. /partners - was "URL is unknown to Google" (zero prior discovery
+   signal - confirms the zero-inbound-link root cause from Task 61)
+2. /problems - was "Discovered - currently not indexed"
+3. /problems/ceiling-leak-from-plumbing - was "Discovered - currently
+   not indexed" (child page benefits from the same /problems nav fix)
+Stopped at 3 requests to stay well under the daily quota and leave room
+for the concurrent Claude Code CLI session working the same account.
+
+BONUS DATA POINT
+------------------
+GSC Overview (trailing ~5 weeks) now shows 16 total web search clicks,
+up from 12 in the Aug 19 Day-45-checkpoint pull taken earlier the same
+day - consistent with the upward trend already documented in Task 60.
+
+NEXT
+----
+Indexing requests take hours to days to process, not verifiable in this
+session. Recommended follow-up in a future session: re-check URL
+Inspection status for these 3 URLs, and if successful, expand manual
+requests to the remaining priority pages (/problems/no-hot-water-emergency,
+/services/24-hour-emergency-plumber, the 2 highest-value blog posts).
+
+GIT STATE
+---------
+No code changes this task (browser/API actions only). Repo HEAD unchanged
+at 5cb2536.
