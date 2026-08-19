@@ -1,0 +1,127 @@
+==========================================================
+WEEKLY WORK-LOG - PlumbingHands.com
+Date: 2026-08-19
+Session scope: PlumbingHands.com ONLY (standing rule #11 - no other
+site is touched from this point forward)
+Repo path (owner's machine): C:\Users\dell\Documents\plumbinghands-live-master
+GitHub: affankhan147-arch/ppc-website (branch: master)
+Vercel project: affankhan147-1002s-projects/plumbinghands
+Canonical domain: https://plumbinghands.com
+==========================================================
+
+--- ACCOUNT / LOGIN ACCESS USED THIS PERIOD ---
+
+1. GitHub (affankhan147-arch/ppc-website) - git push/pull via the owner's
+   existing local credentials on their Windows machine. No new
+   authentication performed.
+2. Vercel CLI (already authenticated on the owner's machine) - used for
+   `vercel --prod --force --yes` deploys. No new login performed.
+3. Google Search Console - verified property is the URL-prefix variant
+   https://plumbinghands.com/ (NOT sc-domain:plumbinghands.com, which
+   returns "no access" for this account). Accessed via the already
+   signed-in Chrome session (Google account: affan.khan147@gmail.com).
+   No credentials entered this session.
+4. Gmail (affan.khan147@gmail.com) - used via the connected Gmail MCP
+   tool for outreach sends (Tasks 57-59). No credentials entered.
+5. Bing Webmaster Tools - NOT signed into. Confirmed via three
+   independent code/env checks (see Task60) that Bing verification was
+   never completed. Dashboard sign-in was correctly NOT attempted
+   (would require entering credentials - prohibited).
+6. IndexNow - no login required; API key 029ac481cd255dbc944722e7fdad116f
+   already provisioned and verified at
+   https://plumbinghands.com/029ac481cd255dbc944722e7fdad116f.txt
+
+--- WORK COMPLETED THIS PERIOD (Tasks 53-62, since the last weekly log) ---
+
+Full detail for each item lives in its own Task*.txt in the repo root and
+mirrored under claude/ in the project. Summary:
+
+- Task 53-54: Government/citation backlink audit - closed out remaining
+  citation link opportunities.
+- Task 55: Full project status review - confirmed all automatable
+  technical SEO, on-page content, and citation-link work complete as of
+  that checkpoint; only outreach execution and organic accrual remained.
+- Task 56-59: DFW property-management outreach batch - researched,
+  approved per-prospect by the user, and sent (5 forms/emails sent, 4
+  skipped with logged reasons - CAPTCHA, no honest form available, or no
+  contact form existing - 4 new prospects researched and sent after
+  fresh approval). backlink_prospects.csv is the running source of truth.
+- Task 60: Day-45 checkpoint against the ChatGPT-authored 60-day plan
+  (authority/60day_daily_plan_legit.md and related). Confirmed Bing
+  Webmaster Tools was never verified (real gap - Day 9 item, still open,
+  requires the owner's Bing Webmaster Tools login, which is outside this
+  assistant's authority). Pulled fresh GSC data vs. the Aug 15 baseline:
+  clicks 9 to 12, impressions 15,600 to 17,200, avg. position 39.8 to
+  37.2, all 4 head terms improved, indexing 184/235 (78%). Decision:
+  continue past Day 45, do not close out.
+- Task 61: Root-caused two pages sitting in GSC's "Discovered - currently
+  not indexed" bucket (/partners, /problems) to weak/zero internal
+  linking, NOT a noindex/canonical/404 issue (verified clean on all
+  three). Fixed by adding /problems to the sitewide main nav
+  (src/data/site.ts) and /partners to the footer (src/components/
+  Footer.tsx), alongside relabeling the existing distinct
+  /partner-with-us footer link for clarity. Built clean, committed
+  (9c0669b), deployed, and live-verified both changes are present on the
+  production homepage.
+- Task 62: Accelerated re-crawl of the newly-linked pages via (a) an
+  IndexNow ping (5 URLs, HTTP 200) and (b) 3 manual "Request Indexing"
+  submissions in GSC's URL Inspection tool (/partners, /problems,
+  /problems/ceiling-leak-from-plumbing), stopping well under the daily
+  quota. /partners came back as "URL is unknown to Google" before this -
+  directly confirming the zero-inbound-link root cause found in Task 61.
+- GSC query/page performance audit (this session, undocumented as a
+  separate Task file - findings folded into this log): pulled the
+  trailing-3-month Queries and Pages breakdowns with CTR/position
+  columns. Findings:
+  * "emergency drain service" (413 impressions/quarter, avg. position
+    9.5, 0% CTR) is split across 23 different city/city-service pages
+    (dallas, plano, mckinney, arlington, fort-worth, frisco, several
+    /cities/[city]/emergency-drain-cleaning pages, etc.), none dominant.
+    This is expected/inherent behavior for a hyper-local page
+    architecture (Google serves the most locally-relevant page per
+    searcher) rather than a bug to merge/fix - flagging for awareness,
+    not action.
+  * /blog/can-homeowners-legally-do-their-own-plumbing-in-texas ranks
+    position 7.8 (top of page 1, 230 impressions) but only 1.7% CTR, and
+    /blog/how-to-verify-a-texas-plumbers-license ranks position 17.6
+    (535 impressions, the single highest-impression page on the site)
+    at 0.6% CTR. Checked the underlying code: both already have solid
+    FAQ schema, HowTo schema, article schema, and well-matched extraFaqs
+    question phrasing (src/data/pageEnhancements.ts). The most likely
+    explanation is Google serving a featured snippet/People-Also-Ask box
+    for these definitional "can I.../how do I..." queries, which
+    structurally caps organic CTR regardless of title/meta wording (this
+    matches the pattern of several other 0%-CTR-at-position-1 queries
+    seen in the same data pull, e.g. "how do i find out if a plumber is
+    licensed" at position 1.0, 0% CTR). No code change made here since
+    there's no clear, safe lever this assistant can pull beyond what's
+    already in place; genuine authority growth (backlinks) is the
+    likely unlock, consistent with the plan's own Week 7 diagnosis path.
+  * /cities/plano (2,182 impressions/quarter) and /cities/dallas (1,765
+    impressions) sit at avg. position 35 and 49 respectively with 0%
+    CTR - these are ranking/authority problems (page 4+), not title/CTR
+    problems, and are not fixable via on-page copy alone.
+
+--- STANDING OPEN ITEMS (require the owner's own action) ---
+
+- Bing Webmaster Tools verification (Day 9 item) - needs the owner to
+  sign into Bing Webmaster Tools directly and add the resulting token as
+  a Vercel production env var (NEXT_PUBLIC_BING_WEBMASTER_TOKEN); the
+  code path is already built and ready in src/app/layout.tsx.
+- HARO/Connectively journalist-query responses - requires creating an
+  account on a third-party platform, which is on this assistant's
+  standing prohibited-action list. Needs the owner to create the account;
+  this assistant can prepare ready-to-send draft responses once live
+  queries are found, but cannot sign up or browse the platform itself.
+- Remaining backlink_prospects.csv rows marked SKIPPED (phone-only, no
+  honest form available) - logged with phone numbers for the owner to
+  call directly if desired.
+
+--- GIT STATE AT END OF THIS LOG ---
+
+HEAD: 9e466aa (confirmed matching origin/master before and after every
+push referenced above)
+
+==========================================================
+End of weekly work-log.
+==========================================================
