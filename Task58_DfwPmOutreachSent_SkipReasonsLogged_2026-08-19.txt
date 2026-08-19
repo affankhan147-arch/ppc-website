@@ -1,0 +1,66 @@
+TASK 58: DFW Property Management outreach sent; skip reasons logged for 4 other approved prospects
+Date: 2026-08-19
+Site: www.plumbinghands.com (only)
+
+CONTEXT
+-------
+Continuing from the user's earlier approval ("Yes, submit all 5") to submit outreach to 5
+prospects: Dalworth Restoration, DFW Property Management, SBB Community Management,
+Goodwin & Company, Restored Rite. Work was interrupted mid-submission when the user's
+laptop lost internet connectivity; resumed once the laptop reconnected.
+
+WHAT WAS DONE THIS TASK
+------------------------
+1. Re-established the browser session (old tab had gone stale after the outage and would
+   not respond - closed it and opened a fresh tab to https://dfwpropertymanagement.com/contact).
+2. Located and filled the "Send Us a Message" contact form:
+   - Name: PlumbingHands Team
+   - Phone: (844) 397-8298
+   - Email: affan.khan147@gmail.com (per the user's explicit instruction to use their real
+     email as the reply-to address going forward, replacing an earlier invented placeholder)
+   - Message: pitch offering the free water-shutoff guide as a resource for their residents/team
+3. Submitted the form. Confirmed success via the page's own confirmation heading: "Message Sent
+   - We'll get back to you within one business day."
+4. Updated backlink_prospects.csv: DFW Property Management row marked Contacted=Yes with full
+   detail of what was sent and when.
+5. Reviewed the remaining 4 originally-approved prospects and logged WHY each is being skipped
+   rather than leaving them ambiguously "not yet contacted":
+   - Dalworth Restoration: only form available is a customer "Request an Estimate" form
+     requiring a real street address/property details - filling it would mean submitting
+     fabricated homeowner data to push a B2B pitch, which is dishonest. Phone logged for
+     manual follow-up: 817-203-2944.
+   - SBB Community Management: contact form is protected by a CAPTCHA. Per standing safety
+     rule, CAPTCHAs are never bypassed. Phone logged: 972-960-2800.
+   - Goodwin & Company: only form is a community "Service Address" work-order request
+     (community name, market, service address) - same fabricated-data problem as Dalworth.
+     Phone logged: 855-289-6007.
+   - Restored Rite: no contact form exists anywhere on the site. Phone logged: 817-737-8673.
+6. Committed and pushed both changes separately:
+   - 2b90862: DFW Property Management contacted
+   - 135485e: skip-reason documentation for the other 4
+
+GIT STATE
+---------
+HEAD after this task: 135485e (confirmed matching origin/master before and after each push)
+
+STILL OPEN / NEEDS FRESH PERMISSION
+------------------------------------
+Task 57 (Projects doc claude/Task57_NewOutreachBatch_ResearchedReadyToSend_2026-08-19.txt)
+researched 4 NEW prospects during the connectivity outage, none of which have been asked
+about or approved yet:
+  - HomeRiver Group DFW (dfw@homeriver.com)
+  - PMI DFW Properties (info@pmidfwproperties.com)
+  - Princeton Insurance Fort Worth (info@princetoninsurance.us)
+  - Home Specs DFW home inspector (Inspectorlbatista@gmail.com, 817-714-3420)
+Per the standing rule that outreach-send permission is per-action and does not generalize
+from the earlier "submit all 5" approval, these require a fresh explicit yes/no from the
+user before anything is sent.
+
+STATUS OF THE BROADER "KEEP MOVING UNTIL SEO PROJECT ACCOMPLISHED" MANDATE
+----------------------------------------------------------------------------
+Per Task 55's status doc, all automatable technical SEO, on-page content, and citation-link
+work for plumbinghands.com is complete. The only remaining levers are: (a) outreach execution,
+which is permission-gated per prospect, and (b) organic backlink/ranking accrual over time,
+which is not something more automation can accelerate. This task closed out the last
+piece of automatable outreach bookkeeping (the 5-prospect batch). Next concrete step is
+waiting on the user's decision on the 4 new Task57 prospects.
