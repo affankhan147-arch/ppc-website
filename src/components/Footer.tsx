@@ -5,6 +5,7 @@ import { cities } from "@/data/cities";
 import { services } from "@/data/services";
 import { titleCase } from "@/lib/format";
 import { TrackedLink } from "@/components/TrackedLink";
+import { CookiePreferencesLink } from "@/components/CookieConsent";
 
 export function Footer() {
   return (
@@ -67,6 +68,7 @@ export function Footer() {
             <TrackedLink href="/partners" className="hover:text-[#4FD1C5]" eventName="referral_partner_route_click" ctaLocation="footer-referral-partner-link" pageType="footer">
               Become a referral partner
             </TrackedLink>
+            <CookiePreferencesLink className="text-left hover:text-[#4FD1C5]" />
           </div>
         </div>
       </div>

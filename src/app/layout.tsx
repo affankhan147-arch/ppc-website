@@ -1,7 +1,7 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { CookieConsent } from "@/components/CookieConsent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { StickyCallBar } from "@/components/StickyCallBar";
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         {children}
         <Footer />
         <StickyCallBar />
-              <GoogleAnalytics gaId="G-MQ820VTTB0" />
+        <CookieConsent gaId="G-MQ820VTTB0" />
       </body>
     </html>
   );

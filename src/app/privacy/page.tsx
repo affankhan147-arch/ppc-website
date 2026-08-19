@@ -22,6 +22,9 @@ export default function PrivacyPage() {
         <p>This site may collect form details such as name, phone, city, service need, urgency, message, page URL, and UTM data for service request handling and reporting.</p>
         <p>Do not submit sensitive account credentials, payment details, medical information, or private documents through the form.</p>
         <p>Analytics and tracking identifiers should be added only through owner-approved environment variables or hosting settings.</p>
+        <h2 className="mt-6 text-2xl font-bold text-white">Cookies and analytics</h2>
+        <p>When you first visit this site, a banner asks whether you want to allow analytics cookies. If you choose &ldquo;Accept,&rdquo; we load Google Analytics to understand how visitors use the site (pages viewed, general location, device type) so we can improve it. If you choose &ldquo;Decline,&rdquo; Google Analytics is not loaded and no analytics cookies are set.</p>
+        <p>You can change your choice at any time using the &ldquo;Cookie preferences&rdquo; link in the footer of any page, which re-opens the banner.</p>
       </div>
     </main>
   );
