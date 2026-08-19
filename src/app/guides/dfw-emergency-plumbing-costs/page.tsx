@@ -74,7 +74,7 @@ export default function CostGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Cost Ranges for Common Services</h2>
             <p className="text-slate-300 mb-4">
-              The following ranges are based on multiple national and regional sources, including HomeAdvisor, Angi, and local DFW plumbing provider listings. Actual costs vary by provider, time of day, and access difficulty – these are realistic benchmarks, not guaranteed quotes.
+              The following ranges are based on multiple national and regional sources, including <a href="https://www.homeadvisor.com/cost/plumbing/" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">HomeAdvisor</a>, <a href="https://www.angi.com/articles/emergency-plumber-cost.htm" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Angi</a>, and local DFW plumbing provider listings. Actual costs vary by provider, time of day, and access difficulty – these are realistic benchmarks, not guaranteed quotes.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left text-slate-300">
