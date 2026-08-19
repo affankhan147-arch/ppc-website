@@ -1,0 +1,65 @@
+TASK 63: Correction - Bing Webmaster Tools WAS already verified all along
+Date: 2026-08-19
+Site: www.plumbinghands.com (only)
+
+CORRECTS: Task60_Day45Checkpoint_BingGap_GSCComparison_2026-08-19.txt,
+which concluded Bing Webmaster Tools was "never verified" for this site.
+That conclusion was based on three checks (no Vercel env var
+NEXT_PUBLIC_BING_WEBMASTER_TOKEN, no live msvalidate.01 meta tag, and
+correctly not signing into any account without permission at the time).
+All three checks were accurate as far as they went, but missed that the
+property had been verified through a channel outside the site's own
+verification-meta-tag code path (most likely a DNS-level method set up in
+an earlier session, similar to the documented Hostinger DNS TXT record
+method used for Google Search Console) - so the absence of the env var
+and meta tag did not actually mean "not verified."
+
+HOW THIS WAS FOUND
+-------------------
+User instructed switching the active Google account in Chrome to
+affan.khan147@gmail.com (already an existing, signed-in account in the
+browser's account switcher - no password entered, per standing rule).
+Navigating to bing.com/webmasters under that account showed the
+plumbinghands.com property already present, fully set up, with real
+history.
+
+CURRENT BING WEBMASTER TOOLS STATE (verified live, this session)
+--------------------------------------------------------------------
+- Property: plumbinghands.com - verified and active.
+- Search Performance (trailing ~35 days): 15 clicks, 241 impressions.
+- Site Explorer / crawl information: 115 URLs indexed, 0 errors,
+  1 warning, 10 excluded. 126 URLs tracked in folder info (last 6
+  months): 13 clicks, 138 impressions.
+- Sitemaps: 2 known sitemaps, 0 errors, 0 warnings, 334 total URLs
+  discovered.
+  * https://plumbinghands.com/sitemap.xml - submitted 7/15/2026, last
+    crawled 8/16/2026, status Success, 216 URLs discovered.
+  * http://www.plumbinghands.com/sitemap.xml - discovered (not
+    manually submitted) 6/28/2026, last crawled 7/13/2026, status
+    Success, 118 URLs discovered.
+- Top recommendation shown: "Your site does not have enough inbound
+  links from high quality domains" - consistent with every other
+  finding this engagement; backlink accrual remains the real
+  bottleneck, not technical setup.
+- IndexNow: already functioning (confirmed separately via the direct
+  API ping in Task55/Task62 - HTTP 200 responses). Bing is one of the
+  participating engines for IndexNow, so every prior IndexNow
+  submission this session was already reaching Bing in addition to any
+  other participating engines.
+
+WHAT THIS CHANGES IN THE 60-DAY PLAN
+---------------------------------------
+authority/60day_daily_plan_legit.md Day 9 ("Bing Webmaster Tools
+verification") should be marked DONE, not open. There is no outstanding
+Bing technical-setup task. The only remaining lever for Bing (as for
+Google) is backlink/authority accrual over time - not something further
+automation can force.
+
+NO CODE CHANGES MADE THIS TASK
+---------------------------------
+This was a verification/correction task only - no site code was
+touched, no deploy was needed. Git HEAD unchanged.
+
+GIT STATE
+---------
+HEAD: 04f06c5 (unchanged by this task, confirmed matching origin/master)
