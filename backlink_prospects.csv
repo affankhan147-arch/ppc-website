@@ -9,7 +9,7 @@ BOMA Texas,https://bomatexas.org,belliott@bomatexas.org,2026-07-30,2026-08-02,No
 Texas Apartment Association,https://taa.org,info@taa.org,2026-08-02,,No,No,"OVER-CONTACTED: sent 3x by script bug same day - do not contact again"
 Dry Force,https://dryforcecorp.com,(contact form),2026-08-02,,No,No,"Water damage restoration; form submission PASSED"
 Gibb Insurance Services,https://gibbinsuranceservices.com,(contact form),2026-08-02,,No,No,"Insurance agency; form submission PASSED"
-Mr. Restore,https://mrrestore.com,(contact form),,,No,No,"Restoration; form submission FAILED 503, never retried - candidate for retry"
+Mr. Restore,https://mrrestore.com,(phone/form only),,,No,No,"Restoration; RETRIED 2026-08-19 - site now actively blocks automated access via Wordfence firewall (confirmed via browser, not a transient 503) - needs manual send or phone (877) 631-7576"
 Dalworth Restoration,https://www.dalworthrestoration.com,(phone/form only),,,No,No,"Restoration since 1976; no public email found; not yet contacted"
 Apex Adjusting Group,https://apexadjustinggroup.com,(phone only),,,No,No,"Public adjuster; not yet contacted"
 Omega Claims Consultants,https://omegaclaimsconsultantsinc.com,(phone only),,,No,No,"Public adjuster; not yet contacted"
