@@ -86,13 +86,13 @@ export default function GasLineGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: Licensing and Permits</h2>
             <p className="text-slate-300 mb-4">
-              In Texas, the Texas State Board of Plumbing Examiners (TSBPE) holds exclusive statewide authority to license plumbers. Any plumber performing fuel gas piping, line extensions, or appliance connections must hold a current, active Master or Journeyman Plumber license issued by TSBPE – the same license that covers general plumbing work. No separate "gas-work endorsement" is required for standard residential fuel gas installations (such as outdoor kitchens, pool heaters, or appliance connections); the standard plumbing license already covers this work.
+              In Texas, the <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas State Board of Plumbing Examiners (TSBPE)</a> holds exclusive statewide authority to license plumbers. Any plumber performing fuel gas piping, line extensions, or appliance connections must hold a current, active Master or Journeyman Plumber license issued by TSBPE – the same license that covers general plumbing work. No separate "gas-work endorsement" is required for standard residential fuel gas installations (such as outdoor kitchens, pool heaters, or appliance connections); the standard plumbing license already covers this work.
             </p>
             <p className="text-slate-300 mb-4">
               Before any work begins, homeowners should confirm two things:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
-              <li>The plumber’s license is active and current via TSBPE's public license search tool.</li>
+              <li>The plumber's license is active and current via the <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">TSBPE public license search tool</a>.</li>
               <li>The local building department (Keller, Southlake, or the applicable city) has issued the required permit for the work.</li>
             </ul>
             <p className="text-slate-300">

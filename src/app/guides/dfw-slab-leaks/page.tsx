@@ -113,7 +113,7 @@ export default function SlabLeaksGuidePage() {
               <li>Insurers investigate physical evidence to determine the timeline of the leak. Extensive mold growth, deep saturation of flooring, and moisture that has penetrated far into subfloor framing all point toward a gradual leak, which is typically excluded from coverage. A claim discovered through a routine inspection or a sudden water bill spike — without those extended‑exposure signs — supports a finding of sudden and accidental damage.</li>
             </ul>
             <p className="text-slate-300">
-              While there is no single TDI publication dedicated specifically to slab leaks, the agency's general guidance on water damage claims — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases and should be cited alongside industry practice.
+              While there is no single TDI publication dedicated specifically to slab leaks, the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">agency's general guidance on water damage claims</a> — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases and should be cited alongside industry practice.
             </p>
           </section>
 

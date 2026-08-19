@@ -97,7 +97,7 @@ export default function PolybutylenePipeGuidePage() {
               Polybutylene pipe is not just a maintenance issue - it is a serious insurance consideration. Many carriers are reluctant to provide or renew coverage for homes with known PB piping, and those that do often charge significantly higher premiums.
             </p>
             <p className="text-slate-300 mb-4">
-              The reason is straightforward: polybutylene has a well-documented, statistically significant history of premature failure. Insurers classify the resulting damage as a &ldquo;gradual&rdquo; issue stemming from material degradation, rather than a sudden and accidental event. As a result, standard homeowners policies often exclude water damage caused by PB pipe failures. This framework - sudden vs. gradual - is the same one established by the Texas Department of Insurance&apos;s general guidance on water damage claims, and it applies directly to polybutylene failures.
+              The reason is straightforward: polybutylene has a well-documented, statistically significant history of premature failure. Insurers classify the resulting damage as a &ldquo;gradual&rdquo; issue stemming from material degradation, rather than a sudden and accidental event. As a result, standard homeowners policies often exclude water damage caused by PB pipe failures. This framework - sudden vs. gradual - is the same one established by the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas Department of Insurance&apos;s general guidance on water damage claims</a>, and it applies directly to polybutylene failures.
             </p>
             <p className="text-slate-300 mb-4">
               A Texas-based public adjuster firm describes this distinction plainly: a poly-B failure that happens suddenly counts as a covered water-damage event, while the pipe replacement itself is treated as routine maintenance and stays the homeowner&apos;s responsibility. Carriers sometimes push back by arguing the failure was gradual rather than sudden, and Texas policies commonly exclude any seepage that has been ongoing for 14 days or more.
@@ -137,7 +137,7 @@ export default function PolybutylenePipeGuidePage() {
             </p>
             <p className="text-slate-300 mb-4">Before approving any replacement work, homeowners should:</p>
             <ol className="list-decimal list-inside text-slate-300 space-y-2 mb-4">
-              <li>Confirm the plumber holds an active Master or Journeyman license from the Texas State Board of Plumbing Examiners (TSBPE).</li>
+              <li>Confirm the plumber holds an active Master or Journeyman license from the <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas State Board of Plumbing Examiners (TSBPE)</a>.</li>
               <li>Obtain a written, itemized quote that separates labor, materials, permits, and any restoration work.</li>
               <li>Ask whether the quote includes a post-installation pressure test and municipal inspection.</li>
             </ol>

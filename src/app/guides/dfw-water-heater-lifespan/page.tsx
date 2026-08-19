@@ -76,7 +76,7 @@ export default function WaterHeaterLifespanGuidePage() {
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Fort Worth:</strong> 7-10 GPG (hard)</li>
-              <li><strong>Dallas:</strong> 7-11 GPG (hard to very hard); Dallas Water Utilities classifies the city's own supply as moderately hard, averaging 140-160 mg/L (roughly 8-9 GPG)</li>
+              <li><strong>Dallas:</strong> 7-11 GPG (hard to very hard); <a href="https://dallascityhall.com/departments/waterutilities/DCH%20Documents/pdf/water-quality-report.pdf" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Dallas Water Utilities' own water quality report</a> classifies the city's supply as moderately hard, averaging 140-160 mg/L (roughly 8-9 GPG)</li>
               <li><strong>Allen &amp; Plano:</strong> 9-13 GPG (hard to very hard)</li>
               <li><strong>Frisco &amp; McKinney:</strong> 10-14 GPG (very hard)</li>
               <li><strong>Rockwall:</strong> 12-16 GPG (very hard)</li>
@@ -102,7 +102,7 @@ export default function WaterHeaterLifespanGuidePage() {
               <li><strong>Check for leaks, corrosion at fittings, and venting condition</strong> as part of the same annual pass.</li>
             </ul>
             <p className="text-slate-300 mb-4">
-              Texas plumbing code also sets baseline installation requirements that affect long-term reliability, not just initial safety. Requirements documented by DFW-area municipalities (using Frisco, TX as a representative example) include: a properly sized T&amp;P discharge line terminating 6 inches above grade outside the building; a drain pan under every water heater with its own drain line; a thermal expansion control device on any closed system; sediment traps on gas connections per IRC/IFGC standards; and correct venting clearance and rise. These aren't optional extras - they're code minimums, and a unit installed without them is both a safety risk and, often, a sign that other maintenance was skipped too.
+              Texas plumbing code also sets baseline installation requirements that affect long-term reliability, not just initial safety. Requirements documented by DFW-area municipalities (using <a href="https://www.friscotexas.gov/1696/Residential-Permits" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">City of Frisco, TX residential permit requirements</a> as a representative example) include: a properly sized T&amp;P discharge line terminating 6 inches above grade outside the building; a drain pan under every water heater with its own drain line; a thermal expansion control device on any closed system; sediment traps on gas connections per IRC/IFGC standards; and correct venting clearance and rise. These aren't optional extras - they're code minimums, and a unit installed without them is both a safety risk and, often, a sign that other maintenance was skipped too.
             </p>
             <p className="text-slate-400 text-sm mt-4">
               <strong>Sources:</strong> A.O. Smith / Hotwater.com maintenance guidance; City of Frisco, TX water heater installation requirements (representative of DFW-area municipal code).

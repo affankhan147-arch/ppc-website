@@ -82,7 +82,7 @@ export default function BurstPipesGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: Is a Burst Pipe Covered by Homeowners Insurance in Texas?</h2>
             <p className="text-slate-300 mb-4">
-              Most Texas homeowners policies do cover water damage from a burst or broken pipe, according to the Texas Department of Insurance - but "most" is doing real work in that sentence, and TDI is explicit that exceptions exist. The details of what's covered, what your deductible looks like, and whether gradual damage from a slow, undiscovered leak is treated differently than sudden pipe failure all depend on your specific policy, so it's worth reading the water-damage section of your policy before you need it, not after.
+              Most Texas homeowners policies do cover water damage from a burst or broken pipe, according to the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas Department of Insurance</a> - but "most" is doing real work in that sentence, and TDI is explicit that exceptions exist. The details of what's covered, what your deductible looks like, and whether gradual damage from a slow, undiscovered leak is treated differently than sudden pipe failure all depend on your specific policy, so it's worth reading the water-damage section of your policy before you need it, not after.
             </p>
             <p className="text-slate-300 mb-4">
               One important distinction TDI draws: a standard homeowners policy covers water damage from a broken pipe inside your home, but it does not cover flood damage - water that enters from outside, such as rising groundwater or storm runoff. Those require a separate flood insurance policy. A burst supply line under a sink is a plumbing claim; water that comes in through the foundation during a storm is a flood claim, and mixing the two up can mean a denied claim.
@@ -119,7 +119,7 @@ export default function BurstPipesGuidePage() {
               <li><strong>If your home still has galvanized or polybutylene supply lines,</strong> treat proactive replacement as a real option rather than waiting for a failure - both materials become significantly more failure-prone with age, and a planned replacement is dramatically cheaper than an emergency one plus water damage cleanup.</li>
             </ul>
             <p className="text-slate-400 text-sm mt-4">
-              <strong>Sources:</strong> Groundworks Texas frozen pipe survey (Winter Storm Uri, February 2021); Texas Department of Insurance guidance on water damage and burst pipe coverage.
+              <strong>Sources:</strong> Groundworks Texas frozen pipe survey (Winter Storm Uri, February 2021); <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas Department of Insurance guidance on water damage and burst pipe coverage</a>; <a href="https://www.tdi.texas.gov/consumer/storms/home-damaged-faq.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">TDI FAQ on homeowners insurance and disaster claims</a>.
             </p>
           </section>
 
