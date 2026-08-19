@@ -62,7 +62,10 @@ export function Footer() {
             <Link href="/disclosure" className="hover:text-[#4FD1C5]">Disclosure</Link>
             <Link href="/blog" className="hover:text-[#4FD1C5]">Emergency guides</Link>
             <TrackedLink href="/partner-with-us" className="hover:text-[#4FD1C5]" eventName="partner_route_click" ctaLocation="footer-partner-link" pageType="footer">
-              Partner with us
+              Plumbing providers: partner with us
+            </TrackedLink>
+            <TrackedLink href="/partners" className="hover:text-[#4FD1C5]" eventName="referral_partner_route_click" ctaLocation="footer-referral-partner-link" pageType="footer">
+              Become a referral partner
             </TrackedLink>
           </div>
         </div>
