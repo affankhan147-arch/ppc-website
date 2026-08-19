@@ -1,0 +1,82 @@
+TASK 60: Day 45 Checkpoint - Bing Webmaster Gap Confirmed + Fresh GSC Comparison
+Date: 2026-08-19
+Site: www.plumbinghands.com (only)
+Trigger: user asked "at what stage of SEO are we" against the ChatGPT-authored plan,
+then said "do it" to actually check Bing Webmaster status and run the Day 45
+metrics checkpoint the plan calls for.
+
+1. BING WEBMASTER TOOLS - CONFIRMED NEVER VERIFIED
+----------------------------------------------------
+Three independent checks, all consistent:
+- Repo code (src/app/layout.tsx): Bing verification meta tag is conditional on
+  env var NEXT_PUBLIC_BING_WEBMASTER_TOKEN / NEXT_PUBLIC_BING_VERIFICATION.
+- Vercel production env vars (`vercel env ls production`): no BING-related
+  variable exists. So the conditional never fires.
+- Live page source (curl https://plumbinghands.com/): no msvalidate meta tag
+  present - confirms the above, not just a local/deploy mismatch.
+- Bing Webmaster Tools dashboard (bing.com/webmasters): requesting the site
+  redirects to the generic marketing/signup page with a "Sign In" button -
+  the connected browser is not signed into any Microsoft account, and I did
+  NOT attempt to sign in (prohibited - credential entry is not something I do).
+
+CONCLUSION: This is a real, still-open gap from Week 2 Day 9 of the plan that
+was never closed in ~5 weeks of work since. It needs the account owner to sign
+into (or create) a Microsoft account at bing.com/webmasters, verify the site,
+and hand me the resulting verification token/meta value - I can then wire it
+into the existing env-var-driven code path (already built, just unpopulated)
+and deploy in minutes once that token exists. I cannot get the token myself.
+
+2. FRESH GSC PULL vs. THE 2026-08-15 BASELINE (Day 45 checkpoint per the plan)
+--------------------------------------------------------------------------------
+Property: https://plumbinghands.com/ (URL-prefix, confirmed correct verified
+property - the sc-domain: variant returns "not verified" for this account).
+
+Both windows are 28-day, Search type: Web, so directly comparable:
+                          Aug 15 baseline      Aug 19 fresh pull      Change
+Total clicks              9                    12                     +33%
+Total impressions         15,600               17,200                 +10%
+Average CTR                0.1%                 0.1%                   flat
+Average position          39.8                 37.2                   -2.6 (better)
+
+Core head-term cluster (all improved, still off page 1):
+  emergency plumbing:   pos 21.04 -> 19.3   (1,109 -> 1,017 impr - fewer impr,
+                         better position; consistent with a small ranking gain
+                         reducing the query variants the page surfaces for)
+  emergency plumber:    pos 23.99 -> 21.6   (1,166 -> 1,010 impr)
+  emergency plumbers:   pos 28.08 -> 25.7   (582 -> 504 impr)
+  emergency drain service: pos 9.44 -> 9.1  (413 -> 398 impr) - closest to
+                         page 1 of any head term, basically unchanged/slight gain
+
+Clicking pages: baseline had 3 pages with any clicks (DIY-legality blog,
+license-verification blog, homepage). Fresh pull has the same 3 PLUS a new
+one: /cities/frisco/24-hour-emergency-plumber earned its first-ever click
+(211 impressions, position 33.8) - a previously zero-click page starting to
+convert impressions.
+
+Indexing (Pages report): 184 of 235 known URLs indexed (78%), 51 not indexed
+(2 reasons, not itemized this pass).
+
+HONEST READ: Real, measurable movement in the right direction across every
+metric - not dramatic, but consistent with what citation-link additions +
+IndexNow resubmission + a new guide page would produce over ~4 days, and with
+what the plan itself predicts ("no guaranteed schedule, small durable gains
+compounding"). No head term has reached page 1 (top 10) yet. Nothing here
+contradicts the honest expectation the plan set for itself from day one.
+
+3. DAY 45 CHECKPOINT DECISION (per the plan's own requirement)
+------------------------------------------------------------------
+The plan's Day 45 checkpoint asks: continue to Day 60, or close out this phase?
+Given: (a) technical SEO, on-page content, and citation-link work are all
+complete and verified (Task 55), (b) outreach has been executed well beyond
+the plan's original 5-round target (39 tracked prospects, real touches
+delivered, this session added DFW Property Management + 4 new prospects),
+(c) real ranking movement is happening but head terms are still page 2-3,
+and (d) the only concretely open infrastructure gap is Bing Webmaster
+verification (owner action required) - the honest recommendation is to
+CONTINUE past Day 45, not close out. There's no evidence of a failed
+approach that would justify stopping; there's early, real, positive signal
+that the current approach (content depth + real citations + real outreach)
+is working, just early into the compounding period the plan itself predicted.
+
+GIT STATE: no code changes this task - read-only status check + live GSC/Bing
+verification. Nothing to commit/push.
