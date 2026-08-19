@@ -1,0 +1,40 @@
+TASK 54: CLOSED THE 2 REMAINING FLAGGED CITATION-LINK GAPS FROM TASK 53
+Date: 2026-08-19
+Site: www.plumbinghands.com ONLY
+Commit: b8a1d91 | Deployed live, verified.
+
+CONTEXT
+Task 53 fixed 6 guide pages with unlinked government/institutional citations
+but flagged 2 lower-priority items as "future pass": the National Weather
+Service mention on /guides/dfw-plumbing-data, and the HomeAdvisor/Angi cost
+sources on /guides/dfw-emergency-plumbing-costs. User asked to resolve both.
+
+FIX SHIPPED (4 real, individually verified hyperlinks across 2 files)
+1. dfw-plumbing-data/page.tsx
+   - "National Weather Service Fort Worth office's own historical record of
+     significant regional snow and ice events" now links to the real NWS
+     Fort Worth page https://www.weather.gov/fwd/dsnows - verified via
+     WebFetch that it documents snow/ice events from 1841 through 2025,
+     matching the claim exactly.
+   - "Federal Reserve Bank of Dallas' regional economic indicators" now
+     links to https://www.dallasfed.org/research/indicators/dfw - the
+     Dallas Fed's real DFW economic indicators series.
+   - Both links also added to the trailing "Sources:" line.
+2. dfw-emergency-plumbing-costs/page.tsx
+   - "HomeAdvisor" now links to https://www.homeadvisor.com/cost/plumbing/
+   - "Angi" now links to https://www.angi.com/articles/emergency-plumber-cost.htm
+   - Both are real, live, current cost-guide pages matching the citation.
+
+VERIFICATION METHOD
+Each URL checked via WebSearch/WebFetch before being added. No URL invented.
+
+PROCESS
+git-safety-checked (no collision), clean build (Task54_BuildLog.txt, no
+errors), staged only the 2 changed files, committed (b8a1d91), pushed,
+Vercel deploy confirmed Ready, live-verified all 4 links present in
+production HTML via curl.exe + content search on both pages - 4/4 passed.
+
+STATUS
+Both items from Task 53's "not done" list are now fully closed. Every named
+government/institutional/industry-data-source citation across all 9 /guides/
+pages on plumbinghands.com is now a real, verified, clickable hyperlink.
