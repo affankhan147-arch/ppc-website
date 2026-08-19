@@ -1,0 +1,71 @@
+TASK 61: Fixed orphaned /partners and weakly-linked /problems pages
+Date: 2026-08-19
+Site: www.plumbinghands.com (only)
+
+ROOT CAUSE (confirmed via GSC "Discovered - currently not indexed" drilldown)
+-------------------------------------------------------------------------------
+50 URLs sitting in GSC's "Discovered - currently not indexed" bucket, including
+/partners and /problems. Ruled out via direct evidence:
+- HTTP status: all 200 (curl-checked)
+- noindex meta tag: none present (grepped live HTML, zero matches)
+- canonical tags: correct, self-referencing on both pages
+Actual cause: weak internal PageRank flow.
+- /partners had ZERO inbound href links anywhere in src/ (fully orphaned,
+  discoverable only via sitemap.xml)
+- /problems had exactly ONE inbound link, from an obscure page
+  (/tools/problem-checklists), not from nav/footer/homepage
+
+FIX APPLIED
+-----------
+1. src/data/site.ts - added { label: "Problems", href: "/problems" } to the
+   shared `navigation` export, which drives both desktop Header.tsx and mobile
+   nav. /problems now has sitewide nav link equity.
+2. src/components/Footer.tsx - Legal column: kept the existing
+   "Plumbing providers: partner with us" link to /partner-with-us (relabeled
+   for clarity - this is the DISTINCT page for licensed plumbing providers
+   wanting PlumbingHands' leads), and added a new
+   "Become a referral partner" link to /partners (the page for referral
+   partners - restoration companies, insurance agents, property managers,
+   real estate agents who send homeowner referrals TO PlumbingHands).
+   /partners now has sitewide footer link equity for the first time ever.
+
+Confirmed /partners and /partner-with-us are genuinely different pages
+(checked both source files) before fixing - avoided the mistake of merging
+or redirecting one into the other.
+
+Cross-checked for prior related work: Partners_Page_Audit_Log.txt and
+Partners_Page_Fix_Log.txt (07/30/2026) addressed different issues (fake
+commission language, placeholder phone number) - no conflict.
+Task40_ProblemsLinkCheck.ps1 had diagnosed the /problems weak-linking issue
+once before but never applied a fix - this task closes that gap.
+
+BUILD & DEPLOY
+---------------
+- npm run build: clean, zero errors (Task61_BuildLog.txt), both /partners
+  and /problems compile as static ○ routes
+- Commit 9c0669b: "Task61: fix orphaned /partners and weakly-linked
+  /problems pages - add to main nav and footer"
+- Pushed to origin/master successfully
+- Deployed via `vercel --prod --force --yes` - build completed in 41s,
+  exit code 0, aliased to https://plumbinghands.com
+
+LIVE VERIFICATION (post-deploy)
+---------------------------------
+Fetched live homepage HTML from https://plumbinghands.com/ and confirmed:
+- "Problems" nav link present
+- "referral partner" footer link text present
+Both changes are live and working.
+
+WHAT HAPPENS NEXT (not something more automation can force)
+--------------------------------------------------------------
+Google needs to re-crawl the site and discover these new internal links
+before it re-evaluates /partners and /problems for indexing. This is not
+instant - typically days to a few weeks depending on crawl budget. Two
+things that can speed it up (separate task): (1) IndexNow ping for the
+priority unindexed URLs, (2) GSC manual "Request Indexing" for a small
+batch via URL Inspection tool.
+
+GIT STATE
+---------
+HEAD after this task: 9c0669b (confirmed matching origin/master before
+and after push)
