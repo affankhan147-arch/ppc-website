@@ -1,0 +1,89 @@
+TASK 70: Closed 1 of 8 missing service x city content gaps - main-sewer-line-clog now has
+all 33 city landing pages (was 0)
+Date: 2026-08-21
+Site: www.plumbinghands.com (only)
+Trigger: user asked "is there any thing we should do regarding improving our seo?" -> answered
+with the real GSC/Bing-confirmed status (backlinks/authority is the current bottleneck, not
+technical/content SEO) plus one concrete, still-open content gap found in Task 69 (only 2 of 10
+services had city-specific landing pages). User chose via AskUserQuestion: "Full Tier-1 sweep
+(1 service x 33 cities)".
+WHY main-sewer-line-clog WAS CHOSEN (not an arbitrary pick)
+------------------------------------------------------------
+- It already has a dedicated hero image asset
+  (public/images/services/service-main-sewer-line-clog.jpg) - satisfies project rule #8
+  (image + URL per new page) with zero new image work needed.
+- It's already in the sample buyer's services list alongside the 2 services that already have
+  full city coverage (src/data/buyers.ts: "sample-dfw-emergency-plumbing" buyer covers
+  24-hour-emergency-plumber, emergency-drain-cleaning, main-sewer-line-clog, sewer-backup-help)
+  - so this expansion is consistent with the (currently sample/test-status, pending real owner
+  buyer setup) buyer/service matrix rather than orphaning a brand-new, unmapped service.
+- High commercial/urgent search intent ("sewer line clog", "broken sewer line", "sewer repair
+  near me") - matches project rule #9 (long-tail, service-specific keyword targeting).
+
+WHAT WAS DONE
+-------------
+1. Read src/app/cities/[citySlug]/[serviceSlug]/page.tsx to confirm the page is fully data-driven
+   off src/data/cities.ts's `priorityCityServiceCombos` array (generateStaticParams,
+   dynamicParams = false) - adding a combo there is the only code change needed to create a real,
+   live, indexable page; no new component code required.
+2. Added all 33 cities x "main-sewer-line-clog" to `priorityCityServiceCombos` in
+   src/data/cities.ts (was previously only 2 of 10 services x 33 cities = 66 combos; now 99).
+   Cities: dallas, fort-worth, arlington, plano, irving, garland, frisco, mckinney, denton,
+   lewisville, carrollton, richardson, grand-prairie, mesquite, grapevine, euless, bedford,
+   hurst, keller, southlake, flower-mound, the-colony, allen, rockwall, rowlett, mansfield,
+   cedar-hill, desoto, duncanville, wylie, houston, austin, san-antonio.
+3. `npm run build` - confirmed clean build, exit code 0, and confirmed exactly 33 new
+   .next/server/app/cities/**/main-sewer-line-clog.html files were generated.
+4. Committed (only src/data/cities.ts staged, per standing practice of never `git add -A` in
+   this repo given hundreds of untracked scratch files from prior sessions) - ca86e6b - and
+   pushed to origin/master. HEAD confirmed matching origin before and after.
+5. Deployed via `vercel --prod --force --yes`. Vercel's own build log confirmed
+   "/cities/[citySlug]/[serviceSlug]" now lists 99 total paths (was 66) and total site page
+   count is 256 (was 235 - the 21-page discrepancy vs. 33 new combos is because Vercel's summary
+   collapses some routes; the per-route generateStaticParams count of 99 is the reliable number).
+   Deploy succeeded, aliased to https://plumbinghands.com, "Ready in 50s".
+6. Live-verified 4 sample new URLs (Dallas, McKinney, Houston, Wylie) all return HTTP 200.
+7. Live-verified page content for /cities/dallas/main-sewer-line-clog: unique <title> ("24/7 Main
+   Sewer Line Clog in Dallas, TX | Plumbing Hands"), unique meta description, self-referencing
+   canonical, correct OG/Twitter tags, correct dedicated hero image
+   (service-main-sewer-line-clog.jpg), and correct JSON-LD schema - same quality bar as the
+   original 66 combos, not a stripped-down version.
+8. Confirmed https://plumbinghands.com/sitemap.xml already includes the new URLs (35 matches for
+   "main-sewer-line-clog" in the raw sitemap XML - 33 new city pages + the existing
+   /services/main-sewer-line-clog page + one additional match, consistent).
+9. Submitted all 33 new URLs to IndexNow (HTTP 200, single batch request) to accelerate
+   discovery, matching the Task 62 pattern. Did not run GSC manual "Request Indexing" for all 33
+   individually - that tool is one-at-a-time and rate-limited; IndexNow + sitemap inclusion is
+   the scalable path for a batch this size. Manual GSC requests remain available for hand-picking
+   a few Tier-1 city pages later if the owner wants to nudge crawl priority further.
+WHAT WAS DELIBERATELY NOT DONE THIS PASS
+-----------------------------------------
+- No custom per-city `cityServiceEnhancements` entries (the richer, hand-written decision/
+  provider/safety content blocks like the existing "dallas/emergency-drain-cleaning" one) were
+  written for these 33 new pages. They render using the same base pattern most of the original
+  66 combos already use: shared service-level content from src/data/services.ts
+  (main-sewer-line-clog's shortAnswer/steps/callPrep/commonCauses/mistakesToAvoid/costFactors/
+  faqSeed) combined with each city's own areaHint text, name, and FAQ interpolation - not
+  templated boilerplate, but not deeply bespoke either. This is the same content depth already
+  proven to earn real GSC impressions on other combos (Task 60's audit: 23 different city pages
+  legitimately splitting "emergency drain service" impressions). Writing 33 fully bespoke
+  enhancement blocks in one pass was judged out of scope for this turn; can be layered in
+  incrementally for the Tier-1 cities (dallas, fort-worth, arlington, plano, irving, garland,
+  frisco, mckinney, houston, austin, san-antonio) as a follow-up content task if the user wants
+  deeper differentiation.
+- The other 7 of 8 still-missing services (toilet-overflow-emergency, burst-pipe-emergency,
+  water-heater-emergency, sewer-backup-help, commercial-emergency-plumbing,
+  same-day-plumber-connection, sink-and-shower-drain-backup) still have zero city-specific pages.
+  This task closed exactly 1 of the 8 gaps, per the user's chosen scope ("1 service x 33
+  cities"). The same mechanism (add combos to priorityCityServiceCombos, build, deploy) applies
+  to each remaining service; sewer-backup-help is the next logical pick since it's also already
+  in the sample buyer's services list.
+
+GIT / DEPLOY STATE
+-------------------
+HEAD: ca86e6b (confirmed matching origin/master before and after push)
+Live: https://plumbinghands.com - 99 city+service pages now live (was 66)
+Sitemap: includes all new URLs
+IndexNow: 33 URLs submitted, HTTP 200
+
+NO OTHER CODE TOUCHED. No other website touched (rule #11).
