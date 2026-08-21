@@ -1,0 +1,59 @@
+TASK 71: Closed 2 of 8 missing service x city content gaps - water-heater-emergency now has
+all 33 city landing pages (was 0)
+Date: 2026-08-21
+Site: www.plumbinghands.com (only)
+Trigger: user re-asked "is there any thing we should do regarding improving our seo?" right
+after Task 70 shipped - treated as a request to continue the same, already-approved content
+expansion work (user had approved "Full Tier-1 sweep (1 service x 33 cities)" in the prior turn)
+rather than re-asking the same scoping question again.
+
+WHY water-heater-emergency WAS CHOSEN
+---------------------------------------
+- Already has a dedicated hero image asset (service-water-heater-emergency.jpg in
+  src/lib/articleImages.ts's serviceHeroImages map) - rule #8 satisfied with zero new image work.
+- Already has real buyer-matrix coverage: src/data/buyers.ts's second sample buyer
+  ("sample-dfw-water-heater") lists water-heater-emergency and same-day-plumber-connection -
+  same reasoning as Task 70's pick (stay inside the existing buyer/service structure rather than
+  building pages for an unmapped service).
+- High commercial search volume / clear buyer intent ("water heater repair near me", "hot water
+  heater leaking", "water heater emergency") - rule #9 long-tail targeting.
+WHAT WAS DONE (identical pipeline to Task 70)
+------------------------------------------------
+1. Confirmed local git HEAD matched origin/master before starting (2061c68).
+2. Added all 33 cities x "water-heater-emergency" to `priorityCityServiceCombos` in
+   src/data/cities.ts (99 combos -> 132).
+3. `npm run build` - clean build, exit code 0; confirmed 33 new
+   .next/server/app/cities/**/water-heater-emergency.html files generated.
+4. Committed (only src/data/cities.ts staged) - 0fc9d8b - pushed to origin/master.
+5. Deployed via `vercel --prod --force --yes`. Vercel's build log confirmed
+   "/cities/[citySlug]/[serviceSlug]" now lists 132 total paths (was 99) and total site page
+   count is 289 (was 256). Deploy succeeded, aliased to https://plumbinghands.com.
+6. Live-verified 4 sample new URLs (Dallas, McKinney, Austin, Wylie) - all HTTP 200.
+7. Confirmed https://plumbinghands.com/sitemap.xml includes the new URLs (35 matches for
+   "water-heater-emergency" in the raw sitemap XML).
+8. Submitted all 33 new URLs to IndexNow - HTTP 200, single batch request.
+
+CUMULATIVE STATE ACROSS TASK 69-71
+-------------------------------------
+- Service x city landing page coverage: was 2 of 10 services (66 pages) at the start of this
+  session's SEO push. Now 4 of 10 services (24-hour-emergency-plumber, emergency-drain-cleaning,
+  main-sewer-line-clog, water-heater-emergency) x 33 cities = 132 live pages.
+- Remaining gap: 6 of 10 services still have zero city-specific pages - toilet-overflow-emergency,
+  burst-pipe-emergency, sewer-backup-help, commercial-emergency-plumbing,
+  same-day-plumber-connection, sink-and-shower-drain-backup. The first two of those six
+  (toilet-overflow-emergency, burst-pipe-emergency) also already have dedicated hero images in
+  serviceHeroImages, making them the next logical picks by the same selection criteria used for
+  Tasks 70 and 71.
+- Same caveat as Task 70 carries forward: these new pages use the shared service-level content +
+  per-city area text pattern, not fully bespoke per-city write-ups. Available as a follow-up
+  refinement for Tier-1 cities specifically if requested.
+
+GIT / DEPLOY STATE
+-------------------
+HEAD: 0fc9d8b (confirmed matching origin/master before and after push)
+Live: https://plumbinghands.com - 132 city+service pages now live (was 99, was 66 at session
+start)
+Sitemap: includes all new URLs
+IndexNow: 33 URLs submitted, HTTP 200
+
+NO OTHER CODE TOUCHED. No other website touched (rule #11).
