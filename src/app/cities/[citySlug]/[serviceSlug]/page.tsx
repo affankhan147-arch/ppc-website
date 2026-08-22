@@ -29,8 +29,11 @@ export async function generateMetadata({ params }: Props) {
   const city = cities.find((item) => item.slug === citySlug);
   const service = services.find((item) => item.slug === serviceSlug);
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
+  const hasOwnUrgencySignal = service.slug === "24-hour-emergency-plumber" || service.slug === "same-day-plumber-connection";
   return buildMetadata({
-    title: `24/7 ${titleCase(service.name)} in ${city.name}, TX`,
+    title: hasOwnUrgencySignal
+      ? `${titleCase(service.name)} in ${city.name}, TX`
+      : `24/7 ${titleCase(service.name)} in ${city.name}, TX`,
     description: truncateForMeta(`Need ${titleCase(service.name)} in ${city.name}? ${service.shortAnswer}`),
     path: `/cities/${city.slug}/${service.slug}`
   });

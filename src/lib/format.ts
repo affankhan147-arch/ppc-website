@@ -1,5 +1,17 @@
+const TITLE_CASE_MINOR_WORDS = new Set([
+  "a", "an", "and", "as", "at", "but", "by", "for", "in", "nor", "of", "on", "or", "per", "the", "to", "vs"
+]);
+
 export function titleCase(value: string) {
-  return value.replace(/\b\w/g, (letter) => letter.toUpperCase());
+  return value
+    .split(" ")
+    .map((word, index) => {
+      if (index > 0 && TITLE_CASE_MINOR_WORDS.has(word.toLowerCase())) {
+        return word.toLowerCase();
+      }
+      return word.replace(/\b\w/g, (letter) => letter.toUpperCase());
+    })
+    .join(" ");
 }
 
 export function slugify(value: string) {
