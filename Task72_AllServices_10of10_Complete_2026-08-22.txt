@@ -1,0 +1,85 @@
+TASK 72: 10/10 services now have full 33-city landing page coverage (was 4/10 after Task 71,
+2/10 at session start)
+Date: 2026-08-22
+Site: www.plumbinghands.com (only)
+Trigger: user said "keep going to 10/10 complete city pages" - explicit instruction to finish
+the content-gap closure work started in Task 69/70/71 for the remaining 6 services in one pass.
+
+WHAT WAS DONE
+-------------
+Batched all 6 remaining services x 33 cities into a single build/commit/deploy cycle instead of
+repeating the Task 70/71 pattern six separate times, since the user asked to complete the full
+set and a single pass is materially faster with no quality tradeoff (same generateStaticParams
+mechanism regardless of batch size).
+
+Services added (198 new combos = 6 services x 33 cities):
+1. toilet-overflow-emergency
+2. burst-pipe-emergency
+3. sewer-backup-help
+4. commercial-emergency-plumbing
+5. same-day-plumber-connection
+6. sink-and-shower-drain-backup
+
+Cities (same 33 as every prior task): dallas, fort-worth, arlington, plano, irving, garland,
+frisco, mckinney, denton, lewisville, carrollton, richardson, grand-prairie, mesquite,
+grapevine, euless, bedford, hurst, keller, southlake, flower-mound, the-colony, allen,
+rockwall, rowlett, mansfield, cedar-hill, desoto, duncanville, wylie, houston, austin,
+san-antonio.
+STEPS
+-----
+1. Confirmed local git HEAD matched origin/master before starting (04cf36d).
+2. Added all 198 combos to `priorityCityServiceCombos` in src/data/cities.ts (132 -> 330).
+3. `npm run build` - clean build, exit code 0. Verified exactly 33 new .html files were
+   generated per service (198 total), spot-checked all 6 service names individually.
+4. Committed (only src/data/cities.ts staged) - 081d8ba - pushed to origin/master.
+5. Deployed via `vercel --prod --force --yes`. Vercel's build log confirmed
+   "/cities/[citySlug]/[serviceSlug]" now lists 330 total paths (was 132) and total site page
+   count is 487 (was 289). Deploy succeeded, aliased to https://plumbinghands.com, "Ready in 1m".
+6. Live-verified all 6 new services for Dallas (HTTP 200 each), plus 4 additional spot checks
+   across other cities (Houston/sewer-backup-help, Wylie/sink-and-shower-drain-backup,
+   Austin/commercial-emergency-plumbing, San Antonio/same-day-plumber-connection) - all HTTP 200.
+7. Confirmed https://plumbinghands.com/sitemap.xml now contains exactly 330 /cities/{city}/
+   {service} URLs (10 services x 33 cities, counted directly from the live sitemap XML, not
+   estimated).
+8. Submitted all 198 new URLs to IndexNow in a single batch request - HTTP 200.
+
+FINAL STATE: SERVICE x CITY COVERAGE
+---------------------------------------
+All 10 services in src/data/services.ts now have a live, indexable page for all 33 cities in
+src/data/cities.ts. Total live city+service pages: 330 (up from 66 at the start of this SEO
+session - a 5x increase). This closes the specific content gap identified in Task 69's campaign
+research (only 2 of 10 services had city coverage) completely, across all 8 services that were
+missing it (Task 70: main-sewer-line-clog, Task 71: water-heater-emergency, Task 72: the
+remaining 6).
+WHAT WAS DELIBERATELY NOT DONE / CARRIED-FORWARD CAVEATS
+------------------------------------------------------------
+- Image coverage: toilet-overflow-emergency and burst-pipe-emergency already had dedicated hero
+  images in src/lib/articleImages.ts (serviceHeroImages), so those 66 new pages use a real,
+  service-specific photo. The other 4 services (sewer-backup-help, commercial-emergency-plumbing,
+  same-day-plumber-connection, sink-and-shower-drain-backup) do NOT have a dedicated hero image
+  mapped and fall back to the site's existing generic photo rotation
+  (getArticleImage()'s fallbackPhotos array: drain-cleaning, sewer-inspection, toilet-repair,
+  water-heater-inspection, provider-crew, service-van, homeowner-consultation) - the same
+  fallback mechanism these 4 services' existing /services/[slug] pages already use today, so this
+  is not a new or worse gap, just an existing one now present on 4x33=132 additional pages.
+  Sourcing/generating 4 new dedicated hero images is a real, separate follow-up task if the owner
+  wants full rule-#8 compliance on every page rather than the fallback rotation.
+- No custom per-city `cityServiceEnhancements` write-ups for any of these 264 pages added across
+  Tasks 70-72 (same as documented in Task 70/71) - they use the shared service-level content
+  (steps/callPrep/commonCauses/costFactors/faqSeed from services.ts) plus per-city areaHint
+  text, matching the pattern most of the original 66 combos already used. Bespoke content can be
+  layered onto the Tier-1 cities incrementally if requested.
+- The underlying ranking bottleneck has not changed: GSC and Bing Webmaster Tools both
+  independently flagged backlinks/domain authority as the limiting factor (Task 60, Task 63),
+  not content coverage. This content-completeness work closes a real gap and gives Google many
+  more precise, indexable, long-tail URLs to eventually rank - but it will not by itself move the
+  head terms to page 1. Outreach/backlink building remains the primary lever.
+
+GIT / DEPLOY STATE
+-------------------
+HEAD: 081d8ba (confirmed matching origin/master before and after push)
+Live: https://plumbinghands.com - 330 city+service pages live (10/10 services x 33 cities)
+Sitemap: confirmed exactly 330 /cities/{city}/{service} URLs present
+IndexNow: 198 URLs submitted this task (264 total across Tasks 70-72), HTTP 200
+
+NO OTHER CODE TOUCHED. No other website touched (rule #11).
