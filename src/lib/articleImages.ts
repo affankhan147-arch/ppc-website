@@ -4,7 +4,11 @@ export const serviceHeroImages: Record<string, string> = {
   "main-sewer-line-clog": "/images/services/service-main-sewer-line-clog.jpg",
   "toilet-overflow-emergency": "/images/services/service-toilet-overflow-emergency.jpg",
   "burst-pipe-emergency": "/images/services/service-burst-pipe-emergency.jpg",
-  "water-heater-emergency": "/images/services/service-water-heater-emergency.jpg"
+  "water-heater-emergency": "/images/services/service-water-heater-emergency.jpg",
+  "sewer-backup-help": "/images/photography/sewer-inspection.webp",
+  "commercial-emergency-plumbing": "/images/photography/provider-crew.webp",
+  "same-day-plumber-connection": "/images/photography/service-van.webp",
+  "sink-and-shower-drain-backup": "/images/photography/plumbing-diagnostic.jpg"
 };
 
 const fallbackPhotos = [
