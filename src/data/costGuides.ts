@@ -69,6 +69,16 @@ export const costGuides: CostGuide[] = [
     questionsToAsk: ["Can the water be isolated safely?", "Is leak access included or separate?", "Is this a temporary stop or a permanent repair?", "What restoration work is outside the plumbing scope?"],
     relatedServiceSlug: "burst-pipe-emergency",
     relatedProblemSlugs: ["water-shutoff-valve-will-not-close", "ceiling-leak-from-plumbing", "burst-pipe-first-steps"]
+  },
+  {
+    slug: "tankless-water-heater-installation-cost",
+    title: "Tankless water heater installation cost",
+    directAnswer: "Tankless water heater installation cost depends heavily on whether it's a direct swap for an existing tankless unit or a conversion from a tank system, since a conversion often requires gas line upsizing, new venting, and electrical work that a like-for-like swap does not.",
+    rangeGuidance: "A straightforward tankless-to-tankless replacement is usually simpler than a tank-to-tankless conversion. Unit capacity (GPM), gas versus electric, venting changes, gas line sizing, and old tank removal or disposal all affect the final cost -- ask which of these apply to your home before comparing quotes.",
+    factors: ["tank-to-tankless conversion vs. direct swap", "unit capacity (GPM) needed for household size", "gas line upsizing", "new venting requirements", "electrical requirements for electric units", "old tank removal and disposal", "permit and code compliance"],
+    questionsToAsk: ["Is this a direct swap or a conversion from a tank?", "What GPM size is being quoted for my household?", "Does the gas line need to be upsized?", "Is a permit included, and who pulls it?", "Is removal and disposal of the old unit included?"],
+    relatedServiceSlug: "water-heater-emergency",
+    relatedProblemSlugs: ["no-hot-water-emergency", "water-heater-leaking-emergency"]
   }
 ];
 

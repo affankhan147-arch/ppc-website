@@ -12,7 +12,7 @@ import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema
 export const metadata = buildMetadata({
   title: "DFW Emergency Plumbing Cost Guides",
   description: truncateForMeta(
-    "Six plain-language cost guides covering what affects emergency plumbing pricing in Dallas-Fort Worth and what to ask before you approve work."
+    "Seven plain-language cost guides covering what affects emergency plumbing pricing in Dallas-Fort Worth and what to ask before you approve work."
   ),
   path: "/cost-guides"
 });
@@ -39,7 +39,7 @@ export default function CostGuidesIndexPage() {
           webPageSchema(
             path,
             "DFW Emergency Plumbing Cost Guides",
-            "Six plain-language cost guides covering what affects emergency plumbing pricing in Dallas-Fort Worth and what to ask before you approve work."
+            "Seven plain-language cost guides covering what affects emergency plumbing pricing in Dallas-Fort Worth and what to ask before you approve work."
           ),
           breadcrumbSchema([{ name: "Cost guides", path }]),
           faqSchema(faqs)
