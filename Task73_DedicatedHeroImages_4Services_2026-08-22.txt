@@ -1,0 +1,87 @@
+TASK 73: Assigned dedicated, thematically-matched hero images to the 4 services that were
+relying on the generic photo rotation - all 10 services now have a specific image
+Date: 2026-08-22
+Site: www.plumbinghands.com (only)
+Trigger: user's explicit follow-up on the Task 72 honest note about fallback photos:
+"add photos and improve quality to strengthen"
+
+CONSTRAINT RESPECTED: public/images/services/README.md states "Use service visuals only when
+the source, license, and permission are tracked. Do not imply licensed service work unless
+verified by the owner." This ruled out downloading new, unverified stock photography from an
+external source this task - no new external image acquisition was done. Instead, the fix uses
+photos ALREADY present and tracked in this repo's own asset library
+(public/images/photography/), reassigning them from "generic fallback pool member" to
+"specific service's dedicated hero image" - a real content-quality improvement using only
+already-licensed, already-approved assets.
+WHAT WAS DONE
+-------------
+Viewed the actual candidate images (not just filenames) to pick the best literal/thematic match
+for each of the 4 services, rather than guessing from names alone:
+
+1. sewer-backup-help -> /images/photography/sewer-inspection.webp
+   (technician using a sewer camera inspection rig at an outdoor cleanout - directly on-topic
+   for diagnosing a sewer backup)
+2. commercial-emergency-plumbing -> /images/photography/provider-crew.webp
+   (three technicians working from a service van in a driveway - reads as a multi-person/
+   commercial-scale dispatch, distinct from the single-technician images used elsewhere)
+3. same-day-plumber-connection -> /images/photography/service-van.webp
+   (single technician arriving promptly at a home with a fully stocked van - matches the
+   "same-day" urgency/arrival theme)
+4. sink-and-shower-drain-backup -> /images/photography/plumbing-diagnostic.jpg
+   (technician working directly under a sink on the drain/trap assembly - the most literal
+   match available, better fit than the sewer-camera-themed alternatives)
+
+Checked first whether plumbing-diagnostic.jpg or home-emergency-plumber.jpg (two photography
+folder images not previously in the site's fallbackPhotos rotation) were already used elsewhere
+for a specific single-purpose page before reassigning: plumbing-diagnostic.jpg is already used
+on /guides/dfw-gas-line-safety and home-emergency-plumber.jpg on
+/guides/dfw-polybutylene-pipe-replacement. Reuse across an unrelated guide page and a service
+hero is normal/expected on this site (the existing fallbackPhotos images are themselves reused
+across many combo pages already) - did not treat prior use elsewhere as disqualifying.
+home-emergency-plumber.jpg was NOT used (it shows a homeowner, not a technician - inconsistent
+with the established hero-image alt-text pattern across every other combo page, "provider
+responding to an active service call").
+
+Edited src/lib/articleImages.ts's `serviceHeroImages` map to add these 4 entries alongside the
+existing 6 dedicated images. No new image files added to the repo - zero new download/licensing
+exposure.
+
+`npm run build` - clean build, exit code 0. Committed (only src/lib/articleImages.ts staged) -
+e971ce3 - pushed to origin/master. Deployed via `vercel --prod --force --yes` - build log
+confirmed the page/route counts were unchanged (330 city+service paths, 487 total pages, as
+expected for an image-only content change) - deploy succeeded, aliased to
+https://plumbinghands.com, "Ready in 1m".
+LIVE VERIFICATION
+------------------
+Fetched the live HTML for /cities/dallas/{service} for all 4 services and confirmed each page's
+image markup now references its new dedicated filename (not a fallback-rotation image):
+- sewer-backup-help -> sewer-inspection: found True
+- commercial-emergency-plumbing -> provider-crew: found True
+- same-day-plumber-connection -> service-van: found True
+- sink-and-shower-drain-backup -> plumbing-diagnostic: found True
+All 4 x 33 = 132 pages across these services now render their correct dedicated image (the
+lookup is by serviceSlug only, so this fix applies uniformly across every city automatically -
+no per-city verification needed beyond the spot check).
+
+WHAT WAS NOT DONE / HONEST LIMITS
+------------------------------------
+- No brand-new photography was sourced, generated, or downloaded. All 4 assignments reuse
+  images already committed to this repo under an already-tracked license, per the explicit
+  constraint in public/images/services/README.md. If the owner wants genuinely new, unique
+  photography per service (rather than thematically-reassigned existing assets), that requires
+  either the owner's own real job-site photos or a specific, named stock/license source for this
+  assistant to pull from with permission - open item, not started.
+- These 4 images are still shared with other pages on the site (sewer-inspection.webp and
+  provider-crew.webp and service-van.webp remain in the fallbackPhotos rotation array too, so
+  they can still appear elsewhere via the random-rotation path; plumbing-diagnostic.jpg is also
+  used on the gas-line-safety guide). This is consistent with how every other service's image
+  already works on this site (all 10 dedicated hero images are also technically reusable images,
+  not commissioned one-off photos) - not a new limitation introduced by this task.
+
+GIT / DEPLOY STATE
+-------------------
+HEAD: e971ce3 (confirmed matching origin/master before and after push)
+Live: https://plumbinghands.com - all 10 services now have a dedicated serviceHeroImages entry;
+0 services remaining on the generic fallback rotation for their primary hero image.
+
+NO OTHER CODE TOUCHED. No other website touched (rule #11).
