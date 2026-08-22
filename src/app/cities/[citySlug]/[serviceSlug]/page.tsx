@@ -9,7 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityServiceEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
-import { getArticleImage } from "@/lib/articleImages";
+import { getCityServiceImage } from "@/lib/articleImages";
 import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
@@ -89,7 +89,7 @@ export default async function CityServicePage({ params }: Props) {
         </article>
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
-            src={getArticleImage(service.slug, priorityCityServiceCombos.findIndex((combo) => combo.citySlug === city.slug && combo.serviceSlug === service.slug))}
+            src={getCityServiceImage(city.slug, service.slug, priorityCityServiceCombos.findIndex((combo) => combo.citySlug === city.slug && combo.serviceSlug === service.slug))}
             alt={`${displayName} in ${city.name}, TX - provider responding to an active service call`}
             fill
             sizes="(min-width: 1024px) 56rem, 100vw"

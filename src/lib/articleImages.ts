@@ -1,3 +1,5 @@
+import { cityServiceHeroImages } from "./cityServiceImages";
+
 export const serviceHeroImages: Record<string, string> = {
   "24-hour-emergency-plumber": "/images/services/service-24hr-emergency-plumber.jpg",
   "emergency-drain-cleaning": "/images/services/service-emergency-drain-cleaning.jpg",
@@ -32,4 +34,14 @@ export function getArticleImage(serviceSlug: string | undefined, seedIndex: numb
 export function getGridImage(index: number) {
   const safeIndex = ((index % fallbackPhotos.length) + fallbackPhotos.length) % fallbackPhotos.length;
   return fallbackPhotos[safeIndex];
+}
+
+// Returns a unique, real photograph for a specific city+service combination when one has been
+// sourced (see src/lib/cityServiceImages.ts, generated from scripts/image-manifest.csv). Falls
+// back to the service-level or rotation image for any combination not yet covered.
+export function getCityServiceImage(citySlug: string | undefined, serviceSlug: string | undefined, seedIndex: number) {
+  if (citySlug && serviceSlug && cityServiceHeroImages[serviceSlug]?.[citySlug]) {
+    return cityServiceHeroImages[serviceSlug][citySlug];
+  }
+  return getArticleImage(serviceSlug, seedIndex);
 }
