@@ -4148,6 +4148,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
       { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
       { label: "Repair or replace decision guide", href: "/blog/leaking-water-heater-repair-or-replace-dfw" },
+      { label: "Leaking from the bottom: causes and fixes", href: "/blog/water-heater-leaking-from-the-bottom-dallas-causes-and-fixes" },
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
     ]
   },
@@ -4263,6 +4264,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water heater leaking emergency", href: "/problems/water-heater-leaking-emergency" },
       { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
       { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "Water heater leaking from the bottom: causes", href: "/blog/water-heater-leaking-from-the-bottom-dallas-causes-and-fixes" },
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
@@ -4732,6 +4734,46 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Plumber or water-restoration company first?", href: "/blog/plumber-or-water-restoration-company-first" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
+    ]
+  },
+  "water-heater-leaking-from-the-bottom-dallas-causes-and-fixes": {
+    checklistTitle: "What actually causes a water heater to leak from the bottom",
+    checklistIntro:
+      "\"Leaking from the bottom\" describes where the water shows up, not what is actually failing - and the tank is often not the source. Here is how to narrow it down before calling anyone.",
+    checklistItems: [
+      "The drain valve at the base of the tank is the most common source - a plastic drain valve that was never fully closed, or one that has developed a slow drip over time, can look exactly like the tank itself is leaking.",
+      "The temperature-and-pressure (T&P) relief valve has its own discharge pipe that runs down the side of the tank and ends a few inches above the floor - if that pipe is dripping, the water travels down and pools at the base, again looking like a tank leak.",
+      "Condensation is common on a cold start-up day or right after a large volume of cold water refills the tank, especially on gas units - it shows up as a light dampness rather than an active, growing puddle, and it typically stops within an hour or two.",
+      "Corrosion at the cold-water inlet or hot-water outlet fitting on top of the tank can run down the outside of the tank and collect at the bottom, which is another leak that looks tank-related but is not.",
+      "Actual tank-body leaks - water seeping through the steel tank itself, usually from internal corrosion once the glass lining has worn through - are the one cause on this list that cannot be repaired. A tank that leaks from the body needs to be replaced, not patched.",
+      "Age is a useful clue but not proof by itself: a tank body leak is far more likely once a water heater is past its typical 8-12 year service life, while a drain valve or T&P discharge leak can happen on a unit of any age."
+    ],
+    proofTitle: "How to check the source safely before calling",
+    proofItems: [
+      "Dry the entire base of the tank and the floor underneath with a towel, then check back in 30-60 minutes without touching anything - this shows you whether water is actively returning and roughly how fast.",
+      "Look at the drain valve first (usually a small spigot near the bottom) - if it feels wet or you can see a drip forming at the valve itself, snug it gently by hand; do not force it, since an old plastic valve can crack.",
+      "Trace the T&P relief valve's discharge pipe (the pipe running down the side of the tank) from top to bottom - dripping at the open end of that pipe means the valve itself likely needs attention, not the tank.",
+      "If the water is coming from underneath the tank itself, rather than from a visible valve or pipe, and it is not simply condensation on a cold day, treat it as a probable tank-body leak.",
+      "Turn off the water heater's power source (electric) or gas supply, and close the cold-water inlet valve if you can reach it safely, once you suspect the tank body itself rather than a fitting - a failing tank should not be left heating unattended."
+    ],
+    extraFaqs: [
+      {
+        question: "Can a water heater leaking from the bottom be repaired instead of replaced?",
+        answer:
+          "It depends entirely on the source. A leaking drain valve, T&P discharge pipe, or corroded fitting is often a straightforward repair. A leak coming from the tank body itself means the tank has failed internally and generally cannot be sealed or repaired - replacement is the realistic option."
+      },
+      {
+        question: "Is a little water under the water heater always an emergency?",
+        answer:
+          "Not always. A small amount of condensation on a cold day, or a drain valve that just needs tightening, is not usually urgent. A puddle that is actively growing, water reaching electrical components, or a gas odor should be treated as urgent regardless of how it started."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Leaking water heater: repair or replace?", href: "/blog/leaking-water-heater-repair-or-replace-dfw" },
+      { label: "Water heater leaking in Dallas: emergency signs", href: "/blog/water-heater-leaking-in-dallas-emergency-signs-to-watch" },
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" }
     ]
   }
 };

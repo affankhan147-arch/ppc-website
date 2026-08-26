@@ -379,3 +379,15 @@ export const waterMeterLeakDetectionPost: BlogPost = {
 };
 
 blogPosts.push(waterMeterLeakDetectionPost);
+
+
+export const waterHeaterLeakingFromBottomPost: BlogPost = {
+  slug: "water-heater-leaking-from-the-bottom-dallas-causes-and-fixes",
+  title: "Water Heater Leaking From the Bottom in Dallas: Causes and Fixes",
+  directAnswer:
+    "A water heater leaking from the bottom is usually the drain valve, the temperature-and-pressure relief valve's discharge pipe, or condensation - all of which can sometimes be checked or tightened safely - but water coming from the tank body itself means the tank has corroded through and needs replacement, not repair.",
+  category: "Emergency steps",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(waterHeaterLeakingFromBottomPost);
