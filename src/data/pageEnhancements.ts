@@ -1086,7 +1086,8 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
-  },
+  }
+,
 "fort-worth/24-hour-emergency-plumber": {
     decisionTitle: "Fort Worth emergency plumbing decision guide",
     decisionIntro: "Fort Worth mixes historic pier-and-beam homes in areas like Fairmount and Ryan Place with newer slab construction farther north and west toward Alliance, so crawlspace access is a real factor for some dispatches.",
@@ -4579,7 +4580,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
       { label: "Failed shutoff leak checklist", href: "/blog/water-shutoff-valve-will-not-close-during-a-leak" }
     ]
-  },
+  }
+,
   "property-manager-plumbing-emergency-triage-sheet": {
     checklistTitle: "How to triage a tenant plumbing report in under two minutes",
     checklistIntro: "Use this order of questions when a tenant calls or submits a maintenance request about a plumbing issue, to sort severity quickly before deciding whether to dispatch emergency service.",

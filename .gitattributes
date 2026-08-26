@@ -1,0 +1,29 @@
+# Normalize line endings for text/source files so this repo stays consistent
+# regardless of a contributor's local core.autocrlf setting. Added 2026-08-26
+# after mixed CRLF/CR/LF terminators were found baked into src/data/pageEnhancements.ts
+# and src/data/blogPosts.ts (both normalized to LF in the same change that adds this file).
+* text=auto
+
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
