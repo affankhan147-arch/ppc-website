@@ -79,6 +79,7 @@ export default function FreezeWatchWidgetPage() {
             <InternalLinks
               extra={[
                 { label: "Burst Pipes in DFW", href: "/guides/dfw-burst-pipes" },
+                { label: "How Often Does DFW Actually Freeze? (NWS Data)", href: "/guides/dfw-freeze-history" },
                 { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" },
                 { label: "Free DFW Water Hardness Widget", href: "/tools/water-hardness-widget" },
                 { label: "All Free Tools", href: "/tools" }
