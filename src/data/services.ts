@@ -35,7 +35,7 @@ export const services: Service[] = [
     slug: "emergency-drain-cleaning",
     name: "emergency drain cleaning",
     categorySlug: "drain-cleaning",
-    shortAnswer: "Emergency drain cleaning for a clogged drain is needed when wastewater backs up, more than one fixture is affected, or a clog blocks a kitchen, bathroom, or business.",
+    shortAnswer: "Emergency drain cleaning -- sometimes searched as emergency drain service -- is needed when wastewater backs up, more than one fixture is affected, or a clog blocks a kitchen, bathroom, or business.",
     urgency: "High",
     symptoms: ["multiple slow drains", "standing water", "sewage odor", "gurgling fixtures", "overflowing cleanout"],
     steps: ["Stop running water into the clogged line.", "Do not add chemical drain cleaner after backup starts.", "Note which fixtures are affected.", "Request same-day drain help."],
@@ -44,7 +44,7 @@ export const services: Service[] = [
     mistakesToAvoid: ["Do not pour chemicals into standing water.", "Do not run laundry or dishwasher during a backup.", "Do not keep plunging if another fixture rises.", "Do not ignore recurring slow drains."],
     costDiscussion: "Drain cleaning cost varies by fixture, clog depth, access, and equipment. A simple fixture clog is different from a suspected main sewer line issue, so ask what diagnostic or clearing method is included.",
     costFactors: ["line location", "clog depth", "equipment needed", "after-hours timing", "repeat blockage history"],
-    faqSeed: ["When is a clogged drain an emergency?", "Is chemical drain cleaner safe?", "What does same-day drain cleaning include?"]
+    faqSeed: ["When is a clogged drain an emergency?", "Is chemical drain cleaner safe?", "What does same-day drain cleaning include?", "Is emergency drain service available nights and weekends in DFW?"]
   },
   {
     slug: "main-sewer-line-clog",

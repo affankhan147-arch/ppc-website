@@ -214,7 +214,7 @@ export default function DrainBackupRestaurantPage() {
 
       <InternalLinks extra={[
         { label: "Commercial Emergency Plumbing", href: "/services/commercial-emergency-plumbing" },
-        { label: "Emergency Drain Cleaning", href: "/services/emergency-drain-cleaning" },
+        { label: "Same-Day Emergency Drain Service", href: "/services/emergency-drain-cleaning" },
         { label: "Main Sewer Line Clog", href: "/services/main-sewer-line-clog" },
         { label: "Plumber or Restoration Company First?", href: "/blog/plumber-or-water-restoration-company-first" },
       ]} />
