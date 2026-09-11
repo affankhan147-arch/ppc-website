@@ -158,6 +158,7 @@ export default function PolybutylenePipeGuidePage() {
           <div className="mt-10">
             <InternalLinks
               extra={[
+                { label: "DFW Housing Age by City", href: "/guides/dfw-housing-age-by-city" },
                 { label: "DFW Slab Leaks Guide", href: "/guides/dfw-slab-leaks" },
                 { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" },
                 { label: "DFW Emergency Plumbing Costs", href: "/guides/dfw-emergency-plumbing-costs" },
