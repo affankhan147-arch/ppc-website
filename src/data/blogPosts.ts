@@ -391,3 +391,14 @@ export const waterHeaterLeakingFromBottomPost: BlogPost = {
 };
 
 blogPosts.push(waterHeaterLeakingFromBottomPost);
+
+export const dfwWaterHardnessByCityPost: BlogPost = {
+  slug: "dfw-water-hardness-by-city-what-it-does-to-your-water-heater",
+  title: "DFW Water Hardness by City: What It Does to Your Water Heater",
+  directAnswer:
+    "Water hardness varies sharply across the DFW metro - Forney, Rockwall, Frisco, and McKinney test in the 10-17 grains-per-gallon \"Very Hard\" range, while Fort Worth runs comparatively lower at 7-10 GPG - and the harder your water, the faster mineral scale builds inside a tank water heater, cutting efficiency and shortening the tank's service life.",
+  category: "Prevention",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(dfwWaterHardnessByCityPost);

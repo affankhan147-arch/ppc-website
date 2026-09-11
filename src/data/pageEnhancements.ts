@@ -3213,7 +3213,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
       { label: "Leaking water heater: repair or replace?", href: "/blog/leaking-water-heater-repair-or-replace-dfw" },
-      { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" }
+      { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" },
+      { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" }
     ]
   },
   "high-water-pressure-in-dallas-home-hidden-pipe-damage-risk": {
@@ -3752,7 +3753,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
-      { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" }
+      { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" },
+      { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" }
     ]
   },
   "dallas-storms-and-sewer-backups-what-to-check": {
@@ -4779,6 +4781,46 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water heater leaking in Dallas: emergency signs", href: "/blog/water-heater-leaking-in-dallas-emergency-signs-to-watch" },
       { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
       { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" }
+    ]
+  },
+  "dfw-water-hardness-by-city-what-it-does-to-your-water-heater": {
+    checklistTitle: "What DFW's water hardness numbers mean for your water heater",
+    checklistIntro:
+      "Hardness is measured in grains per gallon (GPG) of dissolved calcium and magnesium, and every DFW-area city in this dataset falls in the \"Hard\" to \"Very Hard\" range -- the practical difference is how fast scale accumulates inside a tank, not whether it happens at all.",
+    checklistItems: [
+      "Forney, Rockwall, Frisco, and McKinney test in the 10-17 grains-per-gallon range -- classified \"Very Hard\" -- based on municipal water utility reports and regional water-treatment provider field testing.",
+      "Plano and Allen run slightly lower at 9-13 GPG (\"Hard to Very Hard\"), while Dallas (7-11 GPG) and Fort Worth (7-10 GPG) sit at the lower end of the DFW range but are still classified \"Hard\" by the same municipal-report data.",
+      "Inside a tank water heater, dissolved minerals precipitate out as the water is heated, settling as sediment on the tank floor and scaling onto the heating element or burner area -- the higher the GPG, the faster this layer builds.",
+      "A thickening sediment and scale layer insulates the water from the heat source, which is the mechanical reason harder-water homes tend to notice popping or rumbling water heater sounds sooner, and can mean the unit works harder to reach the same temperature.",
+      "Tankless water heaters are affected differently -- scale accumulates inside the narrow heat-exchanger passages rather than as loose sediment, which is why manufacturers in hard-water regions generally recommend more frequent descaling flushes than in soft-water areas.",
+      "A whole-house water softener reduces scale formation going forward but does not remove buildup that has already accumulated inside an existing tank -- it is a prevention measure for future scale, not a fix for a tank that already has years of sediment in it."
+    ],
+    proofTitle: "What to check or ask based on your city's hardness range",
+    proofItems: [
+      "Find your city's exact range using the free DFW water hardness widget, then mention that GPG range when describing symptoms to a plumber -- it changes what is likely versus what needs an actual inspection.",
+      "If you are in the 10+ GPG range (Forney, Rockwall, Frisco, McKinney) and have not had a tank water heater flushed or serviced in the last year, ask whether a sediment flush is due -- manufacturers generally recommend more frequent flushing in this hardness range than the standard annual interval.",
+      "Popping, rumbling, or a water heater that seems to take longer to reach temperature than it used to are consistent with sediment buildup, but confirm with a technician rather than assuming -- the same symptoms can have other causes.",
+      "If considering a softener specifically to protect a water heater's lifespan, ask an installer how it is sized for your household's actual water use, not just your city's average hardness number."
+    ],
+    extraFaqs: [
+      {
+        question: "Does harder water mean I need a water softener?",
+        answer:
+          "Not automatically. A softener is one option to reduce future scale buildup, but it is a household decision based on symptoms (fixture spotting, scale buildup, appliance wear) and water use, not something every home in a \"Hard\" or \"Very Hard\" city needs. Ask a plumber whether your specific symptoms point to a softener or to a more immediate issue like an overdue tank flush."
+      },
+      {
+        question: "Can I check my own city's water hardness number?",
+        answer:
+          "Yes. Use the free DFW water hardness widget for a quick city-by-city range, or check your city's or regional water utility's annual water quality report, which typically publishes hardness figures directly."
+      }
+    ],
+    extraLinks: [
+      { label: "Free DFW water hardness widget", href: "/tools/water-hardness-widget" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" },
+      { label: "Water heater anode rod: signs it needs replacing", href: "/blog/water-heater-anode-rod-signs-it-needs-replacing-dallas" },
+      { label: "Dallas hard water and drain problems", href: "/blog/dallas-hard-water-and-drain-problems-homeowners-should-know" },
+      { label: "DFW plumbing data report", href: "/guides/dfw-plumbing-data" }
     ]
   }
 };
