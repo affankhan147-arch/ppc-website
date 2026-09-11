@@ -3188,7 +3188,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     ],
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
-      { label: "Sink and shower drain backup service", href: "/services/sink-and-shower-drain-backup" }
+      { label: "Sink and shower drain backup service", href: "/services/sink-and-shower-drain-backup" },
+      { label: "Water heater not heating: emergency service", href: "/services/water-heater-not-heating-emergency-service" }
     ]
   },
   "water-heater-anode-rod-signs-it-needs-replacing-dallas": {
@@ -3214,7 +3215,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
       { label: "Leaking water heater: repair or replace?", href: "/blog/leaking-water-heater-repair-or-replace-dfw" },
       { label: "Free DFW data badges (embeddable)", href: "/tools/dfw-data-badges" },
-      { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" }
+      { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
+      { label: "Water heater not heating: emergency service", href: "/services/water-heater-not-heating-emergency-service" }
     ]
   },
   "high-water-pressure-in-dallas-home-hidden-pipe-damage-risk": {
@@ -3271,7 +3273,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
-      { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" }
+      { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
+      { label: "Dallas service area", href: "/cities/dallas" }
     ]
   },
   "what-counts-as-a-plumbing-emergency": {
