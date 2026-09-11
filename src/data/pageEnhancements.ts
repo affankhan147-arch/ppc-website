@@ -982,7 +982,8 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
       { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
-      { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
+      { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" },
+      { label: "Emergency drain cleaning in Mansfield", href: "/cities/mansfield/emergency-drain-cleaning" }
     ]
   },
   "emergency-leak-repair-cost-dfw": {
@@ -3558,7 +3559,9 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
-      { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" }
+      { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" },
+      { label: "24-hour emergency plumber in Arlington", href: "/cities/arlington/24-hour-emergency-plumber" },
+      { label: "Emergency plumbing help in Arlington", href: "/cities/arlington" }
     ]
   },
   "burst-pipe-in-dallas-what-to-shut-off-first": {
@@ -4658,7 +4661,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" },
       { label: "Best questions to ask before you book an emergency plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },
-      { label: "Partner with us", href: "/partner-with-us" }
+      { label: "Partner with us", href: "/partner-with-us" },
+      { label: "Licensed emergency plumbing help in Dallas", href: "/cities/dallas" }
     ]
   },
   "can-homeowners-legally-do-their-own-plumbing-in-texas": {
@@ -4695,7 +4699,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" },
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
-      { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" }
+      { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" },
+      { label: "Licensed emergency plumbing help in Plano", href: "/cities/plano" }
     ]
   },
   "does-homeowners-insurance-cover-a-plumbing-leak-in-texas": {
