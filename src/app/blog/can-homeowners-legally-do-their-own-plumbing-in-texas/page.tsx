@@ -265,6 +265,7 @@ export default function DiyPlumbingLegalityPage() {
           { label: "24-Hour Emergency Plumber", href: "/services/24-hour-emergency-plumber" },
           { label: "Emergency Plumber Dallas", href: "/cities/dallas/24-hour-emergency-plumber" },
           { label: "Emergency Plumber Fort Worth", href: "/cities/fort-worth/24-hour-emergency-plumber" },
+          { label: "Emergency Plumber Plano", href: "/cities/plano/24-hour-emergency-plumber" },
           { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
         ]}
       />
