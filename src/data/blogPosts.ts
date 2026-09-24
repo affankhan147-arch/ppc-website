@@ -402,3 +402,14 @@ export const dfwWaterHardnessByCityPost: BlogPost = {
 };
 
 blogPosts.push(dfwWaterHardnessByCityPost);
+
+export const dfwLeadServiceLineInventoryPost: BlogPost = {
+  slug: "dfw-lead-service-line-inventory-by-city",
+  title: "DFW Lead Service Line Inventory by City: Is Your Water Pipe Lead?",
+  directAnswer:
+    "Under EPA's 2024 Lead and Copper Rule Improvements, every DFW-area water utility published an initial service-line-material inventory by October 16, 2024 - Dallas, Fort Worth, Arlington, and Plano have each confirmed zero identified lead lines so far, but thousands of Fort Worth and Arlington addresses are classified \"galvanized requiring replacement,\" and each city has its own free online lookup tool to check your specific address.",
+  category: "Prevention",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(dfwLeadServiceLineInventoryPost);

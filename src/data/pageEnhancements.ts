@@ -3276,7 +3276,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
       { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
-      { label: "Dallas service area", href: "/cities/dallas" }
+      { label: "Dallas service area", href: "/cities/dallas" },
+      { label: "DFW lead service line inventory by city", href: "/blog/dfw-lead-service-line-inventory-by-city" }
     ]
   },
   "what-counts-as-a-plumbing-emergency": {
@@ -4825,7 +4826,47 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" },
       { label: "Water heater anode rod: signs it needs replacing", href: "/blog/water-heater-anode-rod-signs-it-needs-replacing-dallas" },
       { label: "Dallas hard water and drain problems", href: "/blog/dallas-hard-water-and-drain-problems-homeowners-should-know" },
-      { label: "DFW plumbing data report", href: "/guides/dfw-plumbing-data" }
+      { label: "DFW plumbing data report", href: "/guides/dfw-plumbing-data" },
+      { label: "DFW lead service line inventory by city", href: "/blog/dfw-lead-service-line-inventory-by-city" }
+    ]
+  },
+  "dfw-lead-service-line-inventory-by-city": {
+    checklistTitle: "What DFW's lead service line inventories actually found, city by city",
+    checklistIntro:
+      "The EPA's Lead and Copper Rule Improvements (finalized October 2024) required every U.S. community water system to submit an initial service-line-material inventory by October 16, 2024, and gives utilities a 10-year deadline to replace any line classified lead or \"galvanized requiring replacement\" (GRR) -- a galvanized steel line that was, or may have been, downstream of a lead line at some point.",
+    checklistItems: [
+      "Dallas Water Utilities reports no lead service lines identified to date across roughly 320,000 active services -- 204,396 public-side and 86,886 private-side lines are confirmed non-lead, with the remainder still classified unknown pending further verification.",
+      "Fort Worth Water's inventory of 300,778 total service lines, completed by its October 2024 deadline, found zero lead lines and zero unknown lines, but 32,590 addresses are classified \"galvanized requiring replacement\" out of 268,188 confirmed non-lead.",
+      "Arlington Water Utilities inspected 65,901 service lines over about 18 months and found zero lead lines, with just under 200 addresses showing a private-side galvanized-requiring-replacement line.",
+      "Plano inventoried more than 81,000 water service lines; over 92% of public-side lines and 50% of private-side lines are confirmed non-lead, with the remainder still needing field verification.",
+      "McKinney publishes its own dedicated lead-and-water and galvanized-service-line information pages rather than one combined citywide figure -- check those directly for your address rather than assuming a single number applies.",
+      "\"Galvanized requiring replacement\" is not the same as lead, but EPA treats it with the same 10-year replacement urgency because those lines can shed lead particles deposited from an upstream lead line years or decades earlier."
+    ],
+    proofTitle: "How to check your own DFW address",
+    proofItems: [
+      "Dallas: use Dallas Water Utilities' online Service Line Inventory Map (linked from the city's Water Utilities Lead and Copper page) and complete the Customer Service Line Survey if your private-side material still shows unknown.",
+      "Fort Worth: search your address directly on Fort Worth Water's interactive Service Line Inventory map to see both the utility-owned and customer-owned portions.",
+      "Arlington: look up your address at ArlingtonTX.gov/SLI, also available in Spanish and Vietnamese.",
+      "Any DFW city not covered by name here almost certainly has its own inventory and lookup tool too, since the October 2024 EPA deadline applied to every community water system nationwide, not just the largest cities -- search your city's name plus \"water service line inventory,\" or check a recent water bill for a notice.",
+      "If your address still shows unknown, a plumber can often confirm the material at the meter or shutoff valve during any other service visit -- a magnet sticking to the pipe is a quick homeowner clue for galvanized steel, since a magnet will not stick to lead or copper, but professional confirmation is what actually matters for a repair, replacement, or real estate decision."
+    ],
+    extraFaqs: [
+      {
+        question: "Does \"galvanized requiring replacement\" mean my home currently has a lead pipe?",
+        answer:
+          "Not directly -- a GRR line is galvanized steel, not lead. EPA classifies it separately because a galvanized line downstream of a former lead line can trap and later release lead particles, which is why it carries the same 10-year replacement deadline as an actual lead line under the rule."
+      },
+      {
+        question: "My city is not one of the four covered in detail here -- does that mean it skipped the inventory?",
+        answer:
+          "No. The October 16, 2024 inventory deadline applied to every community water system in the country regardless of size, so every DFW-area city has one on file with its state drinking water program even if it is not named here. Check your own city's water utility website or a recent water bill for how to look up your address."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW housing age by city", href: "/guides/dfw-housing-age-by-city" },
+      { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" }
     ]
   }
 };
