@@ -1,0 +1,53 @@
+content: Southlake content-gap fix (Batch 23 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Southlake: main-sewer-line-clog, water-heater-emergency,
+toilet-overflow-emergency, burst-pipe-emergency, sewer-backup-help,
+commercial-emergency-plumbing, same-day-plumber-connection, and
+sink-and-shower-drain-backup. Southlake's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content directly in pageEnhancements.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "southlake/"
+before writing anything. Confirmed Southlake follows the same multi-file
+pattern as recent cities: literal entries in pageEnhancements.ts (lines
+2623, 2664) win over separate southlake/ entries in
+cityServiceEnhancementsDFWAdditional2.ts (lines 226, 263), which are dead
+code. Read the winning pageEnhancements.ts entries to extract only
+previously-established real facts - no new statistics invented.
+
+FACTS REUSED (from Southlake's existing 2 covered services):
+- Larger custom and estate homes with more fixtures, multiple water
+  heaters, and multi-zone plumbing systems
+- Notably hard regional water, 15 to 25 grains per gallon (shared fact
+  with nearby Keller, correctly scoped to the region)
+- Documented gas line capacity considerations tied to the broader
+  Keller/Southlake outdoor-kitchen and appliance boom
+- Extended drain runs and multiple bathroom wings typical of larger
+  custom-built properties
+
+DIFFERENTIATION: Anchored Southlake's 8 new entries on its distinct
+larger-home / multi-zone-system angle (identifying which wing or zone is
+affected) rather than Keller's neighborhood-construction-era framing,
+while correctly scoping the shared regional hard-water and gas-capacity
+facts.
+
+NEW FILE: src/data/cityServiceEnhancementsSouthlakeExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+kellerExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded (tool-call
+round-trip timed out on the device-bridge response again, but the build
+itself completed in the background - confirmed via
+.next/prerender-manifest.json timestamp and route count: 330
+/cities/{city}/{service} static routes present, unchanged).
+
+RUNNING TOTAL: 194 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 12 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake done). Remaining
+priority-2 suburbs: Flower Mound, The Colony, Allen, Rockwall, Rowlett,
+Mansfield, Cedar Hill, DeSoto, Duncanville, Wylie (10 suburbs x 8 = 80
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
