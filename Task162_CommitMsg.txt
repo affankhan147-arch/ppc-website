@@ -1,0 +1,49 @@
+content: Allen content-gap fix (Batch 26 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Allen: main-sewer-line-clog, water-heater-emergency,
+toilet-overflow-emergency, burst-pipe-emergency, sewer-backup-help,
+commercial-emergency-plumbing, same-day-plumber-connection, and
+sink-and-shower-drain-backup. Allen's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content directly in pageEnhancements.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "allen/"
+before writing anything. Confirmed Allen follows the same multi-file
+pattern as recent cities: literal entries in pageEnhancements.ts (lines
+2875, 2916) win over separate allen/ entries in
+cityServiceEnhancementsDFWAdditional3.ts (lines 152, 189), which are dead
+code. Read the winning pageEnhancements.ts entries to extract only
+previously-established real facts - no new statistics invented.
+
+FACTS REUSED (from Allen's existing 2 covered services):
+- Allen has a documented split between older homes with original
+  galvanized plumbing and larger newer construction with documented
+  higher hot water demand, commonly requesting tankless water heater
+  capacity
+- Local building codes and permit requirements relevant to older-home
+  repairs
+- Clay-soil-related slab leak risk common to the broader DFW area
+- Non-invasive leak detection methods for locating hidden pipe issues
+
+DIFFERENTIATION: Anchored Allen's 8 new entries on its unique
+galvanized-older-home-versus-tankless-newer-home dichotomy, distinct from
+every other city covered so far.
+
+NEW FILE: src/data/cityServiceEnhancementsAllenExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+theColonyExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded cleanly with
+full console output: 493/493 static pages generated, 330 city-service
+combo routes confirmed in the build's route listing, unchanged.
+
+RUNNING TOTAL: 218 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 15 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake, Flower Mound, The
+Colony, Allen done). Remaining priority-2 suburbs: Rockwall, Rowlett,
+Mansfield, Cedar Hill, DeSoto, Duncanville, Wylie (7 suburbs x 8 = 56
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
