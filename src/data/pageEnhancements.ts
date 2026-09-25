@@ -1,5 +1,6 @@
 import type { FAQ } from "@/data/faqs";
 import { dallasExpansionCityServiceEnhancements } from "./cityServiceEnhancementsDallasExpansion";
+import { friscoExpansionCityServiceEnhancements } from "./cityServiceEnhancementsFriscoExpansion";
 import { fortWorthExpansionCityServiceEnhancements } from "./cityServiceEnhancementsFortWorthExpansion";
 import { arlingtonExpansionCityServiceEnhancements } from "./cityServiceEnhancementsArlingtonExpansion";
 import { planoExpansionCityServiceEnhancements } from "./cityServiceEnhancementsPlanoExpansion";
@@ -1041,6 +1042,7 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
 
 export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   ...dallasExpansionCityServiceEnhancements,
+  ...friscoExpansionCityServiceEnhancements,
   ...fortWorthExpansionCityServiceEnhancements,
   ...arlingtonExpansionCityServiceEnhancements,
   ...planoExpansionCityServiceEnhancements,
