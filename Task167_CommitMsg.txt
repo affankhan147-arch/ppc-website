@@ -1,0 +1,48 @@
+content: DeSoto content-gap fix (Batch 31 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in DeSoto: main-sewer-line-clog,
+water-heater-emergency, toilet-overflow-emergency, burst-pipe-emergency,
+sewer-backup-help, commercial-emergency-plumbing, same-day-plumber-connection,
+and sink-and-shower-drain-backup. DeSoto's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content in cityServiceEnhancementsDFWAdditional4.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "desoto/"
+before writing anything. Confirmed only one source:
+cityServiceEnhancementsDFWAdditional4.ts (lines 226, 263), no competing
+entries. Read those entries to extract only previously-established real
+facts - no new statistics invented.
+
+FACTS REUSED (from DeSoto's existing 2 covered services):
+- DeSoto's housing stock is genuinely concentrated in the 1970s-1999 era
+- Many homes from this period have original copper or galvanized supply
+  lines now reaching the age where pinhole leaks and corrosion become more
+  common
+- Expansive clay soil and regional hard water consistent across southern
+  Dallas County
+- Discoloration or water quality changes can signal pipe corrosion
+- Older neighborhoods have original cast iron sewer lines prone to root
+  intrusion from mature trees
+
+DIFFERENTIATION: Anchored DeSoto's 8 new entries specifically on copper
+pinhole leak risk (a distinct failure mode from Mansfield's or Allen's
+general corrosion framing) tied to its concentrated 1970s-1999
+construction window.
+
+NEW FILE: src/data/cityServiceEnhancementsDeSotoExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+cedarHillExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded: 493/493
+static pages generated, 330 city-service combo routes confirmed, unchanged.
+
+RUNNING TOTAL: 258 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 20 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake, Flower Mound, The
+Colony, Allen, Rockwall, Rowlett, Mansfield, Cedar Hill, DeSoto done).
+Remaining priority-2 suburbs: Duncanville, Wylie (2 suburbs x 8 = 16
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
