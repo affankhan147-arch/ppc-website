@@ -12,6 +12,7 @@ import { richardsonExpansionCityServiceEnhancements } from "./cityServiceEnhance
 import { grandPrairieExpansionCityServiceEnhancements } from "./cityServiceEnhancementsGrandPrairieExpansion";
 import { mesquiteExpansionCityServiceEnhancements } from "./cityServiceEnhancementsMesquiteExpansion";
 import { grapevineExpansionCityServiceEnhancements } from "./cityServiceEnhancementsGrapevineExpansion";
+import { eulessExpansionCityServiceEnhancements } from "./cityServiceEnhancementsEulessExpansion";
 import { fortWorthExpansionCityServiceEnhancements } from "./cityServiceEnhancementsFortWorthExpansion";
 import { arlingtonExpansionCityServiceEnhancements } from "./cityServiceEnhancementsArlingtonExpansion";
 import { planoExpansionCityServiceEnhancements } from "./cityServiceEnhancementsPlanoExpansion";
@@ -1065,6 +1066,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   ...grandPrairieExpansionCityServiceEnhancements,
   ...mesquiteExpansionCityServiceEnhancements,
   ...grapevineExpansionCityServiceEnhancements,
+  ...eulessExpansionCityServiceEnhancements,
   ...fortWorthExpansionCityServiceEnhancements,
   ...arlingtonExpansionCityServiceEnhancements,
   ...planoExpansionCityServiceEnhancements,
