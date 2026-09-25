@@ -1,10 +1,13 @@
 import type { PageEnhancement } from "./pageEnhancements";
 
-// Houston content-gap fix (Batch 9). Unlike the DFW cities, Houston had ZERO
-// existing pageEnhancements entries (no 24-hour-emergency-plumber or
-// emergency-drain-cleaning coverage either), so all 10 services needed
-// content. Facts below are well-established, verifiable, general public
-// facts about Houston (confirmed via web research, not fabricated):
+// Houston content-gap fix (Batch 9). Houston already has 2 of 10 services
+// covered in cityServiceEnhancementsTexas.ts (24-hour-emergency-plumber,
+// emergency-drain-cleaning) - those facts (heavy clay soil, frequent heavy
+// rains, aging infrastructure, backwater valves) are extended here to the
+// other 8 previously-thin services. Facts below are well-established,
+// verifiable, general public facts about Houston (confirmed via web
+// research, consistent with and extending the existing Texas-file content,
+// not fabricated):
 // - Houston sits on expansive Gulf Coast clay/gumbo soil that shifts with
 //   moisture, causing foundation movement that stresses slab-based supply
 //   and drain lines (a well-documented cause of slab leaks in the region)
@@ -24,92 +27,6 @@ import type { PageEnhancement } from "./pageEnhancements";
 // knowledge about Houston's soil, climate, and housing stock.
 
 export const houstonExpansionCityServiceEnhancements: Record<string, PageEnhancement> = {
-  "houston/24-hour-emergency-plumber": {
-    decisionTitle: "Houston 24-Hour Emergency Plumbing Decision Guide",
-    decisionIntro:
-      "Houston's expansive Gulf Coast clay soil shifts noticeably with moisture changes, putting ongoing stress on slab-based supply and drain lines, while heavy rain and hurricane-season events add urgency for after-hours plumbing failures regardless of neighborhood.",
-    decisionItems: [
-      "Mention whether your home is on a slab foundation, common across most of Houston",
-      "Note if you've had prior foundation movement or repair, since it can point to a related plumbing issue",
-      "During or after heavy rain events, describe whether the issue coincided with the storm",
-      "Older homes in neighborhoods like the Heights or Montrose should mention original cast-iron or clay piping if known",
-    ],
-    providerTitle: "What a Houston Provider May Check",
-    providerItems: [
-      "Slab movement history and its relationship to the current issue",
-      "Original pipe material in older inner-loop neighborhoods",
-      "Whether recent heavy rainfall contributed to the emergency",
-      "Newer PEX plumbing condition in outer suburban construction",
-    ],
-    safetyTitle: "When to Treat It as Urgent in Houston",
-    safetyItems: [
-      "Any sign of a slab leak, such as unexplained hot spots on flooring or rising water bills",
-      "Sewage backup during or after heavy rainfall",
-      "Water near electrical systems, especially in older homes",
-      "Leaks affecting multiple fixtures at once",
-    ],
-    preventionTitle: "Houston-Specific Prevention Notes",
-    preventionItems: [
-      "Homeowners on expansive clay soil should watch for signs of foundation movement affecting plumbing",
-      "Older inner-loop homeowners should consider periodic drain camera inspections",
-      "Know your home's construction era and foundation type when requesting service",
-    ],
-    extraFaqs: [
-      {
-        question: "Does Houston's soil affect emergency plumbing issues?",
-        answer:
-          "Yes. Houston's expansive clay soil shifts with moisture and can stress slab-based supply and drain lines, contributing to slab leaks and other plumbing emergencies that are less common in areas with more stable soil.",
-      },
-    ],
-    extraLinks: [
-      { label: "Houston service area", href: "/cities/houston" },
-      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
-    ],
-  },
-  "houston/emergency-drain-cleaning": {
-    decisionTitle: "Houston Drain Backup Decision Guide",
-    decisionIntro:
-      "Older Houston neighborhoods inside the inner loop often have original cast-iron drain pipes and clay sewer laterals prone to corrosion and root intrusion, while newer suburban construction toward Katy, Cypress, and Sugar Land typically runs more resilient PVC lines.",
-    decisionItems: [
-      "Mention whether your home is in an older inner-loop neighborhood or a newer outer suburb",
-      "Older homes with cast-iron drains should consider corrosion or tuberculation as a cause",
-      "Mature trees near older sewer laterals raise root intrusion risk",
-      "Newer suburban homes with a backup soon after move-in should consider construction debris",
-    ],
-    providerTitle: "What a Houston Drain Provider May Check",
-    providerItems: [
-      "Cast-iron pipe corrosion and interior buildup (tuberculation) in older homes",
-      "Root intrusion risk near mature trees over older clay laterals",
-      "Construction debris likelihood in newer suburban homes",
-      "Camera inspection findings before recommending repair",
-    ],
-    safetyTitle: "When Houston Drain Issues Are Urgent",
-    safetyItems: [
-      "Recurring backups in older homes suggesting pipe corrosion or root intrusion",
-      "Backup shortly after move-in in new construction, suggesting debris",
-      "Multiple fixtures affected together",
-      "Sewage odor combined with slow drains",
-    ],
-    preventionTitle: "Reducing Repeat Drain Issues in Houston",
-    preventionItems: [
-      "Older inner-loop homeowners should consider annual drain camera inspections",
-      "Newer suburban homeowners should report early backups to their builder if within warranty",
-      "Know your neighborhood's construction era to help a provider anticipate the likely cause",
-    ],
-    extraFaqs: [
-      {
-        question: "Why do drain issues differ between older Houston neighborhoods and newer suburbs?",
-        answer:
-          "Older inner-loop Houston neighborhoods often have original cast-iron drains and clay sewer laterals prone to corrosion and root intrusion, while newer outer suburbs typically have PVC lines where construction debris or fixture-level clogs are more common causes.",
-      },
-    ],
-    extraLinks: [
-      { label: "Houston service area", href: "/cities/houston" },
-      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
-      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
-    ],
-  },
   "houston/main-sewer-line-clog": {
     decisionTitle: "Main Sewer Line Clogs in Houston",
     decisionIntro:
