@@ -1,0 +1,53 @@
+content: Mansfield content-gap fix (Batch 29 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Mansfield: main-sewer-line-clog,
+water-heater-emergency, toilet-overflow-emergency, burst-pipe-emergency,
+sewer-backup-help, commercial-emergency-plumbing, same-day-plumber-connection,
+and sink-and-shower-drain-backup. Mansfield's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content in cityServiceEnhancementsDFWAdditional4.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "mansfield/"
+before writing anything. Confirmed Mansfield has only ONE source for its
+existing 2 covered services - cityServiceEnhancementsDFWAdditional4.ts
+(lines 78, 115) - the only other hit in pageEnhancements.ts was a plain
+cost-guide link reference, not a competing content entry. Read the
+DFWAdditional4.ts entries to extract only previously-established real
+facts - no new statistics invented.
+
+FACTS REUSED (from Mansfield's existing 2 covered services):
+- Mansfield's housing stock spans older 1970s-80s homes near the historic
+  downtown and newer master-planned communities like Walnut Creek Valley,
+  M3 Ranch, and South Pointe
+- Expansive clay soil and regional hard water consistent across the city
+- Older copper/galvanized systems versus newer PEX construction in
+  communities like M3 Ranch and South Pointe
+- Discolored water can indicate advanced pipe corrosion
+- Heavy rain can affect clay-soil movement
+- Older neighborhoods with mature trees have original cast iron sewer
+  lines prone to root intrusion
+
+DIFFERENTIATION: Anchored Mansfield's 8 new entries on its specific
+1970s-80s historic-downtown era, its three named newer communities, and
+clay-soil movement from heavy rain (not lake-driven groundwater like
+Rowlett), keeping the shared copper/galvanized-vs-PEX and root-intrusion
+facts correctly scoped to Mansfield's own named places.
+
+NEW FILE: src/data/cityServiceEnhancementsMansfieldExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+rowlettExpansionCityServiceEnhancements; no key conflict with
+dfwAdditionalCityServiceEnhancements4)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded: 493/493
+static pages generated, 330 city-service combo routes confirmed, unchanged.
+
+RUNNING TOTAL: 242 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 18 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake, Flower Mound, The
+Colony, Allen, Rockwall, Rowlett, Mansfield done). Remaining priority-2
+suburbs: Cedar Hill, DeSoto, Duncanville, Wylie (4 suburbs x 8 = 32 combos
+remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
