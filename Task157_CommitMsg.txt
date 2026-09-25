@@ -1,0 +1,50 @@
+content: Hurst content-gap fix (Batch 21 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Hurst: main-sewer-line-clog, water-heater-emergency,
+toilet-overflow-emergency, burst-pipe-emergency, sewer-backup-help,
+commercial-emergency-plumbing, same-day-plumber-connection, and
+sink-and-shower-drain-backup. Hurst's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content directly in pageEnhancements.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "hurst/" before
+writing anything (lesson from the Houston dead-code mistake in batch 9).
+Confirmed Hurst follows the same multi-file pattern as Grand Prairie,
+Mesquite, Grapevine, Euless, and Bedford: literal entries in
+pageEnhancements.ts (lines 2455, 2496) win over separate hurst/ entries in
+cityServiceEnhancementsDFWAdditional2.ts (lines 78, 115), which are dead
+code. Read the winning pageEnhancements.ts entries to extract only
+previously-established real facts - no new statistics invented.
+
+FACTS REUSED (from Hurst's existing 2 covered services):
+- 1960s-70s original Hurst development with galvanized supply lines and
+  cast iron drain stacks
+- A distinct 1980s-90s construction boom that specifically introduced
+  polybutylene supply lines
+- A commercial corridor along Pipeline Road and Precinct Line Road with
+  documented higher drain volume and grease-trap-related buildup
+- HEB-area expansive clay soil contributing to slab leak risk
+
+DIFFERENTIATION: Anchored Hurst's narrative on its two genuinely distinct
+construction-era risk profiles (1960s-70s galvanized/cast-iron vs.
+1980s-90s polybutylene) plus its named Pipeline Road/Precinct Line Road
+commercial corridor - distinct from Bedford's Mayfair Hills/root-intrusion/
+107 PPM hardness framing and from other DFW cities' narratives.
+
+NEW FILE: src/data/cityServiceEnhancementsHurstExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+bedfordExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded, 493/493
+static pages generated (330 city-service combos unchanged).
+
+RUNNING TOTAL: 178 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 10 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst done). Remaining priority-2 suburbs:
+Keller, Southlake, Flower Mound, The Colony, Allen, Rockwall, Rowlett,
+Mansfield, Cedar Hill, DeSoto, Duncanville, Wylie (12 suburbs x 8 = 96
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
