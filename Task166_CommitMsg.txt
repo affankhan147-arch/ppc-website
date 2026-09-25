@@ -1,0 +1,49 @@
+content: Cedar Hill content-gap fix (Batch 30 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Cedar Hill: main-sewer-line-clog,
+water-heater-emergency, toilet-overflow-emergency, burst-pipe-emergency,
+sewer-backup-help, commercial-emergency-plumbing, same-day-plumber-connection,
+and sink-and-shower-drain-backup. Cedar Hill's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content in cityServiceEnhancementsDFWAdditional4.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "cedar-hill/"
+before writing anything. Confirmed only one source:
+cityServiceEnhancementsDFWAdditional4.ts (lines 152, 189), no competing
+entries elsewhere. Read those entries to extract only previously-
+established real facts - no new statistics invented.
+
+FACTS REUSED (from Cedar Hill's existing 2 covered services):
+- Cedar Hill sits on a ridge in southern Dallas County, with distinctive
+  topography and a mix of older construction and newer master-planned
+  communities like Lake Ridge (a 3,400-acre development on Joe Pool Lake)
+  and Bear Creek
+- The city's elevation changes affect drainage and foundation movement
+- Expansive clay soil
+- Foundation cracks or door/window sticking can indicate soil movement
+- Older homes have original copper or galvanized supply lines and cast
+  iron sewer lines prone to root intrusion from mature trees
+
+DIFFERENTIATION: Anchored Cedar Hill's 8 new entries on its unique
+ridge-elevation-driven drainage and foundation-movement angle (foundation
+cracks, door/window sticking as diagnostic signals), plus its two named
+communities (Lake Ridge and Bear Creek) - distinct from every prior city's
+framing.
+
+NEW FILE: src/data/cityServiceEnhancementsCedarHillExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+mansfieldExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded: 493/493
+static pages generated, 330 city-service combo routes confirmed, unchanged.
+
+RUNNING TOTAL: 250 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 19 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake, Flower Mound, The
+Colony, Allen, Rockwall, Rowlett, Mansfield, Cedar Hill done). Remaining
+priority-2 suburbs: DeSoto, Duncanville, Wylie (3 suburbs x 8 = 24 combos
+remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
