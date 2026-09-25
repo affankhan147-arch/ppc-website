@@ -1,0 +1,52 @@
+content: Keller content-gap fix (Batch 22 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Keller: main-sewer-line-clog, water-heater-emergency,
+toilet-overflow-emergency, burst-pipe-emergency, sewer-backup-help,
+commercial-emergency-plumbing, same-day-plumber-connection, and
+sink-and-shower-drain-backup. Keller's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content directly in pageEnhancements.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "keller/"
+before writing anything. Confirmed Keller follows the same multi-file
+pattern as recent cities: literal entries in pageEnhancements.ts (lines
+2539, 2580) win over separate keller/ entries in
+cityServiceEnhancementsDFWAdditional2.ts (lines 152, 189), which are dead
+code. Read the winning pageEnhancements.ts entries to extract only
+previously-established real facts - no new statistics invented.
+
+FACTS REUSED (from Keller's existing 2 covered services):
+- Notably hard water, 15 to 25 grains per gallon
+- A documented outdoor-kitchen and appliance boom that has pushed gas line
+  capacity to its limits in thousands of Keller homes
+- Hidden Lakes, an established 1990s-2010s neighborhood
+- Marshall Ridge, a newer 2008-2020 neighborhood
+- Clay-soil-related slab settling
+
+DIFFERENTIATION: Anchored Keller's 8 new entries on its documented gas line
+capacity strain (unique among cities covered so far, tied to its outdoor
+kitchen/appliance boom) combined with its notably harder water (15-25 GPG)
+than Bedford's 107 PPM framing, plus its two named construction eras
+(Hidden Lakes vs. Marshall Ridge).
+
+NEW FILE: src/data/cityServiceEnhancementsKellerExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+hurstExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded (confirmed
+via .next/prerender-manifest.json: 330 /cities/{city}/{service} static
+routes present, unchanged from before this batch; two build tool-call
+round-trips timed out on the device-bridge response but the builds
+themselves completed successfully in the background per manifest
+timestamps).
+
+RUNNING TOTAL: 186 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 11 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller done). Remaining priority-2
+suburbs: Southlake, Flower Mound, The Colony, Allen, Rockwall, Rowlett,
+Mansfield, Cedar Hill, DeSoto, Duncanville, Wylie (11 suburbs x 8 = 88
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
