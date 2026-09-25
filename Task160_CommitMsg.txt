@@ -1,0 +1,50 @@
+content: Flower Mound content-gap fix (Batch 24 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Flower Mound: main-sewer-line-clog,
+water-heater-emergency, toilet-overflow-emergency, burst-pipe-emergency,
+sewer-backup-help, commercial-emergency-plumbing, same-day-plumber-connection,
+and sink-and-shower-drain-backup. Flower Mound's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content directly in pageEnhancements.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for
+"flower-mound/" before writing anything. Confirmed Flower Mound follows the
+same multi-file pattern as recent cities: literal entries in
+pageEnhancements.ts (lines 2707, 2748) win over separate flower-mound/
+entries in cityServiceEnhancementsDFWAdditional3.ts (lines 4, 41), which
+are dead code. Read the winning pageEnhancements.ts entries to extract only
+previously-established real facts - no new statistics invented.
+
+FACTS REUSED (from Flower Mound's existing 2 covered services):
+- Flower Mound sits on the Tarrant-Denton county border, so water supply
+  source depends on neighborhood, though both county systems run equally
+  hard (12-20 grains per gallon)
+- Lake Forest, an established neighborhood with median construction
+  around 1993, with a documented tree-heavy root intrusion pattern
+- Blackland Prairie clay soil common across the DFW border area,
+  contributing to slab leak risk
+
+DIFFERENTIATION: Anchored Flower Mound's 8 new entries on its unique
+county-border water-source context (a factor no other city covered so far
+shares) and its own named Lake Forest neighborhood, distinct from Bedford's
+Mayfair Hills root-intrusion framing and other DFW cities' narratives.
+
+NEW FILE: src/data/cityServiceEnhancementsFlowerMoundExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+southlakeExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded cleanly with
+full console output this time (no device-bridge timeout): 493/493 static
+pages generated, 330 city-service combos confirmed in the route listing
+(327+3 shown = 330 total, unchanged).
+
+RUNNING TOTAL: 202 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 13 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake, Flower Mound done).
+Remaining priority-2 suburbs: The Colony, Allen, Rockwall, Rowlett,
+Mansfield, Cedar Hill, DeSoto, Duncanville, Wylie (9 suburbs x 8 = 72
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
