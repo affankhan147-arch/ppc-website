@@ -23,10 +23,10 @@ export function generateStaticParams() {
 
 function buildCityDescription(city: (typeof cities)[number]) {
   const candidates = [
-    `Request an emergency plumber serving ${city.name}, TX for plumbing and drain cleaning help, covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
-    `Request an emergency plumber serving ${city.name}, TX for plumbing and drain cleaning help, covering ${city.areaHint}.`,
-    `Request an emergency plumber serving ${city.name}, TX and nearby ${city.countyHint} areas. Confirm coverage and pricing with the provider.`,
-    `Request an emergency plumber serving ${city.name}, TX and nearby ${city.countyHint} areas.`
+    `Need an emergency plumber in ${city.name}, TX? Request 24/7 plumbing and drain cleaning help covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
+    `Need an emergency plumber in ${city.name}, TX? Request 24/7 plumbing and drain cleaning help covering ${city.areaHint}.`,
+    `Need an emergency plumber in ${city.name}, TX? Request 24/7 help for plumbing and drain issues near ${city.countyHint}. Confirm pricing with the provider.`,
+    `Need an emergency plumber in ${city.name}, TX? Request 24/7 help for plumbing and drain issues near ${city.countyHint}.`
   ];
   const ideal = candidates.find((c) => c.length >= 120 && c.length <= 158);
   if (ideal) return ideal;
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props) {
   const city = cities.find((item) => item.slug === citySlug);
   if (!city) return {};
   return buildMetadata({
-    title: `Emergency Plumber in ${city.name}, TX`,
+    title: `24/7 Emergency Plumber in ${city.name}, TX`,
     description: truncateForMeta(buildCityDescription(city)),
     path: `/cities/${city.slug}`
   });
