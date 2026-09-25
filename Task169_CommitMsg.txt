@@ -1,0 +1,60 @@
+content: Wylie content-gap fix (Batch 33 - FINAL BATCH of 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Wylie: main-sewer-line-clog, water-heater-emergency,
+toilet-overflow-emergency, burst-pipe-emergency, sewer-backup-help,
+commercial-emergency-plumbing, same-day-plumber-connection, and
+sink-and-shower-drain-backup. Wylie's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content in cityServiceEnhancementsDFWAdditional5.ts.
+
+This is the FINAL batch of the content-gap fix project that began several
+sessions ago: identifying 264 of 330 city-service combo pages (33 cities x
+10 services) that had zero city-specific content, just templated city-name
+substitution, and fixing them city by city with real, differentiated,
+fact-based content sourced from each city's own already-established
+material (or verified web research for a handful of cities with zero
+starting coverage).
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "wylie/"
+before writing anything. Confirmed only one source:
+cityServiceEnhancementsDFWAdditional5.ts (lines 78, 115), no competing
+entries. Read those entries to extract only previously-established real
+facts - no new statistics invented.
+
+FACTS REUSED (from Wylie's existing 2 covered services):
+- Wylie is a rapidly growing Collin County suburb, with housing stock
+  split between older 1980s-90s construction and newer development near
+  Lake Lavon
+- Water hardness runs about 10-14 grains per gallon
+- Expansive clay soil common to the area affects foundation and pipe
+  stability
+- Older neighborhoods have original copper or galvanized supply lines and
+  cast iron sewer lines, while newer lake-area developments have PEX
+  supply systems and modern PVC drain lines
+- Lake Lavon proximity can affect drainage and water quality profiles
+
+DIFFERENTIATION: Anchored Wylie on Lake Lavon specifically, its Collin
+County location, its 10-14 GPG hardness figure, and its copper/
+galvanized-vs-PEX-and-PVC construction-era split - distinct from every
+other lake-adjacent city covered this cycle (Rowlett/Rockwall on Lake Ray
+Hubbard, The Colony on Lake Lewisville).
+
+NEW FILE: src/data/cityServiceEnhancementsWylieExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+duncanvilleExpansionCityServiceEnhancements - the final entry in the
+expansion-file chain)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded cleanly:
+493/493 static pages generated, 330 city-service combo routes confirmed,
+unchanged.
+
+PROJECT COMPLETE: All 33 cities in the original priority list (14
+priority-1 cities + 22 priority-2 DFW suburbs) now have real, differentiated,
+fact-based content across all 10 services each - 330 of 330 city-service
+combo pages now have genuine city-specific content, up from the 66 that
+had it at project start (264 pages fixed across 33 batches this cycle,
+plus 2 pages corrected for a dead-code duplicate found in batch 9).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
