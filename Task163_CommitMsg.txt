@@ -1,0 +1,49 @@
+content: Rockwall content-gap fix (Batch 27 of ongoing 33-suburb cycle)
+
+WHAT: Added real, city-specific content for the 8 previously-thin
+city-service combos in Rockwall: main-sewer-line-clog,
+water-heater-emergency, toilet-overflow-emergency, burst-pipe-emergency,
+sewer-backup-help, commercial-emergency-plumbing, same-day-plumber-connection,
+and sink-and-shower-drain-backup. Rockwall's other 2 of 10 services
+(24-hour-emergency-plumber, emergency-drain-cleaning) already had real
+content directly in pageEnhancements.ts.
+
+VERIFICATION FIRST: Ran findstr across all src/data/*.ts for "rockwall/"
+before writing anything. Confirmed Rockwall follows the same multi-file
+pattern as recent cities: literal entries in pageEnhancements.ts (lines
+2959, 3000) win over separate rockwall/ entries in
+cityServiceEnhancementsDFWAdditional3.ts (lines 226, 263), which are dead
+code. Read the winning pageEnhancements.ts entries to extract only
+previously-established real facts - no new statistics invented.
+
+FACTS REUSED (from Rockwall's existing 2 covered services):
+- Rockwall County is one of the fastest-growing counties in Texas
+- Newer master-planned communities near Lake Ray Hubbard bring modern PEX
+  plumbing, distinct from established neighborhoods closer to central
+  Rockwall
+- Builder warranty coverage is relevant for newer master-planned community
+  construction
+- Clay-soil-related slab leak risk common to the broader DFW area
+
+DIFFERENTIATION: Anchored Rockwall's 8 new entries on its PEX-modern-
+construction-versus-established-central-Rockwall dichotomy and builder
+warranty context, distinct from The Colony's Lake Lewisville elevation/
+drainage angle despite both cities being lake-adjacent.
+
+NEW FILE: src/data/cityServiceEnhancementsRockwallExpansion.ts (8 entries)
+WIRED IN: src/data/pageEnhancements.ts (import + spread after
+allenExpansionCityServiceEnhancements)
+
+VERIFICATION: npx tsc --noEmit clean. npx next build succeeded cleanly with
+full console output: 493/493 static pages generated, 330 city-service
+combo routes confirmed in the build's route listing, unchanged.
+
+RUNNING TOTAL: 226 of 264 originally-thin combos now fixed (14 priority-1
+cities complete + 16 of 22 priority-2 DFW suburbs: Grand Prairie, Mesquite,
+Grapevine, Euless, Bedford, Hurst, Keller, Southlake, Flower Mound, The
+Colony, Allen, Rockwall done). Remaining priority-2 suburbs: Rowlett,
+Mansfield, Cedar Hill, DeSoto, Duncanville, Wylie (6 suburbs x 8 = 48
+combos remaining).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01HTFp72vqcHQJUrN4gGWeFY
