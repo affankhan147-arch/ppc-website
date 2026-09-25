@@ -2,6 +2,7 @@ import type { FAQ } from "@/data/faqs";
 import { dallasExpansionCityServiceEnhancements } from "./cityServiceEnhancementsDallasExpansion";
 import { fortWorthExpansionCityServiceEnhancements } from "./cityServiceEnhancementsFortWorthExpansion";
 import { arlingtonExpansionCityServiceEnhancements } from "./cityServiceEnhancementsArlingtonExpansion";
+import { planoExpansionCityServiceEnhancements } from "./cityServiceEnhancementsPlanoExpansion";
 import { dfwAdditionalCityServiceEnhancements5 } from "./cityServiceEnhancementsDFWAdditional5";
 import { dfwAdditionalCityServiceEnhancements4 } from "./cityServiceEnhancementsDFWAdditional4";
 import { dfwAdditionalCityServiceEnhancements3 } from "./cityServiceEnhancementsDFWAdditional3";
@@ -1040,6 +1041,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
   ...dallasExpansionCityServiceEnhancements,
   ...fortWorthExpansionCityServiceEnhancements,
   ...arlingtonExpansionCityServiceEnhancements,
+  ...planoExpansionCityServiceEnhancements,
   ...dfwAdditionalCityServiceEnhancements5,
   ...dfwAdditionalCityServiceEnhancements4,
   ...dfwAdditionalCityServiceEnhancements3,
