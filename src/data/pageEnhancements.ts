@@ -3341,7 +3341,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
       { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
       { label: "Dallas service area", href: "/cities/dallas" },
-      { label: "DFW lead service line inventory by city", href: "/blog/dfw-lead-service-line-inventory-by-city" }
+      { label: "DFW lead service line inventory by city", href: "/blog/dfw-lead-service-line-inventory-by-city" },
+      { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" }
     ]
   },
   "what-counts-as-a-plumbing-emergency": {
@@ -3605,7 +3606,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
-      { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" }
+      { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
+      { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" }
     ]
   },
   "emergency-plumbing-in-arlington-tx-night-and-weekend-issues": {
@@ -4931,6 +4933,31 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" }
+    ]
+  },
+  "dfw-water-sewer-rate-increases-by-city-2026": {
+    checklistTitle: "DFW water and sewer rate increases by city: what actually changed in 2026",
+    checklistIntro:
+      "Most of these increases trace back to the same source - rising wholesale water costs from the North Texas Municipal Water District (NTMWD) - but each city sets its own final rates and effective date.",
+    checklistItems: [
+      "Dallas: new rates took effect October 1, 2025 - the monthly service charge is now $5.39 for water and $8.59 for sewer, with tiered volume charges from $2.17 per 1,000 gallons for the first 4,000 gallons up to $13.20 per 1,000 gallons above 30,000 gallons, plus a $6.19-per-1,000-gallon sewer volume charge.",
+      "Fort Worth: current rates run $2.28 to $5.37 per CCF (748 gallons) for water plus $4.30 per CCF for sewer and a $21.65 monthly base charge; the City Council approved further increases (the top tier rising to $5.60/CCF and the base charge to $14.45) effective January 1, 2027.",
+      "Arlington: new rates took effect October 1, 2026 - a 6.3% average residential increase, roughly $5.10 more per month for a typical household using 8,000 gallons of water and 4,000 gallons of wastewater, approved by City Council on September 15, 2026 to cover rising raw-water, wastewater-treatment, and system-repair costs.",
+      "Plano: raised rates starting October 2025 to offset an 8% wholesale water rate increase from NTMWD, plus an average $1.50 increase to drainage fees, with the city phasing in further increases over the next three years.",
+      "McKinney and Frisco: both approved 9% residential rate increases tied to the same NTMWD wholesale cost pass-through affecting the wider North Texas region."
+    ],
+    proofTitle: "How to tell a rate increase from a hidden leak on your own bill",
+    proofItems: [
+      "Compare your city's published percentage increase above to your own bill's percentage jump - a rate increase raises bills by roughly the same percentage across the board, not by a random spike on one account.",
+      "Check your water meter's leak indicator with every fixture off before assuming a bill jump is only the new rate - see our step-by-step meter-check guide.",
+      "A rate increase changes the price per gallon, not how many gallons you used - if your metered usage also jumped, that points to a usage or leak question, not a rate question.",
+      "Ask your city utility's billing department to break down how much of your bill's dollar increase came from the published rate change versus increased consumption."
+    ],
+    extraLinks: [
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
+      { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
   }
 };

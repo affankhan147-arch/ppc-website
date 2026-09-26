@@ -413,3 +413,14 @@ export const dfwLeadServiceLineInventoryPost: BlogPost = {
 };
 
 blogPosts.push(dfwLeadServiceLineInventoryPost);
+
+export const dfwWaterSewerRateIncreasesByCityPost: BlogPost = {
+  slug: "dfw-water-sewer-rate-increases-by-city-2026",
+  title: "DFW Water & Sewer Rate Increases by City (2026): Rate Hike or Hidden Leak?",
+  directAnswer:
+    "DFW water and sewer rates are rising city by city in 2026, mostly driven by wholesale costs from the North Texas Municipal Water District - Arlington raised rates 6.3% (about $5.10 more per month for a typical household) effective October 1, 2026, McKinney and Frisco each approved 9% increases, Plano raised rates in October 2025 to cover an 8% NTMWD wholesale hike, and Dallas and Fort Worth both published new tiered rate schedules - but if your bill jumped well beyond your city's published percentage, that gap usually points to a hidden leak, not a rate increase.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(dfwWaterSewerRateIncreasesByCityPost);
