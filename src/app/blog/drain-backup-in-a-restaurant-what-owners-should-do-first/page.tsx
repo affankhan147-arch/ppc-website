@@ -46,7 +46,13 @@ const faqs = [
   }
 ];
 
-export const metadata: Metadata = buildMetadata({ title, description, path });
+// Search-result title matches the top GSC query ("emergency commercial plumbing for restaurant
+// kitchen backups", pos ~9). H1 stays `title`.
+export const metadata: Metadata = buildMetadata({
+  title: "Restaurant Kitchen Drain Backup: Emergency Steps",
+  description,
+  path
+});
 
 export default function DrainBackupRestaurantPage() {
   return (

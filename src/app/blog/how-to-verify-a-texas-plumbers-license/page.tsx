@@ -13,7 +13,14 @@ const path = "/blog/how-to-verify-a-texas-plumbers-license";
 const title = "How to Verify a Texas Plumber’s License";
 const description = "Step-by-step guide to using the Texas State Board of Plumbing Examiners license search tool, plus what results mean and red flags to watch for.";
 
-export const metadata: Metadata = buildMetadata({ title, description, path });
+// Search-result title/description tuned to the queries this page already ranks for in GSC
+// ("tsbpe license search", "texas state board of plumbing examiners license search"). H1 stays `title`.
+export const metadata: Metadata = buildMetadata({
+  title: "TSBPE License Search: Verify a Texas Plumber",
+  description:
+    "Use the free TSBPE public license search to check a Texas plumber's license, see what each result means, and spot red flags before you hire.",
+  path
+});
 
 const faqs = [
   {

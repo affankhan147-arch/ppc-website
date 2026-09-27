@@ -16,7 +16,12 @@ const description = truncateForMeta(
 const directAnswer =
   "Yes, with real limits. Texas Occupations Code Section 1301.051 lets homeowners perform plumbing work on their own occupied primary residence without a plumbing license, but this homestead exemption does not cover rental properties, does not let you hire an unlicensed person to do the work for you, and does not waive the permit and inspection your city still requires for anything beyond simple fixture repair. Gas line work is regulated separately and typically still requires a qualified, licensed installer even in a homeowner's own home.";
 
-export const metadata: Metadata = buildMetadata({ title, description, path });
+// Search-result title matches the top GSC query ("can i do my own plumbing in my house", pos ~6). H1 stays `title`.
+export const metadata: Metadata = buildMetadata({
+  title: "Can I Do My Own Plumbing in Texas? What's Legal",
+  description,
+  path
+});
 
 const faqs = [
   {

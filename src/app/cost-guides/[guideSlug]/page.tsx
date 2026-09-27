@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props) {
   const guide = costGuides.find((item) => item.slug === guideSlug);
   if (!guide) return {};
   return buildMetadata({
-    title: guide.title,
-    description: truncateForMeta(guide.directAnswer),
+    title: guide.seoTitle ?? guide.title,
+    description: truncateForMeta(guide.seoDescription ?? guide.directAnswer),
     path: `/cost-guides/${guide.slug}`
   });
 }

@@ -1,6 +1,8 @@
 ﻿export type CostGuide = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   directAnswer: string;
   rangeGuidance: string;
   factors: string[];
@@ -23,6 +25,8 @@ export const costGuides: CostGuide[] = [
   {
     slug: "drain-cleaning-cost-dfw",
     title: "Drain cleaning cost in Dallas-Fort Worth",
+    seoTitle: "Drain & Sewer Line Cleaning Cost in DFW",
+    seoDescription: "What drain and sewer line cleaning costs in Dallas-Fort Worth depends on: one fixture vs. the main line, cable vs. hydro equipment, camera inspection, and timing.",
     directAnswer: "How much does drain cleaning cost? It depends on whether the clog is in one fixture, a shared branch line, or the main sewer line, plus whether it's an emergency same-day call, along with the equipment and access needed.",
     rangeGuidance: "A simple fixture clog is usually different from a main line issue, and emergency drain cleaning cost or 24 hour drain cleaning cost can run higher than a scheduled visit. Costs can change if camera inspection, heavy equipment, repeat blockage diagnosis, or after-hours service is needed.",
     factors: ["fixture versus main line", "cable or hydro equipment", "camera inspection", "repeat clogs", "same-day timing", "cleanout access"],
