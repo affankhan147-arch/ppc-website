@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 const rootDir = dirname(dirname(fileURLToPath(import.meta.url)));
-const visibleNumber = "1 844-397-8298";
-const telephoneUri = "tel:+18443978298";
+const visibleNumber = "1 702-602-9015";
+const telephoneUri = "tel:+17026029015";
 const baseUrl = "https://plumbinghands.com";
 
 async function fetchLivePage(path) {

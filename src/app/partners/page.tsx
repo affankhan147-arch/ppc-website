@@ -73,7 +73,7 @@ export default function PartnersPage() {
             <h3 className="text-xl font-semibold text-white mb-2">Ready to Partner?</h3>
             <p className="text-slate-300 mb-4">Call us today or fill out the contact form below to get started.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:18443978298" className="inline-block bg-[#F0B429] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#d49f20] transition">
+              <a href="tel:17026029015" className="inline-block bg-[#F0B429] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#d49f20] transition">
                 Call Now
               </a>
               <a href="/contact" className="inline-block border border-[#F0B429] text-[#F0B429] font-semibold px-6 py-3 rounded-lg hover:bg-[#F0B429] hover:text-black transition">

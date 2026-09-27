@@ -1,8 +1,8 @@
 ﻿export const phoneConfig = {
-  did: "+1 844-397-8298",
-  display: "1 844-397-8298",
-  e164: "+18443978298",
-  href: "tel:+18443978298"
+  did: "+1 702-602-9015",
+  display: "1 702-602-9015",
+  e164: "+17026029015",
+  href: "tel:+17026029015"
 } as const;
 
 export const siteConfig = {
