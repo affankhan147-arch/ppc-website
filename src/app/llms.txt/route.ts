@@ -11,7 +11,10 @@ const SECTION_TITLES: Record<string, string> = {
   problem: "Plumbing problems: what to do now",
   cost: "Cost guides",
   "cost-guide": "Cost guides",
-  city: "Service areas"
+  city: "Service areas",
+  "service-index": "Service directory",
+  "city-index": "City directory",
+  faq: "Frequently asked questions"
 };
 
 function clip(text: string, max = 200): string {
@@ -22,7 +25,7 @@ function clip(text: string, max = 200): string {
 }
 
 export function GET() {
-  const pages = getAllInventoryPages().filter((p) => p.kind !== "city-service" && p.kind !== "home");
+  const pages = getAllInventoryPages().filter((p) => p.kind !== "city-service" && p.kind !== "home" && p.kind !== "legal");
   const groups = new Map<string, typeof pages>();
   for (const page of pages) {
     const list = groups.get(page.kind) ?? [];
