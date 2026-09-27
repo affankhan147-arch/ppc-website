@@ -81,7 +81,7 @@ export default function LeakCostCalculatorPage() {
             <p className="text-slate-300 mb-4">
               Here&apos;s what that looks like in Dallas for a household using 8,000 gallons a month with a
               50-gallon-a-day leak, the size the EPA says 9% of homes have. The leak adds 1,500 gallons a
-              month. At the $4.81 tier that&apos;s about $7.22 in water. At the $6.19 sewer rate, it&apos;s another
+              month. At the $4.81 tier that&apos;s about $7.21 in water. At the $6.19 sewer rate, it&apos;s another
               $9.29 a month in sewer if the leak runs through the winter. The sewer side costs more than the water side.
             </p>
             <p className="text-slate-300">
