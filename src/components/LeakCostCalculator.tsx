@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { leakCostCities, leakPresets, waterCharge } from "@/data/leakCostRates";
 
 const DAYS_PER_MONTH = 30;
@@ -26,6 +27,24 @@ export default function LeakCostCalculator() {
     const extraSewer = (sewerGallons / 1000) * city.sewerPerThousand;
     return { leakGallons, extraWater, extraSewer };
   }, [city, usage, gpd]);
+
+  // Usage measurement: one GA4 event per change after the first render. GA only loads after
+  // cookie consent (CookieConsent.tsx), so nothing is sent for visitors who decline.
+  const firstRender = useRef(true);
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    const timer = setTimeout(() => {
+      try {
+        sendGAEvent("event", "leak_calculator_use", { city: citySlug, leak_type: presetId });
+      } catch {
+        // analytics unavailable - ignore
+      }
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [citySlug, presetId, usage, customGpd]);
 
   const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
 
