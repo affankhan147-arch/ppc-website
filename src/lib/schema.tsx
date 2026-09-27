@@ -73,13 +73,13 @@ export function articleSchema(path: string, headline: string, description: strin
   };
 }
 
-export function serviceSchema(name: string, path: string, description: string) {
+export function serviceSchema(name: string, path: string, description: string, areaServed: string = siteConfig.marketName) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name,
     description,
-    areaServed: siteConfig.marketName,
+    areaServed,
     provider: {
       "@type": "Organization",
       name: siteConfig.legalName,

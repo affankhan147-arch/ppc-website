@@ -69,7 +69,7 @@ export default async function CityServicePage({ params }: Props) {
       <JsonLd
         data={[
           webPageSchema(path, `${displayName} in ${city.name}`, service.shortAnswer),
-          serviceSchema(`${displayName} in ${city.name}`, path, service.shortAnswer),
+          serviceSchema(`${displayName} in ${city.name}`, path, service.shortAnswer, city.name),
           breadcrumbSchema([
             { name: city.name, path: `/cities/${city.slug}` },
             { name: displayName, path }

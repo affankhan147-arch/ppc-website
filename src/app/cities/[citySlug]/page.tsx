@@ -11,7 +11,7 @@ import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
 import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ citySlug: string }>;
@@ -82,6 +82,7 @@ export default async function CityPage({ params }: Props) {
       <JsonLd
         data={[
           webPageSchema(path, pageHeading, `Provider connection page for urgent plumbing in ${city.name}.`),
+          serviceSchema(`Emergency Plumbing in ${city.name}, TX`, path, `Request an emergency plumber connection serving ${city.name}, TX.`, city.name),
           breadcrumbSchema([{ name: "Cities", path: "/cities" }, { name: city.name, path }]),
           faqSchema(faqs)
         ]}
