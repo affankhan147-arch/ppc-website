@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -30,11 +31,18 @@ export async function generateMetadata({ params }: Props) {
   const service = services.find((item) => item.slug === serviceSlug);
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) return {};
   const hasOwnUrgencySignal = service.slug === "24-hour-emergency-plumber" || service.slug === "same-day-plumber-connection";
+  const cityHeading = service.cityHeading?.replace("{city}", city.name);
   return buildMetadata({
-    title: hasOwnUrgencySignal
-      ? `${titleCase(service.name)} in ${city.name}, TX`
-      : `24/7 ${titleCase(service.name)} in ${city.name}, TX`,
-    description: truncateForMeta(`Need ${titleCase(service.name)} in ${city.name}? ${service.shortAnswer}`),
+    title:
+      cityHeading ??
+      (hasOwnUrgencySignal
+        ? `${titleCase(service.name)} in ${city.name}, TX`
+        : `24/7 ${titleCase(service.name)} in ${city.name}, TX`),
+    description: truncateForMeta(
+      cityHeading
+        ? `${city.name}, TX: ${service.shortAnswer}`
+        : `Need ${titleCase(service.name)} in ${city.name}? ${service.shortAnswer}`
+    ),
     path: `/cities/${city.slug}/${service.slug}`
   });
 }
@@ -46,6 +54,8 @@ export default async function CityServicePage({ params }: Props) {
   if (!city || !service || !isPriorityCityService(city.slug, service.slug)) notFound();
 
   const displayName = titleCase(service.name);
+  const pageHeading = service.cityHeading?.replace("{city}", city.name) ?? `${displayName} in ${city.name}, TX`;
+  const is24Hour = service.slug === "24-hour-emergency-plumber";
   const path = `/cities/${city.slug}/${service.slug}`;
   const enhancement = cityServiceEnhancements[`${city.slug}/${service.slug}`];
   const relatedProblems = problems.filter((problem) => problem.relatedServiceSlug === service.slug).slice(0, 2);
@@ -81,11 +91,22 @@ export default async function CityServicePage({ params }: Props) {
       <div className="mt-6">
         <article>
           <p className="section-kicker">City plus service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{displayName} in {city.name}, TX</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
-            Searching for {displayName.toLowerCase()} near {city.name}, available 24 hours a day? Local guidance for {city.name} homeowners and
-            property managers who need {displayName.toLowerCase()}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
-          </p>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
+          {is24Hour ? (
+            <p className="mt-4 text-lg leading-8 text-slate-300">
+              Need a 24 hour plumber in {city.name} after regular business hours? This page is for the late-night, overnight, weekend, and
+              holiday calls -- a leak at 2 a.m., a backed-up toilet on a Sunday. For daytime or general help, start with the{" "}
+              <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}`}>
+                emergency plumber in {city.name}, TX
+              </Link>{" "}
+              page. Confirm availability, after-hours pricing, credentials, and arrival time directly with the provider.
+            </p>
+          ) : (
+            <p className="mt-4 text-lg leading-8 text-slate-300">
+              Searching for {displayName.toLowerCase()} near {city.name}, available 24 hours a day? Local guidance for {city.name} homeowners and
+              property managers who need {displayName.toLowerCase()}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
+            </p>
+          )}
           <div className="mt-6">
             <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={displayName} />
           </div>

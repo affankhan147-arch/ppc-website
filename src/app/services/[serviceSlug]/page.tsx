@@ -29,10 +29,16 @@ export async function generateMetadata({ params }: Props) {
   if (!service) return {};
   const hasOwnUrgencySignal = service.slug === "24-hour-emergency-plumber" || service.slug === "same-day-plumber-connection";
   return buildMetadata({
-    title: hasOwnUrgencySignal
-      ? `${titleCase(service.name)} in Dallas-Fort Worth`
-      : `24/7 ${titleCase(service.name)} in Dallas-Fort Worth`,
-    description: truncateForMeta(`Need ${service.name} in Dallas-Fort Worth? ${service.shortAnswer}`),
+    title:
+      service.seoTitle ??
+      (hasOwnUrgencySignal
+        ? `${titleCase(service.name)} in Dallas-Fort Worth`
+        : `24/7 ${titleCase(service.name)} in Dallas-Fort Worth`),
+    description: truncateForMeta(
+      service.seoTitle
+        ? service.shortAnswer
+        : `Need ${service.name} in Dallas-Fort Worth? ${service.shortAnswer}`
+    ),
     path: `/services/${service.slug}`
   });
 }
@@ -84,7 +90,7 @@ export default async function ServicePage({ params }: Props) {
       <div className="mt-6">
         <article>
           <p className="section-kicker">{service.urgency} urgency service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{displayName} in Dallas-Fort Worth</h1>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{service.seoH1 ?? `${displayName} in Dallas-Fort Worth`}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>

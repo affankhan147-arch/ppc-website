@@ -13,6 +13,12 @@ export type Service = {
   costFactors: string[];
   faqSeed: string[];
   image?: string;
+  /** Search title for /services/[slug], matched to real GSC queries (layout template appends the brand). */
+  seoTitle?: string;
+  /** Visible H1 for /services/[slug]. Falls back to "{Name} in Dallas-Fort Worth". */
+  seoH1?: string;
+  /** Title + H1 for /cities/[city]/[slug]. "{city}" is replaced with the city name. */
+  cityHeading?: string;
 };
 
 export const services: Service[] = [
@@ -20,7 +26,10 @@ export const services: Service[] = [
     slug: "24-hour-emergency-plumber",
     name: "24-hour emergency plumber",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "Looking for a 24 hour plumber near me? If water is leaking, a drain is backing up, or a fixture cannot be used safely, shut off the closest valve and request urgent plumbing help.",
+    shortAnswer: "If water is leaking, a drain is backing up, or a fixture cannot be used safely after hours, shut off the closest valve and request a 24 hour plumber -- nights, weekends, and holidays included.",
+    seoTitle: "24 Hour Plumber in Dallas-Fort Worth: Nights & Weekends",
+    seoH1: "24 Hour Plumber in Dallas-Fort Worth",
+    cityHeading: "24 Hour Plumber in {city}, TX: Nights & Weekends",
     urgency: "High",
     symptoms: ["active leak", "water near electrical fixtures", "overflowing toilet", "no usable bathroom", "after-hours plumbing failure"],
     steps: ["Shut off the nearest valve if safe.", "Move items away from water.", "Avoid using backed-up fixtures.", "Call for a provider connection."],
@@ -35,7 +44,9 @@ export const services: Service[] = [
     slug: "emergency-drain-cleaning",
     name: "emergency drain cleaning",
     categorySlug: "drain-cleaning",
-    shortAnswer: "Emergency drain cleaning -- sometimes searched as emergency drain service -- is needed when wastewater backs up, more than one fixture is affected, or a clog blocks a kitchen, bathroom, or business.",
+    shortAnswer: "Emergency drain cleaning and drain service calls make sense when wastewater backs up, more than one fixture is affected, or a clog shuts down a kitchen, bathroom, or business.",
+    seoTitle: "Emergency Drain Cleaning in DFW: 24/7 Drain Service",
+    cityHeading: "Drain Cleaning in {city}, TX: 24/7 Emergency Drain Service",
     urgency: "High",
     symptoms: ["multiple slow drains", "standing water", "sewage odor", "gurgling fixtures", "overflowing cleanout"],
     steps: ["Stop running water into the clogged line.", "Do not add chemical drain cleaner after backup starts.", "Note which fixtures are affected.", "Request same-day drain help."],
@@ -50,7 +61,9 @@ export const services: Service[] = [
     slug: "main-sewer-line-clog",
     name: "main sewer line clog",
     categorySlug: "sewer-help",
-    shortAnswer: "A main sewer line clog -- sometimes described as a broken sewer line or a need for sewer repair -- often affects several fixtures at once. Stop using water, avoid flushing toilets, and request urgent sewer line guidance.",
+    shortAnswer: "A main sewer line clog usually shows up in several fixtures at once, and repeat clogs can point to a broken sewer line that needs repair. Stop using water, avoid flushing toilets, and request urgent sewer line help.",
+    seoTitle: "Main Sewer Line Clog & Sewer Line Repair in DFW",
+    cityHeading: "Sewer Line Clog & Sewer Repair in {city}, TX",
     urgency: "High",
     symptoms: ["toilet and tub backup", "floor drain overflow", "sewage smell", "multiple fixtures affected", "cleanout overflow"],
     steps: ["Stop using sinks, tubs, and toilets.", "Keep people away from contaminated water.", "Check whether a cleanout is overflowing.", "Call for sewer backup help."],
@@ -80,14 +93,17 @@ export const services: Service[] = [
     slug: "burst-pipe-emergency",
     name: "burst pipe emergency",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "For a burst pipe -- a common reason people search for a burst pipe plumber -- shut off the main water valve, protect electrical areas, and request emergency plumbing help as soon as possible.",
+    shortAnswer: "For a burst or broken pipe, shut off the main water valve, keep people away from wet electrical areas, and get an emergency plumber out for pipe repair as soon as possible.",
+    seoTitle: "Burst Pipe Plumber in DFW: 24/7 Emergency Pipe Repair",
+    seoH1: "Burst Pipe Plumber & Emergency Pipe Repair in Dallas-Fort Worth",
+    cityHeading: "Burst Pipe Repair in {city}, TX: 24/7 Emergency Plumber",
     urgency: "High",
     symptoms: ["water spraying", "ceiling leak", "wall swelling", "sudden pressure loss", "water meter spinning"],
     steps: ["Shut off the main water valve.", "Turn off electricity near standing water if safe.", "Open a low faucet to drain pressure.", "Call for urgent pipe help."],
     callPrep: ["Where water is appearing.", "Whether the main shutoff is closed.", "Pipe material if known.", "Whether ceiling, wall, or slab access may be involved."],
     commonCauses: ["freeze stress", "corrosion", "high pressure", "failed fitting", "accidental damage"],
     mistakesToAvoid: ["Do not leave the main water on.", "Do not touch wet switches or outlets.", "Do not patch over active pressure.", "Do not wait if ceilings or walls are swelling."],
-    costDiscussion: "Burst pipe repair cost (also searched as burst pipe emergency cost) depends on pipe location, access, material, and whether surrounding surfaces must be opened. Water mitigation may be a separate service from plumbing repair.",
+    costDiscussion: "Burst pipe repair cost depends on where the pipe broke, how hard it is to reach, the pipe material, and whether walls, ceilings, or a slab have to be opened. Water mitigation is usually billed separately from the plumbing repair itself.",
     costFactors: ["pipe location", "wall or slab access", "material type", "water damage", "after-hours timing"],
     faqSeed: ["Where is my main shutoff valve?", "Is a burst pipe an emergency?", "What should I do before help arrives?"]
   },
@@ -95,7 +111,9 @@ export const services: Service[] = [
     slug: "water-heater-emergency",
     name: "water heater emergency",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "A leaking or unsafe water heater -- often searched as a hot water heater -- needs fast attention. Shut off water and power or gas if safe, then request help for inspection or repair.",
+    shortAnswer: "A leaking or unsafe water heater, or a sudden loss of hot water, needs fast attention. Shut off water and power or gas if safe, then request help for inspection or repair.",
+    seoTitle: "Emergency Water Heater Repair in DFW: Leaks & No Hot Water",
+    cityHeading: "Emergency Water Heater Repair in {city}, TX",
     urgency: "Medium",
     symptoms: ["tank leaking", "no hot water", "rusty water", "popping sounds", "water near heater"],
     steps: ["Turn off water to the heater.", "Turn off power or gas if safe.", "Avoid standing water near electrical parts.", "Call for water heater help."],
@@ -110,7 +128,9 @@ export const services: Service[] = [
     slug: "sewer-backup-help",
     name: "sewer backup help",
     categorySlug: "sewer-help",
-    shortAnswer: "A sewer backup -- often searched as a broken sewer line or a need for sewer repair near me -- can expose people to contaminated water. Stop using plumbing fixtures, keep the area clear, and request urgent guidance.",
+    shortAnswer: "A sewer backup can expose people to contaminated water and often points to a blocked or broken sewer line. Stop using plumbing fixtures, keep the area clear, and request urgent sewer repair guidance.",
+    seoTitle: "Sewer Backup Help in DFW: Backed-Up Toilets & Drains",
+    cityHeading: "Sewer Backup & Sewer Repair Help in {city}, TX",
     urgency: "High",
     symptoms: ["sewage in tub", "floor drain backup", "strong odor", "slow drains throughout home", "gurgling toilets"],
     steps: ["Stop all water use.", "Keep children and pets away.", "Avoid DIY cleanup of contaminated water.", "Call for sewer help."],

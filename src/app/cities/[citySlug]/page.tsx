@@ -40,7 +40,10 @@ export async function generateMetadata({ params }: Props) {
   const city = cities.find((item) => item.slug === citySlug);
   if (!city) return {};
   return buildMetadata({
-    title: `24/7 Emergency Plumber in ${city.name}, TX`,
+    // Task197: lead with the exact GSC head phrase ("emergency plumber {city} tx") and add the
+    // "emergency plumbing" variant. "24 hour plumber" intent now belongs to the 24h combo page.
+    title: `Emergency Plumber in ${city.name}, TX | 24/7 Emergency Plumbing`,
+    absoluteTitle: true,
     description: truncateForMeta(buildCityDescription(city)),
     path: `/cities/${city.slug}`
   });
@@ -54,6 +57,7 @@ export default async function CityPage({ params }: Props) {
   const pageHeading = `Emergency Plumber in ${city.name}, TX`;
   const path = `/cities/${city.slug}`;
   const priorityServiceSlugs = getPriorityServiceSlugsForCity(city.slug);
+  const has24HourPage = priorityServiceSlugs.includes("24-hour-emergency-plumber");
   const enhancement = cityPageEnhancements[city.slug];
   const cityServiceLinks = priorityServiceSlugs
     .map((serviceSlug) => services.find((service) => service.slug === serviceSlug))
@@ -93,8 +97,17 @@ export default async function CityPage({ params }: Props) {
           <p className="section-kicker">Local service-area guidance</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
-            Looking for a 24-hour plumber near {city.name}? This page routes urgent leaks, drain backups, sewer line symptoms, overflows, and
-            water heater problems in {city.name} and nearby {city.countyHint} areas to available providers, day or night.
+            Need an emergency plumber in {city.name}, TX? This page routes emergency plumbing calls -- active leaks, pipe breaks, drain and
+            sewer backups, overflowing toilets, and water heater failures -- in {city.name} and nearby {city.countyHint} areas to available providers.
+            {has24HourPage ? (
+              <>
+                {" "}Calling late at night or on a weekend? See the{" "}
+                <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}/24-hour-emergency-plumber`}>
+                  24 hour plumber in {city.name}
+                </Link>{" "}
+                page.
+              </>
+            ) : null}
           </p>
           <div className="mt-6">
             <CallButton location={`city-${city.slug}-top`} pagePath={path} pageType="city" city={city.name} service="Emergency plumbing" />

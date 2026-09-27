@@ -6,14 +6,16 @@ type SeoInput = {
   title: string;
   description: string;
   path: string;
+  /** Skip the layout's "| Plumbing Hands" suffix (for titles that are already near the ~60-char display limit). */
+  absoluteTitle?: boolean;
 };
 
-export function buildMetadata({ title, description, path }: SeoInput): Metadata {
+export function buildMetadata({ title, description, path, absoluteTitle }: SeoInput): Metadata {
   const canonical = joinUrl(siteConfig.baseUrl, path);
-  const fullTitle = title.includes(siteConfig.brandName) ? title : `${title} | ${siteConfig.brandName}`;
+  const fullTitle = absoluteTitle || title.includes(siteConfig.brandName) ? title : `${title} | ${siteConfig.brandName}`;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: {
       canonical
