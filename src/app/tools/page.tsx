@@ -11,6 +11,11 @@ export const metadata = buildMetadata({
 
 const tools = [
   {
+    title: "DFW Water Leak Cost Calculator",
+    href: "/tools/dfw-leak-cost-calculator",
+    description: "See what a drip, running toilet, or hidden leak adds to your Dallas or Fort Worth water and sewer bill, using each city's published rates."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."
