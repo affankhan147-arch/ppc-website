@@ -124,6 +124,13 @@ export default function WaterHeaterLifespanGuidePage() {
             <p className="text-slate-300">
               When any of these signs appear on a unit that is already near the end of its expected lifespan, a same-day inspection is worth the cost - it's the difference between a planned replacement and an unplanned failure that floods a utility closet or garage overnight.
             </p>
+            <p className="text-slate-300 mt-4">
+              Facing a specific repair quote right now? Our free{" "}
+              <a href="/tools/water-heater-repair-or-replace-calculator" className="text-[#F0B429] underline">
+                water heater repair-or-replace calculator
+              </a>{" "}
+              weighs your unit&apos;s age and the repair cost against the 50% rule water heater manufacturers themselves recommend.
+            </p>
           </section>
 
           <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
@@ -133,6 +140,7 @@ export default function WaterHeaterLifespanGuidePage() {
           <div className="mt-10">
             <InternalLinks
               extra={[
+                { label: "Water Heater Repair or Replace Calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
                 { label: "Water Heater Emergency Service", href: "/services/water-heater-emergency" },
                 { label: "Water Heater Emergency Cost Guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
                 { label: "Water Heater Making a Popping Noise? Here's Why", href: "/blog/water-heater-making-popping-noise-dallas" },

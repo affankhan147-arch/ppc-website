@@ -16,6 +16,11 @@ const tools = [
     description: "See what a drip, running toilet, or hidden leak adds to your Dallas or Fort Worth water and sewer bill, using each city's published rates."
   },
   {
+    title: "Water Heater Repair or Replace Calculator",
+    href: "/tools/water-heater-repair-or-replace-calculator",
+    description: "Enter your water heater's age, type, and repair needed to see whether repairing or replacing makes more sense, using the 50% rule and real 2026 cost data."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

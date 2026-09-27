@@ -214,6 +214,9 @@ export default function WaterHeaterPoppingNoisePage() {
             clearly declined, or repairs are becoming a pattern. A useful recommendation should weigh the condition of
             the entire unit rather than using its age or sound as justification by itself.
           </p>
+          <Link href="/tools/water-heater-repair-or-replace-calculator" className="mt-4 inline-flex font-black text-cyan-700 hover:text-cyan-900">
+            Try our free water heater repair-or-replace calculator
+          </Link>
         </section>
 
         <section className="content-section rounded-md border border-orange-200 bg-orange-50 p-6">
@@ -295,6 +298,7 @@ export default function WaterHeaterPoppingNoisePage() {
           { label: "Dallas plumbing help", href: "/cities/dallas" },
           { label: "Water-heater emergency service", href: "/services/water-heater-emergency" },
           { label: "Water heater leaking in Dallas", href: "/blog/water-heater-leaking-in-dallas-emergency-signs-to-watch" },
+          { label: "Water heater repair-or-replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
           { label: "Emergency plumbing guide hub", href: "/blog" }
         ]}
       />
