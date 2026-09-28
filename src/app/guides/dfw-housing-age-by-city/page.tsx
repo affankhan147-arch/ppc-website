@@ -162,6 +162,7 @@ export default function DfwHousingAgeByCityPage() {
               extra={[
                 { label: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement" },
                 { label: "DFW Slab Leaks Guide", href: "/guides/dfw-slab-leaks" },
+                { label: "Sewer Line Repair Cost Calculator", href: "/tools/sewer-line-repair-cost-calculator" },
                 { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
                 { label: "Burst Pipe Emergency Service", href: "/services/burst-pipe-emergency" },
                 { label: "Burst Pipe Emergency Cost Guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },

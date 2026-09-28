@@ -94,6 +94,13 @@ export default function SewerRootGuidePage() {
               <li><strong>Traditional excavation</strong> – For severe damage or when the pipe has collapsed, the section must be dug up and replaced. This is more disruptive but often the only option for major failures.</li>
             </ul>
             <p className="text-slate-300 mb-4">
+              See what each option actually costs for your line&apos;s length in our{" "}
+              <a href="/tools/sewer-line-repair-cost-calculator" className="text-[#F0B429] underline">
+                sewer line repair cost calculator
+              </a>
+              , built from real 2026 published data.
+            </p>
+            <p className="text-slate-300 mb-4">
               Prevention is more cost‑effective than repair. Homeowners can:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2">
@@ -133,6 +140,7 @@ export default function SewerRootGuidePage() {
               extra={[
                 { label: "Main Sewer Line Clog Service", href: "/services/main-sewer-line-clog" },
                 { label: "Sewer Line Clog Cost Guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+                { label: "Sewer Line Repair Cost Calculator", href: "/tools/sewer-line-repair-cost-calculator" },
                 { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
                 { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
               ]}
