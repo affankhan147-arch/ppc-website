@@ -21,6 +21,11 @@ const tools = [
     description: "Enter your water heater's age, type, and repair needed to see whether repairing or replacing makes more sense, using the 50% rule and real 2026 cost data."
   },
   {
+    title: "Water Heater Age Lookup",
+    href: "/tools/water-heater-age-lookup",
+    description: "Find your water heater's approximate age from its serial number, using published Rheem-family and A.O. Smith-family date-code formats."
+  },
+  {
     title: "Sewer Line Repair Cost Calculator",
     href: "/tools/sewer-line-repair-cost-calculator",
     description: "See real 2026 cost ranges for trenchless pipe lining, pipe bursting, and traditional dig-and-replace sewer repair, by line length."

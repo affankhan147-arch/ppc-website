@@ -146,6 +146,7 @@ export default function WaterHeaterReplaceCalculatorPage() {
           <div className="mt-10">
             <InternalLinks
               extra={[
+                { label: "Water Heater Age Lookup (by serial number)", href: "/tools/water-heater-age-lookup" },
                 { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" },
                 { label: "Water heater making a popping noise? Here's why", href: "/blog/water-heater-making-popping-noise-dallas" },
                 { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },

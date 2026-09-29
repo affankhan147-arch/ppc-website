@@ -141,6 +141,7 @@ export default function WaterHeaterLifespanGuidePage() {
             <InternalLinks
               extra={[
                 { label: "Water Heater Repair or Replace Calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+                { label: "Water Heater Age Lookup (by serial number)", href: "/tools/water-heater-age-lookup" },
                 { label: "Water Heater Emergency Service", href: "/services/water-heater-emergency" },
                 { label: "Water Heater Emergency Cost Guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
                 { label: "Water Heater Making a Popping Noise? Here's Why", href: "/blog/water-heater-making-popping-noise-dallas" },
