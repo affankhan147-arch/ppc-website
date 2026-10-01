@@ -4959,6 +4959,43 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
+  },
+  "dfw-backflow-preventer-testing-requirements-by-city": {
+    checklistTitle: "DFW backflow preventer testing rules by city: what's actually required",
+    checklistIntro:
+      "Requirements differ meaningfully by city and by what your property connects to the water supply - verified directly from each city's own official backflow/cross-connection program.",
+    checklistItems: [
+      "Fort Worth: annual testing is required for every registered backflow assembly - commercial property connections, any assembly protecting against a health hazard, fire sprinkler systems, new nonresidential construction, and irrigation systems connected to the potable water supply. Testing must be done by a City-registered Backflow Prevention Assembly Tester (BPAT) holding a TCEQ Backflow License, with reports submitted through the City's Vepo/Envirotrax online system.",
+      "Dallas: annual testing is required only for high-hazard backflow assemblies. Lawn sprinkler/irrigation backflow devices generally do NOT need routine annual testing unless they were recently installed, repaired, or replaced, or the owner receives a city notification letter. Reports go through the SwiftComply Portal ($15 fee per passing test), under Dallas City Code Chapter 49 Section 29 and 30 TAC 290.44. A failed device gets 30 days to be repaired and retested.",
+      "Plano: a backflow prevention assembly tester (BPAT) must be registered with the City of Plano Utility Operations Backflow Division before performing any test. Completed test forms, along with records of any repair or replacement, must reach the City within 10 calendar days of the work. Covered connections include irrigation, fire protection, boilers/chillers, pools, auxiliary water supplies, and many commercial/industrial facilities.",
+      "Every DFW city not named here still has its own cross-connection control program under the same statewide TCEQ framework (30 TAC 290.44) - testing frequency, fees, and covered connection types can differ meaningfully even between neighboring cities, so always confirm directly with your own city's water utility before assuming a requirement from a different city applies to you.",
+      "The freeze connection: most residential backflow preventers sit exposed above ground on an irrigation line between two shutoff valves, which makes them one of the more freeze-vulnerable fixtures in a DFW home's plumbing - a cracked internal check valve or relief valve from a hard freeze often isn't obvious until the device fails its next required test or leaks the first time the system runs again."
+    ],
+    proofTitle: "How to find out if your property needs backflow testing",
+    proofItems: [
+      "Check whether your property has an irrigation/sprinkler system connected to the potable water supply, a fire sprinkler system, a pool, a boiler, or any auxiliary water source (well, rainwater collection) - these are the most common residential and commercial triggers for a required backflow assembly.",
+      "Watch for a notification letter from your city's water utility - most DFW cities notify registered device owners directly when a test is due, rather than expecting owners to track it themselves.",
+      "Contact your specific city's water utility backflow or cross-connection division directly to confirm your device's test status and due date - requirements differ enough between cities (Fort Worth requires annual testing for every assembly; Dallas generally does not for irrigation-only devices) that assuming a neighboring city's rule applies to you is a common, avoidable mistake.",
+      "Before and after any hard freeze, visually check an above-ground backflow preventer for cracks, weeping, or standing water inside its cover - a device already damaged by freeze often will not pass its next required test without a repair first."
+    ],
+    extraFaqs: [
+      {
+        question: "Does every DFW home need backflow preventer testing?",
+        answer:
+          "No - generally only properties with an irrigation system connected to the potable water supply, a fire sprinkler system, a pool, a boiler, or another auxiliary/high-hazard water connection are required to test. A typical home with no irrigation system usually has no backflow assembly to test at all."
+      },
+      {
+        question: "What happens if a backflow preventer cracks in a winter freeze?",
+        answer:
+          "A cracked or leaking backflow assembly is a mechanical repair issue, not just a retest - it usually needs to be repaired or replaced before it can pass its next required test. The device's exposed, above-ground design is a major reason it's one of the more freeze-vulnerable fixtures on a DFW irrigation system."
+      }
+    ],
+    extraLinks: [
+      { label: "How Often Does DFW Actually Freeze? (NWS Data)", href: "/guides/dfw-freeze-history" },
+      { label: "DFW Burst Pipes: Why They Happen", href: "/guides/dfw-burst-pipes" },
+      { label: "Texas Homeowners Insurance & Plumbing Claims Guide", href: "/guides/texas-insurance-plumbing-claims" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
+    ]
   }
 };
 

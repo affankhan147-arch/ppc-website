@@ -137,7 +137,8 @@ export default function BurstPipesGuidePage() {
                 { label: "How Often Does DFW Actually Freeze? (NWS Data)", href: "/guides/dfw-freeze-history" },
                 { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
                 { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" },
-                { label: "Free DFW Freeze Watch Widget (Live)", href: "/tools/freeze-watch-widget" }
+                { label: "Free DFW Freeze Watch Widget (Live)", href: "/tools/freeze-watch-widget" },
+                { label: "DFW Backflow Preventer Testing Requirements by City", href: "/blog/dfw-backflow-preventer-testing-requirements-by-city" }
               ]}
             />
           </div>

@@ -424,3 +424,14 @@ export const dfwWaterSewerRateIncreasesByCityPost: BlogPost = {
 };
 
 blogPosts.push(dfwWaterSewerRateIncreasesByCityPost);
+
+export const dfwBackflowPreventerTestingByCityPost: BlogPost = {
+  slug: "dfw-backflow-preventer-testing-requirements-by-city",
+  title: "DFW Backflow Preventer Testing Requirements by City (2026)",
+  directAnswer:
+    "Backflow preventer testing rules vary sharply by DFW city - Fort Worth requires annual testing of every registered assembly (including irrigation systems) by a City-registered tester, Dallas requires annual testing only for high-hazard devices while lawn-irrigation backflow preventers generally need testing only when installed, repaired, or replaced, and Plano requires a City-registered tester for any test performed - and because most residential backflow preventers sit exposed above ground on an irrigation line, they are also one of the more common casualties of a hard DFW freeze, often failing their next required test only after the ice has already cracked an internal seal.",
+  category: "Prevention",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(dfwBackflowPreventerTestingByCityPost);

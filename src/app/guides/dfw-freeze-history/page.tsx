@@ -109,7 +109,8 @@ export default function DfwFreezeHistoryPage() {
                 { label: "Burst Pipe Emergency Service", href: "/services/burst-pipe-emergency" },
                 { label: "Burst Pipe Emergency Cost Guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
                 { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },
-                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
+                { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" },
+                { label: "DFW Backflow Preventer Testing Requirements by City", href: "/blog/dfw-backflow-preventer-testing-requirements-by-city" }
               ]}
             />
           </div>
