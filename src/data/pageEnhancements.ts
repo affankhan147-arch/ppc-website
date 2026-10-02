@@ -4735,6 +4735,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" },
       { label: "Best questions to ask before you book an emergency plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },
+      { label: "DFW plumbing permit requirements & fees by city", href: "/blog/dfw-plumbing-permit-requirements-and-fees-by-city" },
       { label: "Partner with us", href: "/partner-with-us" },
       { label: "Licensed emergency plumbing help in Dallas", href: "/cities/dallas" }
     ]
@@ -4772,6 +4773,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     ],
     extraLinks: [
       { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" },
+      { label: "DFW plumbing permit requirements & fees by city", href: "/blog/dfw-plumbing-permit-requirements-and-fees-by-city" },
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" },
       { label: "Licensed emergency plumbing help in Plano", href: "/cities/plano" }
@@ -4994,6 +4996,43 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "How Often Does DFW Actually Freeze? (NWS Data)", href: "/guides/dfw-freeze-history" },
       { label: "DFW Burst Pipes: Why They Happen", href: "/guides/dfw-burst-pipes" },
       { label: "Texas Homeowners Insurance & Plumbing Claims Guide", href: "/guides/texas-insurance-plumbing-claims" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
+    ]
+  },
+  "dfw-plumbing-permit-requirements-and-fees-by-city": {
+    checklistTitle: "DFW plumbing permit requirements by city: what's actually required",
+    checklistIntro:
+      "Permit rules, fees, and who's allowed to pull the permit differ by city - verified directly from each city's own official building/plumbing permit documentation.",
+    checklistItems: [
+      "Dallas: a permit is required for most plumbing work, and the City's own permitting guide states a permit is always required for water heater and boiler replacement even though some in-kind fixture repairs are exempt. The minimum permit fee is $100.00. A licensed contractor registered with the City can pull it, or a homeowner with a Homestead Exemption Certificate who occupies the dwelling can pull the permit and do the work themselves.",
+      "Fort Worth: permits are priced per fixture or appliance rather than a flat minimum. The City's own Table 1-I fee schedule lists $10.34 for the first fixture or appliance and $4.22 for each additional one, with sewer, water service, gas service, and backflow preventer work each billed as their own separate line item. When a third-party inspector is used instead of a City inspector, the fee is reduced by multiplying the total by 0.35.",
+      "Arlington: plumbing permits carry a flat $100.00 base/trade permit fee under the City's own fee schedule, on top of itemized per-item add-ons for fixtures, water heaters, backflow devices, and gas lines. Skipping the permit is a real risk - Arlington's schedule sets the penalty for unpermitted work equal to the permit fee itself, effectively doubling the cost once it's caught.",
+      "Plano: the City's own permit-required list explicitly names \"water heaters (replacing or adding).\" The plumbing permit fee is calculated at $0.01 per square foot with a $45.00 minimum, and new single-family construction also carries a separate $75.00 Plumbing Certificate fee.",
+      "Every DFW city not named here still requires its own permit for most non-in-kind plumbing work under the same Texas plumbing code framework - fee amounts and whether a homeowner can legally pull their own permit differ enough even between neighboring cities that assuming one city's rule applies to another is a common, avoidable mistake. Always confirm with your own city's building inspection department before starting work."
+    ],
+    proofTitle: "How to confirm what your specific job needs before you start",
+    proofItems: [
+      "Check your city's own published Building Inspection/Permitting fee schedule (linked in each city note above) before assuming a repair is too small to need a permit - Dallas and Plano both explicitly list water heater replacement as requiring one even though it feels like a simple swap.",
+      "If you want to do the work yourself, check whether your city allows a Homestead Exemption-based self-permit the way Dallas does, versus requiring a licensed, City-registered contractor to pull it - this decides whether DIY is even a legal option before cost ever matters.",
+      "Ask whether a third-party inspection option is available and whether it changes your fee - Fort Worth's own schedule applies a 0.35 multiplier discount when a third-party inspector is used instead of a City inspector.",
+      "Budget for the real total, not just the headline minimum - Arlington's and Fort Worth's schedules both layer itemized per-fixture or per-device add-ons on top of (or instead of) a base fee, so a multi-fixture job can cost noticeably more than the quoted minimum alone."
+    ],
+    extraFaqs: [
+      {
+        question: "Do I need a permit just to replace a water heater in DFW?",
+        answer:
+          "In most cases, yes. Dallas's own permitting guide states a permit is required for water heater replacement even though some other in-kind fixture repairs are exempt, and Plano's permit-required list explicitly names \"water heaters (replacing or adding).\" Fort Worth and Arlington both price water heater work as its own line item in their fee schedules, which is a strong sign a permit applies there too. Confirm with your specific city before skipping one."
+      },
+      {
+        question: "Can I legally pull my own plumbing permit as a homeowner in DFW?",
+        answer:
+          "It depends on the city. Dallas explicitly allows a homeowner with a Homestead Exemption Certificate who occupies the dwelling to pull a permit and do the work themselves. The other DFW cities covered here don't spell out the same homeowner self-permit path as clearly in their published fee schedules, so confirm directly with your city's building inspection department - and see our guide on what Texas law actually allows a homeowner to do themselves either way, since the permit question and the licensing question are separate."
+      }
+    ],
+    extraLinks: [
+      { label: "Can Homeowners Legally Do Their Own Plumbing in Texas?", href: "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" },
+      { label: "How to Verify a Texas Plumber's License Before Hiring", href: "/blog/how-to-verify-a-texas-plumbers-license" },
+      { label: "DFW Water & Sewer Rate Increases by City (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
   }

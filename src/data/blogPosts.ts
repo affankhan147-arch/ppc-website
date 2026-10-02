@@ -435,3 +435,14 @@ export const dfwBackflowPreventerTestingByCityPost: BlogPost = {
 };
 
 blogPosts.push(dfwBackflowPreventerTestingByCityPost);
+
+export const dfwPlumbingPermitRequirementsByCityPost: BlogPost = {
+  slug: "dfw-plumbing-permit-requirements-and-fees-by-city",
+  title: "DFW Plumbing Permit Requirements & Fees by City (2026): Do You Need One?",
+  directAnswer:
+    "Almost any plumbing job beyond an in-kind part swap needs a City permit in DFW, and water heater replacement needs one almost everywhere - but the fee structure and who's legally allowed to pull it vary sharply by city: Dallas charges a flat $100 minimum permit fee and lets a homeowner with a Homestead Exemption Certificate pull their own permit, Arlington charges a $100 base trade-permit fee plus itemized per-item add-ons, Fort Worth prices permits per fixture or appliance starting at $10.34 for the first one with no separate base minimum published, and Plano charges $0.01 per square foot with a $45 minimum.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(dfwPlumbingPermitRequirementsByCityPost);
