@@ -31,6 +31,11 @@ const tools = [
     description: "See real 2026 cost ranges for trenchless pipe lining, pipe bursting, and traditional dig-and-replace sewer repair, by line length."
   },
   {
+    title: "Whole-House Repipe Cost Calculator",
+    href: "/tools/repipe-cost-calculator",
+    description: "Enter your home's square footage and pick PEX or copper to see a modeled cost range for a full whole-house repipe, sourced from 2026 HomeAdvisor and Angi data."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

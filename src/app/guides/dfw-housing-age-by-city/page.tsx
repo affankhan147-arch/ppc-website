@@ -161,6 +161,7 @@ export default function DfwHousingAgeByCityPage() {
             <InternalLinks
               extra={[
                 { label: "Polybutylene Pipe in DFW", href: "/guides/dfw-polybutylene-pipe-replacement" },
+                { label: "Whole-House Repipe Cost Calculator", href: "/tools/repipe-cost-calculator" },
                 { label: "DFW Slab Leaks Guide", href: "/guides/dfw-slab-leaks" },
                 { label: "Sewer Line Repair Cost Calculator", href: "/tools/sewer-line-repair-cost-calculator" },
                 { label: "DFW Plumbing Emergency Data Report", href: "/guides/dfw-plumbing-data" },

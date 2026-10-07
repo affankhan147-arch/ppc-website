@@ -130,7 +130,9 @@ export default function PolybutylenePipeGuidePage() {
               <li>The need for drywall or flooring repairs</li>
             </ul>
             <p className="text-slate-300 mb-4">
-              For smaller homes where the scope is limited to replacing PB pipe only, costs tend to fall in the <strong>$4,000-$8,000</strong> range. For larger homes or those requiring significant access work, costs can reach <strong>$12,000-$15,000</strong>.
+              For smaller homes where the scope is limited to replacing PB pipe only, costs tend to fall in the <strong>$4,000-$8,000</strong> range. For larger homes or those requiring significant access work, costs can reach <strong>$12,000-$15,000</strong>. Our{" "}
+              <a href="/tools/repipe-cost-calculator" className="text-[#F0B429] underline">whole-house repipe cost calculator</a>{" "}
+              lets you plug in your home&apos;s actual square footage and compare a PEX vs. copper estimate directly.
             </p>
             <p className="text-slate-300 mb-4">
               <strong>Partial replacement</strong> - In some cases, homeowners opt to replace only the sections of PB pipe that are most vulnerable or accessible. However, this is generally considered a temporary measure, as the remaining PB piping still carries the same failure risk.
@@ -158,6 +160,7 @@ export default function PolybutylenePipeGuidePage() {
           <div className="mt-10">
             <InternalLinks
               extra={[
+                { label: "Whole-House Repipe Cost Calculator", href: "/tools/repipe-cost-calculator" },
                 { label: "DFW Housing Age by City", href: "/guides/dfw-housing-age-by-city" },
                 { label: "DFW Slab Leaks Guide", href: "/guides/dfw-slab-leaks" },
                 { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" },
