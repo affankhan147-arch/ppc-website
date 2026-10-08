@@ -130,7 +130,8 @@ export default function InsuranceGuidePage() {
           <div className="mt-10">
             <InternalLinks
               extra={[
-                { label: "Water Heater Lifespan & Maintenance in DFW", href: "/guides/dfw-water-heater-lifespan" }
+                { label: "Water Heater Lifespan & Maintenance in DFW", href: "/guides/dfw-water-heater-lifespan" },
+                { label: "Slab Leak Repair Cost Calculator", href: "/tools/slab-leak-repair-cost-calculator" }
               ]}
             />
           </div>

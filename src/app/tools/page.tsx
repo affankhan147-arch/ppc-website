@@ -36,6 +36,11 @@ const tools = [
     description: "Enter your home's square footage and pick PEX or copper to see a modeled cost range for a full whole-house repipe, sourced from 2026 HomeAdvisor and Angi data."
   },
   {
+    title: "Slab Leak Repair Cost Calculator",
+    href: "/tools/slab-leak-repair-cost-calculator",
+    description: "See real 2026 cost ranges for trenchless pipe relining vs. rerouting a slab leak, plus what professional leak detection costs before repair."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

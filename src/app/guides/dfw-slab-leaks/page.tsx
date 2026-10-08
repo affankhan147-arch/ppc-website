@@ -96,6 +96,13 @@ export default function SlabLeaksGuidePage() {
             <p className="text-slate-300 mt-4">
               Homeowners should ask any provider they call which methods they use and whether they offer an initial inspection fee that can be credited toward future work. A professional diagnosis before any claim is filed is one of the most important steps a homeowner can take.
             </p>
+            <p className="text-slate-300 mt-4">
+              Once a leak is confirmed, repair cost depends heavily on the method - trenchless relining versus rerouting the line entirely. Our{" "}
+              <a href="/tools/slab-leak-repair-cost-calculator" className="text-[#F0B429] underline">
+                slab leak repair cost calculator
+              </a>{" "}
+              models both using real 2026 published cost data.
+            </p>
           </section>
 
           { /* LOCAL SECTIONS 3 & 4 (unchanged, approved) */ }
@@ -141,6 +148,7 @@ export default function SlabLeaksGuidePage() {
           <div className="mt-10">
             <InternalLinks
               extra={[
+                { label: "Slab Leak Repair Cost Calculator", href: "/tools/slab-leak-repair-cost-calculator" },
                 { label: "Polybutylene Pipe Replacement Guide", href: "/guides/dfw-polybutylene-pipe-replacement" },
                 { label: "Texas Insurance & Plumbing Claims", href: "/guides/texas-insurance-plumbing-claims" },
                 { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" }
