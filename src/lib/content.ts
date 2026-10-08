@@ -1,4 +1,4 @@
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts, getLiveBlogPosts } from "@/data/blogPosts";
 import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { problems } from "@/data/problems";
@@ -74,7 +74,7 @@ export function getAllInventoryPages(): InventoryPage[] {
     { kind: "guide", title: "Polybutylene Pipe in DFW - Identification, Insurance, Replacement", path: "/guides/dfw-polybutylene-pipe-replacement", h1: "Polybutylene Pipe in DFW", description: "A research-backed guide to polybutylene (PB) pipe: how to identify it, why DFW homes are at added risk, insurance implications, and real replacement costs." },
     { kind: "guide", title: "Sewer Line Maintenance & Root Intrusion in DFW", path: "/guides/dfw-sewer-root-intrusion", h1: "Sewer Line Maintenance & Root Intrusion in DFW", description: "A research-backed guide explaining why DFW sewer lines are uniquely prone to root intrusion, how it's diagnosed, and what homeowners can do." },
     { kind: "guide", title: "Gas Line Safety & Capacity in DFW - What Homeowners Need to Know", path: "/guides/dfw-gas-line-safety", h1: "Gas Line Safety & Capacity in DFW", description: "A research-backed guide explaining gas line capacity, safety steps, and what homeowners should know before adding outdoor kitchens or pool heaters in DFW." },
-    { kind: "guide", title: "DFW Emergency Plumbing Cost Guide - What Homeowners Can Expect to Pay", path: "/guides/dfw-emergency-plumbing-costs", h1: "DFW Emergency Plumbing Cost Guide", description: "A research-backed guide explaining how emergency plumbing pricing works in Dallas-Fort Worth, with realistic cost ranges for common services." },
+    { kind: "guide", title: "Emergency Plumber Cost in DFW (2026): Rates & Call-Out Fees", path: "/guides/dfw-emergency-plumbing-costs", h1: "Emergency Plumber Cost in Dallas-Fort Worth", description: "What an emergency plumber costs in Dallas-Fort Worth: call-out fees, after-hours rates (1.5x-3x), and price ranges for drains, burst pipes and water heaters." },
     { kind: "guide", title: "Water Heater Lifespan & Maintenance in DFW - How Long They Really Last", path: "/guides/dfw-water-heater-lifespan", h1: "Water Heater Lifespan in DFW", description: "A research-backed guide to how long tank and tankless water heaters last, why DFW's hard water shortens that lifespan, and the maintenance that actually extends it." }
   ];
 
@@ -137,7 +137,7 @@ export function getAllInventoryPages(): InventoryPage[] {
     description: guide.directAnswer
   }));
 
-  const blogPages = blogPosts.map((post) => ({
+  const blogPages = getLiveBlogPosts().map((post) => ({
     kind: "blog" as const,
     title: post.title,
     path: `/blog/${post.slug}`,

@@ -35,7 +35,7 @@ export const dfwAdditionalCityServiceEnhancements5: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Duncanville", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "duncanville/emergency-drain-cleaning": {
@@ -109,7 +109,7 @@ export const dfwAdditionalCityServiceEnhancements5: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Wylie", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "wylie/emergency-drain-cleaning": {

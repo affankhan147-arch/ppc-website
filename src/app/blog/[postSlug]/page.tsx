@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts, getLiveBlogPosts, retiredBlogSlugs } from "@/data/blogPosts";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
@@ -16,7 +16,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ postSlug: post.slug }));
+  return getLiveBlogPosts().map((post) => ({ postSlug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: Props) {
   const heroImage = getArticleImage(post.relatedServiceSlug, postIndex);
   const relatedService = services.find((service) => service.slug === post.relatedServiceSlug);
   const relatedPosts = blogPosts
-    .filter((item) => item.slug !== post.slug && item.category === post.category)
+    .filter((item) => item.slug !== post.slug && item.category === post.category && !retiredBlogSlugs.has(item.slug))
     .slice(0, 3);
   const path = `/blog/${post.slug}`;
   const enhancement = blogEnhancements[post.slug];

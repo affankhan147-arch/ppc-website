@@ -4,11 +4,17 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
+// Task208 (2026-10-08): this guide is now the single "emergency plumber cost" page. GSC showed
+// it splitting those queries with /cost-guides/emergency-plumbing-cost-dfw (now 301'd here).
+// Title/H1 lead with the phrases people actually search: cost, rates, call-out fee.
+const PAGE_TITLE = "Emergency Plumber Cost in DFW (2026): Rates & Call-Out Fees";
+const PAGE_DESCRIPTION =
+  "What an emergency plumber costs in Dallas-Fort Worth: call-out fees, after-hours rates (1.5x-3x), and price ranges for drains, burst pipes and water heaters.";
+
 export const metadata = buildMetadata({
-  title: "DFW Emergency Plumbing Cost Guide",
-  description: truncateForMeta(
-    "A research-backed guide explaining how emergency plumbing pricing works in Dallas-Fort Worth, with realistic cost ranges for common services."
-  ),
+  title: PAGE_TITLE,
+  absoluteTitle: true,
+  description: truncateForMeta(PAGE_DESCRIPTION),
   path: "/guides/dfw-emergency-plumbing-costs"
 });
 
@@ -19,13 +25,13 @@ export default function CostGuidePage() {
         data={[
           webPageSchema(
             "/guides/dfw-emergency-plumbing-costs",
-            "DFW Emergency Plumbing Cost Guide",
-            "A research-backed guide explaining how emergency plumbing pricing works in Dallas-Fort Worth, with realistic cost ranges for common services."
+            "Emergency Plumber Cost in Dallas-Fort Worth",
+            PAGE_DESCRIPTION
           ),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Guides", path: "/guides" },
-            { name: "DFW Emergency Plumbing Cost Guide", path: "/guides/dfw-emergency-plumbing-costs" }
+            { name: "Emergency Plumber Cost in DFW", path: "/guides/dfw-emergency-plumbing-costs" }
           ])
         ]}
       />
@@ -34,9 +40,20 @@ export default function CostGuidePage() {
         <div className="premium-card max-w-4xl mx-auto">
           <div className="section-kicker">Research Guide</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            DFW Emergency Plumbing Cost Guide<br />
+            Emergency Plumber Cost in Dallas-Fort Worth<br />
             <span className="text-[#F0B429]">What Homeowners Can Actually Expect to Pay</span>
           </h1>
+
+          <div className="mb-8 rounded-xl border border-[#1A3A38] bg-[#0F1F1D] p-5 text-slate-200">
+            <p className="text-xs font-bold uppercase tracking-wide text-[#F0B429]">Short answer</p>
+            <p className="mt-2 leading-7">
+              In Dallas-Fort Worth, an emergency plumber usually charges a call-out (dispatch or diagnostic) fee of
+              about $50-$250, then labor at roughly $75-$175 an hour, and after-hours rates run 1.5x to 3x that
+              on nights, weekends and holidays. A simple drain clog often lands around $100-$300; a burst pipe
+              section can run $125 to $2,500+ depending on access. Ask whether the call-out fee is credited toward
+              the repair before you approve anything.
+            </p>
+          </div>
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Prices are estimates based on multiple sources; actual costs vary by provider, time of day, and job complexity.</p>
@@ -152,7 +169,7 @@ export default function CostGuidePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: What Drives Costs Up (and What Doesn't)</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: What Drives Costs Up (and What Doesn&apos;t)</h2>
             <p className="text-slate-300 mb-4">
               Not all emergency plumbing jobs are priced the same – even for the same problem. Several factors can push a repair from the lower end of the range to the higher end:
             </p>
@@ -178,13 +195,17 @@ export default function CostGuidePage() {
           </section>
 
           <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
-            <p><strong>Have a plumbing emergency?</strong> Call PlumbingHands – DFW’s trusted emergency plumber, available 24/7.</p>
+            <p><strong>Have a plumbing emergency?</strong> Call PlumbingHands and we&apos;ll connect you with an available local plumbing provider, day or night. Confirm pricing and licensing directly with the provider before work starts.</p>
           </div>
 
           <div className="mt-10">
             <InternalLinks
               extra={[
-                { label: "Water Heater Lifespan & Maintenance in DFW", href: "/guides/dfw-water-heater-lifespan" }
+                { label: "Water Heater Lifespan & Maintenance in DFW", href: "/guides/dfw-water-heater-lifespan" },
+                { label: "24 hour plumber in Dallas-Fort Worth", href: "/services/24-hour-emergency-plumber" },
+                { label: "Burst pipe repair cost", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+                { label: "Drain and sewer line cleaning cost", href: "/cost-guides/drain-cleaning-cost-dfw" },
+                { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
               ]}
             />
           </div>

@@ -205,6 +205,16 @@ export const blogPosts: BlogPost[] = titles.map((title, index) => ({
   relatedServiceSlug: relatedServiceOverrides[title] || serviceCycle[index % serviceCycle.length]
 }));
 
+// Task208 (2026-10-08): posts 301-redirected elsewhere (next.config.mjs). They stay in
+// `blogPosts` so every other post keeps its index-based image/category, but are left out
+// of static params, listings, the sitemap/llms inventory and related-post links.
+export const retiredBlogSlugs = new Set<string>(["emergency-plumbing-cost-guide-for-dallas-homeowners"]);
+
+// A function (not a const) so posts pushed further down this file are included.
+export function getLiveBlogPosts(): BlogPost[] {
+  return blogPosts.filter((post) => !retiredBlogSlugs.has(post.slug));
+}
+
 export const propertyManagerTriageSheetPost: BlogPost = {
   slug: "property-manager-plumbing-emergency-triage-sheet",
   title: "Property Manager Plumbing Emergency Triage Sheet",

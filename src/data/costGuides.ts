@@ -11,18 +11,10 @@
   relatedProblemSlugs: string[];
 };
 
+// Task208 (2026-10-08): "emergency-plumbing-cost-dfw" was removed here and 301'd to
+// /guides/dfw-emergency-plumbing-costs (next.config.mjs). GSC showed both pages splitting
+// "emergency plumber cost / rates / call-out fee" queries; the guide has the real price table.
 export const costGuides: CostGuide[] = [
-  {
-    slug: "emergency-plumbing-cost-dfw",
-    title: "Emergency plumber cost in Dallas-Fort Worth",
-    seoTitle: "Emergency Plumber Cost in DFW: 24 Hour & After-Hours Rates",
-    directAnswer: "Emergency plumber cost in Dallas-Fort Worth depends on diagnosis, timing, access, parts, severity, and the provider's own pricing. A 24 hour plumber called at night or on a weekend usually costs more than the same job on a weekday morning, so confirm any dispatch, after-hours, or diagnostic fee before work starts.",
-    rangeGuidance: "General emergency plumbing visits may involve a service or diagnostic charge plus repair labor and parts. After-hours timing, active water damage, wall or ceiling access, and specialty parts can change the final cost.",
-    factors: ["after-hours timing", "diagnostic work", "parts", "access difficulty", "water damage risk", "fixture or pipe location"],
-    questionsToAsk: ["Is there a dispatch or diagnostic fee?", "What is included before repair approval?", "Can you explain options before work starts?", "Does pricing change after hours?"],
-    relatedServiceSlug: "24-hour-emergency-plumber",
-    relatedProblemSlugs: ["toilet-overflowing-will-not-stop", "ceiling-leak-from-plumbing", "burst-pipe-first-steps"]
-  },
   {
     slug: "drain-cleaning-cost-dfw",
     title: "Drain cleaning cost in Dallas-Fort Worth",

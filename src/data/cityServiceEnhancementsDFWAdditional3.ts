@@ -35,7 +35,7 @@ export const dfwAdditionalCityServiceEnhancements3: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Flower Mound", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "flower-mound/emergency-drain-cleaning": {
@@ -109,7 +109,7 @@ export const dfwAdditionalCityServiceEnhancements3: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in The Colony", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "the-colony/emergency-drain-cleaning": {
@@ -183,7 +183,7 @@ export const dfwAdditionalCityServiceEnhancements3: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Allen", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "allen/emergency-drain-cleaning": {
@@ -257,7 +257,7 @@ export const dfwAdditionalCityServiceEnhancements3: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Rockwall", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "rockwall/emergency-drain-cleaning": {

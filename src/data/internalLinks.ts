@@ -45,7 +45,7 @@ export const internalLinkGroups = [
   { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
   { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
   { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
-  { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+  { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" },
   { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
   { label: "Questions before booking emergency plumbing work", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },
   { label: "Sewer line signs", href: "/problems/main-sewer-line-signs" },

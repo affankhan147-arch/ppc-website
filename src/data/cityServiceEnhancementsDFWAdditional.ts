@@ -35,7 +35,7 @@ export const dfwAdditionalCityServiceEnhancements: Record<string, PageEnhancemen
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Grand Prairie", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "grand-prairie/emergency-drain-cleaning": {
@@ -109,7 +109,7 @@ export const dfwAdditionalCityServiceEnhancements: Record<string, PageEnhancemen
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Mesquite", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "mesquite/emergency-drain-cleaning": {
@@ -183,7 +183,7 @@ export const dfwAdditionalCityServiceEnhancements: Record<string, PageEnhancemen
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Grapevine", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "grapevine/emergency-drain-cleaning": {
@@ -257,7 +257,7 @@ export const dfwAdditionalCityServiceEnhancements: Record<string, PageEnhancemen
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Euless", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "euless/emergency-drain-cleaning": {

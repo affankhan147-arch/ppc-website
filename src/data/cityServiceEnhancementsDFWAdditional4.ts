@@ -35,7 +35,7 @@ export const dfwAdditionalCityServiceEnhancements4: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Rowlett", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "rowlett/emergency-drain-cleaning": {
@@ -109,7 +109,7 @@ export const dfwAdditionalCityServiceEnhancements4: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Mansfield", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "mansfield/emergency-drain-cleaning": {
@@ -183,7 +183,7 @@ export const dfwAdditionalCityServiceEnhancements4: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Cedar Hill", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "cedar-hill/emergency-drain-cleaning": {
@@ -257,7 +257,7 @@ export const dfwAdditionalCityServiceEnhancements4: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in DeSoto", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "desoto/emergency-drain-cleaning": {

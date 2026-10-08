@@ -35,7 +35,7 @@ export const dfwAdditionalCityServiceEnhancements2: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Bedford", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "bedford/emergency-drain-cleaning": {
@@ -109,7 +109,7 @@ export const dfwAdditionalCityServiceEnhancements2: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Hurst", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "hurst/emergency-drain-cleaning": {
@@ -183,7 +183,7 @@ export const dfwAdditionalCityServiceEnhancements2: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Keller", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "keller/emergency-drain-cleaning": {
@@ -257,7 +257,7 @@ export const dfwAdditionalCityServiceEnhancements2: Record<string, PageEnhanceme
     ],
     extraLinks: [
       { label: "24-Hour Emergency Plumber in Southlake", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency Plumbing Cost Guide for DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency Plumbing Cost Guide for DFW", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "southlake/emergency-drain-cleaning": {

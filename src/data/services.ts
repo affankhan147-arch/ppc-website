@@ -27,8 +27,11 @@ export const services: Service[] = [
     name: "24-hour emergency plumber",
     categorySlug: "emergency-plumbing",
     shortAnswer: "If water is leaking, a drain is backing up, or a fixture cannot be used safely after hours, shut off the closest valve and request a 24 hour plumber -- nights, weekends, and holidays included.",
-    seoTitle: "24 Hour Plumber in Dallas-Fort Worth: Nights & Weekends",
-    seoH1: "24 Hour Plumber in Dallas-Fort Worth",
+    // Task208: "DFW" instead of "Dallas-Fort Worth" - after Task197 this metro-wide page started
+    // outranking the Dallas city hub for "emergency plumber dallas" (13.7 vs 37.8). City intent
+    // belongs to /cities/dallas; this page keeps the generic 24-hour intent.
+    seoTitle: "24 Hour Plumber in DFW: Nights, Weekends & Holidays",
+    seoH1: "24 Hour Plumber Across DFW",
     cityHeading: "24 Hour Plumber in {city}, TX: Nights & Weekends",
     urgency: "High",
     symptoms: ["active leak", "water near electrical fixtures", "overflowing toilet", "no usable bathroom", "after-hours plumbing failure"],

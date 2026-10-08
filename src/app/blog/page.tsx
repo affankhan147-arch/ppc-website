@@ -3,7 +3,7 @@ import { ArrowRight, BookOpen, SearchCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { FAQBlock, InternalLinks } from "@/components/PageSections";
-import { blogPosts } from "@/data/blogPosts";
+import { getLiveBlogPosts } from "@/data/blogPosts";
 import { emergencyFaqs } from "@/data/faqs";
 import { services } from "@/data/services";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -15,7 +15,8 @@ export const metadata = buildMetadata({
   path: "/blog"
 });
 
-const categories = [...new Set(blogPosts.map((post) => post.category))];
+const liveBlogPosts = getLiveBlogPosts();
+const categories = [...new Set(liveBlogPosts.map((post) => post.category))];
 
 export default function BlogHubPage() {
   const faqs = emergencyFaqs.slice(0, 5);
@@ -64,7 +65,7 @@ export default function BlogHubPage() {
             <h2 className="text-2xl font-black text-white">{category}</h2>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts
+            {liveBlogPosts
               .filter((post) => post.category === category)
               .map((post) => {
                 const service = services.find((item) => item.slug === post.relatedServiceSlug);
@@ -89,7 +90,7 @@ export default function BlogHubPage() {
       <InternalLinks
         extra={[
           { label: "Emergency service options", href: "/services" },
-          { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+          { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" },
           { label: "Dallas service area", href: "/cities/dallas" }
         ]}
       />

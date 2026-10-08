@@ -199,7 +199,7 @@ export default function InsuranceCoveragePage() {
         { label: "Burst Pipe Emergency", href: "/services/burst-pipe-emergency" },
         { label: "Slab Leak Warning Signs DFW", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
         { label: "Water Heater Emergency", href: "/services/water-heater-emergency" },
-        { label: "Emergency Plumbing Cost Guide DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+        { label: "Emergency Plumbing Cost Guide DFW", href: "/guides/dfw-emergency-plumbing-costs" },
       ]} />
     </>
   );

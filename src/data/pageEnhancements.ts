@@ -112,7 +112,7 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Emergency plumbing cost factors", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Burst pipe first steps", href: "/problems/burst-pipe-first-steps" },
       { label: "Toilet overflow steps", href: "/problems/toilet-overflowing-will-not-stop" }
     ]
@@ -439,7 +439,7 @@ export const additionalProblemEnhancements: Record<string, PageEnhancement> = {
     ],
     extraLinks: [
       { label: "Toilet overflow emergency service", href: "/services/toilet-overflow-emergency" },
-      { label: "Emergency plumbing cost in DFW", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Emergency plumbing cost in DFW", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
     ]
   },
@@ -1193,7 +1193,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Fort Worth service area", href: "/cities/fort-worth" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "fort-worth/emergency-drain-cleaning": {
@@ -1275,7 +1275,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Arlington service area", href: "/cities/arlington" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "arlington/emergency-drain-cleaning": {
@@ -1430,7 +1430,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Irving service area", href: "/cities/irving" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "irving/emergency-drain-cleaning": {
@@ -1506,7 +1506,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Garland service area", href: "/cities/garland" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "garland/emergency-drain-cleaning": {
@@ -1582,7 +1582,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Frisco service area", href: "/cities/frisco" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "frisco/emergency-drain-cleaning": {
@@ -1658,7 +1658,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "McKinney service area", href: "/cities/mckinney" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "mckinney/emergency-drain-cleaning": {
@@ -1737,7 +1737,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Dallas service area", href: "/cities/dallas" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "denton/24-hour-emergency-plumber": {
@@ -1778,7 +1778,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Denton service area", href: "/cities/denton" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "denton/emergency-drain-cleaning": {
@@ -1860,7 +1860,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Lewisville service area", href: "/cities/lewisville" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "lewisville/emergency-drain-cleaning": {
@@ -1942,7 +1942,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Carrollton service area", href: "/cities/carrollton" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "carrollton/emergency-drain-cleaning": {
@@ -2024,7 +2024,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Richardson service area", href: "/cities/richardson" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "richardson/emergency-drain-cleaning": {
@@ -2106,7 +2106,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Grand Prairie service area", href: "/cities/grand-prairie" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "grand-prairie/emergency-drain-cleaning": {
@@ -2188,7 +2188,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Mesquite service area", href: "/cities/mesquite" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "mesquite/emergency-drain-cleaning": {
@@ -2270,7 +2270,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Grapevine service area", href: "/cities/grapevine" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "grapevine/emergency-drain-cleaning": {
@@ -2352,7 +2352,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Euless service area", href: "/cities/euless" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "euless/emergency-drain-cleaning": {
@@ -2434,7 +2434,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Bedford service area", href: "/cities/bedford" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "bedford/emergency-drain-cleaning": {
@@ -2516,7 +2516,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Hurst service area", href: "/cities/hurst" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "hurst/emergency-drain-cleaning": {
@@ -2598,7 +2598,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Keller service area", href: "/cities/keller" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "keller/emergency-drain-cleaning": {
@@ -2680,7 +2680,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Southlake service area", href: "/cities/southlake" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "southlake/emergency-drain-cleaning": {
@@ -2762,7 +2762,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Flower Mound service area", href: "/cities/flower-mound" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "flower-mound/emergency-drain-cleaning": {
@@ -2844,7 +2844,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "The Colony service area", href: "/cities/the-colony" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "the-colony/emergency-drain-cleaning": {
@@ -2926,7 +2926,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Allen service area", href: "/cities/allen" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "allen/emergency-drain-cleaning": {
@@ -3008,7 +3008,7 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Rockwall service area", href: "/cities/rockwall" },
       { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "rockwall/emergency-drain-cleaning": {
@@ -3367,7 +3367,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Emergency plumber vs regular plumber: the difference", href: "/blog/emergency-plumber-vs-regular-plumber-what-is-the-difference" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "signs-your-main-drain-needs-same-day-service": {
@@ -3467,7 +3467,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "24-hour plumber in Plano: when the problem cannot wait", href: "/blog/24-hour-plumber-in-plano-when-the-problem-cannot-wait" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "emergency-drain-cleaning-in-frisco-what-to-expect": {
@@ -3631,7 +3631,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     ],
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" },
       { label: "24-hour emergency plumber in Arlington", href: "/cities/arlington/24-hour-emergency-plumber" },
       { label: "Emergency plumbing help in Arlington", href: "/cities/arlington" }
@@ -3750,7 +3750,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "how-long-should-emergency-drain-cleaning-take": {
@@ -4185,7 +4185,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Irving service area", href: "/cities/irving" }
     ]
   },
@@ -4303,7 +4303,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Main sewer line clog", href: "/services/main-sewer-line-clog" },
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "leaking-water-heater-repair-or-replace-dfw": {
@@ -4421,7 +4421,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water heater emergency", href: "/services/water-heater-emergency" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
       { label: "Burst pipe first steps", href: "/problems/burst-pipe-first-steps" },
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" }
     ]
@@ -4464,7 +4464,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Toilet overflow emergency", href: "/services/toilet-overflow-emergency" },
       { label: "Water heater emergency", href: "/services/water-heater-emergency" },
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
-      { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "DFW emergency plumbing cost factors", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "toilet-overflowing-at-night-in-dallas-fast-steps": {
@@ -4504,7 +4504,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" },
       { label: "Emergency plumbing help in Dallas", href: "/cities/dallas" },
-      { label: "DFW emergency plumbing cost factors", href: "/cost-guides/emergency-plumbing-cost-dfw" }
+      { label: "DFW emergency plumbing cost factors", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "main-sewer-line-clogged-in-dallas-warning-signs": {
@@ -4617,7 +4617,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Emergency plumbing cost guide", href: "/cost-guides/emergency-plumbing-cost-dfw" },
+      { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]

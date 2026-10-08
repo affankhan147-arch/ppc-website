@@ -34,6 +34,12 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders
+      },
+      // Task208: embeddable badge/widget endpoints (/api/widgets/...) were showing up in
+      // Google web results as thin pages competing with the real cost guides.
+      {
+        source: '/api/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }]
       }
     ];
   },
@@ -78,6 +84,18 @@ const nextConfig = {
       {
         source: '/services/emergency-plumbing-under-200-dallas',
         destination: '/services/24-hour-emergency-plumber',
+        permanent: true,
+      },
+      // Task208 (2026-10-08): consolidate the three "emergency plumber cost" pages that were
+      // splitting the same GSC queries into the one with the real DFW price table.
+      {
+        source: '/cost-guides/emergency-plumbing-cost-dfw',
+        destination: '/guides/dfw-emergency-plumbing-costs',
+        permanent: true,
+      },
+      {
+        source: '/blog/emergency-plumbing-cost-guide-for-dallas-homeowners',
+        destination: '/guides/dfw-emergency-plumbing-costs',
         permanent: true,
       },
     ];

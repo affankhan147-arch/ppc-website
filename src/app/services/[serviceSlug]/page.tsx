@@ -9,7 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
-import { blogPosts } from "@/data/blogPosts";
+import { getLiveBlogPosts } from "@/data/blogPosts";
 import { getArticleImage } from "@/lib/articleImages";
 import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -63,7 +63,16 @@ export default async function ServicePage({ params }: Props) {
   ].slice(0, 8);
   const relatedProblems = problems.filter((problem) => problem.relatedServiceSlug === service.slug).slice(0, 3);
   const relatedCostGuide = costGuides.find((guide) => guide.relatedServiceSlug === service.slug);
-  const relatedBlogPosts = blogPosts.filter((post) => post.relatedServiceSlug === service.slug).slice(0, 3);
+  const relatedBlogPosts = getLiveBlogPosts().filter((post) => post.relatedServiceSlug === service.slug).slice(0, 3);
+  // Task208: the metro-wide 24-hour page was being picked over the Dallas hub for "emergency
+  // plumber dallas". Exact-anchor links tell Google which page owns each city's emergency intent.
+  const cityHubLinks =
+    service.slug === "24-hour-emergency-plumber"
+      ? ["dallas", "fort-worth", "plano", "arlington"]
+          .map((slug) => cities.find((item) => item.slug === slug))
+          .filter((city): city is (typeof cities)[number] => Boolean(city))
+          .map((city) => ({ label: `Emergency plumber in ${city.name}, TX`, href: `/cities/${city.slug}` }))
+      : [];
   const priorityCityLinks = priorityCityServiceCombos
     .filter((combo) => combo.serviceSlug === service.slug)
     .slice(0, 4)
@@ -151,6 +160,7 @@ export default async function ServicePage({ params }: Props) {
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
+          ...cityHubLinks,
           ...(enhancement?.extraLinks || []),
           ...relatedBlogPosts.map((post) => ({ label: post.title, href: `/blog/${post.slug}` })),
           ...(relatedCostGuide ? [{ label: relatedCostGuide.title, href: `/cost-guides/${relatedCostGuide.slug}` }] : []),
