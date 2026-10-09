@@ -456,3 +456,14 @@ export const dfwPlumbingPermitRequirementsByCityPost: BlogPost = {
 };
 
 blogPosts.push(dfwPlumbingPermitRequirementsByCityPost);
+
+export const dfwWaterConservationRebateProgramsByCityPost: BlogPost = {
+  slug: "dfw-water-conservation-rebate-programs-by-city",
+  title: "DFW Water Conservation Rebate Programs by City (2026): Free & Discounted Toilets",
+  directAnswer:
+    "DFW water utilities offer real, currently active rebate and voucher programs for replacing old high-flow toilets, but the benefit and rules vary sharply by city: Dallas pays up to $90 per toilet (two max) or gives a free toilet voucher through its \"New Throne for Your Home\" program, plus a separate new pilot irrigation rebate worth up to $3,000 per property; Fort Worth's SmartFlush gives a free toilet by voucher - with free installation added for applicants 70 or older or at/below 60% of area median income - rather than a cash rebate; Plano pays a tiered bill credit of $100/$75/$50 for up to three toilets bought from a Plano retailer; and Arlington currently has no active residential toilet or irrigation rebate program, despite older news coverage of a free-toilet giveaway that ended years ago - always confirm directly with your city's water utility before buying, since funding and rules change year to year.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(dfwWaterConservationRebateProgramsByCityPost);

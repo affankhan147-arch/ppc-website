@@ -4959,6 +4959,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
       { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
+      { label: "DFW Water Conservation Rebate Programs by City (2026)", href: "/blog/dfw-water-conservation-rebate-programs-by-city" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
   },
@@ -5033,6 +5034,45 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Can Homeowners Legally Do Their Own Plumbing in Texas?", href: "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" },
       { label: "How to Verify a Texas Plumber's License Before Hiring", href: "/blog/how-to-verify-a-texas-plumbers-license" },
       { label: "DFW Water & Sewer Rate Increases by City (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
+      { label: "DFW Water Conservation Rebate Programs by City (2026)", href: "/blog/dfw-water-conservation-rebate-programs-by-city" },
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
+    ]
+  },
+  "dfw-water-conservation-rebate-programs-by-city": {
+    checklistTitle: "DFW water conservation rebate programs by city: what's actually available in 2026",
+    checklistIntro:
+      "Verified directly from each city's own current water utility program pages and application documents - funding, eligibility, and whether it's a cash rebate or a free fixture differ meaningfully by city.",
+    checklistItems: [
+      "Dallas - \"New Throne for Your Home\": Dallas Water Utilities customers who own a home with a toilet installed before 1994 can get a free toilet voucher (up to two per home) or a bill credit of up to $90 per toilet (also up to two) when they buy their own WaterSense-certified, 1.28-gallon-per-flush toilet and submit a purchase receipt dated within six months. Renters qualify once per address with a landlord consent letter. Call Dallas Water Conservation at 214-670-3155 to confirm current funding before buying.",
+      "Dallas - Residential Irrigation Rebate (new pilot program): a separate program pays up to $3,000 per property toward WaterSense-labeled irrigation controllers, converting spray zones to drip lines or bubblers, swapping fixed spray nozzles for multi-stream rotary nozzles, or splitting a single zone into separate bed and turf zones. The pilot targets 100 preselected properties that already had a DWU irrigation evaluation; the next fiscal year opens it to the first 200 applicants on a first-come, first-served basis. A separate city document titled \"Rebate Eligibility and Requirements 2026\" covers the full specifics.",
+      "Fort Worth - SmartFlush: this is not a cash rebate - it's a free Kohler Highline Comfort Height dual-flush toilet (up to two per home over its lifetime, home built before 1994, active Fort Worth Water account required). The standard Voucher track mails you a paper voucher to redeem at a vendor, and you cover installation yourself. The CARE track adds free installation by a city-contracted plumber for applicants 70 or older, or at/below 60% of area median income (income applicants must first be verified through Neighborhood Services). Processing takes about 6 to 8 weeks, and the city's own page says toilets are available \"while supplies last each year.\"",
+      "Plano - Water Conservation Rebate Program: pays a tiered water-bill credit for up to three toilets per home - $100 for the first, $75 for the second, $50 for the third - for any WaterSense-labeled, 1.28-GPF-or-less toilet bought from a retailer located in Plano, installed in a home built in 1994 or earlier. The toilet can be installed by the homeowner or a licensed plumber. Per the program's own October 2025 guidelines, apply within 120 days of the purchase date.",
+      "Arlington: no active residential toilet-replacement or irrigation rebate program was found as of this research - the free low-flow toilet giveaways covered in older local news date back to 2012 and have not been replaced with a current equivalent on the city's own water utilities pages. Arlington Water customers should call the utility directly to ask whether any program currently exists before assuming one of these other cities' offers applies to them.",
+      "Every DFW city not named here runs its own water conservation budget and may offer a similar rebate or voucher - call your specific city's water utility conservation division directly, since programs like these are funded year to year and can pause once that year's budgeted funds run out."
+    ],
+    proofTitle: "Before you buy a toilet expecting a rebate",
+    proofItems: [
+      "Confirm the program is still funded this year by calling the number listed above - several of these pages note toilets or funds are available \"while supplies last\" rather than guaranteed year-round.",
+      "Check your home's build date and that your new toilet is on the utility's own list of qualifying models before buying - Dallas, Fort Worth, and Plano all require the home to have been built in 1994 or earlier and the new toilet to carry the EPA WaterSense label at 1.28 gallons per flush or less.",
+      "Keep your dated purchase receipt - Dallas requires a receipt dated within six months of application, and Plano's guidelines require applying within 120 days of the purchase date.",
+      "If you're a renter, get the required landlord consent documentation together before applying - Dallas and Fort Worth's voucher programs both require it, and incomplete paperwork is a common reason applications stall."
+    ],
+    extraFaqs: [
+      {
+        question: "Do I need a licensed plumber to install a rebate toilet in DFW?",
+        answer:
+          "Usually not. Plano's program explicitly allows the homeowner or a licensed plumber to install the new toilet, and Fort Worth's standard SmartFlush voucher track hands you the toilet and leaves installation to you. That said, a toilet swap still typically needs a permit in most DFW cities, and a professional install protects the wax ring seal and shutoff valve connection from a leak that could cost far more than the rebate itself."
+      },
+      {
+        question: "Can I get a DFW city rebate for a water heater instead of a toilet?",
+        answer:
+          "Not through these specific programs - the city rebate and voucher programs covered here are for toilets and irrigation equipment, not water heaters. If you're weighing a water heater repair against replacement instead, our repair-or-replace calculator models the manufacturer's 50% rule against your unit's actual age and type."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Plumbing Permit Requirements & Fees by City (2026)", href: "/blog/dfw-plumbing-permit-requirements-and-fees-by-city" },
+      { label: "DFW Water & Sewer Rate Increases by City (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
+      { label: "Water Heater Repair-or-Replace Calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
   }
