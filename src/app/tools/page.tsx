@@ -41,6 +41,11 @@ const tools = [
     description: "See real 2026 cost ranges for trenchless pipe relining vs. rerouting a slab leak, plus what professional leak detection costs before repair."
   },
   {
+    title: "Water Softener Cost & Sizing Calculator",
+    href: "/tools/water-softener-cost-calculator",
+    description: "Pick your DFW city and household size to see the grain capacity you need and a real installed cost range, using 2025/2026 HomeAdvisor data."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

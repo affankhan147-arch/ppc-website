@@ -72,7 +72,7 @@ export default function DfwPlumbingDataPage() {
               <li><strong>Fort Worth:</strong> 7-10 GPG (Hard)</li>
             </ul>
             <p className="text-slate-300 mb-4">
-              Practically, this means the large majority of DFW homes fall well above the 3 GPG threshold where a water softener is generally recommended - and homes without one should expect faster mineral buildup in water heaters, faster loss of fixture flow rate, and more frequent aerator and showerhead cleaning.
+              Practically, this means the large majority of DFW homes fall well above the 3 GPG threshold where a water softener is generally recommended - and homes without one should expect faster mineral buildup in water heaters, faster loss of fixture flow rate, and more frequent aerator and showerhead cleaning. Our free <a href="/tools/water-softener-cost-calculator" className="text-[#F0B429] underline">water softener cost and sizing calculator</a> turns a city&apos;s GPG range and a household size into a grain-capacity recommendation and a real installed cost range.
             </p>
             <p className="text-slate-300 mb-4">
               Real estate agents, home inspectors, and local bloggers are welcome to use our free, embeddable <a href="/tools/water-hardness-widget" className="text-[#F0B429] underline">water hardness widget</a> - a small badge showing the sourced GPG range for any DFW-area city, ready to copy onto your own site.

@@ -4880,7 +4880,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       {
         question: "Does harder water mean I need a water softener?",
         answer:
-          "Not automatically. A softener is one option to reduce future scale buildup, but it is a household decision based on symptoms (fixture spotting, scale buildup, appliance wear) and water use, not something every home in a \"Hard\" or \"Very Hard\" city needs. Ask a plumber whether your specific symptoms point to a softener or to a more immediate issue like an overdue tank flush."
+          "Not automatically. A softener is one option to reduce future scale buildup, but it is a household decision based on symptoms (fixture spotting, scale buildup, appliance wear) and water use, not something every home in a \"Hard\" or \"Very Hard\" city needs. If you are weighing it, our water softener cost and sizing calculator gives a grain-capacity estimate and real installed cost range for your city and household size. Ask a plumber whether your specific symptoms point to a softener or to a more immediate issue like an overdue tank flush."
       },
       {
         question: "Can I check my own city's water hardness number?",
@@ -4889,6 +4889,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Water softener cost & sizing calculator", href: "/tools/water-softener-cost-calculator" },
       { label: "Free DFW water hardness widget", href: "/tools/water-hardness-widget" },
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
       { label: "DFW water heater lifespan guide", href: "/guides/dfw-water-heater-lifespan" },
