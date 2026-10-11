@@ -46,6 +46,11 @@ const tools = [
     description: "Pick your DFW city and household size to see the grain capacity you need and a real installed cost range, using 2025/2026 HomeAdvisor data."
   },
   {
+    title: "Water Filtration System Selector",
+    href: "/tools/water-filtration-system-selector",
+    description: "Pick your DFW city and main water concern (chlorine taste, sediment, drinking-water purity) to see the right filtration system type and a real 2025/2026 installed cost range."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

@@ -100,6 +100,14 @@ export default function WaterSoftenerCostCalculatorPage() {
               can help you decide whether to fix it now or replace it - softening the water going forward
               protects whichever heater you end up with.
             </p>
+            <p className="text-slate-300 mt-4">
+              A softener only solves hardness. If you&apos;re also dealing with chlorine/chloramine taste,
+              cloudy water, or want better drinking-water purity, our{" "}
+              <Link href="/tools/water-filtration-system-selector" className="text-[#F0B429] underline">
+                water filtration system selector
+              </Link>{" "}
+              covers those separately, with its own real installed-cost range.
+            </p>
           </section>
 
           <section className="mt-10">

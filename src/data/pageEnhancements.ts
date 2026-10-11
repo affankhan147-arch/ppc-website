@@ -4935,6 +4935,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "DFW housing age by city", href: "/guides/dfw-housing-age-by-city" },
       { label: "DFW water hardness by city", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Water filtration system selector", href: "/tools/water-filtration-system-selector" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" }
     ]
   },
