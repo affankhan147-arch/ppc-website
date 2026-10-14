@@ -51,6 +51,11 @@ const tools = [
     description: "Pick your DFW city and main water concern (chlorine taste, sediment, drinking-water purity) to see the right filtration system type and a real 2025/2026 installed cost range."
   },
   {
+    title: "Garbage Disposal Repair or Replace Cost Calculator",
+    href: "/tools/garbage-disposal-cost-calculator",
+    description: "Tell us what's wrong and your disposal's age to see whether repair or replacement makes more sense, plus a real 2026 HomeAdvisor-sourced cost range sized to your household."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

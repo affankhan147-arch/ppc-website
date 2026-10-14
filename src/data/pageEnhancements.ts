@@ -3123,7 +3123,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Sink and shower drain backup service", href: "/services/sink-and-shower-drain-backup" },
       { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
-      { label: "Kitchen sink backing up in Dallas: signs you need drain help", href: "/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help" }
+      { label: "Kitchen sink backing up in Dallas: signs you need drain help", href: "/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help" },
+      { label: "Garbage Disposal Repair or Replace Cost Calculator", href: "/tools/garbage-disposal-cost-calculator" }
     ]
   },
   "tankless-water-heater-not-producing-hot-water-troubleshooting": {
