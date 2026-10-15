@@ -56,6 +56,11 @@ const tools = [
     description: "Tell us what's wrong and your disposal's age to see whether repair or replacement makes more sense, plus a real 2026 HomeAdvisor-sourced cost range sized to your household."
   },
   {
+    title: "Water Service Line Replacement Cost Calculator",
+    href: "/tools/water-service-line-cost-calculator",
+    description: "Enter the distance from your street or meter to your house to see a real 2026 cost range for replacing your water service line - plus who's actually responsible for it, you or the city."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

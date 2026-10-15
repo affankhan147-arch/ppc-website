@@ -3308,7 +3308,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "Water heater expansion tank failure signs", href: "/blog/water-heater-expansion-tank-failure-signs-dallas" },
-      { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" }
+      { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
+      { label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" }
     ]
   },
   "how-to-check-your-water-meter-for-a-hidden-leak-dallas": {
@@ -3608,7 +3609,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
       { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
-      { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" }
+      { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
+      { label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" }
     ]
   },
   "emergency-plumbing-in-arlington-tx-night-and-weekend-issues": {
@@ -5038,6 +5040,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "How to Verify a Texas Plumber's License Before Hiring", href: "/blog/how-to-verify-a-texas-plumbers-license" },
       { label: "DFW Water & Sewer Rate Increases by City (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
       { label: "DFW Water Conservation Rebate Programs by City (2026)", href: "/blog/dfw-water-conservation-rebate-programs-by-city" },
+      { label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
   },
