@@ -50,6 +50,7 @@ export function GET() {
   }
 
   lines.push("## Optional");
+  lines.push(`- [Full guide text](${joinUrl(siteConfig.baseUrl, "/llms-full.txt")}): Every problem, cost guide and blog answer in plain text with URLs and publish dates.`);
   lines.push(`- [Sitemap](${joinUrl(siteConfig.baseUrl, "/sitemap.xml")}): Includes every city and service combination page.`);
 
   return new Response(lines.join("\n") + "\n", {
