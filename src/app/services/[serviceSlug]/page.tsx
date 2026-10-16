@@ -9,6 +9,7 @@ import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
+import { siteConfig } from "@/data/site";
 import { getLiveBlogPosts } from "@/data/blogPosts";
 import { getArticleImage } from "@/lib/articleImages";
 import { titleCase } from "@/lib/format";
@@ -35,9 +36,10 @@ export async function generateMetadata({ params }: Props) {
         ? `${titleCase(service.name)} in Dallas-Fort Worth`
         : `24/7 ${titleCase(service.name)} in Dallas-Fort Worth`),
     description: truncateForMeta(
-      service.seoTitle
-        ? service.shortAnswer
-        : `Need ${service.name} in Dallas-Fort Worth? ${service.shortAnswer}`
+      service.seoDescription?.replace("{phone}", siteConfig.phoneDisplay) ??
+        (service.seoTitle
+          ? service.shortAnswer
+          : `Need ${service.name} in Dallas-Fort Worth? ${service.shortAnswer}`)
     ),
     path: `/services/${service.slug}`
   });

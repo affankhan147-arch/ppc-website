@@ -19,6 +19,7 @@ export type Service = {
   seoH1?: string;
   /** Title + H1 for /cities/[city]/[slug]. "{city}" is replaced with the city name. */
   cityHeading?: string;
+  seoDescription?: string;
 };
 
 export const services: Service[] = [
@@ -31,6 +32,10 @@ export const services: Service[] = [
     // outranking the Dallas city hub for "emergency plumber dallas" (13.7 vs 37.8). City intent
     // belongs to /cities/dallas; this page keeps the generic 24-hour intent.
     seoTitle: "24 Hour Plumber in DFW: Nights, Weekends & Holidays",
+    // Oct 2026 GSC: 3,933 impressions for "emergency plumber near me" at position ~7, 0 clicks.
+    // The old snippet ("If water is leaking ... --...") never said emergency, DFW, or the number.
+    seoDescription:
+      "Emergency plumber needed in Dallas-Fort Worth? Call {phone} for a 24-hour plumber: leaks, burst pipes, sewer backups, nights and weekends.",
     seoH1: "24 Hour Plumber Across DFW",
     cityHeading: "24 Hour Plumber in {city}, TX: Nights & Weekends",
     urgency: "High",
