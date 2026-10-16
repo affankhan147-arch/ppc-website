@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema, Byline } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -96,6 +96,8 @@ export default function LicenseVerificationPage() {
         { label: "Guides", href: "/blog" },
         { label: "Verify a Texas Plumber's License", href: path }
       ]} />
+      <h1 className="mt-6 text-4xl font-black leading-tight text-white">{title}</h1>
+      <Byline path={path} />
       <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
         <Image
           src={getArticleImage("24-hour-emergency-plumber", 1)}

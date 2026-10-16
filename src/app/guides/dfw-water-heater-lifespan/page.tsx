@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function WaterHeaterLifespanGuidePage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-water-heater-lifespan", "DFW Water Heater Lifespan: How Long They Last", "A research-backed guide to how long tank and tankless water heaters last, why DFW hard water shortens that lifespan, and maintenance that extends it.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function WaterHeaterLifespanGuidePage() {
             Water Heater Lifespan in DFW:<br />
             <span className="text-[#F0B429]">How Long They Really Last, and How to Extend It</span>
           </h1>
+          <Byline path="/guides/dfw-water-heater-lifespan" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing advice. Always consult a licensed professional for your specific situation.</p>

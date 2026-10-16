@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function SewerRootGuidePage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-sewer-root-intrusion", "Sewer Line Maintenance & Root Intrusion in DFW", "A research-backed guide explaining why DFW sewer lines are uniquely prone to root intrusion, how it's diagnosed, and what homeowners can do.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -36,6 +37,7 @@ export default function SewerRootGuidePage() {
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Sewer Line Maintenance &amp; Root Intrusion in DFW
           </h1>
+          <Byline path="/guides/dfw-sewer-root-intrusion" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>

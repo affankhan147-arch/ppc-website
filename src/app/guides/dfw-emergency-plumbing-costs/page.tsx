@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -28,6 +28,7 @@ export default function CostGuidePage() {
             "Emergency Plumber Cost in Dallas-Fort Worth",
             PAGE_DESCRIPTION
           ),
+          articleSchema("/guides/dfw-emergency-plumbing-costs", PAGE_TITLE, PAGE_DESCRIPTION),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Guides", path: "/guides" },
@@ -43,6 +44,7 @@ export default function CostGuidePage() {
             Emergency Plumber Cost in Dallas-Fort Worth<br />
             <span className="text-[#F0B429]">What Homeowners Can Actually Expect to Pay</span>
           </h1>
+          <Byline path="/guides/dfw-emergency-plumbing-costs" />
 
           <div className="mb-8 rounded-xl border border-[#1A3A38] bg-[#0F1F1D] p-5 text-slate-200">
             <p className="text-xs font-bold uppercase tracking-wide text-[#F0B429]">Short answer</p>

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema, Byline } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
 import { siteConfig } from "@/data/site";
 import { AlertTriangle, Clock, ShieldAlert, FileWarning } from "lucide-react";
@@ -70,6 +70,8 @@ export default function DrainBackupRestaurantPage() {
         { label: "Guides", href: "/blog" },
         { label: "Restaurant Drain Backup", href: path }
       ]} />
+      <h1 className="mt-6 text-4xl font-black leading-tight text-white">{title}</h1>
+      <Byline path={path} />
 
       <DirectAnswer>
         <p>

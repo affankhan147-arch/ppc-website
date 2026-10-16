@@ -10,7 +10,7 @@ import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { Byline, JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ problemSlug: string }>;
@@ -69,6 +69,7 @@ export default async function ProblemPage({ params }: Props) {
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Homeowner problem guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{problem.title}</h1>
+        <Byline path={path} />
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
             src={heroImage}

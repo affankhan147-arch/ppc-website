@@ -11,6 +11,7 @@ import { cityServiceEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
 import { services } from "@/data/services";
 import { getCityServiceImage } from "@/lib/articleImages";
+import { comboDescription } from "@/lib/comboMeta";
 import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
@@ -39,9 +40,13 @@ export async function generateMetadata({ params }: Props) {
         ? `${titleCase(service.name)} in ${city.name}, TX`
         : `24/7 ${titleCase(service.name)} in ${city.name}, TX`),
     description: truncateForMeta(
-      cityHeading
-        ? `${city.name}, TX: ${service.shortAnswer}`
-        : `Need ${titleCase(service.name)} in ${city.name}? ${service.shortAnswer}`
+      comboDescription(
+        service.slug,
+        city.name,
+        cityHeading
+          ? `${city.name}, TX: ${service.shortAnswer}`
+          : `Need ${titleCase(service.name)} in ${city.name}? ${service.shortAnswer}`
+      )
     ),
     path: `/cities/${city.slug}/${service.slug}`
   });

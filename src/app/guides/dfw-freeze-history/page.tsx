@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function DfwFreezeHistoryPage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-freeze-history", "How Often Does DFW Actually Freeze? NWS Climate Data", "Official National Weather Service data on how many days per year Dallas-Fort Worth actually freezes, average first/last freeze dates, and what that means for your pipes.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function DfwFreezeHistoryPage() {
             How Often Does DFW Actually Freeze?<br />
             <span className="text-[#F0B429]">The Real National Weather Service Numbers</span>
           </h1>
+          <Byline path="/guides/dfw-freeze-history" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing or insurance advice. Figures below are sourced directly from the National Weather Service (see citations at the end of this page).</p>

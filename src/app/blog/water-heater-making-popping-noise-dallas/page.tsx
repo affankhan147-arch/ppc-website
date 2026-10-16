@@ -7,7 +7,7 @@ import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, Byline } from "@/lib/schema";
 
 const path = "/blog/water-heater-making-popping-noise-dallas";
 const title = "Water Heater Popping Noises in Dallas: What It Means";
@@ -43,6 +43,7 @@ export default function WaterHeaterPoppingNoisePage() {
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Dallas water-heater guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
+          <Byline path="/blog/water-heater-making-popping-noise-dallas" />
         <p className="mt-5 text-lg leading-8 text-slate-300">
           A water heater does not usually start making noise for no reason. It builds slowly—a faint crackle at first,
           then sharper pops or a low rumble whenever the unit kicks on to heat.

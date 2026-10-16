@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function SlabLeaksGuidePage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-slab-leaks", "Slab Leaks in DFW – What Homeowners Need to Know", "A research-backed guide explaining why slab leaks are uniquely common in Dallas-Fort Worth, how they're diagnosed, and what homeowners can do.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function SlabLeaksGuidePage() {
             Slab Leaks in DFW:<br />
             <span className="text-[#F0B429]">What Homeowners Need to Know</span>
           </h1>
+          <Byline path="/guides/dfw-slab-leaks" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>

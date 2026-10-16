@@ -9,7 +9,7 @@ import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, howToSchema, webPageSchema } from "@/lib/schema";
+import { Byline, JsonLd, articleSchema, breadcrumbSchema, faqSchema, howToSchema, webPageSchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ postSlug: string }>;
@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd
         data={[
           webPageSchema(path, post.title, post.directAnswer),
-          articleSchema(path, post.title, post.directAnswer),
+          articleSchema(path, post.title, post.directAnswer, { image: heroImage }),
           breadcrumbSchema([{ name: "Guides", path: "/blog" }, { name: post.title, path }]),
           faqSchema(faqs),
           ...(enhancement
@@ -73,6 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">{post.category}</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{post.title}</h1>
+        <Byline path={path} />
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
             src={heroImage}

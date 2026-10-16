@@ -1,4 +1,5 @@
 import { cities } from "@/data/cities";
+import { contentPublished } from "@/data/contentDates";
 import { FAQ } from "@/data/faqs";
 import { hasConfiguredPhone, siteConfig } from "@/data/site";
 import { joinUrl } from "@/lib/format";
@@ -54,23 +55,53 @@ export function webPageSchema(path: string, name: string, description: string) {
   };
 }
 
-export function articleSchema(path: string, headline: string, description: string) {
+// Article schema now carries a real first-published date (from git history, see
+// scripts/gen-content-dates.mjs), an author, and optional image/citations. Answer engines
+// (Google AI Overviews, Bing/Copilot, ChatGPT search, Perplexity) favour dated, attributed sources.
+export function articleSchema(
+  path: string,
+  headline: string,
+  description: string,
+  opts: { image?: string; citations?: string[] } = {}
+) {
+  const url = joinUrl(siteConfig.baseUrl, path);
+  const org = { "@type": "Organization", name: siteConfig.legalName, url: siteConfig.baseUrl };
+  const published = contentPublished[path];
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline,
     description,
-    url: joinUrl(siteConfig.baseUrl, path),
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": joinUrl(siteConfig.baseUrl, path)
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.legalName,
-      url: siteConfig.baseUrl
-    }
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    ...(published ? { datePublished: published, dateModified: published } : {}),
+    ...(opts.image ? { image: opts.image.startsWith("http") ? opts.image : joinUrl(siteConfig.baseUrl, opts.image) } : {}),
+    author: org,
+    publisher: org,
+    ...(opts.citations && opts.citations.length ? { citation: opts.citations } : {}),
+    inLanguage: "en-US"
   };
+}
+
+export function publishedLabel(path: string): string | null {
+  const date = contentPublished[path];
+  if (!date) return null;
+  return new Date(`${date}T12:00:00Z`).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+}
+
+// Visible byline under an H1. Same date as the schema so the two never disagree.
+export function Byline({ path }: { path: string }) {
+  const label = publishedLabel(path);
+  return (
+    <p className="mt-3 text-sm text-slate-400">
+      By the {siteConfig.brandName} editorial team{label ? <> · Published {label}</> : null}
+    </p>
+  );
 }
 
 export function serviceSchema(name: string, path: string, description: string, areaServed: string = siteConfig.marketName) {

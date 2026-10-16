@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function BurstPipesGuidePage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-burst-pipes", "Burst Pipes in DFW: Causes, Costs & First Steps", "A research-backed guide to why burst pipes are common in Dallas-Fort Worth, what Winter Storm Uri showed, and the first steps that limit damage.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function BurstPipesGuidePage() {
             Burst Pipes in DFW:<br />
             <span className="text-[#F0B429]">Why They Happen, What They Cost, and What To Do First</span>
           </h1>
+          <Byline path="/guides/dfw-burst-pipes" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing or insurance advice. Always consult a licensed professional and your insurance policy for your specific situation.</p>

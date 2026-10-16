@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema, Byline } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
 import { siteConfig } from "@/data/site";
 import { CheckCircle2, XCircle, FileClock, ShieldQuestion } from "lucide-react";
@@ -60,6 +60,8 @@ export default function InsuranceCoveragePage() {
         { label: "Guides", href: "/blog" },
         { label: "Insurance & Plumbing Leaks", href: path }
       ]} />
+      <h1 className="mt-6 text-4xl font-black leading-tight text-white">{title}</h1>
+      <Byline path={path} />
 
       <DirectAnswer>
         <p>

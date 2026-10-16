@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 
 export const metadata = buildMetadata({
@@ -28,6 +28,7 @@ export default function GasLineGuidePage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-gas-line-safety", "Gas Line Safety in DFW: What to Know", "A research-backed guide explaining gas line capacity, safety steps, and what homeowners should know before adding outdoor kitchens or pool heaters in DFW.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -36,6 +37,7 @@ export default function GasLineGuidePage() {
             Gas Line Safety &amp; Capacity in DFW<br />
             <span className="text-[#F0B429]">What Homeowners Need to Know</span>
           </h1>
+          <Byline path="/guides/dfw-gas-line-safety" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, gas, or legal advice. Always consult a licensed professional for your specific situation.</p>

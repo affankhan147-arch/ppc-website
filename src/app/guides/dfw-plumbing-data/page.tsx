@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function DfwPlumbingDataPage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-plumbing-data", "DFW Plumbing Emergency Data Report", "An original, sourced data report on Dallas-Fort Worth water hardness by city, winter freeze frequency, and the population growth driving plumbing demand.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function DfwPlumbingDataPage() {
             DFW Plumbing Emergency Data<br />
             <span className="text-[#F0B429]">Water Hardness, Freeze Risk, and Demand Trends</span>
           </h1>
+          <Byline path="/guides/dfw-plumbing-data" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This report compiles publicly available data from municipal water utilities, the National Weather Service, and the Federal Reserve Bank of Dallas. Figures are cited by source below and reflect the most recent published data at time of writing. It is intended as a reference for homeowners, researchers, and local media - not as a substitute for a property-specific water test or professional plumbing inspection.</p>

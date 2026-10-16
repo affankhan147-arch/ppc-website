@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function InsuranceGuidePage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/texas-insurance-plumbing-claims", "Texas Homeowners Insurance & Plumbing Claims", "A research-backed guide explaining what Texas homeowners insurance covers (and doesn't cover) when a plumbing leak occurs, with real TDI sources.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function InsuranceGuidePage() {
             Texas Homeowners Insurance:<br />
             <span className="text-[#F0B429]">What’s Actually Covered in a Plumbing Leak?</span>
           </h1>
+          <Byline path="/guides/texas-insurance-plumbing-claims" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute legal or insurance advice. Always review your specific policy and consult with your insurance provider or a qualified professional.</p>

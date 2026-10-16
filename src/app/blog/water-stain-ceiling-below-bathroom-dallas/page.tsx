@@ -7,7 +7,7 @@ import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, Byline } from "@/lib/schema";
 
 const path = "/blog/water-stain-ceiling-below-bathroom-dallas";
 const title = "Water Stain on Ceiling Below a Dallas Bathroom: Causes";
@@ -40,6 +40,7 @@ export default function WaterStainBelowBathroomPage() {
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Dallas ceiling-leak guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
+          <Byline path="/blog/water-stain-ceiling-below-bathroom-dallas" />
         <p className="mt-5 text-lg leading-8 text-slate-300">
           A water stain on the ceiling below a bathroom usually starts small—a faint yellow or brown mark that looks
           dry and stays the same size for days. It is easy to write off.

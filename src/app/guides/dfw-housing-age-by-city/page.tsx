@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 
@@ -29,6 +29,7 @@ export default function DfwHousingAgeByCityPage() {
           ])
         ]}
       />
+      <JsonLd data={articleSchema("/guides/dfw-housing-age-by-city", "DFW Housing Age by City: What It Means for Your Pipes", "Real U.S. Census data on the median construction year for 7 DFW cities, and what each city's typical housing age means for galvanized, polybutylene, and copper/PEX pipe risk.")} />
 
       <div className="page-shell">
         <div className="premium-card max-w-4xl mx-auto">
@@ -37,6 +38,7 @@ export default function DfwHousingAgeByCityPage() {
             DFW Housing Age by City:<br />
             <span className="text-[#F0B429]">What It Means for Your Pipes</span>
           </h1>
+          <Byline path="/guides/dfw-housing-age-by-city" />
 
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Figures below are sourced directly from the U.S. Census Bureau's American Community Survey (see citations at the end of this page).</p>

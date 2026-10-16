@@ -6,7 +6,7 @@ import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema, Byline } from "@/lib/schema";
 
 const path = "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas";
 const title = "Can Homeowners Legally Do Their Own Plumbing in Texas?";
@@ -83,6 +83,7 @@ export default function DiyPlumbingLegalityPage() {
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Cost and decision guides</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
+          <Byline path="/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" />
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
             src={heroImage}

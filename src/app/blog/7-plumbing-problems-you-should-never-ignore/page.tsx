@@ -7,7 +7,7 @@ import { DirectAnswer, InternalLinks } from "@/components/PageSections";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, Byline } from "@/lib/schema";
 
 const path = "/blog/7-plumbing-problems-you-should-never-ignore";
 const title = "7 Plumbing Warning Signs Homeowners Shouldn’t Ignore";
@@ -50,6 +50,7 @@ export default function PlumbingProblemsArticlePage() {
       <article className="mt-6 max-w-4xl">
         <p className="section-kicker">Dallas–Fort Worth homeowner guide</p>
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
+          <Byline path="/blog/7-plumbing-problems-you-should-never-ignore" />
         <p className="mt-5 text-lg leading-8 text-slate-300">
           Most plumbing emergencies do not start with water pouring through the ceiling. They start small—a sink that
           drains a little slower than usual, a toilet that runs when nobody has touched it, or a faint stain below the
