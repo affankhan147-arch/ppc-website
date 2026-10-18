@@ -61,6 +61,11 @@ const tools = [
     description: "Enter the distance from your street or meter to your house to see a real 2026 cost range for replacing your water service line - plus who's actually responsible for it, you or the city."
   },
   {
+    title: "Water Pressure Regulator (PRV) Replacement Cost Calculator",
+    href: "/tools/water-pressure-regulator-cost-calculator",
+    description: "Pick your line size to see a real 2026 cost range for replacing a failed water pressure regulator, plus the signs it has failed open (high pressure) or closed (low pressure)."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."
