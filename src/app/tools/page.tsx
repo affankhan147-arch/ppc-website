@@ -68,6 +68,11 @@ const tools = [
     description: "Pick your line size to see a real 2026 cost range for replacing a failed water pressure regulator, plus the signs it has failed open (high pressure) or closed (low pressure)."
   },
   {
+    title: "Toilet Installation & Replacement Cost Calculator",
+    href: "/tools/toilet-installation-cost-calculator",
+    description: "Pick your toilet type and whether you're replacing an existing one or installing where none existed, to see a real 2026 cost range from two independently checked cost guides."
+  },
+  {
     title: "Water Hardness Widget",
     href: "/tools/water-hardness-widget",
     description: "Embeddable badges showing real GPG water hardness data by DFW city."

@@ -161,6 +161,7 @@ export default function LeakCostCalculatorPage() {
               extra={[
                 { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
                 { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
+                { label: "Toilet installation & replacement cost calculator", href: "/tools/toilet-installation-cost-calculator" },
                 { label: "Free DFW plumbing tools", href: "/tools" },
                 { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
               ]}
