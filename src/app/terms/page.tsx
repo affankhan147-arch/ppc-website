@@ -62,6 +62,8 @@ export default function TermsPage() {
           Providers are independent businesses. Each one is responsible for its own work, pricing, permits, licensing, insurance
           and warranties. Any agreement for plumbing work is between you and the provider, and Plumbing Hands is not a party to it.
           To the extent the law allows, this website is provided &ldquo;as is&rdquo; without promises about results.
+          Complaints about a licensed plumber&apos;s work or conduct can be filed with the Texas State Board of Plumbing
+          Examiners, which is linked below, and we would also like to hear about them through the contact page.
         </p>
 
         <h2 className={h2}>Embeddable widgets and tools</h2>
@@ -69,6 +71,20 @@ export default function TermsPage() {
           The free widgets and badges on our <Link href="/tools" className={link}>tools page</Link> may be embedded on other sites
           as long as the embed code, including its attribution link, is left unchanged. We may update, change or stop any tool at
           any time.
+        </p>
+
+        <h2 className={h2}>Content ownership and fair use</h2>
+        <p>
+          The guides, cost guides, calculators, data badges and images on this site belong to Plumbing Hands or are used
+          with permission. You are welcome to quote short passages or link to any page with credit. Copying whole pages,
+          republishing our data tables without attribution, or scraping the site in bulk is not allowed.
+        </p>
+
+        <h2 className={h2}>Links to other websites</h2>
+        <p>
+          Pages link to outside sources such as the Texas State Board of Plumbing Examiners, the Texas Department of
+          Insurance, the EPA and city water utilities so you can check facts for yourself. We do not control those sites and
+          are not responsible for their content, availability or privacy practices.
         </p>
 
         <h2 className={h2}>Changes and related pages</h2>

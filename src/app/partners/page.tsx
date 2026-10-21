@@ -95,6 +95,28 @@ export default function PartnersPage() {
             </p>
           </section>
 
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Referral partner questions</h2>
+            <div className="space-y-4 text-slate-300">
+              <div>
+                <h3 className="font-semibold text-white">Does it cost anything to become a referral partner?</h3>
+                <p>No. There is no fee to refer a homeowner or to be listed. The partnership works because both sides send real customers to each other.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">What kind of referrals work best?</h3>
+                <p>Active leaks, sewer backups, burst pipes and failed water heaters, where a homeowner needs a plumber the same day and does not know who to call.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Will my business be mentioned on this site?</h3>
+                <p>Only with your consent. Active partners can be featured on this page with a link to their website, and mentioned in relevant guides where it genuinely helps a homeowner, such as a restoration company in a water damage article.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">How do I get started?</h3>
+                <p>Call the number on this page or use the contact form, tell us what your business does and which DFW cities you serve, and we will set up the referral path and your partner mention together.</p>
+              </div>
+            </div>
+          </section>
+
           <OfficialSources
             title="Official resources referral partners can share"
             intro="Point clients to the state license search before any plumber starts work, and to the Texas Department of Insurance for coverage questions."

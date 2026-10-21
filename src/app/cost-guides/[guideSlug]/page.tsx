@@ -121,6 +121,18 @@ export default async function CostGuidePage({ params }: Props) {
         </div>
       </div>
       <LocalGuidance />
+      <InfoListSection
+        kicker="Compare quotes"
+        title="How to compare plumbing quotes fairly"
+        intro="Two quotes are only comparable when they price the same job. Use this checklist before you pick a provider."
+        items={[
+          "Ask each plumber to describe the same scope in writing so the prices line up.",
+          "Check whether the call-out or diagnostic fee is credited toward the repair.",
+          "Ask what is included: parts, labor, cleanup, permits and haul-away of old equipment.",
+          "Get the warranty on parts and on labor in writing, with how long each lasts.",
+          "Make sure the license number on the quote matches the TSBPE license search."
+        ]}
+      />
       <OfficialSources
         title={sourcesHeading(guide.title)}
         intro="Prices vary by provider, so check the facts that do not vary: the plumber's Texas license and what a typical home policy covers. These official sources help you do both before you approve an estimate."

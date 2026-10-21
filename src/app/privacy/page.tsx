@@ -68,6 +68,20 @@ export default function PrivacyPage() {
           the law requires it. Once a provider has your details, its own privacy practices apply to how it uses them.
         </p>
 
+        <h2 className={h2}>How long we keep information</h2>
+        <p>
+          Request and call records are kept only as long as they are needed to route requests, confirm delivery, settle
+          referral fees, answer questions about a past request and meet legal or tax obligations. After that they are deleted
+          or stripped of details that identify you. Analytics data is kept under Google Analytics retention settings.
+        </p>
+
+        <h2 className={h2}>Children&apos;s privacy</h2>
+        <p>
+          This site is meant for adult homeowners, renters and property managers. It is not directed to children under 13,
+          and we do not knowingly collect information from them. If you believe a child has sent us details, contact us and
+          we will delete them.
+        </p>
+
         <h2 className={h2}>Cookies and analytics</h2>
         <p>When you first visit this site, a banner asks whether you want to allow analytics cookies. If you choose &ldquo;Accept,&rdquo; we load Google Analytics to understand how visitors use the site (pages viewed, general location, device type) so we can improve it. If you choose &ldquo;Decline,&rdquo; Google Analytics is not loaded and no analytics cookies are set.</p>
         <p>You can change your choice at any time using the &ldquo;Cookie preferences&rdquo; link in the footer of any page, which re-opens the banner.</p>

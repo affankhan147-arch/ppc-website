@@ -26,6 +26,18 @@ const contactFaqs = [
     answer: "Call if water is actively leaking, sewage is backing up, or a fixture you need has stopped working. A form is fine for problems that can wait a few hours."
   },
   {
+    question: "Can someone come out at night or on a weekend?",
+    answer: "Many calls are about after-hours problems. Availability depends on the providers covering your city at that moment, so the provider you reach will confirm whether and when someone can come out, and any after-hours rate, before you agree to anything."
+  },
+  {
+    question: "Which areas do you cover?",
+    answer: "Calls are routed to providers serving Dallas, Fort Worth and the surrounding Dallas-Fort Worth cities listed on our service area pages, plus a few other Texas metros. If no provider covers your address, you will be told on the call."
+  },
+  {
+    question: "What if I only need a quote and it is not an emergency?",
+    answer: "That is fine. Call or send a request with a short description and your city. A provider can schedule a regular visit, and you can use our cost guides and calculators first to see which factors will drive the price."
+  },
+  {
     question: "Can I ask about my privacy or a past request here?",
     answer: "Yes. Use this page to ask what information we hold about a call or request, or to ask for it to be deleted. The privacy policy explains what is collected."
   }

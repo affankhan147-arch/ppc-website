@@ -51,6 +51,30 @@ export default function DisclosurePage() {
           <Link href="/terms" className={link}>terms of use</Link> for what the site does and does not promise.
         </p>
 
+        <h2 className={h2}>Why we publish this disclosure</h2>
+        <p>
+          A plumbing emergency is stressful, and people deserve to know who they are calling before they hand over their
+          address and phone number. This page exists so nobody mistakes Plumbing Hands for a single plumbing company, a
+          government service or a review site. If any page on the site ever reads that way, tell us and we will fix it.
+        </p>
+
+        <h2 className={h2}>Where our numbers come from</h2>
+        <p>
+          Figures in our guides come from public sources such as the National Weather Service, city water utilities, the
+          Texas Department of Insurance and equipment manufacturers, and each guide names its sources. Where a page gives an
+          estimate, such as a cost range or a calculator result, it says so. Estimates are a starting point for a
+          conversation with a licensed plumber, not a quote.
+        </p>
+
+        <h2 className={h2}>Your rights as a caller</h2>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>You can ask the provider for its business name, Texas license number and proof of insurance before work starts.</li>
+          <li>You can ask for a written estimate and say no to any work you have not approved.</li>
+          <li>You can hang up and call a different plumber at any point. Calling this number does not commit you to anything.</li>
+          <li>You can ask us what information we hold about your call, as explained in the privacy policy.</li>
+          <li>You can report a licensed plumber&apos;s work or conduct to the Texas State Board of Plumbing Examiners.</li>
+        </ul>
+
         <h2 className={h2}>Sponsored content and endorsements</h2>
         <p>
           Guides, cost ranges and calculators on this site are written to help homeowners decide what to do next. If a page ever
@@ -64,7 +88,7 @@ export default function DisclosurePage() {
       <OfficialSources
         title="Official resources behind this disclosure"
         intro="The FTC explains how websites should disclose paid relationships, and the Texas plumbing board lets you check any provider's license yourself."
-        links={[sources.ftcEndorsement, sources.tsbpeLookup]}
+        links={[sources.ftcEndorsement, sources.tsbpeLookup, sources.tsbpe]}
       />
     </main>
   );
