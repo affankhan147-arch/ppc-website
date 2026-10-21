@@ -88,7 +88,7 @@ export default function InsuranceGuidePage() {
               Another common coverage is a freeze‑related burst pipe — but this often comes with a condition: the homeowner must have maintained adequate heat in the home during freezing weather. If the home was unoccupied and the heat was turned off, the claim may be denied.
             </p>
             <p className="text-sm text-slate-400">
-              Source: TDI consumer guidance, quoted in industry articles; the exact maintained‑heat condition is still being confirmed directly with TDI.
+              Source: TDI consumer guidance on burst pipes and water damage. The exact wording of any heat or vacancy condition varies by policy, so check yours before winter.
             </p>
             <p className="text-slate-300 mt-4">
               This distinction is why hiring a licensed plumber to document the exact cause of the failure is so critical. An adjuster will base their decision on the plumber's professional assessment of whether the failure was sudden or gradual.
@@ -118,12 +118,12 @@ export default function InsuranceGuidePage() {
 
             <h3 className="text-lg font-medium text-white mt-6 mb-2">4. Slab Leaks: The Texas Gray Area</h3>
             <p className="text-slate-300 mb-4">
-              Slab leaks are a particularly difficult issue in Texas because expansive clay soil can shift and stress underground pipes. Adjusters often distinguish between a sudden failure (covered) and a slow, long‑term corrosion leak (excluded). The determining factor is usually the plumber’s diagnosis of the cause, not the symptom. This is consistent with multiple restoration‑industry sources and was confirmed in the earlier Dallas/Austin‑specific research for this guide.
+              Slab leaks are a particularly difficult issue in Texas because expansive clay soil can shift and stress underground pipes. Adjusters often distinguish between a sudden failure (covered) and a slow, long‑term corrosion leak (excluded). The determining factor is usually the plumber’s diagnosis of the cause, not the symptom. Ask the plumber to put the cause of the leak in writing, because that report is often what the adjuster relies on.
             </p>
 
             <h3 className="text-lg font-medium text-white mt-6 mb-2">5. The Maintenance Myth</h3>
             <p className="text-slate-300 mb-4">
-              Many homeowners believe that simply having insurance means all plumbing‑related damage is covered. In reality, standard policies explicitly exclude damage caused by poor maintenance, including corroded pipes, aging water heaters, and neglected fixtures. This is really just a restatement of the sudden/gradual distinction already covered in Section 1 — insurers expect homeowners to keep their plumbing in reasonable condition, and damage from deferred maintenance is not insurable.
+              Many homeowners believe that simply having insurance means all plumbing‑related damage is covered. In reality, standard policies explicitly exclude damage caused by poor maintenance, including corroded pipes, aging water heaters, and neglected fixtures. It comes back to the sudden-versus-gradual rule in Section 1: insurers expect homeowners to keep their plumbing in reasonable condition, and damage from deferred maintenance is not insurable.
             </p>
           </section>
 
