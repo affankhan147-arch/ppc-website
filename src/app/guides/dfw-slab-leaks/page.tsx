@@ -124,19 +124,19 @@ export default function SlabLeaksGuidePage() {
               <li>Insurers investigate physical evidence to determine the timeline of the leak. Extensive mold growth, deep saturation of flooring, and moisture that has penetrated far into subfloor framing all point toward a gradual leak, which is typically excluded from coverage. A claim discovered through a routine inspection or a sudden water bill spike — without those extended‑exposure signs — supports a finding of sudden and accidental damage.</li>
             </ul>
             <p className="text-slate-300">
-              While there is no single TDI publication dedicated specifically to slab leaks, the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">agency's general guidance on water damage claims</a> — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases and should be cited alongside industry practice.
+              While there is no single TDI publication dedicated specifically to slab leaks, the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">agency's general guidance on water damage claims</a> — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: What Homeowners Can Do</h2>
             <p className="text-slate-300 mb-4">
-              If you suspect a slab leak, taking the right steps in the right order can make a significant difference in how your claim is handled and whether coverage is approved. The following guidance is drawn from consistent recommendations across multiple industry sources.
+              If you suspect a slab leak, taking the right steps in the right order can make a significant difference in how your claim is handled and whether coverage is approved. These are the steps restoration companies, public adjusters and plumbers recommend most often.
             </p>
             <ol className="list-decimal list-inside text-slate-300 space-y-3 mb-4">
               <li><strong>Get a professional leak‑detection diagnosis <em>before</em> filing a claim.</strong> A documented, dated report from a licensed plumber that identifies the cause and timeline of the leak is the single strongest piece of evidence you can provide to an adjuster.</li>
               <li><strong>Photograph and date everything as you find it.</strong> Take clear photos of the leak location, any visible water damage, and the surrounding area before any cleanup or repair work begins.</li>
-              <li><strong>Be careful with recorded statements or examinations under oath.</strong> One source specifically warns that describing "I noticed something a while back" can be used by the insurer to argue the loss was gradual, even if the actual leak was recent.</li>
+              <li><strong>Be careful with recorded statements or examinations under oath.</strong> Restoration and public-adjuster sources warn that describing "I noticed something a while back" can be used by the insurer to argue the loss was gradual, even if the actual leak was recent.</li>
               <li><strong>Weigh the cost of filing a claim against paying out of pocket.</strong> Multiple sources note that filing a claim can raise your premiums at renewal. For smaller, contained leaks, it may be more cost‑effective to handle the repair and cleanup yourself.</li>
               <li><strong>If you file, document everything.</strong> Keep copies of the plumber's diagnosis, all photos, and any correspondence with your insurance company. A well‑documented claim is much harder to deny than one that relies on verbal descriptions.</li>
             </ol>
