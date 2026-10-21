@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
 import WaterHeaterAgeLookup from "@/components/WaterHeaterAgeLookup";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -63,6 +64,7 @@ export default function WaterHeaterAgeLookupPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             Most homeowners have no idea how old their water heater actually is - there&apos;s rarely an install
             date written anywhere. But the serial number on the rating plate already encodes it. Pick your
             brand, enter the first 4 digits of the serial number, and see the approximate manufacture date.
@@ -71,7 +73,7 @@ export default function WaterHeaterAgeLookupPage() {
           <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
             <Image
               src={getArticleImage("water-heater-emergency", 0)}
-              alt="Water heater rating plate showing the model and serial number used to determine its age"
+              alt={`${TITLE} - Water heater rating plate showing the model and serial number used to determine its age`}
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"
@@ -150,6 +152,12 @@ export default function WaterHeaterAgeLookupPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.rheemWaterHeater, sources.tsbpeLookup]}
+          />
 
           <div className="mt-10">
             <InternalLinks

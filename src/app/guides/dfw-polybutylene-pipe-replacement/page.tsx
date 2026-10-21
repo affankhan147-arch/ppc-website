@@ -39,9 +39,9 @@ export default function PolybutylenePipeGuidePage() {
           </h1>
           <Byline path="/guides/dfw-polybutylene-pipe-replacement" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -53,6 +53,8 @@ export default function PolybutylenePipeGuidePage() {
               priority
             />
           </div>
+
+          <p className="text-lg leading-8 text-slate-200 mb-8">Polybutylene pipe replacement comes up often in older DFW homes. This guide explains what polybutylene pipe is, how to identify it, how insurers tend to treat it, and the replacement options and costs worth comparing.</p>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: What Is Polybutylene Pipe?</h2>
@@ -118,7 +120,7 @@ export default function PolybutylenePipeGuidePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: Replacement Options and Costs</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: Polybutylene Pipe Replacement Options and Costs in DFW</h2>
             <p className="text-slate-300 mb-4">
               If PB pipe is identified, replacement is the most common and reliable solution. The approach can vary depending on the home&apos;s layout, the extent of the piping, and budget.
             </p>

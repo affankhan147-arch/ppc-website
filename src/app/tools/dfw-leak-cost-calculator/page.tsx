@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
+import { WidgetHero } from "@/components/WidgetPageExtras";
 import LeakCostCalculator from "@/components/LeakCostCalculator";
 import { leakCostCities } from "@/data/leakCostRates";
 import { siteConfig } from "@/data/site";
@@ -62,10 +64,13 @@ export default function LeakCostCalculatorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             A small leak looks harmless until you price it. Pick your city, enter your normal monthly
             use, and choose a leak. The math uses {leakCostCities.map((c) => c.name).join(" and ")}&apos;s
             own published tiered rates, so the extra gallons are charged at the tier they actually land in.
           </p>
+
+          <WidgetHero alt={`${TITLE} - plumber checking under a sink for a hidden water leak`} serviceSlug="sink-and-shower-drain-backup" />
 
           <LeakCostCalculator />
 
@@ -144,6 +149,12 @@ export default function LeakCostCalculatorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.dallasWater, sources.fortWorthWater, sources.tsbpeLookup]}
+          />
 
           <div className="mt-10">
             <InternalLinks

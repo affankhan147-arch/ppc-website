@@ -40,9 +40,9 @@ export default function InsuranceGuidePage() {
           </h1>
           <Byline path="/guides/texas-insurance-plumbing-claims" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute legal or insurance advice. Always review your specific policy and consult with your insurance provider or a qualified professional.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -55,8 +55,10 @@ export default function InsuranceGuidePage() {
             />
           </div>
 
+          <p className="text-lg leading-8 text-slate-200 mb-8">Texas insurance claims for plumbing leaks usually turn on one question: was the damage sudden and accidental, or gradual? This guide explains that rule, what a homeowners policy usually covers, and the common exclusions and myths.</p>
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: The "Sudden and Accidental" Rule</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: The "Sudden and Accidental" Rule in Texas Plumbing Insurance Claims</h2>
             <p className="text-slate-300 mb-4">
               In Texas, the vast majority of homeowners insurance policies (HO-B) are standardized by the Texas Department of Insurance. The central test that determines whether a water damage claim is approved or denied is the distinction between <strong>sudden and accidental</strong> damage and <strong>gradual</strong> damage.
             </p>

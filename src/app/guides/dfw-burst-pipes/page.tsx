@@ -40,9 +40,9 @@ export default function BurstPipesGuidePage() {
           </h1>
           <Byline path="/guides/dfw-burst-pipes" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing or insurance advice. Always consult a licensed professional and your insurance policy for your specific situation.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -54,6 +54,8 @@ export default function BurstPipesGuidePage() {
               priority
             />
           </div>
+
+          <p className="text-lg leading-8 text-slate-200 mb-8">Burst pipes in DFW are more common than the region&apos;s mild winters suggest. Below: why pipes split, what Winter Storm Uri showed about the real risk, what a Texas homeowners policy usually covers, the first ten minutes after a pipe bursts, and how to prevent the next one.</p>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why Burst Pipes Are More Common in DFW Than You'd Expect</h2>

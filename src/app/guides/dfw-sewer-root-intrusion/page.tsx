@@ -39,9 +39,9 @@ export default function SewerRootGuidePage() {
           </h1>
           <Byline path="/guides/dfw-sewer-root-intrusion" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -54,8 +54,10 @@ export default function SewerRootGuidePage() {
             />
           </div>
 
+          <p className="text-lg leading-8 text-slate-200 mb-8">Sewer root intrusion is a common cause of slow drains and backups in DFW neighborhoods with mature trees. This guide covers why it happens here, how it is diagnosed, the repair and prevention options, and how insurance usually treats it.</p>
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why DFW?</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why Sewer Root Intrusion Is Common in DFW</h2>
             <p className="text-slate-300 mb-4">
               DFW’s expansive clay soil creates an environment where tree roots grow aggressively, and the region’s mature tree canopy means many older neighborhoods have decades‑old root systems seeking moisture. Sewer lines, particularly older cast‑iron or clay pipes, become prime targets – roots enter through tiny cracks, expand, and eventually cause complete blockages.
             </p>

@@ -1,10 +1,47 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { AlertTriangle, ArrowRight, CheckCircle2, HelpCircle, MapPin, WalletCards } from "lucide-react";
+import { AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HelpCircle, MapPin, WalletCards } from "lucide-react";
 import { FAQ } from "@/data/faqs";
+import type { SourceLink } from "@/data/externalSources";
 import { internalLinkGroups } from "@/data/internalLinks";
 import type { PageEnhancement } from "@/data/pageEnhancements";
 import { siteConfig } from "@/data/site";
+
+// Bold run-in that restates the page topic at the start of an intro paragraph.
+export function LeadIn({ topic }: { topic: string }) {
+  const text = topic.trim();
+  const end = /[?.!]$/.test(text) ? "" : ".";
+  return (
+    <>
+      <strong className="font-bold text-white">
+        {text}
+        {end}
+      </strong>{" "}
+    </>
+  );
+}
+
+// Outbound citation section: official / authoritative sources for the page topic.
+export function OfficialSources({ title, intro, links }: { title: string; intro?: string; links: SourceLink[] }) {
+  if (!links.length) return null;
+  return (
+    <section className="content-section">
+      <div className="section-kicker"><ExternalLink className="h-4 w-4" aria-hidden="true" /> Official sources</div>
+      <h2 className="mt-2 text-2xl font-black text-white">{title}</h2>
+      {intro ? <p className="mt-3 leading-7 text-slate-300">{intro}</p> : null}
+      <ul className="mt-4 grid gap-3 md:grid-cols-2">
+        {links.map((link) => (
+          <li key={link.href} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
+            <a href={link.href} target="_blank" rel="noopener noreferrer" className="font-bold text-[#4FD1C5] underline hover:text-white">
+              {link.label}
+            </a>
+            {link.note ? <p className="mt-1 text-sm leading-6 text-slate-300">{link.note}</p> : null}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 export function DirectAnswer({ children }: { children: ReactNode }) {
   return (
@@ -119,10 +156,11 @@ export function EnhancementSections({ enhancement }: { enhancement?: PageEnhance
   );
 }
 
-export function FAQBlock({ faqs }: { faqs: FAQ[] }) {
+export function FAQBlock({ faqs, title = "Frequently asked questions" }: { faqs: FAQ[]; title?: string }) {
   return (
     <section className="content-section">
       <div className="section-kicker"><HelpCircle className="h-4 w-4" aria-hidden="true" /> Common questions</div>
+      <h2 className="mt-2 text-2xl font-black text-white">{title}</h2>
       <div className="mt-4 grid gap-3">
         {faqs.map((faq) => (
           <details key={faq.question} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
@@ -146,7 +184,8 @@ export function InternalLinks({ extra = [] }: { extra?: { label: string; href: s
     .slice(0, 8);
   return (
     <section className="content-section">
-      <div className="section-kicker"><ArrowRight className="h-4 w-4" aria-hidden="true" /> Related emergency plumbing resources</div>
+      <div className="section-kicker"><ArrowRight className="h-4 w-4" aria-hidden="true" /> Keep reading</div>
+      <h2 className="mt-2 text-2xl font-black text-white">Related emergency plumbing resources</h2>
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {links.map((link) => (
           <Link key={link.href} href={link.href} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 font-bold text-white transition hover:border-[#4FD1C5]">

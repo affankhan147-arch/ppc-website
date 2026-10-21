@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
 import WaterFiltrationSelector from "@/components/WaterFiltrationSelector";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -63,6 +64,7 @@ export default function WaterFiltrationSelectorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             Chlorine taste, cloudy water, iron staining, or drinking-water purity - each has a different
             fix. Pick your DFW city and your main concern to see the right filtration system type and a
             real installed cost range, built from HomeAdvisor&apos;s 2025/2026 cost data and each city
@@ -72,7 +74,7 @@ export default function WaterFiltrationSelectorPage() {
           <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
             <Image
               src={getArticleImage(undefined, 6)}
-              alt="Homeowner discussing water filtration options for a DFW home"
+              alt={`${TITLE} - Homeowner discussing water filtration options for a DFW home`}
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"
@@ -142,6 +144,12 @@ export default function WaterFiltrationSelectorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.dallasWater, sources.fortWorthWater, sources.tsbpeLookup]}
+          />
 
           <div className="mt-10">
             <InternalLinks

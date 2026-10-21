@@ -49,7 +49,7 @@ export default function CostGuidePage() {
           <div className="mb-8 rounded-xl border border-[#1A3A38] bg-[#0F1F1D] p-5 text-slate-200">
             <p className="text-xs font-bold uppercase tracking-wide text-[#F0B429]">Short answer</p>
             <p className="mt-2 leading-7">
-              In Dallas-Fort Worth, an emergency plumber usually charges a call-out (dispatch or diagnostic) fee of
+              Emergency plumbing costs in Dallas-Fort Worth usually start with a call-out (dispatch or diagnostic) fee of
               about $50-$250, then labor at roughly $75-$175 an hour, and after-hours rates run 1.5x to 3x that
               on nights, weekends and holidays. A simple drain clog often lands around $100-$300; a burst pipe
               section can run $125 to $2,500+ depending on access. Ask whether the call-out fee is credited toward
@@ -57,9 +57,9 @@ export default function CostGuidePage() {
             </p>
           </div>
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Prices are estimates based on multiple sources; actual costs vary by provider, time of day, and job complexity.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -73,7 +73,7 @@ export default function CostGuidePage() {
           </div>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: How Emergency Plumbing Pricing Works</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: How Emergency Plumbing Costs Work in DFW</h2>
             <p className="text-slate-300 mb-4">
               Emergency plumbing pricing is rarely a single, simple number. It is built from several independent charges that a provider typically explains before work begins – and understanding those components is the first step to getting a clear, fair estimate.
             </p>

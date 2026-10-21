@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { cities, isPriorityCityService, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
+import { getCitySources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityServiceEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
@@ -151,6 +152,11 @@ export default async function CityServicePage({ params }: Props) {
       />
       <CostFactors factors={service.costFactors} />
       <LocalGuidance cityName={city.name} />
+      <OfficialSources
+        title={`Official resources for ${pageHeading}`}
+        intro={`These official sources help ${city.name} homeowners check a plumber's Texas license, find local water service contacts and understand what a home policy usually covers before approving ${displayName.toLowerCase()} work.`}
+        links={getCitySources(city.slug, city.name, service.slug)}
+      />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[

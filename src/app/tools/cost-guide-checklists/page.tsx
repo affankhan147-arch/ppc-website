@@ -1,6 +1,8 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
+import { EmbedHowTo, WidgetHero } from "@/components/WidgetPageExtras";
 import { costGuides } from "@/data/costGuides";
 import { siteConfig } from "@/data/site";
 
@@ -43,6 +45,7 @@ export default function CostGuideChecklistsPage() {
             Free DFW Cost Guide Checklist Badges
           </h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={"Free DFW Cost Guide Checklist Badges"} />
             Six free, embeddable badges - one per emergency plumbing issue - showing how many
             key questions homeowners should ask before approving repair work. Each count is
             pulled directly from our published cost guides, so it stays accurate if a guide is
@@ -58,8 +61,10 @@ export default function CostGuideChecklistsPage() {
             </p>
           </div>
 
+          <WidgetHero alt="Free DFW cost guide checklist badges listing the questions to ask before approving plumbing work" serviceSlug="24-hour-emergency-plumber" seed={2} />
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a badge, copy the code</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a cost checklist badge, copy the code</h2>
             <div className="space-y-8">
               {costGuides.map((guide) => {
                 const alt = `${guide.title}: ${guide.questionsToAsk.length} key questions to ask - by Plumbing Hands`;
@@ -82,6 +87,30 @@ export default function CostGuideChecklistsPage() {
               })}
             </div>
           </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why a cost checklist helps before you approve work</h2>
+            <p className="text-slate-300 mb-4">
+              Emergency plumbing prices vary by provider, time of day and how hard the problem is to reach, so a single price range
+              rarely tells a homeowner much. A short list of questions does more. It turns a rushed phone call into a clear, written
+              scope before anyone opens a wall or snakes a line.
+            </p>
+            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+              <li>Ask for the scope and the price in writing before work starts.</li>
+              <li>Ask whether the call-out or diagnostic fee is credited toward the repair.</li>
+              <li>Confirm the after-hours, weekend or holiday rate if it applies.</li>
+              <li>Ask what warranty covers the parts and the labor.</li>
+              <li>Check the plumber&apos;s Texas license number before you sign.</li>
+            </ul>
+          </section>
+
+          <EmbedHowTo name="cost checklist badges" />
+
+          <OfficialSources
+            title="Official resources behind the cost guide checklists"
+            intro="Prices vary, but some facts do not. These official sources help readers confirm a plumber's Texas license and understand what a typical home policy covers before they approve an estimate."
+            links={[sources.tsbpeLookup, sources.tdiWaterDamage]}
+          />
 
           <div className="mt-10">
             <InternalLinks

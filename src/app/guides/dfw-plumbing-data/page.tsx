@@ -40,9 +40,9 @@ export default function DfwPlumbingDataPage() {
           </h1>
           <Byline path="/guides/dfw-plumbing-data" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This report compiles publicly available data from municipal water utilities, the National Weather Service, and the Federal Reserve Bank of Dallas. Figures are cited by source below and reflect the most recent published data at time of writing. It is intended as a reference for homeowners, researchers, and local media - not as a substitute for a property-specific water test or professional plumbing inspection.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -55,8 +55,10 @@ export default function DfwPlumbingDataPage() {
             />
           </div>
 
+          <p className="text-lg leading-8 text-slate-200 mb-8">This DFW plumbing data report brings together three local numbers behind many emergency plumbing calls: water hardness by city, how often North Texas actually freezes, and how population growth is adding pressure to aging pipes.</p>
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: How Hard Is DFW's Water? (By City)</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: DFW Plumbing Data: How Hard Is the Water? (By City)</h2>
             <p className="text-slate-300 mb-4">
               Hard water is one of the most common - and most overlooked - contributors to plumbing problems in North Texas. Dissolved calcium and magnesium in hard water build up as scale inside water heaters, faucet aerators, and pipe fittings over time, which is a major factor in why water heater lifespan tends to run shorter here than in soft-water regions (see our <a href="/guides/dfw-water-heater-lifespan" className="text-[#F0B429] underline">water heater lifespan guide</a> for the full mechanism). Hardness is measured in grains per gallon (GPG); anything above 7 GPG is generally classified as hard, and above 10 GPG as very hard.
             </p>

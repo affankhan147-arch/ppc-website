@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { DirectAnswer, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema, Byline } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
@@ -73,7 +74,7 @@ export default function InsuranceCoveragePage() {
         <div className="overflow-hidden rounded-2xl border border-white/10">
           <Image
             src="/images/blog/texas-homeowners-insurance-plumbing-leak-coverage-diagram.svg"
-            alt="Diagram contrasting a covered sudden burst pipe with a typically excluded gradual leak"
+            alt="Does homeowners insurance cover a plumbing leak in Texas? Diagram of a covered sudden burst pipe vs. a typically excluded gradual leak"
             width={640}
             height={360}
             className="w-full"
@@ -197,6 +198,11 @@ export default function InsuranceCoveragePage() {
         </div>
       </section>
 
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} burst pipe leak`)}
+      />
       <InternalLinks extra={[
         { label: "Burst Pipe Emergency", href: "/services/burst-pipe-emergency" },
         { label: "Slab Leak Warning Signs DFW", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },

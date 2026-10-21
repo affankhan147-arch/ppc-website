@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import { AlertTriangle, CheckCircle2, XCircle, FileWarning } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { getArticleImage } from "@/lib/articleImages";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema, Byline } from "@/lib/schema";
@@ -18,7 +19,7 @@ const directAnswer =
 
 // Search-result title matches the top GSC query ("can i do my own plumbing in my house", pos ~6). H1 stays `title`.
 export const metadata: Metadata = buildMetadata({
-  title: "Can I Do My Own Plumbing in Texas? What's Legal",
+  title: "Can Homeowners Legally Do Their Own Plumbing in Texas?",
   description,
   path
 });
@@ -87,7 +88,7 @@ export default function DiyPlumbingLegalityPage() {
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
             src={heroImage}
-            alt="Homeowner reviewing plumbing work in a Dallas-Fort Worth home"
+            alt="Texas homeowner checking whether they can legally do their own plumbing work"
             fill
             sizes="(min-width: 1024px) 56rem, 100vw"
             className="object-cover"
@@ -264,6 +265,11 @@ export default function DiyPlumbingLegalityPage() {
 
       <LocalGuidance />
       <FAQBlock faqs={faqs} />
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} license permit`)}
+      />
       <InternalLinks
         extra={[
           { label: "How to Verify a Texas Plumber's License", href: "/blog/how-to-verify-a-texas-plumbers-license" },

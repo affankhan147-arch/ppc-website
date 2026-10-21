@@ -3,7 +3,8 @@ import Image from "next/image";
 import { AlertTriangle, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { DirectAnswer, InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -45,6 +46,7 @@ export default function WaterHeaterPoppingNoisePage() {
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
           <Byline path="/blog/water-heater-making-popping-noise-dallas" />
         <p className="mt-5 text-lg leading-8 text-slate-300">
+          <LeadIn topic={title} />
           A water heater does not usually start making noise for no reason. It builds slowly—a faint crackle at first,
           then sharper pops or a low rumble whenever the unit kicks on to heat.
         </p>
@@ -294,6 +296,11 @@ export default function WaterHeaterPoppingNoisePage() {
         </section>
       </article>
 
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} water heater tank`)}
+      />
       <InternalLinks
         extra={[
           { label: "Dallas plumbing help", href: "/cities/dallas" },

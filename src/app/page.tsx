@@ -12,7 +12,8 @@ import {
   Wrench
 } from "lucide-react";
 import { CallButton } from "@/components/CallButton";
-import { FAQBlock, InternalLinks } from "@/components/PageSections";
+import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 import { cities } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
@@ -107,7 +108,7 @@ export default function HomePage() {
               DFW's Fastest Emergency Plumber – 24/7
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 sm:text-xl">
-              Call Plumbing Hands for emergency plumbing service across DFW-from active leaks and drain backups to sewer, toilet, burst-pipe, and water-heater problems.
+              Need an emergency plumber in Dallas-Fort Worth? Call Plumbing Hands for active leaks and drain backups, plus sewer, toilet, burst-pipe, and water-heater problems.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CallButton location="home-hero" label={`Call ${siteConfig.phoneDisplay}`} pagePath="/" pageType="homepage" service="Emergency plumbing" city={siteConfig.marketName} />
@@ -189,7 +190,7 @@ export default function HomePage() {
 
 <section className="content-section">
   <p className="section-kicker">Emergency plumbers by city</p>
-  <h2 className="display-title mt-2 text-4xl font-bold text-white">Find Emergency Plumbing Help Near You.</h2>
+  <h2 className="display-title mt-2 text-4xl font-bold text-white">Find an Emergency Plumber in Dallas-Fort Worth Near You.</h2>
   <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     {cityEmergencyLinks.map((link) => (
       <Link key={link.href} href={link.href} className="premium-card group p-5">
@@ -337,7 +338,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <FAQBlock faqs={faqs} />
+        <OfficialSources
+          title="Official resources before you call an emergency plumber in Dallas"
+          intro="Two minutes with these official sources can save money and stress: check the plumber's Texas license, know what your home policy usually covers, and know who to call when the break is on the city side of the meter."
+          links={[sources.tsbpeLookup, sources.tdiBurstPipes, sources.dallasWater, sources.fortWorthWater]}
+        />
+
+        <FAQBlock faqs={faqs} title="Emergency plumber questions DFW homeowners ask" />
         <InternalLinks />
 
         <section className="content-section dark-band text-center">

@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
 import WaterSoftenerCostCalculator from "@/components/WaterSoftenerCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -63,6 +64,7 @@ export default function WaterSoftenerCostCalculatorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             DFW&apos;s water runs Hard to Very Hard almost everywhere in the metro. Pick your city and
             household size to see the grain capacity you need and a real installed cost range, built
             from this site&apos;s own cited hardness data and HomeAdvisor&apos;s 2025/2026 cost figures.
@@ -71,7 +73,7 @@ export default function WaterSoftenerCostCalculatorPage() {
           <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
             <Image
               src={getArticleImage(undefined, 3)}
-              alt="Water heater inspection in a DFW home with hard water scale buildup"
+              alt={`${TITLE} - Water heater inspection in a DFW home with hard water scale buildup`}
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"
@@ -148,6 +150,12 @@ export default function WaterSoftenerCostCalculatorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.rheemWaterHeater, sources.tsbpeLookup]}
+          />
 
           <div className="mt-10">
             <InternalLinks

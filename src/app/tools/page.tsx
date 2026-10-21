@@ -1,5 +1,7 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 
 export const metadata = buildMetadata({
   title: "Free DFW Plumbing Tools & Embeddable Widgets",
@@ -131,6 +133,30 @@ export default function ToolsIndexPage() {
               </a>
             ))}
           </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <section className="content-section">
+            <p className="section-kicker">How to use the tools</p>
+            <h2 className="mt-2 text-2xl font-black text-white">How the free DFW plumbing tools work</h2>
+            <p className="mt-3 leading-7 text-slate-300">
+              The calculators ask a few questions about your home, such as its age, pipe material, water hardness or fixture
+              count, and return a realistic range with the factors that move the price. Use the range to judge whether a quote
+              makes sense, then ask the plumber to put the scope and price in writing. Results are estimates, not quotes.
+            </p>
+            <p className="mt-3 leading-7 text-slate-300">
+              The widgets and badges are free to embed on real estate, HOA, property management and local news sites. Each page
+              has a copy-and-paste code box, and the data refreshes on its own, so nothing needs updating after you publish.
+            </p>
+          </section>
+
+          <OfficialSources
+            title="Official data sources behind the plumbing tools"
+            intro="The tools draw on official weather records, manufacturer lifespan guidance and the Texas plumbing license database."
+            links={[sources.nwsFreeze, sources.rheemWaterHeater, sources.tsbpeLookup]}
+          />
+
+          <InternalLinks />
         </div>
       </div>
     </>

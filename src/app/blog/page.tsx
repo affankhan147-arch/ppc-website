@@ -2,7 +2,8 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, SearchCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { FAQBlock, InternalLinks } from "@/components/PageSections";
+import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 import { getLiveBlogPosts } from "@/data/blogPosts";
 import { emergencyFaqs } from "@/data/faqs";
 import { services } from "@/data/services";
@@ -85,6 +86,12 @@ export default function BlogHubPage() {
           </div>
         </section>
       ))}
+
+      <OfficialSources
+        title="Official sources our plumbing guides rely on"
+        intro="Our guides cite the agencies and manufacturers below. Use them to check licenses, insurance coverage, freeze records and water heater lifespan for yourself."
+        links={[sources.tsbpeLookup, sources.tdiWaterDamage, sources.nwsFreeze]}
+      />
 
       <FAQBlock faqs={faqs} />
       <InternalLinks

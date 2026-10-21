@@ -40,9 +40,9 @@ export default function DfwHousingAgeByCityPage() {
           </h1>
           <Byline path="/guides/dfw-housing-age-by-city" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Figures below are sourced directly from the U.S. Census Bureau's American Community Survey (see citations at the end of this page).</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -54,6 +54,8 @@ export default function DfwHousingAgeByCityPage() {
               priority
             />
           </div>
+
+          <p className="text-lg leading-8 text-slate-200 mb-8">Housing age by city is one of the best clues to what pipes sit behind DFW walls. This guide lists the median construction year for seven DFW cities, explains why a home&apos;s age predicts its pipe material, and what to do with that if you own or are buying a home.</p>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Median Construction Year, 7 DFW Cities</h2>

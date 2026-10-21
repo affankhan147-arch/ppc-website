@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
 import GarbageDisposalCostCalculator from "@/components/GarbageDisposalCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -63,6 +64,7 @@ export default function GarbageDisposalCostCalculatorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             A jammed or leaking disposal isn&apos;t always a sign you need a new one. Tell us what&apos;s
             happening and the unit&apos;s age to see whether repair or replacement makes more sense, plus a
             real installed-cost range sized to your household - built from HomeAdvisor&apos;s 2026 published
@@ -72,7 +74,7 @@ export default function GarbageDisposalCostCalculatorPage() {
           <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
             <Image
               src={getArticleImage("sink-and-shower-drain-backup", 2)}
-              alt="Plumber inspecting a kitchen sink garbage disposal in a DFW home"
+              alt={`${TITLE} - Plumber inspecting a kitchen sink garbage disposal in a DFW home`}
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"
@@ -140,6 +142,12 @@ export default function GarbageDisposalCostCalculatorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.tsbpeLookup, sources.tdiWaterDamage]}
+          />
 
           <div className="mt-10">
             <InternalLinks

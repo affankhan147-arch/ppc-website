@@ -3,8 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { cities, getNearbyCities, getPriorityServiceSlugsForCity } from "@/data/cities";
+import { getCitySources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityPageEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
@@ -180,6 +181,11 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
+      <OfficialSources
+        title={`Official ${city.name} and Texas plumbing resources`}
+        intro={`Before any plumbing work starts in ${city.name}, it helps to know where the official information lives. The city site covers water service, outage notices and permit rules, and every plumber working in Texas must hold a license from the Texas State Board of Plumbing Examiners, which you can check online in about a minute.`}
+        links={getCitySources(city.slug, city.name)}
+      />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[

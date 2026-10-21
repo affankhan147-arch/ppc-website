@@ -39,9 +39,9 @@ export default function GasLineGuidePage() {
           </h1>
           <Byline path="/guides/dfw-gas-line-safety" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, gas, or legal advice. Always consult a licensed professional for your specific situation.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -53,6 +53,8 @@ export default function GasLineGuidePage() {
               priority
             />
           </div>
+
+          <p className="text-lg leading-8 text-slate-200 mb-8">Gas line safety in DFW starts with knowing whether your line can carry the load you plan to add. This guide covers gas line capacity, safety steps for homeowners, Texas licensing and permit rules, and what to ask before adding a gas appliance.</p>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Gas Line Capacity – Why It Matters</h2>
@@ -68,7 +70,7 @@ export default function GasLineGuidePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Safety Steps for Homeowners</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Gas Line Safety Steps for DFW Homeowners</h2>
             <p className="text-slate-300 mb-4">
               If you suspect a gas leak, the correct response is not to investigate or call a plumber first. The standard, universally recommended sequence is:
             </p>

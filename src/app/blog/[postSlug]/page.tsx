@@ -2,8 +2,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LeadIn, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { blogPosts, getLiveBlogPosts, retiredBlogSlugs } from "@/data/blogPosts";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { blogEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
@@ -84,7 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
             priority
           />
         </div>
-        <p className="mt-6 text-lg leading-8 text-slate-300">{post.directAnswer}</p>
+        <p className="mt-6 text-lg leading-8 text-slate-300"><LeadIn topic={post.title} />{post.directAnswer}</p>
         <div className="mt-6">
           <CallButton location={`blog-${post.slug}-top`} />
         </div>
@@ -118,6 +119,11 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
       <LocalGuidance />
+      <OfficialSources
+        title={sourcesHeading(post.title)}
+        intro="These official and manufacturer sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical home policy covers, or read more on the specific problem before you approve work."
+        links={getTopicSources(`${post.title} ${post.category}`, post.relatedServiceSlug)}
+      />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[

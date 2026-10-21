@@ -40,9 +40,9 @@ export default function DfwFreezeHistoryPage() {
           </h1>
           <Byline path="/guides/dfw-freeze-history" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing or insurance advice. Figures below are sourced directly from the National Weather Service (see citations at the end of this page).</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -54,6 +54,8 @@ export default function DfwFreezeHistoryPage() {
               priority
             />
           </div>
+
+          <p className="text-lg leading-8 text-slate-200 mb-8">DFW&apos;s freeze history is longer than its mild-winter reputation suggests. This guide uses National Weather Service records to show how often the metro actually freezes, when the freeze season starts and ends, and why that matters for exposed pipes.</p>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: DFW's Actual Freeze Numbers, Not the Reputation</h2>

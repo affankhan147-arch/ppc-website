@@ -40,9 +40,9 @@ export default function WaterHeaterLifespanGuidePage() {
           </h1>
           <Byline path="/guides/dfw-water-heater-lifespan" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing advice. Always consult a licensed professional for your specific situation.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -55,8 +55,10 @@ export default function WaterHeaterLifespanGuidePage() {
             />
           </div>
 
+          <p className="text-lg leading-8 text-slate-200 mb-8">Water heater lifespan in DFW is shaped heavily by hard water. This guide covers how long water heaters actually last, why DFW&apos;s water shortens that, the maintenance that helps, and the signs it is time to replace rather than repair.</p>
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: How Long Water Heaters Actually Last</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Water Heater Lifespan: How Long Units Actually Last in DFW</h2>
             <p className="text-slate-300 mb-4">
               The lifespan gap between tank and tankless water heaters is larger than most homeowners expect. According to manufacturer guidance from A.O. Smith, traditional tank water heaters typically last 8 to 12 years, while tankless units can operate for 15 to 20 years with proper maintenance - nearly double the service life.
             </p>

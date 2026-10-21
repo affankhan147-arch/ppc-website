@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { DirectAnswer, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema, Byline } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
@@ -101,7 +102,7 @@ export default function LicenseVerificationPage() {
       <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
         <Image
           src={getArticleImage("24-hour-emergency-plumber", 1)}
-          alt="Licensed Texas plumber's badge and paperwork being reviewed before a job"
+          alt="Homeowner verifying a Texas plumber's license and paperwork before a job"
           fill
           sizes="(min-width: 1024px) 56rem, 100vw"
           className="object-cover"
@@ -110,7 +111,7 @@ export default function LicenseVerificationPage() {
       </div>
       <DirectAnswer>
         <p>
-          To verify a Texas plumber's license:
+          To verify a Texas plumber's license, use the free TSBPE public license search in four steps:
           <ol className="list-decimal ml-6 mt-2 space-y-1">
             <li>Go to the TSBPE Public License Search: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a> (or visit <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a> and click "Find a license/registration").</li>
             <li>Choose <strong>"Search by Name"</strong> or <strong>"Search by License Number"</strong> - License Number is more precise.</li>
@@ -299,6 +300,11 @@ export default function LicenseVerificationPage() {
         </div>
       </section>
 
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} license`)}
+      />
       <InternalLinks extra={[
         { label: "24-Hour Emergency Plumber", href: "/services/24-hour-emergency-plumber" },
         { label: "Emergency Plumber Dallas", href: "/cities/dallas/24-hour-emergency-plumber" },

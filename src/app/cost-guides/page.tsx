@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, DollarSign } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { FAQBlock, InternalLinks } from "@/components/PageSections";
+import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { costGuides } from "@/data/costGuides";
 import { getArticleImage } from "@/lib/articleImages";
@@ -89,6 +90,23 @@ export default function CostGuidesIndexPage() {
           ))}
         </div>
       </section>
+
+      <section className="content-section">
+        <p className="section-kicker">How to use these guides</p>
+        <h2 className="mt-2 text-2xl font-black text-white">How to read a plumbing cost guide</h2>
+        <p className="mt-3 leading-7 text-slate-300">
+          Each guide explains what drives the price of one job rather than promising a single number. Look at the factors that
+          apply to your home, such as access, pipe material, the time of day and whether a permit is needed, then ask the
+          provider to price those items in writing. If a quote is far outside what the guide describes, ask what is different
+          about your job before you approve it.
+        </p>
+      </section>
+
+      <OfficialSources
+        title="Official resources to check before you approve a plumbing estimate"
+        intro="A fair price starts with a licensed plumber and a clear scope. These official sources help you confirm both, and show when insurance may help with the bill."
+        links={[sources.tsbpeLookup, sources.tdiWaterDamage, sources.tdiBurstPipes]}
+      />
 
       <FAQBlock faqs={faqs} />
       <InternalLinks

@@ -40,9 +40,9 @@ export default function SlabLeaksGuidePage() {
           </h1>
           <Byline path="/guides/dfw-slab-leaks" />
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>
-          </div>
+          </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
@@ -56,8 +56,10 @@ export default function SlabLeaksGuidePage() {
           </div>
 
           { /* REMOTE SECTION 1 (actual improved text from remote) */ }
+          <p className="text-lg leading-8 text-slate-200 mb-8">Slab leaks are a well-known DFW homeowner problem. This guide explains why they happen here, how they are detected, how insurance treats them, and what you can do if you suspect one under your foundation.</p>
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why DFW?</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why Slab Leaks Hit DFW Homes</h2>
             <p className="text-slate-300 mb-4">
               Slab leaks are not evenly distributed across the country — they are heavily concentrated in regions with expansive clay soils. The Dallas-Fort Worth metroplex sits squarely on the Blackland Prairie, a geological formation known for its highly reactive clay. This clay expands when wet and shrinks when dry, a cycle that repeats with every rain and drought. Over decades, this constant movement puts immense stress on concrete slab foundations and the plumbing lines embedded beneath them.
             </p>

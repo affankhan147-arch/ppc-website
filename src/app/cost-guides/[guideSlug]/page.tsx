@@ -2,7 +2,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { CostFactors, DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { costGuideEnhancements, costGuideFaqEnhancements } from "@/data/pageEnhancements";
 import { getArticleImage } from "@/lib/articleImages";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
@@ -102,10 +103,29 @@ export default async function CostGuidePage({ params }: Props) {
               <InfoListSection kicker="Provider diagnosis" title={enhancement.providerTitle} items={enhancement.providerItems} />
               <InfoListSection kicker="Safety boundaries" title={enhancement.safetyTitle} items={enhancement.safetyItems} />
             </>
+          ) : relatedService ? (
+            <>
+              <InfoListSection
+                kicker="When it costs more"
+                title={`Signs the ${relatedService.name.toLowerCase()} job should not wait`}
+                intro="Waiting rarely makes these jobs cheaper. When any of the signs below show up, the repair scope and the cleanup bill both tend to grow."
+                items={relatedService.symptoms}
+              />
+              <InfoListSection
+                kicker="Avoid extra cost"
+                title="Mistakes that make the bill bigger"
+                items={relatedService.mistakesToAvoid}
+              />
+            </>
           ) : null}
         </div>
       </div>
       <LocalGuidance />
+      <OfficialSources
+        title={sourcesHeading(guide.title)}
+        intro="Prices vary by provider, so check the facts that do not vary: the plumber's Texas license and what a typical home policy covers. These official sources help you do both before you approve an estimate."
+        links={getTopicSources(`${guide.title} ${guide.slug}`, guide.relatedServiceSlug)}
+      />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[

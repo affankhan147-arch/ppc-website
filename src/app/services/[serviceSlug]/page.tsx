@@ -2,9 +2,10 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LeadIn, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
+import { getServiceSources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { serviceEnhancements, serviceFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
@@ -51,6 +52,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   const displayName = titleCase(service.name);
+  const pageHeading = service.seoH1 ?? `${displayName} in Dallas-Fort Worth`;
   const path = `/services/${service.slug}`;
   const enhancement = serviceEnhancements[service.slug];
   const faqs = [
@@ -101,8 +103,9 @@ export default async function ServicePage({ params }: Props) {
       <div className="mt-6">
         <article>
           <p className="section-kicker">{service.urgency} urgency service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{service.seoH1 ?? `${displayName} in Dallas-Fort Worth`}</h1>
+          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
           <p className="mt-4 text-lg leading-8 text-slate-300">
+            <LeadIn topic={pageHeading} />
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
@@ -159,6 +162,11 @@ export default async function ServicePage({ params }: Props) {
       </section>
       <CostFactors factors={service.costFactors} />
       <LocalGuidance />
+      <OfficialSources
+        title={`Official resources for ${pageHeading}`}
+        intro={`Before you approve ${displayName.toLowerCase()} work anywhere in Dallas-Fort Worth, these official sources help you confirm the plumber holds a current Texas license and understand what a typical home policy covers. Keep the license number and any written estimate with your records.`}
+        links={getServiceSources(service.slug)}
+      />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[

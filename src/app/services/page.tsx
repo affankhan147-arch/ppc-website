@@ -3,7 +3,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, Droplets, ShieldCheck, Wrench } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { FAQBlock, InternalLinks } from "@/components/PageSections";
+import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { services } from "@/data/services";
 import { getArticleImage } from "@/lib/articleImages";
@@ -149,6 +150,12 @@ export default function ServicesHubPage() {
           </section>
         );
       })}
+
+      <OfficialSources
+        title="Official resources for choosing an emergency plumbing service"
+        intro="Whichever service you need, check the plumber's Texas license first and know what a typical home policy covers after sudden water damage."
+        links={[sources.tsbpeLookup, sources.tdiWaterDamage, sources.epaLeaks]}
+      />
 
       <FAQBlock faqs={faqs} />
       <InternalLinks

@@ -1,6 +1,8 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
+import { EmbedHowTo } from "@/components/WidgetPageExtras";
 import { siteConfig } from "@/data/site";
 import { categoryLabels, categoryOrder, getWidgetFactsByCategory } from "@/data/widgetFacts";
 
@@ -81,7 +83,7 @@ export default function DfwDataBadgesPage() {
                 <h2 className="text-xl font-semibold text-[#F0B429] mb-4">{categoryLabels[category]}</h2>
                 <div className="space-y-8">
                   {facts.map((fact) => {
-                    const alt = `${fact.label}: ${fact.value} - Data by Plumbing Hands`;
+                    const alt = `${fact.label}: ${fact.value} - DFW data badge by Plumbing Hands`;
                     const code = embedSnippet(fact.slug, fact.linkPath, alt);
                     return (
                       <div key={fact.slug} className="border border-[#1A3A38] rounded-xl p-4">
@@ -104,6 +106,14 @@ export default function DfwDataBadgesPage() {
               </section>
             );
           })}
+
+          <EmbedHowTo name="DFW data badges" />
+
+          <OfficialSources
+            title="Official sources behind the DFW data badges"
+            intro="Each badge cites its own source next to it. These official pages are the best places to read the full records behind the freeze and water heater numbers."
+            links={[sources.nwsFreeze, sources.rheemWaterHeater, sources.tsbpeLookup]}
+          />
 
           <div className="mt-10">
             <InternalLinks

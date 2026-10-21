@@ -1,6 +1,7 @@
 ﻿import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 
 export const metadata = buildMetadata({
   title: "Partner with PlumbingHands – Referral Partnership",
@@ -69,7 +70,38 @@ export default function PartnersPage() {
             </ul>
           </section>
 
-          <div className="bg-[#0F1F1D] p-6 rounded-lg border border-[#1A3A38] text-center">
+<section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">What a good referral partnership looks like</h2>
+            <p className="text-slate-300 mb-4">
+              The best partnerships solve a real problem for the homeowner. A restoration crew dries out a flooded kitchen but
+              cannot repair the supply line that failed. An insurance agent gets a call about a ceiling stain and needs a plumber
+              to find the leak before a claim can move forward. A property manager has a tenant with a backed-up sewer line on a
+              Saturday night. In each case, a fast and clear handoff keeps the homeowner from searching on their own while water
+              is still moving.
+            </p>
+            <ul className="list-disc list-inside text-slate-300 space-y-2">
+              <li>Referrals are for real plumbing problems, never bulk lists or cold leads.</li>
+              <li>Partner mentions are added only with your consent, and you can ask for changes at any time.</li>
+              <li>Homeowners always confirm the provider&apos;s license, price and scope directly before work begins.</li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Resources you can share with clients</h2>
+            <p className="text-slate-300 mb-4">
+              Partners often send clients to our free <a href="/tools" className="text-[#F0B429] underline">DFW plumbing calculators and widgets</a>,
+              the <a href="/guides/texas-insurance-plumbing-claims" className="text-[#F0B429] underline">Texas plumbing insurance claims guide</a> and
+              the <a href="/guides/dfw-burst-pipes" className="text-[#F0B429] underline">burst pipe guide</a>. All of them are free to link to.
+            </p>
+          </section>
+
+          <OfficialSources
+            title="Official resources referral partners can share"
+            intro="Point clients to the state license search before any plumber starts work, and to the Texas Department of Insurance for coverage questions."
+            links={[sources.tsbpeLookup, sources.tdiWaterDamage]}
+          />
+
+          <div className="bg-[#0F1F1D] p-6 rounded-lg border border-[#1A3A38] text-center mt-10">
             <h3 className="text-xl font-semibold text-white mb-2">Ready to Partner?</h3>
             <p className="text-slate-300 mb-4">Call us today or fill out the contact form below to get started.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

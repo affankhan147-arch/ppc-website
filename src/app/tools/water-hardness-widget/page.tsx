@@ -1,6 +1,8 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
+import { EmbedHowTo, WidgetHero } from "@/components/WidgetPageExtras";
 import { siteConfig } from "@/data/site";
 import { waterHardnessData, regionalAverageHardness } from "@/data/waterHardness";
 
@@ -45,6 +47,7 @@ export default function WaterHardnessWidgetPage() {
             Free DFW Water Hardness Widget
           </h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={"Free DFW Water Hardness Widget"} />
             A small, free badge showing real water hardness data (grains per gallon, or GPG) for
             Dallas-Fort Worth area cities. Built for real estate agents, home inspectors, HOA
             newsletters, water treatment companies, and local bloggers who want a quick, accurate
@@ -62,9 +65,11 @@ export default function WaterHardnessWidgetPage() {
             </p>
           </div>
 
+          <WidgetHero alt="Free DFW water hardness widget showing grains-per-gallon data by city" serviceSlug="water-heater-emergency" seed={3} />
+
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-4">
-              Pick your city, copy the code
+              Pick your city, copy the water hardness widget code
             </h2>
             <div className="space-y-8">
               {allEntries.map((entry) => {
@@ -101,6 +106,34 @@ export default function WaterHardnessWidgetPage() {
               If your city isn&apos;t listed individually, use the DFW Metro regional average badge.
             </p>
           </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">What hard water means for DFW plumbing</h2>
+            <p className="text-slate-300 mb-4">
+              Hardness is the amount of dissolved calcium and magnesium in the water, measured in grains per gallon. Most of the
+              Dallas-Fort Worth area tests hard to very hard, and those minerals do not disappear once the water reaches a home.
+            </p>
+            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+              <li>
+                Scale settles in the bottom of tank water heaters, which can cause popping or rumbling noises and lower efficiency
+                over time. Our <a href="/blog/water-heater-making-popping-noise-dallas" className="text-[#F0B429] underline">water heater popping noise guide</a> explains what to do.
+              </li>
+              <li>Faucet aerators and showerheads clog with white mineral deposits and slowly lose flow.</li>
+              <li>Glass shower doors, fixtures and dishes show spots and a chalky film.</li>
+              <li>
+                Softener sizing depends on hardness and household size. The{" "}
+                <a href="/tools/water-softener-cost-calculator" className="text-[#F0B429] underline">water softener calculator</a> does that math for your city.
+              </li>
+            </ul>
+          </section>
+
+          <EmbedHowTo name="water hardness widget" />
+
+          <OfficialSources
+            title="Official resources to use with the water hardness widget"
+            intro="City water utilities publish water quality information, and water heater makers explain how sediment shortens tank life. These sources go deeper than a badge can."
+            links={[sources.dallasWater, sources.fortWorthWater, sources.rheemWaterHeater]}
+          />
 
           <div className="mt-10">
             <InternalLinks

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 import { cities, getPriorityServiceSlugsForCity } from "@/data/cities";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/site";
@@ -120,6 +122,24 @@ export default function CitiesPage() {
           ))}
         </div>
       </section>
+      <section className="content-section">
+        <p className="section-kicker">How to use the city pages</p>
+        <h2 className="mt-2 text-2xl font-black text-white">What each city page covers</h2>
+        <p className="mt-3 leading-7 text-slate-300">
+          Every city page lists the urgent plumbing services requested most in that area, local notes on water service and
+          older housing stock, and links to service pages written for that city. Pick your city, then choose the problem you
+          have, whether it is a burst pipe, a sewer backup or a water heater leak, to see first steps and what to ask the
+          provider before work starts.
+        </p>
+      </section>
+
+      <OfficialSources
+        title="Official water utility and licensing resources for Texas cities"
+        intro="For a break on the city side of the meter, call your water utility. For anything on your side, check the plumber's Texas license before work begins."
+        links={[sources.dallasWater, sources.fortWorthWater, sources.tsbpeLookup]}
+      />
+
+      <InternalLinks />
     </main>
   );
 }

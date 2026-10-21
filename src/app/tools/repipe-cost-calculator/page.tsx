@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
 import RepipeCostCalculator from "@/components/RepipeCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -53,6 +54,7 @@ export default function RepipeCostCalculatorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             A whole-house repipe is one of the biggest plumbing decisions a homeowner makes - often triggered
             by failing polybutylene or galvanized pipe. Enter your home&apos;s square footage and pick a pipe
             material to see a modeled cost range, built from HomeAdvisor&apos;s and Angi&apos;s published 2026
@@ -62,7 +64,7 @@ export default function RepipeCostCalculatorPage() {
           <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
             <Image
               src={getArticleImage(undefined, 6)}
-              alt="Homeowner discussing a whole-house repipe estimate with a DFW plumber"
+              alt={`${TITLE} - Homeowner discussing a whole-house repipe estimate with a DFW plumber`}
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"
@@ -136,6 +138,12 @@ export default function RepipeCostCalculatorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.tsbpeLookup, sources.tdiBurstPipes]}
+          />
 
           <div className="mt-10">
             <InternalLinks

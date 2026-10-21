@@ -1,6 +1,8 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
+import { EmbedHowTo } from "@/components/WidgetPageExtras";
 import { siteConfig } from "@/data/site";
 
 export const metadata = buildMetadata({
@@ -12,7 +14,7 @@ export const metadata = buildMetadata({
 });
 
 const embedCode = `<a href="${siteConfig.baseUrl}/guides/dfw-burst-pipes" target="_blank" rel="noopener">
-  <img src="${siteConfig.baseUrl}/api/widgets/freeze-watch" alt="DFW Freeze Watch - live pipe freeze risk badge by Plumbing Hands" height="26" />
+  <img src="${siteConfig.baseUrl}/api/widgets/freeze-watch" alt="DFW Freeze Watch widget - live pipe freeze risk badge by Plumbing Hands" height="26" />
 </a>`;
 
 export default function FreezeWatchWidgetPage() {
@@ -40,6 +42,7 @@ export default function FreezeWatchWidgetPage() {
             Free DFW Freeze Watch Widget
           </h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={"Free DFW Freeze Watch Widget"} />
             Unlike our other badges, this one updates automatically. It pulls the current
             overnight low forecast for Dallas-Fort Worth directly from the National Weather
             Service and flips to a freeze-risk warning whenever the forecast low is 32F or
@@ -61,7 +64,7 @@ export default function FreezeWatchWidgetPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/api/widgets/freeze-watch"
-                alt="DFW Freeze Watch - live pipe freeze risk badge by Plumbing Hands"
+                alt="DFW Freeze Watch widget - live pipe freeze risk badge by Plumbing Hands"
                 height={26}
                 className="mb-3"
               />
@@ -74,6 +77,41 @@ export default function FreezeWatchWidgetPage() {
               </pre>
             </div>
           </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">How the freeze watch widget works</h2>
+            <p className="text-slate-300 mb-4">
+              The badge reads the National Weather Service forecast for the Dallas-Fort Worth area, issued by the NWS office in
+              Fort Worth, and shows the coming overnight low. When that low is 32F or colder it switches to a freeze-risk warning.
+              It refreshes roughly every hour, so any site that embeds it always shows the current forecast without anyone editing
+              the page, and it goes quiet again on its own once the cold snap passes.
+            </p>
+            <p className="text-slate-300">
+              Pipes in unheated attics, garages, crawl spaces and exterior walls are the most exposed, and the risk grows the longer
+              temperatures stay below freezing. A single cold night is usually less dangerous than two or three hard-freeze nights in a
+              row, which is when DFW homes see the most burst pipes.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">What to do when the widget shows a freeze warning</h2>
+            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+              <li>Let faucets on exterior walls drip slowly overnight so water keeps moving through the pipes.</li>
+              <li>Open the cabinet doors under kitchen and bathroom sinks on outside walls so warm air can reach the pipes.</li>
+              <li>Disconnect and drain garden hoses, and cover outdoor hose bibs.</li>
+              <li>Keep the thermostat at a steady temperature day and night instead of turning it down.</li>
+              <li>Find the main water shutoff valve before a pipe breaks, and make sure it turns.</li>
+              <li>Wrap exposed pipes in attics and garages with foam pipe insulation.</li>
+            </ul>
+          </section>
+
+          <EmbedHowTo name="freeze watch widget" />
+
+          <OfficialSources
+            title="Official freeze resources behind the DFW Freeze Watch widget"
+            intro="The forecast data comes from the National Weather Service. These official pages show the freeze records behind it and what Texas home policies usually cover if a pipe does burst."
+            links={[sources.nwsFreeze, sources.tdiBurstPipes, sources.tsbpeLookup]}
+          />
 
           <div className="mt-10">
             <InternalLinks

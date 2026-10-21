@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
 import SlabLeakRepairCostCalculator from "@/components/SlabLeakRepairCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
@@ -68,6 +69,7 @@ export default function SlabLeakRepairCostCalculatorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             A slab leak repair can run anywhere from a few hundred dollars to several thousand, mostly
             depending on the repair method. Pick a method below and see a real cost range, built from
             HomeAdvisor&apos;s published 2026 national data.
@@ -76,7 +78,7 @@ export default function SlabLeakRepairCostCalculatorPage() {
           <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
             <Image
               src={getArticleImage("burst-pipe-emergency", 2)}
-              alt="Plumber diagnosing a slab leak under a Dallas-Fort Worth home's foundation"
+              alt={`${TITLE} - Plumber diagnosing a slab leak under a Dallas-Fort Worth home's foundation`}
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"
@@ -146,6 +148,12 @@ export default function SlabLeakRepairCostCalculatorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.tsbpeLookup, sources.tdiWaterDamage, sources.epaLeaks]}
+          />
 
           <div className="mt-10">
             <InternalLinks

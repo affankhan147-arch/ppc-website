@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, AlertTriangle } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { FAQBlock, InternalLinks } from "@/components/PageSections";
+import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { problems } from "@/data/problems";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -71,6 +72,12 @@ export default function ProblemsIndexPage() {
           ))}
         </div>
       </section>
+
+      <OfficialSources
+        title="Official resources for plumbing problems at home"
+        intro="Once the water is under control, these official sources help with the next steps: finding hidden leaks, checking insurance coverage and confirming the plumber's license."
+        links={[sources.epaLeaks, sources.tdiWaterDamage, sources.tsbpeLookup]}
+      />
 
       <FAQBlock faqs={faqs} />
       <InternalLinks

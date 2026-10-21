@@ -3,14 +3,15 @@ import Image from "next/image";
 import { AlertTriangle, Droplets, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { DirectAnswer, InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, Byline } from "@/lib/schema";
 
 const path = "/blog/7-plumbing-problems-you-should-never-ignore";
-const title = "7 Plumbing Warning Signs Homeowners Shouldn’t Ignore";
+const title = "7 Plumbing Problems DFW Homeowners Should Never Ignore";
 const description =
   "From dripping faucets to sewer odors, learn seven plumbing warning signs Dallas–Fort Worth homeowners should not ignore and when to request urgent help.";
 
@@ -52,6 +53,7 @@ export default function PlumbingProblemsArticlePage() {
         <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
           <Byline path="/blog/7-plumbing-problems-you-should-never-ignore" />
         <p className="mt-5 text-lg leading-8 text-slate-300">
+            <LeadIn topic={title} />
           Most plumbing emergencies do not start with water pouring through the ceiling. They start small—a sink that
           drains a little slower than usual, a toilet that runs when nobody has touched it, or a faint stain below the
           upstairs bathroom.
@@ -65,7 +67,7 @@ export default function PlumbingProblemsArticlePage() {
         <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
           <Image
             src={getArticleImage("24-hour-emergency-plumber", 4)}
-            alt="Plumber inspecting a fixture for early warning signs of a plumbing problem in a DFW home"
+            alt="Plumber checking a DFW home for the plumbing problems homeowners should never ignore"
             fill
             sizes="(min-width: 1024px) 56rem, 100vw"
             className="object-cover"
@@ -265,6 +267,11 @@ export default function PlumbingProblemsArticlePage() {
         </section>
       </article>
 
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} leak sewer drain water heater`)}
+      />
       <InternalLinks
         extra={[
           { label: "Emergency plumbing guide hub", href: "/blog" },

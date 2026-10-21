@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources, sourcesHeading } from "@/data/externalSources";
+import { WidgetHero } from "@/components/WidgetPageExtras";
 import WaterHeaterReplaceCalculator from "@/components/WaterHeaterReplaceCalculator";
 import { unitTypes, repairOptions, FIFTY_PERCENT_RULE_SOURCE } from "@/data/waterHeaterReplaceCosts";
 import { siteConfig } from "@/data/site";
@@ -62,11 +64,14 @@ export default function WaterHeaterReplaceCalculatorPage() {
           <div className="section-kicker">Free Tool</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={TITLE} />
             Getting a repair quote on an older water heater and wondering if it&apos;s worth it? Enter your unit&apos;s
             age, type, and the repair it needs. The calculator weighs the repair cost against a typical new unit
             using the same 50% rule water heater manufacturers themselves recommend, plus manufacturer-published
             age thresholds.
           </p>
+
+          <WidgetHero alt={`${TITLE} - tank water heater being inspected in a DFW home`} serviceSlug="water-heater-emergency" />
 
           <WaterHeaterReplaceCalculator />
 
@@ -142,6 +147,12 @@ export default function WaterHeaterReplaceCalculatorPage() {
             </p>
             <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
           </section>
+
+          <OfficialSources
+            title={sourcesHeading(TITLE, "Official resources for")}
+            intro="Calculators give estimates. These official sources help with the decisions around them: confirming that the plumber who quotes the job holds a current Texas license, and checking what a typical home policy covers before you approve work."
+            links={[sources.tsbpeLookup, sources.tdiWaterDamage]}
+          />
 
           <div className="mt-10">
             <InternalLinks

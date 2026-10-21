@@ -1,11 +1,13 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks } from "@/components/PageSections";
+import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { sources } from "@/data/externalSources";
+import { EmbedHowTo, WidgetHero } from "@/components/WidgetPageExtras";
 import { problems } from "@/data/problems";
 import { siteConfig } from "@/data/site";
 
 export const metadata = buildMetadata({
-  title: "Free DFW Emergency Warning-Sign Checklist Badges",
+  title: "Free DFW Plumbing Problem Checklist Badges",
   description: truncateForMeta(
     "Free, embeddable badges highlighting the warning signs for common DFW plumbing emergencies - burst pipes, sewer backups, water heater leaks, and more."
   ),
@@ -41,7 +43,7 @@ export default function ProblemChecklistsPage() {
         data={[
           webPageSchema(
             "/tools/problem-checklists",
-            "Free DFW Emergency Warning-Sign Checklist Badges",
+            "Free DFW Plumbing Problem Checklist Badges",
             "Free, embeddable badges highlighting the warning signs for common DFW plumbing emergencies - burst pipes, sewer backups, water heater leaks, and more."
           ),
           breadcrumbSchema([
@@ -56,9 +58,10 @@ export default function ProblemChecklistsPage() {
         <div className="premium-card max-w-4xl mx-auto">
           <div className="section-kicker">Free Tools</div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Free DFW Emergency Warning-Sign Checklist Badges
+            Free DFW Plumbing Problem Checklist Badges
           </h1>
           <p className="text-slate-300 mb-6">
+            <LeadIn topic={"Free DFW Plumbing Problem Checklist Badges"} />
             Six free, embeddable badges covering our highest-severity plumbing emergencies, each
             pointing to the full warning-sign list published on the matching guide. Useful for
             real estate, property-management, and home-inspection sites that want a quick safety
@@ -77,8 +80,10 @@ export default function ProblemChecklistsPage() {
             </p>
           </div>
 
+          <WidgetHero alt="Free DFW plumbing problem checklist badges for real estate, property management and home inspection sites" serviceSlug="burst-pipe-emergency" seed={1} />
+
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a badge, copy the code</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a problem checklist badge, copy the code</h2>
             <div className="space-y-8">
               {featured.map((problem) => {
                 const alt = `${problem.title}: ${problem.warningSigns.length} warning signs to know - by Plumbing Hands`;
@@ -101,6 +106,30 @@ export default function ProblemChecklistsPage() {
               })}
             </div>
           </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">What each problem checklist covers</h2>
+            <p className="text-slate-300 mb-4">
+              Every badge links to a full Plumbing Hands problem guide with the warning signs, first steps, mistakes to avoid and the
+              point where the situation becomes urgent. The badge shows how many warning signs that guide lists, so readers know at a
+              glance there is a short, practical checklist behind it.
+            </p>
+            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+              {featured.map((problem) => (
+                <li key={`cover-${problem.slug}`}>
+                  {problem.title}: {problem.warningSigns.length} warning signs, plus first steps and what not to do.
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <EmbedHowTo name="problem checklist badges" />
+
+          <OfficialSources
+            title="Official resources behind the problem checklists"
+            intro="The checklists tell readers what to watch for. These official sources cover the next questions: whether the plumber holds a Texas license and what a home policy usually covers after sudden water damage."
+            links={[sources.tdiWaterDamage, sources.tsbpeLookup, sources.epaLeaks]}
+          />
 
           <div className="mt-10">
             <InternalLinks

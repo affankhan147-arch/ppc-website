@@ -3,7 +3,8 @@ import Link from "next/link";
 import { AlertTriangle, PhoneCall } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { DirectAnswer, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -302,6 +303,11 @@ export default function WaterStainBelowBathroomPage() {
         </section>
       </article>
 
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} leak stain insurance`)}
+      />
       <InternalLinks
         extra={[
           { label: "Dallas plumbing help", href: "/cities/dallas" },

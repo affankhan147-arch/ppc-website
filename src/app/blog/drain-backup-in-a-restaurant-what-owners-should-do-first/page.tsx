@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
-import { DirectAnswer, InternalLinks } from "@/components/PageSections";
+import { DirectAnswer, InternalLinks, OfficialSources } from "@/components/PageSections";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, articleSchema, breadcrumbSchema, webPageSchema, faqSchema, Byline } from "@/lib/schema";
 import { CallButton } from "@/components/CallButton";
@@ -49,7 +50,7 @@ const faqs = [
 // Search-result title matches the top GSC query ("emergency commercial plumbing for restaurant
 // kitchen backups", pos ~9). H1 stays `title`.
 export const metadata: Metadata = buildMetadata({
-  title: "Restaurant Kitchen Drain Backup: Emergency Steps",
+  title: "Restaurant Drain Backup: What Owners Should Do First",
   description,
   path
 });
@@ -83,7 +84,7 @@ export default function DrainBackupRestaurantPage() {
         <div className="overflow-hidden rounded-2xl border border-white/10">
           <Image
             src="/images/blog/restaurant-grease-trap-drain-backup-diagram.svg"
-            alt="Diagram of a commercial kitchen grease trap between the kitchen drain line and the sewer cleanout"
+            alt="Restaurant drain backup diagram: the grease trap between the kitchen drain line and the sewer cleanout, what owners should check first"
             width={640}
             height={360}
             className="w-full"
@@ -220,6 +221,11 @@ export default function DrainBackupRestaurantPage() {
         </div>
       </section>
 
+      <OfficialSources
+        title={sourcesHeading(title)}
+        intro="These official sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical Texas home policy covers, or read more on the problem before you approve work."
+        links={getTopicSources(`${title} sewer drain`)}
+      />
       <InternalLinks extra={[
         { label: "Commercial Emergency Plumbing", href: "/services/commercial-emergency-plumbing" },
         { label: "Same-Day Emergency Drain Service", href: "/services/emergency-drain-cleaning" },

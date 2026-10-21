@@ -2,8 +2,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance } from "@/components/PageSections";
+import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LeadIn, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
+import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { problemEnhancements, additionalProblemEnhancements, problemFaqEnhancements } from "@/data/pageEnhancements";
 import { problems } from "@/data/problems";
@@ -80,7 +81,7 @@ export default async function ProblemPage({ params }: Props) {
             priority
           />
         </div>
-        <p className="mt-6 text-lg leading-8 text-slate-300">{problem.directAnswer}</p>
+        <p className="mt-6 text-lg leading-8 text-slate-300"><LeadIn topic={problem.title} />{problem.directAnswer}</p>
         <div className="mt-6">
           <CallButton location={`problem-${problem.slug}-top`} />
         </div>
@@ -115,6 +116,11 @@ export default async function ProblemPage({ params }: Props) {
         </div>
       </div>
       <LocalGuidance />
+      <OfficialSources
+        title={sourcesHeading(problem.title)}
+        intro="These official sources go deeper on the problem above. They cover how to confirm a plumber's Texas license and what a typical Texas home policy covers when water damage is sudden rather than gradual."
+        links={getTopicSources(`${problem.title} ${problem.whatItMeans}`, problem.relatedServiceSlug)}
+      />
       <FAQBlock faqs={faqs} />
       <InternalLinks
         extra={[
