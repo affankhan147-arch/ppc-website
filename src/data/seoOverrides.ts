@@ -115,7 +115,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/blog/dfw-water-sewer-rate-increases-by-city-2026": {
     title: "DFW Water & Sewer Rate Increases by City (2026)",
     description:
-      "Arlington raised rates 6.3% for 2026. See each DFW city's increase, and why a bill that jumped far past that number usually means a hidden leak, not the rate."
+      "Arlington raised rates 6.3% for 2026. See each DFW city's increase, and why a bill far above that usually means a hidden leak, not the rate."
   },
   // 53 impr / 0% / pos 14.4 - old description opened with a long run-on sentence.
   "/blog/emergency-plumber-irving-tx-what-to-know": {
