@@ -45,8 +45,8 @@ export default function GasLineGuidePage() {
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
-              src="/images/photography/plumbing-diagnostic.jpg"
-              alt="Plumber inspecting a gas line connection and pressure setup in a DFW home"
+              src="/images/photography/gas-line-valve-check.jpg"
+              alt="Technician checking an overhead pipe run and shut-off valve before gas appliance work"
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"

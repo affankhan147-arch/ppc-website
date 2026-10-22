@@ -8,6 +8,7 @@
     "build": "next build",
     "sites:build": "vinext build",
     "start": "next start",
+    "check:images": "node scripts/check-image-integrity.mjs",
     "test": "npm run test:routing && npm run test:status && npm run build && npm run test:production-pages",
     "typecheck": "tsc --noEmit",
     "test:routing": "node --test --experimental-strip-types tests/form-routing.test.mjs",

@@ -46,7 +46,7 @@ export default function PolybutylenePipeGuidePage() {
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
             <Image
               src="/images/photography/home-emergency-plumber.jpg"
-              alt="Exposed polybutylene pipe fitting being inspected in a DFW home's plumbing system"
+              alt="Two plumbers measuring and cutting a new length of pipe, the core job in a polybutylene repipe"
               fill
               sizes="(min-width: 1024px) 56rem, 100vw"
               className="object-cover"

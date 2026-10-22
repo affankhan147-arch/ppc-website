@@ -1,1 +1,36 @@
-²ø1šYì
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="t d">
+  <title id="t">Texas homeowners insurance: sudden burst pipe vs. gradual leak</title>
+  <desc id="d">A sudden, accidental burst pipe is usually covered for the resulting water damage, though not the pipe repair itself. Gradual leaks, wear and tear, and standard sewer backups are typically excluded.</desc>
+  <rect width="640" height="360" fill="#0f172a"/>
+  <text x="24" y="34" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Is my plumbing leak covered? (Texas homeowners policy)</text>
+  <text x="24" y="54" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Insurers look at HOW the water escaped, not just how much damage it did</text>
+  <rect x="24" y="70" width="290" height="240" rx="12" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+  <text x="44" y="98" fill="#86efac" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">USUALLY COVERED</text>
+  <text x="44" y="116" fill="#bbf7d0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Sudden &amp; accidental discharge</text>
+  <path d="M60 150 H150" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M180 150 H270" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M152 150 L160 140 L166 158 L172 142 L178 150" stroke="#cbd5e1" stroke-width="4" fill="none"/>
+  <path d="M165 158 q-6 14 0 22 M158 160 q-14 10 -12 22 M172 160 q14 10 12 22" stroke="#38bdf8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#dcfce7">
+    <text x="44" y="210">&#8226; Burst supply line or frozen pipe split</text>
+    <text x="44" y="230">&#8226; Sudden water heater tank rupture</text>
+    <text x="44" y="250">&#8226; Resulting damage: drywall, floors, contents</text>
+    <text x="44" y="280" fill="#fde68a">The pipe repair itself is usually NOT paid -</text>
+    <text x="44" y="296" fill="#fde68a">the policy covers the water damage it caused.</text>
+  </g>
+  <rect x="326" y="70" width="290" height="240" rx="12" fill="#2a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="346" y="98" fill="#fca5a5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">TYPICALLY EXCLUDED</text>
+  <text x="346" y="116" fill="#fecaca" font-family="Segoe UI, Arial, sans-serif" font-size="11">Gradual, long-term or maintenance issues</text>
+  <path d="M400 140 H540" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M470 150 q-7 12 0 18 q7 -6 0 -18 z" fill="#38bdf8"/>
+  <path d="M470 176 q-6 10 0 15 q6 -5 0 -15 z" fill="#38bdf8" opacity="0.7"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#fee2e2">
+    <text x="346" y="210">&#8226; Slow drips and ongoing seepage</text>
+    <text x="346" y="230">&#8226; Wear and tear, corrosion, old pipes</text>
+    <text x="346" y="250">&#8226; Sewer or drain backup (unless you</text>
+    <text x="358" y="266">bought a water-backup endorsement)</text>
+    <text x="346" y="290">&#8226; Mold from a long-running leak (often capped)</text>
+  </g>
+  <text x="24" y="336" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="11">General information, not insurance advice. Your policy wording decides - confirm with your insurer or agent.</text>
+  <text x="24" y="352" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="10">PlumbingHands.com</text>
+</svg>
