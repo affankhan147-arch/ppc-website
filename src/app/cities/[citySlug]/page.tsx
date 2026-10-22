@@ -9,6 +9,7 @@ import { getCitySources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityPageEnhancements } from "@/data/pageEnhancements";
 import { services } from "@/data/services";
+import { siteConfig } from "@/data/site";
 import { getArticleImage } from "@/lib/articleImages";
 import { titleCase } from "@/lib/format";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
@@ -22,8 +23,13 @@ export function generateStaticParams() {
   return cities.map((city) => ({ citySlug: city.slug }));
 }
 
+// CTR pass 2026-10-22: city hubs had thousands of impressions (Plano 7.3k, Fort Worth 7.3k,
+// Richardson 3.2k at pos 10) and almost no clicks. The snippet now leads with the call number and
+// the problems people actually search for, so it gives a reason to click (or call) straight away.
 function buildCityDescription(city: (typeof cities)[number]) {
   const candidates = [
+    `Emergency plumber in ${city.name}, TX? Call ${siteConfig.phoneDisplay} 24/7 for burst pipes, sewer backups, overflowing toilets and water heater leaks, nights and weekends.`,
+    `Emergency plumber in ${city.name}, TX? Call ${siteConfig.phoneDisplay} 24/7 for burst pipes, sewer backups, overflowing toilets and water heater leaks.`,
     `Need an emergency plumber in ${city.name}, TX? Request 24/7 plumbing and drain cleaning help covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
     `Need an emergency plumber in ${city.name}, TX? Request 24/7 plumbing and drain cleaning help covering ${city.areaHint}.`,
     `Need an emergency plumber in ${city.name}, TX? Request 24/7 help for plumbing and drain issues near ${city.countyHint}. Confirm pricing with the provider.`,
