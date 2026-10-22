@@ -108,5 +108,38 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means": {
     description:
       "A sudden drop across the whole house usually points to the pressure regulator, a main-line leak or a city-side problem. How to tell which one you have."
+  },
+
+  // ---- Round 2 (GSC 3 months to 2026-10-20) ----
+  // 53 impr / 1.9% / pos 5.7 - old title was 74 characters, so Google cut the year and the hook.
+  "/blog/dfw-water-sewer-rate-increases-by-city-2026": {
+    title: "DFW Water & Sewer Rate Increases by City (2026)",
+    description:
+      "Arlington raised rates 6.3% for 2026. See each DFW city's increase, and why a bill that jumped far past that number usually means a hidden leak, not the rate."
+  },
+  // 53 impr / 0% / pos 14.4 - old description opened with a long run-on sentence.
+  "/blog/emergency-plumber-irving-tx-what-to-know": {
+    description: `Active leak, sewer backup or burst pipe in Irving? What to shut off first, what to tell the plumber, and how to reach a 24/7 plumber: ${phone}.`
+  },
+  // 83 impr / 1.2% / pos 13.3
+  "/blog/emergency-plumbing-in-arlington-tx-night-and-weekend-issues": {
+    description: `Toilet overflow, drain backup or burst pipe in Arlington at night or on a weekend? What to do first and how to reach a 24/7 plumber: ${phone}.`
+  },
+  // 91 impr / 0% / pos 16 - old description ended in an ellipsis.
+  "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber": {
+    title: "Questions to Ask Before You Book an Emergency Plumber",
+    description:
+      "Ask these before you book: the dispatch fee, how diagnosis is priced, when they'll arrive, whether you approve work first, and what cleanup is included."
+  },
+  // 42 impr / 2.4% / pos 4.3
+  "/guides/dfw-housing-age-by-city": {
+    description:
+      "U.S. Census data on when homes were built in 7 DFW cities, and what that age means for galvanized steel and polybutylene pipes still hiding in your walls."
+  },
+  // 42 impr / 2.4% / pos 8.4
+  "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do": {
+    title: "No Usable Toilet in the House? What to Do Right Now",
+    description:
+      "Every toilet backing up at once usually means a main sewer line problem, not a clog. Stop flushing, check the outdoor cleanout, and get a plumber out tonight."
   }
 };
