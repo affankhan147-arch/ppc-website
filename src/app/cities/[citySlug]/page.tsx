@@ -8,6 +8,7 @@ import { cities, getNearbyCities, getPriorityServiceSlugsForCity } from "@/data/
 import { getCitySources } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
 import { cityPageEnhancements } from "@/data/pageEnhancements";
+import { citySearchAnswers } from "@/data/citySearchAnswers";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 import { getArticleImage } from "@/lib/articleImages";
@@ -66,6 +67,7 @@ export default async function CityPage({ params }: Props) {
   const priorityServiceSlugs = getPriorityServiceSlugsForCity(city.slug);
   const has24HourPage = priorityServiceSlugs.includes("24-hour-emergency-plumber");
   const enhancement = cityPageEnhancements[city.slug];
+  const searchAnswers = citySearchAnswers[city.slug];
   const cityServiceLinks = priorityServiceSlugs
     .map((serviceSlug) => services.find((service) => service.slug === serviceSlug))
     .filter((service): service is (typeof services)[number] => Boolean(service));
@@ -138,6 +140,28 @@ export default async function CityPage({ params }: Props) {
       </DirectAnswer>
       <LocalGuidance cityName={city.name} />
       <EnhancementSections enhancement={enhancement} />
+      {searchAnswers ? (
+        <section className="content-section">
+          <p className="section-kicker">Common {city.name} searches</p>
+          <h2 className="mt-2 text-2xl font-black text-white">{searchAnswers.title}</h2>
+          <p className="mt-3 leading-7 text-slate-300">{searchAnswers.intro}</p>
+          <div className="mt-6 space-y-6">
+            {searchAnswers.items.map((item) => (
+              <div key={item.question}>
+                <h3 className="text-lg font-bold text-white">{item.question}</h3>
+                <p className="mt-2 leading-7 text-slate-300">{item.answer}</p>
+                {item.link ? (
+                  <p className="mt-2">
+                    <Link className="font-bold text-emerald-300 underline" href={item.link.href}>
+                      {item.link.label}
+                    </Link>
+                  </p>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <InfoListSection
         kicker="Local relevance"
         title={`Emergency plumbing situations in ${city.name}`}
