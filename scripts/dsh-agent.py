@@ -43,12 +43,7 @@ def preflight():
     body = json.dumps({"model": MODELS[0].split("/", 1)[1], "max_tokens": 5,
                        "messages": [{"role": "user", "content": "Reply OK"}]}).encode()
     base = {"Authorization": f"Bearer {os.environ.get('OPENAI_API_KEY', '')}", "Content-Type": "application/json"}
-    variants = {
-        "plain": {},
-        "gh-2022": {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"},
-        "gh-2026": {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2026-03-10"},
-        "json": {"Accept": "application/json"},
-    }
+    variants = {"github-models": {"Accept": "application/vnd.github+json"}}
     results = []
     for name, extra in variants.items():
         req = urllib.request.Request(os.environ["OPENAI_API_BASE"].rstrip("/") + "/chat/completions",
@@ -220,6 +215,12 @@ def main():
     must('git config user.name "DSH agent"')
     must('git config user.email "dsh-agent@users.noreply.github.com"')
     must("git fetch -q origin master")
+    if not USE_GEMINI:
+        check = preflight()
+        if '"choices"' not in check:
+            # GitHub Models answered 'OK' as plain text on 2026-10-31, not a chat reply. Don't push empty branches.
+            sys.exit("No working AI model. Add the repo secret GEMINI_API_KEY "
+                     "(Settings > Secrets and variables > Actions). GitHub Models said: " + check[:200])
     done = 0
     for task_id, title, status, block in parse_tasks():
         if done >= MAX_TASKS:
