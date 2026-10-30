@@ -35,6 +35,25 @@ DRY = os.getenv("DSH_DRY_RUN") == "1"
 TODAY = datetime.date.today().isoformat()
 
 
+def preflight():
+    """One tiny request to the model endpoint, so the report shows the real error if it fails."""
+    if USE_GEMINI:
+        return "gemini key set"
+    import json, urllib.request, urllib.error
+    body = json.dumps({"model": MODELS[0].split("/", 1)[1], "max_tokens": 5,
+                       "messages": [{"role": "user", "content": "Reply OK"}]}).encode()
+    req = urllib.request.Request(os.environ["OPENAI_API_BASE"].rstrip("/") + "/chat/completions", data=body,
+                                 headers={"Authorization": f"Bearer {os.environ.get('OPENAI_API_KEY', '')}",
+                                          "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return f"HTTP {r.status} {r.read()[:120]!r}"
+    except urllib.error.HTTPError as e:
+        return f"HTTP {e.code} {e.read()[:300]!r}"
+    except Exception as e:  # noqa: BLE001
+        return f"{type(e).__name__}: {e}"
+
+
 def sh(cmd, tail=12, timeout=1200):
     """Run a shell command; return (exit code, last `tail` lines of output)."""
     try:
@@ -107,13 +126,17 @@ def changed_files():
 
 def do_task(task_id, title, status, block):
     existing = remote_branch(task_id)
-    if status == "OPEN" and existing:
+    blocked = False
+    if existing:
+        must(f"git fetch -q origin +refs/heads/{existing}:refs/remotes/origin/{existing}")
+        _, subject = sh(f"git log -1 --format=%s origin/{existing}")
+        blocked = "(BLOCKED)" in subject  # last attempt failed: retry on the same branch
+    if status == "OPEN" and existing and not blocked:
         print(f"{task_id}: branch {existing} already pushed, waiting for Claude's review. Skipping.")
         return False
-    branch = existing if (status == "FIX" and existing) else f"dsh/{TODAY}-{task_id}"
+    branch = existing if (existing and (status == "FIX" or blocked)) else f"dsh/{TODAY}-{task_id}"
     assert branch.startswith("dsh/"), "DSH only pushes dsh/* branches"
     base = f"origin/{branch}" if branch == existing else "origin/master"
-    must(f"git fetch -q origin {branch if branch == existing else 'master'}")
     must(f"git checkout -q -B {branch} {base}")
     if branch == existing:
         sh("git merge -q --no-edit origin/master")
@@ -137,6 +160,7 @@ def do_task(task_id, title, status, block):
                        "links and class names the task gives. Do not reformat or touch anything else.\n\n"
                        f"TASK:\n{block}\n")
             done = False
+            notes.append(f"preflight: {preflight()}")
             for model in MODELS:
                 if DRY:
                     notes.append("dry run: aider skipped")
@@ -145,7 +169,7 @@ def do_task(task_id, title, status, block):
                 if any(f in changed_files() for f in files):
                     used_model, done = model, True
                     break
-                notes.append(f"{model}: no change (exit {code}): {out.splitlines()[-1][:160] if out else ''}")
+                notes.append(f"{model}: no change (exit {code}): {' | '.join(out.splitlines()[-4:])[:400] if out else ''}")
             ok, checks = run_checks(CHECKS) if done else (False, "- not run (no change made)")
             if done and not ok and not DRY:
                 code, out = sh(CHECKS[0], tail=25)
