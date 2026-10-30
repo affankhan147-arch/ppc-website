@@ -77,9 +77,10 @@ def must(cmd):
 
 def parse_tasks():
     text = TASKS.read_text(encoding="utf-8")
-    pattern = r"^## ([A-Z]+-\d+) - (.+?) - Status: ([A-Z ]+?)\s*$(.*?)(?=^## |\Z)"
+    # One heading per line: "## <ID> - <title> - Status: <STATUS ...>". Status = its first word.
+    pattern = r"^## ([A-Z]+-\d+) - ([^\n]+?) - Status: ([^\n]+?)[ \t]*$(.*?)(?=^## |\Z)"
     for m in re.finditer(pattern, text, re.M | re.S):
-        yield m.group(1), m.group(2).strip(), m.group(3).strip(), m.group(0).strip()
+        yield m.group(1), m.group(2).strip(), m.group(3).split()[0].upper(), m.group(0).strip()
 
 
 def task_files(block):
