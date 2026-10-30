@@ -1,4 +1,6 @@
-# AGENTS.md - brief for DeepSeek Harness (DSH) and any coding agent
+# AGENTS.md - brief for DeepSeek Harness (DSH)
+
+Claude sessions follow their own task instructions; the branch-only rule below is for DSH.
 
 **Site:** www.plumbinghands.com. Dallas-Fort Worth emergency plumbing, pay-per-call. Every page exists to get a homeowner to call **1 844-397-8298**.
 **Stack:** Next.js 16 (App Router, TypeScript, Tailwind 4). Vercel deploys `master` automatically.
