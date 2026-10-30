@@ -36,22 +36,31 @@ TODAY = datetime.date.today().isoformat()
 
 
 def preflight():
-    """One tiny request to the model endpoint, so the report shows the real error if it fails."""
+    """Tiny requests to the model endpoint, so the report shows what the endpoint really returns."""
     if USE_GEMINI:
         return "gemini key set"
     import json, urllib.request, urllib.error
     body = json.dumps({"model": MODELS[0].split("/", 1)[1], "max_tokens": 5,
                        "messages": [{"role": "user", "content": "Reply OK"}]}).encode()
-    req = urllib.request.Request(os.environ["OPENAI_API_BASE"].rstrip("/") + "/chat/completions", data=body,
-                                 headers={"Authorization": f"Bearer {os.environ.get('OPENAI_API_KEY', '')}",
-                                          "Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            return f"HTTP {r.status} {r.read()[:120]!r}"
-    except urllib.error.HTTPError as e:
-        return f"HTTP {e.code} {e.read()[:300]!r}"
-    except Exception as e:  # noqa: BLE001
-        return f"{type(e).__name__}: {e}"
+    base = {"Authorization": f"Bearer {os.environ.get('OPENAI_API_KEY', '')}", "Content-Type": "application/json"}
+    variants = {
+        "plain": {},
+        "gh-2022": {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"},
+        "gh-2026": {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2026-03-10"},
+        "json": {"Accept": "application/json"},
+    }
+    results = []
+    for name, extra in variants.items():
+        req = urllib.request.Request(os.environ["OPENAI_API_BASE"].rstrip("/") + "/chat/completions",
+                                     data=body, headers={**base, **extra})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                results.append(f"{name}: HTTP {r.status} {r.headers.get('content-type')} {r.read()[:90]!r}")
+        except urllib.error.HTTPError as e:
+            results.append(f"{name}: HTTP {e.code} {e.read()[:150]!r}")
+        except Exception as e:  # noqa: BLE001
+            results.append(f"{name}: {type(e).__name__}: {e}")
+    return " || ".join(results)
 
 
 def sh(cmd, tail=12, timeout=1200):
