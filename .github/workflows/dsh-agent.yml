@@ -1,0 +1,50 @@
+name: DSH agent (free Gemini)
+
+# Does the next OPEN/FIX task in docs/dsh/TASKS.md on a dsh/* branch and pushes it.
+# Never touches master: Claude's daily audit reviews and merges.
+# Free: uses GitHub Models via GITHUB_TOKEN; if repo secret GEMINI_API_KEY is set, uses free Gemini instead.
+on:
+  schedule:
+    - cron: "23 8 * * *"   # 13:23 PKT, just after Gemini's free daily quota resets
+  workflow_dispatch:
+    inputs:
+      max_tasks:
+        description: "How many tasks to do this run"
+        default: "2"
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: dsh-agent
+  cancel-in-progress: false
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          npm ci --no-audit --no-fund --loglevel=error
+          python -m pip install --quiet aider-chat
+      - name: Run DSH agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DSH_MODELS: ${{ vars.DSH_MODELS }}
+          DSH_MAX_TASKS: ${{ github.event.inputs.max_tasks || '2' }}
+          DSH_CHECKS: "npm run build;;node scripts/qa-check.mjs"
+          DSH_HEALTH: "npm run typecheck;;npm run lint;;npm run check:images;;npm run build;;node scripts/qa-check.mjs"
+        run: python scripts/dsh-agent.py
