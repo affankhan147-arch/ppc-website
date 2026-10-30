@@ -7,7 +7,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 **Supervisor:** Claude reviews every DSH branch each morning (about 08:45 PKT), merges what passes, and writes the next tasks.
 
 ## Start every session
-1. `git checkout master` then `git pull`
+1. `$env:GIT_TERMINAL_PROMPT=0; git checkout master 2>&1 | Select-Object -Last 3; git pull --ff-only 2>&1 | Select-Object -Last 3` (if pull fails, report BLOCKED with its last line; never let git open an editor or a login prompt)
 2. Open `docs/dsh/TASKS.md`. Take the FIRST task with `Status: OPEN` (or `Status: FIX`, which means redo it using Claude's note). One task per session.
 3. `git checkout -b dsh/<YYYY-MM-DD>-<task-id>` (for FIX, reuse the task's existing branch)
 4. Do only what the task says, only in the files it lists.
