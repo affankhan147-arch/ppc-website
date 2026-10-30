@@ -162,6 +162,37 @@ export default async function CityPage({ params }: Props) {
           </div>
         </section>
       ) : null}
+      {city.marketSlug === "dallas-fort-worth" ? (
+        <section className="content-section">
+          <p className="section-kicker">Freeze season</p>
+          <h2 className="mt-2 text-2xl font-black text-white">Freeze season in {city.name}: protect your pipes</h2>
+          <p className="mt-3 leading-7 text-slate-300">
+            Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). Pipes in exterior walls, attics, garages and crawl spaces freeze first. If one splits, shut off the main water valve before anything else, then call.
+          </p>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}/burst-pipe-emergency`}>
+                Burst pipe help in {city.name}
+              </Link>
+            </li>
+            <li>
+              <Link className="font-bold text-emerald-300 underline" href="/guides/dfw-burst-pipes">
+                Burst pipes in DFW: causes, costs and first steps
+              </Link>
+            </li>
+            <li>
+              <Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">
+                How often DFW freezes (NWS data)
+              </Link>
+            </li>
+            <li>
+              <Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">
+                Live DFW freeze watch
+              </Link>
+            </li>
+          </ul>
+        </section>
+      ) : null}
       <InfoListSection
         kicker="Local relevance"
         title={`Emergency plumbing situations in ${city.name}`}
