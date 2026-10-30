@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
@@ -66,9 +67,9 @@ export default function ProblemChecklistsPage() {
             pointing to the full warning-sign list published on the matching guide. Useful for
             real estate, property-management, and home-inspection sites that want a quick safety
             reference. All 15 situations are covered in the{" "}
-            <a href="/problems" className="text-[#F0B429] underline">
+            <Link href="/problems" className="text-[#F0B429] underline">
               full problem guide directory
-            </a>
+            </Link>
             .
           </p>
 

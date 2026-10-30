@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
@@ -57,9 +58,9 @@ export default function WaterHardnessWidgetPage() {
           <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
             <p>
               Free to use on any site. Just keep the badge linked back to our{" "}
-              <a href="/guides/dfw-plumbing-data" className="text-[#F0B429] underline">
+              <Link href="/guides/dfw-plumbing-data" className="text-[#F0B429] underline">
                 full data report
-              </a>{" "}
+              </Link>{" "}
               so readers can see the underlying sources - don&apos;t alter the badge image or strip
               the link. That&apos;s the only condition.
             </p>

@@ -1,8 +1,7 @@
 import fs from "fs";
-import path from "path";
 
 const csv = fs.readFileSync("scripts/image-manifest.csv", "utf8").trim().split(/\r?\n/);
-const header = csv.shift();
+csv.shift();
 const rows = csv.map((line) => {
   const [id, outfile] = line.split(",");
   return { id: id.trim(), outfile: outfile.trim() };

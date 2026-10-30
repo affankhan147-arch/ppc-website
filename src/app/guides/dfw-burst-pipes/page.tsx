@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
@@ -66,7 +67,7 @@ export default function BurstPipesGuidePage() {
               DFW homes carry a specific version of this risk that colder-climate cities don't. Homes here are generally not built to the same freeze-protection standards as homes in the northern United States, since sustained hard freezes are the exception rather than the rule. That means pipe runs through attics, garages, and exterior walls are often less insulated, and a single multi-day freeze event can catch an entire metro area's plumbing off guard at once - which is exactly what happened during Winter Storm Uri (see Section 2).
             </p>
             <p className="text-slate-300 mb-4">
-              Freezing isn't the only cause. Water hammer - the pressure spike that happens when a valve or appliance shuts off suddenly - can crack a stressed fitting even in warm weather. High static water pressure from the municipal supply puts constant strain on older joints. And DFW's housing stock includes a meaningful share of homes with aging galvanized steel or polybutylene (PB) plastic pipe, both of which become more failure-prone with age; polybutylene in particular is a well-documented DFW-area risk factor covered in more depth in our <a href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">polybutylene pipe guide</a>.
+              Freezing isn't the only cause. Water hammer - the pressure spike that happens when a valve or appliance shuts off suddenly - can crack a stressed fitting even in warm weather. High static water pressure from the municipal supply puts constant strain on older joints. And DFW's housing stock includes a meaningful share of homes with aging galvanized steel or polybutylene (PB) plastic pipe, both of which become more failure-prone with age; polybutylene in particular is a well-documented DFW-area risk factor covered in more depth in our <Link href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">polybutylene pipe guide</Link>.
             </p>
           </section>
 
@@ -92,7 +93,7 @@ export default function BurstPipesGuidePage() {
               One important distinction TDI draws: a standard homeowners policy covers water damage from a broken pipe inside your home, but it does not cover flood damage - water that enters from outside, such as rising groundwater or storm runoff. Those require a separate flood insurance policy. A burst supply line under a sink is a plumbing claim; water that comes in through the foundation during a storm is a flood claim, and mixing the two up can mean a denied claim.
             </p>
             <p className="text-slate-300 mb-4">
-              TDI also emphasizes a policyholder's duty to mitigate damage once a leak is discovered: turn off the water at the main shutoff and move valuable items off the floor and out of the affected area. An insurer can deny or reduce a claim if the policyholder doesn't take reasonable steps to protect the property once the problem is known - which makes the first-ten-minutes response in Section 4 matter for your claim, not just for the immediate damage. For the fuller picture on Texas plumbing insurance claims, including permit and documentation requirements, see our <a href="/guides/texas-insurance-plumbing-claims" className="text-[#F0B429] underline">Texas homeowners insurance and plumbing claims guide</a>.
+              TDI also emphasizes a policyholder's duty to mitigate damage once a leak is discovered: turn off the water at the main shutoff and move valuable items off the floor and out of the affected area. An insurer can deny or reduce a claim if the policyholder doesn't take reasonable steps to protect the property once the problem is known - which makes the first-ten-minutes response in Section 4 matter for your claim, not just for the immediate damage. For the fuller picture on Texas plumbing insurance claims, including permit and documentation requirements, see our <Link href="/guides/texas-insurance-plumbing-claims" className="text-[#F0B429] underline">Texas homeowners insurance and plumbing claims guide</Link>.
             </p>
           </section>
 

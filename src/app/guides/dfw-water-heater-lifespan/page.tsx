@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
@@ -120,7 +121,7 @@ export default function WaterHeaterLifespanGuidePage() {
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Age near or past the expected range.</strong> A tank unit past 10-12 years or a tankless unit past 15-18 years is a candidate for replacement at the next sign of trouble, rather than another repair.</li>
-              <li><strong>Rumbling, popping, or banging noises.</strong> This is a classic symptom of a thick sediment layer hardening at the bottom of the tank - water trapped underneath it boils and forces its way through, creating the noise. See our related guide on <a href="/blog/water-heater-making-popping-noise-dallas" className="text-[#F0B429] underline">what a popping water heater means</a> for the full diagnostic breakdown.</li>
+              <li><strong>Rumbling, popping, or banging noises.</strong> This is a classic symptom of a thick sediment layer hardening at the bottom of the tank - water trapped underneath it boils and forces its way through, creating the noise. See our related guide on <Link href="/blog/water-heater-making-popping-noise-dallas" className="text-[#F0B429] underline">what a popping water heater means</Link> for the full diagnostic breakdown.</li>
               <li><strong>Rusty or discolored hot water.</strong> This can indicate a failing anode rod or a corroding tank interior - both signs the tank itself, not just a part, is nearing failure.</li>
               <li><strong>Visible moisture or pooling at the base of the tank.</strong> Unlike a loose fitting, a leak from the tank body itself is not repairable - the tank is compromised.</li>
               <li><strong>Declining hot water volume or inconsistent temperature</strong> despite a correctly set thermostat, which often points to sediment reducing usable tank capacity.</li>
