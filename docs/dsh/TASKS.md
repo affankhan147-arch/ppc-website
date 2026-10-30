@@ -1,6 +1,7 @@
 # DSH task queue - plumbinghands.com
 
 Claude writes this file. DSH: read only. Take the first task with `Status: OPEN` (or `FIX`).
+Task format (the cloud agent parses it): heading `## <ID> - <title> - Status: <STATUS>`; one `File:` or `Files:` line listing, in backticks, every file the task may change, or `Files: only your report.` for check-only tasks.
 Status: OPEN, IN REVIEW (branch pushed, Claude reviews next morning), DONE, FIX (redo using Claude's note), WAITING (Claude must add data first), REJECTED.
 
 Baseline 2026-10-30 (Claude): build PASS, typecheck PASS, check:images PASS, qa-check PASS, lint 198 errors (191 are `react/no-unescaped-entities`, harmless).
@@ -45,13 +46,14 @@ Done when: `npm run build` passes, `.next/server/app/cities/plano.html` contains
 ---
 
 ## PH-003 - Small lint fixes (internal links and unused variables) - Status: OPEN
-Why: 6 internal links use a plain `<a href="/...">` instead of Next.js `<Link>`, and 3 variables are unused.
+Why: 6 internal links use a plain `<a href="/...">` instead of Next.js `<Link>`, and 3 imports/variables are unused.
+Files: `src/app/guides/dfw-burst-pipes/page.tsx`, `src/app/guides/dfw-housing-age-by-city/page.tsx`, `src/app/guides/dfw-water-heater-lifespan/page.tsx`, `src/app/tools/problem-checklists/page.tsx`, `src/app/tools/water-hardness-widget/page.tsx`, `src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx`, `scripts/gen-city-service-images.mjs`
 Steps:
-1. Run `npx eslint src scripts worker --rule "react/no-unescaped-entities: off" 2>&1 | Select-Object -Last 25` to list only these 10 problems (ignore the 191 unescaped-entity errors).
-2. For each `@next/next/no-html-link-for-pages`: change `<a href="/x" ...>text</a>` to `<Link href="/x" ...>text</Link>`, keeping every other attribute. Add `import Link from "next/link";` at the top of that file only if it is missing.
-3. For each `@typescript-eslint/no-unused-vars`: remove the unused import or variable only.
-4. Skip `react-hooks/set-state-in-effect` (Claude will handle it).
-Done when: the step 1 command shows at most 1 problem (the set-state one), and `npm run build` passes. List each changed file and line in the report.
+1. In the 5 files under `src/app/guides/` and `src/app/tools/`: change every internal link written as `<a href="/..." className="...">text</a>` to `<Link href="/..." className="...">text</Link>`, keeping href, className and text exactly. Lines: dfw-burst-pipes 109 (two links), dfw-housing-age-by-city 152, dfw-water-heater-lifespan 123, problem-checklists 69, water-hardness-widget 119. None of these files imports Link yet: add `import Link from "next/link";` as the first import line of each.
+2. `src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx` line 11: remove `CheckCircle, ` from the lucide-react import (keep the others).
+3. `scripts/gen-city-service-images.mjs`: delete line 2 `import path from "path";` and change `const header = csv.shift();` to `csv.shift();` (the call must stay: it drops the CSV header row).
+4. Do not touch `src/components/CookieConsent.tsx` (Claude will handle it).
+Done when: `npx eslint src scripts worker --rule "react/no-unescaped-entities: off"` shows only 1 problem (CookieConsent) and `npm run build` passes.
 
 ---
 

@@ -5,6 +5,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 **Site:** www.plumbinghands.com. Dallas-Fort Worth emergency plumbing, pay-per-call. Every page exists to get a homeowner to call **1 844-397-8298**.
 **Stack:** Next.js 16 (App Router, TypeScript, Tailwind 4). Vercel deploys `master` automatically.
 **Supervisor:** Claude reviews every DSH branch each morning (about 08:45 PKT), merges what passes, and writes the next tasks.
+**Runs itself:** the GitHub Actions workflow `DSH agent` (`.github/workflows/dsh-agent.yml` + `scripts/dsh-agent.py`) does up to 2 tasks every day at 13:23 PKT with free Gemini via aider. The desktop DSH app is optional; if you use it, follow the steps below.
 
 ## Start every session
 1. `$env:GIT_TERMINAL_PROMPT=0; git checkout master 2>&1 | Select-Object -Last 3; git pull --ff-only 2>&1 | Select-Object -Last 3` (if pull fails, report BLOCKED with its last line; never let git open an editor or a login prompt)

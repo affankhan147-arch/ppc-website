@@ -1,0 +1,53 @@
+name: DSH agent (free Gemini)
+
+# Does the next OPEN/FIX task in docs/dsh/TASKS.md on a dsh/* branch and pushes it.
+# Never touches master: Claude's daily audit reviews and merges.
+# Needs repo secret GEMINI_API_KEY (Google AI Studio, free tier).
+on:
+  schedule:
+    - cron: "23 8 * * *"   # 13:23 PKT, just after Gemini's free daily quota resets
+  workflow_dispatch:
+    inputs:
+      max_tasks:
+        description: "How many tasks to do this run"
+        default: "2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dsh-agent
+  cancel-in-progress: false
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          npm ci --no-audit --no-fund --loglevel=error
+          python -m pip install --quiet aider-chat
+      - name: Check the Gemini key is set
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Add the repo secret GEMINI_API_KEY (Settings > Secrets and variables > Actions)"; exit 1; fi
+      - name: Run DSH agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DSH_MODELS: ${{ vars.DSH_MODELS || 'gemini/gemini-3.1-flash-lite,gemini/gemini-3.5-flash-lite' }}
+          DSH_MAX_TASKS: ${{ github.event.inputs.max_tasks || '2' }}
+          DSH_CHECKS: "npm run build;;node scripts/qa-check.mjs"
+          DSH_HEALTH: "npm run typecheck;;npm run lint;;npm run check:images;;npm run build;;node scripts/qa-check.mjs"
+        run: python scripts/dsh-agent.py
