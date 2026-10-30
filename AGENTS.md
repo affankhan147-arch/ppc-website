@@ -13,7 +13,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 4. Do only what the task says, only in the files it lists.
 
 ## Finish every session
-1. `npm run build` must end with no errors. If it fails, fix it (2 tries max). Still failing: report `Status: BLOCKED` with the error.
+1. `npm run build 2>&1 | Select-Object -Last 5` must end with no errors. If it fails, fix it (2 tries max). Still failing: report `Status: BLOCKED` with the error.
 2. Write `docs/dsh/reports/<YYYY-MM-DD>-<task-id>.md` using the template below.
 3. `git add` only the files you changed plus the report. Never `git add .` If `git status` lists files you did not touch (line-ending noise, e.g. `src/data/cities.ts`), leave them out.
 4. `git commit -m "DSH <task-id>: <one line>"`
@@ -28,6 +28,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 - Checks: `npm run build`, `npm run typecheck`, `npm run lint`, `npm run check:images`, `node scripts/qa-check.mjs`
 
 ## Save quota (free model: every step is one request)
+- Never let a command print more than ~15 lines into the chat: add `2>&1 | Select-Object -Last 10` to npm, npx, eslint and git log commands. Long output is re-sent with every later step and burns the quota.
 - Search before you read: `Select-String -Path src\data\cities.ts -Pattern "slug:"`. Never open `src/data/pageEnhancements.ts` (390 KB) whole; search it.
 - Copy the shape of the nearest existing entry exactly: quotes, commas, field names, class names.
 - No exploring, refactoring or dev server. If the task is unclear, report `BLOCKED: <question>` and stop.

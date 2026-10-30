@@ -11,9 +11,14 @@ Baseline 2026-10-30 (Claude): build PASS, typecheck PASS, check:images PASS, qa-
 Goal: prove the DSH workflow end to end. No code changes.
 Files: only your report.
 Steps:
-1. `npm ci`
-2. Run `npm run typecheck`, `npm run lint`, `npm run check:images`, `npm run build`, `node scripts/qa-check.mjs`
-3. In the report list each command with PASS/FAIL and, for FAIL, the error count and the first 5 error lines.
+Run these 6 commands exactly as written (the `Select-Object` part keeps the output short; the lint output alone is 33 KB without it):
+1. `npm ci --no-audit --no-fund 2>&1 | Select-Object -Last 3`
+2. `npm run typecheck 2>&1 | Select-Object -Last 3`
+3. `npm run lint 2>&1 | Select-Object -Last 3` (expected: about 201 problems, mostly harmless)
+4. `npm run check:images 2>&1 | Select-Object -Last 2`
+5. `npm run build 2>&1 | Select-Object -Last 5`
+6. `node scripts/qa-check.mjs 2>&1 | Select-Object -Last 3`
+Then write the report: each command with PASS/FAIL and the last line it printed. Do not open or search any other file. This task should take about 12 steps.
 Done when: branch `dsh/<date>-PH-001` is pushed with the report. Results should match the baseline above.
 
 ---
@@ -42,7 +47,7 @@ Done when: `npm run build` passes, `.next/server/app/cities/plano.html` contains
 ## PH-003 - Small lint fixes (internal links and unused variables) - Status: OPEN
 Why: 6 internal links use a plain `<a href="/...">` instead of Next.js `<Link>`, and 3 variables are unused.
 Steps:
-1. Run `npx eslint src scripts worker --rule "react/no-unescaped-entities: off"` to list only these 10 problems (ignore the 191 unescaped-entity errors).
+1. Run `npx eslint src scripts worker --rule "react/no-unescaped-entities: off" 2>&1 | Select-Object -Last 25` to list only these 10 problems (ignore the 191 unescaped-entity errors).
 2. For each `@next/next/no-html-link-for-pages`: change `<a href="/x" ...>text</a>` to `<Link href="/x" ...>text</Link>`, keeping every other attribute. Add `import Link from "next/link";` at the top of that file only if it is missing.
 3. For each `@typescript-eslint/no-unused-vars`: remove the unused import or variable only.
 4. Skip `react-hooks/set-state-in-effect` (Claude will handle it).
