@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
@@ -122,7 +123,7 @@ export default function DfwHousingAgeByCityPage() {
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Galvanized steel (roughly pre-1960s-70s):</strong> The oldest surviving supply lines in DFW's pre-war and early postwar neighborhoods. Galvanized pipe corrodes and narrows from the inside over decades, which shows up as gradually worsening water pressure long before an outright failure.</li>
-              <li><strong>Polybutylene, or PB pipe (1978-1995):</strong> As covered in our <a href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">Polybutylene Pipe in DFW guide</a>, this gray plastic pipe was standard in a large share of new construction during exactly this 17-year window, largely because it was cheaper and faster to install than copper during DFW's fastest growth decades.</li>
+              <li><strong>Polybutylene, or PB pipe (1978-1995):</strong> As covered in our <Link href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">Polybutylene Pipe in DFW guide</Link>, this gray plastic pipe was standard in a large share of new construction during exactly this 17-year window, largely because it was cheaper and faster to install than copper during DFW's fastest growth decades.</li>
               <li><strong>Copper and, increasingly since the mid-1990s, PEX:</strong> Modern construction has moved toward copper and cross-linked polyethylene (PEX), both of which handle DFW's hard water and shifting clay soil far better than galvanized steel or polybutylene.</li>
             </ul>
             <p className="text-slate-300">

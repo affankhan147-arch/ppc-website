@@ -8,7 +8,7 @@ import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, webPageSchema, Byli
 import { CallButton } from "@/components/CallButton";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
-import { AlertTriangle, Info, Shield, CheckCircle, XCircle } from "lucide-react";
+import { AlertTriangle, Info, Shield, XCircle } from "lucide-react";
 
 const path = "/blog/how-to-verify-a-texas-plumbers-license";
 const title = "How to Verify a Texas Plumber’s License";
