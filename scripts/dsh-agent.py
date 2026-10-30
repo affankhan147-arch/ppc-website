@@ -19,8 +19,15 @@ import sys
 
 ROOT = pathlib.Path.cwd()
 TASKS = ROOT / "docs" / "dsh" / "TASKS.md"
-MODELS = [m.strip() for m in os.getenv(
-    "DSH_MODELS", "gemini/gemini-3.1-flash-lite,gemini/gemini-3.5-flash-lite").split(",") if m.strip()]
+# With a GEMINI_API_KEY secret: free Gemini. Without it: GitHub Models (free, uses the
+# workflow's own GITHUB_TOKEN, no secret needed; 8K-token requests, so no AGENTS.md copy).
+USE_GEMINI = bool(os.getenv("GEMINI_API_KEY"))
+DEFAULT_MODELS = ("gemini/gemini-3.1-flash-lite,gemini/gemini-3.5-flash-lite" if USE_GEMINI
+                  else "openai/openai/gpt-4.1-mini,openai/openai/gpt-4o-mini")
+MODELS = [m.strip() for m in (os.getenv("DSH_MODELS") or DEFAULT_MODELS).split(",") if m.strip()]
+if not USE_GEMINI:
+    os.environ.setdefault("OPENAI_API_BASE", "https://models.github.ai/inference")
+    os.environ.setdefault("OPENAI_API_KEY", os.getenv("GITHUB_TOKEN", ""))
 MAX_TASKS = int(os.getenv("DSH_MAX_TASKS", "2"))
 CHECKS = [c for c in os.getenv("DSH_CHECKS", "npm run build").split(";;") if c.strip()]
 HEALTH = [c for c in os.getenv("DSH_HEALTH", "npm run build").split(";;") if c.strip()]
@@ -89,7 +96,7 @@ def aider(model, files, message):
            "--no-dirty-commits --no-gitignore --map-tokens 0 --no-show-model-warnings --no-check-update "
            "--analytics-disable --no-pretty --no-stream --no-fancy-input "
            "--chat-history-file /tmp/aider-chat.md --input-history-file /tmp/aider-input "
-           f"--read AGENTS.md --message-file {msg_file} {quoted}")
+           f"{'--read AGENTS.md ' if USE_GEMINI else ''}--message-file {msg_file} {quoted}")
     return sh(cmd, tail=20, timeout=960)
 
 
@@ -157,7 +164,7 @@ def do_task(task_id, title, status, block):
     report.write_text(
         f"# {task_id} - {TODAY}\n"
         f"Status: {state}\n"
-        f"Model: {used_model} (GitHub Actions + aider)\n"
+        f"Model: {used_model} ({'Gemini' if USE_GEMINI else 'GitHub Models'}, GitHub Actions + aider)\n"
         f"Files changed: {', '.join(files) or 'none'}\n"
         f"What I did: {what}\n"
         f"Checks:\n{checks}\n"
