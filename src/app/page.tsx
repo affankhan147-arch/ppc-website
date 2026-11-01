@@ -189,6 +189,18 @@ export default function HomePage() {
         </section>
 
 <section className="content-section">
+  <p className="section-kicker">Freeze season</p>
+  <h2 className="mt-2 text-2xl font-black text-white">Freeze season in Dallas-Fort Worth: protect your pipes</h2>
+  <p className="mt-3 leading-7 text-slate-300">Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). Pipes in exterior walls, attics, garages and crawl spaces freeze first. If one splits, shut off the main water valve before anything else, then call.</p>
+  <ul className="mt-4 space-y-2">
+    <li><Link className="font-bold text-emerald-300 underline" href="/services/burst-pipe-emergency">Burst pipe emergency help</Link></li>
+    <li><Link className="font-bold text-emerald-300 underline" href="/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze">How to keep pipes from freezing in DFW</Link></li>
+    <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
+    <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
+  </ul>
+</section>
+
+<section className="content-section">
   <p className="section-kicker">Emergency plumbers by city</p>
   <h2 className="display-title mt-2 text-4xl font-bold text-white">Find an Emergency Plumber in Dallas-Fort Worth Near You.</h2>
   <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
