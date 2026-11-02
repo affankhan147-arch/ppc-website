@@ -72,6 +72,16 @@ export default function BurstPipesGuidePage() {
           </section>
 
           <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Burst pipe help by city in Dallas-Fort Worth</h2>
+            <p className="leading-7 mb-3">Once the main valve is off, use the page for your city to reach a provider:</p>
+            <ul className="grid gap-2 sm:grid-cols-2">
+               {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
+                   <li key={slug}><Link className="text-[#F0B429] underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+                 ))}
+            </ul>
+          </section>
+
+          <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: What Winter Storm Uri Showed About DFW's Real Risk</h2>
             <p className="text-slate-300 mb-4">
               February 2021's Winter Storm Uri is the clearest evidence that burst pipes aren't a rare, freak-occurrence problem for North Texas - they're a predictable outcome any time a hard, sustained freeze hits a region built for mild winters. A statewide survey of Texas residents found that 16 percent reported their pipes froze and burst during the storm, a share that - extrapolated across the state - points to roughly 1.2 million Texas homes affected. Eastern Texas, which includes the DFW metroplex, saw some of the most extreme temperature swings in the state, with drops of 40-plus degrees below seasonal average.
