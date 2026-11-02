@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
@@ -102,6 +103,16 @@ export default function FreezeWatchWidgetPage() {
               <li>Keep the thermostat at a steady temperature day and night instead of turning it down.</li>
               <li>Find the main water shutoff valve before a pipe breaks, and make sure it turns.</li>
               <li>Wrap exposed pipes in attics and garages with foam pipe insulation.</li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">If a pipe has already burst</h2>
+            <p className="leading-7 mb-3">Shut off the main water valve first, then open the page for your city:</p>
+            <ul className="grid gap-2 sm:grid-cols-2">
+               {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
+                   <li key={slug}><Link className="text-[#F0B429] underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+                 ))}
             </ul>
           </section>
 
