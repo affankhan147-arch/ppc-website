@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
@@ -133,6 +134,17 @@ export default async function CostGuidePage({ params }: Props) {
           "Make sure the license number on the quote matches the TSBPE license search."
         ]}
       />
+      {guide.slug === "burst-pipe-emergency-cost-guide" ? (
+        <section className="content-section">
+          <p className="section-kicker">Local help</p>
+          <h2 className="mt-2 text-2xl font-black text-white">Burst pipe help by city in Dallas-Fort Worth</h2>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+             {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
+               <li key={slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+             ))}
+          </ul>
+        </section>
+      ) : null}
       <OfficialSources
         title={sourcesHeading(guide.title)}
         intro="Prices vary by provider, so check the facts that do not vary: the plumber's Texas license and what a typical home policy covers. These official sources help you do both before you approve an estimate."
