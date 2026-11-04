@@ -41,7 +41,8 @@ TODAY = datetime.date.today().isoformat()
 
 
 def _get_json(url, headers=None):
-    req = urllib.request.Request(url, headers=headers or {})
+    # Groq and Cerebras sit behind Cloudflare, which rejects the default "Python-urllib" agent.
+    req = urllib.request.Request(url, headers={"User-Agent": "dsh-agent/1.0", "Accept": "application/json", **(headers or {})})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 
@@ -77,10 +78,13 @@ def listed_models(env, url, prefix, want, limit):
     try:
         data = _get_json(url, {"Authorization": f"Bearer {key}"})
     except Exception as e:  # noqa: BLE001
-        print(f"{env}: model list failed ({type(e).__name__})")
+        print(f"{env}: model list failed ({type(e).__name__} {getattr(e, 'code', '')})")
         return []
-    ids = [m.get("id", "") for m in data.get("data", [])]
-    return [prefix + i for i in ids if want(i)][:limit]
+    ids = sorted(i for i in (m.get("id", "") for m in data.get("data", [])) if want(i))
+    # Coding-strong families first; anything else that passed the filter comes after.
+    ids.sort(key=lambda i: not any(w in i.lower() for w in ("coder", "deepseek", "qwen", "kimi", "glm", "gpt-oss")))
+    print(f"{env}: {len(ids)} usable models")
+    return [prefix + i for i in ids][:limit]
 
 
 def all_models():
@@ -88,11 +92,11 @@ def all_models():
         return [m.strip() for m in os.getenv("DSH_MODELS").split(",") if m.strip()]
     pool = gemini_models()
     pool += listed_models("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1/models", "openrouter/",
-                          lambda i: i.endswith(":free") and any(w in i for w in ("coder", "deepseek", "qwen", "kimi", "glm")), 4)
+                          lambda i: i.endswith(":free"), 4)
     pool += listed_models("GROQ_API_KEY", "https://api.groq.com/openai/v1/models", "groq/",
-                          lambda i: any(w in i for w in ("kimi", "qwen", "gpt-oss", "llama-3.3", "deepseek")), 3)
+                          lambda i: not any(w in i for w in ("whisper", "tts", "guard", "playai", "orpheus", "prompt")), 3)
     pool += listed_models("CEREBRAS_API_KEY", "https://api.cerebras.ai/v1/models", "cerebras/",
-                          lambda i: any(w in i for w in ("qwen", "gpt-oss", "glm", "llama")), 3)
+                          lambda i: True, 3)
     if os.getenv("MISTRAL_API_KEY"):
         pool += ["mistral/codestral-latest", "mistral/mistral-small-latest"]
     return pool or ["openai/openai/gpt-4.1-mini", "openai/openai/gpt-4o-mini"]
