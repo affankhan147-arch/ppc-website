@@ -36,6 +36,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 
 ## Hard rules
 - Smallest correct change. No deleting or renaming files. No force-push.
+- NEVER run `git reset --hard`, `git clean`, `git checkout -- .`, `git checkout -f`, `git stash`, `Remove-Item`/`del`, and never "reset the environment". On 2026-11-03 this deleted ~500 local-only files. If git looks messy or a pull fails, stop and report BLOCKED.
 - Don't edit package.json, package-lock.json, next.config.mjs, vercel.json, .env*, .gitattributes unless the task says so.
 - Don't edit `src/data/blogPosts.ts` or `src/data/pageEnhancements.ts` unless the task says so (Claude's daily blog job edits them).
 - No API keys, passwords, ID or bank numbers anywhere, ever.
