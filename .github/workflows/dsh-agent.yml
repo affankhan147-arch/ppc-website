@@ -2,7 +2,8 @@ name: DSH agent (free Gemini)
 
 # Does the next OPEN/FIX task in docs/dsh/TASKS.md on a dsh/* branch and pushes it.
 # Never touches master: Claude's daily audit reviews and merges.
-# Free: uses GitHub Models via GITHUB_TOKEN; if repo secret GEMINI_API_KEY is set, uses free Gemini instead.
+# Free models only: every free Gemini Flash model (GEMINI_API_KEY), plus OpenRouter/Groq/Mistral/Cerebras
+# free tiers when their key is a repo secret. Switches model automatically on limits/errors.
 on:
   schedule:
     - cron: "23 8 * * *"   # 13:23 PKT, just after Gemini's free daily quota resets
@@ -42,6 +43,10 @@ jobs:
       - name: Run DSH agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DSH_MODELS: ${{ vars.DSH_MODELS }}
           DSH_MAX_TASKS: ${{ github.event.inputs.max_tasks || '2' }}

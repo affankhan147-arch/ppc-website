@@ -6,28 +6,33 @@ task from docs/dsh/TASKS.md, does it on a dsh/<date>-<task-id> branch with aider
 the free Gemini API, runs the build, writes a report and pushes the branch.
 It never pushes to master: Claude's daily audit reviews and merges.
 
-Env: GEMINI_API_KEY (repo secret), DSH_MODELS (comma list), DSH_MAX_TASKS,
+Env: GEMINI_API_KEY plus optional OPENROUTER/GROQ/MISTRAL/CEREBRAS_API_KEY (repo secrets),
+DSH_MODELS (comma list, overrides discovery), DSH_MAX_TASKS,
 DSH_CHECKS and DSH_HEALTH (commands separated by ";;"), DSH_DRY_RUN=1 to skip
 aider and pushing (for testing).
 """
 import datetime
+import json
 import os
 import pathlib
 import re
 import subprocess
 import sys
+import urllib.request
 
 ROOT = pathlib.Path.cwd()
 TASKS = ROOT / "docs" / "dsh" / "TASKS.md"
-# With a GEMINI_API_KEY secret: free Gemini. Without it: GitHub Models (free, uses the
-# workflow's own GITHUB_TOKEN, no secret needed; 8K-token requests, so no AGENTS.md copy).
-USE_GEMINI = bool(os.getenv("GEMINI_API_KEY"))
-DEFAULT_MODELS = ("gemini/gemini-3.1-flash-lite,gemini/gemini-3.5-flash-lite" if USE_GEMINI
-                  else "openai/openai/gpt-4.1-mini,openai/openai/gpt-4o-mini")
-MODELS = [m.strip() for m in (os.getenv("DSH_MODELS") or DEFAULT_MODELS).split(",") if m.strip()]
-if not USE_GEMINI:
+# Free model pool, discovered live every run (see all_models): Gemini Flash Lite first
+# (500 requests/day each), then the other free Gemini Flash models (about 20/day each),
+# then any other free provider whose key is a repo secret. A model that hits a limit or
+# errors is dropped for the rest of the run, so the next task starts on the next model.
+PROVIDER_KEYS = ("GEMINI_API_KEY", "OPENROUTER_API_KEY", "GROQ_API_KEY", "MISTRAL_API_KEY", "CEREBRAS_API_KEY")
+KEYED = any(os.getenv(k) for k in PROVIDER_KEYS)
+if not KEYED:  # last resort: GitHub Models via the workflow token (returned plain "OK" on 2026-10-31)
     os.environ.setdefault("OPENAI_API_BASE", "https://models.github.ai/inference")
     os.environ.setdefault("OPENAI_API_KEY", os.getenv("GITHUB_TOKEN", ""))
+MODELS = []
+DEAD = set()
 MAX_TASKS = int(os.getenv("DSH_MAX_TASKS", "2"))
 CHECKS = [c for c in os.getenv("DSH_CHECKS", "npm run build").split(";;") if c.strip()]
 HEALTH = [c for c in os.getenv("DSH_HEALTH", "npm run build").split(";;") if c.strip()]
@@ -35,10 +40,68 @@ DRY = os.getenv("DSH_DRY_RUN") == "1"
 TODAY = datetime.date.today().isoformat()
 
 
+def _get_json(url, headers=None):
+    req = urllib.request.Request(url, headers=headers or {})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def gemini_models():
+    """Every free Gemini Flash model this key can call, Flash Lite first, newest first."""
+    key = os.getenv("GEMINI_API_KEY")
+    if not key:
+        return []
+    fallback = ["gemini/gemini-3.5-flash-lite", "gemini/gemini-3.1-flash-lite"]
+    try:
+        data = _get_json("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000",
+                         {"x-goog-api-key": key})
+    except Exception as e:  # noqa: BLE001
+        print(f"Gemini model list failed ({type(e).__name__}); using defaults")
+        return fallback
+    skip = ("image", "tts", "audio", "live", "embedding", "vision", "learnlm", "robotics", "computer-use", "banana")
+    names = {m.get("name", "").split("/", 1)[-1] for m in data.get("models", [])
+             if "generateContent" in m.get("supportedGenerationMethods", [])}
+    names = [n for n in names if "flash" in n and not any(x in n for x in skip)]
+
+    def rank(n):
+        v = re.findall(r"\d+(?:\.\d+)?", n)
+        return ("lite" not in n, any(x in n for x in ("preview", "exp", "latest")), -float(v[0]) if v else 0, n)
+    return ["gemini/" + n for n in sorted(names, key=rank)] or fallback
+
+
+def listed_models(env, url, prefix, want, limit):
+    """Model ids from an OpenAI-style /models list, for a provider whose key is set."""
+    key = os.getenv(env)
+    if not key:
+        return []
+    try:
+        data = _get_json(url, {"Authorization": f"Bearer {key}"})
+    except Exception as e:  # noqa: BLE001
+        print(f"{env}: model list failed ({type(e).__name__})")
+        return []
+    ids = [m.get("id", "") for m in data.get("data", [])]
+    return [prefix + i for i in ids if want(i)][:limit]
+
+
+def all_models():
+    if os.getenv("DSH_MODELS"):
+        return [m.strip() for m in os.getenv("DSH_MODELS").split(",") if m.strip()]
+    pool = gemini_models()
+    pool += listed_models("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1/models", "openrouter/",
+                          lambda i: i.endswith(":free") and any(w in i for w in ("coder", "deepseek", "qwen", "kimi", "glm")), 4)
+    pool += listed_models("GROQ_API_KEY", "https://api.groq.com/openai/v1/models", "groq/",
+                          lambda i: any(w in i for w in ("kimi", "qwen", "gpt-oss", "llama-3.3", "deepseek")), 3)
+    pool += listed_models("CEREBRAS_API_KEY", "https://api.cerebras.ai/v1/models", "cerebras/",
+                          lambda i: any(w in i for w in ("qwen", "gpt-oss", "glm", "llama")), 3)
+    if os.getenv("MISTRAL_API_KEY"):
+        pool += ["mistral/codestral-latest", "mistral/mistral-small-latest"]
+    return pool or ["openai/openai/gpt-4.1-mini", "openai/openai/gpt-4o-mini"]
+
+
 def preflight():
     """Tiny requests to the model endpoint, so the report shows what the endpoint really returns."""
-    if USE_GEMINI:
-        return "gemini key set"
+    if KEYED:
+        return "provider keys set"
     import json, urllib.request, urllib.error
     body = json.dumps({"model": MODELS[0].split("/", 1)[1], "max_tokens": 5,
                        "messages": [{"role": "user", "content": "Reply OK"}]}).encode()
@@ -120,7 +183,7 @@ def aider(model, files, message):
            "--no-dirty-commits --no-gitignore --map-tokens 0 --no-show-model-warnings --no-check-update "
            "--analytics-disable --no-pretty --no-stream --no-fancy-input "
            "--chat-history-file /tmp/aider-chat.md --input-history-file /tmp/aider-input "
-           f"{'--read AGENTS.md ' if USE_GEMINI else ''}--message-file {msg_file} {quoted}")
+           f"{'--read AGENTS.md ' if KEYED else ''}--message-file {msg_file} {quoted}")
     return sh(cmd, tail=20, timeout=960)
 
 
@@ -166,7 +229,7 @@ def do_task(task_id, title, status, block):
                        f"TASK:\n{block}\n")
             done = False
             notes.append(f"preflight: {preflight()}")
-            for model in MODELS:
+            for model in [m for m in MODELS if m not in DEAD]:
                 if DRY:
                     notes.append("dry run: aider skipped")
                     break
@@ -175,6 +238,8 @@ def do_task(task_id, title, status, block):
                     used_model, done = model, True
                     break
                 notes.append(f"{model}: no change (exit {code}): {' | '.join(out.splitlines()[-4:])[:400] if out else ''}")
+                if re.search(r"rate.?limit|quota|exhaust|429|not.?found|404|permission|denied|401|403|api.?key", out or "", re.I):
+                    DEAD.add(model)  # skip it for the rest of this run
             ok, checks = run_checks(CHECKS) if done else (False, "- not run (no change made)")
             if done and not ok and not DRY:
                 code, out = sh(CHECKS[0], tail=25)
@@ -193,7 +258,7 @@ def do_task(task_id, title, status, block):
     report.write_text(
         f"# {task_id} - {TODAY}\n"
         f"Status: {state}\n"
-        f"Model: {used_model} ({'Gemini' if USE_GEMINI else 'GitHub Models'}, GitHub Actions + aider)\n"
+        f"Model: {used_model} (GitHub Actions + aider)\n"
         f"Files changed: {', '.join(files) or 'none'}\n"
         f"What I did: {what}\n"
         f"Checks:\n{checks}\n"
@@ -216,7 +281,10 @@ def main():
     must('git config user.name "DSH agent"')
     must('git config user.email "dsh-agent@users.noreply.github.com"')
     must("git fetch -q origin master")
-    if not USE_GEMINI:
+    global MODELS
+    MODELS = all_models()
+    print("Model pool:", ", ".join(MODELS))
+    if not KEYED:
         check = preflight()
         if '"choices"' not in check:
             # GitHub Models answered 'OK' as plain text on 2026-10-31, not a chat reply. Don't push empty branches.
