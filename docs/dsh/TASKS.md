@@ -62,7 +62,7 @@ Claude must first pull the exact Search Console queries for /cities/dallas, /cit
 
 ---
 
-## PH-005 - Freeze check block on DFW burst-pipe city pages - Status: OPEN
+## PH-005 - Freeze check block on DFW burst-pipe city pages - Status: DONE (2026-11-05, merged 769a946)
 Files: `src/app/cities/[citySlug]/[serviceSlug]/page.tsx`
 Where: directly above the line that starts `<OfficialSources` (about line 155), inside the returned JSX. `city` and `service` are already defined in the component.
 Insert exactly this JSX (keep the indentation style of the file):
@@ -86,7 +86,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/plano/burst-pipe-
 
 ---
 
-## PH-006 - Burst pipe help by city on the burst pipe service page - Status: OPEN
+## PH-006 - Burst pipe help by city on the burst pipe service page - Status: DONE (2026-11-05, merged 332049d)
 Files: `src/app/services/[serviceSlug]/page.tsx`
 Where: directly above the line that starts `<OfficialSources` (about line 165). `service` is already defined.
 Add `import Link from "next/link";` as the first line of the file (it is not imported yet).
@@ -109,7 +109,7 @@ Done when: `npm run build` passes and `.next/server/app/services/burst-pipe-emer
 
 ---
 
-## PH-007 - Freeze season section on the homepage - Status: OPEN
+## PH-007 - Freeze season section on the homepage - Status: DONE (2026-11-05, merged 19284b2)
 Files: `src/app/page.tsx`
 Where: directly above the `<section className="content-section">` whose H2 is `Find an Emergency Plumber in Dallas-Fort Worth Near You.` (about line 191). `Link` is already imported.
 Insert exactly this JSX (keep the indentation style of the file):
@@ -131,7 +131,7 @@ Done when: `npm run build` passes and `.next/server/app/index.html` contains `Fr
 
 ---
 
-## PH-008 - City burst-pipe links on the DFW freeze history guide - Status: OPEN
+## PH-008 - City burst-pipe links on the DFW freeze history guide - Status: DONE (2026-11-05, merged b33b9e0)
 Files: `src/app/guides/dfw-freeze-history/page.tsx`
 Where: directly after the closing `</section>` of the section whose H2 is `Section 4: Track This Winter's Freeze Risk Live`.
 Add `import Link from "next/link";` as the first line of the file (it is not imported yet).
@@ -152,7 +152,7 @@ Done when: `npm run build` passes and `.next/server/app/guides/dfw-freeze-histor
 
 ---
 
-## PH-009 - City burst-pipe links on the DFW burst pipes guide - Status: OPEN
+## PH-009 - City burst-pipe links on the DFW burst pipes guide - Status: DONE (2026-11-05, merged 288da17)
 Files: `src/app/guides/dfw-burst-pipes/page.tsx`
 Where: directly after the closing `</section>` of the section whose H2 is `Section 4: What To Do in the First 10 Minutes`.
 Insert exactly this JSX (keep the indentation style of the file):
@@ -172,7 +172,7 @@ Done when: `npm run build` passes and `.next/server/app/guides/dfw-burst-pipes.h
 
 ---
 
-## PH-010 - City burst-pipe links on the freeze watch widget page - Status: OPEN
+## PH-010 - City burst-pipe links on the freeze watch widget page - Status: DONE (2026-11-05, merged 341f3e8)
 Files: `src/app/tools/freeze-watch-widget/page.tsx`
 Where: directly after the closing `</section>` of the section whose H2 is `What to do when the widget shows a freeze warning`.
 Add `import Link from "next/link";` as the first line of the file (it is not imported yet).
@@ -193,7 +193,7 @@ Done when: `npm run build` passes and `.next/server/app/tools/freeze-watch-widge
 
 ---
 
-## PH-011 - Freeze resources on freeze and burst-pipe blog posts - Status: OPEN
+## PH-011 - Freeze resources on freeze and burst-pipe blog posts - Status: DONE (2026-11-05, merged a60aa0d)
 Files: `src/app/blog/[postSlug]/page.tsx`
 Where: directly above the line that starts `<OfficialSources` (about line 122). `post` is already defined.
 Add `import Link from "next/link";` as the first line of the file (it is not imported yet).
@@ -217,7 +217,7 @@ Done when: `npm run build` passes and `.next/server/app/blog/frozen-pipes-dallas
 
 ---
 
-## PH-012 - Burst pipe help by city on the burst pipe cost guide - Status: OPEN
+## PH-012 - Burst pipe help by city on the burst pipe cost guide - Status: DONE (2026-11-05, merged a539f8d)
 Files: `src/app/cost-guides/[guideSlug]/page.tsx`
 Where: directly above the line that starts `<OfficialSources` (about line 136). `guide` is already defined.
 Add `import Link from "next/link";` as the first line of the file (it is not imported yet).
@@ -237,3 +237,51 @@ Insert exactly this JSX (keep the indentation style of the file):
 ```
 No other changes.
 Done when: `npm run build` passes and `.next/server/app/cost-guides/burst-pipe-emergency-cost-guide.html` contains `Burst pipe help in Frisco`.
+
+---
+
+## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: OPEN
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/water-leak-between-meter-and-house-dallas-who-fixes-it`. Search intent: "water leak between meter and house dallas who pays". The page renders automatically from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit).
+1. `src/data/blogPosts.ts`: at the very end of the file, add a new post copying the shape of `waterMeterLeakDetectionPost` exactly (search `export const waterMeterLeakDetectionPost`), then `blogPosts.push(waterLeakMeterToHouseDallasPost);`. Use exactly:
+   - const name `waterLeakMeterToHouseDallasPost`
+   - slug `water-leak-between-meter-and-house-dallas-who-fixes-it`
+   - title `Water Leak Between the Meter and Your House in Dallas: Who Fixes It?`
+   - directAnswer `In Dallas, the property owner is responsible for the private side of the water service line, from the water meter to the house, so a leak there is yours to have repaired by a licensed plumber. A leak at the meter or on the street side is reported to Dallas Water Utilities by calling 311, which takes water emergencies 24 hours a day.`
+   - category `Emergency steps`, relatedServiceSlug `24-hour-emergency-plumber`
+2. `src/data/pageEnhancements.ts` (search, do not read whole): add a new entry keyed `"water-leak-between-meter-and-house-dallas-who-fixes-it"` directly after the entry `"how-to-check-your-water-meter-for-a-hidden-leak-dallas"` ends, copying its fields exactly (checklistTitle, checklistIntro, checklistItems, proofTitle, proofItems, extraFaqs, extraLinks). Write plain, human copy from this outline (no prices, no guarantees, no invented facts):
+   - checklistTitle `How to tell which side of the meter is leaking`. Intro + 5-6 items: wet or soggy ground, or extra-green grass, between the meter box and the house points to the private line; water pooling inside the meter box itself is a meter leak to report to 311; turn off every fixture and watch the meter's leak indicator (say our meter-check post explains how); if your home has a customer shutoff valve, closing it stops water to the house while you wait; do not dig around the meter box or touch city equipment.
+   - proofTitle `After the repair: asking Dallas Water Utilities for a leak adjustment`. 4-5 items using ONLY these facts from the DWU Leak Adjustment Request form (https://www.dallascityhall.com/departments/waterutilities/PublishingImages/pages/Request-a-Leak-Adjustment/DWU-FRM-004-RB_LeakAdjustmentRequest_English.pdf): repairs must be complete before you apply; submit within 90 days of the repair date with the repair receipt or paid-in-full invoice; if approved, the adjustment covers at most 3 months and only one adjustment per 12 months; review can take up to 45 days; filing does not guarantee an adjustment, and repair costs and lost water stay the customer's responsibility.
+   - extraFaqs (3): "Who do I call for a leak at the water meter in Dallas?" (311, 24 hours a day, source: https://dallascityhall.com/departments/waterutilities/Pages/water_utilities_contacts.aspx lists "Meter leak" as a 311 emergency); "Who pays to fix the pipe between the meter and my Dallas house?" (the property owner: DWU says owners "control and are responsible for maintaining the private side of the service line - from the water meter to the home", source: https://www.dallascityhall.com/departments/waterutilities/Documents/Lead%20and%20Copper%20Update_Brochure_ENGFinal.pdf); "Will Dallas credit my water bill for a leak?" (the adjustment rules above, no promise).
+   - extraLinks (5): `{ label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }`, `{ label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" }`, `{ label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" }`, `{ label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" }`, `{ label: "Dallas service area", href: "/cities/dallas" }`
+   - Links in: add `{ label: "Leak between the meter and the house: who fixes it in Dallas", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" }` as the last item of the `extraLinks` of BOTH `"how-to-check-your-water-meter-for-a-hidden-leak-dallas"` and `"dfw-water-sewer-rate-increases-by-city-2026"`.
+3. `src/data/seoOverrides.ts`: directly after the `"/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas"` entry (about line 92), add, same shape:
+   `"/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": { description: "In Dallas the pipe from the meter to your house is yours to fix. How to tell which side is leaking, when to call 311 and how DWU leak adjustments work." },`
+4. `src/data/contentDates.ts`: directly after the line for `"/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas"` (about line 38) add `"/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": "2026-11-05",`
+Done when: `npm run build` passes and `.next/server/app/blog/water-leak-between-meter-and-house-dallas-who-fixes-it.html` exists and contains `After the repair: asking Dallas Water Utilities for a leak adjustment`.
+
+---
+
+## PH-014 - Replace 4 plain <a> page links with <Link> (lint) - Status: OPEN
+Files: `src/app/guides/dfw-burst-pipes/page.tsx`, `src/app/guides/dfw-housing-age-by-city/page.tsx`, `src/app/tools/water-hardness-widget/page.tsx`
+`Link` is already imported in all 3 files. Change only these links: replace `<a href=` with `<Link href=` and the matching `</a>` with `</Link>`, keep href, className and text exactly as they are.
+- `src/app/guides/dfw-burst-pipes/page.tsx` line ~120 (the `<li>` starting `<strong>Call for emergency service.</strong>`): both links, `/services/burst-pipe-emergency` and `/cost-guides/burst-pipe-emergency-cost-guide`.
+- `src/app/guides/dfw-housing-age-by-city/page.tsx` line ~153 (paragraph starting `If you're buying an older DFW home`): the `/services/burst-pipe-emergency` link.
+- `src/app/tools/water-hardness-widget/page.tsx` line ~120: the `/blog/water-heater-making-popping-noise-dallas` link.
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-burst-pipes/page.tsx src/app/guides/dfw-housing-age-by-city/page.tsx src/app/tools/water-hardness-widget/page.tsx 2>&1 | Select-String "no-html-link-for-pages"` prints nothing.
+
+---
+
+## PH-015 - Escape quotes and apostrophes in the DFW slab leaks guide (lint) - Status: OPEN
+Files: `src/app/guides/dfw-slab-leaks/page.tsx`
+Make exactly these text replacements (visible text only; do not touch `className="..."` or other attributes):
+- line ~116: `<em>"Will my insurance cover this?"</em>` -> `<em>&quot;Will my insurance cover this?&quot;</em>`
+- line ~122: `policy's` -> `policy&apos;s`
+- line ~123: `Insurance's` -> `Insurance&apos;s`
+- line ~127: `agency's` -> `agency&apos;s`
+- line ~139: `"I noticed something` -> `&quot;I noticed something` and `a while back"` -> `a while back&quot;`
+- line ~141: `plumber's` -> `plumber&apos;s`
+- line ~144: `don't` -> `don&apos;t`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-slab-leaks/page.tsx` reports 0 errors.
