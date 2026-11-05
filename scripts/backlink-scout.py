@@ -35,6 +35,7 @@ def fetch(url, timeout=25):
 
 
 DEAD = set()
+WEB_SEARCH = []
 
 
 def gemini_models():
@@ -193,6 +194,8 @@ def main():
             if not model:  # Gemini missing or out of quota: Groq web search, then other free models
                 text, model = other_llm(prompt)
             used = used or model
+            if model and ("knowledge" not in model):
+                WEB_SEARCH.append(model)
             for it in json_items(text):
                 candidates.append({**it, "city": city})
             for s in sources[:6]:
@@ -212,22 +215,33 @@ def main():
         except Exception:  # noqa: BLE001
             continue
         dom = urllib.parse.urlparse(final).netloc.replace("www.", "")
+        asked = urllib.parse.urlparse(c["url"]).netloc.replace("www.", "")
+        if asked != dom and "vertexaisearch" not in asked:
+            continue  # redirected to a different site: dead or hijacked domain
         if status != 200 or dom in checked or dom in seen_domains or any(s in dom for s in SKIP):
             continue
         checked.add(dom)
         low = page.lower()
         if DOMAIN in low:
             continue  # already links to us (or mentions us): not a new opportunity
-        on_topic = (c["city"].lower() in low or "texas" in low) and (WORD in low if WORD else True)
-        listing = re.search(r"add (your|a) (business|listing)|submit (your )?(business|listing|site|link)|list your business|get listed|join|member directory|resources", low)
-        if not (on_topic or listing):
+        local = c["city"].lower() in low or "texas" in low
+        on_topic = local and (WORD in low if WORD else True)
+        listing = re.search(r"add (your|a) (business|listing|company)|submit (your |a )?(business|listing|site|link|resource)|list your business|get listed|claim your (business|listing)|business directory|member directory|find a member|useful links|community resources|resource links", low)
+        if not (local and (on_topic or listing)):
             continue
+        # Where to start, taken from the page itself: the first link whose text matches a listing phrase.
+        start = ""
+        for m in re.finditer(r'<a\b[^>]*href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', page, re.S | re.I):
+            label = re.sub(r"<[^>]+>|\s+", " ", m.group(2)).strip()
+            if re.search(r"add (your|a) (business|listing)|submit|list your business|get listed|claim|join|membership|directory|resources", label, re.I):
+                start = f"{label[:40]} -> {urllib.parse.urljoin(final, m.group(1))[:120]}"
+                break
         tm = re.search(r"<title[^>]*>(.*?)</title>", page, re.S | re.I)
         title = html.unescape(tm.group(1).strip())[:80] if tm else dom
         verified.append({
             "site": c.get("site") or dom, "url": final, "title": title, "type": c.get("type") or "",
-            "how": (c.get("how_to_get_listed") or ("page mentions: " + listing.group(0) if listing else "see page")).replace("|", "/")[:160],
-            "free": {True: "yes", False: "no", None: "check"}[c.get("free")],
+            "how": (start or ("page mentions: " + listing.group(0) if listing else "see page")).replace("|", "/")[:170],
+            "free": "check" if not WEB_SEARCH or c.get("free") is None else {True: "likely", False: "no"}[c.get("free")],
             "why": f"{c['city']} / {'on-topic' if on_topic else 'listing page'}",
         })
 
