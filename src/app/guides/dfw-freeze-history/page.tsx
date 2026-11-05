@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
@@ -95,6 +96,16 @@ export default function DfwFreezeHistoryPage() {
             <p className="text-slate-300 mb-4">
               The numbers above are historical averages - for the current forecast, our free <a href="/tools/freeze-watch-widget" className="text-[#F0B429] underline">DFW Freeze Watch Widget</a> pulls the live overnight low directly from the National Weather Service and flags freeze risk automatically, updated roughly hourly through the freeze season.
             </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Burst pipe help in your city</h2>
+            <p className="leading-7 mb-3">If a freeze has already cracked a pipe, shut off the main water valve first, then open the page for your city:</p>
+            <ul className="grid gap-2 sm:grid-cols-2">
+               {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
+                   <li key={slug}><Link className="text-[#F0B429] underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+                 ))}
+            </ul>
           </section>
 
           <p className="text-slate-400 text-sm mt-4">
