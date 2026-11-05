@@ -135,8 +135,9 @@ const boiler = new Set([...linkPages].filter(([, s]) => s.size > ok.length * 0.8
 const inbound = new Map(ok.map((p) => [p.path, new Set()]));
 for (const p of ok) for (const l of p.links) if (!boiler.has(l.to) && l.to !== p.path && inbound.has(l.to)) inbound.get(l.to).add(p.path);
 const pagePaths = new Set(ok.map((p) => p.path));
-const orphans = ok.filter((p) => p.path !== "/" && inbound.get(p.path).size === 0);
-const weak = ok.filter((p) => p.path !== "/" && inbound.get(p.path).size === 1);
+// Pages linked from the header/footer on most pages (hubs like /services) are well linked: not orphans.
+const orphans = ok.filter((p) => p.path !== "/" && !boiler.has(p.path) && inbound.get(p.path).size === 0);
+const weak = ok.filter((p) => p.path !== "/" && !boiler.has(p.path) && inbound.get(p.path).size === 1);
 
 // broken internal links: targets not in the crawl
 const extra = [...linkPages.keys()].filter((t) => !pagePaths.has(t) && !/\.(png|jpe?g|webp|svg|gif|pdf|xml|txt|ico)$/i.test(t)).slice(0, 250);

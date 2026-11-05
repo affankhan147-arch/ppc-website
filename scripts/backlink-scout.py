@@ -34,10 +34,35 @@ def fetch(url, timeout=25):
         return r.status, r.geturl(), r.read(600_000).decode("utf-8", "ignore")
 
 
+DEAD = set()
+
+
+def gemini_models():
+    """Flash models this key can call, non-Lite first (better search answers), newest first."""
+    try:
+        req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000", headers={"x-goog-api-key": KEY})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            names = [m["name"].split("/", 1)[-1] for m in json.load(r).get("models", [])
+                     if "generateContent" in m.get("supportedGenerationMethods", [])]
+    except Exception as e:  # noqa: BLE001
+        NOTES.append(f"model list: {type(e).__name__}")
+        names = ["gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
+    names = [n for n in names if "flash" in n and not re.search(r"image|tts|audio|live|embedding|vision|robotics|computer-use|banana", n)]
+    def rank(n):
+        v = re.findall(r"\d+(?:\.\d+)?", n)
+        return ("lite" in n, bool(re.search(r"preview|exp|latest", n)), -float(v[0]) if v else 0, n)
+    return sorted(set(names), key=rank)
+
+
+MODELS = []
+
+
 def gemini(prompt):
-    """Search-grounded Gemini call. Returns (text, [source urls])."""
+    """Search-grounded Gemini call. Returns (text, [source urls], model)."""
+    if not MODELS:
+        MODELS.extend(gemini_models())
     body = json.dumps({"contents": [{"parts": [{"text": prompt}]}], "tools": [{"google_search": {}}]}).encode()
-    for model in ("gemini-3.5-flash", "gemini-2.5-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-2.5-flash-lite"):
+    for model in [m for m in MODELS if m not in DEAD]:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
         req = urllib.request.Request(url, data=body, headers={"x-goog-api-key": KEY, "Content-Type": "application/json"})
         try:
@@ -45,6 +70,7 @@ def gemini(prompt):
                 data = json.load(r)
         except Exception as e:  # noqa: BLE001
             NOTES.append(f"{model}: {type(e).__name__} {getattr(e, 'code', '')}")
+            DEAD.add(model)  # quota/unknown model: don't retry it this run
             continue
         cand = (data.get("candidates") or [{}])[0]
         text = "".join(p.get("text", "") for p in cand.get("content", {}).get("parts", []))
@@ -53,7 +79,11 @@ def gemini(prompt):
     return "", [], None
 
 
+DDG_USED = []
+
+
 def ddg(query):
+    DDG_USED.append(query)
     try:
         _, _, page = fetch("https://html.duckduckgo.com/html/?q=" + urllib.parse.quote(query))
     except Exception as e:  # noqa: BLE001
@@ -96,6 +126,7 @@ def main():
     for city in cities:
         for theme in themes:
             q = theme.format(niche=NICHE)
+            text, sources, model = ("", [], None)
             if KEY:
                 text, sources, model = gemini(
                     f"Find real, currently live web pages for {city}, Texas: {q}. Exclude paid-only listings, "
@@ -107,7 +138,7 @@ def main():
                     candidates.append({**it, "city": city})
                 for s in sources[:6]:
                     candidates.append({"url": s, "site": "", "type": "search source", "how_to_get_listed": "", "free": None, "city": city})
-            else:
+            if not model:  # no key, or every Gemini model is out of quota: plain web search instead
                 for u in ddg(f"{city} Texas {q}"):
                     candidates.append({"url": u, "site": "", "type": "search result", "how_to_get_listed": "", "free": None, "city": city})
 
@@ -152,15 +183,15 @@ def main():
     rows = "\n".join(f"| {i} | {v['site']} | {v['url']} | {v['type']} | {v['free']} | {v['how']} | {v['why']} |" for i, v in enumerate(verified, 1))
     REPORT.write_text(
         f"# BACKLINKS - {TODAY}\n"
-        f"Status: {'DONE' if verified or used else 'BLOCKED'}\n"
-        f"Model: {used or 'none (DuckDuckGo search)'} + scripts/backlink-scout.py (GitHub Actions)\n"
+        f"Status: {'DONE' if verified or used or (DDG_USED and len(candidates)) else 'BLOCKED'}\n"
+        f"Model: {used or 'none'}{' + DuckDuckGo search' if DDG_USED else ''} + scripts/backlink-scout.py (GitHub Actions)\n"
         f"Cities this week: {', '.join(cities)} | candidates: {len(candidates)} | verified: {len(verified)}\n\n"
         "Research only. Nothing was submitted. Claude checks each one; Sunny places approved links himself.\n\n"
         "| # | Site | Page where the link would go | Type | Free? | How to get listed | Why relevant |\n"
         "|---|---|---|---|---|---|---|\n"
         f"{rows or '| - | none verified this week | | | | | |'}\n\n"
         f"## Ready-to-paste business description (from our home page)\n{desc or '(home page description not found)'}\n\n"
-        f"## Notes\n{'; '.join(NOTES) or 'none'}\n",
+        f"## Notes\n{'; '.join(dict.fromkeys(NOTES)) or 'none'}\n",
         encoding="utf-8")
     if verified:
         if not LOG.exists():
