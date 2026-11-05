@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -119,6 +120,18 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
       <LocalGuidance />
+      {post.slug.includes("freez") || post.slug.includes("burst") ? (
+        <section className="content-section">
+          <p className="section-kicker">Freeze season</p>
+          <h2 className="mt-2 text-2xl font-black text-white">More freeze and burst pipe help for Dallas-Fort Worth</h2>
+          <ul className="mt-4 space-y-2">
+            <li><Link className="font-bold text-emerald-300 underline" href="/services/burst-pipe-emergency">Burst pipe emergency help</Link></li>
+            <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-burst-pipes">Burst pipes in DFW: causes, costs and first steps</Link></li>
+            <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
+            <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
+          </ul>
+        </section>
+      ) : null}
       <OfficialSources
         title={sourcesHeading(post.title)}
         intro="These official and manufacturer sources back up the guidance above. Use them to check a plumber's Texas license, see what a typical home policy covers, or read more on the specific problem before you approve work."
