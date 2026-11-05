@@ -1,0 +1,47 @@
+name: Backlink Scout (weekly, research only)
+
+# Finds free, verified link opportunities and pushes a report on dsh/<date>-BACKLINKS.
+# Research only: never creates accounts, submits forms or sends email. Claude reviews the
+# list at its weekly review; Sunny places approved links himself. Never touches master.
+on:
+  schedule:
+    - cron: "13 5 * * 6"   # Saturdays 10:13 PKT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backlink-scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Find and verify opportunities
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SITE: https://plumbinghands.com
+          NAME: PlumbingHands
+          NICHE: plumbing
+          NICHE_WORD: plumb
+          CITIES: Dallas,Fort Worth,Plano,Arlington,Frisco,Irving,Garland,McKinney,Denton,Grand Prairie
+        run: python scripts/backlink-scout.py
+      - name: Push the report branch
+        run: |
+          D=$(date -u +%F)
+          B="dsh/$D-BACKLINKS"
+          if git ls-remote --exit-code --heads origin "$B" >/dev/null; then B="$B-$(date -u +%H%M)"; fi
+          git config user.name "DSH agent"
+          git config user.email "dsh-agent@users.noreply.github.com"
+          git checkout -b "$B"
+          git add "docs/dsh/reports/$D-BACKLINKS.md"
+          [ -f docs/dsh/backlinks-log.md ] && git add docs/dsh/backlinks-log.md
+          git commit -q -m "DSH BACKLINKS: weekly backlink opportunities (DONE)"
+          git push -q -u origin "$B"

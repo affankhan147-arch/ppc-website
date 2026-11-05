@@ -34,6 +34,7 @@ if not KEYED:  # last resort: GitHub Models via the workflow token (returned pla
 MODELS = []
 DEAD = set()
 MAX_TASKS = int(os.getenv("DSH_MAX_TASKS", "2"))
+MAX_WRITER = int(os.getenv("DSH_MAX_WRITER", "1"))
 CHECKS = [c for c in os.getenv("DSH_CHECKS", "npm run build").split(";;") if c.strip()]
 HEALTH = [c for c in os.getenv("DSH_HEALTH", "npm run build").split(";;") if c.strip()]
 DRY = os.getenv("DSH_DRY_RUN") == "1"
@@ -196,6 +197,22 @@ def changed_files():
     return [l[3:].strip().strip('"') for l in out.splitlines() if len(l) > 3]
 
 
+def writer_rules():
+    """The Article Writer's style rules, from docs/dsh/agents/WRITER.md (section '## Write')."""
+    f = ROOT / "docs" / "dsh" / "agents" / "WRITER.md"
+    text = f.read_text(encoding="utf-8") if f.exists() else ""
+    m = re.search(r"^## Write\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+    return "You are the Article Writer. Writing rules:\n" + (m.group(1).strip() if m else
+           "Plain, human copy; facts only from the brief's sources; keyword in title, H1, first paragraph and one H2.")
+
+
+def writer_models():
+    """Articles: try the stronger non-Lite Gemini Flash models first (20 requests/day each), then the rest."""
+    strong = [m for m in MODELS if m.startswith("gemini/") and "flash" in m and "lite" not in m
+              and not re.search(r"preview|latest|omni|live", m)]
+    return strong + [m for m in MODELS if m not in strong]
+
+
 def do_task(task_id, title, status, block):
     existing = remote_branch(task_id)
     blocked = False
@@ -203,10 +220,10 @@ def do_task(task_id, title, status, block):
         must(f"git fetch -q origin +refs/heads/{existing}:refs/remotes/origin/{existing}")
         _, subject = sh(f"git log -1 --format=%s origin/{existing}")
         blocked = "(BLOCKED)" in subject  # last attempt failed: retry on the same branch
-    if status == "OPEN" and existing and not blocked:
+    if status in ("OPEN", "WRITER") and existing and not blocked:
         print(f"{task_id}: branch {existing} already pushed, waiting for Claude's review. Skipping.")
         return False
-    branch = existing if (existing and (status == "FIX" or blocked)) else f"dsh/{TODAY}-{task_id}"
+    branch = existing if (existing and (status in ("FIX", "WRITER-FIX") or blocked)) else f"dsh/{TODAY}-{task_id}"
     assert branch.startswith("dsh/"), "DSH only pushes dsh/* branches"
     base = f"origin/{branch}" if branch == existing else "origin/master"
     must(f"git checkout -q -B {branch} {base}")
@@ -231,9 +248,13 @@ def do_task(task_id, title, status, block):
                        "you were given. Follow AGENTS.md (content rules above all). Use exactly the text, "
                        "links and class names the task gives. Do not reformat or touch anything else.\n\n"
                        f"TASK:\n{block}\n")
+            writer = status.startswith("WRITER")
+            if writer:
+                message = writer_rules() + "\n\n" + message
             done = False
             notes.append(f"preflight: {preflight()}")
-            for model in [m for m in MODELS if m not in DEAD]:
+            order = writer_models() if writer else MODELS
+            for model in [m for m in order if m not in DEAD]:
                 if DRY:
                     notes.append("dry run: aider skipped")
                     break
@@ -294,13 +315,20 @@ def main():
             # GitHub Models answered 'OK' as plain text on 2026-10-31, not a chat reply. Don't push empty branches.
             sys.exit("No working AI model. Add the repo secret GEMINI_API_KEY "
                      "(Settings > Secrets and variables > Actions). GitHub Models said: " + check[:200])
+    tasks = list(parse_tasks())
+    wrote = 0
+    for task_id, title, status, block in tasks:  # Article Writer first: one WRITER task per run
+        if wrote >= MAX_WRITER:
+            break
+        if status in ("WRITER", "WRITER-FIX") and do_task(task_id, title, status, block):
+            wrote += 1
     done = 0
-    for task_id, title, status, block in parse_tasks():
+    for task_id, title, status, block in tasks:
         if done >= MAX_TASKS:
             break
         if status in ("OPEN", "FIX") and do_task(task_id, title, status, block):
             done += 1
-    print(f"Tasks handled this run: {done}")
+    print(f"Tasks handled this run: {done} (+ {wrote} article)")
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
 Claude writes this file. DSH: read only. Take the first task with `Status: OPEN` (or `FIX`).
 Task format (the cloud agent parses it): heading `## <ID> - <title> - Status: <STATUS>`; one `File:` or `Files:` line listing, in backticks, every file the task may change, or `Files: only your report.` for check-only tasks.
 Status: OPEN, IN REVIEW (branch pushed, Claude reviews next morning), DONE, FIX (redo using Claude's note), WAITING (Claude must add data first), REJECTED.
-WRITER and WRITER-FIX tasks belong to the desktop Article Writer (docs/dsh/agents/WRITER.md); the cloud agent skips them.
+WRITER and WRITER-FIX tasks are articles: the cloud agent does one per run with the rules in docs/dsh/agents/WRITER.md.
 
 Baseline 2026-10-30 (Claude): build PASS, typecheck PASS, check:images PASS, qa-check PASS, lint 198 errors (191 are `react/no-unescaped-entities`, harmless).
 

@@ -1,0 +1,44 @@
+name: SEO audit (weekly, no AI)
+
+# Weekly SEO + internal-link audit of the live site by scripts/seo-audit.mjs (no AI, no tokens).
+# Pushes the report on a dsh/<date>-SEO-AUDIT branch; Claude's weekly review merges it and
+# turns the findings into tasks in docs/dsh/TASKS.md. Never touches master.
+on:
+  schedule:
+    - cron: "37 4 * * 1"   # Mondays 09:37 PKT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci --no-audit --no-fund --loglevel=error
+      - name: Lint (JSON, for the report)
+        run: npx eslint src scripts worker -f json -o /tmp/eslint.json || true
+      - name: Audit the live site
+        run: node scripts/seo-audit.mjs --site https://plumbinghands.com --phone "844-397-8298" --eslint /tmp/eslint.json --out "docs/dsh/reports/$(date -u +%F)-SEO-AUDIT.md"
+      - name: Push the report branch
+        run: |
+          D=$(date -u +%F)
+          B="dsh/$D-SEO-AUDIT"
+          if git ls-remote --exit-code --heads origin "$B" >/dev/null; then B="$B-$(date -u +%H%M)"; fi
+          git config user.name "DSH agent"
+          git config user.email "dsh-agent@users.noreply.github.com"
+          git checkout -b "$B"
+          git add "docs/dsh/reports/$D-SEO-AUDIT.md"
+          git commit -q -m "DSH SEO-AUDIT: weekly SEO and internal-link audit (DONE)"
+          git push -q -u origin "$B"
