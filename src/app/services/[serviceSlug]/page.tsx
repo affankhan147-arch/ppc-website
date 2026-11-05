@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -162,6 +163,17 @@ export default async function ServicePage({ params }: Props) {
       </section>
       <CostFactors factors={service.costFactors} />
       <LocalGuidance />
+      {service.slug === "burst-pipe-emergency" ? (
+        <section className="content-section">
+          <p className="section-kicker">Local help</p>
+          <h2 className="mt-2 text-2xl font-black text-white">Burst pipe help by city in Dallas-Fort Worth</h2>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+             {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
+               <li key={slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+             ))}
+          </ul>
+        </section>
+      ) : null}
       <OfficialSources
         title={`Official resources for ${pageHeading}`}
         intro={`Before you approve ${displayName.toLowerCase()} work anywhere in Dallas-Fort Worth, these official sources help you confirm the plumber holds a current Texas license and understand what a typical home policy covers. Keep the license number and any written estimate with your records.`}
