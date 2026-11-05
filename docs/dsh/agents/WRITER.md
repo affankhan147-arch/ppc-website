@@ -29,10 +29,13 @@ Open docs/dsh/TASKS.md. Take the FIRST task whose heading ends `Status: WRITER` 
 1. `git add` ONLY the files this job allows (never `git add .`).
 2. `git commit -m "DSH <task-id>: <one line> (DONE)"` (or `(BLOCKED)` with the reason in the report).
 3. `git push -u origin <branch> 2>&1 | Select-Object -Last 3`. Never push master. Claude reviews and merges.
+   Then prove it: `git ls-remote --heads origin <branch>` must print a line. If it prints nothing, the push failed: say `BLOCKED: push failed` plus the error line. Never claim a push you did not verify.
 4. `git checkout master 2>&1 | Select-Object -Last 1`.
 
 ## Hard rules (same as AGENTS.md)
 - NEVER run `git reset --hard`, `git clean`, `git checkout -- .`, `git checkout -f`, `git stash`, `Remove-Item`/`del`, or "reset the environment". If git looks messy, stop and report BLOCKED.
 - Pipe every npm/npx/git/eslint command through `2>&1 | Select-Object -Last 15` (free model quota).
 - No API keys, passwords, ID or bank numbers anywhere. Never change the phone number (1 844-397-8298).
+- Stay in scope: do only what this file says. Never change git config, remotes or credentials, and never install anything. If something blocks you, report BLOCKED with the error line instead of working around it.
+- Report what the commands printed, not what you expect. Copy summary lines verbatim (e.g. eslint's `N problems (E errors, W warnings)`). Never write "clean", "N/A" or "verified" unless a command output shows it.
 - Facts only. Never invent numbers, prices, reviews, quotes, licenses or sources.
