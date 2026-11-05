@@ -6,7 +6,7 @@ Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to
 - Agent runs: last 2 OK (4 Nov 13:17 dispatch, 4 Nov 16:25 schedule). The 4 Nov runs had nothing to do: every OPEN task already had a branch waiting for review (no Claude audit 1-4 Nov).
 - Reviewed 8 branches PH-005..PH-012 (heads cb190d0, 055c431, 88045f2, 33d34cc, 872a032, 9807426, f9910d1, 5789328): all PASS, merged 769a946..a539f8d. Only listed files touched, no secrets, phone unchanged, BOM on src/app/page.tsx was already on master.
 - Gate: report build PASS on each; merged master also built locally (build PASS, tsc PASS, lint 196 errors, was 198). Vercel master: success. Live: / and /services/burst-pipe-emergency 200 with the new freeze/burst-pipe sections.
-- Assigned PH-013 (new blog post: water leak between meter and house in Dallas, DWU sources), PH-014 (4 <a> -> <Link> lint fixes), PH-015 (slab leaks guide escapes). Queue: 3 OPEN, 1 WAITING (PH-004, needs GSC on a Monday).
+- Assigned PH-013..PH-022 to last until the Wed 11 Nov audit (manual re-run; the Wed 4 Nov audit failed on usage limit): 2 blog posts (PH-013 meter-to-house leak in Dallas, DWU sources; PH-020 tankless heater in a freeze/power outage, Rinnai + NWS), PH-018 nearby-city links on city-service pages (code type-checked by Claude), 7 lint tasks with exact replacements. Content tasks are spaced so DSH never gets 2 on one day. Queue: 10 OPEN, 1 WAITING (PH-004, needs GSC on a Monday).
 - First-time pass rate (7 days): 8/8.
 - Coaching: copy the given JSX exactly and keep each change to the named lines - DSH did this perfectly; keep it up. (Claude note: Done-when strings must not span a JSX {variable}; React splits that text in the HTML.)
 

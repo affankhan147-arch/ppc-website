@@ -285,3 +285,143 @@ Make exactly these text replacements (visible text only; do not touch `className
 - line ~144: `don't` -> `don&apos;t`
 No other changes.
 Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-slab-leaks/page.tsx` reports 0 errors.
+
+---
+
+## PH-016 - Escape quotes and apostrophes in the DFW water heater lifespan guide (lint) - Status: OPEN
+Files: `src/app/guides/dfw-water-heater-lifespan/page.tsx`
+Make exactly these text replacements, each only on the line given (visible text only; never touch `className="..."` or other attributes):
+- line ~78: `DFW's` -> `DFW&apos;s`
+- line ~84: `Utilities'` -> `Utilities&apos;` and `city's` -> `city&apos;s`
+- line ~91: `"once` -> `&quot;once` and `year"` -> `year&quot;`
+- line ~101: `heater's` -> `heater&apos;s`
+- line ~110: `aren't` -> `aren&apos;t` and `they're` -> `they&apos;re`
+- line ~118: `It's` -> `It&apos;s`
+- line ~130: `it's` -> `it&apos;s`
+- line ~142: `DFW's` -> `DFW&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-water-heater-lifespan/page.tsx` reports 0 errors.
+
+---
+
+## PH-017 - Escape quotes and apostrophes in 2 data guides (lint) - Status: OPEN
+Files: `src/app/guides/texas-insurance-plumbing-claims/page.tsx`, `src/app/guides/dfw-plumbing-data/page.tsx`
+Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
+`src/app/guides/texas-insurance-plumbing-claims/page.tsx`
+- line ~61: `"Sudden` -> `&quot;Sudden` and `Accidental"` -> `Accidental&quot;`
+- line ~82: `"sudden` -> `&quot;sudden` and `accidental"` -> `accidental&quot;`
+- line ~85: `policy's` -> `policy&apos;s`
+- line ~94: `plumber's` -> `plumber&apos;s`
+`src/app/guides/dfw-plumbing-data/page.tsx`
+- line ~75: `Utilities'` -> `Utilities&apos;`
+- line ~89: `office's` -> `office&apos;s`
+- line ~92: `2021's` -> `2021&apos;s`
+- line ~102: `Dallas'` -> `Dallas&apos;`, `region's` -> `region&apos;s` and `metro's` -> `metro&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/texas-insurance-plumbing-claims/page.tsx src/app/guides/dfw-plumbing-data/page.tsx` reports 0 errors.
+
+---
+
+## PH-018 - Same service in nearby cities on city-service pages - Status: OPEN
+Files: `src/app/cities/[citySlug]/[serviceSlug]/page.tsx`
+Goal: each city-service page links to the same service in up to 8 nearby cities in its market (only pages that exist). `cities`, `isPriorityCityService`, `Link`, `city`, `service` and `displayName` are already available in the component.
+1. Inside `export default async function CityServicePage`, directly above its line `  return (` (about line 83), add exactly:
+```tsx
+  const nearbyCities = cities
+    .filter((c) => c.marketSlug === city.marketSlug && c.slug !== city.slug && isPriorityCityService(c.slug, service.slug))
+    .slice(0, 8);
+```
+2. Directly above the line that starts `<OfficialSources` (about line 168), insert exactly (keep the file's indentation style):
+```tsx
+{nearbyCities.length > 0 ? (
+  <section className="content-section">
+    <p className="section-kicker">Nearby cities</p>
+    <h2 className="mt-2 text-2xl font-black text-white">{displayName} in nearby cities</h2>
+    <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+      {nearbyCities.map((c) => (
+        <li key={c.slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${c.slug}/${service.slug}`}>{displayName} in {c.name}</Link></li>
+      ))}
+    </ul>
+  </section>
+) : null}
+```
+No other changes.
+Done when: `npm run build` passes and `.next/server/app/cities/plano/burst-pipe-emergency.html` contains `>Nearby cities<`.
+
+---
+
+## PH-019 - Escape quotes and apostrophes in 4 small files (lint) - Status: OPEN
+Files: `src/app/guides/dfw-gas-line-safety/page.tsx`, `src/app/guides/dfw-polybutylene-pipe-replacement/page.tsx`, `src/app/guides/dfw-sewer-root-intrusion/page.tsx`, `src/app/page.tsx`
+Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
+`src/app/guides/dfw-gas-line-safety/page.tsx`
+- line ~93: `"gas-work` -> `&quot;gas-work` and `endorsement"` -> `endorsement&quot;`
+- line ~99: `plumber's` -> `plumber&apos;s`
+- line ~115: `TSBPE's` -> `TSBPE&apos;s`
+`src/app/guides/dfw-polybutylene-pipe-replacement/page.tsx`
+- line ~74: `region's` -> `region&apos;s`
+- line ~86: `manufacturer's` -> `manufacturer&apos;s`
+- line ~91: `region's` -> `region&apos;s`
+`src/app/guides/dfw-sewer-root-intrusion/page.tsx`
+- line ~65: `Dallas's` -> `Dallas&apos;s` and `homeowner's` -> `homeowner&apos;s`
+`src/app/page.tsx`
+- line ~108: `DFW's` -> `DFW&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint` on the 4 files reports 0 errors.
+
+---
+
+## PH-020 - New blog post: tankless water heater in a DFW freeze when the power goes out - Status: OPEN
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/tankless-water-heater-freeze-power-outage-dfw`. Search intent: "tankless water heater freeze power outage". Service: water heater emergency. The hero image is picked automatically from `relatedServiceSlug` (no image edit). Use these anchors only (another task edits other spots in the same files):
+1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(tanklessWaterHeaterTroubleshootingPost);` (about line 314), add a new post copying the shape of `tanklessWaterHeaterTroubleshootingPost` exactly, then `blogPosts.push(tanklessFreezePowerOutagePost);`. Use exactly:
+   - const name `tanklessFreezePowerOutagePost`
+   - slug `tankless-water-heater-freeze-power-outage-dfw`
+   - title `Tankless Water Heater in a DFW Freeze: What to Do When the Power Goes Out`
+   - directAnswer `A tankless water heater's built-in freeze protection only works while the unit has power, so in a freeze with a long power outage the safe move is to drain it: Rinnai's procedure is to shut off the cold water and gas supply, disconnect power and open the hot and cold drain valves. In Dallas-Fort Worth the average first freeze comes around November 22.`
+   - category `Prevention`, relatedServiceSlug `water-heater-emergency`
+2. `src/data/pageEnhancements.ts` (search, do not read whole): add a new entry keyed `"tankless-water-heater-freeze-power-outage-dfw"` directly after the entry `"tankless-water-heater-not-producing-hot-water-troubleshooting"` ends, copying its fields exactly. Plain, human copy, ONLY these facts (no prices, no guarantees):
+   - checklistTitle `Before and during a freeze: protect a tankless water heater`; 5-6 items: keep power to the unit, because many units have internal sensors that prevent freezing only while powered (Rinnai, https://rinnai.us/residential/freeze-protect-your-rinnai-product); insulate exposed pipes; check vent and drain lines for snow or ice blockages (Rinnai); DFW's average first freeze is November 22 and last freeze March 12 (NWS Fort Worth, https://www.weather.gov/fwd/d32info); check your own model's manual, because steps differ by brand.
+   - proofTitle `If the power is out for a long time in freezing weather`; 4 items from Rinnai's general draining procedure: shut off the cold water supply and the gas supply; disconnect power to the water heater; open the hot and cold drain valves; if you are not comfortable doing it, or the unit is already leaking, call a plumber.
+   - extraFaqs (3): "Does a tankless water heater have freeze protection?" (yes on many units, but it needs power: Rinnai); "Should I drain my tankless water heater during a power outage?" (in a prolonged outage in freezing weather, Rinnai gives a general draining procedure: summarize it); "When does Dallas-Fort Worth usually get its first freeze?" (around November 22 on average, NWS Fort Worth).
+   - extraLinks (5): `{ label: "Water heater emergency help", href: "/services/water-heater-emergency" }`, `{ label: "Tankless water heater not producing hot water", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" }`, `{ label: "How to keep pipes from freezing in DFW", href: "/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze" }`, `{ label: "How often DFW freezes (NWS data)", href: "/guides/dfw-freeze-history" }`, `{ label: "Live DFW freeze watch", href: "/tools/freeze-watch-widget" }`
+   - Links in: add `{ label: "Tankless water heater in a freeze: power outage steps", href: "/blog/tankless-water-heater-freeze-power-outage-dfw" }` as the last item of the `extraLinks` of BOTH `"tankless-water-heater-not-producing-hot-water-troubleshooting"` and `"frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze"`.
+3. `src/data/seoOverrides.ts`: directly after the `"/blog/sudden-low-water-pressure-in-dallas-home-what-it-means"` entry (about line 108), add, same shape:
+   `"/blog/tankless-water-heater-freeze-power-outage-dfw": { description: "Tankless freeze protection only works with power. What DFW homeowners should do before a freeze and how to drain the unit in a long outage." },`
+4. `src/data/contentDates.ts`: directly after the line for `"/blog/tankless-water-heater-not-producing-hot-water-troubleshooting"` (about line 56) add `"/blog/tankless-water-heater-freeze-power-outage-dfw": "2026-11-09",`
+Done when: `npm run build` passes and `.next/server/app/blog/tankless-water-heater-freeze-power-outage-dfw.html` exists and contains `If the power is out for a long time in freezing weather`.
+
+---
+
+## PH-021 - Escape quotes and apostrophes on the partners page and restaurant drain post (lint) - Status: OPEN
+Files: `src/app/partners/page.tsx`, `src/app/blog/drain-backup-in-a-restaurant-what-owners-should-do-first/page.tsx`
+Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
+`src/app/partners/page.tsx`
+- line ~46: `you've` -> `you&apos;ve`
+- line ~47: `we're` -> `we&apos;re`
+- line ~48: `we're` -> `we&apos;re`
+- line ~66: `we've` -> `we&apos;ve`
+- line ~67: `We're` -> `We&apos;re`
+- line ~69: `We're` -> `We&apos;re`
+`src/app/blog/drain-backup-in-a-restaurant-what-owners-should-do-first/page.tsx`
+- line ~121: `inspector's` -> `inspector&apos;s`
+- line ~143: `"just` -> `&quot;just` and `pumping"` -> `pumping&quot;`
+- line ~164: `city's` -> `city&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint` on the 2 files reports 0 errors.
+
+---
+
+## PH-022 - Escape quotes and apostrophes in the plumbing leak insurance post (lint) - Status: OPEN
+Files: `src/app/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas/page.tsx`
+Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
+- line ~69: `policy's` -> `policy&apos;s`
+- line ~86: `What's` -> `What&apos;s`
+- line ~119: `"Sudden` -> `&quot;Sudden` and `Accidental"` -> `Accidental&quot;`
+- line ~121: both `that's` -> `that&apos;s`
+- line ~126: `DFW's` -> `DFW&apos;s`
+- line ~128: `plumber's` -> `plumber&apos;s`
+- line ~135: `policy's` -> `policy&apos;s` and `"covered"` -> `&quot;covered&quot;`
+- line ~142: `they'll` -> `they&apos;ll`
+- line ~175: `plumber's` -> `plumber&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas/page.tsx` reports 0 errors.
