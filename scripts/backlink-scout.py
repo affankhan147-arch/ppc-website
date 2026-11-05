@@ -79,6 +79,63 @@ def gemini(prompt):
     return "", [], None
 
 
+GROQ = os.getenv("GROQ_API_KEY", "")
+OPENROUTER = os.getenv("OPENROUTER_API_KEY", "")
+
+
+def chat(base, key, model, prompt):
+    """OpenAI-style chat call (Groq, OpenRouter)."""
+    body = json.dumps({"model": model, "temperature": 0.2, "messages": [{"role": "user", "content": prompt}]}).encode()
+    req = urllib.request.Request(base + "/chat/completions", data=body, headers={
+        "Authorization": f"Bearer {key}", "Content-Type": "application/json", "User-Agent": "dsh-agent/1.0"})
+    with urllib.request.urlopen(req, timeout=180) as r:
+        return json.load(r)["choices"][0]["message"]["content"] or ""
+
+
+def listed(base, key):
+    req = urllib.request.Request(base + "/models", headers={"Authorization": f"Bearer {key}", "User-Agent": "dsh-agent/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return [m.get("id", "") for m in json.load(r).get("data", [])]
+
+
+FALLBACK = []  # (label, base, key, model, has_web_search)
+
+
+def fallbacks():
+    """Free OpenAI-style models: Groq's web-search 'compound' models first, then plain models (knowledge only)."""
+    if FALLBACK:
+        return FALLBACK
+    if GROQ:
+        try:
+            ids = listed("https://api.groq.com/openai/v1", GROQ)
+            FALLBACK.extend(("groq", "https://api.groq.com/openai/v1", GROQ, i, True) for i in ids if "compound" in i)
+            FALLBACK.extend(("groq", "https://api.groq.com/openai/v1", GROQ, i, False) for i in ids
+                            if re.search(r"gpt-oss|llama-3.3|kimi|qwen", i) and "guard" not in i)
+        except Exception as e:  # noqa: BLE001
+            NOTES.append(f"groq models: {type(e).__name__} {getattr(e, 'code', '')}")
+    if OPENROUTER:
+        try:
+            ids = listed("https://openrouter.ai/api/v1", OPENROUTER)
+            FALLBACK.extend([("openrouter", "https://openrouter.ai/api/v1", OPENROUTER, i, False) for i in ids if i.endswith(":free")][:3])
+        except Exception as e:  # noqa: BLE001
+            NOTES.append(f"openrouter models: {type(e).__name__} {getattr(e, 'code', '')}")
+    return FALLBACK
+
+
+def other_llm(prompt):
+    """Returns (text, label) from the first fallback model that answers."""
+    for label, base, key, model, web in fallbacks():
+        if model in DEAD:
+            continue
+        ask = prompt if web else prompt + " Use only organizations and pages you are confident exist; every URL will be checked."
+        try:
+            return chat(base, key, model, ask), f"{label}/{model}{' (web search)' if web else ' (knowledge, verified by fetch)'}"
+        except Exception as e:  # noqa: BLE001
+            NOTES.append(f"{label}/{model}: {type(e).__name__} {getattr(e, 'code', '')}")
+            DEAD.add(model)
+    return "", None
+
+
 DDG_USED = []
 
 
@@ -126,18 +183,20 @@ def main():
     for city in cities:
         for theme in themes:
             q = theme.format(niche=NICHE)
+            prompt = (f"Find real, currently live web pages for {city}, Texas: {q}. Exclude paid-only listings, "
+                      "social networks, Yelp, Angi, HomeAdvisor, Thumbtack and lead-generation marketplaces. "
+                      "Return ONLY a JSON array (max 8) of objects with keys: url (the exact page where a business "
+                      "would be listed or linked), site, type, how_to_get_listed (the site's own steps, short), free (true/false).")
             text, sources, model = ("", [], None)
             if KEY:
-                text, sources, model = gemini(
-                    f"Find real, currently live web pages for {city}, Texas: {q}. Exclude paid-only listings, "
-                    "social networks, Yelp, Angi, HomeAdvisor, Thumbtack and lead-generation marketplaces. "
-                    "Return ONLY a JSON array (max 8) of objects with keys: url (the exact page where a business "
-                    "would be listed or linked), site, type, how_to_get_listed (the site's own steps, short), free (true/false).")
-                used = used or model
-                for it in json_items(text):
-                    candidates.append({**it, "city": city})
-                for s in sources[:6]:
-                    candidates.append({"url": s, "site": "", "type": "search source", "how_to_get_listed": "", "free": None, "city": city})
+                text, sources, model = gemini(prompt)
+            if not model:  # Gemini missing or out of quota: Groq web search, then other free models
+                text, model = other_llm(prompt)
+            used = used or model
+            for it in json_items(text):
+                candidates.append({**it, "city": city})
+            for s in sources[:6]:
+                candidates.append({"url": s, "site": "", "type": "search source", "how_to_get_listed": "", "free": None, "city": city})
             if not model:  # no key, or every Gemini model is out of quota: plain web search instead
                 for u in ddg(f"{city} Texas {q}"):
                     candidates.append({"url": u, "site": "", "type": "search result", "how_to_get_listed": "", "free": None, "city": city})
