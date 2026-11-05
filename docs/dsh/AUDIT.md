@@ -2,6 +2,11 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-06 - Claude (setup, not a review)
+- SEO agents now run on GitHub (docs/dsh/agents/README.md): weekly audit script, weekly Backlink Scout, Article Writer = WRITER tasks in the cloud agent. The DeepSeek Harness app tasks were removed (its sandbox can't build or push).
+- Test branches from setup, nothing to merge, skip them: dsh/2026-11-05-BACKLINKS @cf51c34, dsh/2026-11-05-BACKLINKS-2156 @ec992d9, dsh/2026-11-05-BACKLINKS-2201 @f2c02a9, dsh/2026-11-06-SEO-AUDIT @221e457.
+- dsh/2026-11-05-SEO-AUDIT @d82bf39: first real audit report; review and merge it normally and use its findings.
+
 ## 2026-11-05 - audit
 - Agent runs: last 2 OK (4 Nov 13:17 dispatch, 4 Nov 16:25 schedule). The 4 Nov runs had nothing to do: every OPEN task already had a branch waiting for review (no Claude audit 1-4 Nov).
 - Reviewed 8 branches PH-005..PH-012 (heads cb190d0, 055c431, 88045f2, 33d34cc, 872a032, 9807426, f9910d1, 5789328): all PASS, merged 769a946..a539f8d. Only listed files touched, no secrets, phone unchanged, BOM on src/app/page.tsx was already on master.
