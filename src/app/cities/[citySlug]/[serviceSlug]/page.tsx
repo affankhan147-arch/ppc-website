@@ -152,6 +152,19 @@ export default async function CityServicePage({ params }: Props) {
       />
       <CostFactors factors={service.costFactors} />
       <LocalGuidance cityName={city.name} />
+      {service.slug === "burst-pipe-emergency" && city.marketSlug === "dallas-fort-worth" ? (
+        <section className="content-section">
+          <p className="section-kicker">Freeze season</p>
+          <h2 className="mt-2 text-2xl font-black text-white">After a hard freeze in {city.name}: what to check</h2>
+          <p className="mt-3 leading-7 text-slate-300">Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). After a freeze, check pipes in exterior walls, attics, garages and crawl spaces for wet spots, bulging drywall or low water pressure. A pipe can crack while frozen and only start leaking once it thaws.</p>
+          <ul className="mt-4 space-y-2">
+            <li><Link className="font-bold text-emerald-300 underline" href="/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze">How to keep pipes from freezing in DFW</Link></li>
+            <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
+            <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
+            <li><Link className="font-bold text-emerald-300 underline" href="/cost-guides/burst-pipe-emergency-cost-guide">Burst pipe repair cost guide</Link></li>
+          </ul>
+        </section>
+      ) : null}
       <OfficialSources
         title={`Official resources for ${pageHeading}`}
         intro={`These official sources help ${city.name} homeowners check a plumber's Texas license, find local water service contacts and understand what a home policy usually covers before approving ${displayName.toLowerCase()} work.`}
