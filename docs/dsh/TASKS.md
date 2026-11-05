@@ -3,6 +3,7 @@
 Claude writes this file. DSH: read only. Take the first task with `Status: OPEN` (or `FIX`).
 Task format (the cloud agent parses it): heading `## <ID> - <title> - Status: <STATUS>`; one `File:` or `Files:` line listing, in backticks, every file the task may change, or `Files: only your report.` for check-only tasks.
 Status: OPEN, IN REVIEW (branch pushed, Claude reviews next morning), DONE, FIX (redo using Claude's note), WAITING (Claude must add data first), REJECTED.
+WRITER and WRITER-FIX tasks belong to the desktop Article Writer (docs/dsh/agents/WRITER.md); the cloud agent skips them.
 
 Baseline 2026-10-30 (Claude): build PASS, typecheck PASS, check:images PASS, qa-check PASS, lint 198 errors (191 are `react/no-unescaped-entities`, harmless).
 
@@ -370,7 +371,7 @@ Done when: `npm run build` passes and `npx eslint` on the 4 files reports 0 erro
 
 ---
 
-## PH-020 - New blog post: tankless water heater in a DFW freeze when the power goes out - Status: OPEN
+## PH-020 - New blog post: tankless water heater in a DFW freeze when the power goes out - Status: WRITER
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/tankless-water-heater-freeze-power-outage-dfw`. Search intent: "tankless water heater freeze power outage". Service: water heater emergency. The hero image is picked automatically from `relatedServiceSlug` (no image edit). Use these anchors only (another task edits other spots in the same files):
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(tanklessWaterHeaterTroubleshootingPost);` (about line 314), add a new post copying the shape of `tanklessWaterHeaterTroubleshootingPost` exactly, then `blogPosts.push(tanklessFreezePowerOutagePost);`. Use exactly:
