@@ -3,9 +3,8 @@ name: SEO audit (weekly, no AI)
 # Weekly SEO + internal-link audit of the live site by scripts/seo-audit.mjs (no AI, no tokens).
 # Pushes the report on a dsh/<date>-SEO-AUDIT branch; Claude's weekly review merges it and
 # turns the findings into tasks in docs/dsh/TASKS.md. Never touches master.
+# Manual only: the DSH app agents run this job on Sunny's laptop (docs/dsh/agents/). Kept as a backup.
 on:
-  schedule:
-    - cron: "37 4 * * 1"   # Mondays 09:37 PKT
   workflow_dispatch:
 
 permissions:

@@ -3,9 +3,8 @@ name: Backlink Scout (weekly, research only)
 # Finds free, verified link opportunities and pushes a report on dsh/<date>-BACKLINKS.
 # Research only: never creates accounts, submits forms or sends email. Claude reviews the
 # list at its weekly review; Sunny places approved links himself. Never touches master.
+# Manual only: the DSH app agents run this job on Sunny's laptop (docs/dsh/agents/). Kept as a backup.
 on:
-  schedule:
-    - cron: "13 5 * * 6"   # Saturdays 10:13 PKT
   workflow_dispatch:
 
 permissions:

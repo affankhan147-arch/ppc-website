@@ -34,7 +34,7 @@ if not KEYED:  # last resort: GitHub Models via the workflow token (returned pla
 MODELS = []
 DEAD = set()
 MAX_TASKS = int(os.getenv("DSH_MAX_TASKS", "2"))
-MAX_WRITER = int(os.getenv("DSH_MAX_WRITER", "1"))
+MAX_WRITER = int(os.getenv("DSH_MAX_WRITER", "0"))  # WRITER tasks belong to the DSH app's Article Writer; set 1 to let the cloud write too
 CHECKS = [c for c in os.getenv("DSH_CHECKS", "npm run build").split(";;") if c.strip()]
 HEALTH = [c for c in os.getenv("DSH_HEALTH", "npm run build").split(";;") if c.strip()]
 DRY = os.getenv("DSH_DRY_RUN") == "1"
