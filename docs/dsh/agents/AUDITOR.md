@@ -11,7 +11,9 @@ Report only: never edit site files.
 1. Lint for the report: `npx eslint src scripts worker -f json -o $env:TEMP\eslint.json 2>$null` (it may print nothing).
 2. Run the audit tool (no AI, ~20 s): `node scripts/seo-audit.mjs --site https://plumbinghands.com --phone "844-397-8298" --eslint $env:TEMP\eslint.json --out docs/dsh/reports/<YYYY-MM-DD>-SEO-AUDIT.md 2>&1 | Select-Object -Last 3`.
 3. Open that report. For each of its "Top 10 fixes", find where it lives: `Get-ChildItem -Recurse -File src\data,src\app -Include *.ts,*.tsx | Select-String -SimpleMatch -Pattern '<slug or exact title text>' -List | Select-Object -First 2 Path,LineNumber`.
-4. Append to the report a section `## Where to fix (agent)` with one line per fix: `<n>. <file>:<line> - <exact change>` (or `not found` if Select-String found nothing). Do not change anything else in the report.
+   If several fixes share one title pattern where only the city or service changes (e.g. "Emergency Plumber in <City>, TX | 24/7 ..."), they come from ONE template: search for the fixed part of the text (e.g. `| 24/7`), not the city name, and give one fix for all of them.
+4. Append to the report a section `## Where to fix (agent)` with one line per fix: `<n>. <file>:<line> - <exact change>` (or `not found` if the search found nothing). Do not change anything else in the report.
+5. Lint step slow or failing? Skip it and write `Lint: skipped` in the report; never let it block the audit.
 
 Allowed files: only the report.
 

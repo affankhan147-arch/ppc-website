@@ -194,7 +194,7 @@ const priority = [
 
 const md = `# SEO-AUDIT - ${date}
 Status: DONE
-Model: none (scripts/seo-audit.mjs, GitHub Actions)
+Model: none (scripts/seo-audit.mjs, no AI)
 
 | Check | Result |
 |---|---|
