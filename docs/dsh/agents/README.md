@@ -8,6 +8,7 @@ Command path: Claude (DSH project) -> job files here + TASKS.md -> DSH app agent
 | Link Auditor (`LINKS.md`) | Thu 15:00 | its checklist + `scripts/seo-audit.mjs` | `dsh/<date>-LINK-AUDIT` |
 | Article Writer (`WRITER.md`) | daily 16:00 | Claude's briefs in TASKS.md (`Status: WRITER`) | `dsh/<date>-<task-id>` |
 | Backlink Scout (`BACKLINKS.md`) | Sat 15:00 | its checklist + `scripts/backlink-scout.mjs` | `dsh/<date>-BACKLINKS` |
+| Indexer (`INDEXER.md`) | trial run, started by Sunny | its trial checklist (Claude grades it against a private answer key) | `dsh/<date>-INDEX-TRIAL` |
 
 Agents run in the app's safe "Workspace Write" sandbox (one repo folder each, no access to the rest of the laptop). They sync, list and push with `scripts/dsh-git.ps1` (git's normal login helper is blocked in the sandbox; the script uses the GitHub CLI login for one command at a time and only pushes dsh/* branches).
 The cloud agent (GitHub Actions, daily 13:23) keeps doing `Status: OPEN` tasks and skips WRITER tasks. The GitHub workflows `seo-audit.yml` and `backlink-scout.yml` are manual-only backups.
