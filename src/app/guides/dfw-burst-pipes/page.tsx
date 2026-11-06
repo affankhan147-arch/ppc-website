@@ -117,7 +117,7 @@ export default function BurstPipesGuidePage() {
               <li><strong>Turn off electricity to the affected area if it's safe to reach the breaker</strong> without stepping through standing water. Never touch a wet switch or outlet.</li>
               <li><strong>Open a low faucet after shutting the main off</strong> to relieve the remaining pressure trapped in the lines, which reduces how much more water sprays out before the plumbing empties.</li>
               <li><strong>Photograph the damage before you start cleanup</strong> - your insurer will want documentation of the original extent, and TDI's mitigation guidance doesn't mean you have to clean everything up before help arrives, just that you should stop the water and protect what you can.</li>
-              <li><strong>Call for emergency service.</strong> See our <a href="/services/burst-pipe-emergency" className="text-[#F0B429] underline">burst pipe emergency service page</a> for what to expect from a same-day response, and our <a href="/cost-guides/burst-pipe-emergency-cost-guide" className="text-[#F0B429] underline">burst pipe cost guide</a> for realistic pricing factors before you approve any repair.</li>
+              <li><strong>Call for emergency service.</strong> See our <Link href="/services/burst-pipe-emergency" className="text-[#F0B429] underline">burst pipe emergency service page</Link> for what to expect from a same-day response, and our <Link href="/cost-guides/burst-pipe-emergency-cost-guide" className="text-[#F0B429] underline">burst pipe cost guide</Link> for realistic pricing factors before you approve any repair.</li>
             </ul>
           </section>
 

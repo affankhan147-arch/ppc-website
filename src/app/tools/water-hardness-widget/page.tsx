@@ -117,7 +117,7 @@ export default function WaterHardnessWidgetPage() {
             <ul className="list-disc space-y-2 pl-5 text-slate-300">
               <li>
                 Scale settles in the bottom of tank water heaters, which can cause popping or rumbling noises and lower efficiency
-                over time. Our <a href="/blog/water-heater-making-popping-noise-dallas" className="text-[#F0B429] underline">water heater popping noise guide</a> explains what to do.
+                over time. Our <Link href="/blog/water-heater-making-popping-noise-dallas" className="text-[#F0B429] underline">water heater popping noise guide</Link> explains what to do.
               </li>
               <li>Faucet aerators and showerheads clog with white mineral deposits and slowly lose flow.</li>
               <li>Glass shower doors, fixtures and dishes show spots and a chalky film.</li>

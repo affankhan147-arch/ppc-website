@@ -150,7 +150,7 @@ export default function DfwHousingAgeByCityPage() {
               This data tells you the odds for your city, not the facts for your specific address. If your home falls anywhere near or inside the 1978-1995 window - regardless of which city it's in - the only way to know for certain what pipe material you have is a visual inspection, which our guide above explains how to do yourself in a few minutes.
             </p>
             <p className="text-slate-300">
-              If you're buying an older DFW home, ask directly whether the property was built between 1978 and 1995 and whether the seller knows the supply-pipe material - Texas has no blanket legal requirement to disclose polybutylene pipe at sale. And regardless of a home's age, a sudden pipe failure doesn't wait for a convenient time; our <a href="/services/burst-pipe-emergency" className="text-[#F0B429] underline">24/7 burst pipe emergency service</a> covers the full DFW metro.
+              If you're buying an older DFW home, ask directly whether the property was built between 1978 and 1995 and whether the seller knows the supply-pipe material - Texas has no blanket legal requirement to disclose polybutylene pipe at sale. And regardless of a home's age, a sudden pipe failure doesn't wait for a convenient time; our <Link href="/services/burst-pipe-emergency" className="text-[#F0B429] underline">24/7 burst pipe emergency service</Link> covers the full DFW metro.
             </p>
           </section>
 
