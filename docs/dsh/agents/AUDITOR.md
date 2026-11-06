@@ -4,13 +4,13 @@ Command path: Claude (DSH project) writes this job file and the tasks in docs/ds
 Report only: never edit site files.
 
 ## Start (every run)
-1. `$env:GIT_TERMINAL_PROMPT=0; git checkout master 2>&1 | Select-Object -Last 2; git pull --ff-only 2>&1 | Select-Object -Last 2`. If either fails: write `BLOCKED: <last line>` and stop.
+1. `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\dsh-git.ps1 sync` (checks out master and pulls; plain `git pull` cannot log in inside the DSH sandbox). It must print `SYNCED master`; otherwise write what it printed as BLOCKED and stop.
 2. `git checkout -b dsh/<YYYY-MM-DD>-SEO-AUDIT` (today's date).
 
 ## Work
 1. Lint for the report: `npx eslint src scripts worker -f json -o $env:TEMP\eslint.json 2>$null` (it may print nothing).
 2. Run the audit tool (no AI, ~20 s): `node scripts/seo-audit.mjs --site https://plumbinghands.com --phone "844-397-8298" --eslint $env:TEMP\eslint.json --out docs/dsh/reports/<YYYY-MM-DD>-SEO-AUDIT.md 2>&1 | Select-Object -Last 3`.
-3. Open that report. For each of its "Top 10 fixes", find where it lives: `Select-String -Path src\data\*.ts,src\app\**\*.tsx -Pattern '<slug or exact title text>' -List | Select-Object -First 2 Path,LineNumber`.
+3. Open that report. For each of its "Top 10 fixes", find where it lives: `Get-ChildItem -Recurse -File src\data,src\app -Include *.ts,*.tsx | Select-String -SimpleMatch -Pattern '<slug or exact title text>' -List | Select-Object -First 2 Path,LineNumber`.
 4. Append to the report a section `## Where to fix (agent)` with one line per fix: `<n>. <file>:<line> - <exact change>` (or `not found` if Select-String found nothing). Do not change anything else in the report.
 
 Allowed files: only the report.
@@ -18,8 +18,8 @@ Allowed files: only the report.
 ## Finish: the report card
 1. `git add` ONLY the files this job allows (never `git add .`).
 2. `git commit -m "DSH SEO-AUDIT: <one line> (DONE)"` (or `(BLOCKED)`, with the reason in the report).
-3. `git push -u origin <branch> 2>&1 | Select-Object -Last 3`. Never push master; Claude reviews and merges.
-4. Prove it: `git ls-remote --heads origin <branch>` must print a line. If it prints nothing the push failed: say `BLOCKED: push failed` plus the error line. Never claim a push you did not verify.
+3. Push with the sandbox-safe helper (plain `git push` cannot log in inside the DSH sandbox): `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\dsh-git.ps1 push`. It only pushes dsh/* branches and checks GitHub afterwards. Never push master; Claude reviews and merges.
+4. It prints `PUSHED <branch>` or `BLOCKED: push failed` plus the error. Report exactly what it printed. Never claim a push you did not see confirmed.
 5. `git checkout master 2>&1 | Select-Object -Last 1`. End with one line: the branch you pushed, or BLOCKED and why.
 
 ## Hard rules

@@ -4,13 +4,13 @@ Command path: Claude (DSH project) writes this job file and the tasks in docs/ds
 Research only: never create accounts, sign in, submit forms, send emails or DMs, post comments, pay for links or use link schemes. Sunny places approved links himself after Claude checks them.
 
 ## Start (every run)
-1. `$env:GIT_TERMINAL_PROMPT=0; git checkout master 2>&1 | Select-Object -Last 2; git pull --ff-only 2>&1 | Select-Object -Last 2`. If either fails: write `BLOCKED: <last line>` and stop.
+1. `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\dsh-git.ps1 sync` (checks out master and pulls; plain `git pull` cannot log in inside the DSH sandbox). It must print `SYNCED master`; otherwise write what it printed as BLOCKED and stop.
 2. `git checkout -b dsh/<YYYY-MM-DD>-BACKLINKS` (today's date).
 
 ## Work
-1. Run the scout tool (it searches, then keeps only pages that load, are local and on topic, and don't already link to us):
-   `$env:SITE='https://plumbinghands.com'; $env:NAME='PlumbingHands'; $env:NICHE='plumbing'; $env:NICHE_WORD='plumb'; $env:CITIES='Dallas,Fort Worth,Plano,Arlington,Frisco,Irving,Garland,McKinney,Denton,Grand Prairie'; python scripts\backlink-scout.py 2>&1 | Select-Object -Last 3`
-   If `python` is not found, try `py scripts\backlink-scout.py`. If neither exists, do the steps by hand: search `https://html.duckduckgo.com/html/?q=<city> Texas plumbing business directory` with `Invoke-WebRequest -UseBasicParsing`, open each result, and keep only pages that load, are about our area or trade, and offer a free listing or a resources/links list.
+1. Run the scout tool (no AI; it searches, then keeps only pages that load, stay on their own site, are local and on topic, and don't already link to us):
+   `node scripts/backlink-scout.mjs --site https://plumbinghands.com --niche "plumbing" --word plumb --cities "Dallas,Fort Worth,Plano,Arlington,Frisco,Irving,Garland,McKinney,Denton,Grand Prairie" 2>&1 | Select-Object -Last 3`
+   If it finds nothing (search blocked), do the search by hand: `Invoke-WebRequest -UseBasicParsing "https://html.duckduckgo.com/html/?q=<city> Texas plumbing business directory"`, open each result, keep only pages that load, are about our area or trade, and offer a free listing or a resources/links list, and add them to the report table yourself.
 2. Open the report `docs/dsh/reports/<YYYY-MM-DD>-BACKLINKS.md`. Check every row by opening the page: delete rows that are spam, paid-only, off topic, or not about our cities. Keep at most 10.
 3. For each kept row, make sure "How to get listed" names the real button or page on that site.
 
@@ -19,8 +19,8 @@ Allowed files: the report and docs/dsh/backlinks-log.md.
 ## Finish: the report card
 1. `git add` ONLY the files this job allows (never `git add .`).
 2. `git commit -m "DSH BACKLINKS: <one line> (DONE)"` (or `(BLOCKED)`, with the reason in the report).
-3. `git push -u origin <branch> 2>&1 | Select-Object -Last 3`. Never push master; Claude reviews and merges.
-4. Prove it: `git ls-remote --heads origin <branch>` must print a line. If it prints nothing the push failed: say `BLOCKED: push failed` plus the error line. Never claim a push you did not verify.
+3. Push with the sandbox-safe helper (plain `git push` cannot log in inside the DSH sandbox): `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\dsh-git.ps1 push`. It only pushes dsh/* branches and checks GitHub afterwards. Never push master; Claude reviews and merges.
+4. It prints `PUSHED <branch>` or `BLOCKED: push failed` plus the error. Report exactly what it printed. Never claim a push you did not see confirmed.
 5. `git checkout master 2>&1 | Select-Object -Last 1`. End with one line: the branch you pushed, or BLOCKED and why.
 
 ## Hard rules
