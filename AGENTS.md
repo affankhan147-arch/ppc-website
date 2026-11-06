@@ -2,13 +2,15 @@
 
 Claude sessions follow their own task instructions; the branch-only rule below is for DSH.
 
+**In the DeepSeek Harness app: do ONLY what the message or the automation prompt asks.** Never take a task from docs/dsh/TASKS.md, create a branch or edit files unless that message tells you to. The cloud agent (GitHub Actions) does the OPEN tasks; the app's automation tasks follow their job file in `docs/dsh/agents/`.
+
 **Site:** www.plumbinghands.com. Dallas-Fort Worth emergency plumbing, pay-per-call. Every page exists to get a homeowner to call **1 844-397-8298**.
 **Stack:** Next.js 16 (App Router, TypeScript, Tailwind 4). Vercel deploys `master` automatically.
 **Supervisor:** Claude reviews every DSH branch each morning (about 08:45 PKT), merges what passes, and writes the next tasks.
 **Runs itself:** the GitHub Actions workflow `DSH agent` (`.github/workflows/dsh-agent.yml` + `scripts/dsh-agent.py`) does up to 2 tasks every day at 13:23 PKT with free Gemini via aider. The desktop DSH app is optional; if you use it, follow the steps below.
 **SEO agents:** four DSH app automation tasks (SEO Auditor, Link Auditor, Article Writer, Backlink Scout) follow their own job files in `docs/dsh/agents/`; read that file instead of the steps below when you run as one of them.
 
-## Start every session
+## Start a session (only when the message asks you to do the next TASKS.md task)
 1. `$env:GIT_TERMINAL_PROMPT=0; git checkout master 2>&1 | Select-Object -Last 3; git pull --ff-only 2>&1 | Select-Object -Last 3` (if pull fails, report BLOCKED with its last line; never let git open an editor or a login prompt)
 2. Open `docs/dsh/TASKS.md`. Take the FIRST task with `Status: OPEN` (or `Status: FIX`, which means redo it using Claude's note). One task per session.
 3. `git checkout -b dsh/<YYYY-MM-DD>-<task-id>` (for FIX, reuse the task's existing branch)
