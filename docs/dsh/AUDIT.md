@@ -2,6 +2,10 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-06 05:50 - Claude (setup, not a review)
+- Change of plan (Sunny): the 4 SEO agents run in the DeepSeek Harness app, 8 automation tasks (4 per site), in the safe Workspace Write sandbox; they push with scripts/dsh-git.ps1. GitHub seo-audit.yml / backlink-scout.yml are manual-only backups; the cloud agent skips WRITER tasks again. The 05:35 entry below is superseded. dsh/2026-11-06-SEO-AUDIT-2 is a real report from the sandboxed app agent: review and merge it normally.
+- AGENTS.md now tells app sessions to do only what the message asks (a setup session had picked up UHP-011 on its own).
+
 ## 2026-11-06 - Claude (setup, not a review)
 - SEO agents now run on GitHub (docs/dsh/agents/README.md): weekly audit script, weekly Backlink Scout, Article Writer = WRITER tasks in the cloud agent. The DeepSeek Harness app tasks were removed (its sandbox can't build or push).
 - Test branches from setup, nothing to merge, skip them: dsh/2026-11-05-BACKLINKS @cf51c34, dsh/2026-11-05-BACKLINKS-2156 @ec992d9, dsh/2026-11-05-BACKLINKS-2201 @f2c02a9, dsh/2026-11-06-SEO-AUDIT @221e457.
