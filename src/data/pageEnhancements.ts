@@ -3345,7 +3345,48 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
       { label: "Dallas service area", href: "/cities/dallas" },
       { label: "DFW lead service line inventory by city", href: "/blog/dfw-lead-service-line-inventory-by-city" },
-      { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" }
+      { label: "DFW water & sewer rate increases by city (2026)", href: "/blog/dfw-water-sewer-rate-increases-by-city-2026" },
+      { label: "Leak between the meter and the house: who fixes it in Dallas", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" }
+    ]
+  },
+  "water-leak-between-meter-and-house-dallas-who-fixes-it": {
+    checklistTitle: "How to tell which side of the meter is leaking",
+    checklistIntro:
+      "Pinpointing whether a water leak sits on your private service line or the city side determines who is responsible for the repair before you call a plumber or city utilities.",
+    checklistItems: [
+      "Wet or soggy ground, or unusually extra-green grass, located in the yard between the meter box and the house points to a leak on the private service line.",
+      "Water pooling inside the meter box itself or at the connection before the meter is typically a city-side meter leak to report to Dallas Water Utilities.",
+      "Turn off every fixture in the home and watch the meter's leak indicator dial to confirm water is moving through the line (our meter-check guide explains this step in detail).",
+      "If your home is equipped with a private customer shutoff valve near the house, closing it stops water to the home while you wait for assistance or diagnosis.",
+      "Do not dig around the meter box or attempt to adjust city equipment, as service lines and meter connections remain utility property."
+    ],
+    proofTitle: "After the repair: asking Dallas Water Utilities for a leak adjustment",
+    proofItems: [
+      "Repairs must be fully complete before you submit an adjustment application to Dallas Water Utilities.",
+      "Submit your request within 90 days of the repair date along with the repair receipt or paid-in-full invoice.",
+      "If approved, the adjustment covers at most 3 months of higher billing and allows only one adjustment per 12-month period.",
+      "Review by DWU can take up to 45 days, and filing an application does not guarantee an adjustment; repair costs and lost water remain the customer's responsibility."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call for a leak at the water meter in Dallas?",
+        answer: "Call 311, which takes Dallas water and sewer emergencies 24 hours a day (or 214-670-3111 from outside city limits), to report a meter leak."
+      },
+      {
+        question: "Who pays to fix the pipe between the meter and my Dallas house?",
+        answer: "The property owner. DWU states that owners control and are responsible for maintaining the private side of the service line running from the water meter to the home."
+      },
+      {
+        question: "Will Dallas credit my water bill for a leak?",
+        answer: "DWU offers a leak adjustment request process subject to specific rules: repairs must be finished, applications must be submitted within 90 days with receipts, and approval covers at most 3 months with a 12-month limit between adjustments."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" },
+      { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
+      { label: "Dallas service area", href: "/cities/dallas" }
     ]
   },
   "what-counts-as-a-plumbing-emergency": {
@@ -4967,7 +5008,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
       { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
       { label: "DFW Water Conservation Rebate Programs by City (2026)", href: "/blog/dfw-water-conservation-rebate-programs-by-city" },
-      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "Leak between the meter and the house: who fixes it in Dallas", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" }
     ]
   },
   "dfw-backflow-preventer-testing-requirements-by-city": {
