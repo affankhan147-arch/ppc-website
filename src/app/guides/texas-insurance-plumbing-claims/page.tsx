@@ -58,7 +58,7 @@ export default function InsuranceGuidePage() {
           <p className="text-lg leading-8 text-slate-200 mb-8">Texas insurance claims for plumbing leaks usually turn on one question: was the damage sudden and accidental, or gradual? This guide explains that rule, what a homeowners policy usually covers, and the common exclusions and myths.</p>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: The "Sudden and Accidental" Rule in Texas Plumbing Insurance Claims</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: The &quot;Sudden and Accidental&quot; Rule in Texas Plumbing Insurance Claims</h2>
             <p className="text-slate-300 mb-4">
               In Texas, the vast majority of homeowners insurance policies (HO-B) are standardized by the Texas Department of Insurance. The central test that determines whether a water damage claim is approved or denied is the distinction between <strong>sudden and accidental</strong> damage and <strong>gradual</strong> damage.
             </p>
@@ -82,7 +82,7 @@ export default function InsuranceGuidePage() {
               If the leak qualifies as "sudden and accidental", what does your policy actually pay for? The short answer is: <strong>the resulting damage to your home, not the repair of the failed pipe itself.</strong>
             </p>
             <p className="text-slate-300 mb-4">
-              Water damage to flooring, drywall, cabinets, and personal belongings is generally covered (subject to your policy's limits and deductible). However, the cost to repair or replace the burst pipe, failed water heater, or cracked fitting is typically treated as a maintenance expense and is not covered.
+              Water damage to flooring, drywall, cabinets, and personal belongings is generally covered (subject to your policy&apos;s limits and deductible). However, the cost to repair or replace the burst pipe, failed water heater, or cracked fitting is typically treated as a maintenance expense and is not covered.
             </p>
             <p className="text-slate-300 mb-4">
               Another common coverage is a freeze‑related burst pipe — but this often comes with a condition: the homeowner must have maintained adequate heat in the home during freezing weather. If the home was unoccupied and the heat was turned off, the claim may be denied.
@@ -91,7 +91,7 @@ export default function InsuranceGuidePage() {
               Source: TDI consumer guidance on burst pipes and water damage. The exact wording of any heat or vacancy condition varies by policy, so check yours before winter.
             </p>
             <p className="text-slate-300 mt-4">
-              This distinction is why hiring a licensed plumber to document the exact cause of the failure is so critical. An adjuster will base their decision on the plumber's professional assessment of whether the failure was sudden or gradual.
+              This distinction is why hiring a licensed plumber to document the exact cause of the failure is so critical. An adjuster will base their decision on the plumber&apos;s professional assessment of whether the failure was sudden or gradual.
             </p>
           </section>
 
