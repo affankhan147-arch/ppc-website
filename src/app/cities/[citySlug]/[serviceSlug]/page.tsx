@@ -80,6 +80,10 @@ export default async function CityServicePage({ params }: Props) {
     ...universalFaqs
   ].slice(0, 8);
 
+  const nearbyCities = cities
+    .filter((c) => c.marketSlug === city.marketSlug && c.slug !== city.slug && isPriorityCityService(c.slug, service.slug))
+    .slice(0, 8);
+
   return (
     <main className="page-shell">
       <JsonLd
@@ -162,6 +166,17 @@ export default async function CityServicePage({ params }: Props) {
             <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
             <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
             <li><Link className="font-bold text-emerald-300 underline" href="/cost-guides/burst-pipe-emergency-cost-guide">Burst pipe repair cost guide</Link></li>
+          </ul>
+        </section>
+      ) : null}
+      {nearbyCities.length > 0 ? (
+        <section className="content-section">
+          <p className="section-kicker">Nearby cities</p>
+          <h2 className="mt-2 text-2xl font-black text-white">{displayName} in nearby cities</h2>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            {nearbyCities.map((c) => (
+              <li key={c.slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${c.slug}/${service.slug}`}>{displayName} in {c.name}</Link></li>
+            ))}
           </ul>
         </section>
       ) : null}
