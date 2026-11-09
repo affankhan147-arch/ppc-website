@@ -90,7 +90,7 @@ export default function GasLineGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: Licensing and Permits</h2>
             <p className="text-slate-300 mb-4">
-              In Texas, the <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas State Board of Plumbing Examiners (TSBPE)</a> holds exclusive statewide authority to license plumbers. Any plumber performing fuel gas piping, line extensions, or appliance connections must hold a current, active Master or Journeyman Plumber license issued by TSBPE – the same license that covers general plumbing work. No separate "gas-work endorsement" is required for standard residential fuel gas installations (such as outdoor kitchens, pool heaters, or appliance connections); the standard plumbing license already covers this work.
+              In Texas, the <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Texas State Board of Plumbing Examiners (TSBPE)</a> holds exclusive statewide authority to license plumbers. Any plumber performing fuel gas piping, line extensions, or appliance connections must hold a current, active Master or Journeyman Plumber license issued by TSBPE – the same license that covers general plumbing work. No separate &quot;gas-work endorsement&quot; is required for standard residential fuel gas installations (such as outdoor kitchens, pool heaters, or appliance connections); the standard plumbing license already covers this work.
             </p>
             <p className="text-slate-300 mb-4">
               Before any work begins, homeowners should confirm two things:
@@ -112,7 +112,7 @@ export default function GasLineGuidePage() {
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Has my gas line been sized correctly for this additional load?</strong> A professional load calculation (not just a visual inspection) is required to ensure the existing line can safely handle the new appliance.</li>
               <li><strong>Does this installation require a permit?</strong> If the answer is “no” for gas work, that is a red flag. Most municipalities require permits for any new or extended gas piping.</li>
-              <li><strong>Is the contractor licensed to perform gas work in Texas?</strong> Confirm that the plumber holds a current, active Master or Journeyman license from TSBPE. You can verify this directly through TSBPE's public license search database.</li>
+              <li><strong>Is the contractor licensed to perform gas work in Texas?</strong> Confirm that the plumber holds a current, active Master or Journeyman license from TSBPE. You can verify this directly through TSBPE&apos;s public license search database.</li>
               <li><strong>What are the pressure test and inspection requirements?</strong> After installation, the system must be pressure‑tested to confirm there are no leaks. Ask whether this test is included in the quote, and whether the city inspector will sign off on the completed work.</li>
             </ul>
             <p className="text-slate-300">
