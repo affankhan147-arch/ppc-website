@@ -43,9 +43,9 @@ export default function PartnersPage() {
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Who We Partner With</h2>
             <p className="text-slate-300 mb-4">We work with:</p>
             <ul className="list-disc list-inside text-slate-300 space-y-2">
-              <li><strong>Restoration companies</strong> – after you've handled the cleanup, send us the plumbing repair.</li>
-              <li><strong>Insurance agents & public adjusters</strong> – when your clients need a trusted emergency plumber, we're ready.</li>
-              <li><strong>Property managers & HOAs</strong> – we're available 24/7 for your tenants and residents.</li>
+              <li><strong>Restoration companies</strong> – after you&apos;ve handled the cleanup, send us the plumbing repair.</li>
+              <li><strong>Insurance agents & public adjusters</strong> – when your clients need a trusted emergency plumber, we&apos;re ready.</li>
+              <li><strong>Property managers & HOAs</strong> – we&apos;re available 24/7 for your tenants and residents.</li>
               <li><strong>Real estate agents</strong> – a reliable plumbing partner is a great resource to offer your clients.</li>
             </ul>
           </section>
@@ -63,10 +63,10 @@ export default function PartnersPage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why Partner With Us?</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-2">
-              <li>We serve all 30 DFW cities – from Dallas to Wylie, we've got coverage.</li>
-              <li>We're available 24/7 – your referrals never wait.</li>
+              <li>We serve all 30 DFW cities – from Dallas to Wylie, we&apos;ve got coverage.</li>
+              <li>We&apos;re available 24/7 – your referrals never wait.</li>
               <li>We use verified, licensed providers – your reputation stays safe.</li>
-              <li>We're transparent – you get clear reporting on each referral.</li>
+              <li>We&apos;re transparent – you get clear reporting on each referral.</li>
             </ul>
           </section>
 
