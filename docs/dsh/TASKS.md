@@ -241,6 +241,24 @@ Done when: `npm run build` passes and `.next/server/app/cost-guides/burst-pipe-e
 
 ---
 
+## PH-023 - CTR: city page titles lead with "24 Hour Emergency Plumber" - Status: OPEN
+Files: `src/app/cities/[citySlug]/page.tsx`
+Goal: the city hub pages rank around position 9-14 for "24 hour plumber" and "emergency plumber" but get almost no clicks (Search Console, 28 days to 2026-11-07: over 11,000 impressions, 4 clicks). Put the top search words at the front of the title and description. Baseline: docs/dsh/CTR.md.
+1. Replace this line (about line 53):
+```tsx
+    title: `Emergency Plumber in ${city.name}, TX | 24/7 Emergency Plumbing`,
+```
+with exactly:
+```tsx
+    title: `24 Hour Emergency Plumber in ${city.name}, TX`,
+```
+2. In `function buildCityDescription` (about line 30), add this line as the FIRST item of the `candidates` array, directly below `  const candidates = [`:
+```tsx
+    `24 hour plumber in ${city.name}, TX: call ${siteConfig.phoneDisplay} day or night for burst pipes, sewer backups and water heater leaks. Ask the price first.`,
+```
+Change nothing else.
+Done when: `npm run build` passes and both lines are in the file exactly as written above.
+
 ## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: OPEN
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/water-leak-between-meter-and-house-dallas-who-fixes-it`. Search intent: "water leak between meter and house dallas who pays". The page renders automatically from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit).
