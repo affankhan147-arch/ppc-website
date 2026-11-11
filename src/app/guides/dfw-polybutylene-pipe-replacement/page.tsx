@@ -71,7 +71,7 @@ export default function PolybutylenePipeGuidePage() {
               The legal history of polybutylene is well-documented. A class-action lawsuit, <em>Cox v. Shell</em>, was filed on behalf of homeowners with PB pipe, eventually settling in 1995 for approximately $1 billion. Production of polybutylene pipe ceased in the same year.
             </p>
             <p className="text-slate-300">
-              For homeowners in DFW, the risk is compounded by two local factors: the region's hard water (7-12 grains per gallon in many cities) and expansive clay soil, which can stress underground plumbing lines. These conditions accelerate the degradation process, making PB pipe failures more common in DFW than in areas with softer water and more stable soil. There is often no legal requirement to disclose the presence of polybutylene pipe when selling a home, which means many buyers may not be aware of the potential liability until a leak occurs.
+              For homeowners in DFW, the risk is compounded by two local factors: the region&apos;s hard water (7-12 grains per gallon in many cities) and expansive clay soil, which can stress underground plumbing lines. These conditions accelerate the degradation process, making PB pipe failures more common in DFW than in areas with softer water and more stable soil. There is often no legal requirement to disclose the presence of polybutylene pipe when selling a home, which means many buyers may not be aware of the potential liability until a leak occurs.
             </p>
           </section>
 
@@ -83,12 +83,12 @@ export default function PolybutylenePipeGuidePage() {
             <p className="text-slate-300 mb-4">The most reliable visual identifiers are:</p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Color:</strong> Polybutylene is almost always a dull, light gray plastic. It is distinct from the bright red, blue, or white colors of modern PEX piping, and it does not have the metallic sheen of copper.</li>
-              <li><strong>Markings:</strong> The pipe is often stamped with the manufacturer's name and the material code. Common markings include &ldquo;PB2110&rdquo;, &ldquo;Qest&rdquo;, or &ldquo;Vanguard&rdquo;. These stamps are usually printed along the length of the pipe every few feet.</li>
+              <li><strong>Markings:</strong> The pipe is often stamped with the manufacturer&apos;s name and the material code. Common markings include &ldquo;PB2110&rdquo;, &ldquo;Qest&rdquo;, or &ldquo;Vanguard&rdquo;. These stamps are usually printed along the length of the pipe every few feet.</li>
               <li><strong>Fittings:</strong> PB pipe is joined with crimp-style fittings. Early installations used plastic insert fittings, which have a higher failure rate. Later installations (late 1980s onward) used copper crimp fittings, which have proven more reliable, but the pipe itself remains the primary risk factor.</li>
               <li><strong>Location:</strong> PB pipe was installed as both hot and cold supply lines throughout the home. It is commonly found in the attic, crawlspace, or basement, running from the main water heater to fixtures.</li>
             </ul>
             <p className="text-slate-300 mb-4">
-              In the Dallas-Fort Worth area, the risk is compounded by two persistent local factors: moderately hard water (7-12 grains per gallon in many cities, including Mesquite, which has documented PB failures) and the region's expansive clay soil. The clay soil causes constant shifting, which stresses underground plumbing lines, while hard water accelerates the oxidation of the pipe from the inside out.
+              In the Dallas-Fort Worth area, the risk is compounded by two persistent local factors: moderately hard water (7-12 grains per gallon in many cities, including Mesquite, which has documented PB failures) and the region&apos;s expansive clay soil. The clay soil causes constant shifting, which stresses underground plumbing lines, while hard water accelerates the oxidation of the pipe from the inside out.
             </p>
             <p className="text-slate-300">
               A critical piece of advice for homeowners: there is often <strong>no legal requirement</strong> to disclose the presence of polybutylene pipe during a home sale in many Texas jurisdictions. Buyers should specifically ask the seller or their real estate agent whether the property was built between 1978 and 1995 and whether PB pipe is present. A proactive inspection by a licensed plumber is the only way to be certain.

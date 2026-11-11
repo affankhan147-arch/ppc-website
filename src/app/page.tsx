@@ -105,7 +105,7 @@ export default function HomePage() {
           <article className="max-w-3xl">
             <p className="eyebrow"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Plumbing Service in Dallas-Fort Worth</p>
             <h1 className="display-title mt-6 text-5xl font-bold leading-[.98] sm:text-6xl lg:text-7xl">
-              DFW's Fastest Emergency Plumber – 24/7
+              DFW&apos;s Fastest Emergency Plumber – 24/7
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 sm:text-xl">
               Need an emergency plumber in Dallas-Fort Worth? Call Plumbing Hands for active leaks and drain backups, plus sewer, toilet, burst-pipe, and water-heater problems.
