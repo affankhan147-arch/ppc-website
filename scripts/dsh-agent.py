@@ -16,6 +16,7 @@ import json
 import os
 import pathlib
 import re
+import shlex
 import subprocess
 import sys
 import urllib.request
@@ -292,7 +293,7 @@ def do_task(task_id, title, status, block):
 
     to_add = " ".join(f'"{f}"' for f in files + [str(report.relative_to(ROOT))])
     must(f"git add -- {to_add}")
-    must(f'git commit -q -m "DSH {task_id}: {title[:60]} ({state})"')
+    must("git commit -q -m " + shlex.quote(f"DSH {task_id}: {title[:60]} ({state})"))
     if DRY:
         print(f"{task_id}: dry run, not pushing. Report:\n{report.read_text()}")
     else:
