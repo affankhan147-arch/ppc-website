@@ -241,7 +241,7 @@ Done when: `npm run build` passes and `.next/server/app/cost-guides/burst-pipe-e
 
 ---
 
-## PH-023 - CTR: city page titles lead with "24 Hour Emergency Plumber" - Status: OPEN
+## PH-023 - CTR: city page titles lead with 24 Hour Emergency Plumber - Status: OPEN
 Files: `src/app/cities/[citySlug]/page.tsx`
 Goal: the city hub pages rank around position 9-14 for "24 hour plumber" and "emergency plumber" but get almost no clicks (Search Console, 28 days to 2026-11-07: over 11,000 impressions, 4 clicks). Put the top search words at the front of the title and description. Baseline: docs/dsh/CTR.md.
 1. Replace this line (about line 53):
@@ -259,7 +259,11 @@ with exactly:
 Change nothing else.
 Done when: `npm run build` passes and both lines are in the file exactly as written above.
 
-## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: OPEN
+## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: FIX
+Claude note 2026-11-11: everything else passed review; fix 2 lines in `src/data/pageEnhancements.ts`, entry `"water-leak-between-meter-and-house-dallas-who-fixes-it"`, on the existing branch dsh/2026-11-06-PH-013:
+1. Last `checklistItems` line: replace `Do not dig around the meter box or attempt to adjust city equipment, as service lines and meter connections remain utility property.` with `Do not dig around the meter box or touch the city's meter or other city equipment.` (the old text says service lines are utility property, which contradicts the post: the private side is the owner's).
+2. First `extraFaqs` answer: delete ` (or 214-670-3111 from outside city limits)` so it reads `Call 311, which takes Dallas water and sewer emergencies 24 hours a day, to report a meter leak.` (that number was not in the brief's sources).
+Change nothing else. Done when: `npm run build` passes and the file contains both new texts exactly.
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/water-leak-between-meter-and-house-dallas-who-fixes-it`. Search intent: "water leak between meter and house dallas who pays". The page renders automatically from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit).
 1. `src/data/blogPosts.ts`: at the very end of the file, add a new post copying the shape of `waterMeterLeakDetectionPost` exactly (search `export const waterMeterLeakDetectionPost`), then `blogPosts.push(waterLeakMeterToHouseDallasPost);`. Use exactly:
@@ -281,7 +285,7 @@ Done when: `npm run build` passes and `.next/server/app/blog/water-leak-between-
 
 ---
 
-## PH-014 - Replace 4 plain <a> page links with <Link> (lint) - Status: OPEN
+## PH-014 - Replace 4 plain <a> page links with <Link> (lint) - Status: DONE (2026-11-11, merged a653ed4)
 Files: `src/app/guides/dfw-burst-pipes/page.tsx`, `src/app/guides/dfw-housing-age-by-city/page.tsx`, `src/app/tools/water-hardness-widget/page.tsx`
 `Link` is already imported in all 3 files. Change only these links: replace `<a href=` with `<Link href=` and the matching `</a>` with `</Link>`, keep href, className and text exactly as they are.
 - `src/app/guides/dfw-burst-pipes/page.tsx` line ~120 (the `<li>` starting `<strong>Call for emergency service.</strong>`): both links, `/services/burst-pipe-emergency` and `/cost-guides/burst-pipe-emergency-cost-guide`.
@@ -292,7 +296,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-burst-pipes
 
 ---
 
-## PH-015 - Escape quotes and apostrophes in the DFW slab leaks guide (lint) - Status: OPEN
+## PH-015 - Escape quotes and apostrophes in the DFW slab leaks guide (lint) - Status: DONE (2026-11-11, merged 50644a0)
 Files: `src/app/guides/dfw-slab-leaks/page.tsx`
 Make exactly these text replacements (visible text only; do not touch `className="..."` or other attributes):
 - line ~116: `<em>"Will my insurance cover this?"</em>` -> `<em>&quot;Will my insurance cover this?&quot;</em>`
@@ -307,7 +311,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-slab-leaks/
 
 ---
 
-## PH-016 - Escape quotes and apostrophes in the DFW water heater lifespan guide (lint) - Status: OPEN
+## PH-016 - Escape quotes and apostrophes in the DFW water heater lifespan guide (lint) - Status: DONE (2026-11-11, merged 63dbafc)
 Files: `src/app/guides/dfw-water-heater-lifespan/page.tsx`
 Make exactly these text replacements, each only on the line given (visible text only; never touch `className="..."` or other attributes):
 - line ~78: `DFW's` -> `DFW&apos;s`
@@ -323,7 +327,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-water-heate
 
 ---
 
-## PH-017 - Escape quotes and apostrophes in 2 data guides (lint) - Status: OPEN
+## PH-017 - Escape quotes and apostrophes in 2 data guides (lint) - Status: DONE (2026-11-11, merged 4e1db83)
 Files: `src/app/guides/texas-insurance-plumbing-claims/page.tsx`, `src/app/guides/dfw-plumbing-data/page.tsx`
 Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
 `src/app/guides/texas-insurance-plumbing-claims/page.tsx`
@@ -341,7 +345,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/texas-insurance
 
 ---
 
-## PH-018 - Same service in nearby cities on city-service pages - Status: OPEN
+## PH-018 - Same service in nearby cities on city-service pages - Status: DONE (2026-11-11, merged 2c3c421)
 Files: `src/app/cities/[citySlug]/[serviceSlug]/page.tsx`
 Goal: each city-service page links to the same service in up to 8 nearby cities in its market (only pages that exist). `cities`, `isPriorityCityService`, `Link`, `city`, `service` and `displayName` are already available in the component.
 1. Inside `export default async function CityServicePage`, directly above its line `  return (` (about line 83), add exactly:
@@ -369,7 +373,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/plano/burst-pipe-
 
 ---
 
-## PH-019 - Escape quotes and apostrophes in 4 small files (lint) - Status: OPEN
+## PH-019 - Escape quotes and apostrophes in 4 small files (lint) - Status: DONE (2026-11-11, merged 3fd74dd)
 Files: `src/app/guides/dfw-gas-line-safety/page.tsx`, `src/app/guides/dfw-polybutylene-pipe-replacement/page.tsx`, `src/app/guides/dfw-sewer-root-intrusion/page.tsx`, `src/app/page.tsx`
 Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
 `src/app/guides/dfw-gas-line-safety/page.tsx`
@@ -411,7 +415,7 @@ Done when: `npm run build` passes and `.next/server/app/blog/tankless-water-heat
 
 ---
 
-## PH-021 - Escape quotes and apostrophes on the partners page and restaurant drain post (lint) - Status: OPEN
+## PH-021 - Escape quotes and apostrophes on the partners page and restaurant drain post (lint) - Status: DONE (2026-11-11, merged 8d82e21)
 Files: `src/app/partners/page.tsx`, `src/app/blog/drain-backup-in-a-restaurant-what-owners-should-do-first/page.tsx`
 Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
 `src/app/partners/page.tsx`
@@ -444,3 +448,226 @@ Make exactly these text replacements, each only on the line given (visible text 
 - line ~175: `plumber's` -> `plumber&apos;s`
 No other changes.
 Done when: `npm run build` passes and `npx eslint src/app/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas/page.tsx` reports 0 errors.
+
+---
+
+## PH-024 - Links into the DFW emergency plumbing cost guide - Status: OPEN
+Files: `src/data/pageEnhancements.ts`
+Why: /guides/dfw-emergency-plumbing-costs has 1,018 impressions at position 13.0 and its top query "emergency plumber cost" sits at position 24 (Search Console, 28 days to 2026-11-07). Two more related pages should link to it.
+Search for each entry key (do not read the whole file). Change only the lines named here; other tasks edit other entries in this file.
+1. Inside the entry `  "emergency-drain-cleaning-in-fort-worth-fast-homeowner-guide": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "DFW emergency plumbing costs guide", href: "/guides/dfw-emergency-plumbing-costs" }
+```
+2. Inside the entry `  "emergency-plumbing-cost-dfw": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "DFW emergency plumbing costs guide", href: "/guides/dfw-emergency-plumbing-costs" }
+```
+No other changes.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `{ label: "DFW emergency plumbing costs guide", href: "/guides/dfw-emergency-plumbing-costs" }` and `{ label: "DFW emergency plumbing costs guide", href: "/guides/dfw-emergency-plumbing-costs" }` exactly once each.
+
+---
+
+## PH-025 - Links into the sewer line repair cost calculator - Status: OPEN
+Files: `src/data/pageEnhancements.ts`
+Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 (Search Console, 28 days to 2026-11-07) but only a few pages link to it. Three sewer pages should.
+Search for each entry key (do not read the whole file). Change only the lines named here; other tasks edit other entries in this file.
+1. Inside the entry `  "main-sewer-line-signs": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
+```
+2. Inside the entry `  "is-a-clogged-drain-actually-a-sewer-line-problem": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Main sewer line clogged in Dallas: warning signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
+```
+3. Inside the entry `  "dallas-storms-and-sewer-backups-what-to-check": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
+```
+No other changes.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `{ label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }` and `{ label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }` and `{ label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }` exactly once each.
+
+---
+
+## PH-027 - Links into the slab leak repair cost calculator - Status: OPEN
+Files: `src/data/pageEnhancements.ts`
+Why: /tools/slab-leak-repair-cost-calculator has 1,204 impressions at position 22.1 (Search Console, 28 days to 2026-11-07). Three leak pages should link to it.
+Search for each entry key (do not read the whole file). Change only the lines named here; other tasks edit other entries in this file.
+1. Inside the entry `  "emergency-leak-repair-cost-dfw": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+```
+2. Inside the entry `  "slab-leak-warning-signs-dallas-fort-worth-homeowners": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+```
+3. Inside the entry `  "sudden-low-water-pressure-in-dallas-home-what-it-means": {`, find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Water Pressure Regulator (PRV) Replacement Cost Calculator", href: "/tools/water-pressure-regulator-cost-calculator" }
+```
+Add a comma at the end of that line, then insert this new line directly below it:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+```
+No other changes.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `{ label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }` and `{ label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }` and `{ label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }` exactly once each.
+
+---
+
+## PH-028 - Links from the 24-hour emergency plumber service page to Houston and San Antonio - Status: OPEN
+Files: `src/data/pageEnhancements.ts`
+Why: /cities/houston/24-hour-emergency-plumber (1,924 impressions, position 18.5) and /cities/san-antonio/24-hour-emergency-plumber (1,353 impressions, position 23.2) are only linked from the home page and their own city hubs (Search Console, 28 days to 2026-11-07). The main 24-hour service page should link to both.
+Search for the entry key (do not read the whole file). Change only these lines; other tasks edit other entries in this file.
+1. Inside the entry `  "24-hour-emergency-plumber": {` (near the top of the file, about line 72), find this line (the last line of its `extraLinks` list):
+```ts
+      { label: "Toilet overflow steps", href: "/problems/toilet-overflowing-will-not-stop" }
+```
+Add a comma at the end of that line, then insert these two lines directly below it:
+```ts
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }
+```
+No other changes.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains both new lines exactly once.
+
+---
+
+## PH-026 - Shorter search titles for 2 cost calculators - Status: OPEN
+Files: `src/data/seoOverrides.ts`
+Why: the 2026-11-06 SEO audit found these tool titles over 60 characters, so Google cuts them off. Only the search title changes (the page H1 stays). Both pages are on the "Rankings first" list in docs/dsh/CTR.md.
+1. Find the entry `  "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do": {`. It is the LAST entry: its closing line `  }` is directly above the final line `};` of the file. Change that `  }` to `  },` and insert directly below it (above `};`) exactly:
+```ts
+  // SEO-AUDIT 2026-11-06: title was 65 chars.
+  "/tools/sewer-line-repair-cost-calculator": {
+    title: "Sewer Line Repair Cost Calculator: Trenchless vs. Dig"
+  },
+  // SEO-AUDIT 2026-11-06: title was 62 chars.
+  "/tools/water-service-line-cost-calculator": {
+    title: "Water Service Line Cost Calculator (Plus Who Pays)"
+  }
+```
+No other changes.
+Done when: `npm run build` passes and `.next/server/app/tools/sewer-line-repair-cost-calculator.html` contains `<title>Sewer Line Repair Cost Calculator: Trenchless vs. Dig`.
+
+---
+
+## PH-029 - Escape quotes and apostrophes in the DFW burst pipes guide (lint) - Status: OPEN
+File: `src/app/guides/dfw-burst-pipes/page.tsx`
+Why: `npm run lint` reports 28 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
+- line ~62: `You'd` -> `You&apos;d`
+- line ~64: `isn't` -> `isn&apos;t` and `it's` -> `it&apos;s` and `doesn't` -> `doesn&apos;t`
+- line ~67: `don't` -> `don&apos;t` and `area's` -> `area&apos;s`
+- line ~70: `isn't` -> `isn&apos;t` and `DFW's` -> `DFW&apos;s`
+- line ~85: `DFW's` -> `DFW&apos;s`
+- line ~87: `2021's` -> `2021&apos;s` and `aren't` -> `aren&apos;t` and `they're` -> `they&apos;re`
+- line ~90: `industry's` -> `industry&apos;s`
+- line ~93: `isn't` -> `isn&apos;t` and `it's` -> `it&apos;s` and `doesn't` -> `doesn&apos;t`
+- line ~100: `"most"` -> `&quot;most&quot;` and `what's` -> `what&apos;s` and `it's` -> `it&apos;s`
+- line ~106: `policyholder's` -> `policyholder&apos;s` and `doesn't` -> `doesn&apos;t`
+- line ~116: `don't` -> `don&apos;t`
+- line ~117: `it's` -> `it&apos;s`
+- line ~119: `TDI's` -> `TDI&apos;s` and `doesn't` -> `doesn&apos;t`
+- line ~133: `it's` -> `it&apos;s`
+- line ~142: `DFW's` -> `DFW&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-burst-pipes/page.tsx` reports 0 errors.
+
+---
+
+## PH-030 - Escape quotes and apostrophes in the DFW freeze history guide (lint) - Status: OPEN
+File: `src/app/guides/dfw-freeze-history/page.tsx`
+Why: `npm run lint` reports 21 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
+- line ~62: `DFW's` -> `DFW&apos;s`
+- line ~64: `"DFW` -> `&quot;DFW` and `freezes"` -> `freezes&quot;` and `it's` -> `it&apos;s` and `Service's` -> `Service&apos;s`
+- line ~67: `aren't` -> `aren&apos;t` and `NWS's` -> `NWS&apos;s` and `DFW's` -> `DFW&apos;s`
+- line ~70: `DFW's` -> `DFW&apos;s`
+- line ~75: `DFW's` -> `DFW&apos;s`
+- line ~77: `DFW's` -> `DFW&apos;s`
+- line ~80: `DFW's` -> `DFW&apos;s` and `region's` -> `region&apos;s`
+- line ~85: `"DFW` -> `&quot;DFW` and `Doesn't` -> `Doesn&apos;t` and `Freeze"` -> `Freeze&quot;`
+- line ~87: `2021's` -> `2021&apos;s`
+- line ~90: `isn't` -> `isn&apos;t` and `NWS's` -> `NWS&apos;s`
+- line ~95: `Winter's` -> `Winter&apos;s`
+- line ~116: `DFW's` -> `DFW&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-freeze-history/page.tsx` reports 0 errors.
+
+---
+
+## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: OPEN
+File: `src/app/guides/dfw-housing-age-by-city/page.tsx`
+Why: `npm run lint` reports 21 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
+- line ~45: `Bureau's` -> `Bureau&apos;s`
+- line ~64: `home's` -> `home&apos;s` and `DFW's` -> `DFW&apos;s` and `Bureau's` -> `Bureau&apos;s` and `city's` -> `city&apos;s`
+- line ~115: `city's` -> `city&apos;s` and `"typical"` -> `&quot;typical&quot;` and `Arlington's` -> `Arlington&apos;s` and `Allen's` -> `Allen&apos;s`
+- line ~120: `Home's` -> `Home&apos;s`
+- line ~125: `DFW's` -> `DFW&apos;s`
+- line ~126: `DFW's` -> `DFW&apos;s`
+- line ~127: `DFW's` -> `DFW&apos;s`
+- line ~130: `city's` -> `city&apos;s`
+- line ~143: `DFW's` -> `DFW&apos;s`
+- line ~150: `it's` -> `it&apos;s`
+- line ~153: `you're` -> `you&apos;re` and `home's` -> `home&apos;s` and `doesn't` -> `doesn&apos;t`
+- line ~162: `DFW's` -> `DFW&apos;s`
+No other changes.
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-housing-age-by-city/page.tsx` reports 0 errors.
+
+---
+
+## PH-032 - New blog post: who is responsible for the sewer line in Fort Worth - Status: WRITER
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/who-is-responsible-for-sewer-line-fort-worth`. Search intent: "who is responsible for sewer line fort worth" (owner vs city). Service: main sewer line clog. It supports /tools/sewer-line-repair-cost-calculator (2,130 impressions, position 40) and /cities/fort-worth (2,399 impressions, position 9.9). The page renders automatically from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit). This is a different question from the existing post "Sewer backup in Fort Worth: what it means" (that one is about symptoms); do not copy its text.
+1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(anodeRodMaintenancePost);` (about line 369), add a new post copying the shape of `anodeRodMaintenancePost` exactly, then `blogPosts.push(fortWorthSewerLineResponsibilityPost);`. Do NOT add it at the end of the file or after the tankless post (other tasks add there). Use exactly:
+   - const name `fortWorthSewerLineResponsibilityPost`
+   - slug `who-is-responsible-for-sewer-line-fort-worth`
+   - title `Who Is Responsible for the Sewer Line in Fort Worth? Owner vs. City`
+   - directAnswer `In Fort Worth, the sewer lateral, the pipe from your house to the public sewer main, is privately owned and maintained, so repairs to it are the property owner's job. The city is responsible for the sewer mains and outfalls in rights-of-way and easements. For a backup, call Fort Worth Water at 817-392-4477 first: city crews check the main and tell you whether the problem is theirs.`
+   - category `Drain and sewer guidance`, relatedServiceSlug `main-sewer-line-clog`
+2. `src/data/pageEnhancements.ts` (search, do not read whole):
+   a. In the entry `"drain-smell-in-bathroom-sewer-gas-or-simple-clog"`, find its last `extraLinks` line `      { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" }`, add a comma at its end and insert below it `      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }`.
+   b. Directly after that entry's closing `  },`, add a new entry keyed `"who-is-responsible-for-sewer-line-fort-worth"`, copying the fields of `"drain-smell-in-bathroom-sewer-gas-or-simple-clog"` exactly (checklistTitle, checklistIntro, checklistItems, proofTitle, proofItems, extraFaqs, extraLinks). Write plain, human copy using ONLY these facts (no prices, no guarantees, no invented facts):
+   - checklistTitle `Is the backup in the city main or your sewer lateral?`. Intro 1-2 sentences + 5 items: Fort Worth Water says a backup that happens while you are not using any water outlets may be a problem in the city main; if the trouble only shows up when you run water, it is likely in your private sewer lateral; call 817-392-4477 and city crews will check the mains and tell you if the problem is in the city main or not; the same number is answered 24 hours a day (Option 1 for water emergencies); report sewage flowing onto the ground to 817-392-4477 as well.
+   - proofTitle `Fixing a private sewer line in Fort Worth`. 4-5 items using ONLY these facts: Fort Worth requires a plumbing permit for changing, installing, moving or repairing plumbing; permit applicants must be a registered building contractor or meet the requirements for a homestead permit; a Fort Worth plumbing contractor registration requires a valid Texas Master Plumber License; ask the plumber who will pull the permit before work starts; a homeowner working on their own homestead does not need a state plumbing license (Texas Occupations Code Sec. 1301.051), but the city permit rules above still apply.
+   - extraFaqs (3): "Who pays to fix the sewer line in Fort Worth?" (the owner: Fort Worth Water calls the sewer lateral "the privately owned and maintained sewer pipe" connecting a building to the public sewer main; the city is responsible for mains and outfalls in rights-of-way and easements); "Who do I call for a sewer backup in Fort Worth?" (817-392-4477, 24 hours a day; city crews check the main first); "Do I need a permit to replace my sewer line in Fort Worth?" (repairing plumbing requires a plumbing permit; the applicant must be a registered contractor or qualify for a homestead permit).
+   - extraLinks (5): `{ label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" }`, `{ label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" }`, `{ label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }`, `{ label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" }`, `{ label: "Fort Worth plumbing help", href: "/cities/fort-worth" }`.
+   c. In the entry `"toilet-shower-and-sink-backing-up-together-what-it-means"`, find its last `extraLinks` line `      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }`, add a comma and insert below it `      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }`.
+3. `src/data/seoOverrides.ts`: insert directly ABOVE the line `  // 42 impr / 2.4% / pos 4.3` exactly:
+```ts
+  // New post 2026-11-11 (PH-032).
+  "/blog/who-is-responsible-for-sewer-line-fort-worth": {
+    title: "Fort Worth Sewer Line: Who Is Responsible, Owner or City?",
+    description:
+      "In Fort Worth the sewer pipe from your house to the city main is yours to maintain. How to tell whose problem a backup is, who to call and the permit rules."
+  },
+```
+4. `src/data/contentDates.ts`: directly below the line `  "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call": "2026-07-11",` add `  "/blog/who-is-responsible-for-sewer-line-fort-worth": "2026-11-12",`.
+Sources (Claude opened them on 2026-11-11): https://www.fortworthtexas.gov/departments/water/wastewater/sewer-faq ; https://www.fortworthtexas.gov/departments/water/wastewater ; https://www.fortworthtexas.gov/departments/development-services/permits/residential-information ; https://www.fortworthtexas.gov/departments/development-services/permits/contractor-registration ; https://tsbpe.texas.gov/wp-content/uploads/documents/TSBPE_PlumbingLicenseLaw(PlainView)_Sept2025.pdf
+Done when: `npm run build` passes and `.next/server/app/blog/who-is-responsible-for-sewer-line-fort-worth.html` exists and contains `Fixing a private sewer line in Fort Worth`.

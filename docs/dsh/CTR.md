@@ -16,3 +16,13 @@ Rankings first (titles already match the queries; position too low for CTR work)
 - /guides/dfw-emergency-plumbing-costs: 1,018 / 1 / 0.1% / 13.0 (top query "emergency plumber cost" at position 24)
 - /cities/houston/24-hour-emergency-plumber: 1,924 / 0 / 0% / 18.5; /cities/san-antonio/24-hour-emergency-plumber: 1,353 / 1 / 0.1% / 23.2
 - /tools/sewer-line-repair-cost-calculator: 2,130 / 4 / 0.2% / 40.2; /tools/slab-leak-repair-cost-calculator: 1,204 / 3 / 0.2% / 22.1
+
+Checks log:
+- 2026-11-11 (Wed): Search Console skipped: Chrome offline (cloud run, no Claude in Chrome). No new numbers. PH-023 not live yet: the DSH agent crashed on 10 and 11 Nov on the double quotes in its task title (fixed 2026-11-11), so it runs on 12 Nov.
+
+Rankings-first work queued 2026-11-11 (judge 14+ days after live):
+- /guides/dfw-emergency-plumbing-costs: PH-024 links from 2 more pages (p13.0).
+- /tools/sewer-line-repair-cost-calculator: PH-025 links from 3 sewer pages, PH-026 title 65 -> 53 chars, PH-032 new Fort Worth sewer post links in (p40.2).
+- /tools/slab-leak-repair-cost-calculator: PH-027 links from 3 leak pages (p22.1).
+- /cities/houston/24-hour-emergency-plumber (p18.5) and /cities/san-antonio/24-hour-emergency-plumber (p23.2): PH-028 links from the 24-hour service page.
+
