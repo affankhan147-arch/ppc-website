@@ -259,6 +259,20 @@ with exactly:
 Change nothing else.
 Done when: `npm run build` passes and both lines are in the file exactly as written above.
 
+## PH-033 - Add 2 live guides to the sitemap inventory - Status: OPEN
+File: `src/lib/content.ts`
+Why: /guides/dfw-freeze-history and /guides/dfw-housing-age-by-city are live (200) but missing from the sitemap, because the sitemap is built from the page inventory in this file. Google finds pages faster when they are in the sitemap.
+1. Find the line that starts `    { kind: "guide", title: "Water Heater Lifespan & Maintenance in DFW` (about line 84). It is the last item before the line `  ];` and ends with `}` and no comma. Add a comma at the end of that line.
+2. Directly below it (above `  ];`), insert exactly these two lines (the last one has no comma):
+```ts
+    { kind: "guide", title: "How Often Does DFW Actually Freeze? NWS Climate Data", path: "/guides/dfw-freeze-history", h1: "How Often Does DFW Actually Freeze?", description: "Official National Weather Service data on how many days per year Dallas-Fort Worth actually freezes, average first/last freeze dates, and what that means for your pipes." },
+    { kind: "guide", title: "DFW Housing Age by City: What It Means for Your Pipes", path: "/guides/dfw-housing-age-by-city", h1: "DFW Housing Age by City", description: "Real U.S. Census data on the median construction year for 7 DFW cities, and what each city's typical housing age means for galvanized, polybutylene, and copper/PEX pipe risk." }
+```
+No other changes.
+Done when: `npm run build` passes and `.next/server/app/sitemap.xml.body` (or the built sitemap) contains `/guides/dfw-freeze-history` and `/guides/dfw-housing-age-by-city`.
+
+---
+
 ## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: FIX
 Claude note 2026-11-11: everything else passed review; fix 2 lines in `src/data/pageEnhancements.ts`, entry `"water-leak-between-meter-and-house-dallas-who-fixes-it"`, on the existing branch dsh/2026-11-06-PH-013:
 1. Last `checklistItems` line: replace `Do not dig around the meter box or attempt to adjust city equipment, as service lines and meter connections remain utility property.` with `Do not dig around the meter box or touch the city's meter or other city equipment.` (the old text says service lines are utility property, which contradicts the post: the private side is the owner's).
@@ -622,7 +636,8 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-freeze-hist
 
 ---
 
-## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: OPEN
+## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: WAITING
+Claude note 2026-11-11: held back to keep the queue at 10; Claude sets it OPEN at the next audit (line numbers may need a refresh).
 File: `src/app/guides/dfw-housing-age-by-city/page.tsx`
 Why: `npm run lint` reports 21 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
 - line ~45: `Bureau's` -> `Bureau&apos;s`
