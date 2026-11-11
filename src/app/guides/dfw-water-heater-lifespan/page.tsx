@@ -75,13 +75,13 @@ export default function WaterHeaterLifespanGuidePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Why DFW's Hard Water Cuts That Life Short</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Why DFW&apos;s Hard Water Cuts That Life Short</h2>
             <p className="text-slate-300 mb-4">
               Water heater lifespan is not the same everywhere - it depends heavily on local water hardness, and Dallas-Fort Worth sits solidly in hard-to-very-hard territory across the metroplex. Water hardness is measured in grains per gallon (GPG), and documented ranges for DFW-area cities include:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Fort Worth:</strong> 7-10 GPG (hard)</li>
-              <li><strong>Dallas:</strong> 7-11 GPG (hard to very hard); <a href="https://dallascityhall.com/departments/waterutilities/DCH%20Documents/pdf/water-quality-report.pdf" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Dallas Water Utilities' own water quality report</a> classifies the city's supply as moderately hard, averaging 140-160 mg/L (roughly 8-9 GPG)</li>
+              <li><strong>Dallas:</strong> 7-11 GPG (hard to very hard); <a href="https://dallascityhall.com/departments/waterutilities/DCH%20Documents/pdf/water-quality-report.pdf" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Dallas Water Utilities&apos; own water quality report</a> classifies the city&apos;s supply as moderately hard, averaging 140-160 mg/L (roughly 8-9 GPG)</li>
               <li><strong>Allen &amp; Plano:</strong> 9-13 GPG (hard to very hard)</li>
               <li><strong>Frisco &amp; McKinney:</strong> 10-14 GPG (very hard)</li>
               <li><strong>Rockwall:</strong> 12-16 GPG (very hard)</li>
@@ -98,7 +98,7 @@ export default function WaterHeaterLifespanGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: The Maintenance That Actually Extends Lifespan</h2>
             <p className="text-slate-300 mb-4">
-              Most of the maintenance that meaningfully extends a water heater's life is simple, inexpensive, and frequently skipped. Manufacturer guidance lays out a clear annual schedule:
+              Most of the maintenance that meaningfully extends a water heater&apos;s life is simple, inexpensive, and frequently skipped. Manufacturer guidance lays out a clear annual schedule:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Flush the tank at least once a year</strong> - more often in higher-hardness DFW cities - to clear sediment before it builds into an insulating layer.</li>
@@ -107,7 +107,7 @@ export default function WaterHeaterLifespanGuidePage() {
               <li><strong>Check for leaks, corrosion at fittings, and venting condition</strong> as part of the same annual pass.</li>
             </ul>
             <p className="text-slate-300 mb-4">
-              Texas plumbing code also sets baseline installation requirements that affect long-term reliability, not just initial safety. Requirements documented by DFW-area municipalities (using <a href="https://www.friscotexas.gov/1696/Residential-Permits" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">City of Frisco, TX residential permit requirements</a> as a representative example) include: a properly sized T&amp;P discharge line terminating 6 inches above grade outside the building; a drain pan under every water heater with its own drain line; a thermal expansion control device on any closed system; sediment traps on gas connections per IRC/IFGC standards; and correct venting clearance and rise. These aren't optional extras - they're code minimums, and a unit installed without them is both a safety risk and, often, a sign that other maintenance was skipped too.
+              Texas plumbing code also sets baseline installation requirements that affect long-term reliability, not just initial safety. Requirements documented by DFW-area municipalities (using <a href="https://www.friscotexas.gov/1696/Residential-Permits" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">City of Frisco, TX residential permit requirements</a> as a representative example) include: a properly sized T&amp;P discharge line terminating 6 inches above grade outside the building; a drain pan under every water heater with its own drain line; a thermal expansion control device on any closed system; sediment traps on gas connections per IRC/IFGC standards; and correct venting clearance and rise. These aren&apos;t optional extras - they&apos;re code minimums, and a unit installed without them is both a safety risk and, often, a sign that other maintenance was skipped too.
             </p>
             <p className="text-slate-400 text-sm mt-4">
               <strong>Sources:</strong> A.O. Smith / Hotwater.com maintenance guidance; City of Frisco, TX water heater installation requirements (representative of DFW-area municipal code).
@@ -115,7 +115,7 @@ export default function WaterHeaterLifespanGuidePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: Warning Signs It's Time to Replace, Not Repair</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: Warning Signs It&apos;s Time to Replace, Not Repair</h2>
             <p className="text-slate-300 mb-4">
               Even with good maintenance, every water heater eventually reaches the end of its service life. The following signs suggest replacement is the more sensible option over another repair:
             </p>
@@ -127,7 +127,7 @@ export default function WaterHeaterLifespanGuidePage() {
               <li><strong>Declining hot water volume or inconsistent temperature</strong> despite a correctly set thermostat, which often points to sediment reducing usable tank capacity.</li>
             </ul>
             <p className="text-slate-300">
-              When any of these signs appear on a unit that is already near the end of its expected lifespan, a same-day inspection is worth the cost - it's the difference between a planned replacement and an unplanned failure that floods a utility closet or garage overnight.
+              When any of these signs appear on a unit that is already near the end of its expected lifespan, a same-day inspection is worth the cost - it&apos;s the difference between a planned replacement and an unplanned failure that floods a utility closet or garage overnight.
             </p>
             <p className="text-slate-300 mt-4">
               Facing a specific repair quote right now? Our free{" "}
@@ -139,7 +139,7 @@ export default function WaterHeaterLifespanGuidePage() {
           </section>
 
           <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
-            <p><strong>Have a plumbing emergency?</strong> Call PlumbingHands - DFW's trusted emergency plumber, available 24/7.</p>
+            <p><strong>Have a plumbing emergency?</strong> Call PlumbingHands - DFW&apos;s trusted emergency plumber, available 24/7.</p>
           </div>
 
           <div className="mt-10">
