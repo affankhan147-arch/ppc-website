@@ -241,7 +241,228 @@ Done when: `npm run build` passes and `.next/server/app/cost-guides/burst-pipe-e
 
 ---
 
-## PH-023 - CTR: city page titles lead with 24 Hour Emergency Plumber - Status: OPEN
+## PH-035 - Houston 24-hour plumber page: Houston-specific section - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07) but no Houston-specific content block (the DFW cities all have one). This adds Houston's own facts from official sources.
+Where: search (do not read the whole file) for this line, which appears once:
+```ts
+  "arlington/24-hour-emergency-plumber": {
+```
+Insert the whole entry below directly ABOVE that line. Do not change any other entry (PH-036 and PH-034 edit other spots in this file).
+```ts
+  "houston/24-hour-emergency-plumber": {
+    decisionTitle: "Houston emergency plumbing decision guide",
+    decisionIntro: "In Houston, the first call depends on where the water is. Water coming up in the street or at the city's meter is reported to the City of Houston through 311, which is open 24 hours a day, 7 days a week. Water leaking inside the house or from your own pipes is a job for a licensed plumber.",
+    decisionItems: [
+      "Say whether the water is inside the house, in the yard or in the street, so you know right away whether it is a city problem or a plumbing problem.",
+      "If water is bubbling up in the street or around the meter box, report it to 311; the City of Houston lists reporting water leaks among its 311 services.",
+      "Tell the plumber whether you have been able to shut the water off, and where your shutoff is.",
+      "Mention if the leak started during or right after a freeze, since a frozen pipe can split in more than one place."
+    ],
+    providerTitle: "What a Houston plumber may check",
+    providerItems: [
+      "Exposed pipes in the attic, garage, exterior walls and outdoor hose bibs, the places most likely to split in a hard freeze.",
+      "The line between the meter and the house if the yard is soggy or the meter keeps moving with every fixture off.",
+      "Water heater connections and relief lines when the leak is near the heater.",
+      "A dated invoice that names the repair, which you will need if you ask Houston Public Works for a leak adjustment."
+    ],
+    safetyTitle: "When to treat it as urgent in Houston",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage backing up into a tub, shower or floor drain.",
+      "Burst pipes after a hard freeze: the National Weather Service in Houston recorded a low of 13 degrees for the City of Houston on February 16, 2021."
+    ],
+    preventionTitle: "Houston-specific prevention notes",
+    preventionItems: [
+      "Find your main water shutoff before the next freeze and make sure it turns.",
+      "Insulate exposed pipes in the attic, the garage and on outside walls before a freeze.",
+      "Keep the plumber's dated invoice after any leak repair: Houston Public Works gives leak credits once proof of the repair is provided, and the credit is larger the sooner the leak is fixed."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call about a water leak in the street in Houston?",
+        answer: "Call 311. The City of Houston's 311 line is open 24 hours a day, 7 days a week, and reporting water leaks is one of its services. For a leak inside your home or in your own plumbing, call a licensed plumber."
+      },
+      {
+        question: "Can I get a credit on my Houston water bill after a leak?",
+        answer: "Possibly. Houston Public Works gives leak adjustments once proof of the leak repair is provided, and the credit depends on how soon the leak was repaired after it began. Keep the plumber's dated invoice and check the current rules with Houston Public Works; an adjustment is not guaranteed."
+      }
+    ],
+    extraLinks: [
+      { label: "Houston service area", href: "/cities/houston" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }
+    ]
+  },
+```
+Sources (Claude opened them on 2026-11-12; do not add them to the file): https://www.houstontx.gov/311/about.html ; https://www.houstonpublicworks.org/city-of-houston-approves-sweeping-ordinance-changes-to-address-high-water-bills ; https://www.weather.gov/media/hgx/climate/summary/Feb_2021_Regional_Climate_Summary.pdf ; https://www.weather.gov/hgx/2021ValentineStorm
+Content rules: copy the entry word for word; no prices, no guarantees, no phone numbers.
+Done when: `npm run build` passes and `.next/server/app/cities/houston/24-hour-emergency-plumber.html` contains `Houston emergency plumbing decision guide`.
+
+---
+
+## PH-036 - San Antonio 24-hour plumber page: San Antonio-specific section - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07) and no San Antonio-specific content block. This adds SAWS and NWS facts from official sources.
+Where: search (do not read the whole file) for this line, which appears once:
+```ts
+  "irving/24-hour-emergency-plumber": {
+```
+Insert the whole entry below directly ABOVE that line. Do not change any other entry (PH-035 and PH-034 edit other spots in this file).
+```ts
+  "san-antonio/24-hour-emergency-plumber": {
+    decisionTitle: "San Antonio emergency plumbing decision guide",
+    decisionIntro: "San Antonio Water System (SAWS) takes water and sewer emergency calls 24 hours a day, 7 days a week, but SAWS says it cannot repair plumbing on private property. A leak at your home is yours to have repaired by a licensed plumber.",
+    decisionItems: [
+      "If you suspect a leak at your home, SAWS's advice is to shut off the main water service at the meter, then call a plumber.",
+      "Tell the plumber whether the water is inside the house, in the yard or at the meter box.",
+      "Water running in the street or an unscheduled water outage is a call to SAWS, not to a plumber.",
+      "Mention if the leak started during or right after a freeze."
+    ],
+    providerTitle: "What a San Antonio plumber may check",
+    providerItems: [
+      "Toilets, flex supply lines, water heaters, water softeners, pressure reducing valves and broken pipes, all leak types SAWS lists for its leak repair reimbursement.",
+      "Exposed pipes outdoors and in unheated spaces after a freeze.",
+      "Whether your main shutoff at the meter closes fully.",
+      "A dated receipt for the repair, since SAWS asks for repair receipts within 60 days after repairs."
+    ],
+    safetyTitle: "When to treat it as urgent in San Antonio",
+    safetyItems: [
+      "Water you cannot stop at the meter or at the house shutoff.",
+      "Water near outlets, the electrical panel or light fixtures.",
+      "Sewage coming up through a drain or cleanout.",
+      "Pipes that split in a long freeze: the National Weather Service says San Antonio International Airport stayed below freezing for 4 days 12 hours in the February 2021 winter storm."
+    ],
+    preventionTitle: "San Antonio-specific prevention notes",
+    preventionItems: [
+      "Find your meter and learn how to close the main water service valve there before the next freeze, as SAWS advises.",
+      "Fit foam or fiberglass insulation sleeves on exposed pipes; SAWS says they go a long way in keeping exposed pipes safe.",
+      "Keep repair receipts: SAWS takes leak repair reimbursement receipts within 60 days after repairs and allows one adjustment in a 12-month period."
+    ],
+    extraFaqs: [
+      {
+        question: "Will SAWS fix a leak on my property?",
+        answer: "No. SAWS says it cannot repair plumbing on private property, so a leak at your home needs a plumber. SAWS does take calls about water and sewer emergencies 24 hours a day, 7 days a week."
+      },
+      {
+        question: "Can SAWS reimburse me after a leak repair?",
+        answer: "SAWS has a leak repair reimbursement request. Receipts must be submitted within 60 days after repairs, customers are eligible for one adjustment in a 12-month period, the amount depends on the type of leak, and it may take up to two billing cycles. It is not guaranteed."
+      }
+    ],
+    extraLinks: [
+      { label: "San Antonio service area", href: "/cities/san-antonio" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" }
+    ]
+  },
+```
+Sources (Claude opened them on 2026-11-12; do not add them to the file): https://www.saws.org/report-water-leaks/ ; https://www.saws.org/report-a-problem/ ; https://www.saws.org/customer-self-service-options/i-need-to-submit-a-document/request-a-leak-repair-reimbursement/ ; https://www.saws.org/service/do-it-yourself-repairs/winter-pipe-protection/ ; https://www.weather.gov/media/ewx/wxevents/ewx-20210218.pdf
+Content rules: copy the entry word for word; no prices, no guarantees, no phone numbers.
+Done when: `npm run build` passes and `.next/server/app/cities/san-antonio/24-hour-emergency-plumber.html` contains `San Antonio emergency plumbing decision guide`.
+
+---
+
+## PH-034 - Put the calculator links on the 3 pages PH-025 and PH-027 missed - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: PH-025 and PH-027 (merged 2026-11-12) placed some links on other pages, because their anchor lines appear more than once in the file (Claude's mistake, not DSH's). These 3 pages still need their link into the sewer and slab calculators (positions 40.2 and 22.1).
+Do these 3 inserts. For each: search (do not read the whole file) for the entry line; a few lines below it is the FIRST line `    extraLinks: [` after it; insert the new line directly BELOW that `    extraLinks: [` line, so it becomes the first link of that list. Change nothing else.
+1. Entry `  "main-sewer-line-signs": {` -> insert:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+2. Entry `  "emergency-leak-repair-cost-dfw": {` -> insert:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+```
+3. Entry `  "sudden-low-water-pressure-in-dallas-home-what-it-means": {` -> insert:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+```
+(Claude dry-ran these 3 inserts on 2026-11-12: `npx tsc --noEmit` PASS.)
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 4 times and `href: "/tools/slab-leak-repair-cost-calculator" }` exactly 5 times.
+
+---
+
+## PH-038 - Escape quotes and apostrophes in 3 guides (lint) - Status: OPEN
+Files: `src/app/guides/dfw-gas-line-safety/page.tsx`, `src/app/guides/dfw-water-heater-lifespan/page.tsx`, `src/app/guides/texas-insurance-plumbing-claims/page.tsx`
+Why: `npm run lint` reports 5 react/no-unescaped-entities errors in these 3 files. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className` or `href`):
+- `src/app/guides/dfw-gas-line-safety/page.tsx` line ~99: `The plumber's` -> `The plumber&apos;s`
+- `src/app/guides/dfw-water-heater-lifespan/page.tsx` line ~91: `"once a year"` -> `&quot;once a year&quot;`
+- `src/app/guides/texas-insurance-plumbing-claims/page.tsx` line ~82: `"sudden and accidental"` -> `&quot;sudden and accidental&quot;`
+No other changes. (Claude dry-ran these on 2026-11-12: eslint 0 errors in all 3 files.)
+Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-gas-line-safety/page.tsx src/app/guides/dfw-water-heater-lifespan/page.tsx src/app/guides/texas-insurance-plumbing-claims/page.tsx` reports 0 errors.
+
+---
+
+## PH-039 - Escape quotes and apostrophes in the plumber license post, part 1 (lint) - Status: OPEN
+File: `src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx`
+Why: `npm run lint` reports 56 react/no-unescaped-entities errors in this file; this task fixes the 28 on lines 114-159 (PH-040 does lines 189-294). Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className` or `href`; the page text must read the same):
+- line ~114: `plumber's` -> `plumber&apos;s`
+- line ~116: `"Find a license/registration"` -> `&quot;Find a license/registration&quot;`
+- line ~117: `"Search by Name"` -> `&quot;Search by Name&quot;` and `"Search by License Number"` -> `&quot;Search by License Number&quot;`
+- line ~118: `"Texas State Board of Plumbing Examiners"` -> `&quot;Texas State Board of Plumbing Examiners&quot;` and `"Plumbing - Licensed or Registered"` -> `&quot;Plumbing - Licensed or Registered&quot;`
+- line ~129: `"Find a license/registration"` -> `&quot;Find a license/registration&quot;`
+- line ~135: `don't` -> `don&apos;t`
+- line ~141: `"Board"` -> `&quot;Board&quot;` and `"Texas State Board of Plumbing Examiners"` -> `&quot;Texas State Board of Plumbing Examiners&quot;` and `"Plumbing - Licensed or Registered"` -> `&quot;Plumbing - Licensed or Registered&quot;`
+- line ~155: `"Active"` -> `&quot;Active&quot;` and `"Expired"` -> `&quot;Expired&quot;` and `"Inactive"` -> `&quot;Inactive&quot;` and `"Suspended"` -> `&quot;Suspended&quot;`
+- line ~159: `license's` -> `license&apos;s`
+No other changes. Do not touch lines 189-294.
+Done when: `npm run build` passes and `npx eslint src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx` reports 28 errors or fewer, none on lines 114-159.
+
+---
+
+## PH-040 - Escape quotes and apostrophes in the plumber license post, part 2 (lint) - Status: OPEN
+File: `src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx`
+Why: the other 28 react/no-unescaped-entities errors in this file, on lines 189-294 (PH-039 does lines 114-159). Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className` or `href`; the page text must read the same):
+- line ~189: `Texas's` -> `Texas&apos;s`
+- line ~196: `"homeowner exemption"` -> `&quot;homeowner exemption&quot;`
+- line ~206: `"Inactive"` -> `&quot;Inactive&quot;`
+- line ~216: `can't` -> `can&apos;t`
+- line ~249: `doesn't` -> `doesn&apos;t`
+- line ~254: `license's` -> `license&apos;s`
+- line ~257: `plumber's` -> `plumber&apos;s`
+- line ~261: `"Apprentice"` -> `&quot;Apprentice&quot;`
+- line ~269: `plumber's` -> `plumber&apos;s`
+- line ~270: `"TDLR plumbing license lookup,"` -> `&quot;TDLR plumbing license lookup,&quot;` and `won't` -> `won&apos;t`
+- line ~273: `plumber's` -> `plumber&apos;s`
+- line ~274: `there's` -> `there&apos;s`
+- line ~277: `plumber's` -> `plumber&apos;s`
+- line ~278: `"Search by License Number"` -> `&quot;Search by License Number&quot;` and `"Search by Name"` -> `&quot;Search by Name&quot;` and `it's` -> `it&apos;s`
+- line ~282: `board's` -> `board&apos;s` and `you're` -> `you&apos;re` and `plumber's` -> `plumber&apos;s`
+- line ~294: `plumber's` -> `plumber&apos;s`
+No other changes. Do not touch lines 114-159.
+Done when: `npm run build` passes and `npx eslint src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx` reports no errors on lines 189-294.
+
+---
+
+## PH-037 - New blog post: water leak at your San Antonio home, who fixes it and SAWS reimbursement - Status: WRITER
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/saws-water-leak-who-fixes-it-san-antonio`. Search intent: "saws leak on my property who fixes it" / "saws leak adjustment". Gap: no page on the site mentions SAWS, while the San Antonio 24-hour page has 1,353 impressions (position 23.2). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit). Use these anchors only (other tasks edit other spots in the same files).
+1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(waterLeakMeterToHouseDallasPost);`, add a new post copying the shape of `waterLeakMeterToHouseDallasPost` exactly, then `blogPosts.push(sawsWaterLeakSanAntonioPost);`. Use exactly:
+   - const name `sawsWaterLeakSanAntonioPost`
+   - slug `saws-water-leak-who-fixes-it-san-antonio`
+   - title `Water Leak at Your San Antonio Home: Who Fixes It and Will SAWS Help?`
+   - directAnswer `SAWS says it cannot repair plumbing on private property, so a leak at your San Antonio home needs a licensed plumber. Water and sewer emergencies on SAWS's side go to SAWS, which takes those calls 24 hours a day. After the repair, SAWS has a leak repair reimbursement request: receipts are due within 60 days, with one adjustment per 12 months.`
+   - category `Emergency steps`, relatedServiceSlug `24-hour-emergency-plumber`
+2. `src/data/pageEnhancements.ts` (search, do not read whole): find the line `  "water-leak-between-meter-and-house-dallas-who-fixes-it": {`; after that entry's closing `  },` add a new entry keyed `"saws-water-leak-who-fixes-it-san-antonio"`, copying its fields exactly (checklistTitle, checklistIntro, checklistItems, proofTitle, proofItems, extraFaqs, extraLinks). Plain, human copy, ONLY these facts (no prices, no guarantees, no phone numbers):
+   - checklistTitle `Is the leak yours or SAWS's?`; intro + 5 items: SAWS says it cannot repair plumbing on private property, and if you have a leak you will need to hire a plumber (https://www.saws.org/report-water-leaks/); if you suspect a leak at your own home, shut off the main water service at the meter (same page); water and sewer emergencies are taken 24 hours a day, 7 days a week, and SAWS asks you to call any time of day or night about an unscheduled outage (https://www.saws.org/report-a-problem/); ice formed during a freeze can block pipes and cause them to burst (https://www.saws.org/service/do-it-yourself-repairs/winter-pipe-protection/); know where your meter is and how to close the valve there before you need it (same page).
+   - proofTitle `After the repair: SAWS leak repair reimbursement`; 4-5 items using ONLY these facts from https://www.saws.org/customer-self-service-options/i-need-to-submit-a-document/request-a-leak-repair-reimbursement/ : all receipts must be submitted within 60 days after repairs; customers are only eligible for one adjustment in a 12-month period; it may take up to two billing cycles to receive an adjustment; reimbursements are based on the type of leak, and the listed types include irrigation systems, flex supply lines, toilets, pools, water heaters, water softeners, broken pipes and pressure reducing valves; receipts can be uploaded as jpg, gif, png, pdf or jpeg files.
+   - extraFaqs (3): "Will SAWS fix a leak on my property?" (no: SAWS cannot repair plumbing on private property; hire a plumber); "How long do I have to send SAWS my leak repair receipts?" (within 60 days after repairs; one adjustment per 12 months; up to two billing cycles); "What should I do first if I find a leak at home in San Antonio?" (shut off the main water service at the meter, as SAWS advises, then call a licensed plumber).
+   - extraLinks (5): `{ label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }`, `{ label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }`, `{ label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" }`, `{ label: "Leak between the meter and the house in Dallas", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" }`, `{ label: "San Antonio service area", href: "/cities/san-antonio" }`
+   - Links in: in BOTH entries `"water-leak-between-meter-and-house-dallas-who-fixes-it"` and `"how-to-check-your-water-meter-for-a-hidden-leak-dallas"`, find the FIRST line `    extraLinks: [` below the entry line and insert directly BELOW it: `      { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },`
+3. `src/data/seoOverrides.ts`: directly after the 3-line `"/blog/water-leak-between-meter-and-house-dallas-who-fixes-it"` entry, add, same shape:
+   `"/blog/saws-water-leak-who-fixes-it-san-antonio": { description: "SAWS can't repair plumbing on private property. Who fixes a leak at your San Antonio home, what to shut off first, and how SAWS leak reimbursement works." },`
+4. `src/data/contentDates.ts`: directly after the line for `"/blog/water-leak-between-meter-and-house-dallas-who-fixes-it"` add `"/blog/saws-water-leak-who-fixes-it-san-antonio": "2026-11-12",`
+Done when: `npm run build` passes and `.next/server/app/blog/saws-water-leak-who-fixes-it-san-antonio.html` exists and contains `After the repair: SAWS leak repair reimbursement`.
+
+---
+
+## PH-023 - CTR: city page titles lead with 24 Hour Emergency Plumber - Status: DONE (2026-11-12, merged 910dc8a)
 Files: `src/app/cities/[citySlug]/page.tsx`
 Goal: the city hub pages rank around position 9-14 for "24 hour plumber" and "emergency plumber" but get almost no clicks (Search Console, 28 days to 2026-11-07: over 11,000 impressions, 4 clicks). Put the top search words at the front of the title and description. Baseline: docs/dsh/CTR.md.
 1. Replace this line (about line 53):
@@ -259,7 +480,7 @@ with exactly:
 Change nothing else.
 Done when: `npm run build` passes and both lines are in the file exactly as written above.
 
-## PH-033 - Add 2 live guides to the sitemap inventory - Status: OPEN
+## PH-033 - Add 2 live guides to the sitemap inventory - Status: DONE (2026-11-12, merged 1915fc9)
 File: `src/lib/content.ts`
 Why: /guides/dfw-freeze-history and /guides/dfw-housing-age-by-city are live (200) but missing from the sitemap, because the sitemap is built from the page inventory in this file. Google finds pages faster when they are in the sitemap.
 1. Find the line that starts `    { kind: "guide", title: "Water Heater Lifespan & Maintenance in DFW` (about line 84). It is the last item before the line `  ];` and ends with `}` and no comma. Add a comma at the end of that line.
@@ -273,7 +494,7 @@ Done when: `npm run build` passes and `.next/server/app/sitemap.xml.body` (or th
 
 ---
 
-## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: FIX
+## PH-013 - New blog post: water leak between the meter and the house in Dallas - Status: DONE (2026-11-12, merged 06f9629)
 Claude note 2026-11-11: everything else passed review; fix 2 lines in `src/data/pageEnhancements.ts`, entry `"water-leak-between-meter-and-house-dallas-who-fixes-it"`, on the existing branch dsh/2026-11-06-PH-013:
 1. Last `checklistItems` line: replace `Do not dig around the meter box or attempt to adjust city equipment, as service lines and meter connections remain utility property.` with `Do not dig around the meter box or touch the city's meter or other city equipment.` (the old text says service lines are utility property, which contradicts the post: the private side is the owner's).
 2. First `extraFaqs` answer: delete ` (or 214-670-3111 from outside city limits)` so it reads `Call 311, which takes Dallas water and sewer emergencies 24 hours a day, to report a meter leak.` (that number was not in the brief's sources).
@@ -407,7 +628,7 @@ Done when: `npm run build` passes and `npx eslint` on the 4 files reports 0 erro
 
 ---
 
-## PH-020 - New blog post: tankless water heater in a DFW freeze when the power goes out - Status: WRITER
+## PH-020 - New blog post: tankless water heater in a DFW freeze when the power goes out - Status: DONE (2026-11-12, merged 900c73e)
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/tankless-water-heater-freeze-power-outage-dfw`. Search intent: "tankless water heater freeze power outage". Service: water heater emergency. The hero image is picked automatically from `relatedServiceSlug` (no image edit). Use these anchors only (another task edits other spots in the same files):
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(tanklessWaterHeaterTroubleshootingPost);` (about line 314), add a new post copying the shape of `tanklessWaterHeaterTroubleshootingPost` exactly, then `blogPosts.push(tanklessFreezePowerOutagePost);`. Use exactly:
@@ -448,7 +669,7 @@ Done when: `npm run build` passes and `npx eslint` on the 2 files reports 0 erro
 
 ---
 
-## PH-022 - Escape quotes and apostrophes in the plumbing leak insurance post (lint) - Status: OPEN
+## PH-022 - Escape quotes and apostrophes in the plumbing leak insurance post (lint) - Status: DONE (2026-11-12, merged 190e7b5)
 Files: `src/app/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas/page.tsx`
 Make exactly these text replacements, each only on the line given (visible text only; never touch attributes):
 - line ~69: `policy's` -> `policy&apos;s`
@@ -465,7 +686,7 @@ Done when: `npm run build` passes and `npx eslint src/app/blog/does-homeowners-i
 
 ---
 
-## PH-024 - Links into the DFW emergency plumbing cost guide - Status: OPEN
+## PH-024 - Links into the DFW emergency plumbing cost guide - Status: DONE (2026-11-12, merged d8a8962)
 Files: `src/data/pageEnhancements.ts`
 Why: /guides/dfw-emergency-plumbing-costs has 1,018 impressions at position 13.0 and its top query "emergency plumber cost" sits at position 24 (Search Console, 28 days to 2026-11-07). Two more related pages should link to it.
 Search for each entry key (do not read the whole file). Change only the lines named here; other tasks edit other entries in this file.
@@ -490,7 +711,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `{
 
 ---
 
-## PH-025 - Links into the sewer line repair cost calculator - Status: OPEN
+## PH-025 - Links into the sewer line repair cost calculator - Status: DONE (2026-11-12, merged c3949a2)
 Files: `src/data/pageEnhancements.ts`
 Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 (Search Console, 28 days to 2026-11-07) but only a few pages link to it. Three sewer pages should.
 Search for each entry key (do not read the whole file). Change only the lines named here; other tasks edit other entries in this file.
@@ -523,7 +744,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `{
 
 ---
 
-## PH-027 - Links into the slab leak repair cost calculator - Status: OPEN
+## PH-027 - Links into the slab leak repair cost calculator - Status: DONE (2026-11-12, merged 1b34c1a)
 Files: `src/data/pageEnhancements.ts`
 Why: /tools/slab-leak-repair-cost-calculator has 1,204 impressions at position 22.1 (Search Console, 28 days to 2026-11-07). Three leak pages should link to it.
 Search for each entry key (do not read the whole file). Change only the lines named here; other tasks edit other entries in this file.
@@ -556,7 +777,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `{
 
 ---
 
-## PH-028 - Links from the 24-hour emergency plumber service page to Houston and San Antonio - Status: OPEN
+## PH-028 - Links from the 24-hour emergency plumber service page to Houston and San Antonio - Status: DONE (2026-11-12, merged bbb22d2)
 Files: `src/data/pageEnhancements.ts`
 Why: /cities/houston/24-hour-emergency-plumber (1,924 impressions, position 18.5) and /cities/san-antonio/24-hour-emergency-plumber (1,353 impressions, position 23.2) are only linked from the home page and their own city hubs (Search Console, 28 days to 2026-11-07). The main 24-hour service page should link to both.
 Search for the entry key (do not read the whole file). Change only these lines; other tasks edit other entries in this file.
@@ -574,7 +795,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains bo
 
 ---
 
-## PH-026 - Shorter search titles for 2 cost calculators - Status: OPEN
+## PH-026 - Shorter search titles for 2 cost calculators - Status: DONE (2026-11-12, merged 503ae4c)
 Files: `src/data/seoOverrides.ts`
 Why: the 2026-11-06 SEO audit found these tool titles over 60 characters, so Google cuts them off. Only the search title changes (the page H1 stays). Both pages are on the "Rankings first" list in docs/dsh/CTR.md.
 1. Find the entry `  "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do": {`. It is the LAST entry: its closing line `  }` is directly above the final line `};` of the file. Change that `  }` to `  },` and insert directly below it (above `};`) exactly:
@@ -593,7 +814,8 @@ Done when: `npm run build` passes and `.next/server/app/tools/sewer-line-repair-
 
 ---
 
-## PH-029 - Escape quotes and apostrophes in the DFW burst pipes guide (lint) - Status: OPEN
+## PH-029 - Escape quotes and apostrophes in the DFW burst pipes guide (lint) - Status: FIX
+Claude note 2026-11-12: everything else passed; fix 1 line in `src/app/guides/dfw-burst-pipes/page.tsx` on the existing branch dsh/2026-11-12-PH-029. On line ~100 the sentence now starts `&quot;most&quot; Texas homeowners policies do cover water damage` (the first word was changed by mistake). Change that start back to `Most Texas homeowners policies do cover water damage`. Keep the later `&quot;most&quot; is doing real work` on the same line as it is. Change nothing else. Done when: `npm run build` passes, `npx eslint src/app/guides/dfw-burst-pipes/page.tsx` reports 0 errors and the file contains `Most Texas homeowners policies do cover water damage`.
 File: `src/app/guides/dfw-burst-pipes/page.tsx`
 Why: `npm run lint` reports 28 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
 - line ~62: `You'd` -> `You&apos;d`
@@ -636,8 +858,8 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-freeze-hist
 
 ---
 
-## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: WAITING
-Claude note 2026-11-11: held back to keep the queue at 10; Claude sets it OPEN at the next audit (line numbers may need a refresh).
+## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: OPEN
+Claude note 2026-11-12: now OPEN; Claude re-checked every line number below against master today.
 File: `src/app/guides/dfw-housing-age-by-city/page.tsx`
 Why: `npm run lint` reports 21 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
 - line ~45: `Bureau's` -> `Bureau&apos;s`

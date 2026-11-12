@@ -2,6 +2,15 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-12 - audit
+- Agent runs: 12 Nov 16:54 UTC success (11 tasks + 1 writer); 11 Nov failed (quote crash, fixed 3b62bb0 on 11 Nov). Gemini was overloaded for part of the run; fallbacks covered it.
+- Reviewed 11: PH-013 FIX redo @6a1f6be, PH-020 writer @26a58a7, PH-022 @95e74b5, PH-023 @62958ef, PH-024 @2f61400, PH-025 @afb5314, PH-026 @22baf32, PH-027 @00d83eb, PH-028 @5c28150, PH-033 @4dfeb21: PASS, merged 06f9629..1915fc9 (PH-025 put 1 link and PH-027 2 links on neighbouring pages because Claude's anchor lines were not unique; links are relevant, so merged, and PH-034 adds the missing 3). PH-029 @9e15f0e: FIX (line 100 sentence start rewritten to &quot;most&quot;). Old PH-002/003 already merged.
+- Gate: build PASS in every report, tsc PASS on merged master, Vercel master success. Live fetch skipped: WebFetch permission prompts time out in this unattended run.
+- Search Console skipped: Chrome offline (cloud run). PH-023 city titles + PH-026 calculator titles live 12 Nov (CTR.md).
+- Assigned 6 OPEN + 1 WRITER: PH-035/036 Houston and San Antonio 24-hour page sections (houstontx.gov 311, Houston Public Works, SAWS, NWS sources opened today), PH-034 the 3 missing calculator links, PH-038/039/040 lint (61 errors, Claude dry-ran: 0 left); PH-031 set OPEN; WRITER PH-037 SAWS leak post. Queue without branches: 8 OPEN, 2 WRITER (+ PH-029 FIX, PH-004 WAITING).
+- Desktop agent idle (laptop off or app closed?): no LINK-AUDIT today (Thu), no SEO-AUDIT Mon 9 Nov, no app Article Writer branch since 6 Nov.
+- First-time pass rate (7 days): 16/18 tasks + 2 reports. Coaching: change only the exact text a task names; never rewrite the words next to it (PH-029).
+
 ## 2026-11-11 - audit
 - Agent runs: last 2 FAILED (10 and 11 Nov): `git commit` broke on the double quotes in the PH-023 title, so PH got 0 tasks both days. Fixed: scripts/dsh-agent.py shell-quotes the message (3b62bb0) and the PH-023 heading has no quotes. CEREBRAS_API_KEY returns 401 (other providers work).
 - Reviewed 10: SEO-AUDIT @d82bf39, SEO-AUDIT-2 @434cbb1, PH-014 @11b55a4, PH-015 @f9fbd53, PH-016 @9b3d2de, PH-017 @f3c9893, PH-018 @a5e3091, PH-019 @a28a995, PH-021 @decda2f: PASS, merged c078471..8d82e21 (lint diffs are entity escapes only). PH-013 @4320dbe: FIX (a checklist line calls service lines utility property; an FAQ adds a phone number not in the brief). Skipped PH-001 @5d1610e (calibration).
