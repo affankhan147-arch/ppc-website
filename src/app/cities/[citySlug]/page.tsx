@@ -29,6 +29,7 @@ export function generateStaticParams() {
 // the problems people actually search for, so it gives a reason to click (or call) straight away.
 function buildCityDescription(city: (typeof cities)[number]) {
   const candidates = [
+    `24 hour plumber in ${city.name}, TX: call ${siteConfig.phoneDisplay} day or night for burst pipes, sewer backups and water heater leaks. Ask the price first.`,
     `Emergency plumber in ${city.name}, TX? Call ${siteConfig.phoneDisplay} 24/7 for burst pipes, sewer backups, overflowing toilets and water heater leaks, nights and weekends.`,
     `Emergency plumber in ${city.name}, TX? Call ${siteConfig.phoneDisplay} 24/7 for burst pipes, sewer backups, overflowing toilets and water heater leaks.`,
     `Need an emergency plumber in ${city.name}, TX? Request 24/7 plumbing and drain cleaning help covering ${city.areaHint}. Confirm coverage and pricing with your matched provider.`,
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: Props) {
   return buildMetadata({
     // Task197: lead with the exact GSC head phrase ("emergency plumber {city} tx") and add the
     // "emergency plumbing" variant. "24 hour plumber" intent now belongs to the 24h combo page.
-    title: `Emergency Plumber in ${city.name}, TX | 24/7 Emergency Plumbing`,
+    title: `24 Hour Emergency Plumber in ${city.name}, TX`,
     absoluteTitle: true,
     description: truncateForMeta(buildCityDescription(city)),
     path: `/cities/${city.slug}`
