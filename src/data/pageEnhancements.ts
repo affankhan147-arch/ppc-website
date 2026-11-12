@@ -971,7 +971,8 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Burst pipe emergency cost", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
-      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" }
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "DFW emergency plumbing costs guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "drain-cleaning-cost-dfw": {
@@ -3445,7 +3446,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" },
-      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" }
+      { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
+      { label: "DFW emergency plumbing costs guide", href: "/guides/dfw-emergency-plumbing-costs" }
     ]
   },
   "emergency-plumber-in-plano-when-to-call-now": {
