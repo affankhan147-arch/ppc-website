@@ -114,7 +114,9 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Emergency plumbing cost factors", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Burst pipe first steps", href: "/problems/burst-pipe-first-steps" },
-      { label: "Toilet overflow steps", href: "/problems/toilet-overflowing-will-not-stop" }
+      { label: "Toilet overflow steps", href: "/problems/toilet-overflowing-will-not-stop" },
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }
     ]
   },
   "emergency-drain-cleaning": {
