@@ -3149,7 +3149,51 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
       { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
-      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" }
+      { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
+      { label: "Tankless water heater in a freeze: power outage steps", href: "/blog/tankless-water-heater-freeze-power-outage-dfw" }
+    ]
+  },
+  "tankless-water-heater-freeze-power-outage-dfw": {
+    checklistTitle: "Before and during a freeze: protect a tankless water heater",
+    checklistIntro:
+      "A tankless water heater relies on electric power to run its internal freeze protection elements, so when electrical power drops during severe sub-freezing weather, taking active steps protects the unit from internal freeze damage.",
+    checklistItems: [
+      "Keep power connected to the unit whenever possible, because many models rely on internal electrical heating elements and sensors that prevent freezing only while continuously powered.",
+      "Insulate exposed water supply lines and pipe fittings leading to and from the unit, especially for exterior wall or outdoor installations.",
+      "Check vent and drain lines for snow or ice blockages that can restrict airflow or trap moisture inside the unit.",
+      "Be prepared early: in Dallas-Fort Worth, NWS climate data shows the average first freeze arrives November 22 and the average last freeze occurs March 12.",
+      "Check your specific model's owner's manual for exact manufacturer recommendations, because freeze protection features and draining steps differ by brand."
+    ],
+    proofTitle: "If the power is out for a long time in freezing weather",
+    proofItems: [
+      "Shut off the cold water supply valve and the gas supply valve to the water heater.",
+      "Disconnect electrical power to the water heater.",
+      "Open the hot and cold drain valves to release trapped water inside the unit.",
+      "If you are not comfortable completing these steps yourself or notice the unit is already leaking, call a licensed plumber."
+    ],
+    extraFaqs: [
+      {
+        question: "Does a tankless water heater have freeze protection?",
+        answer:
+          "Yes, many tankless units feature built-in electric freeze protection devices, but these features require continuous electric power to operate."
+      },
+      {
+        question: "Should I drain my tankless water heater during a power outage?",
+        answer:
+          "During a prolonged power outage in sub-freezing weather, manufacturers like Rinnai outline a general draining procedure: shut off cold water and gas, disconnect power, and open the hot and cold drain valves to clear internal water."
+      },
+      {
+        question: "When does Dallas-Fort Worth usually get its first freeze?",
+        answer:
+          "According to National Weather Service data for Dallas-Fort Worth, the average first autumn freeze occurs around November 22."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency help", href: "/services/water-heater-emergency" },
+      { label: "Tankless water heater not producing hot water", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" },
+      { label: "How to keep pipes from freezing in DFW", href: "/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze" },
+      { label: "How often DFW freezes (NWS data)", href: "/guides/dfw-freeze-history" },
+      { label: "Live DFW freeze watch", href: "/tools/freeze-watch-widget" }
     ]
   },
   "outdoor-faucet-hose-bib-leaking-after-freeze-dallas": {
@@ -3593,7 +3637,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "Free live DFW freeze watch widget", href: "/tools/freeze-watch-widget" },
-      { label: "Burst pipe in Dallas: what to shut off first", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" }
+      { label: "Burst pipe in Dallas: what to shut off first", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" },
+      { label: "Tankless water heater in a freeze: power outage steps", href: "/blog/tankless-water-heater-freeze-power-outage-dfw" }
     ]
   },
   "slab-leak-warning-signs-dallas-fort-worth-homeowners": {

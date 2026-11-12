@@ -112,6 +112,10 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "A sudden drop across the whole house usually points to the pressure regulator, a main-line leak or a city-side problem. How to tell which one you have."
   },
+  "/blog/tankless-water-heater-freeze-power-outage-dfw": {
+    description:
+      "Tankless freeze protection only works with power. What DFW homeowners should do before a freeze and how to drain the unit in a long outage."
+  },
 
   // ---- Round 2 (GSC 3 months to 2026-10-20) ----
   // 53 impr / 1.9% / pos 5.7 - old title was 74 characters, so Google cut the year and the hook.

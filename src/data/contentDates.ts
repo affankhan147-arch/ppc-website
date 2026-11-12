@@ -54,6 +54,7 @@ export const contentPublished: Record<string, string> = {
   "/blog/signs-your-main-drain-needs-same-day-service": "2026-07-11",
   "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners": "2026-08-05",
   "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means": "2026-07-24",
+  "/blog/tankless-water-heater-freeze-power-outage-dfw": "2026-11-09",
   "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting": "2026-08-05",
   "/blog/toilet-overflowing-at-night-in-dallas-fast-steps": "2026-07-11",
   "/blog/toilet-shower-and-sink-backing-up-together-what-it-means": "2026-07-11",
