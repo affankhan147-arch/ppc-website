@@ -1,6 +1,6 @@
 name: DSH agent (free Gemini)
 
-# Does the next OPEN/FIX task in docs/dsh/TASKS.md on a dsh/* branch and pushes it.
+# Does up to 10 OPEN/FIX tasks (+1 WRITER article) in docs/dsh/TASKS.md on a dsh/* branch and pushes it.
 # Never touches master: Claude's daily audit reviews and merges.
 # Free models only: every free Gemini Flash model (GEMINI_API_KEY), plus OpenRouter/Groq/Mistral/Cerebras
 # free tiers when their key is a repo secret. Switches model automatically on limits/errors.
@@ -11,7 +11,7 @@ on:
     inputs:
       max_tasks:
         description: "How many tasks to do this run"
-        default: "2"
+        default: "10"
 
 permissions:
   contents: write
@@ -24,7 +24,7 @@ concurrency:
 jobs:
   agent:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
         with:
@@ -49,7 +49,8 @@ jobs:
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DSH_MODELS: ${{ vars.DSH_MODELS }}
-          DSH_MAX_TASKS: ${{ github.event.inputs.max_tasks || '2' }}
+          DSH_MAX_TASKS: ${{ github.event.inputs.max_tasks || '10' }}
+          DSH_MAX_WRITER: "1"   # fallback: the cloud also writes 1 WRITER article per run if the DSH app's Article Writer hasn't (it skips tasks that already have a branch)
           DSH_CHECKS: "npm run build;;node scripts/qa-check.mjs"
           DSH_HEALTH: "npm run typecheck;;npm run lint;;npm run check:images;;npm run build;;node scripts/qa-check.mjs"
         run: python scripts/dsh-agent.py

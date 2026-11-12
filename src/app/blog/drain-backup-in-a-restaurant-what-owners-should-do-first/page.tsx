@@ -118,7 +118,7 @@ export default function DrainBackupRestaurantPage() {
               <FileWarning className="h-5 w-5 text-slate-700 mt-0.5" />
               <div>
                 <h3 className="font-semibold text-slate-950">Document before cleanup starts</h3>
-                <p className="text-sm text-slate-700">Photos and a short written timeline (when it started, which fixtures, how far it spread) help with insurance, an inspector's questions, and giving a provider accurate information before dispatch.</p>
+                <p className="text-sm text-slate-700">Photos and a short written timeline (when it started, which fixtures, how far it spread) help with insurance, an inspector&apos;s questions, and giving a provider accurate information before dispatch.</p>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function DrainBackupRestaurantPage() {
           A home kitchen sink backup is usually a single clogged trap or branch line. A restaurant kitchen runs through a grease trap (also called a grease interceptor) first - a dedicated container that is supposed to let fats, oils, and grease (often shortened to FOG in city code documents) cool, separate, and stay out of the sewer line, while wastewater continues on to the main sewer connection. When a restaurant backs up, the cause is more often one of three things: the grease trap itself is full or near capacity, grease has hardened somewhere in the line between the kitchen and the trap, or - less commonly but more seriously - the main line past the trap has its own blockage or damage.
         </p>
         <p className="mt-2">
-          That distinction matters because the fix is different. A full trap needs pumping by a licensed liquid waste hauler. A blocked line or a trap that is cracked, undersized, or installed at the wrong grade needs a plumber. Treating a recurring backup as "just needs pumping" when the real problem is a line issue means paying for cleanings that never actually fix the problem.
+          That distinction matters because the fix is different. A full trap needs pumping by a licensed liquid waste hauler. A blocked line or a trap that is cracked, undersized, or installed at the wrong grade needs a plumber. Treating a recurring backup as &quot;just needs pumping&quot; when the real problem is a line issue means paying for cleanings that never actually fix the problem.
         </p>
       </section>
 
@@ -161,7 +161,7 @@ export default function DrainBackupRestaurantPage() {
           </div>
         </div>
         <p className="mt-3 text-sm text-slate-300">
-          City ordinances change, and exact intervals, sizing tables, and fine amounts vary by city and over time - confirm current requirements directly with your city's water utilities or pretreatment program before relying on any specific number here.
+          City ordinances change, and exact intervals, sizing tables, and fine amounts vary by city and over time - confirm current requirements directly with your city&apos;s water utilities or pretreatment program before relying on any specific number here.
         </p>
       </section>
 

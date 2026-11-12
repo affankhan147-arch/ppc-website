@@ -113,18 +113,18 @@ export default function SlabLeaksGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: The Insurance Gray Area</h2>
             <p className="text-slate-300 mb-4">
-              When a slab leak is discovered, the first question many homeowners ask is: <em>"Will my insurance cover this?"</em> The answer depends on one critical distinction: <strong>was the leak sudden and accidental, or did it develop gradually over time?</strong>
+              When a slab leak is discovered, the first question many homeowners ask is: <em>&quot;Will my insurance cover this?&quot;</em> The answer depends on one critical distinction: <strong>was the leak sudden and accidental, or did it develop gradually over time?</strong>
             </p>
             <p className="text-slate-300 mb-4">
               Multiple industry sources — including restoration companies, public adjusters, and legal guidance — consistently confirm the same pattern:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
-              <li>A slab leak that results from an abrupt pipe failure — such as a pressure spike, sudden corrosion breakthrough, or physical impact — typically qualifies as sudden and accidental. In such cases, the resulting property damage (flooring, drywall, cabinets) is generally covered under a standard homeowners policy, subject to the policy's limits and deductible.</li>
-              <li>The repair or replacement of the pipe itself, however, is almost never covered. This is treated as a maintenance item, consistent with the general insurance principle established in the Texas Department of Insurance's own guidance.</li>
+              <li>A slab leak that results from an abrupt pipe failure — such as a pressure spike, sudden corrosion breakthrough, or physical impact — typically qualifies as sudden and accidental. In such cases, the resulting property damage (flooring, drywall, cabinets) is generally covered under a standard homeowners policy, subject to the policy&apos;s limits and deductible.</li>
+              <li>The repair or replacement of the pipe itself, however, is almost never covered. This is treated as a maintenance item, consistent with the general insurance principle established in the Texas Department of Insurance&apos;s own guidance.</li>
               <li>Insurers investigate physical evidence to determine the timeline of the leak. Extensive mold growth, deep saturation of flooring, and moisture that has penetrated far into subfloor framing all point toward a gradual leak, which is typically excluded from coverage. A claim discovered through a routine inspection or a sudden water bill spike — without those extended‑exposure signs — supports a finding of sudden and accidental damage.</li>
             </ul>
             <p className="text-slate-300">
-              While there is no single TDI publication dedicated specifically to slab leaks, the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">agency's general guidance on water damage claims</a> — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases.
+              While there is no single TDI publication dedicated specifically to slab leaks, the <a href="https://www.tdi.texas.gov/blog/does-insurance-cover-water-damage-caused-by-burst-pipes.html" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">agency&apos;s general guidance on water damage claims</a> — which distinguishes sudden and accidental events from gradual seepage and maintenance issues — applies directly to slab leak cases.
             </p>
           </section>
 
@@ -136,12 +136,12 @@ export default function SlabLeaksGuidePage() {
             <ol className="list-decimal list-inside text-slate-300 space-y-3 mb-4">
               <li><strong>Get a professional leak‑detection diagnosis <em>before</em> filing a claim.</strong> A documented, dated report from a licensed plumber that identifies the cause and timeline of the leak is the single strongest piece of evidence you can provide to an adjuster.</li>
               <li><strong>Photograph and date everything as you find it.</strong> Take clear photos of the leak location, any visible water damage, and the surrounding area before any cleanup or repair work begins.</li>
-              <li><strong>Be careful with recorded statements or examinations under oath.</strong> Restoration and public-adjuster sources warn that describing "I noticed something a while back" can be used by the insurer to argue the loss was gradual, even if the actual leak was recent.</li>
+              <li><strong>Be careful with recorded statements or examinations under oath.</strong> Restoration and public-adjuster sources warn that describing &quot;I noticed something a while back&quot; can be used by the insurer to argue the loss was gradual, even if the actual leak was recent.</li>
               <li><strong>Weigh the cost of filing a claim against paying out of pocket.</strong> Multiple sources note that filing a claim can raise your premiums at renewal. For smaller, contained leaks, it may be more cost‑effective to handle the repair and cleanup yourself.</li>
-              <li><strong>If you file, document everything.</strong> Keep copies of the plumber's diagnosis, all photos, and any correspondence with your insurance company. A well‑documented claim is much harder to deny than one that relies on verbal descriptions.</li>
+              <li><strong>If you file, document everything.</strong> Keep copies of the plumber&apos;s diagnosis, all photos, and any correspondence with your insurance company. A well‑documented claim is much harder to deny than one that relies on verbal descriptions.</li>
             </ol>
             <p className="text-slate-300">
-              These steps don't guarantee a claim will be approved — but they significantly improve your chances by presenting a clear, consistent, professionally supported timeline of the event, rather than leaving the adjuster to interpret ambiguous evidence.
+              These steps don&apos;t guarantee a claim will be approved — but they significantly improve your chances by presenting a clear, consistent, professionally supported timeline of the event, rather than leaving the adjuster to interpret ambiguous evidence.
             </p>
           </section>
 
