@@ -36,6 +36,7 @@ export const contentPublished: Record<string, string> = {
   "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk": "2026-08-05",
   "/blog/how-long-should-emergency-drain-cleaning-take": "2026-07-11",
   "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas": "2026-07-25",
+  "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": "2026-11-05",
   "/blog/how-to-verify-a-texas-plumbers-license": "2026-08-14",
   "/blog/hydro-jetting-vs-drain-snaking-dfw": "2026-08-05",
   "/blog/is-a-clogged-drain-actually-a-sewer-line-problem": "2026-08-05",

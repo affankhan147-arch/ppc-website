@@ -93,6 +93,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "Turn off every fixture, find the leak indicator on your water meter and watch it. If it moves with everything off, you have a hidden leak. Here's how to find it."
   },
+  "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": {
+    description: "In Dallas the pipe from the meter to your house is yours to fix. How to tell which side is leaking, when to call 311 and how DWU leak adjustments work."
+  },
   // 47 impr / 0% / pos 11.5
   "/tools/dfw-leak-cost-calculator": {
     description:

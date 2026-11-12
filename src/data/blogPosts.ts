@@ -467,3 +467,14 @@ export const dfwWaterConservationRebateProgramsByCityPost: BlogPost = {
 };
 
 blogPosts.push(dfwWaterConservationRebateProgramsByCityPost);
+
+export const waterLeakMeterToHouseDallasPost: BlogPost = {
+  slug: "water-leak-between-meter-and-house-dallas-who-fixes-it",
+  title: "Water Leak Between the Meter and Your House in Dallas: Who Fixes It?",
+  directAnswer:
+    "In Dallas, the property owner is responsible for the private side of the water service line, from the water meter to the house, so a leak there is yours to have repaired by a licensed plumber. A leak at the meter or on the street side is reported to Dallas Water Utilities by calling 311, which takes water emergencies 24 hours a day.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(waterLeakMeterToHouseDallasPost);
