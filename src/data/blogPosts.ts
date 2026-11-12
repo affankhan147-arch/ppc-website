@@ -313,6 +313,16 @@ export const tanklessWaterHeaterTroubleshootingPost: BlogPost = {
 
 blogPosts.push(tanklessWaterHeaterTroubleshootingPost);
 
+export const tanklessFreezePowerOutagePost: BlogPost = {
+  slug: "tankless-water-heater-freeze-power-outage-dfw",
+  title: "Tankless Water Heater in a DFW Freeze: What to Do When the Power Goes Out",
+  directAnswer: "A tankless water heater's built-in freeze protection only works while the unit has power, so in a freeze with a long power outage the safe move is to drain it: Rinnai's procedure is to shut off the cold water and gas supply, disconnect power and open the hot and cold drain valves. In Dallas-Fort Worth the average first freeze comes around November 22.",
+  category: "Prevention",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(tanklessFreezePowerOutagePost);
+
 
 export const outdoorFaucetFreezeDamagePost: BlogPost = {
   slug: "outdoor-faucet-hose-bib-leaking-after-freeze-dallas",
