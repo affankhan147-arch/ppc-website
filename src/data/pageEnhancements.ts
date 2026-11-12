@@ -352,7 +352,8 @@ export const problemEnhancements: Record<string, PageEnhancement> = {
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
-      { label: "Dallas emergency plumbing help", href: "/cities/dallas" }
+      { label: "Dallas emergency plumbing help", href: "/cities/dallas" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
     ]
   }
 };
@@ -3356,7 +3357,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water heater expansion tank failure signs", href: "/blog/water-heater-expansion-tank-failure-signs-dallas" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
       { label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" },
-      { label: "Water Pressure Regulator (PRV) Replacement Cost Calculator", href: "/tools/water-pressure-regulator-cost-calculator" }
+      { label: "Water Pressure Regulator (PRV) Replacement Cost Calculator", href: "/tools/water-pressure-regulator-cost-calculator" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
     ]
   },
   "how-to-check-your-water-meter-for-a-hidden-leak-dallas": {
@@ -3673,7 +3675,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
-      { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
+      { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
     ]
   },
   "sudden-low-water-pressure-in-dallas-home-what-it-means": {
