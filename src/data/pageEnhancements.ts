@@ -302,7 +302,8 @@ export const problemEnhancements: Record<string, PageEnhancement> = {
     extraLinks: [
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
-      { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" }
+      { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
     ]
   },
   "water-shutoff-valve-will-not-close": {
@@ -3730,7 +3731,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
-      { label: "Main sewer line clogged in Dallas: warning signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" }
+      { label: "Main sewer line clogged in Dallas: warning signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
     ]
   },
   "emergency-plumber-vs-regular-plumber-what-is-the-difference": {
@@ -3856,7 +3858,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
-      { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" }
+      { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
     ]
   },
   "drain-cleaning-cost-guide-for-dallas-homeowners": {
