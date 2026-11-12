@@ -148,5 +148,13 @@ export const seoOverrides: Record<string, SeoOverride> = {
     title: "No Usable Toilet in the House? What to Do Right Now",
     description:
       "Every toilet backing up at once usually means a main sewer line problem, not a clog. Stop flushing, check the outdoor cleanout, and get a plumber out tonight."
+  },
+  // SEO-AUDIT 2026-11-06: title was 65 chars.
+  "/tools/sewer-line-repair-cost-calculator": {
+    title: "Sewer Line Repair Cost Calculator: Trenchless vs. Dig"
+  },
+  // SEO-AUDIT 2026-11-06: title was 62 chars.
+  "/tools/water-service-line-cost-calculator": {
+    title: "Water Service Line Cost Calculator (Plus Who Pays)"
   }
 };
