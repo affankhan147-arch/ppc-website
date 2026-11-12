@@ -3358,7 +3358,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Water pooling inside the meter box itself or at the connection before the meter is typically a city-side meter leak to report to Dallas Water Utilities.",
       "Turn off every fixture in the home and watch the meter's leak indicator dial to confirm water is moving through the line (our meter-check guide explains this step in detail).",
       "If your home is equipped with a private customer shutoff valve near the house, closing it stops water to the home while you wait for assistance or diagnosis.",
-      "Do not dig around the meter box or attempt to adjust city equipment, as service lines and meter connections remain utility property."
+      "Do not dig around the meter box or touch the city's meter or other city equipment."
     ],
     proofTitle: "After the repair: asking Dallas Water Utilities for a leak adjustment",
     proofItems: [
@@ -3370,7 +3370,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraFaqs: [
       {
         question: "Who do I call for a leak at the water meter in Dallas?",
-        answer: "Call 311, which takes Dallas water and sewer emergencies 24 hours a day (or 214-670-3111 from outside city limits), to report a meter leak."
+        answer: "Call 311, which takes Dallas water and sewer emergencies 24 hours a day, to report a meter leak."
       },
       {
         question: "Who pays to fix the pipe between the meter and my Dallas house?",
