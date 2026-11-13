@@ -96,6 +96,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": {
     description: "In Dallas the pipe from the meter to your house is yours to fix. How to tell which side is leaking, when to call 311 and how DWU leak adjustments work."
   },
+  "/blog/saws-water-leak-who-fixes-it-san-antonio": {
+    description: "SAWS can't repair plumbing on private property. Who fixes a leak at your San Antonio home, what to shut off first, and how SAWS leak reimbursement works."
+  },
   // 47 impr / 0% / pos 11.5
   "/tools/dfw-leak-cost-calculator": {
     description:

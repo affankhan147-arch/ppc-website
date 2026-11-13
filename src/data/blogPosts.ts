@@ -488,3 +488,14 @@ export const waterLeakMeterToHouseDallasPost: BlogPost = {
 };
 
 blogPosts.push(waterLeakMeterToHouseDallasPost);
+
+export const sawsWaterLeakSanAntonioPost: BlogPost = {
+  slug: "saws-water-leak-who-fixes-it-san-antonio",
+  title: "Water Leak at Your San Antonio Home: Who Fixes It and Will SAWS Help?",
+  directAnswer:
+    "SAWS says it cannot repair plumbing on private property, so a leak at your San Antonio home needs a licensed plumber. Water and sewer emergencies on SAWS's side go to SAWS, which takes those calls 24 hours a day. After the repair, SAWS has a leak repair reimbursement request: receipts are due within 60 days, with one adjustment per 12 months.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(sawsWaterLeakSanAntonioPost);

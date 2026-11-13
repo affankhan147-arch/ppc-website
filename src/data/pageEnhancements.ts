@@ -3392,6 +3392,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
       { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
@@ -3434,11 +3435,53 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
       { label: "Water Service Line Replacement Cost Calculator (Plus Who Pays)", href: "/tools/water-service-line-cost-calculator" },
       { label: "Slab leak warning signs", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
       { label: "Dallas service area", href: "/cities/dallas" }
+    ]
+  },
+  "saws-water-leak-who-fixes-it-san-antonio": {
+    checklistTitle: "Is the leak yours or SAWS's?",
+    checklistIntro:
+      "SAWS states that it cannot repair plumbing on private property, so knowing what steps to take at home and when to contact SAWS versus a licensed plumber helps get the issue handled cleanly.",
+    checklistItems: [
+      "SAWS states that it cannot repair plumbing on private property, and if you have a leak you will need to hire a plumber.",
+      "If you suspect a leak at your own home, shut off the main water service at the meter.",
+      "Water and sewer emergencies are taken 24 hours a day, 7 days a week, and SAWS asks you to call any time of day or night about an unscheduled outage.",
+      "Ice formed during a freeze can block pipes and cause them to burst.",
+      "Know where your meter is and how to close the valve there before you need it."
+    ],
+    proofTitle: "After the repair: SAWS leak repair reimbursement",
+    proofItems: [
+      "All receipts must be submitted within 60 days after repairs.",
+      "Customers are only eligible for one adjustment in a 12-month period.",
+      "It may take up to two billing cycles to receive an adjustment.",
+      "Reimbursements are based on the type of leak, and listed types include irrigation systems, flex supply lines, toilets, pools, water heaters, water softeners, broken pipes, and pressure reducing valves.",
+      "Receipts can be uploaded as jpg, gif, png, pdf, or jpeg files."
+    ],
+    extraFaqs: [
+      {
+        question: "Will SAWS fix a leak on my property?",
+        answer: "No. SAWS cannot repair plumbing on private property. If you have a leak, you will need to hire a licensed plumber."
+      },
+      {
+        question: "How long do I have to send SAWS my leak repair receipts?",
+        answer: "Receipts must be submitted within 60 days after repairs. Customers are eligible for one adjustment in a 12-month period, and processing may take up to two billing cycles."
+      },
+      {
+        question: "What should I do first if I find a leak at home in San Antonio?",
+        answer: "If you suspect a leak at your own home, shut off the main water service at the meter as SAWS advises, then contact a licensed plumber to make repairs."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Leak between the meter and the house in Dallas", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" },
+      { label: "San Antonio service area", href: "/cities/san-antonio" }
     ]
   },
   "what-counts-as-a-plumbing-emergency": {
