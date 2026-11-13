@@ -242,6 +242,7 @@ Done when: `npm run build` passes and `.next/server/app/cost-guides/burst-pipe-e
 ---
 
 ## PH-035 - Houston 24-hour plumber page: Houston-specific section - Status: OPEN
+Claude note 2026-11-13: BLOCKED because aider scraped the source URLs (the NWS PDF) into the prompt. Fixed in scripts/dsh-agent.py (aider --no-detect-urls). Retry exactly as written on the same branch.
 File: `src/data/pageEnhancements.ts`
 Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07) but no Houston-specific content block (the DFW cities all have one). This adds Houston's own facts from official sources.
 Where: search (do not read the whole file) for this line, which appears once:
@@ -305,6 +306,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/houston/24-hour-e
 ---
 
 ## PH-036 - San Antonio 24-hour plumber page: San Antonio-specific section - Status: OPEN
+Claude note 2026-11-13: BLOCKED because aider scraped the source URLs (the NWS PDF) into the prompt. Fixed in scripts/dsh-agent.py (aider --no-detect-urls). Retry exactly as written on the same branch.
 File: `src/data/pageEnhancements.ts`
 Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07) and no San Antonio-specific content block. This adds SAWS and NWS facts from official sources.
 Where: search (do not read the whole file) for this line, which appears once:
@@ -367,7 +369,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/san-antonio/24-ho
 
 ---
 
-## PH-034 - Put the calculator links on the 3 pages PH-025 and PH-027 missed - Status: OPEN
+## PH-034 - Put the calculator links on the 3 pages PH-025 and PH-027 missed - Status: DONE (2026-11-13, merged bfed5fa)
 File: `src/data/pageEnhancements.ts`
 Why: PH-025 and PH-027 (merged 2026-11-12) placed some links on other pages, because their anchor lines appear more than once in the file (Claude's mistake, not DSH's). These 3 pages still need their link into the sewer and slab calculators (positions 40.2 and 22.1).
 Do these 3 inserts. For each: search (do not read the whole file) for the entry line; a few lines below it is the FIRST line `    extraLinks: [` after it; insert the new line directly BELOW that `    extraLinks: [` line, so it becomes the first link of that list. Change nothing else.
@@ -388,7 +390,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `h
 
 ---
 
-## PH-038 - Escape quotes and apostrophes in 3 guides (lint) - Status: OPEN
+## PH-038 - Escape quotes and apostrophes in 3 guides (lint) - Status: DONE (2026-11-13, merged dbd2f4d; Claude redid it)
 Files: `src/app/guides/dfw-gas-line-safety/page.tsx`, `src/app/guides/dfw-water-heater-lifespan/page.tsx`, `src/app/guides/texas-insurance-plumbing-claims/page.tsx`
 Why: `npm run lint` reports 5 react/no-unescaped-entities errors in these 3 files. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className` or `href`):
 - `src/app/guides/dfw-gas-line-safety/page.tsx` line ~99: `The plumber's` -> `The plumber&apos;s`
@@ -399,7 +401,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-gas-line-sa
 
 ---
 
-## PH-039 - Escape quotes and apostrophes in the plumber license post, part 1 (lint) - Status: OPEN
+## PH-039 - Escape quotes and apostrophes in the plumber license post, part 1 (lint) - Status: DONE (2026-11-13, merged 0919198)
 File: `src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx`
 Why: `npm run lint` reports 56 react/no-unescaped-entities errors in this file; this task fixes the 28 on lines 114-159 (PH-040 does lines 189-294). Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className` or `href`; the page text must read the same):
 - line ~114: `plumber's` -> `plumber&apos;s`
@@ -416,7 +418,7 @@ Done when: `npm run build` passes and `npx eslint src/app/blog/how-to-verify-a-t
 
 ---
 
-## PH-040 - Escape quotes and apostrophes in the plumber license post, part 2 (lint) - Status: OPEN
+## PH-040 - Escape quotes and apostrophes in the plumber license post, part 2 (lint) - Status: DONE (2026-11-13, merged b52ded1 + d7d8e56; Claude fixed 8 lines)
 File: `src/app/blog/how-to-verify-a-texas-plumbers-license/page.tsx`
 Why: the other 28 react/no-unescaped-entities errors in this file, on lines 189-294 (PH-039 does lines 114-159). Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className` or `href`; the page text must read the same):
 - line ~189: `Texas's` -> `Texas&apos;s`
@@ -440,7 +442,7 @@ Done when: `npm run build` passes and `npx eslint src/app/blog/how-to-verify-a-t
 
 ---
 
-## PH-037 - New blog post: water leak at your San Antonio home, who fixes it and SAWS reimbursement - Status: WRITER
+## PH-037 - New blog post: water leak at your San Antonio home, who fixes it and SAWS reimbursement - Status: DONE (2026-11-13, merged cd2e7e3)
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/saws-water-leak-who-fixes-it-san-antonio`. Search intent: "saws leak on my property who fixes it" / "saws leak adjustment". Gap: no page on the site mentions SAWS, while the San Antonio 24-hour page has 1,353 impressions (position 23.2). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit). Use these anchors only (other tasks edit other spots in the same files).
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(waterLeakMeterToHouseDallasPost);`, add a new post copying the shape of `waterLeakMeterToHouseDallasPost` exactly, then `blogPosts.push(sawsWaterLeakSanAntonioPost);`. Use exactly:
@@ -814,7 +816,7 @@ Done when: `npm run build` passes and `.next/server/app/tools/sewer-line-repair-
 
 ---
 
-## PH-029 - Escape quotes and apostrophes in the DFW burst pipes guide (lint) - Status: FIX
+## PH-029 - Escape quotes and apostrophes in the DFW burst pipes guide (lint) - Status: DONE (2026-11-13, merged 82789bc; Claude restored line 100)
 Claude note 2026-11-12: everything else passed; fix 1 line in `src/app/guides/dfw-burst-pipes/page.tsx` on the existing branch dsh/2026-11-12-PH-029. On line ~100 the sentence now starts `&quot;most&quot; Texas homeowners policies do cover water damage` (the first word was changed by mistake). Change that start back to `Most Texas homeowners policies do cover water damage`. Keep the later `&quot;most&quot; is doing real work` on the same line as it is. Change nothing else. Done when: `npm run build` passes, `npx eslint src/app/guides/dfw-burst-pipes/page.tsx` reports 0 errors and the file contains `Most Texas homeowners policies do cover water damage`.
 File: `src/app/guides/dfw-burst-pipes/page.tsx`
 Why: `npm run lint` reports 28 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
@@ -908,3 +910,88 @@ Goal: one new blog post at `/blog/who-is-responsible-for-sewer-line-fort-worth`.
 4. `src/data/contentDates.ts`: directly below the line `  "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call": "2026-07-11",` add `  "/blog/who-is-responsible-for-sewer-line-fort-worth": "2026-11-12",`.
 Sources (Claude opened them on 2026-11-11): https://www.fortworthtexas.gov/departments/water/wastewater/sewer-faq ; https://www.fortworthtexas.gov/departments/water/wastewater ; https://www.fortworthtexas.gov/departments/development-services/permits/residential-information ; https://www.fortworthtexas.gov/departments/development-services/permits/contractor-registration ; https://tsbpe.texas.gov/wp-content/uploads/documents/TSBPE_PlumbingLicenseLaw(PlainView)_Sept2025.pdf
 Done when: `npm run build` passes and `.next/server/app/blog/who-is-responsible-for-sewer-line-fort-worth.html` exists and contains `Fixing a private sewer line in Fort Worth`.
+
+## PH-041 - Links into the Houston and San Antonio 24-hour pages from 3 emergency posts - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /cities/houston/24-hour-emergency-plumber (1,924 impressions, position 18.5) and /cities/san-antonio/24-hour-emergency-plumber (1,353, position 23.2) get almost no links from blog posts. These 3 general emergency posts are the closest match.
+Where: do this in 3 places. For EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "what-counts-as-a-plumbing-emergency": {`
+- `  "emergency-plumber-vs-regular-plumber-what-is-the-difference": {`
+- `  "emergency-plumber-near-me-open-now-before-help-arrives": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert these 2 lines directly BELOW it:
+```ts
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `href: "/cities/houston/24-hour-emergency-plumber" }` exactly 4 times.
+
+---
+
+## PH-042 - Links into the DFW emergency plumbing cost guide from 2 more posts - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /guides/dfw-emergency-plumbing-costs has 1,018 impressions at position 13.0; its top query "emergency plumber cost" sits at position 24. Two cost and approval posts don't link to it yet.
+Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "emergency-plumbing-cost-guide-for-dallas-homeowners": {`
+- `  "emergency-leak-approval-checklist-for-homeowners": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert this line directly BELOW it:
+```ts
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+```
+Change nothing else.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `Emergency plumber cost in DFW: what changes the price` exactly 2 times.
+
+---
+
+## PH-043 - Links into the sewer line repair cost calculator from 3 sewer posts - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2. Three sewer posts don't link to it yet.
+Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "main-sewer-line-clogged-in-dallas-warning-signs": {`
+- `  "sewer-backup-in-fort-worth-what-it-means-and-who-to-call": {`
+- `  "emergency-sewer-help-in-garland-signs-and-next-steps": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert this line directly BELOW it:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+Change nothing else.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 7 times.
+
+---
+
+## PH-044 - Links into the slab leak repair cost calculator from 2 leak posts - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /tools/slab-leak-repair-cost-calculator has 1,204 impressions at position 22.1. Two water-meter leak posts don't link to it yet.
+Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "how-to-check-your-water-meter-for-a-hidden-leak-dallas": {`
+- `  "water-leak-between-meter-and-house-dallas-who-fixes-it": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert this line directly BELOW it:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+```
+Change nothing else.
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `href: "/tools/slab-leak-repair-cost-calculator" }` exactly 7 times.
+
+---
+
+## PH-045 - New blog post: plumbing permit in San Antonio, can a homeowner pull it - Status: WRITER
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/san-antonio-plumbing-permit-homeowner-or-plumber`. Search intent: "san antonio plumbing permit homeowner" / "can i pull my own plumbing permit san antonio". Gap: no PH page covers San Antonio permits, and the San Antonio 24-hour page has 1,353 impressions (position 23.2). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug`. Copy the shape of PH-037 (`sawsWaterLeakSanAntonioPost`) exactly and use these anchors only (other tasks edit other spots in the same files).
+1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(sawsWaterLeakSanAntonioPost);`, add a new post copying the shape of `sawsWaterLeakSanAntonioPost` exactly, then `blogPosts.push(sanAntonioPlumbingPermitPost);`. Use exactly:
+   - const name `sanAntonioPlumbingPermitPost`
+   - slug `san-antonio-plumbing-permit-homeowner-or-plumber`
+   - title `Plumbing Permit in San Antonio: Can a Homeowner Pull It?`
+   - directAnswer `Only in one case. The City of San Antonio says a homeowner can apply for a plumbing permit for an existing home only if it is their homestead and they will personally do the work. Otherwise, a trade contractor licensed by the city or state and registered with the city can obtain the plumbing permit on the homeowner's behalf.`
+   - category `Cost and decision guides`, relatedServiceSlug `24-hour-emergency-plumber`
+2. `src/data/pageEnhancements.ts` (search, do not read whole): find the line `  "saws-water-leak-who-fixes-it-san-antonio": {`; after that entry's closing `  },` add a new entry keyed `"san-antonio-plumbing-permit-homeowner-or-plumber"`, copying its fields exactly (checklistTitle, checklistIntro, checklistItems, proofTitle, proofItems, extraFaqs, extraLinks). Plain, human copy, ONLY these facts, all from the City of San Antonio Development Services residential permits page (https://www.sa.gov/Directory/Departments/DSD/Constructing/Residential/Permits), no prices, no fees, no timelines, no guarantees, no phone numbers:
+   - checklistTitle `Can you pull the plumbing permit yourself?`; intro + 5 items: a homeowner can only apply for a plumbing permit for an existing residence if it is their homestead and they will personally be doing the work; the city refers homeowners to its Plumbing Homeowner Affidavit; the homeowner plumbing permit row is only for an existing homestead and asks for proof of ownership; the city also says that for your safety you must use licensed trade contractors for new electrical, plumbing and/or HVAC project components; trade contractors licensed by the city or state and registered with the city may obtain trade permits on behalf of the homeowner.
+   - proofTitle `Before plumbing work starts in San Antonio`; 4 items: the city's plumbing application is titled "Plumbing, Gas and Sewer Permit"; a project may need several permits (building, electrical, mechanical and plumbing) depending on its scope, and the city's example is a deck with a ceiling fan and sink, which needs building, electrical and plumbing permits; ask your plumber to confirm they are licensed and registered with the city, and who will pull the permit; keep a copy of the permit with your home records.
+   - extraFaqs (3): "Can a homeowner pull a plumbing permit in San Antonio?" (only for an existing home that is their homestead, doing the work personally; the city points to its Plumbing Homeowner Affidavit); "Who can pull a plumbing permit for me in San Antonio?" (a trade contractor licensed by the city or state and registered with the city); "Is a gas or sewer job a separate permit in San Antonio?" (the city's plumbing application is titled "Plumbing, Gas and Sewer Permit"; ask your licensed plumber to confirm what your job needs).
+   - extraLinks (5): `{ label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }`, `{ label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }`, `{ label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" }`, `{ label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" }`, `{ label: "San Antonio service area", href: "/cities/san-antonio" }`
+   - Links in: in BOTH entries `"saws-water-leak-who-fixes-it-san-antonio"` and `"how-to-verify-a-texas-plumbers-license"`, find the FIRST line `    extraLinks: [` below the entry line and insert directly BELOW it: `      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },`
+3. `src/data/seoOverrides.ts`: directly after the 3-line `"/blog/saws-water-leak-who-fixes-it-san-antonio"` entry, add, same shape:
+   `"/blog/san-antonio-plumbing-permit-homeowner-or-plumber": { description: "Can you pull your own plumbing permit in San Antonio? Only for your homestead, doing the work yourself. Otherwise a licensed, registered plumber pulls it." },`
+4. `src/data/contentDates.ts`: directly after the line for `"/blog/saws-water-leak-who-fixes-it-san-antonio"` add `"/blog/san-antonio-plumbing-permit-homeowner-or-plumber": "2026-11-13",`
+Done when: `npm run build` passes and `.next/server/app/blog/san-antonio-plumbing-permit-homeowner-or-plumber.html` exists and contains `Before plumbing work starts in San Antonio`.
+
+---

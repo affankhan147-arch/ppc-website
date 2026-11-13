@@ -2,6 +2,15 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-13 - audit
+- Agent runs: 13 Nov 16:33 UTC FAILED after 8 tasks: the old PH-029 branch (made before cities.ts was normalised to LF) left cities.ts looking modified, so the checkout for PH-030 aborted. Merging PH-029 removes the cause. 12 Nov success. PH-035/036 BLOCKED: aider scraped the task's source URLs (NWS PDF); fixed with aider --no-detect-urls (e528183).
+- Reviewed 8: PH-034 @28e7553, PH-037 writer @e70b632 (every fact matches the SAWS brief), PH-039 @36ee2ff: PASS. PH-029 @f5bceab (2nd miss on line 100), PH-038 @14e91c9 (edited the wrong line and rewrote "holds a current, active Master or Journeyman license"; 2 of 3 files untouched), PH-040 @aa01573 ("does list" became "doesn't list", 8 escapes missed): Claude corrected them in the merge (text-only fixes; a same-branch FIX redo already failed once). Merged 82789bc..d7d8e56. BLOCKED: PH-035 @4efedfc, PH-036 @1457c78.
+- Gate: build PASS in the reports; tsc PASS on merged master; every lint diff checked escape-only; eslint 0 errors in the 5 touched files (repo now 43: PH-030/031 files + CookieConsent); Vercel master success. Live fetch skipped (WebFetch permission timeouts).
+- Search Console skipped: Chrome offline (cloud run).
+- Assigned 4 OPEN + 1 WRITER: PH-041 Houston/San Antonio 24-hour links from 3 emergency posts, PH-042 cost-guide links, PH-043 sewer-calculator links, PH-044 slab-calculator links (all dry-run by Claude, tsc PASS); WRITER PH-045 San Antonio plumbing permit post (sa.gov opened today). Queue without branches: 6 OPEN, 2 WRITER (+ PH-035/036 retrying, PH-004 WAITING).
+- Desktop agent idle (laptop off or app closed?): no Article Writer branch today, no LINK-AUDIT Thu 12 Nov.
+- First-time pass rate (7 days): 19/24 tasks + 2 reports. Coaching: DSH rewrites words next to the target text (PH-029 twice, PH-038, PH-040); 3rd repeat, so AGENTS.md hard rules now has a lint/escape-only rule.
+
 ## 2026-11-12 - audit
 - Agent runs: 12 Nov 16:54 UTC success (11 tasks + 1 writer); 11 Nov failed (quote crash, fixed 3b62bb0 on 11 Nov). Gemini was overloaded for part of the run; fallbacks covered it.
 - Reviewed 11: PH-013 FIX redo @6a1f6be, PH-020 writer @26a58a7, PH-022 @95e74b5, PH-023 @62958ef, PH-024 @2f61400, PH-025 @afb5314, PH-026 @22baf32, PH-027 @00d83eb, PH-028 @5c28150, PH-033 @4dfeb21: PASS, merged 06f9629..1915fc9 (PH-025 put 1 link and PH-027 2 links on neighbouring pages because Claude's anchor lines were not unique; links are relevant, so merged, and PH-034 adds the missing 3). PH-029 @9e15f0e: FIX (line 100 sentence start rewritten to &quot;most&quot;). Old PH-002/003 already merged.

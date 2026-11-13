@@ -18,6 +18,7 @@ Rankings first (titles already match the queries; position too low for CTR work)
 - /tools/sewer-line-repair-cost-calculator: 2,130 / 4 / 0.2% / 40.2; /tools/slab-leak-repair-cost-calculator: 1,204 / 3 / 0.2% / 22.1
 
 Checks log:
+- 2026-11-13 (Fri): Search Console skipped: Chrome offline (cloud run). No new numbers.
 - 2026-11-12 (Thu): Search Console skipped: Chrome offline (cloud run). PH-023 (city hub titles) and PH-026 (2 calculator titles) went live today.
 - 2026-11-11 (Wed): Search Console skipped: Chrome offline (cloud run, no Claude in Chrome). No new numbers. PH-023 not live yet: the DSH agent crashed on 10 and 11 Nov on the double quotes in its task title (fixed 2026-11-11), so it runs on 12 Nov.
 
@@ -27,6 +28,12 @@ Rankings-first work queued 2026-11-11 (judge 14+ days after live):
 - /tools/slab-leak-repair-cost-calculator: PH-027 links from 3 leak pages (p22.1).
 - /cities/houston/24-hour-emergency-plumber (p18.5) and /cities/san-antonio/24-hour-emergency-plumber (p23.2): PH-028 links from the 24-hour service page.
 - Live 2026-11-12: PH-024 (d8a8962), PH-025 (c3949a2), PH-026 (503ae4c), PH-027 (1b34c1a), PH-028 (bbb22d2). PH-025 put 1 of 3 links and PH-027 2 of 3 links on neighbouring pages (anchor lines were not unique); PH-034 adds the 3 missing links.
+
+Rankings-first work queued 2026-11-13 (judge 14+ days after live):
+- Live 2026-11-13: PH-034 the 3 missing calculator links (bfed5fa); PH-037 SAWS leak post links into the San Antonio 24-hour page (cd2e7e3).
+- /cities/houston/24-hour-emergency-plumber (p18.5) and /cities/san-antonio/24-hour-emergency-plumber (p23.2): PH-041 links from 3 emergency posts; PH-035/036 retrying (blocked on URL scraping, fixed); PH-045 San Antonio plumbing permit post (WRITER).
+- /guides/dfw-emergency-plumbing-costs (p13.0): PH-042 links from 2 more posts.
+- /tools/sewer-line-repair-cost-calculator (p40.2): PH-043 links from 3 sewer posts. /tools/slab-leak-repair-cost-calculator (p22.1): PH-044 links from 2 leak posts.
 
 Rankings-first work queued 2026-11-12 (judge 14+ days after live):
 - /cities/houston/24-hour-emergency-plumber (1,924 / 0 / p18.5): PH-035 Houston-specific section (311, Houston Public Works leak credits, NWS Feb 2021 low).
