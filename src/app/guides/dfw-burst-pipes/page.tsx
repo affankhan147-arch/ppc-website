@@ -130,7 +130,7 @@ export default function BurstPipesGuidePage() {
               <li><strong>Insulate exposed pipe runs</strong> in attics, garages, and exterior walls - the same areas that lack the freeze protection built into colder-climate homes.</li>
               <li><strong>Let faucets drip during a hard freeze</strong> on any line that has failed before or runs through an exposed space; moving water is far less likely to freeze solid.</li>
               <li><strong>Disconnect garden hoses and cover exterior spigots</strong> before the first freeze warning of the season.</li>
-              <li><strong>Confirm you know your main shutoff location</strong> - this is the single highest-leverage piece of freeze prep, since it's what limits every other failure once it happens.</li>
+              <li><strong>Confirm you know your main shutoff location</strong> - this is the single highest-leverage piece of freeze prep, since it&apos;s what limits every other failure once it happens.</li>
               <li><strong>If your home still has galvanized or polybutylene supply lines,</strong> treat proactive replacement as a real option rather than waiting for a failure - both materials become significantly more failure-prone with age, and a planned replacement is dramatically cheaper than an emergency one plus water damage cleanup.</li>
             </ul>
             <p className="text-slate-400 text-sm mt-4">
