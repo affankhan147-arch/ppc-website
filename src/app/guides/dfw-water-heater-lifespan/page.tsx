@@ -88,7 +88,7 @@ export default function WaterHeaterLifespanGuidePage() {
               <li><strong>Forney:</strong> 13-17 GPG (very hard)</li>
             </ul>
             <p className="text-slate-300 mb-4">
-              At these hardness levels, dissolved calcium and magnesium precipitate out as the water heats, settling as sediment in a tank unit or scaling the heat exchanger in a tankless unit. In a tank heater, that sediment layer acts as an insulating barrier between the burner or heating element and the water above it - the heater has to run longer to reach the same temperature, which increases both energy use and wear on the heating components. Homes in the higher-hardness cities on this list (Frisco, McKinney, Rockwall, Forney) generally need more frequent flushing than the "once a year" baseline manufacturers recommend for moderate water.
+              At these hardness levels, dissolved calcium and magnesium precipitate out as the water heats, settling as sediment in a tank unit or scaling the heat exchanger in a tankless unit. In a tank heater, that sediment layer acts as an insulating barrier between the burner or heating element and the water above it - the heater has to run longer to reach the same temperature, which increases both energy use and wear on the heating components. Homes in the higher-hardness cities on this list (Frisco, McKinney, Rockwall, Forney) generally need more frequent flushing than the &quot;once a year&quot; baseline manufacturers recommend for moderate water.
             </p>
             <p className="text-slate-400 text-sm mt-4">
               <strong>Sources:</strong> DFW city-by-city water hardness comparison data; Dallas Water Utilities water quality reporting.

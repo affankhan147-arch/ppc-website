@@ -79,7 +79,7 @@ export default function InsuranceGuidePage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: What Is Actually Covered?</h2>
             <p className="text-slate-300 mb-4">
-              If the leak qualifies as "sudden and accidental", what does your policy actually pay for? The short answer is: <strong>the resulting damage to your home, not the repair of the failed pipe itself.</strong>
+              If the leak qualifies as &quot;sudden and accidental&quot;, what does your policy actually pay for? The short answer is: <strong>the resulting damage to your home, not the repair of the failed pipe itself.</strong>
             </p>
             <p className="text-slate-300 mb-4">
               Water damage to flooring, drywall, cabinets, and personal belongings is generally covered (subject to your policy&apos;s limits and deductible). However, the cost to repair or replace the burst pipe, failed water heater, or cracked fitting is typically treated as a maintenance expense and is not covered.

@@ -96,7 +96,7 @@ export default function GasLineGuidePage() {
               Before any work begins, homeowners should confirm two things:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
-              <li>The plumber's license is active and current via the <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">TSBPE public license search tool</a>.</li>
+              <li>The plumber&apos;s license is active and current via the <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">TSBPE public license search tool</a>.</li>
               <li>The local building department (Keller, Southlake, or the applicable city) has issued the required permit for the work.</li>
             </ul>
             <p className="text-slate-300">
