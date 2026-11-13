@@ -662,6 +662,7 @@ export const additionalProblemEnhancements: Record<string, PageEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
       { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" }
@@ -1062,6 +1063,7 @@ export const costGuideEnhancements: Record<string, PageEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
     { label: "Failed shutoff leak checklist", href: "/blog/water-shutoff-valve-will-not-close-during-a-leak" },
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
@@ -3701,6 +3703,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Confirm whether checking for a main-line issue is part of the visit or would require a separate appointment."
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
       { label: "High water pressure: hidden pipe damage risk", href: "/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" },
