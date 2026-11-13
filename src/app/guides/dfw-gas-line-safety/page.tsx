@@ -112,7 +112,7 @@ export default function GasLineGuidePage() {
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
               <li><strong>Has my gas line been sized correctly for this additional load?</strong> A professional load calculation (not just a visual inspection) is required to ensure the existing line can safely handle the new appliance.</li>
               <li><strong>Does this installation require a permit?</strong> If the answer is “no” for gas work, that is a red flag. Most municipalities require permits for any new or extended gas piping.</li>
-              <li><strong>Is the contractor licensed to perform gas work in Texas?</strong> Confirm that the plumber holds a current, active Master or Journeyman license from TSBPE. You can verify this directly through TSBPE&apos;s public license search database.</li>
+              <li><strong>Is the contractor licensed to perform gas work in Texas?</strong> Confirm that The plumber&apos;s license is current and active with TSBPE. You can verify this directly through TSBPE&apos;s public license search database.</li>
               <li><strong>What are the pressure test and inspection requirements?</strong> After installation, the system must be pressure‑tested to confirm there are no leaks. Ask whether this test is included in the quote, and whether the city inspector will sign off on the completed work.</li>
             </ul>
             <p className="text-slate-300">
