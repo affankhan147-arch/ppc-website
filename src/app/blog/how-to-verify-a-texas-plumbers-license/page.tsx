@@ -111,11 +111,11 @@ export default function LicenseVerificationPage() {
       </div>
       <DirectAnswer>
         <p>
-          To verify a Texas plumber's license, use the free TSBPE public license search in four steps:
+          To verify a Texas plumber&apos;s license, use the free TSBPE public license search in four steps:
           <ol className="list-decimal ml-6 mt-2 space-y-1">
-            <li>Go to the TSBPE Public License Search: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a> (or visit <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a> and click "Find a license/registration").</li>
-            <li>Choose <strong>"Search by Name"</strong> or <strong>"Search by License Number"</strong> - License Number is more precise.</li>
-            <li>Select <strong>"Texas State Board of Plumbing Examiners"</strong> from the Board dropdown, then <strong>"Plumbing - Licensed or Registered"</strong>.</li>
+            <li>Go to the TSBPE Public License Search: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a> (or visit <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a> and click &quot;Find a license/registration&quot;).</li>
+            <li>Choose <strong>&quot;Search by Name&quot;</strong> or <strong>&quot;Search by License Number&quot;</strong> - License Number is more precise.</li>
+            <li>Select <strong>&quot;Texas State Board of Plumbing Examiners&quot;</strong> from the Board dropdown, then <strong>&quot;Plumbing - Licensed or Registered&quot;</strong>.</li>
             <li>Review the results: active status, expiration date, insurance (COI), endorsements, and any disciplinary history.</li>
           </ol>
         </p>
@@ -126,19 +126,19 @@ export default function LicenseVerificationPage() {
         <div className="mt-4 space-y-4">
           <div>
             <h3 className="font-semibold">1. Open the search portal</h3>
-            <p>Direct link: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a>. The TSBPE homepage (<a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a>) also has a prominent "Find a license/registration" link.</p>
+            <p>Direct link: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a>. The TSBPE homepage (<a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a>) also has a prominent &quot;Find a license/registration&quot; link.</p>
           </div>
           <div>
             <h3 className="font-semibold">2. Choose your search type</h3>
             <p>You have two options:</p>
             <ul className="list-disc ml-6 space-y-1">
-              <li><strong>Search by Name</strong> - Enter last name and first name (or partial). Useful if you don't have the license number handy.</li>
+              <li><strong>Search by Name</strong> - Enter last name and first name (or partial). Useful if you don&apos;t have the license number handy.</li>
               <li><strong>Search by License Number</strong> - The TSBPE recommends this for the most precise match.</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold">3. Select the correct Board and License Type</h3>
-            <p>In the "Board" dropdown, choose <strong>"Texas State Board of Plumbing Examiners"</strong>. Then select <strong>"Plumbing - Licensed or Registered"</strong> from the license type dropdown.</p>
+            <p>In the &quot;Board&quot; dropdown, choose <strong>&quot;Texas State Board of Plumbing Examiners&quot;</strong>. Then select <strong>&quot;Plumbing - Licensed or Registered&quot;</strong> from the license type dropdown.</p>
           </div>
           <div>
             <h3 className="font-semibold">4. Review the results</h3>
@@ -152,11 +152,11 @@ export default function LicenseVerificationPage() {
         <div className="mt-4 space-y-3">
           <div>
             <h3 className="font-semibold">License Status</h3>
-            <p>Look for <strong>"Active"</strong>. If "Expired", "Inactive", or "Suspended", the plumber is not currently authorized to practice.</p>
+            <p>Look for <strong>&quot;Active&quot;</strong>. If &quot;Expired&quot;, &quot;Inactive&quot;, or &quot;Suspended&quot;, the plumber is not currently authorized to practice.</p>
           </div>
           <div>
             <h3 className="font-semibold">Expiration Date</h3>
-            <p>The date shown is the license's current expiry. <strong>Always check this date</strong> - if it has passed, the license is invalid, regardless of how recently the plumber may claim to have renewed.</p>
+            <p>The date shown is the license&apos;s current expiry. <strong>Always check this date</strong> - if it has passed, the license is invalid, regardless of how recently the plumber may claim to have renewed.</p>
           </div>
           <div>
             <h3 className="font-semibold">Certificate of Insurance (COI)</h3>
