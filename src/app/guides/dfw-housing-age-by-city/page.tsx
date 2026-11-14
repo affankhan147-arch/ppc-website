@@ -42,7 +42,7 @@ export default function DfwHousingAgeByCityPage() {
           <Byline path="/guides/dfw-housing-age-by-city" />
 
           <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
-            <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Figures below are sourced directly from the U.S. Census Bureau's American Community Survey (see citations at the end of this page).</p>
+            <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Figures below are sourced directly from the U.S. Census Bureau&apos;s American Community Survey (see citations at the end of this page).</p>
           </aside>
 
           <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
@@ -61,7 +61,7 @@ export default function DfwHousingAgeByCityPage() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Median Construction Year, 7 DFW Cities</h2>
             <p className="text-slate-300 mb-4">
-              A home's age is one of the strongest predictors of what kind of supply-pipe material it was built with - and DFW's rapid, uneven growth means that predictor varies enormously from one city to the next, even between cities that sit a few miles apart. The U.S. Census Bureau's 2019-2023 American Community Survey (5-year estimates) reports a median construction year for each city's occupied housing stock:
+              A home&apos;s age is one of the strongest predictors of what kind of supply-pipe material it was built with - and DFW&apos;s rapid, uneven growth means that predictor varies enormously from one city to the next, even between cities that sit a few miles apart. The U.S. Census Bureau&apos;s 2019-2023 American Community Survey (5-year estimates) reports a median construction year for each city&apos;s occupied housing stock:
             </p>
             <div className="overflow-x-auto mb-4">
               <table className="w-full text-left text-slate-300 text-sm border-collapse">
@@ -112,22 +112,22 @@ export default function DfwHousingAgeByCityPage() {
               </table>
             </div>
             <p className="text-slate-300">
-              A median construction year is the midpoint of a city's occupied housing stock - half the homes were built before that year, half after. It is not the "typical" build year of every home, and every city on this list still has a real mix of decades represented. Dallas and Arlington's older medians reflect large first-ring-suburb development that was substantially complete before 1990; Frisco, McKinney, and Allen's medians reflect the north-DFW growth boom that has run largely from the late 1990s through today.
+              A median construction year is the midpoint of a city&apos;s occupied housing stock - half the homes were built before that year, half after. It is not the &quot;typical&quot; build year of every home, and every city on this list still has a real mix of decades represented. Dallas and Arlington&apos;s older medians reflect large first-ring-suburb development that was substantially complete before 1990; Frisco, McKinney, and Allen&apos;s medians reflect the north-DFW growth boom that has run largely from the late 1990s through today.
             </p>
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Why a Home's Age Predicts Its Pipe Material</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Why a Home&apos;s Age Predicts Its Pipe Material</h2>
             <p className="text-slate-300 mb-4">
               U.S. residential supply-pipe material has moved through three broad eras, and which era a given DFW home falls into is driven almost entirely by when it was built:
             </p>
             <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
-              <li><strong>Galvanized steel (roughly pre-1960s-70s):</strong> The oldest surviving supply lines in DFW's pre-war and early postwar neighborhoods. Galvanized pipe corrodes and narrows from the inside over decades, which shows up as gradually worsening water pressure long before an outright failure.</li>
-              <li><strong>Polybutylene, or PB pipe (1978-1995):</strong> As covered in our <Link href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">Polybutylene Pipe in DFW guide</Link>, this gray plastic pipe was standard in a large share of new construction during exactly this 17-year window, largely because it was cheaper and faster to install than copper during DFW's fastest growth decades.</li>
-              <li><strong>Copper and, increasingly since the mid-1990s, PEX:</strong> Modern construction has moved toward copper and cross-linked polyethylene (PEX), both of which handle DFW's hard water and shifting clay soil far better than galvanized steel or polybutylene.</li>
+              <li><strong>Galvanized steel (roughly pre-1960s-70s):</strong> The oldest surviving supply lines in DFW&apos;s pre-war and early postwar neighborhoods. Galvanized pipe corrodes and narrows from the inside over decades, which shows up as gradually worsening water pressure long before an outright failure.</li>
+              <li><strong>Polybutylene, or PB pipe (1978-1995):</strong> As covered in our <Link href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">Polybutylene Pipe in DFW guide</Link>, this gray plastic pipe was standard in a large share of new construction during exactly this 17-year window, largely because it was cheaper and faster to install than copper during DFW&apos;s fastest growth decades.</li>
+              <li><strong>Copper and, increasingly since the mid-1990s, PEX:</strong> Modern construction has moved toward copper and cross-linked polyethylene (PEX), both of which handle DFW&apos;s hard water and shifting clay soil far better than galvanized steel or polybutylene.</li>
             </ul>
             <p className="text-slate-300">
-              A city's median construction year is therefore a rough, city-level signal for how much of its housing stock statistically overlaps with the riskiest window - not a guarantee about any single house. A home built in 1985 in a city with a 1986 median is a plausible (though unconfirmed) polybutylene candidate; a home built in 2011 in a city with a 2009 median almost certainly is not, and is far more likely to be copper or PEX.
+              A city&apos;s median construction year is therefore a rough, city-level signal for how much of its housing stock statistically overlaps with the riskiest window - not a guarantee about any single house. A home built in 1985 in a city with a 1986 median is a plausible (though unconfirmed) polybutylene candidate; a home built in 2011 in a city with a 2009 median almost certainly is not, and is far more likely to be copper or PEX.
             </p>
           </section>
 
@@ -140,17 +140,17 @@ export default function DfwHousingAgeByCityPage() {
               Plano (1993) and Fort Worth (1994) sit squarely inside the polybutylene era itself. A city median landing in this exact 17-year window is the single clearest statistical signal on this whole page: a large share of homes built around that median year in these two cities were built while PB pipe was still standard practice for many DFW-area builders.
             </p>
             <p className="text-slate-300">
-              Allen (2003), McKinney (2007), and Frisco (2009) have medians well past 1995, when polybutylene production stopped following the <em>Cox v. Shell</em> settlement. Homes built around these medians are far more likely to have copper or PEX supply lines - lower risk from pipe material alone, though DFW's hard water and expansive clay soil (see our <a href="/guides/dfw-slab-leaks" className="text-[#F0B429] underline">DFW slab leaks guide</a>) still apply to homes of any age.
+              Allen (2003), McKinney (2007), and Frisco (2009) have medians well past 1995, when polybutylene production stopped following the <em>Cox v. Shell</em> settlement. Homes built around these medians are far more likely to have copper or PEX supply lines - lower risk from pipe material alone, though DFW&apos;s hard water and expansive clay soil (see our <a href="/guides/dfw-slab-leaks" className="text-[#F0B429] underline">DFW slab leaks guide</a>) still apply to homes of any age.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: What to Do With This If You Own (or Are Buying) a DFW Home</h2>
             <p className="text-slate-300 mb-4">
-              This data tells you the odds for your city, not the facts for your specific address. If your home falls anywhere near or inside the 1978-1995 window - regardless of which city it's in - the only way to know for certain what pipe material you have is a visual inspection, which our guide above explains how to do yourself in a few minutes.
+              This data tells you the odds for your city, not the facts for your specific address. If your home falls anywhere near or inside the 1978-1995 window - regardless of which city it&apos;s in - the only way to know for certain what pipe material you have is a visual inspection, which our guide above explains how to do yourself in a few minutes.
             </p>
             <p className="text-slate-300">
-              If you're buying an older DFW home, ask directly whether the property was built between 1978 and 1995 and whether the seller knows the supply-pipe material - Texas has no blanket legal requirement to disclose polybutylene pipe at sale. And regardless of a home's age, a sudden pipe failure doesn't wait for a convenient time; our <Link href="/services/burst-pipe-emergency" className="text-[#F0B429] underline">24/7 burst pipe emergency service</Link> covers the full DFW metro.
+              If you&apos;re buying an older DFW home, ask directly whether the property was built between 1978 and 1995 and whether the seller knows the supply-pipe material - Texas has no blanket legal requirement to disclose polybutylene pipe at sale. And regardless of a home&apos;s age, a sudden pipe failure doesn&apos;t wait for a convenient time; our <Link href="/services/burst-pipe-emergency" className="text-[#F0B429] underline">24/7 burst pipe emergency service</Link> covers the full DFW metro.
             </p>
           </section>
 
