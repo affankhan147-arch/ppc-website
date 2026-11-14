@@ -605,5 +605,288 @@ export const citySearchAnswers: Record<string, CitySearchAnswerSet> = {
         link: { label: "Water heater repair in Allen", href: "/cities/allen/water-heater-emergency" }
       }
     ]
+  },
+
+  // Keyword overhaul 06 (2026-11-15): answer blocks for the remaining hubs so every city page answers its own searches.
+  // Facts: each city's established enhancement entries (only the general, verifiable ones), plus the sourced Austin Water,
+  // Houston 311 and SAWS facts used on the 24-hour pages.
+  mesquite: {
+    title: "Questions Mesquite homeowners search before they call",
+    intro:
+      "A large share of Mesquite was built between 1978 and 1995, the years polybutylene supply pipe was widely used, and older neighborhoods like Town East Estates often still have cast iron sewer lines.",
+    items: [
+      {
+        question: "How do I tell if my Mesquite home has polybutylene pipe?",
+        answer:
+          "Its color is the quickest clue. Polybutylene in DFW houses is almost always gray, while PEX is usually red, blue or white, and copper is metal. A Mesquite house built between 1978 and 1995 with gray plastic supply lines is in the riskiest group, because the pipe cracks at its fittings with age. Mention it when you call, since one fix may not be the last.",
+        link: { label: "Burst pipe repair in Mesquite", href: "/cities/mesquite/burst-pipe-emergency" }
+      },
+      {
+        question: "Emergency plumber in Mesquite, TX: what should I tell the dispatcher?",
+        answer:
+          "Your address and cross street, what is leaking or backing up, whether the water is off, and roughly when the house was built. In older Mesquite neighborhoods with cast iron sewer lines, mention any drain that clogs again and again; roots and corroded pipe are a common cause and change what equipment the plumber brings.",
+        link: { label: "24 hour plumber in Mesquite", href: "/cities/mesquite/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  "grand-prairie": {
+    title: "Questions Grand Prairie homeowners search before they call",
+    intro:
+      "Parts of Grand Prairie sit in or near the Trinity River and Johnson Creek floodplains, on the same expansive clay found across DFW. Heavy storms and older cast iron drain lines show up in what people here call about.",
+    items: [
+      {
+        question: "Why does my Grand Prairie sewer back up during heavy rain?",
+        answer:
+          "Homes near the Trinity River and Johnson Creek floodplains can see higher groundwater during big storms, and that water can seep into cracked or older sewer lines and overload them. If drains back up only when it pours, ask the plumber for a camera inspection once the line is clear, so you know whether the pipe itself is letting water in.",
+        link: { label: "Sewer backup help in Grand Prairie", href: "/cities/grand-prairie/sewer-backup-help" }
+      },
+      {
+        question: "Is there a 24 hour plumber in Grand Prairie, TX?",
+        answer:
+          "Yes. Requests from Grand Prairie are routed at any hour, on both the Dallas County and Tarrant County sides of the city. Give your exact address and cross street up front, and ask for the after-hours fee before anyone drives out.",
+        link: { label: "24 hour plumber in Grand Prairie", href: "/cities/grand-prairie/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  "cedar-hill": {
+    title: "Questions Cedar Hill homeowners search before they call",
+    intro:
+      "Cedar Hill sits on a ridge in southern Dallas County near Joe Pool Lake, with older neighborhoods and newer communities like Lake Ridge and Bear Creek. Changes in elevation and expansive clay affect how water drains here.",
+    items: [
+      {
+        question: "Does Cedar Hill's hilly ground affect drain and sewer problems?",
+        answer:
+          "It can. Drainage patterns change from one street to the next on the ridge, and expansive clay moves foundations and the pipes under them. Older Cedar Hill homes often still have cast iron sewer lines old enough for roots and corrosion, so a drain that keeps backing up deserves a camera inspection rather than repeated snaking.",
+        link: { label: "Sewer line help in Cedar Hill", href: "/cities/cedar-hill/main-sewer-line-clog" }
+      },
+      {
+        question: "Can I get an emergency plumber in Cedar Hill at night?",
+        answer:
+          "Yes, calls from Cedar Hill are routed around the clock. Say whether you are in an older part of town or a newer community like Lake Ridge, since the pipe materials differ, and whether you have managed to shut the water off.",
+        link: { label: "24 hour plumber in Cedar Hill", href: "/cities/cedar-hill/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  desoto: {
+    title: "Questions DeSoto homeowners search before they call",
+    intro:
+      "Most DeSoto homes were built between the 1970s and 1999. Original copper or galvanized supply lines and cast iron sewer lines from that era are reaching the age when leaks and root problems start.",
+    items: [
+      {
+        question: "Pinhole leak in a DeSoto home: patch it or repipe?",
+        answer:
+          "One pinhole leak in 40-year-old copper is usually a patch, but it is a warning: the same water and age affect the rest of the pipe. If you have had two or three leaks in a year, or the pipe is galvanized and the water runs brown, ask the plumber to price a partial or whole-house repipe alongside the repair.",
+        link: { label: "Whole-house repipe cost calculator", href: "/tools/repipe-cost-calculator" }
+      },
+      {
+        question: "Is there a 24 hour plumber in DeSoto, TX?",
+        answer:
+          "Yes. Requests from DeSoto are routed at night, on weekends and on holidays. If the leak is stopped at the main and nothing is spreading, ask whether a first-thing-morning visit would cost less.",
+        link: { label: "24 hour plumber in DeSoto", href: "/cities/desoto/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  duncanville: {
+    title: "Questions Duncanville homeowners search before they call",
+    intro:
+      "Duncanville's houses are mostly 1970s-80s construction on expansive clay, with many original copper or galvanized supply lines and cast iron sewer lines under mature trees.",
+    items: [
+      {
+        question: "Emergency plumbing in Duncanville, TX: what counts as urgent?",
+        answer:
+          "Water you cannot shut off, a pipe spraying inside a wall, sewage in a tub or floor drain, or water reaching outlets. A drip under a sink or one slow drain can wait for a weekday visit and usually costs less. In older Duncanville homes, a slow leak in copper can turn into a bigger one quickly, so don't let it run for weeks.",
+        link: { label: "24 hour plumber in Duncanville", href: "/cities/duncanville/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Why do drains in older Duncanville neighborhoods keep backing up?",
+        answer:
+          "In tree-lined 1970s-80s neighborhoods, roots grow into the joints of original cast iron sewer lines, which are also corroding from the inside. Snaking clears the line for a while. A camera inspection shows whether a section needs lining or replacing.",
+        link: { label: "Sewer line help in Duncanville", href: "/cities/duncanville/main-sewer-line-clog" }
+      }
+    ]
+  },
+
+  euless: {
+    title: "Questions Euless homeowners search before they call",
+    intro:
+      "Euless is part of the Hurst-Euless-Bedford area in the middle of the Metroplex. Older neighborhoods like Bear Creek have 1960s-70s galvanized pipe, and the city has many 1980s apartment complexes that share drain lines between units.",
+    items: [
+      {
+        question: "Galvanized pipe in an older Euless home: what goes wrong?",
+        answer:
+          "Galvanized steel rusts from the inside, so water pressure drops, water can run brown after it sits, and leaks start at threaded joints. Homes from the 1960s-70s in areas like Bear Creek are past the usual life of that pipe. When one section fails, ask the plumber about the condition of the rest.",
+        link: { label: "Burst pipe repair in Euless", href: "/cities/euless/burst-pipe-emergency" }
+      },
+      {
+        question: "Drain backing up in a Euless apartment: who do I call?",
+        answer:
+          "Tell the manager first, and say whether neighbors are affected. In older apartment complexes, units often share drain lines, so a backup in one unit can come from a clog serving several, and the property usually has a plumber it uses. If sewage is spreading and no one answers, stop using water and call for emergency help.",
+        link: { label: "Sewer backup help in Euless", href: "/cities/euless/sewer-backup-help" }
+      }
+    ]
+  },
+
+  bedford: {
+    title: "Questions Bedford homeowners search before they call",
+    intro:
+      "Bedford sits in the Hurst-Euless-Bedford area, with established 1960s-70s neighborhoods and 1980s developments full of mature trees. Cast iron and galvanized pipe from those years drive most repair calls.",
+    items: [
+      {
+        question: "Why do tree-heavy Bedford neighborhoods get more sewer problems?",
+        answer:
+          "Roots are drawn to the moisture in sewer lines and work into the joints of older cast iron pipe, then catch paper and grease until the line backs up. If your drains clog every few months, a camera inspection will show whether roots are the cause and where.",
+        link: { label: "Sewer line help in Bedford", href: "/cities/bedford/main-sewer-line-clog" }
+      },
+      {
+        question: "Is there an emergency plumber in Bedford, TX on weekends?",
+        answer:
+          "Yes. Calls from Bedford are routed on nights, weekends and holidays. Shut off the water at the main if you can, then call with your address, what is happening, and whether any outlets or appliances are near the water.",
+        link: { label: "24 hour plumber in Bedford", href: "/cities/bedford/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  hurst: {
+    title: "Questions Hurst homeowners search before they call",
+    intro:
+      "Hurst has 1960s-70s neighborhoods from its original growth, a 1980s-90s building boom from the polybutylene era, and a busy commercial corridor along Pipeline Road.",
+    items: [
+      {
+        question: "My Hurst home was built in the 1980s or 1990s. Should I worry about polybutylene?",
+        answer:
+          "It is worth checking. Polybutylene was widely used from the late 1970s to the mid-1990s and tends to fail at its fittings without warning. Look for flexible gray pipe at the water heater or under sinks. If you find it, mention it when you call about any leak, and ask what replacing it would involve.",
+        link: { label: "Burst pipe repair in Hurst", href: "/cities/hurst/burst-pipe-emergency" }
+      },
+      {
+        question: "Commercial drain backup in Hurst: what should a business owner do first?",
+        answer:
+          "Stop the water feeding the drain: shut down dishwashers and sinks on that line, and close off the area to customers. Restaurants and shops along busy corridors like Pipeline Road see grease and heavy-use clogs that a household snake won't clear. Call a commercial plumber and say whether the grease trap or a floor drain is involved.",
+        link: { label: "Commercial emergency plumbing in Hurst", href: "/cities/hurst/commercial-emergency-plumbing" }
+      }
+    ]
+  },
+
+  keller: {
+    title: "Questions Keller homeowners search before they call",
+    intro:
+      "Keller's water is hard, and established neighborhoods like Hidden Lakes sit on clay soil that settles slabs over time. Both show up in water heaters, drains and slab leaks.",
+    items: [
+      {
+        question: "Why does my Keller water heater pop and rumble?",
+        answer:
+          "That noise is sediment. Minerals from Keller's hard water collect on the floor of the tank, and water trapped under them boils and pops as the burner heats. Flushing the tank can quiet it if the layer is thin. If the heater is past 10 years old, or you see rust-colored water or a wet base, plan for a replacement rather than a repair.",
+        link: { label: "Water heater repair in Keller", href: "/cities/keller/water-heater-emergency" }
+      },
+      {
+        question: "Is there a 24 hour plumber in Keller, TX?",
+        answer:
+          "Yes, requests from Keller are routed at any hour. If you hear water running under the floor with every tap off, or find a warm spot on a tile floor, mention it; on clay soil, a settling slab can crack the lines beneath it.",
+        link: { label: "24 hour plumber in Keller", href: "/cities/keller/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  southlake: {
+    title: "Questions Southlake homeowners search before they call",
+    intro:
+      "Many Southlake homes are larger custom builds with more bathrooms, longer pipe runs and more than one water heater, on the same hard North Texas water as nearby Keller.",
+    items: [
+      {
+        question: "Southlake home with two water heaters: how do I find which one failed?",
+        answer:
+          "Notice which bathrooms and fixtures lost hot water; each heater usually serves one wing or floor. Check that heater's breaker or gas, and look for water at its base. Tell the plumber which areas are affected so they head straight to the right unit, which saves time on a bigger system.",
+        link: { label: "Water heater repair in Southlake", href: "/cities/southlake/water-heater-emergency" }
+      },
+      {
+        question: "Emergency plumber in Southlake, TX at night: what to have ready?",
+        answer:
+          "Where the main shutoff is, which part of the house is affected, and whether water is reaching ceilings below. In a larger home a leak upstairs can travel a long way before it shows, so close the main first and then check rooms beneath the leak.",
+        link: { label: "24 hour plumber in Southlake", href: "/cities/southlake/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  "flower-mound": {
+    title: "Questions Flower Mound homeowners search before they call",
+    intro:
+      "Flower Mound sits along the north side of Grapevine Lake, with established tree-covered neighborhoods and hard North Texas water. Roots and mineral scale are behind many drain calls here.",
+    items: [
+      {
+        question: "Drain keeps clogging in Flower Mound: roots or scale?",
+        answer:
+          "In established neighborhoods with big trees, a main line that backs up every few months is usually roots in the sewer pipe. A single slow sink or shower that gets worse over years is more often scale and soap building up in the pipe. A camera inspection tells the two apart before anyone digs.",
+        link: { label: "Emergency drain cleaning in Flower Mound", href: "/cities/flower-mound/emergency-drain-cleaning" }
+      },
+      {
+        question: "Is there a 24 hour plumber in Flower Mound, TX?",
+        answer:
+          "Yes. Requests from Flower Mound are routed at night and on weekends. Have your address, what is leaking or backing up, and whether the water is off ready, and ask for the after-hours fee before you agree to a visit.",
+        link: { label: "24 hour plumber in Flower Mound", href: "/cities/flower-mound/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  houston: {
+    title: "Questions Houston homeowners search before they call",
+    intro:
+      "In Houston, who to call first depends on where the water is. The City of Houston's 311 line takes water leak reports 24 hours a day; leaks inside your home or in your own pipes are a plumber's job.",
+    items: [
+      {
+        question: "Is there a 24 hour plumber in Houston for a leak tonight?",
+        answer:
+          "Yes. Calls from Houston are routed to providers who take night and weekend work. Shut off your main water valve first, then call with your address and what is leaking. If the water is coming up in the street or at the city's meter, report it to 311 instead; that is a City of Houston repair.",
+        link: { label: "24 hour plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Sewer backing up in a Houston house: what now?",
+        answer:
+          "Stop using water, keep people away from it, and check whether the outdoor cleanout is overflowing, which points to a blocked main line. Backups often show up during or after heavy rain. A plumber clears the line, and a camera inspection afterwards shows whether the pipe is damaged.",
+        link: { label: "Sewer backup help in Houston", href: "/cities/houston/sewer-backup-help" }
+      }
+    ]
+  },
+
+  austin: {
+    title: "Questions Austin homeowners search before they call",
+    intro:
+      "Austin Water maintains the mains and the line up to the meter and takes leak reports 24/7 at 512-972-1000. Everything past the meter, from the yard line to the plumbing inside, is the property owner's to repair.",
+    items: [
+      {
+        question: "Emergency plumber in Austin: who do I call first?",
+        answer:
+          "If water is coming up in the street, a sidewalk or the meter box, call Austin Water at 512-972-1000, which is available 24/7. If the leak is inside the house or between the meter and the house, close your cut-off valve, which sits just past the meter box on your side, and call a plumber.",
+        link: { label: "24 hour plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Can I get a water bill credit after a leak in Austin?",
+        answer:
+          "Possibly. Austin Water accepts leak bill adjustment requests within 90 days of the repair, with the plumber's receipt or paid invoice, your account number and the dates of the high charges. Keep the invoice from any emergency repair for that reason.",
+        link: { label: "Emergency drain cleaning in Austin", href: "/cities/austin/emergency-drain-cleaning" }
+      }
+    ]
+  },
+
+  "san-antonio": {
+    title: "Questions San Antonio homeowners search before they call",
+    intro:
+      "San Antonio Water System (SAWS) takes water and sewer emergency calls 24 hours a day, but says it cannot repair plumbing on private property. A leak at your home is yours to have fixed by a licensed plumber.",
+    items: [
+      {
+        question: "Is there a 24 hour plumber in San Antonio, TX?",
+        answer:
+          "Yes. Calls from San Antonio are routed to providers who work nights, weekends and holidays. SAWS's own advice if you suspect a leak at home is to shut off the water at the meter and then call a plumber. Water running in the street is a call to SAWS instead.",
+        link: { label: "24 hour plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Will SAWS reimburse me after a plumbing leak repair?",
+        answer:
+          "It may. SAWS has a leak repair reimbursement request: receipts are due within 60 days after the repair, customers are eligible for one adjustment in a 12-month period, and the amount depends on the type of leak. It is not guaranteed, so keep the plumber's dated receipt.",
+        link: { label: "Emergency drain cleaning in San Antonio", href: "/cities/san-antonio/emergency-drain-cleaning" }
+      }
+    ]
   }
 };
