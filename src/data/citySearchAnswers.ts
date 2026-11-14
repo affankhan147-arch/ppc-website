@@ -204,6 +204,57 @@ export const citySearchAnswers: Record<string, CitySearchAnswerSet> = {
         answer:
           "It can wait if you can stop the water, nothing is spreading and you still have a working toilet. It can't wait if water or sewage keeps coming, the leak is near electrical outlets or the panel, or a burst pipe is soaking a ceiling. When in doubt, shut the main off. That buys you time to decide.",
         link: { label: "24 hour plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" }
+      },
+      // Task245 (2026-11-14): Semrush "slab leak repair carrollton" 590/mo, KD 4.
+      {
+        question: "Slab leak repair in Carrollton: what are the signs, and what does it cost?",
+        answer:
+          "Watch for a warm patch on a tile or concrete floor, the sound of running water when every tap is off, a water meter that keeps turning, or a bill that jumps for no reason. A lot of Carrollton was built in the 1970s and early 80s on slab foundations, so many supply lines under those floors are now 40+ years old. Expect to pay about $150-$400 for leak detection first; the repair itself usually runs $630-$4,400 (HomeAdvisor 2026 data) depending on whether the pipe is rerouted or relined.",
+        link: { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+      }
+    ]
+  },
+
+  // Task245 (2026-11-14): Dallas had no "Common searches" block. Questions below map to
+  // low-difficulty Semrush keywords: emergency plumber/plumbing dallas tx (KD 14-18),
+  // water heater repair in dallas tx + tankless water heater repair dallas tx (KD 10-14),
+  // slab leak detection dallas (KD 11), sewer line repair dallas tx + no dig sewer line
+  // repair dallas (KD 7-8), drain cleaning dallas tx (KD 7-19). Every price below is the
+  // same sourced figure already used on the site's calculators and cost guide.
+  dallas: {
+    title: "What Dallas homeowners search before they call a plumber",
+    intro:
+      "Dallas sits on Blackland Prairie clay that swells when it's wet and shrinks when it's dry, and most homes here are built slab-on-grade. Older neighborhoods like Lakewood, the M Streets and Oak Cliff still have original cast iron or galvanized lines. Those two facts explain most of the questions below.",
+    items: [
+      {
+        question: "Is there an emergency plumber in Dallas, TX who answers at night?",
+        answer:
+          "Yes. Calls from this page go to providers covering Dallas who take after-hours and weekend work, so you aren't dialing down a list of offices that went home at 5. Before you agree to a visit, ask three things: the after-hours fee, how soon someone can get there, and whether they can stop the water tonight even if the full repair waits until morning.",
+        link: { label: "24 hour emergency plumber in Dallas", href: "/cities/dallas/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Water heater repair in Dallas, TX: fix it or replace it?",
+        answer:
+          "Fix it if the tank itself is dry. A thermostat runs about $150-$200 installed, a heating element $200-$300, and a gas control valve around $350 (Angi 2026 data). Replace it if water is coming from the tank body, because a corroded tank can't be patched. Tankless water heater repair in Dallas is usually a descaling, igniter or sensor fix; Dallas water tests hard to very hard (7-11 grains per gallon), so scale is the most common cause of a tankless unit that cuts out mid-shower.",
+        link: { label: "Emergency water heater repair in Dallas", href: "/cities/dallas/water-heater-emergency" }
+      },
+      {
+        question: "How does slab leak detection work in Dallas, and what does it cost?",
+        answer:
+          "A technician listens through the slab with acoustic gear, uses thermal imaging to find the warm line, or pushes tracer gas through the pipe, so nobody breaks concrete on a guess. Detection typically costs $150-$400. Dallas clay soil shifts the slab every wet-dry cycle, which is why slab leaks are so common here. Once the leak is found, most repairs fall between $630 and $4,400 (HomeAdvisor 2026 data).",
+        link: { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+      },
+      {
+        question: "Sewer line repair in Dallas, TX: is no-dig (trenchless) repair an option?",
+        answer:
+          "Often, yes. Trenchless lining (CIPP) runs about $135-$150 per foot and pipe bursting about $150-$190 per foot, against $50-$250 per foot for digging a trench across the yard (Angi 2026 data). Lining won't work if the pipe has fully collapsed or sags, so a camera inspection ($175-$350) comes first. Old cast iron in Lakewood or Oak Cliff homes is a common candidate for lining.",
+        link: { label: "Sewer line repair help in Dallas", href: "/cities/dallas/main-sewer-line-clog" }
+      },
+      {
+        question: "How much does drain cleaning cost in Dallas, TX?",
+        answer:
+          "A simple single-fixture clog cleared with a snake usually costs $100-$300. Clearing the main sewer line runs about $200-$500, and hydro jetting $350-$1,500 or more. Nights, weekends and holidays can push any of those 1.5 to 3 times higher. If every drain in the house is slow, ask for a main-line price up front so the quote doesn't jump once they start.",
+        link: { label: "Emergency drain cleaning in Dallas", href: "/cities/dallas/emergency-drain-cleaning" }
       }
     ]
   }

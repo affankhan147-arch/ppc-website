@@ -103,6 +103,9 @@ export const services: Service[] = [
     categorySlug: "emergency-plumbing",
     shortAnswer: "For a burst or broken pipe, shut off the main water valve, keep people away from wet electrical areas, and get an emergency plumber out for pipe repair as soon as possible.",
     seoTitle: "Burst Pipe Plumber in DFW: 24/7 Emergency Pipe Repair",
+    // Task245 (2026-11-14): Semrush "frozen pipe repair" 1.9K/mo, KD 9. Snippet only, title unchanged.
+    seoDescription:
+      "Burst or frozen pipe in Dallas-Fort Worth? Shut off the main water valve, then call {phone} for 24/7 burst and frozen pipe repair, nights and weekends.",
     seoH1: "Burst Pipe Plumber & Emergency Pipe Repair in Dallas-Fort Worth",
     cityHeading: "Burst Pipe Repair in {city}, TX: 24/7 Emergency Plumber",
     urgency: "High",
@@ -120,7 +123,10 @@ export const services: Service[] = [
     name: "water heater emergency",
     categorySlug: "emergency-plumbing",
     shortAnswer: "A leaking or unsafe water heater, or a sudden loss of hot water, needs fast attention. Shut off water and power or gas if safe, then request help for inspection or repair.",
-    seoTitle: "Emergency Water Heater Repair in DFW: Leaks & No Hot Water",
+    // Task245 (2026-11-14): Semrush "emergency hot water heater repair" 3.6K/mo, KD 6; PH ranked ~16.
+    seoTitle: "Emergency Hot Water Heater Repair in DFW: Leaks, No Hot Water",
+    seoDescription:
+      "Hot water heater leaking or no hot water in DFW? Shut off the water and power or gas, then call {phone} for emergency tank or tankless repair.",
     cityHeading: "Emergency Water Heater Repair in {city}, TX",
     urgency: "Medium",
     symptoms: ["tank leaking", "no hot water", "rusty water", "popping sounds", "water near heater"],
