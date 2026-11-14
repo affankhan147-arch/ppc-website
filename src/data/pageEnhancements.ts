@@ -4408,6 +4408,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
       { label: "Burst pipe emergency cost guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
       { label: "Water heater emergency cost guide", href: "/cost-guides/water-heater-emergency-cost-guide" },
@@ -4801,6 +4802,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
