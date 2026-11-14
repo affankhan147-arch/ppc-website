@@ -159,7 +159,7 @@ export default function DfwHousingAgeByCityPage() {
           </p>
 
           <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
-            <p><strong>Worried about old pipe in your DFW home?</strong> Call PlumbingHands - DFW's trusted emergency plumber, available 24/7.</p>
+            <p><strong>Worried about old pipe in your DFW home?</strong> Call PlumbingHands - DFW&apos;s trusted emergency plumber, available 24/7.</p>
           </div>
 
           <div className="mt-10">

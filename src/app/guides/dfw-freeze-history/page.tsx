@@ -59,7 +59,7 @@ export default function DfwFreezeHistoryPage() {
           <p className="text-lg leading-8 text-slate-200 mb-8">DFW&apos;s freeze history is longer than its mild-winter reputation suggests. This guide uses National Weather Service records to show how often the metro actually freezes, when the freeze season starts and ends, and why that matters for exposed pipes.</p>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: DFW's Actual Freeze Numbers, Not the Reputation</h2>
+            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: DFW&apos;s Actual Freeze Numbers, Not the Reputation</h2>
             <p className="text-slate-300 mb-4">
               &quot;DFW barely freezes&quot; is the common assumption, and it&apos;s part of why so many local homes are under-protected for winter. The National Weather Service&apos;s own climate normals for DFW Airport put the real number at an average of 29.2 days per year with a minimum temperature at or below 32 degrees Fahrenheit - not a once-a-decade event, a near-monthly occurrence across a typical winter.
             </p>
