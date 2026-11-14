@@ -1449,6 +1449,53 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   },
+  "san-antonio/24-hour-emergency-plumber": {
+    decisionTitle: "San Antonio emergency plumbing decision guide",
+    decisionIntro: "San Antonio Water System (SAWS) takes water and sewer emergency calls 24 hours a day, 7 days a week, but SAWS says it cannot repair plumbing on private property. A leak at your home is yours to have repaired by a licensed plumber.",
+    decisionItems: [
+      "If you suspect a leak at your home, SAWS's advice is to shut off the main water service at the meter, then call a plumber.",
+      "Tell the plumber whether the water is inside the house, in the yard or at the meter box.",
+      "Water running in the street or an unscheduled water outage is a call to SAWS, not to a plumber.",
+      "Mention if the leak started during or right after a freeze."
+    ],
+    providerTitle: "What a San Antonio plumber may check",
+    providerItems: [
+      "Toilets, flex supply lines, water heaters, water softeners, pressure reducing valves and broken pipes, all leak types SAWS lists for its leak repair reimbursement.",
+      "Exposed pipes outdoors and in unheated spaces after a freeze.",
+      "Whether your main shutoff at the meter closes fully.",
+      "A dated receipt for the repair, since SAWS asks for repair receipts within 60 days after repairs."
+    ],
+    safetyTitle: "When to treat it as urgent in San Antonio",
+    safetyItems: [
+      "Water you cannot stop at the meter or at the house shutoff.",
+      "Water near outlets, the electrical panel or light fixtures.",
+      "Sewage coming up through a drain or cleanout.",
+      "Pipes that split in a long freeze: the National Weather Service says San Antonio International Airport stayed below freezing for 4 days 12 hours in the February 2021 winter storm."
+    ],
+    preventionTitle: "San Antonio-specific prevention notes",
+    preventionItems: [
+      "Find your meter and learn how to close the main water service valve there before the next freeze, as SAWS advises.",
+      "Fit foam or fiberglass insulation sleeves on exposed pipes; SAWS says they go a long way in keeping exposed pipes safe.",
+      "Keep repair receipts: SAWS takes leak repair reimbursement receipts within 60 days after repairs and allows one adjustment in a 12-month period."
+    ],
+    extraFaqs: [
+      {
+        question: "Will SAWS fix a leak on my property?",
+        answer: "No. SAWS says it cannot repair plumbing on private property, so a leak at your home needs a plumber. SAWS does take calls about water and sewer emergencies 24 hours a day, 7 days a week."
+      },
+      {
+        question: "Can SAWS reimburse me after a leak repair?",
+        answer: "SAWS has a leak repair reimbursement request. Receipts must be submitted within 60 days after repairs, customers are eligible for one adjustment in a 12-month period, the amount depends on the type of leak, and it may take up to two billing cycles. It is not guaranteed."
+      }
+    ],
+    extraLinks: [
+      { label: "San Antonio service area", href: "/cities/san-antonio" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" }
+    ]
+  },
   "irving/24-hour-emergency-plumber": {
     decisionTitle: "Irving emergency plumbing decision guide",
     decisionIntro: "Irving spans older neighborhoods near the original Las Colinas development with aging copper supply lines, alongside newer high-density multi-family and townhome construction closer to DFW Airport with more complex shared-line coordination.",
