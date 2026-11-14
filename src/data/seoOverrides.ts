@@ -54,6 +54,31 @@ export const seoOverrides: Record<string, SeoOverride> = {
     title: "Toilet Overflow Emergency? 24/7 Plumber in Dallas-Fort Worth",
     description: `Turn the valve behind the toilet clockwise and stop flushing. Then call ${phone} for a 24/7 plumber in Dallas-Fort Worth, nights and weekends included.`
   },
+  // Keyword overhaul (2026-11-15), problem pages ranking 22-48 whose titles did not match how people search
+  // (GSC 3 months to 2026-11-11). 677 impr / pos 48.3: "toilet and shower backing up", "my toilet and tub are backed up".
+  "/problems/water-backing-up-in-shower-and-toilet": {
+    title: "Toilet and Shower Backing Up Together? What It Means",
+    description:
+      "When the toilet and shower back up at the same time, the clog is usually in the main sewer line, not either fixture. Stop using water and do this first."
+  },
+  // 516 impr / pos 22.5: "sink backup", "kitchen sink backup".
+  "/problems/kitchen-sink-backing-up": {
+    title: "Kitchen Sink Backing Up? Causes and What to Do Now",
+    description:
+      "A kitchen sink backup is usually grease and food in the drain line. If it fills when the dishwasher runs or other drains back up too, the clog is deeper."
+  },
+  // 320 impr / pos 43.5: "floor drain backup", "floor drain backing up".
+  "/problems/floor-drain-backing-up": {
+    title: "Floor Drain Backing Up? Main Sewer Line Warning Signs",
+    description:
+      "Water coming up through a floor drain usually means the main sewer line is blocked, since it is the lowest drain in the house. Stop using water and call."
+  },
+  // 232 impr / pos 41.5: "bathtub back up", "tub backup".
+  "/problems/bathtub-drain-backing-up": {
+    title: "Bathtub Backing Up? Why Tub Drains Back Up and What to Do",
+    description:
+      "A tub that fills when you flush or run the washer points to a blocked shared drain or main line, not just hair in the tub. What to check and when to call."
+  },
   // 97 impr / 0% / pos 14.8
   "/problems/water-shutoff-valve-will-not-close": {
     title: "Water Shutoff Valve Will Not Close? What to Do in a Leak",

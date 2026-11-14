@@ -10,8 +10,9 @@ import { siteConfig } from "@/data/site";
 
 const PATH = "/tools/sewer-line-repair-cost-calculator";
 const TITLE = "Sewer Line Repair Cost Calculator: Trenchless vs. Traditional Dig";
+// Keyword overhaul (2026-11-15): "sewer line repair quote" 365 impressions at position 3.8 with 0 clicks (GSC 3 months).
 const DESCRIPTION =
-  "Free calculator: enter your sewer line's length and see real 2026 cost ranges for trenchless pipe lining, pipe bursting, and traditional dig-and-replace repair.";
+  "Get a free sewer line repair quote estimate: enter the line length and compare 2026 costs for trenchless lining, pipe bursting and traditional digging.";
 
 export const metadata = buildMetadata({
   title: TITLE,

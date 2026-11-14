@@ -51,8 +51,11 @@ export const costGuides: CostGuide[] = [
     slug: "burst-pipe-emergency-cost-guide",
     title: "Burst pipe repair cost guide",
     seoTitle: "Burst Pipe Repair Cost: What It Costs to Fix a Burst Pipe",
-    seoDescription: "What it costs to fix a burst pipe in Dallas-Fort Worth: where it broke, pipe material, wall or slab access, and after-hours timing set the price.",
-    directAnswer: "Burst pipe repair cost depends mostly on where the pipe broke and how hard it is to reach. A split line under a sink or in an open garage wall is a small job; a break behind finished drywall, above a ceiling, or under a slab costs far more to fix because the plumber has to open and then close up the surface. Pipe material, whether water is still running, and after-hours timing also move the price.",
+    seoDescription: "Burst pipe repair cost in DFW: about $125 to $2,500+ for one damaged section. Where it broke, wall or slab access and after-hours timing set the price.",
+    // Keyword overhaul (2026-11-15): "burst pipe repair cost" 344 impressions, "cost of repairing a burst pipe" 93,
+    // "cost to fix burst pipe" 79 (GSC 3 months, positions 44-56). The answer now states the range up front; it is the
+    // same sourced range used in /guides/dfw-emergency-plumbing-costs (HomeAdvisor and other published cost data).
+    directAnswer: "Fixing one burst section of pipe in Dallas-Fort Worth commonly costs about $125 to $2,500 or more. Burst pipe repair cost depends mostly on where the pipe broke and how hard it is to reach. A split line under a sink or in an open garage wall is a small job; a break behind finished drywall, above a ceiling, or under a slab costs far more to fix because the plumber has to open and then close up the surface. Pipe material, whether water is still running, and after-hours timing also move the price.",
     rangeGuidance: "Visible pipe repairs are different from leaks hidden behind drywall, under slab, or above ceilings. Water mitigation, drywall, and restoration may be separate from plumbing repair.",
     factors: ["pipe location", "material", "access", "water shutoff", "surface repair coordination", "after-hours timing"],
     questionsToAsk: ["Is water fully shut off?", "What access is needed?", "Is restoration included or separate?", "What caused the break if known?"],

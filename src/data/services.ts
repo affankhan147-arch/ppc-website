@@ -31,7 +31,9 @@ export const services: Service[] = [
     // Task208: "DFW" instead of "Dallas-Fort Worth" - after Task197 this metro-wide page started
     // outranking the Dallas city hub for "emergency plumber dallas" (13.7 vs 37.8). City intent
     // belongs to /cities/dallas; this page keeps the generic 24-hour intent.
-    seoTitle: "24 Hour Plumber in DFW: Nights, Weekends & Holidays",
+    // Keyword overhaul (2026-11-15): GSC 3 months to 2026-11-11 - "emergency plumber near me" 3,937 impressions at
+    // position 7.5 with 0 clicks, and the title never said "emergency plumber". Still "DFW", not Dallas (Task208).
+    seoTitle: "24 Hour Emergency Plumber in DFW: Nights & Weekends",
     // Oct 2026 GSC: 3,933 impressions for "emergency plumber near me" at position ~7, 0 clicks.
     // The old snippet ("If water is leaking ... --...") never said emergency, DFW, or the number.
     seoDescription:
@@ -102,11 +104,13 @@ export const services: Service[] = [
     name: "burst pipe emergency",
     categorySlug: "emergency-plumbing",
     shortAnswer: "For a burst or broken pipe, shut off the main water valve, keep people away from wet electrical areas, and get an emergency plumber out for pipe repair as soon as possible.",
-    seoTitle: "Burst Pipe Plumber in DFW: 24/7 Emergency Pipe Repair",
-    // Task245 (2026-11-14): Semrush "frozen pipe repair" 1.9K/mo, KD 9. Snippet only, title unchanged.
+    // Keyword overhaul (2026-11-15): GSC 3 months - "burst pipe repair" 1,530 impressions (pos 35.6), "burst pipe
+    // plumber" 1,013 (48.1), "emergency pipe repair" 636 (35.7). Lead with the biggest query. Semrush "frozen pipe
+    // repair" 1.9K/mo, KD 9 stays in the snippet (Task245).
+    seoTitle: "Burst Pipe Repair in DFW: 24/7 Burst Pipe Plumber",
     seoDescription:
-      "Burst or frozen pipe in Dallas-Fort Worth? Shut off the main water valve, then call {phone} for 24/7 burst and frozen pipe repair, nights and weekends.",
-    seoH1: "Burst Pipe Plumber & Emergency Pipe Repair in Dallas-Fort Worth",
+      "Burst or frozen pipe in Dallas-Fort Worth? Shut off the main water valve, then call {phone} for 24/7 burst pipe and emergency pipe repair.",
+    seoH1: "Burst Pipe Repair & 24/7 Emergency Pipe Repair in Dallas-Fort Worth",
     cityHeading: "Burst Pipe Repair in {city}, TX: 24/7 Emergency Plumber",
     urgency: "High",
     symptoms: ["water spraying", "ceiling leak", "wall swelling", "sudden pressure loss", "water meter spinning"],
