@@ -40,121 +40,129 @@ export const texasCityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "24-Hour Emergency Plumber in Houston", href: "/services/24-hour-emergency-plumber" }
     ]
   },
+  // Keyword overhaul 05 (2026-11-15): this entry is live on /cities/houston/emergency-drain-cleaning ("emergency drain
+  // cleaning houston" 34 impressions @ 17.4). The old copy promised flat-rate estimates and same-day results the site
+  // cannot stand behind; rewritten without promises. The 311 fact is the one already sourced in the houston/24-hour entry.
   "houston/emergency-drain-cleaning": {
-    decisionTitle: "When to Call Emergency Drain Cleaning in Houston",
-    decisionIntro: "Houston's high humidity and frequent downpours often lead to clogged drains. The city's expansive drainage system can be overwhelmed, causing backups in homes. Here's when you need professional drain cleaning.",
+    decisionTitle: "Emergency drain cleaning in Houston: when to call",
+    decisionIntro: "One slow sink can usually wait for a daytime visit. Several drains backing up at once, a toilet that bubbles when the washer drains, or dirty water in a tub or floor drain means the main line is blocked, and in Houston that often shows up during or right after a heavy downpour. That is a same-day call.",
     decisionItems: [
-      "Slow drains in multiple fixtures throughout the house",
-      "Water backing up into bathtubs or showers when you flush",
-      "Gurgling sounds from the toilet, especially after rain",
-      "Foul sewage odors emanating from floor drains",
-      "Standing water in your yard that doesn't drain away"
+      "Say how many drains are affected and which ones, since one fixture and the main line need different equipment.",
+      "Mention if the backup started during or after heavy rain, and whether an outdoor cleanout is overflowing.",
+      "Tell the plumber whether chemical drain cleaner has already been used, so they can protect themselves.",
+      "Water coming up in the street or at the city's meter is a City of Houston matter: report it through 311, which is open 24 hours a day."
     ],
-    providerTitle: "What to Expect from Houston Drain Cleaning Services",
+    providerTitle: "What a Houston drain plumber may do",
     providerItems: [
-      "Licensed plumbers with experience in Houston's drainage systems",
-      "24/7 availability for urgent drain issues",
-      "Transparent pricing with no surprise fees",
-      "Diagnostic camera inspection to identify the root cause"
+      "Clear the main line through an outdoor cleanout when there is one, usually the easiest way in.",
+      "Use a cable snake for most clogs, and hydro jetting for grease or roots that a snake only punches through.",
+      "Run a camera when the same drain keeps clogging, to see whether the pipe is broken or just blocked.",
+      "Give a price for clearing the line before starting, and a separate price for any repair the camera shows."
     ],
-    safetyTitle: "Immediate Safety Steps Before Drain Cleaning Arrives",
+    safetyTitle: "Before the plumber arrives",
     safetyItems: [
-      "Stop using any water-using appliances to prevent further backups",
-      "Avoid flushing toilets or running sinks",
-      "Do not attempt to unclog drains with chemical cleaners",
-      "If water is pooling, turn off the main water supply"
+      "Stop running water into the house: no flushing, laundry or dishwasher until the line is cleared.",
+      "Keep children and pets away from sewage, and don't clean it up without gloves.",
+      "Don't pour chemical drain cleaner into standing water.",
+      "If water is spreading toward outlets or the panel, switch that area off at the breaker if you can do it without standing in water."
     ],
-    preventionTitle: "Preventing Drain Clogs in Houston",
+    preventionTitle: "Fewer drain emergencies in Houston",
     preventionItems: [
-      "Install drain screens to catch debris before it enters pipes",
-      "Do not pour grease or oil down the kitchen sink",
-      "Have your main sewer line inspected annually",
-      "Consider installing a sump pump to manage groundwater"
+      "Keep grease, wipes and coffee grounds out of drains; they cause most kitchen and main-line clogs.",
+      "If backups keep happening after storms, ask a plumber whether a backwater valve suits your sewer line.",
+      "Know where your outdoor cleanout is so a plumber can reach the main line quickly."
     ],
     extraFaqs: [
-      { question: "How much does drain cleaning cost in Houston?", answer: "Cost depends on the severity and location of the clog. We provide a flat-rate estimate before any work begins." },
-      { question: "Can you clear a main sewer line clog in Houston?", answer: "Yes, our team is equipped to handle main sewer line clogs and can usually resolve the issue within hours." }
+      { question: "How much does emergency drain cleaning cost in Houston?", answer: "It depends on where the clog is and when you call. Clearing one fixture costs less than clearing the main line, hydro jetting costs more than snaking, and nights and weekends add an after-hours charge. Ask what is included, and whether a camera inspection is extra, before work starts." },
+      { question: "Can a plumber clear a main sewer line clog in Houston at night?", answer: "Yes. Main line backups are one of the most common after-hours calls. Stop using water until the plumber arrives, and have the cleanout location and the list of affected drains ready." }
     ],
     extraLinks: [
-      { label: "Emergency Drain Cleaning in Houston", href: "/services/emergency-drain-cleaning" }
+      { label: "24 hour plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Drain cleaning cost factors", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   },
+  // Keyword overhaul 05 (2026-11-15): live on /cities/austin/24-hour-emergency-plumber, the site's most-shown page
+  // (9,948 impressions in 3 months; "emergency plumber austin" 284 @ 27.8, "24 hour plumber austin" 63 @ 24). The old copy
+  // promised arrival in 30-60 minutes, flat-rate estimates and free consultations; removed. Austin facts sourced from
+  // austintexas.gov/water/water-leaks and /water/high-water-bill-options (City Code 15-9-141), and the NWS Austin/San
+  // Antonio "February 2021 Historical Winter Storm Event" summary.
   "austin/24-hour-emergency-plumber": {
-    decisionTitle: "When to Call a 24-Hour Emergency Plumber in Austin",
-    decisionIntro: "Austin's rapid growth and limestone bedrock create unique plumbing issues. Older homes with outdated plumbing and new construction with unfamiliar systems both face challenges. Here's when to call a professional emergency plumber.",
+    decisionTitle: "24 hour plumber in Austin, TX: who to call first",
+    decisionIntro: "In Austin the first call depends on which side of the meter the water is on. Austin Water maintains the water mains and the line up to the meter, and takes leak reports around the clock at 512-972-1000. Property owners are responsible for the service line past the meter and for the plumbing inside the house, and that is a job for an emergency plumber.",
     decisionItems: [
-      "Water backing up into multiple fixtures at once",
-      "Sudden drop in water pressure or complete water loss",
-      "Gurgling sounds from drains when using other appliances",
-      "Foul odors from drains, not just during a storm",
-      "Sewage backup in your bathtub or shower"
+      "Water bubbling up in the street, a sidewalk or the meter box: report it to Austin Water at 512-972-1000, which is available 24/7.",
+      "A leak inside the house, under the slab, or in the yard between the meter and the house: close your cut-off valve and call a plumber.",
+      "Sewage backing up into a tub, shower or floor drain is a plumbing emergency at any hour; stop using water until the line is cleared.",
+      "Tell the plumber whether you have closed the cut-off valve, and whether the leak started during or right after a freeze."
     ],
-    providerTitle: "What to Expect from an Austin Emergency Plumber",
+    providerTitle: "What an Austin emergency plumber may check",
     providerItems: [
-      "Licensed plumbers knowledgeable about Austin's diverse housing stock",
-      "24/7 availability for emergencies of any size",
-      "Upfront pricing with no hidden fees",
-      "Free phone consultation to help you decide next steps"
+      "Pipes in the attic, garage, exterior walls and outdoor hose bibs, the places most likely to split in a hard freeze.",
+      "The private service line between the meter and the house if the yard is soggy or the meter keeps moving with every fixture off.",
+      "Water heater connections and the relief line when the leak is near the heater.",
+      "A dated, paid invoice that names the repair, which Austin Water asks for with a leak bill adjustment request."
     ],
-    safetyTitle: "Immediate Safety Steps in Austin Before Help Arrives",
+    safetyTitle: "When it can't wait until morning in Austin",
     safetyItems: [
-      "Turn off the main water valve if you detect flooding",
-      "Avoid using electrical appliances near water",
-      "Open windows if you smell gas or sewer fumes",
-      "Do not use chemical drain cleaners – they can damage pipes"
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up into the house.",
+      "Burst pipes after a hard freeze: in the February 10-18, 2021 winter storm, the National Weather Service Austin/San Antonio office reported 5 to 6 consecutive days of temperature records at its climate sites, including Austin's."
     ],
-    preventionTitle: "Preventing Plumbing Emergencies in Austin",
+    preventionTitle: "Austin-specific prevention notes",
     preventionItems: [
-      "Schedule annual sewer inspections, especially if you have older pipes",
-      "Insulate pipes in attics and crawl spaces",
-      "Know the location of your main water shutoff valve",
-      "Avoid pouring grease or coffee grounds down the sink"
+      "Find your cut-off valve before you need it: Austin Water says it sits on the service line just past the meter box, on your side, and shuts off water to the whole property.",
+      "Insulate exposed pipes in the attic, the garage and on outside walls before a freeze.",
+      "Keep the plumber's paid invoice after any leak repair: Austin Water's leak bill adjustment request has to be sent within 90 days of the repair."
     ],
     extraFaqs: [
-      { question: "How much does an emergency plumber cost in Austin?", answer: "Pricing is based on diagnosis, time, and parts needed. We offer flat-rate estimates before any work begins." },
-      { question: "Do you offer same-day service in Austin?", answer: "Yes, we have providers available 24/7 in the Austin area and typically arrive within 30 to 60 minutes." }
+      { question: "Who do I call about a water leak in the street in Austin?", answer: "Austin Water, at 512-972-1000, which is available 24/7; it also shows known leaks on its Leak Response Map. Austin 311 handles non-emergency water and sewer questions from 7 a.m. to 9 p.m. A leak inside your home or past the meter is yours to have repaired by a licensed plumber." },
+      { question: "How much does an emergency plumber cost in Austin?", answer: "It depends on the time of the call, the problem and the parts. After-hours dispatch fees and rates run higher than daytime ones, so ask for the dispatch fee and how the repair will be priced before anyone drives out, and get the repair price in writing before work starts." },
+      { question: "Can I get a credit on my Austin water bill after a leak?", answer: "Possibly. Austin Water takes leak bill adjustment requests within 90 days of the leak repair, with a repair receipt or paid invoice, your account number, the property address, the dates of the high charges and a description of the repair. An adjustment is not guaranteed." }
     ],
     extraLinks: [
-      { label: "24-Hour Emergency Plumber in Austin", href: "/services/24-hour-emergency-plumber" }
+      { label: "Emergency plumber cost: what drives the price", href: "/guides/dfw-emergency-plumbing-costs" },
+      { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" }
     ]
   },
+  // Keyword overhaul 05 (2026-11-15): live on /cities/austin/emergency-drain-cleaning ("emergency drain cleaning company
+  // austin tx" 30 @ 34.1). Old promises (flat-rate estimates, "our team") removed. 311 hours from austintexas.gov/water/water-leaks.
   "austin/emergency-drain-cleaning": {
-    decisionTitle: "When to Call Emergency Drain Cleaning in Austin",
-    decisionIntro: "Austin's hard water and limestone bedrock can lead to mineral buildup in pipes, causing frequent clogs. New development also strains the city's drainage systems. Here's when you need professional drain cleaning.",
+    decisionTitle: "Emergency drain cleaning in Austin: when to call",
+    decisionIntro: "A clog in one sink can usually wait for a daytime visit. Several drains backing up at once, or sewage in a tub, shower or floor drain, means the main line is blocked and needs a plumber the same day. Austin 311 takes non-emergency sewer questions from 7 a.m. to 9 p.m.; a backup inside your house is a job for a plumber.",
     decisionItems: [
-      "Slow or fully clogged drains in multiple rooms",
-      "Water backing up into tubs or showers when you flush",
-      "Gurgling sounds from drains or toilets",
-      "Foul smells from your plumbing system",
-      "Standing water in your yard or driveway"
+      "Slow or clogged drains in more than one room at the same time.",
+      "Water rising in a tub or shower when a toilet is flushed.",
+      "Gurgling toilets or sinks when another fixture drains.",
+      "A sewage smell from floor drains, or an outdoor cleanout that is overflowing."
     ],
-    providerTitle: "What to Expect from Austin Drain Cleaning",
+    providerTitle: "What an Austin drain plumber may do",
     providerItems: [
-      "Licensed plumbers with expertise in Austin's hard water conditions",
-      "24/7 service for urgent drain issues",
-      "Transparent pricing with no hidden costs",
-      "Camera inspection to pinpoint the exact cause"
+      "Clear the main line through an outdoor cleanout when there is one, usually the easiest way in.",
+      "Use a cable snake for most clogs, and hydro jetting for grease or roots.",
+      "Run a camera when a drain keeps clogging, to see whether the pipe is cracked or just blocked.",
+      "Give a price for clearing the line before starting, and a separate price for any repair the camera shows."
     ],
-    safetyTitle: "Immediate Safety Steps Before Drain Cleaning Arrives",
+    safetyTitle: "Before the plumber arrives",
     safetyItems: [
-      "Stop using all water-using appliances",
-      "Avoid flushing toilets or running sinks",
-      "Do not use chemical cleaners",
-      "If water is pooling, turn off the main water supply"
+      "Stop using water: no flushing, laundry or dishwasher until the line is cleared.",
+      "Don't use chemical drain cleaners in standing water.",
+      "Keep people and pets away from sewage.",
+      "If water is pooling near outlets, switch that area off at the breaker if you can do it safely."
     ],
-    preventionTitle: "Preventing Drain Clogs in Austin",
+    preventionTitle: "Fewer drain emergencies in Austin",
     preventionItems: [
-      "Install drain screens to catch debris",
-      "Avoid pouring grease or oil down the sink",
-      "Have your main sewer line inspected annually",
-      "Consider a water softener to reduce mineral buildup"
+      "Use drain screens, and keep grease, wipes and coffee grounds out of drains.",
+      "If the same drain clogs every few months, ask for a camera inspection rather than another snaking.",
+      "Hard water leaves mineral scale in pipes and fixtures; a water softener can slow it down."
     ],
     extraFaqs: [
-      { question: "How much does drain cleaning cost in Austin?", answer: "Cost depends on clog location and severity. We provide a flat-rate estimate before any work starts." },
-      { question: "Can you clear a main sewer line clog in Austin?", answer: "Yes, our team is equipped to handle main sewer line clogs and can resolve them quickly." }
+      { question: "How much does emergency drain cleaning cost in Austin?", answer: "A single-fixture clog costs less than clearing the main line, and hydro jetting costs more than snaking. Nights and weekends add an after-hours charge. Ask what is included, and whether a camera inspection is extra, before work starts." },
+      { question: "Can a plumber clear a main sewer line clog in Austin at night?", answer: "Yes. Main line backups are a common after-hours call. Stop using water until it is cleared, and tell the plumber where your outdoor cleanout is if you know." }
     ],
     extraLinks: [
-      { label: "Emergency Drain Cleaning in Austin", href: "/services/emergency-drain-cleaning" }
+      { label: "24 hour plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Drain cleaning cost factors", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   },
   "san-antonio/24-hour-emergency-plumber": {
@@ -196,43 +204,44 @@ export const texasCityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "24-Hour Emergency Plumber in San Antonio", href: "/services/24-hour-emergency-plumber" }
     ]
   },
+  // Keyword overhaul 05 (2026-11-15): live on /cities/san-antonio/emergency-drain-cleaning. Old promises removed. SAWS facts
+  // are the ones already sourced in the san-antonio/24-hour entry in pageEnhancements.ts (PH-036).
   "san-antonio/emergency-drain-cleaning": {
-    decisionTitle: "When to Call Emergency Drain Cleaning in San Antonio",
-    decisionIntro: "San Antonio's historic neighborhoods and limestone soil contribute to unique drainage challenges. The city's aging sewer systems and frequent rainfall can lead to backups. Here's when you need professional drain cleaning.",
+    decisionTitle: "Emergency drain cleaning in San Antonio: when to call",
+    decisionIntro: "One slow drain can wait. Several drains backing up at once, or sewage in a tub, shower or floor drain, means the main line is blocked and is a same-day call. San Antonio Water System (SAWS) takes water and sewer emergency calls 24 hours a day, but says it cannot repair plumbing on private property, so a backup inside your home needs a plumber.",
     decisionItems: [
-      "Slow drains in multiple areas of the home",
-      "Water backing up into tubs or showers when you flush",
-      "Gurgling sounds from toilets and sinks",
-      "Foul sewage odors from your plumbing system",
-      "Standing water in your yard or driveway"
+      "Slow or clogged drains in more than one room at the same time.",
+      "Water rising in a tub or shower when a toilet is flushed.",
+      "Gurgling toilets or sinks when another fixture drains.",
+      "Sewage overflowing in the street or from a city manhole is a call to SAWS, not to a plumber."
     ],
-    providerTitle: "What to Expect from San Antonio Drain Cleaning",
+    providerTitle: "What a San Antonio drain plumber may do",
     providerItems: [
-      "Licensed plumbers familiar with San Antonio's diverse infrastructure",
-      "24/7 availability for urgent drain issues",
-      "Transparent pricing with no surprise fees",
-      "Camera inspection to identify the exact clog location"
+      "Clear the main line through an outdoor cleanout when there is one, usually the easiest way in.",
+      "Use a cable snake for most clogs, and hydro jetting for grease or roots.",
+      "Run a camera when a drain keeps clogging, to see whether older pipe is cracked or just blocked.",
+      "Give a price for clearing the line before starting, and a separate price for any repair the camera shows."
     ],
-    safetyTitle: "Immediate Safety Steps Before Drain Cleaning Arrives",
+    safetyTitle: "Before the plumber arrives",
     safetyItems: [
-      "Stop using all water-using appliances",
-      "Avoid flushing toilets or running sinks",
-      "Do not use chemical drain cleaners",
-      "If water is pooling, turn off the main water supply"
+      "Stop using water: no flushing, laundry or dishwasher until the line is cleared.",
+      "Don't use chemical drain cleaners in standing water.",
+      "Keep people and pets away from sewage.",
+      "If water is pooling near outlets, switch that area off at the breaker if you can do it safely."
     ],
-    preventionTitle: "Preventing Drain Clogs in San Antonio",
+    preventionTitle: "Fewer drain emergencies in San Antonio",
     preventionItems: [
-      "Install drain screens to catch debris",
-      "Avoid pouring grease or oil down the sink",
-      "Have your main sewer line inspected annually",
-      "Consider a backwater valve to protect against sewer backups"
+      "Use drain screens, and keep grease, wipes and coffee grounds out of drains.",
+      "If the same drain clogs every few months, ask for a camera inspection rather than another snaking.",
+      "Ask a plumber whether a backwater valve suits your sewer line if backups follow heavy rain."
     ],
     extraFaqs: [
-      { question: "How much does drain cleaning cost in San Antonio?", answer: "Cost depends on the severity and location of the clog. We provide a flat-rate estimate before any work begins." },
-      { question: "Can you clear a main sewer line clog in San Antonio?", answer: "Yes, our team is equipped to handle main sewer line clogs and can usually resolve the issue within hours." }
+      { question: "How much does emergency drain cleaning cost in San Antonio?", answer: "A single-fixture clog costs less than clearing the main line, and hydro jetting costs more than snaking. Nights and weekends add an after-hours charge. Ask what is included, and whether a camera inspection is extra, before work starts." },
+      { question: "Will SAWS clear a clogged drain at my house?", answer: "No. SAWS takes water and sewer emergency calls 24 hours a day but says it cannot repair plumbing on private property. A clog in your home's drains or sewer line needs a plumber." }
     ],
     extraLinks: [
-      { label: "Emergency Drain Cleaning in San Antonio", href: "/services/emergency-drain-cleaning" }
+      { label: "24 hour plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Drain cleaning cost factors", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   }
 };
