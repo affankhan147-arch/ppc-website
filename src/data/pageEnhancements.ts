@@ -3751,6 +3751,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Ask what the next steps and approximate cost look like if the visit confirms a main-line issue."
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
@@ -4176,6 +4177,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Confirm cleanup and sanitizing expectations separately from the plumbing repair itself, since backed-up wastewater needs different handling than clean water."
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Sewer smell in bathroom", href: "/problems/sewer-smell-in-bathroom" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
@@ -4787,6 +4789,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Main sewer line clog help", href: "/services/main-sewer-line-clog" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" },
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
