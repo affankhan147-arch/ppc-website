@@ -3392,6 +3392,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Sudden low water pressure: what it means", href: "/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" },
@@ -3435,6 +3436,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
