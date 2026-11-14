@@ -378,6 +378,16 @@ export const anodeRodMaintenancePost: BlogPost = {
 
 blogPosts.push(anodeRodMaintenancePost);
 
+export const fortWorthSewerLineResponsibilityPost: BlogPost = {
+  slug: "who-is-responsible-for-sewer-line-fort-worth",
+  title: "Who Is Responsible for the Sewer Line in Fort Worth? Owner vs. City",
+  directAnswer: "In Fort Worth, the sewer lateral, the pipe from your house to the public sewer main, is privately owned and maintained, so repairs to it are the property owner's job. The city is responsible for the sewer mains and outfalls in rights-of-way and easements. For a backup, call Fort Worth Water at 817-392-4477 first: city crews check the main and tell you whether the problem is theirs.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(fortWorthSewerLineResponsibilityPost);
+
 
 export const highWaterPressurePost: BlogPost = {
   slug: "high-water-pressure-in-dallas-home-hidden-pipe-damage-risk",
