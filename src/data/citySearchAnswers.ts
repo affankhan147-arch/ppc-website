@@ -452,5 +452,158 @@ export const citySearchAnswers: Record<string, CitySearchAnswerSet> = {
         link: { label: "Sewer line help in The Colony", href: "/cities/the-colony/main-sewer-line-clog" }
       }
     ]
+  },
+
+  // Keyword overhaul 04 (2026-11-15): smaller DFW hubs where Search Console shows Google ranking a random
+  // city x service page (40-70) for "emergency plumber <city>" instead of the hub. Facts are the ones already
+  // established in each city's enhancement entries; Allen's 2003 median is Census ACS via /guides/dfw-housing-age-by-city.
+  rowlett: {
+    title: "Questions Rowlett homeowners search before they call",
+    intro:
+      "Rowlett sits on the eastern shore of Lake Ray Hubbard, with older neighborhoods near the lake and newer development around communities like Lake Park. Clay soil, hard water and aging cast iron sewer lines shape most plumbing calls here.",
+    items: [
+      {
+        question: "Rowlett, TX emergency plumbing: who answers after hours?",
+        answer:
+          "Calls from Rowlett are routed to providers who work nights, weekends and holidays. Tell them whether you're near the lake or in a newer area like Lake Park, what's leaking or backing up, and whether the water is off. Ask for the after-hours fee up front; it is usually higher than a daytime visit for the same repair.",
+        link: { label: "24 hour plumber in Rowlett", href: "/cities/rowlett/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Do lake-area homes in Rowlett get more sewer backups?",
+        answer:
+          "They can. Properties close to Lake Ray Hubbard can see higher groundwater after heavy rain, and older lakeside streets often still have original cast iron sewer lines under mature trees, where roots get in. If drains back up after a storm, stop using water and note which fixtures are affected before you call.",
+        link: { label: "Sewer backup help in Rowlett", href: "/cities/rowlett/sewer-backup-help" }
+      },
+      {
+        question: "Water heater leaking in Rowlett: repair or replace?",
+        answer:
+          "It depends on where the water comes from. A drip from the relief valve, a drain valve or a supply connection is usually a repair. Water seeping from the tank body means the tank has rusted through and needs replacing. DFW's hard water builds sediment that shortens tank life, so an older tank that leaks is rarely worth fixing.",
+        link: { label: "Water heater repair in Rowlett", href: "/cities/rowlett/water-heater-emergency" }
+      }
+    ]
+  },
+
+  wylie: {
+    title: "Questions Wylie homeowners search before they call",
+    intro:
+      "Wylie is a fast-growing Collin County suburb, split between older 1980s-90s homes and newer development near Lake Lavon. Water here runs about 10-14 grains per gallon of hardness, which shows up in water heaters and fixtures.",
+    items: [
+      {
+        question: "Pipe break repair in Wylie, TX: what will the plumber need to know?",
+        answer:
+          "Which part of town you're in and what the pipe is made of. Newer homes near Lake Lavon mostly have PEX, which is quick to splice. Older 1980s-90s homes may still have copper or galvanized lines, where one break can mean more weak spots nearby. Shut off the main, take a photo of the pipe, and send it when you call.",
+        link: { label: "Burst pipe repair in Wylie", href: "/cities/wylie/burst-pipe-emergency" }
+      },
+      {
+        question: "Why do water heaters wear out faster in Wylie?",
+        answer:
+          "Hard water. At 10-14 grains per gallon, minerals settle in the bottom of a tank water heater, which makes popping noises and shortens its life. Draining a few gallons from the tank once a year helps, and tankless units need descaling. A tank that's leaking from the bottom has usually reached the end.",
+        link: { label: "Water heater repair in Wylie", href: "/cities/wylie/water-heater-emergency" }
+      },
+      {
+        question: "Is a Wylie plumber available for nights and weekends?",
+        answer:
+          "Yes. Requests from Wylie and the Lake Lavon side of Collin County are routed at any hour. If you can stop the water at the main and you still have a working toilet, ask whether a first-thing-morning visit is cheaper; if water or sewage keeps coming, it can't wait.",
+        link: { label: "24 hour plumber in Wylie", href: "/cities/wylie/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  rockwall: {
+    title: "Questions Rockwall homeowners search before they call",
+    intro:
+      "Rockwall County is one of the fastest-growing counties in Texas. New master-planned communities near Lake Ray Hubbard have modern PEX and drain systems, while established neighborhoods near the original city center have older lines.",
+    items: [
+      {
+        question: "Sewage backup repair in Rockwall, TX: what happens first?",
+        answer:
+          "Stop all water use and keep people and pets away from it. The plumber usually clears the main line through the outdoor cleanout, then runs a camera to see why it blocked: roots and old pipe are more likely in central Rockwall, a sag or settled joint in newer homes. Cleaning up the sewage is usually a separate job from clearing the line.",
+        link: { label: "Sewer backup help in Rockwall", href: "/cities/rockwall/sewer-backup-help" }
+      },
+      {
+        question: "24 hour plumber in Rockwall, TX: does it matter which part of town I'm in?",
+        answer:
+          "It helps. A newer master-planned home near the lake and an older house near downtown fail in different ways, and the plumber brings different parts. Mention the year your home was built, the pipe you can see under a sink, and whether the problem is a leak or a backup.",
+        link: { label: "24 hour plumber in Rockwall", href: "/cities/rockwall/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Can I get a same-day plumber in Rockwall?",
+        answer:
+          "Usually, for anything urgent. Calling before noon gives you the best chance, and a photo of the problem helps the dispatcher send the right person. Ask whether the service-call fee is credited toward the repair if you go ahead with it.",
+        link: { label: "Same-day plumber in Rockwall", href: "/cities/rockwall/same-day-plumber-connection" }
+      }
+    ]
+  },
+
+  mansfield: {
+    title: "Questions Mansfield homeowners search before they call",
+    intro:
+      "Mansfield has older 1970s-80s homes near its historic downtown and newer master-planned communities like Walnut Creek Valley, M3 Ranch and South Pointe. Clay soil and hard water affect both, but the pipes inside them are different.",
+    items: [
+      {
+        question: "Pipe breaks in Mansfield: does it matter if my home is older or newer?",
+        answer:
+          "Yes. Newer subdivisions like M3 Ranch typically have PEX, and a break is often a single fitting. Older homes near downtown can have aging metal supply lines where one leak is a sign of more to come. Close the main valve, open a low faucet to drain the lines, and tell the plumber roughly when the house was built.",
+        link: { label: "Burst pipe repair in Mansfield", href: "/cities/mansfield/burst-pipe-emergency" }
+      },
+      {
+        question: "Drain cleaning in Mansfield, TX: why does the same drain keep clogging?",
+        answer:
+          "In established neighborhoods with mature trees, original cast iron sewer lines are old enough that roots and corrosion catch everything going down the drain. Snaking opens it, but the clog returns within weeks or months. A camera inspection shows whether the line needs a repair rather than another cleaning.",
+        link: { label: "Emergency drain cleaning in Mansfield", href: "/cities/mansfield/emergency-drain-cleaning" }
+      },
+      {
+        question: "Is there a 24 hour plumber in Mansfield, TX?",
+        answer:
+          "Yes. Calls from Mansfield are routed to available providers around the clock. Have your address, the problem and whether you've shut off the water ready. If water is near outlets or the electrical panel, turn the power off to that area at the breaker first, if you can do it without standing in water.",
+        link: { label: "24 hour plumber in Mansfield", href: "/cities/mansfield/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  grapevine: {
+    title: "Questions Grapevine homeowners search before they call",
+    intro:
+      "Grapevine's homes span nearly 70 years of building around Lake Grapevine. Historic downtown houses often still have original cast iron drains, and homes near the lake deal with humidity and hard municipal water.",
+    items: [
+      {
+        question: "Why do Grapevine homes near the lake get pinhole leaks?",
+        answer:
+          "Higher humidity near Lake Grapevine and hard municipal water, around 246 ppm of total dissolved solids, have been linked to faster pinhole leaks in copper supply lines, especially in homes from the 1980s and 1990s. Signs include a hissing wall, a stain that keeps growing, or a water bill that rises with no change in use.",
+        link: { label: "Burst pipe repair in Grapevine", href: "/cities/grapevine/burst-pipe-emergency" }
+      },
+      {
+        question: "Grapevine toilet overflow: how do I stop it?",
+        answer:
+          "Turn the valve on the wall behind the toilet clockwise until it stops, or lift the float in the tank to cut the water. If other drains back up when you flush, the problem is the main line, which is common in older downtown homes with cast iron drains more than 45 years old. Stop using water and call.",
+        link: { label: "Toilet overflow help in Grapevine", href: "/cities/grapevine/toilet-overflow-emergency" }
+      },
+      {
+        question: "Emergency plumber in Grapevine: when should I call at night?",
+        answer:
+          "Call at night for water you can't stop, sewage backing up, or a leak reaching electrical outlets. Homes near Lake Grapevine and its feeder creeks can see more backups during heavy rain, so a backup during a storm is worth calling about straight away. A running toilet or slow sink can wait until morning.",
+        link: { label: "24 hour plumber in Grapevine", href: "/cities/grapevine/24-hour-emergency-plumber" }
+      }
+    ]
+  },
+
+  allen: {
+    title: "Questions Allen homeowners search before they call",
+    intro:
+      "Allen's median home was built in 2003 (U.S. Census ACS 2019-2023). The city mixes older homes with original galvanized plumbing and larger newer homes with higher hot water demand.",
+    items: [
+      {
+        question: "Pipe breaks in Allen: does the age of my house matter?",
+        answer:
+          "It changes the repair. Older Allen homes with galvanized supply lines rust from the inside, so a break often means the rest of the run is thin too, and a plumber may suggest replacing a section rather than patching. Newer homes usually have PEX or copper, where a single damaged spot can be cut out and joined.",
+        link: { label: "Burst pipe repair in Allen", href: "/cities/allen/burst-pipe-emergency" }
+      },
+      {
+        question: "Why does my water heater run out of hot water in a bigger Allen home?",
+        answer:
+          "Larger homes use more hot water at once: two showers, a tub and the dishwasher can outrun a tank or a tankless unit sized for a smaller house. If the problem started suddenly, the heater may be failing; if it has always happened, it may be undersized. A plumber can tell which by checking the unit's size against your fixtures.",
+        link: { label: "Water heater repair in Allen", href: "/cities/allen/water-heater-emergency" }
+      }
+    ]
   }
 };

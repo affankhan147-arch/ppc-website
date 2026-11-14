@@ -114,7 +114,13 @@ export default async function CityServicePage({ params }: Props) {
           ) : (
             <p className="mt-4 text-lg leading-8 text-slate-300">
               Searching for {displayName.toLowerCase()} near {city.name}, available 24 hours a day? Local guidance for {city.name} homeowners and
-              property managers who need {displayName.toLowerCase()}. Confirm availability, pricing, credentials, and arrival details directly with the provider.
+              property managers who need {displayName.toLowerCase()}. For any other urgent problem, start with the{" "}
+              {/* Keyword overhaul 04: every city x service page points "emergency plumber in <city>" at the city hub,
+                  because Search Console showed these pages ranking 40-70 for the hub's query and splitting it. */}
+              <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}`}>
+                emergency plumber in {city.name}, TX
+              </Link>{" "}
+              page. Confirm availability, pricing, credentials, and arrival details directly with the provider.
             </p>
           )}
           <div className="mt-6">
