@@ -3156,6 +3156,10 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
 };
 
 export const cityPageEnhancements: Record<string, PageEnhancement> = {
+  // PH-046 anchor: the Arlington entry goes directly below this line.
+
+  // PH-047 anchor: the Carrollton entry goes directly below this line.
+
   dallas: {
     decisionTitle: "Dallas emergency leak and drain triage",
     decisionIntro:
