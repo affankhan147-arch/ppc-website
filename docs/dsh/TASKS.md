@@ -241,7 +241,7 @@ Done when: `npm run build` passes and `.next/server/app/cost-guides/burst-pipe-e
 
 ---
 
-## PH-035 - Houston 24-hour plumber page: Houston-specific section - Status: OPEN
+## PH-035 - Houston 24-hour plumber page: Houston-specific section - Status: DONE (2026-11-14, merged 33ba765)
 Claude note 2026-11-13: BLOCKED because aider scraped the source URLs (the NWS PDF) into the prompt. Fixed in scripts/dsh-agent.py (aider --no-detect-urls). Retry exactly as written on the same branch.
 File: `src/data/pageEnhancements.ts`
 Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07) but no Houston-specific content block (the DFW cities all have one). This adds Houston's own facts from official sources.
@@ -305,7 +305,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/houston/24-hour-e
 
 ---
 
-## PH-036 - San Antonio 24-hour plumber page: San Antonio-specific section - Status: OPEN
+## PH-036 - San Antonio 24-hour plumber page: San Antonio-specific section - Status: DONE (2026-11-14, merged 3f64497)
 Claude note 2026-11-13: BLOCKED because aider scraped the source URLs (the NWS PDF) into the prompt. Fixed in scripts/dsh-agent.py (aider --no-detect-urls). Retry exactly as written on the same branch.
 File: `src/data/pageEnhancements.ts`
 Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07) and no San Antonio-specific content block. This adds SAWS and NWS facts from official sources.
@@ -840,7 +840,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-burst-pipes
 
 ---
 
-## PH-030 - Escape quotes and apostrophes in the DFW freeze history guide (lint) - Status: OPEN
+## PH-030 - Escape quotes and apostrophes in the DFW freeze history guide (lint) - Status: DONE (2026-11-14, merged b3becb6; Claude escaped 1 missed apostrophe in beed906)
 File: `src/app/guides/dfw-freeze-history/page.tsx`
 Why: `npm run lint` reports 21 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
 - line ~62: `DFW's` -> `DFW&apos;s`
@@ -860,7 +860,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-freeze-hist
 
 ---
 
-## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: OPEN
+## PH-031 - Escape quotes and apostrophes in the DFW housing age guide (lint) - Status: DONE (2026-11-14, merged b6093df; Claude escaped 1 missed apostrophe in beed906)
 Claude note 2026-11-12: now OPEN; Claude re-checked every line number below against master today.
 File: `src/app/guides/dfw-housing-age-by-city/page.tsx`
 Why: `npm run lint` reports 21 react/no-unescaped-entities errors in this file. Make exactly these text replacements, each only on the line given (visible text only; never touch attributes, `className`, `href` or code). Where a word appears twice on one line, replace both.
@@ -881,7 +881,7 @@ Done when: `npm run build` passes and `npx eslint src/app/guides/dfw-housing-age
 
 ---
 
-## PH-032 - New blog post: who is responsible for the sewer line in Fort Worth - Status: WRITER
+## PH-032 - New blog post: who is responsible for the sewer line in Fort Worth - Status: DONE (2026-11-14, merged 893f0de; Claude dropped "or slow drainage")
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/who-is-responsible-for-sewer-line-fort-worth`. Search intent: "who is responsible for sewer line fort worth" (owner vs city). Service: main sewer line clog. It supports /tools/sewer-line-repair-cost-calculator (2,130 impressions, position 40) and /cities/fort-worth (2,399 impressions, position 9.9). The page renders automatically from these 4 data files; the hero image is picked automatically from `relatedServiceSlug` (no image edit). This is a different question from the existing post "Sewer backup in Fort Worth: what it means" (that one is about symptoms); do not copy its text.
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(anodeRodMaintenancePost);` (about line 369), add a new post copying the shape of `anodeRodMaintenancePost` exactly, then `blogPosts.push(fortWorthSewerLineResponsibilityPost);`. Do NOT add it at the end of the file or after the tankless post (other tasks add there). Use exactly:
@@ -911,7 +911,7 @@ Goal: one new blog post at `/blog/who-is-responsible-for-sewer-line-fort-worth`.
 Sources (Claude opened them on 2026-11-11): https://www.fortworthtexas.gov/departments/water/wastewater/sewer-faq ; https://www.fortworthtexas.gov/departments/water/wastewater ; https://www.fortworthtexas.gov/departments/development-services/permits/residential-information ; https://www.fortworthtexas.gov/departments/development-services/permits/contractor-registration ; https://tsbpe.texas.gov/wp-content/uploads/documents/TSBPE_PlumbingLicenseLaw(PlainView)_Sept2025.pdf
 Done when: `npm run build` passes and `.next/server/app/blog/who-is-responsible-for-sewer-line-fort-worth.html` exists and contains `Fixing a private sewer line in Fort Worth`.
 
-## PH-041 - Links into the Houston and San Antonio 24-hour pages from 3 emergency posts - Status: OPEN
+## PH-041 - Links into the Houston and San Antonio 24-hour pages from 3 emergency posts - Status: DONE (2026-11-14, merged a6574d9)
 File: `src/data/pageEnhancements.ts`
 Why: /cities/houston/24-hour-emergency-plumber (1,924 impressions, position 18.5) and /cities/san-antonio/24-hour-emergency-plumber (1,353, position 23.2) get almost no links from blog posts. These 3 general emergency posts are the closest match.
 Where: do this in 3 places. For EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -928,7 +928,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `h
 
 ---
 
-## PH-042 - Links into the DFW emergency plumbing cost guide from 2 more posts - Status: OPEN
+## PH-042 - Links into the DFW emergency plumbing cost guide from 2 more posts - Status: DONE (2026-11-14, merged f1b38d3)
 File: `src/data/pageEnhancements.ts`
 Why: /guides/dfw-emergency-plumbing-costs has 1,018 impressions at position 13.0; its top query "emergency plumber cost" sits at position 24. Two cost and approval posts don't link to it yet.
 Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -943,7 +943,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `E
 
 ---
 
-## PH-043 - Links into the sewer line repair cost calculator from 3 sewer posts - Status: OPEN
+## PH-043 - Links into the sewer line repair cost calculator from 3 sewer posts - Status: DONE (2026-11-14, merged bf8365b)
 File: `src/data/pageEnhancements.ts`
 Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2. Three sewer posts don't link to it yet.
 Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -959,7 +959,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `h
 
 ---
 
-## PH-044 - Links into the slab leak repair cost calculator from 2 leak posts - Status: OPEN
+## PH-044 - Links into the slab leak repair cost calculator from 2 leak posts - Status: DONE (2026-11-14, merged 17b325e)
 File: `src/data/pageEnhancements.ts`
 Why: /tools/slab-leak-repair-cost-calculator has 1,204 impressions at position 22.1. Two water-meter leak posts don't link to it yet.
 Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -995,3 +995,277 @@ Goal: one new blog post at `/blog/san-antonio-plumbing-permit-homeowner-or-plumb
 Done when: `npm run build` passes and `.next/server/app/blog/san-antonio-plumbing-permit-homeowner-or-plumber.html` exists and contains `Before plumbing work starts in San Antonio`.
 
 ---
+
+---
+
+## PH-046 - Arlington city page: Arlington-specific water emergency section - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /cities/arlington has 1,292 impressions at position 10.8 with 0 clicks (Search Console, 28 days to 2026-11-07) and no Arlington-specific section (only Dallas has one). This adds Arlington Water Utilities facts. Source (Claude opened it 2026-11-14): https://www.arlingtontx.gov/News-Articles/2025/January/7-Tips-for-Avoiding-Water-Damage-and-Water-Loss-This-Winter
+Where: search (do not read the whole file) for this line, which appears once:
+```ts
+  // PH-046 anchor: the Arlington entry goes directly below this line.
+```
+Insert the whole entry below directly BELOW that line. Keep the anchor line. Change nothing else (PH-047 uses the other anchor).
+```ts
+  arlington: {
+    decisionTitle: "Arlington water emergency: city line or plumber?",
+    decisionIntro:
+      "In Arlington, the first call depends on what you need. Arlington Water Utilities runs a 24-Hour Emergency Service line, 817-459-5900, for help turning off your water or a suspected water main break after hours or on weekends. A leak inside the house or in your own pipes is a job for a licensed plumber.",
+    decisionItems: [
+      "Cannot turn your water off, or think a water main has broken? After hours or on weekends, call Arlington Water Utilities' 24-Hour Emergency Service line at 817-459-5900.",
+      "During business hours, Arlington Water Utilities answers at 817-275-5931, 8 a.m. to 5 p.m. Monday through Friday.",
+      "Once the water is off, call a plumber for the leak itself and say whether it is inside the house, in the yard or at an outside faucet.",
+      "Mention if the leak started during or right after a freeze, since a frozen pipe can split in more than one place."
+    ],
+    providerTitle: "What an Arlington plumber may check",
+    providerItems: [
+      "Exposed exterior pipes and pipes in unheated garages, attics and crawl spaces, the ones Arlington Water Utilities says to watch in cold weather.",
+      "Outdoor faucets and hose connections after a hard freeze.",
+      "Whether the water meter still moves with every fixture off, a sign of a hidden leak.",
+      "The main shutoff valve, so you know it closes before the next emergency."
+    ],
+    safetyTitle: "When to treat it as urgent in Arlington",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up through a tub, shower or floor drain.",
+      "Pipes that may have split in a freeze: Arlington Water Utilities says pipes can freeze and burst when the outside temperature reaches 20 degrees or below."
+    ],
+    preventionTitle: "Arlington-specific prevention notes",
+    preventionItems: [
+      "Before a hard freeze, remove hoses and insulate outdoor faucets. Arlington Water Utilities suggests wrapping outdoor faucets and exposed pipes with rags tied on with bungee cords or zip ties.",
+      "Check for a hidden leak the way Arlington Water Utilities describes: turn off the water inside and outside the home, read the meter, wait 15 minutes and read it again.",
+      "If your sprinkler system has a main shut-off valve, turn the water supply off there too before a freeze."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call for a water emergency in Arlington at night or on a weekend?",
+        answer:
+          "Call Arlington Water Utilities' 24-Hour Emergency Service line at 817-459-5900 if you need help turning off your water or suspect a water main break. For a leak inside your home or in your own pipes, call a licensed plumber once the water is off."
+      },
+      {
+        question: "How do I check for a hidden water leak in Arlington?",
+        answer:
+          "Turn off the water inside and outside the home, write down the meter reading, wait 15 minutes and read it again. Arlington Water Utilities says any water use on the meter during the test may mean a large leak or several small ones. If it moved, call a plumber."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Arlington", href: "/cities/arlington/24-hour-emergency-plumber" },
+      { label: "Burst pipe help in Arlington", href: "/cities/arlington/burst-pipe-emergency" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
+```
+Done when: `npm run build` passes and `.next/server/app/cities/arlington.html` contains `Arlington-specific prevention notes`.
+
+---
+
+## PH-047 - Carrollton city page: Carrollton-specific water emergency section - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: /cities/carrollton has 1,157 impressions at position 9.3 with 0 clicks (Search Console, 28 days to 2026-11-07) and no Carrollton-specific section. This adds City of Carrollton facts. Sources (Claude opened them 2026-11-14): https://www.cityofcarrollton.com/departments/departments-g-p/public-works/contact-public-works ; https://www.cityofcarrollton.com/departments/departments-q-z/utility-customer-service/leak-adjustments
+Where: search (do not read the whole file) for this line, which appears once:
+```ts
+  // PH-047 anchor: the Carrollton entry goes directly below this line.
+```
+Insert the whole entry below directly BELOW that line. Keep the anchor line. Change nothing else (PH-046 uses the other anchor).
+```ts
+  carrollton: {
+    decisionTitle: "Carrollton water emergency: city line or plumber?",
+    decisionIntro:
+      "Carrollton Public Works keeps a 24/7 emergency line, 972-466-3425, for water leaks, sewer problems and utility locations. A leak in the pipes or fixtures on your own property is yours to have repaired, and the city expects it fixed in a timely manner.",
+    decisionItems: [
+      "Water leaking in the street, or a sewer problem you think is on the city side: call Carrollton Public Works' emergency line at 972-466-3425, answered 24/7.",
+      "A leak inside the house, under the slab or in your yard line: shut the water off and call a licensed plumber.",
+      "Tell the plumber whether the water is clean or sewage, and whether one fixture or several are affected.",
+      "Ask the plumber up front whether the repair needs a city permit and who will pull it."
+    ],
+    providerTitle: "What a Carrollton plumber may check",
+    providerItems: [
+      "The pipes and fixtures on your property, since Carrollton treats leaks from faulty plumbing on private property as the customer's to repair.",
+      "Whether the main shutoff closes fully.",
+      "Toilets, water heater connections and irrigation lines when the water bill jumps.",
+      "A dated invoice and proof of payment, which Carrollton asks for if you apply for a leak adjustment."
+    ],
+    safetyTitle: "When to treat it as urgent in Carrollton",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up through a tub, shower or floor drain.",
+      "A leak that keeps running while you wait: Carrollton says it is the customer's responsibility to make sure leaks are repaired in a timely manner."
+    ],
+    preventionTitle: "Carrollton-specific notes after a leak",
+    preventionItems: [
+      "Keep the plumber's invoice and proof of payment: a Carrollton leak adjustment needs the Certification of Water Leak Repair form with a description of the leak and proof of payment.",
+      "Apply within 90 days of the bill that shows the water loss. Carrollton allows one leak adjustment in any 12-month period.",
+      "If the repair needs a permit, Carrollton says to contact Building Inspection at 972-466-3225. Adjustments are denied if a required permit is not obtained within 30 days of notice."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call for a water or sewer emergency in Carrollton?",
+        answer:
+          "Carrollton Public Works has a 24/7 emergency line, 972-466-3425, for water leaks, sewer problems and utility locations. For a leak in the pipes or fixtures on your own property, call a licensed plumber: Carrollton expects customers to get those leaks repaired in a timely manner."
+      },
+      {
+        question: "Can I get a water bill adjustment for a leak in Carrollton?",
+        answer:
+          "Possibly. Carrollton allows one leak adjustment in any 12-month period for leaks from faulty plumbing on private property. Apply within 90 days of the bill that shows the water loss, with the Certification of Water Leak Repair form and proof of payment for the repair."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Carrollton", href: "/cities/carrollton/emergency-drain-cleaning" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
+```
+Done when: `npm run build` passes and `.next/server/app/cities/carrollton.html` contains `Carrollton-specific notes after a leak`.
+
+---
+
+## PH-048 - Links from 3 Houston service pages to the Houston 24-hour page - Status: OPEN
+File: `src/data/cityServiceEnhancementsHoustonExpansion.ts`
+Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07). The Houston burst pipe, water heater and sewer backup pages give it no links, and they have no related links at all.
+Where: these entries have no `extraLinks` yet. Do this in 3 places (each entry line appears once; search, do not read the whole file):
+- In the entry `  "houston/burst-pipe-emergency": {` find the FIRST line that is exactly `  },` below it and insert these lines directly ABOVE that `  },` line:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+    ],
+```
+- In the entry `  "houston/water-heater-emergency": {` find the FIRST line that is exactly `  },` below it and insert these lines directly ABOVE that `  },` line:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+    ],
+```
+- In the entry `  "houston/sewer-backup-help": {` find the FIRST line that is exactly `  },` below it and insert these lines directly ABOVE that `  },` line:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsHoustonExpansion.ts` contains `href: "/cities/houston/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-049 - Links from 3 San Antonio service pages to the San Antonio 24-hour page - Status: OPEN
+File: `src/data/cityServiceEnhancementsSanAntonioExpansion.ts`
+Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07). The San Antonio burst pipe, water heater and sewer backup pages give it no links, and they have no related links at all.
+Where: these entries have no `extraLinks` yet. Do this in 3 places (each entry line appears once; search, do not read the whole file):
+- In the entry `  "san-antonio/burst-pipe-emergency": {` find the FIRST line that is exactly `  },` below it and insert these lines directly ABOVE that `  },` line:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
+    ],
+```
+- In the entry `  "san-antonio/water-heater-emergency": {` find the FIRST line that is exactly `  },` below it and insert these lines directly ABOVE that `  },` line:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+    ],
+```
+- In the entry `  "san-antonio/sewer-backup-help": {` find the FIRST line that is exactly `  },` below it and insert these lines directly ABOVE that `  },` line:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsSanAntonioExpansion.ts` contains `href: "/cities/san-antonio/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-050 - Fort Worth sewer pages: links to the new sewer line post and the sewer calculator - Status: OPEN
+File: `src/data/cityServiceEnhancementsFortWorthExpansion.ts`
+Why: the new post /blog/who-is-responsible-for-sewer-line-fort-worth (live 2026-11-14) needs links in, and /tools/sewer-line-repair-cost-calculator (2,130 impressions, position 40.2) has no links from city service pages.
+Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "fort-worth/main-sewer-line-clog": {`
+- `  "fort-worth/sewer-backup-help": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert these lines directly BELOW it:
+```ts
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsFortWorthExpansion.ts` contains `href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }` exactly 2 times and `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 2 times.
+
+---
+
+## PH-051 - Dallas sewer pages: links to the Dallas sewer post and the sewer calculator - Status: OPEN
+File: `src/data/cityServiceEnhancementsDallasExpansion.ts`
+Why: /tools/sewer-line-repair-cost-calculator (2,130 impressions, position 40.2) has no links from city service pages, and the Dallas sewer warning-signs post has none from the Dallas sewer pages.
+Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "dallas/main-sewer-line-clog": {`
+- `  "dallas/sewer-backup-help": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert these lines directly BELOW it:
+```ts
+      { label: "Main sewer line clogged in Dallas: warning signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsDallasExpansion.ts` contains `href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" }` exactly 2 times and `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 2 times.
+
+---
+
+## PH-052 - Dallas and Fort Worth burst pipe pages: link to the slab leak calculator - Status: OPEN
+Files: `src/data/cityServiceEnhancementsDallasExpansion.ts`, `src/data/cityServiceEnhancementsFortWorthExpansion.ts`
+Why: /tools/slab-leak-repair-cost-calculator has 1,204 impressions at position 22.1 and no links from city service pages.
+Where: in EACH of the 2 files, search (do not read the whole file) for the entry line (`  "dallas/burst-pipe-emergency": {` in the Dallas file, `  "fort-worth/burst-pipe-emergency": {` in the Fort Worth file; each appears once), find the FIRST line `    extraLinks: [` below it and insert this line directly BELOW it:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+```
+Change nothing else (PH-050 and PH-051 edit the sewer entries in the same files).
+Done when: `npm run build` passes and each of the 2 files contains `href: "/tools/slab-leak-repair-cost-calculator" }` exactly 1 time.
+
+---
+
+## PH-053 - Links into the Fort Worth sewer line post from 2 Fort Worth posts - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: the new post /blog/who-is-responsible-for-sewer-line-fort-worth (live 2026-11-14) has only 2 links in. These 2 Fort Worth posts are the closest match.
+Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
+- `  "sewer-backup-in-fort-worth-what-it-means-and-who-to-call": {`
+- `  "emergency-drain-cleaning-in-fort-worth-fast-homeowner-guide": {`
+find the FIRST line `    extraLinks: [` below the entry line and insert this line directly BELOW it:
+```ts
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }` exactly 4 times.
+
+---
+
+## PH-054 - New blog post: Carrollton water leak adjustment after a plumbing repair - Status: WRITER
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/carrollton-water-leak-adjustment-after-plumbing-repair`. Search intent: "carrollton water leak adjustment" / "carrollton leak adjustment form" (a homeowner with a high bill after a leak). Service: leak repair, so it supports /cities/carrollton (1,157 impressions, position 9.3) and /tools/slab-leak-repair-cost-calculator (1,204 impressions, position 22.1). Gap: no PH page covers Carrollton (grep of blogPosts.ts and pageEnhancements.ts on 2026-11-14). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug`. Copy the shape of PH-032 (`fortWorthSewerLineResponsibilityPost`) exactly.
+1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(fortWorthSewerLineResponsibilityPost);`, add a new post copying the shape of `fortWorthSewerLineResponsibilityPost` exactly, then `blogPosts.push(carrolltonLeakAdjustmentPost);`. Do NOT add it after the SAWS post (PH-045 adds there). Use exactly:
+   - const name `carrolltonLeakAdjustmentPost`
+   - slug `carrollton-water-leak-adjustment-after-plumbing-repair`
+   - title `Carrollton Water Leak Adjustment: How to Get a Bill Credit After a Repair`
+   - directAnswer `Carrollton can reduce a water bill raised by a leak in the plumbing on your property, but only once in any 12-month period. Get the leak repaired first, wait for a full leak-free billing period, then send the Certification of Water Leak Repair form with proof of payment within 90 days of the bill that showed the water loss.`
+   - category `Cost and decision guides`, relatedServiceSlug `burst-pipe-emergency`
+2. `src/data/pageEnhancements.ts` (search, do not read whole): find the line `  "who-is-responsible-for-sewer-line-fort-worth": {`; after that entry's closing `  },` add a new entry keyed `"carrollton-water-leak-adjustment-after-plumbing-repair"`, copying its fields exactly (checklistTitle, checklistIntro, checklistItems, proofTitle, proofItems, extraFaqs, extraLinks). Plain, human copy using ONLY these facts from the City of Carrollton leak adjustments page (no prices, no guarantees, no invented facts, no percentages other than the three below):
+   - checklistTitle `Before you ask Carrollton for a leak adjustment`; intro 1-2 sentences + 5 items: Carrollton counts a leak as a change in use caused by faulty plumbing lines and/or fixtures on private property; it is the customer's responsibility to make sure leaks are repaired in a timely manner; no adjustment is made until a full, leak-free billing period has passed; the request must be sent within 90 days of the bill that shows the water loss, with the Certification of Water Leak Repair form, a description of the leak and proof of payment; for permit questions, Carrollton says to contact Building Inspection at 972-466-3225, and repairs that needed a permit are denied if the permit is not obtained within 30 days of notice.
+   - proofTitle `How Carrollton limits a leak adjustment`; 5 items: one adjustment in any 12-month period; adjustments are limited to 60% where the leaked water did not return to the sanitary or storm sewer, 50% where it did, and 40% for an irrigation line leak (use the words "limited to"; do not say 60% of the bill); no adjustment for a leak or malfunction of a pool system; no adjustment above the actual water cost to the City; if the leak is not repaired within 2 billing periods the adjustment is based on 2 billing periods, and if it is not repaired within 6 billing periods there is no adjustment.
+   - extraFaqs (3): "How many leak adjustments can I get in Carrollton?" (one in any 12-month period); "How long do I have to apply for a Carrollton leak adjustment?" (within 90 days of the bill that shows the water loss, after a full leak-free billing period, with the Certification of Water Leak Repair form and proof of payment); "Who do I call about a water leak at night in Carrollton?" (Carrollton Public Works has a 24/7 emergency line, 972-466-3425, for water leaks and sewer problems; a leak in your own pipes or fixtures needs a licensed plumber). Each answer 40-60 words.
+   - extraLinks (5): `{ label: "Carrollton plumbing help", href: "/cities/carrollton" }`, `{ label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" }`, `{ label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" }`, `{ label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }`, `{ label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" }`.
+   - Links in: in BOTH entries `"how-to-check-your-water-meter-for-a-hidden-leak-dallas"` and `"water-leak-between-meter-and-house-dallas-who-fixes-it"`, find the FIRST line `    extraLinks: [` below the entry line and insert directly BELOW it: `      { label: "Carrollton water leak adjustment: how to apply", href: "/blog/carrollton-water-leak-adjustment-after-plumbing-repair" },`
+3. `src/data/seoOverrides.ts`: directly after the 5-line `"/blog/who-is-responsible-for-sewer-line-fort-worth"` entry (it ends with `  },`), add exactly:
+```ts
+  // New post 2026-11-14 (PH-054).
+  "/blog/carrollton-water-leak-adjustment-after-plumbing-repair": {
+    title: "Carrollton Water Leak Adjustment: Rules and How to Apply",
+    description:
+      "Leak raised your Carrollton water bill? The city allows one adjustment per 12 months. What it covers, the 90-day deadline and the form and receipts to send."
+  },
+```
+4. `src/data/contentDates.ts`: directly below the line `  "/blog/who-is-responsible-for-sewer-line-fort-worth": "2026-11-12",` add `  "/blog/carrollton-water-leak-adjustment-after-plumbing-repair": "2026-11-15",`.
+Sources (Claude opened them on 2026-11-14): https://www.cityofcarrollton.com/departments/departments-q-z/utility-customer-service/leak-adjustments ; https://www.cityofcarrollton.com/departments/departments-g-p/public-works/contact-public-works
+Done when: `npm run build` passes and `.next/server/app/blog/carrollton-water-leak-adjustment-after-plumbing-repair.html` exists and contains `How Carrollton limits a leak adjustment`.

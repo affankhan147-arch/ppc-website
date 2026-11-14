@@ -18,6 +18,7 @@ Rankings first (titles already match the queries; position too low for CTR work)
 - /tools/sewer-line-repair-cost-calculator: 2,130 / 4 / 0.2% / 40.2; /tools/slab-leak-repair-cost-calculator: 1,204 / 3 / 0.2% / 22.1
 
 Checks log:
+- 2026-11-14 (Sat): Search Console skipped: Chrome offline (cloud run). No new numbers.
 - 2026-11-13 (Fri): Search Console skipped: Chrome offline (cloud run). No new numbers.
 - 2026-11-12 (Thu): Search Console skipped: Chrome offline (cloud run). PH-023 (city hub titles) and PH-026 (2 calculator titles) went live today.
 - 2026-11-11 (Wed): Search Console skipped: Chrome offline (cloud run, no Claude in Chrome). No new numbers. PH-023 not live yet: the DSH agent crashed on 10 and 11 Nov on the double quotes in its task title (fixed 2026-11-11), so it runs on 12 Nov.
@@ -28,6 +29,12 @@ Rankings-first work queued 2026-11-11 (judge 14+ days after live):
 - /tools/slab-leak-repair-cost-calculator: PH-027 links from 3 leak pages (p22.1).
 - /cities/houston/24-hour-emergency-plumber (p18.5) and /cities/san-antonio/24-hour-emergency-plumber (p23.2): PH-028 links from the 24-hour service page.
 - Live 2026-11-12: PH-024 (d8a8962), PH-025 (c3949a2), PH-026 (503ae4c), PH-027 (1b34c1a), PH-028 (bbb22d2). PH-025 put 1 of 3 links and PH-027 2 of 3 links on neighbouring pages (anchor lines were not unique); PH-034 adds the 3 missing links.
+
+Rankings-first work queued 2026-11-14 (judge 14+ days after live):
+- Live 2026-11-14: PH-035 Houston section (33ba765), PH-036 San Antonio section (3f64497), PH-041 (a6574d9), PH-042 (f1b38d3), PH-043 (bf8365b), PH-044 (17b325e), PH-032 Fort Worth sewer post (893f0de).
+- /cities/arlington (1,292 / 0 / p10.8): PH-046 Arlington Water Utilities section. /cities/carrollton (1,157 / 0 / p9.3): PH-047 Carrollton section; PH-054 Carrollton leak adjustment post (WRITER).
+- /cities/houston/24-hour-emergency-plumber (p18.5) and /cities/san-antonio/24-hour-emergency-plumber (p23.2): PH-048/049 links from 3 service pages each.
+- /tools/sewer-line-repair-cost-calculator (p40.2): PH-050/051 links from Fort Worth and Dallas sewer pages. /tools/slab-leak-repair-cost-calculator (p22.1): PH-052 links from 2 burst pipe pages.
 
 Rankings-first work queued 2026-11-13 (judge 14+ days after live):
 - Live 2026-11-13: PH-034 the 3 missing calculator links (bfed5fa); PH-037 SAWS leak post links into the San Antonio 24-hour page (cd2e7e3).

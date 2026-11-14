@@ -2,6 +2,15 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-14 - audit (PH only: UHP paused by Sunny)
+- Agent runs: 14 Nov 15:12 UTC success (8 tasks + 1 writer; aider --no-detect-urls fix worked, PH-035/036 went through); 13 Nov failure already logged.
+- Reviewed 9, all PASS: PH-035 @0c36766, PH-036 @cef3aa9 (Houston/San Antonio sections, verbatim), PH-041 @485eb62, PH-042 @2a0211b, PH-043 @1305e28, PH-044 @9c1845c (every link under the right entry), PH-030 @1cf5fcd, PH-031 @74bb902 (escape-only, each missed 1 apostrophe: Claude fixed in beed906), PH-032 writer @e64d422 (facts match the Fort Worth brief; Claude dropped "or slow drainage", not in the source). Merged 33ba765..beed906.
+- Gate: local build PASS on merged master (new post, Houston and San Antonio sections in the HTML); tsc PASS; lint 43 -> 1 error (CookieConsent, intentional); Vercel master success. Live fetch skipped (WebFetch permission timeouts).
+- Search Console skipped: Chrome offline (cloud run).
+- Assigned 8 OPEN + 1 WRITER (all dry-run by Claude, tsc PASS): PH-046 Arlington and PH-047 Carrollton city hub sections (arlingtontx.gov and cityofcarrollton.com opened today; Claude added 2 anchor comments in cityPageEnhancements), PH-048/049 Houston and San Antonio service pages link to their 24-hour pages, PH-050/051 Fort Worth and Dallas sewer pages link to the sewer calculator and posts, PH-052 burst pipe pages link to the slab calculator, PH-053 links into the Fort Worth sewer post; WRITER PH-054 Carrollton leak adjustment post. Queue without branches: 8 OPEN, 2 WRITER (+ PH-004 WAITING).
+- Desktop agent idle (laptop off or app closed?): no Backlink Scout branch today (Sat), no app Article Writer branch since 6 Nov.
+- First-time pass rate (7 days): about 25/33 tasks + 2 reports; today 6/9 clean. Coaching: lint tasks still miss one listed replacement (PH-030 line 62, PH-031 line 162); no lint tasks are left in the queue, so no new rule.
+
 ## 2026-11-13 - audit
 - Agent runs: 13 Nov 16:33 UTC FAILED after 8 tasks: the old PH-029 branch (made before cities.ts was normalised to LF) left cities.ts looking modified, so the checkout for PH-030 aborted. Merging PH-029 removes the cause. 12 Nov success. PH-035/036 BLOCKED: aider scraped the task's source URLs (NWS PDF); fixed with aider --no-detect-urls (e528183).
 - Reviewed 8: PH-034 @28e7553, PH-037 writer @e70b632 (every fact matches the SAWS brief), PH-039 @36ee2ff: PASS. PH-029 @f5bceab (2nd miss on line 100), PH-038 @14e91c9 (edited the wrong line and rewrote "holds a current, active Master or Journeyman license"; 2 of 3 files untouched), PH-040 @aa01573 ("does list" became "doesn't list", 8 escapes missed): Claude corrected them in the merge (text-only fixes; a same-branch FIX redo already failed once). Merged 82789bc..d7d8e56. BLOCKED: PH-035 @4efedfc, PH-036 @1457c78.
