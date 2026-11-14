@@ -1244,6 +1244,53 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   },
+  "houston/24-hour-emergency-plumber": {
+    decisionTitle: "Houston emergency plumbing decision guide",
+    decisionIntro: "In Houston, the first call depends on where the water is. Water coming up in the street or at the city's meter is reported to the City of Houston through 311, which is open 24 hours a day, 7 days a week. Water leaking inside the house or from your own pipes is a job for a licensed plumber.",
+    decisionItems: [
+      "Say whether the water is inside the house, in the yard or in the street, so you know right away whether it is a city problem or a plumbing problem.",
+      "If water is bubbling up in the street or around the meter box, report it to 311; the City of Houston lists reporting water leaks among its 311 services.",
+      "Tell the plumber whether you have been able to shut the water off, and where your shutoff is.",
+      "Mention if the leak started during or right after a freeze, since a frozen pipe can split in more than one place."
+    ],
+    providerTitle: "What a Houston plumber may check",
+    providerItems: [
+      "Exposed pipes in the attic, garage, exterior walls and outdoor hose bibs, the places most likely to split in a hard freeze.",
+      "The line between the meter and the house if the yard is soggy or the meter keeps moving with every fixture off.",
+      "Water heater connections and relief lines when the leak is near the heater.",
+      "A dated invoice that names the repair, which you will need if you ask Houston Public Works for a leak adjustment."
+    ],
+    safetyTitle: "When to treat it as urgent in Houston",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage backing up into a tub, shower or floor drain.",
+      "Burst pipes after a hard freeze: the National Weather Service in Houston recorded a low of 13 degrees for the City of Houston on February 16, 2021."
+    ],
+    preventionTitle: "Houston-specific prevention notes",
+    preventionItems: [
+      "Find your main water shutoff before the next freeze and make sure it turns.",
+      "Insulate exposed pipes in the attic, the garage and on outside walls before a freeze.",
+      "Keep the plumber's dated invoice after any leak repair: Houston Public Works gives leak credits once proof of the repair is provided, and the credit is larger the sooner the leak is fixed."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call about a water leak in the street in Houston?",
+        answer: "Call 311. The City of Houston's 311 line is open 24 hours a day, 7 days a week, and reporting water leaks is one of its services. For a leak inside your home or in your own plumbing, call a licensed plumber."
+      },
+      {
+        question: "Can I get a credit on my Houston water bill after a leak?",
+        answer: "Possibly. Houston Public Works gives leak adjustments once proof of the leak repair is provided, and the credit depends on how soon the leak was repaired after it began. Keep the plumber's dated invoice and check the current rules with Houston Public Works; an adjustment is not guaranteed."
+      }
+    ],
+    extraLinks: [
+      { label: "Houston service area", href: "/cities/houston" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" }
+    ]
+  },
   "arlington/24-hour-emergency-plumber": {
     decisionTitle: "Arlington emergency plumbing decision guide",
     decisionIntro: "Most Arlington homes date to the 1970s-90s slab-construction boom, meaning original copper supply lines are now 40-50 years old, a common age range for pinhole leaks to start appearing.",
