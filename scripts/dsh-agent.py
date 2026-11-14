@@ -187,7 +187,7 @@ def aider(model, files, message):
     quoted = " ".join(f'"{f}"' for f in files)
     cmd = (f"timeout 900 aider --model {model} --edit-format diff --yes-always --no-auto-commits "
            "--no-dirty-commits --no-gitignore --map-tokens 0 --no-show-model-warnings --no-check-update "
-           "--analytics-disable --no-pretty --no-stream --no-fancy-input "
+           "--analytics-disable --no-pretty --no-stream --no-fancy-input --no-detect-urls "
            "--chat-history-file /tmp/aider-chat.md --input-history-file /tmp/aider-input "
            f"{'--read AGENTS.md ' if KEYED else ''}--message-file {msg_file} {quoted}")
     return sh(cmd, tail=20, timeout=960)

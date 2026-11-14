@@ -111,11 +111,11 @@ export default function LicenseVerificationPage() {
       </div>
       <DirectAnswer>
         <p>
-          To verify a Texas plumber's license, use the free TSBPE public license search in four steps:
+          To verify a Texas plumber&apos;s license, use the free TSBPE public license search in four steps:
           <ol className="list-decimal ml-6 mt-2 space-y-1">
-            <li>Go to the TSBPE Public License Search: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a> (or visit <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a> and click "Find a license/registration").</li>
-            <li>Choose <strong>"Search by Name"</strong> or <strong>"Search by License Number"</strong> - License Number is more precise.</li>
-            <li>Select <strong>"Texas State Board of Plumbing Examiners"</strong> from the Board dropdown, then <strong>"Plumbing - Licensed or Registered"</strong>.</li>
+            <li>Go to the TSBPE Public License Search: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a> (or visit <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a> and click &quot;Find a license/registration&quot;).</li>
+            <li>Choose <strong>&quot;Search by Name&quot;</strong> or <strong>&quot;Search by License Number&quot;</strong> - License Number is more precise.</li>
+            <li>Select <strong>&quot;Texas State Board of Plumbing Examiners&quot;</strong> from the Board dropdown, then <strong>&quot;Plumbing - Licensed or Registered&quot;</strong>.</li>
             <li>Review the results: active status, expiration date, insurance (COI), endorsements, and any disciplinary history.</li>
           </ol>
         </p>
@@ -126,19 +126,19 @@ export default function LicenseVerificationPage() {
         <div className="mt-4 space-y-4">
           <div>
             <h3 className="font-semibold">1. Open the search portal</h3>
-            <p>Direct link: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a>. The TSBPE homepage (<a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a>) also has a prominent "Find a license/registration" link.</p>
+            <p>Direct link: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a>. The TSBPE homepage (<a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a>) also has a prominent &quot;Find a license/registration&quot; link.</p>
           </div>
           <div>
             <h3 className="font-semibold">2. Choose your search type</h3>
             <p>You have two options:</p>
             <ul className="list-disc ml-6 space-y-1">
-              <li><strong>Search by Name</strong> - Enter last name and first name (or partial). Useful if you don't have the license number handy.</li>
+              <li><strong>Search by Name</strong> - Enter last name and first name (or partial). Useful if you don&apos;t have the license number handy.</li>
               <li><strong>Search by License Number</strong> - The TSBPE recommends this for the most precise match.</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold">3. Select the correct Board and License Type</h3>
-            <p>In the "Board" dropdown, choose <strong>"Texas State Board of Plumbing Examiners"</strong>. Then select <strong>"Plumbing - Licensed or Registered"</strong> from the license type dropdown.</p>
+            <p>In the &quot;Board&quot; dropdown, choose <strong>&quot;Texas State Board of Plumbing Examiners&quot;</strong>. Then select <strong>&quot;Plumbing - Licensed or Registered&quot;</strong> from the license type dropdown.</p>
           </div>
           <div>
             <h3 className="font-semibold">4. Review the results</h3>
@@ -152,11 +152,11 @@ export default function LicenseVerificationPage() {
         <div className="mt-4 space-y-3">
           <div>
             <h3 className="font-semibold">License Status</h3>
-            <p>Look for <strong>"Active"</strong>. If "Expired", "Inactive", or "Suspended", the plumber is not currently authorized to practice.</p>
+            <p>Look for <strong>&quot;Active&quot;</strong>. If &quot;Expired&quot;, &quot;Inactive&quot;, or &quot;Suspended&quot;, the plumber is not currently authorized to practice.</p>
           </div>
           <div>
             <h3 className="font-semibold">Expiration Date</h3>
-            <p>The date shown is the license's current expiry. <strong>Always check this date</strong> - if it has passed, the license is invalid, regardless of how recently the plumber may claim to have renewed.</p>
+            <p>The date shown is the license&apos;s current expiry. <strong>Always check this date</strong> - if it has passed, the license is invalid, regardless of how recently the plumber may claim to have renewed.</p>
           </div>
           <div>
             <h3 className="font-semibold">Certificate of Insurance (COI)</h3>
@@ -186,14 +186,14 @@ export default function LicenseVerificationPage() {
           </div>
           <div>
             <h3 className="font-semibold">Continuing Education (CE) History</h3>
-            <p>Shows whether the plumber has met Texas's required CE hours.</p>
+            <p>Shows whether the plumber has met Texas&apos;s required CE hours.</p>
           </div>
         </div>
       </section>
 
       <section className="content-section mt-8">
         <h2 className="text-2xl font-bold text-white">Homeowner Exemption (Texas Occupations Code)</h2>
-        <p className="mt-2">You may see plumbers advertise that they can do work without a license under a "homeowner exemption". However, the Texas Occupations Code allows <strong>unlicensed DIY work only on your own occupied primary residence</strong>. This exemption does <strong>not</strong> apply to rental properties, commercial buildings, or homes you do not personally occupy. If you hire someone claiming exemption for a non-eligible property, you could be held liable for code violations or unsafe work.</p>
+        <p className="mt-2">You may see plumbers advertise that they can do work without a license under a &quot;homeowner exemption&quot;. However, the Texas Occupations Code allows <strong>unlicensed DIY work only on your own occupied primary residence</strong>. This exemption does <strong>not</strong> apply to rental properties, commercial buildings, or homes you do not personally occupy. If you hire someone claiming exemption for a non-eligible property, you could be held liable for code violations or unsafe work.</p>
       </section>
 
       <section className="content-section mt-8">
@@ -203,7 +203,7 @@ export default function LicenseVerificationPage() {
             <div className="flex items-start gap-3">
               <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-red-800">No license or "Inactive"</h3>
+                <h3 className="font-semibold text-red-800">No license or &quot;Inactive&quot;</h3>
                 <p className="text-sm text-red-700">Do not hire. Unlicensed work may void insurance claims and lead to fines.</p>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function LicenseVerificationPage() {
               <Info className="h-5 w-5 text-orange-600 mt-0.5" />
               <div>
                 <h3 className="font-semibold text-orange-800">No active COI</h3>
-                <p className="text-sm text-orange-700">If the plumber can't provide proof of liability insurance, you assume all financial risk.</p>
+                <p className="text-sm text-orange-700">If the plumber can&apos;t provide proof of liability insurance, you assume all financial risk.</p>
               </div>
             </div>
           </div>
@@ -246,19 +246,19 @@ export default function LicenseVerificationPage() {
             <p className="mt-1">Yes - with one narrow exception: the Texas Occupations Code allows a homeowner to perform their <strong>own</strong> plumbing work on their <strong>own occupied primary residence</strong> (DIY). That exemption <strong>does not</strong> extend to hiring someone else to do the work for you. If you hire an unlicensed individual to perform plumbing work - even on your own home - you are not covered by the homeowner exemption, and that person is operating illegally. In addition, hiring an unlicensed plumber for any rental property, commercial building, or gas/utility work is explicitly forbidden and can result in fines and liability.</p>
           </div>
           <div>
-            <h3 className="font-semibold">What happens if a plumber doesn't have insurance?</h3>
+            <h3 className="font-semibold">What happens if a plumber doesn&apos;t have insurance?</h3>
             <p className="mt-1">Without liability insurance, you are personally responsible for any property damage, injuries, or code violations that occur during the work. That could cost you far more than the original repair.</p>
           </div>
           <div>
             <h3 className="font-semibold">How often do plumber licenses expire?</h3>
-            <p className="mt-1">Texas plumber licenses have a fixed expiration date printed on the license and shown in the TSBPE search results. Renewal periods are established by the Texas State Board of Plumbing Examiners. To be certain, always check the license's expiration date directly in the search result - that is the authoritative source.</p>
+            <p className="mt-1">Texas plumber licenses have a fixed expiration date printed on the license and shown in the TSBPE search results. Renewal periods are established by the Texas State Board of Plumbing Examiners. To be certain, always check the license&apos;s expiration date directly in the search result - that is the authoritative source.</p>
           </div>
           <div>
-            <h3 className="font-semibold">Can I verify a plumber's license by phone?</h3>
+            <h3 className="font-semibold">Can I verify a plumber&apos;s license by phone?</h3>
             <p className="mt-1">Yes. The TSBPE provides a phone number for license verification: (512) 936-5200. However, the online search is faster and gives you immediate access to all details.</p>
           </div>
           <div>
-            <h3 className="font-semibold">What does "Apprentice" mean?</h3>
+            <h3 className="font-semibold">What does &quot;Apprentice&quot; mean?</h3>
             <p className="mt-1">An apprentice is a trainee working under a licensed plumber. They may not work independently; a Master or Journeyman plumber must supervise them. If the person arriving at your door is an apprentice, ask who will be supervising them.</p>
           </div>
           <div>
@@ -266,20 +266,20 @@ export default function LicenseVerificationPage() {
             <p className="mt-1">It does not show civil lawsuits, but it does list <strong>disciplinary actions</strong> taken by the board. For legal disputes, you may need to check public court records separately.</p>
           </div>
           <div>
-            <h3 className="font-semibold">Is a Texas plumber's license verified through TDLR or TSBPE?</h3>
-            <p className="mt-1"><strong>TSBPE.</strong> The Texas Department of Licensing and Regulation (TDLR) oversees many other Texas trades and occupations, but plumbing is regulated separately by the Texas State Board of Plumbing Examiners (TSBPE). If you search "TDLR plumbing license lookup," you won't find plumber records there - use the TSBPE search tool linked above instead.</p>
+            <h3 className="font-semibold">Is a Texas plumber&apos;s license verified through TDLR or TSBPE?</h3>
+            <p className="mt-1"><strong>TSBPE.</strong> The Texas Department of Licensing and Regulation (TDLR) oversees many other Texas trades and occupations, but plumbing is regulated separately by the Texas State Board of Plumbing Examiners (TSBPE). If you search &quot;TDLR plumbing license lookup,&quot; you won&apos;t find plumber records there - use the TSBPE search tool linked above instead.</p>
           </div>
           <div>
-            <h3 className="font-semibold">How do I look up a Master Plumber or Journeyman plumber's license specifically?</h3>
-            <p className="mt-1">Use the same TSBPE Public License Search tool linked above - the rank (<strong>Master Plumber</strong>, <strong>Journeyman Plumber</strong>, <strong>Tradesman Plumber-Limited</strong>, or <strong>Apprentice</strong>) is shown directly in the search results, so there's no separate search for each rank. If you already have a license number, searching by number is the fastest way to confirm both the rank and current status in a single step.</p>
+            <h3 className="font-semibold">How do I look up a Master Plumber or Journeyman plumber&apos;s license specifically?</h3>
+            <p className="mt-1">Use the same TSBPE Public License Search tool linked above - the rank (<strong>Master Plumber</strong>, <strong>Journeyman Plumber</strong>, <strong>Tradesman Plumber-Limited</strong>, or <strong>Apprentice</strong>) is shown directly in the search results, so there&apos;s no separate search for each rank. If you already have a license number, searching by number is the fastest way to confirm both the rank and current status in a single step.</p>
           </div>
           <div>
-            <h3 className="font-semibold">I only have a plumber's license number, not their name - can I still search?</h3>
-            <p className="mt-1">Yes. Select <strong>"Search by License Number"</strong> instead of "Search by Name" on the TSBPE portal - the TSBPE recommends this option because it's more precise and avoids mix-ups when multiple plumbers share a similar name.</p>
+            <h3 className="font-semibold">I only have a plumber&apos;s license number, not their name - can I still search?</h3>
+            <p className="mt-1">Yes. Select <strong>&quot;Search by License Number&quot;</strong> instead of &quot;Search by Name&quot; on the TSBPE portal - the TSBPE recommends this option because it&apos;s more precise and avoids mix-ups when multiple plumbers share a similar name.</p>
           </div>
           <div>
             <h3 className="font-semibold">How do I renew a Texas plumbing license?</h3>
-            <p className="mt-1">Renewal is handled directly through the TSBPE, not through this site - plumbers renew online through the same TSBPE portal used for license search, and must meet the board's continuing education requirements before their license expires. If you're checking a plumber's status rather than renewing your own license, the fastest way is to search their name or license number and look at the expiration date shown in the results.</p>
+            <p className="mt-1">Renewal is handled directly through the TSBPE, not through this site - plumbers renew online through the same TSBPE portal used for license search, and must meet the board&apos;s continuing education requirements before their license expires. If you&apos;re checking a plumber&apos;s status rather than renewing your own license, the fastest way is to search their name or license number and look at the expiration date shown in the results.</p>
           </div>
           <div>
             <h3 className="font-semibold">How do I get a plumbing license in Texas?</h3>
@@ -291,7 +291,7 @@ export default function LicenseVerificationPage() {
       <section className="content-section mt-8">
         <h2 className="text-2xl font-bold text-white">Next Steps for Hiring</h2>
         <ul className="list-disc ml-6 mt-2 space-y-1">
-          <li>Always verify the plumber's license and COI before signing any contract.</li>
+          <li>Always verify the plumber&apos;s license and COI before signing any contract.</li>
           <li>Get at least two written estimates for major work.</li>
           <li>Ask for references and check online reviews (but keep in mind that the TSBPE record is the authoritative source of professional standing).</li>
         </ul>
