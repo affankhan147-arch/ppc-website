@@ -141,6 +141,12 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "Ask these before you book: the dispatch fee, how diagnosis is priced, when they'll arrive, whether you approve work first, and what cleanup is included."
   },
+  // New post 2026-11-11 (PH-032).
+  "/blog/who-is-responsible-for-sewer-line-fort-worth": {
+    title: "Fort Worth Sewer Line: Who Is Responsible, Owner or City?",
+    description:
+      "In Fort Worth the sewer pipe from your house to the city main is yours to maintain. How to tell whose problem a backup is, who to call and the permit rules."
+  },
   // 42 impr / 2.4% / pos 4.3
   "/guides/dfw-housing-age-by-city": {
     description:

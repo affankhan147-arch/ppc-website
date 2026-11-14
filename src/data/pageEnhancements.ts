@@ -3556,7 +3556,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Bathtub backing up when toilet flushes", href: "/blog/bathtub-backing-up-when-toilet-flushes-what-causes-it" },
-      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
     ]
   },
   "emergency-drain-cleaning-in-fort-worth-fast-homeowner-guide": {
@@ -3844,7 +3845,52 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Sewer smell in bathroom", href: "/problems/sewer-smell-in-bathroom" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
-      { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" }
+      { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" },
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
+    ]
+  },
+  "who-is-responsible-for-sewer-line-fort-worth": {
+    checklistTitle: "Is the backup in the city main or your sewer lateral?",
+    checklistIntro:
+      "Understanding whether a sewer backup is in the city's main line or your private lateral helps you take the right first step.",
+    checklistItems: [
+      "Fort Worth Water notes that a backup happening while you are not using any water outlets inside the home may indicate a problem in the city main.",
+      "If the backup or slow drainage only shows up when you run water inside your home, it is likely in your private sewer lateral.",
+      "Call 817-392-4477 and city crews will check the sewer mains to tell you if the problem is in the city main or not.",
+      "The 817-392-4477 phone number is answered 24 hours a day (select Option 1 for water emergencies).",
+      "Report any sewage flowing onto the ground outdoors to 817-392-4477 as well."
+    ],
+    proofTitle: "Fixing a private sewer line in Fort Worth",
+    proofItems: [
+      "Fort Worth requires a plumbing permit for changing, installing, moving, or repairing plumbing lines.",
+      "Permit applicants must be a registered building contractor with the city or meet the requirements for a homestead permit.",
+      "A Fort Worth plumbing contractor registration requires a valid Texas Master Plumber License.",
+      "Always ask the plumber who will pull the required city permit before any repair work starts.",
+      "A homeowner working on their own homestead does not need a state plumbing license under Texas Occupations Code Sec. 1301.051, but local city permit rules still apply."
+    ],
+    extraFaqs: [
+      {
+        question: "Who pays to fix the sewer line in Fort Worth?",
+        answer:
+          "The property owner pays for repairs to the sewer lateral. Fort Worth Water defines the sewer lateral as the privately owned and maintained sewer pipe connecting a building to the public sewer main, while the city maintains sewer mains and outfalls in rights-of-way and easements."
+      },
+      {
+        question: "Who do I call for a sewer backup in Fort Worth?",
+        answer:
+          "Call Fort Worth Water at 817-392-4477, available 24 hours a day (Option 1 for emergencies). City crews will inspect the main sewer line first to see if the issue is on the city side."
+      },
+      {
+        question: "Do I need a permit to replace my sewer line in Fort Worth?",
+        answer:
+          "Yes. Fort Worth requires a plumbing permit for installing, changing, or repairing plumbing, including sewer laterals. The permit applicant must be a registered contractor with a Texas Master Plumber License or qualify for a homestead permit."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Fort Worth plumbing help", href: "/cities/fort-worth" }
     ]
   },
   "is-a-clogged-drain-actually-a-sewer-line-problem": {
