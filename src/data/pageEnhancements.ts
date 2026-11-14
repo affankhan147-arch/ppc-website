@@ -3598,6 +3598,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Reassess if symptoms change; a non-urgent issue can become urgent if it is left unaddressed."
     ],
     extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "Emergency plumber vs regular plumber: the difference", href: "/blog/emergency-plumber-vs-regular-plumber-what-is-the-difference" },
       { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
@@ -3988,6 +3990,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "If the situation changes while you are waiting for a scheduled appointment, ask whether you can upgrade to emergency service."
     ],
     extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "What counts as a plumbing emergency", href: "/blog/what-counts-as-a-plumbing-emergency" },
       { label: "Emergency plumbing cost guide", href: "/guides/dfw-emergency-plumbing-costs" }
@@ -4699,6 +4703,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
       { label: "24-hour emergency plumber options", href: "/services/24-hour-emergency-plumber" },
       { label: "Emergency drain cleaning", href: "/services/emergency-drain-cleaning" },
       { label: "Main sewer line clog help", href: "/services/main-sewer-line-clog" },
