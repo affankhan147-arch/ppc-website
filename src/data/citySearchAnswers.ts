@@ -257,5 +257,200 @@ export const citySearchAnswers: Record<string, CitySearchAnswerSet> = {
         link: { label: "Emergency drain cleaning in Dallas", href: "/cities/dallas/emergency-drain-cleaning" }
       }
     ]
+  },
+
+  // Keyword overhaul 03 (2026-11-15), PH-004 scope: the questions below are the real queries each hub got in
+  // Search Console (3 months to 2026-11-11). Local facts are the ones already established on the site
+  // (Census median build year from /guides/dfw-housing-age-by-city, and each city's existing enhancement entries).
+  arlington: {
+    title: "Questions Arlington homeowners search before they call",
+    intro:
+      "Arlington's median home was built in 1986 (U.S. Census ACS 2019-2023), and much of the city went up during the 1970s-90s slab-construction boom. Aging copper lines and older sewer laterals are behind most of these searches.",
+    items: [
+      {
+        question: "Which emergency plumbers in Arlington, TX can come out today for a sewer backup?",
+        answer:
+          "Providers covering Arlington treat a sewer backup as a same-day call, because it can't wait: sewage rising in a tub or floor drain, or every toilet gurgling at once. Stop all water use until someone arrives. If the cleanout cap in the yard is overflowing, the blockage is in the main line, and that's the first thing to tell the dispatcher.",
+        link: { label: "Sewer backup help in Arlington", href: "/cities/arlington/sewer-backup-help" }
+      },
+      {
+        question: "Are there 24 hour plumbers in Arlington for nights and weekends?",
+        answer:
+          "Yes. Calls from Arlington are routed to available providers around the clock, Sunday nights and holidays included. The dispatch fee is higher after hours, so ask for it before anyone drives out. If the leak is stopped at the shutoff and nothing is spreading, a morning appointment usually costs less for the same repair.",
+        link: { label: "24 hour plumber in Arlington", href: "/cities/arlington/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Why do older Arlington homes get pinhole leaks?",
+        answer:
+          "Original copper supply lines from the 1970s-90s building boom are now 40 to 50 years old, the age when pinhole leaks start: a hiss inside a wall, a damp patch on drywall, or a water bill that creeps up. Homes built between 1978 and 1995 may also have gray polybutylene pipe, which tends to fail at its fittings.",
+        link: { label: "Burst pipe repair in Arlington", href: "/cities/arlington/burst-pipe-emergency" }
+      },
+      {
+        question: "Clogged drains in Arlington, TX: one sink or the main drain?",
+        answer:
+          "If only one sink is slow, the clog is in that fixture's branch and a plunger or hand snake may clear it. If the tub fills when the washer drains, toilets gurgle when a sink runs, or the lowest drain in the house backs up, the main drain is blocked and household tools won't reach it.",
+        link: { label: "Emergency drain cleaning in Arlington", href: "/cities/arlington/emergency-drain-cleaning" }
+      },
+      {
+        question: "Emergency toilet replacement in Arlington: does the toilet really need replacing?",
+        answer:
+          "Most overflowing toilets need a clog cleared, not a new toilet. Replacement makes sense when the bowl or tank is cracked and leaking onto the floor, or the base keeps leaking after a new wax ring. Until it's fixed, turn the valve behind the toilet clockwise and use another bathroom if you have one.",
+        link: { label: "Toilet overflow help in Arlington", href: "/cities/arlington/toilet-overflow-emergency" }
+      }
+    ]
+  },
+
+  garland: {
+    title: "Questions Garland homeowners search before they call",
+    intro:
+      "Garland's housing is mostly 1960s-80s construction in northeast Dallas County, with newer homes near Lake Ray Hubbard. Older copper and galvanized supply lines, and clay or cast iron sewer laterals under mature trees, drive what people here search for.",
+    items: [
+      {
+        question: "Broken sewer line in Garland: what are the signs?",
+        answer:
+          "Watch for toilets that gurgle when the washer drains, a tub that fills with dirty water, wet ground or a sunken spot over the sewer line, and drains that clog again a few weeks after being cleared. In older central Garland, tree roots working into clay and cast iron joints are a common cause. A camera inspection tells you whether the pipe is cracked or only blocked before anyone digs.",
+        link: { label: "Sewer line repair help in Garland", href: "/cities/garland/main-sewer-line-clog" }
+      },
+      {
+        question: "Garland sewer cleanout: where is it, and what does it tell me?",
+        answer:
+          "Look outside near the foundation, usually on the side facing the street or near a bathroom wall, for a 3 or 4 inch capped pipe a few inches above the ground. If sewage is coming out of it, the main line is blocked: stop running water inside and don't take the cap off. It's also the easiest way in for the plumber clearing the line.",
+        link: { label: "Sewer backup help in Garland", href: "/cities/garland/sewer-backup-help" }
+      },
+      {
+        question: "Pipe break in Garland, TX: what do I do first?",
+        answer:
+          "Shut off the main water valve, then open a low faucet to drain the pressure and switch off power to any outlets the water is reaching. Many Garland homes still have their original 1960s-80s copper or galvanized supply lines, so tell the plumber the age of the house. It decides whether a patch will hold or the run needs replacing.",
+        link: { label: "Burst pipe repair in Garland", href: "/cities/garland/burst-pipe-emergency" }
+      },
+      {
+        question: "Drain cleaning in Garland, TX: can I get same-day service?",
+        answer:
+          "For a backup that's spreading or a home with no working toilet, usually yes. Call early and say how many drains are affected, since one slow sink and a main-line backup need different equipment. If the same drain clogs every few months, ask for a camera inspection instead of another snaking.",
+        link: { label: "Emergency drain cleaning in Garland", href: "/cities/garland/emergency-drain-cleaning" }
+      }
+    ]
+  },
+
+  frisco: {
+    title: "Questions Frisco homeowners search before they call",
+    intro:
+      "Frisco's median home was built in 2009 (U.S. Census ACS 2019-2023). Most houses here have PEX plumbing and newer water heaters, so the emergencies people search for look different from older DFW cities.",
+    items: [
+      {
+        question: "Emergency plumber in Frisco, TX: what goes wrong in newer homes?",
+        answer:
+          "In homes built since the 2000s the usual calls are a failed PEX fitting or manifold connection, a burst supply line under a sink or behind the washer, and tankless water heaters that stop heating. The copper pinhole leaks common in older cities are rare here. New homes also settle in their first few years, which can stress fittings and drain joints.",
+        link: { label: "24 hour plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Emergency drain cleaning in Frisco: what should I expect?",
+        answer:
+          "Most visits start with a cable snake through the nearest cleanout. In a newer Frisco home, a main-line backup in the first few years can come from a settling or sagging joint rather than tree roots, so a camera inspection is worth asking for. Have the age of the house and the list of affected drains ready when you call.",
+        link: { label: "What to expect from emergency drain cleaning in Frisco", href: "/blog/emergency-drain-cleaning-in-frisco-what-to-expect" }
+      },
+      {
+        question: "Pipe break repair in Frisco, TX: is a PEX leak easy to fix?",
+        answer:
+          "Usually easier than copper. A plumber can cut out the damaged section and fit a new coupling, often without opening much drywall when the leak is near an access point. The bigger cost is usually the water damage, so shut the main off fast and photograph everything before cleanup for your insurer.",
+        link: { label: "Burst pipe repair in Frisco", href: "/cities/frisco/burst-pipe-emergency" }
+      },
+      {
+        question: "My tankless water heater stopped working in Frisco. Is that an emergency?",
+        answer:
+          "No hot water on its own usually isn't, unless it's freezing out or someone at home needs it for medical reasons. Check the breaker and the gas, then look for an error code on the unit. Water leaking from the unit is more urgent: close its water valves and call. Hard DFW water also means tankless units need regular descaling.",
+        link: { label: "Water heater repair in Frisco", href: "/cities/frisco/water-heater-emergency" }
+      }
+    ]
+  },
+
+  irving: {
+    title: "Questions Irving residents search before they call",
+    intro:
+      "Irving mixes older homes near the original Las Colinas development, many with aging copper lines, with newer apartments and townhomes near DFW Airport that share lines between units. Who to call first depends on which one you live in.",
+    items: [
+      {
+        question: "Which plumbers in Irving, TX respond to no-water emergencies the same day?",
+        answer:
+          "Calls from Irving go to providers who take same-day work. First check whether the outage is only yours: if the neighbors have no water either, it's likely a city main break, which the City of Irving handles. If only your home is dry, make sure the main valve and the valve at the meter are fully open before you call.",
+        link: { label: "Same-day plumber in Irving", href: "/cities/irving/same-day-plumber-connection" }
+      },
+      {
+        question: "My water heater burst and is leaking all over the garage in Irving. What now?",
+        answer:
+          "Close the cold water valve on top of the heater, then turn off the gas valve or the breaker. Open a hot water faucet in the house to relieve pressure, and keep the water away from anything electrical. A tank leaking from its body can't be repaired, so ask for a replacement price and whether they haul the old tank away.",
+        link: { label: "Emergency water heater repair in Irving", href: "/cities/irving/water-heater-emergency" }
+      },
+      {
+        question: "Sewage is coming up through my drains in Irving. Who handles it as an emergency?",
+        answer:
+          "Treat it as an emergency: stop all water use and keep people away from it. In a house the blockage is usually in your main line, and a plumber clears it. In an apartment or townhome, tell the manager or HOA right away, because a shared line can back up into more than one unit and they may have a plumber under contract.",
+        link: { label: "Sewer backup help in Irving", href: "/cities/irving/sewer-backup-help" }
+      },
+      {
+        question: "How do I pick the best emergency plumber in Irving at night?",
+        answer:
+          "Ask three things before anyone drives out: the after-hours dispatch fee, whether the plumber is licensed by the Texas State Board of Plumbing Examiners, and how soon they can arrive. You can check a Texas plumbing license yourself in about a minute. A company that won't state its dispatch fee on the phone is a red flag.",
+        link: { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" }
+      }
+    ]
+  },
+
+  lewisville: {
+    title: "Questions Lewisville homeowners search before they call",
+    intro:
+      "Lewisville homes range from the 1970s to today. Many built from the late 1970s to the mid-1990s have polybutylene supply pipe, while newer areas like Castle Hills have PEX, and that difference matters when a pipe breaks.",
+    items: [
+      {
+        question: "Burst pipe repair in Lewisville, TX: how do I know if I have polybutylene?",
+        answer:
+          "Look where the pipe comes out of the wall at the water heater or under a sink. Polybutylene is flexible gray plastic, often stamped PB2110. It was common in homes built from the late 1970s to the mid-1990s, including older neighborhoods like Valley Ridge and Vista Ridge, and it tends to fail at fittings. Tell the plumber, because a patch may not last.",
+        link: { label: "Burst pipe repair in Lewisville", href: "/cities/lewisville/burst-pipe-emergency" }
+      },
+      {
+        question: "Is there a 24 hour plumber in Lewisville, TX?",
+        answer:
+          "Yes. Calls from Lewisville, Castle Hills and nearby Denton County are routed at any hour. Give your full address and nearest cross street up front, and ask for an arrival window and the after-hours fee before you commit. If you've already stopped the water, say so; it can change whether the visit needs to happen tonight.",
+        link: { label: "24 hour plumber in Lewisville", href: "/cities/lewisville/24-hour-emergency-plumber" }
+      },
+      {
+        question: "Why do drains keep clogging in older Lewisville neighborhoods?",
+        answer:
+          "Root intrusion, in most neighborhoods with mature trees: roots find the joints in older sewer lines and catch everything that goes down the drain. Snaking clears it for a while, then it comes back. A camera inspection shows whether the line needs lining or a section replaced, and the calculator below gives a rough price first.",
+        link: { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" }
+      },
+      {
+        question: "Emergency plumbing in Lewisville: does a slab leak count?",
+        answer:
+          "It can. Denton County's expansive clay soil moves slab foundations, and a leak under the slab shows up as a warm spot on the floor, new cracks, or running water you can hear with every tap off. If the water meter keeps moving with everything off, call that day: a slab leak runs around the clock until it's found.",
+        link: { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+      }
+    ]
+  },
+
+  "the-colony": {
+    title: "Questions The Colony homeowners search before they call",
+    intro:
+      "The Colony sits on the southern shore of Lewisville Lake, with older lakeside neighborhoods and newer subdivisions on its edges. Plumbing in those two parts of town ages differently.",
+    items: [
+      {
+        question: "Is there an emergency plumber in The Colony, TX after hours?",
+        answer:
+          "Yes, requests from The Colony are routed at night and on weekends. When you call, say whether you're on one of the older lakeside streets or in a newer subdivision. Older homes are more likely to have aging supply lines and cast iron drains, newer ones PEX and plastic, and the plumber will bring different parts.",
+        link: { label: "24 hour plumber in The Colony", href: "/cities/the-colony/24-hour-emergency-plumber" }
+      },
+      {
+        question: "A pipe broke in The Colony. What should I do while I wait?",
+        answer:
+          "Close the main water valve, open the lowest faucet to drain the lines, and turn off the water heater. Move rugs and electronics out of the water, and photograph the damage before cleanup. Most Texas homeowners policies cover sudden pipe bursts but not slow leaks or flooding from outside, so note when you first saw the water.",
+        link: { label: "Burst pipe repair in The Colony", href: "/cities/the-colony/burst-pipe-emergency" }
+      },
+      {
+        question: "Do lakeside homes in The Colony have different plumbing problems?",
+        answer:
+          "Often, yes. Lakeside streets tend to be older, so supply lines and drains are closer to the end of their life, and mature trees mean more roots in sewer lines. Newer subdivisions see fewer of those and more fitting or fixture failures. North Texas clay soil moves slabs everywhere in town, so slab leaks turn up in both.",
+        link: { label: "Sewer line help in The Colony", href: "/cities/the-colony/main-sewer-line-clog" }
+      }
+    ]
   }
 };
