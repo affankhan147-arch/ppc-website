@@ -39,6 +39,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 
 ## Hard rules
 - Smallest correct change. No deleting or renaming files. No force-push.
+- Lint/escape tasks: replace ONLY the exact characters the task names (' -> &apos;, " -> &quot;). Never add, remove or change a word, and never edit a line the task does not name. If the named text isn't on that line, look a few lines up/down for the exact text; if it isn't there, report BLOCKED. (PH-029, PH-038, PH-040 changed words and had to be redone.)
 - NEVER run `git reset --hard`, `git clean`, `git checkout -- .`, `git checkout -f`, `git stash`, `Remove-Item`/`del`, and never "reset the environment". On 2026-11-03 this deleted ~500 local-only files. If git looks messy or a pull fails, stop and report BLOCKED.
 - Don't edit package.json, package-lock.json, next.config.mjs, vercel.json, .env*, .gitattributes unless the task says so.
 - Don't edit `src/data/blogPosts.ts` or `src/data/pageEnhancements.ts` unless the task says so (Claude's daily blog job edits them).
