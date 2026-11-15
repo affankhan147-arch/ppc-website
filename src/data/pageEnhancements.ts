@@ -3684,11 +3684,11 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
   "san-antonio-plumbing-permit-homeowner-or-plumber": {
     checklistTitle: "Can you pull the plumbing permit yourself?",
     checklistIntro:
-      "The City of San Antonio allows homeowners to pull trade permits only under strict ownership and occupancy conditions. Knowing the rules before starting a plumbing project protects you and ensures your work remains code-compliant.",
+      "San Antonio lets a homeowner pull a plumbing permit in only one case. Here is what the city's residential permits page says before you start a plumbing job.",
     checklistItems: [
       "A homeowner can only apply for a plumbing permit for an existing residence if it is their homestead and they will personally be doing the work.",
       "The city refers homeowners to its Plumbing Homeowner Affidavit.",
-      "The homeowner plumbing permit row is only for an existing homestead and asks for proof of ownership.",
+      "The homeowner plumbing permit is only for an existing homestead, and the city asks for proof of ownership.",
       "The city also says that for your safety you must use licensed trade contractors for new electrical, plumbing and/or HVAC project components.",
       "Trade contractors licensed by the city or state and registered with the city may obtain trade permits on behalf of the homeowner."
     ],
@@ -3703,17 +3703,17 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       {
         question: "Can a homeowner pull a plumbing permit in San Antonio?",
         answer:
-          "Only for an existing home that is their homestead, doing the work personally; the city points to its Plumbing Homeowner Affidavit."
+          "Only in one case: the home already exists, it is your homestead and you will do the work yourself. The City of San Antonio points homeowners in that situation to its Plumbing Homeowner Affidavit. Otherwise, a trade contractor licensed by the city or state and registered with the city can pull it for you."
       },
       {
         question: "Who can pull a plumbing permit for me in San Antonio?",
         answer:
-          "A trade contractor licensed by the city or state and registered with the city."
+          "A trade contractor licensed by the city or state and registered with the City of San Antonio can obtain the plumbing permit on your behalf. Ask your plumber to confirm their license and registration, and agree up front on who pulls the permit before the work starts."
       },
       {
         question: "Is a gas or sewer job a separate permit in San Antonio?",
         answer:
-          "The city's plumbing application is titled \"Plumbing, Gas and Sewer Permit\"; ask your licensed plumber to confirm what your job needs."
+          "The city's plumbing application is titled \"Plumbing, Gas and Sewer Permit\". Depending on its scope, a project can also need building, electrical or mechanical permits, so ask your licensed plumber to confirm what your job needs."
       }
     ],
     extraLinks: [
@@ -5137,7 +5137,6 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
-      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Commercial emergency plumbing", href: "/services/commercial-emergency-plumbing" },
       { label: "Partner with us", href: "/partner-with-us" },
@@ -5179,6 +5178,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Property manager plumbing triage sheet", href: "/blog/property-manager-plumbing-emergency-triage-sheet" },
       { label: "Best questions to ask before you book an emergency plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },

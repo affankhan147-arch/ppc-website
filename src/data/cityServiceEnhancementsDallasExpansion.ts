@@ -225,6 +225,8 @@ export const dallasExpansionCityServiceEnhancements: Record<string, PageEnhancem
       }
     ],
     extraLinks: [
+      { label: "Main sewer line clogged in Dallas: warning signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Dallas emergency plumbing", href: "/cities/dallas" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line clog in Dallas", href: "/cities/dallas/main-sewer-line-clog" }
