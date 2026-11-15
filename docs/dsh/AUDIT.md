@@ -2,6 +2,15 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-15 - audit (PH only: UHP paused by Sunny)
+- Keyword overhaul: 6 patches live (READY_01 Task245, 02 services/combo/sewer calc/burst cost/problems, 03 city answers x6, 04 combo hub links + city answers x6, 05 Austin 24-hour + 3 drain pages, 06 city answers x14), 0 failed. git am clean, build PASS, master 1e8f291 Vercel success; LIVE CHECK lines verified in the built HTML (WebFetch permission timeouts and the proxy block plumbinghands.com). Drive files renamed LIVE_. IndexNow skipped (sandbox blocks api.indexnow.org).
+- Agent runs: 15 Nov 15:43 UTC success, 14 Nov success.
+- Reviewed 9, all PASS: PH-045 writer @156fb59, PH-046 @be83b0d and PH-047 @4eb5555 (byte-identical to the task), PH-048 @33d4570, PH-049 @b347bba, PH-050 @7bb5682, PH-051 @5d1e543 (did 1 of 2 entries), PH-052 @3920f07 (wrong entries: sewer clog instead of burst pipe), PH-053 @cee9fc6. Claude fixed PH-051/052 in the merge and PH-045 in 99e77f3 (1 link-in under the wrong entry; fragment FAQ answers rewritten, facts unchanged). Merged 1e8f291..99e77f3, local build PASS, Vercel success. Live fetch skipped (same block).
+- Search Console skipped: Chrome offline (cloud run).
+- Assigned 9 OPEN + 1 WRITER (all dry-run by Claude, tsc PASS; one file per task): PH-055 Austin service pages -> Austin 24-hour (most-shown page), PH-056/057 Houston and San Antonio 4 more pages each, PH-058/059/060 Arlington, Plano, Irving -> calculators, PH-061/062 McKinney and Richardson link blocks, PH-063 link into the SA permit post; WRITER PH-064 Austin Water leak bill adjustment (austintexas.gov opened today; every line written by Claude). Queue without branches: 9 OPEN, 2 WRITER (+ PH-004 WAITING). No task touches keyword-overhaul titles, H1s, metas or citySearchAnswers.
+- Desktop agent idle (laptop off or app closed?): no Backlink Scout branch Sat 14 Nov, no app Article Writer branch since 6 Nov.
+- First-time pass rate (7 days): about 31/42 tasks + 2 reports; today 6/9 clean. Coaching: DSH misses the named entry when one task edits several entries (PH-051, PH-052, PH-045). New tasks give each entry its own code block; the writer brief now carries the full code, not a fact list.
+
 ## 2026-11-14 - audit (PH only: UHP paused by Sunny)
 - Agent runs: 14 Nov 15:12 UTC success (8 tasks + 1 writer; aider --no-detect-urls fix worked, PH-035/036 went through); 13 Nov failure already logged.
 - Reviewed 9, all PASS: PH-035 @0c36766, PH-036 @cef3aa9 (Houston/San Antonio sections, verbatim), PH-041 @485eb62, PH-042 @2a0211b, PH-043 @1305e28, PH-044 @9c1845c (every link under the right entry), PH-030 @1cf5fcd, PH-031 @74bb902 (escape-only, each missed 1 apostrophe: Claude fixed in beed906), PH-032 writer @e64d422 (facts match the Fort Worth brief; Claude dropped "or slow drainage", not in the source). Merged 33ba765..beed906.

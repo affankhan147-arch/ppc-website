@@ -16,8 +16,16 @@ Rankings first (titles already match the queries; position too low for CTR work)
 - /guides/dfw-emergency-plumbing-costs: 1,018 / 1 / 0.1% / 13.0 (top query "emergency plumber cost" at position 24)
 - /cities/houston/24-hour-emergency-plumber: 1,924 / 0 / 0% / 18.5; /cities/san-antonio/24-hour-emergency-plumber: 1,353 / 1 / 0.1% / 23.2
 - /tools/sewer-line-repair-cost-calculator: 2,130 / 4 / 0.2% / 40.2; /tools/slab-leak-repair-cost-calculator: 1,204 / 3 / 0.2% / 22.1
+- Keyword overhaul (6 patches, live 2026-11-15, master 1e8f291; these patches own the titles, H1s, meta descriptions and citySearchAnswers entries below until 2026-12-10, so no CTR/title or DSH tasks on them; judge from 2026-11-29). Note "keyword overhaul" for each:
+  - 01 (Task245): /cities/dallas, /cities/carrollton, /services/water-heater-emergency, /services/burst-pipe-emergency
+  - 02: /services/24-hour-emergency-plumber, /services/burst-pipe-emergency, /tools/sewer-line-repair-cost-calculator, /cost-guides/burst-pipe-emergency-cost-guide, /problems/water-backing-up-in-shower-and-toilet, /problems/kitchen-sink-backing-up, /problems/floor-drain-backing-up, /problems/bathtub-drain-backing-up, /cities/dallas/burst-pipe-emergency, /cities/plano/burst-pipe-emergency, /cities/garland/main-sewer-line-clog
+  - 03: /cities/arlington, /cities/garland, /cities/frisco, /cities/irving, /cities/lewisville, /cities/the-colony
+  - 04: /cities/rowlett, /cities/wylie, /cities/rockwall, /cities/mansfield, /cities/grapevine, /cities/allen, /cities/rowlett/water-heater-emergency, /cities/plano/same-day-plumber-connection, /cities/frisco/burst-pipe-emergency (+ a hub link on every city x service page)
+  - 05: /cities/austin/24-hour-emergency-plumber, /cities/austin/emergency-drain-cleaning, /cities/houston/emergency-drain-cleaning, /cities/san-antonio/emergency-drain-cleaning
+  - 06: /cities/mesquite, /cities/grand-prairie, /cities/cedar-hill, /cities/desoto, /cities/duncanville, /cities/euless, /cities/bedford, /cities/hurst, /cities/keller, /cities/southlake, /cities/flower-mound, /cities/houston, /cities/austin, /cities/san-antonio
 
 Checks log:
+- 2026-11-15 (Sun): Search Console skipped: Chrome offline (cloud run). Keyword overhaul patches 01-06 live (list above). PH-045 San Antonio permit post live.
 - 2026-11-14 (Sat): Search Console skipped: Chrome offline (cloud run). No new numbers.
 - 2026-11-13 (Fri): Search Console skipped: Chrome offline (cloud run). No new numbers.
 - 2026-11-12 (Thu): Search Console skipped: Chrome offline (cloud run). PH-023 (city hub titles) and PH-026 (2 calculator titles) went live today.

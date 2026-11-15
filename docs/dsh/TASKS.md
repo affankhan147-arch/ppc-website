@@ -974,7 +974,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `h
 
 ---
 
-## PH-045 - New blog post: plumbing permit in San Antonio, can a homeowner pull it - Status: WRITER
+## PH-045 - New blog post: plumbing permit in San Antonio, can a homeowner pull it - Status: DONE (2026-11-15, merged d4a9ccd; Claude moved 1 misplaced link-in and rewrote the intro and FAQ answers as full sentences in 99e77f3)
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/san-antonio-plumbing-permit-homeowner-or-plumber`. Search intent: "san antonio plumbing permit homeowner" / "can i pull my own plumbing permit san antonio". Gap: no PH page covers San Antonio permits, and the San Antonio 24-hour page has 1,353 impressions (position 23.2). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug`. Copy the shape of PH-037 (`sawsWaterLeakSanAntonioPost`) exactly and use these anchors only (other tasks edit other spots in the same files).
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(sawsWaterLeakSanAntonioPost);`, add a new post copying the shape of `sawsWaterLeakSanAntonioPost` exactly, then `blogPosts.push(sanAntonioPlumbingPermitPost);`. Use exactly:
@@ -998,7 +998,7 @@ Done when: `npm run build` passes and `.next/server/app/blog/san-antonio-plumbin
 
 ---
 
-## PH-046 - Arlington city page: Arlington-specific water emergency section - Status: OPEN
+## PH-046 - Arlington city page: Arlington-specific water emergency section - Status: DONE (2026-11-15, merged e7b40ac)
 File: `src/data/pageEnhancements.ts`
 Why: /cities/arlington has 1,292 impressions at position 10.8 with 0 clicks (Search Console, 28 days to 2026-11-07) and no Arlington-specific section (only Dallas has one). This adds Arlington Water Utilities facts. Source (Claude opened it 2026-11-14): https://www.arlingtontx.gov/News-Articles/2025/January/7-Tips-for-Avoiding-Water-Damage-and-Water-Loss-This-Winter
 Where: search (do not read the whole file) for this line, which appears once:
@@ -1060,7 +1060,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/arlington.html` c
 
 ---
 
-## PH-047 - Carrollton city page: Carrollton-specific water emergency section - Status: OPEN
+## PH-047 - Carrollton city page: Carrollton-specific water emergency section - Status: DONE (2026-11-15, merged 8dde236)
 File: `src/data/pageEnhancements.ts`
 Why: /cities/carrollton has 1,157 impressions at position 9.3 with 0 clicks (Search Console, 28 days to 2026-11-07) and no Carrollton-specific section. This adds City of Carrollton facts. Sources (Claude opened them 2026-11-14): https://www.cityofcarrollton.com/departments/departments-g-p/public-works/contact-public-works ; https://www.cityofcarrollton.com/departments/departments-q-z/utility-customer-service/leak-adjustments
 Where: search (do not read the whole file) for this line, which appears once:
@@ -1122,7 +1122,7 @@ Done when: `npm run build` passes and `.next/server/app/cities/carrollton.html` 
 
 ---
 
-## PH-048 - Links from 3 Houston service pages to the Houston 24-hour page - Status: OPEN
+## PH-048 - Links from 3 Houston service pages to the Houston 24-hour page - Status: DONE (2026-11-15, merged 74e669c)
 File: `src/data/cityServiceEnhancementsHoustonExpansion.ts`
 Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07). The Houston burst pipe, water heater and sewer backup pages give it no links, and they have no related links at all.
 Where: these entries have no `extraLinks` yet. Do this in 3 places (each entry line appears once; search, do not read the whole file):
@@ -1153,7 +1153,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsHoustonEx
 
 ---
 
-## PH-049 - Links from 3 San Antonio service pages to the San Antonio 24-hour page - Status: OPEN
+## PH-049 - Links from 3 San Antonio service pages to the San Antonio 24-hour page - Status: DONE (2026-11-15, merged 08799e2)
 File: `src/data/cityServiceEnhancementsSanAntonioExpansion.ts`
 Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07). The San Antonio burst pipe, water heater and sewer backup pages give it no links, and they have no related links at all.
 Where: these entries have no `extraLinks` yet. Do this in 3 places (each entry line appears once; search, do not read the whole file):
@@ -1183,7 +1183,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsSanAntoni
 
 ---
 
-## PH-050 - Fort Worth sewer pages: links to the new sewer line post and the sewer calculator - Status: OPEN
+## PH-050 - Fort Worth sewer pages: links to the new sewer line post and the sewer calculator - Status: DONE (2026-11-15, merged 3528efd)
 File: `src/data/cityServiceEnhancementsFortWorthExpansion.ts`
 Why: the new post /blog/who-is-responsible-for-sewer-line-fort-worth (live 2026-11-14) needs links in, and /tools/sewer-line-repair-cost-calculator (2,130 impressions, position 40.2) has no links from city service pages.
 Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -1199,7 +1199,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsFortWorth
 
 ---
 
-## PH-051 - Dallas sewer pages: links to the Dallas sewer post and the sewer calculator - Status: OPEN
+## PH-051 - Dallas sewer pages: links to the Dallas sewer post and the sewer calculator - Status: DONE (2026-11-15, merged 1344c37; Claude added the missed dallas/sewer-backup-help links in 99e77f3)
 File: `src/data/cityServiceEnhancementsDallasExpansion.ts`
 Why: /tools/sewer-line-repair-cost-calculator (2,130 impressions, position 40.2) has no links from city service pages, and the Dallas sewer warning-signs post has none from the Dallas sewer pages.
 Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -1215,7 +1215,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsDallasExp
 
 ---
 
-## PH-052 - Dallas and Fort Worth burst pipe pages: link to the slab leak calculator - Status: OPEN
+## PH-052 - Dallas and Fort Worth burst pipe pages: link to the slab leak calculator - Status: DONE (2026-11-15, merged 2c251d8; Claude moved the link from the sewer clog entries to the burst pipe entries)
 Files: `src/data/cityServiceEnhancementsDallasExpansion.ts`, `src/data/cityServiceEnhancementsFortWorthExpansion.ts`
 Why: /tools/slab-leak-repair-cost-calculator has 1,204 impressions at position 22.1 and no links from city service pages.
 Where: in EACH of the 2 files, search (do not read the whole file) for the entry line (`  "dallas/burst-pipe-emergency": {` in the Dallas file, `  "fort-worth/burst-pipe-emergency": {` in the Fort Worth file; each appears once), find the FIRST line `    extraLinks: [` below it and insert this line directly BELOW it:
@@ -1227,7 +1227,7 @@ Done when: `npm run build` passes and each of the 2 files contains `href: "/tool
 
 ---
 
-## PH-053 - Links into the Fort Worth sewer line post from 2 Fort Worth posts - Status: OPEN
+## PH-053 - Links into the Fort Worth sewer line post from 2 Fort Worth posts - Status: DONE (2026-11-15, merged 68e9095)
 File: `src/data/pageEnhancements.ts`
 Why: the new post /blog/who-is-responsible-for-sewer-line-fort-worth (live 2026-11-14) has only 2 links in. These 2 Fort Worth posts are the closest match.
 Where: for EACH of these entry lines (each appears once; search, do not read the whole file):
@@ -1269,3 +1269,341 @@ Goal: one new blog post at `/blog/carrollton-water-leak-adjustment-after-plumbin
 4. `src/data/contentDates.ts`: directly below the line `  "/blog/who-is-responsible-for-sewer-line-fort-worth": "2026-11-12",` add `  "/blog/carrollton-water-leak-adjustment-after-plumbing-repair": "2026-11-15",`.
 Sources (Claude opened them on 2026-11-14): https://www.cityofcarrollton.com/departments/departments-q-z/utility-customer-service/leak-adjustments ; https://www.cityofcarrollton.com/departments/departments-g-p/public-works/contact-public-works
 Done when: `npm run build` passes and `.next/server/app/blog/carrollton-water-leak-adjustment-after-plumbing-repair.html` exists and contains `How Carrollton limits a leak adjustment`.
+
+---
+
+## PH-055 - Links from 4 Austin service pages to the Austin 24-hour page - Status: OPEN
+File: `src/data/cityServiceEnhancementsAustinExpansion.ts`
+Why: /cities/austin/24-hour-emergency-plumber is PH's most-shown page (keyword overhaul 05, live 2026-11-15). The 8 Austin service pages give it no links and have no related links at all.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "austin/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+    ],
+```
+- In the entry `  "austin/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+    ],
+```
+- In the entry `  "austin/sewer-backup-help": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Austin", href: "/cities/austin/emergency-drain-cleaning" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+- In the entry `  "austin/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsAustinExpansion.ts` contains `href: "/cities/austin/24-hour-emergency-plumber" }` exactly 4 times.
+
+---
+
+## PH-056 - Links from 4 more Houston service pages to the Houston 24-hour page - Status: OPEN
+File: `src/data/cityServiceEnhancementsHoustonExpansion.ts`
+Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07). PH-048 linked 3 Houston pages; these 4 still give it no links.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "houston/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+- In the entry `  "houston/toilet-overflow-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Houston", href: "/cities/houston/emergency-drain-cleaning" },
+    ],
+```
+- In the entry `  "houston/sink-and-shower-drain-backup": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Houston", href: "/cities/houston/emergency-drain-cleaning" },
+    ],
+```
+- In the entry `  "houston/same-day-plumber-connection": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsHoustonExpansion.ts` contains `href: "/cities/houston/24-hour-emergency-plumber" }` exactly 7 times.
+
+---
+
+## PH-057 - Links from 4 more San Antonio service pages to the San Antonio 24-hour page - Status: OPEN
+File: `src/data/cityServiceEnhancementsSanAntonioExpansion.ts`
+Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07). PH-049 linked 3 San Antonio pages; these 4 still give it no links. The new permit post (PH-045, live 2026-11-15) also needs links in.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "san-antonio/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
+    ],
+```
+- In the entry `  "san-antonio/toilet-overflow-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in San Antonio", href: "/cities/san-antonio/emergency-drain-cleaning" },
+    ],
+```
+- In the entry `  "san-antonio/sink-and-shower-drain-backup": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in San Antonio", href: "/cities/san-antonio/emergency-drain-cleaning" },
+    ],
+```
+- In the entry `  "san-antonio/same-day-plumber-connection": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsSanAntonioExpansion.ts` contains `href: "/cities/san-antonio/24-hour-emergency-plumber" }` exactly 7 times.
+
+---
+
+## PH-058 - Arlington service pages: links to the sewer calculator and the slab leak repair cost calculator - Status: OPEN
+File: `src/data/cityServiceEnhancementsArlingtonExpansion.ts`
+Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 and /tools/slab-leak-repair-cost-calculator needs links from city service pages; the Arlington pages give them none.
+Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
+- `src/data/cityServiceEnhancementsArlingtonExpansion.ts`, entry `  "arlington/main-sewer-line-clog": {`:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+- `src/data/cityServiceEnhancementsArlingtonExpansion.ts`, entry `  "arlington/sewer-backup-help": {`:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+- `src/data/cityServiceEnhancementsArlingtonExpansion.ts`, entry `  "arlington/burst-pipe-emergency": {`:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsArlingtonExpansion.ts` contains `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 2 times and `href: "/tools/slab-leak-repair-cost-calculator" }` exactly 1 time.
+
+---
+
+## PH-059 - Plano service pages: links to the sewer calculator and the water heater repair or replace calculator - Status: OPEN
+File: `src/data/cityServiceEnhancementsPlanoExpansion.ts`
+Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 and /tools/water-heater-repair-or-replace-calculator needs links from city service pages; the Plano pages give them none.
+Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
+- `src/data/cityServiceEnhancementsPlanoExpansion.ts`, entry `  "plano/main-sewer-line-clog": {`:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+- `src/data/cityServiceEnhancementsPlanoExpansion.ts`, entry `  "plano/sewer-backup-help": {`:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+- `src/data/cityServiceEnhancementsPlanoExpansion.ts`, entry `  "plano/water-heater-emergency": {`:
+```ts
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsPlanoExpansion.ts` contains `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 2 times and `href: "/tools/water-heater-repair-or-replace-calculator" }` exactly 1 time.
+
+---
+
+## PH-060 - Irving service pages: links to the sewer calculator and the slab leak repair cost calculator - Status: OPEN
+File: `src/data/cityServiceEnhancementsIrvingExpansion.ts`
+Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 and /tools/slab-leak-repair-cost-calculator needs links from city service pages; the Irving pages give them none.
+Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
+- `src/data/cityServiceEnhancementsIrvingExpansion.ts`, entry `  "irving/main-sewer-line-clog": {`:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+- `src/data/cityServiceEnhancementsIrvingExpansion.ts`, entry `  "irving/sewer-backup-help": {`:
+```ts
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+```
+- `src/data/cityServiceEnhancementsIrvingExpansion.ts`, entry `  "irving/burst-pipe-emergency": {`:
+```ts
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+```
+Change nothing else (other tasks edit other entries in this file).
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsIrvingExpansion.ts` contains `href: "/tools/sewer-line-repair-cost-calculator" }` exactly 2 times and `href: "/tools/slab-leak-repair-cost-calculator" }` exactly 1 time.
+
+---
+
+## PH-061 - Links from 3 McKinney service pages to the McKinney 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsMckinneyExpansion.ts`
+Why: The McKinney service pages have no related links at all, so /cities/mckinney/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "mckinney/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in McKinney", href: "/cities/mckinney/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "mckinney/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in McKinney", href: "/cities/mckinney/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "mckinney/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in McKinney", href: "/cities/mckinney/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsMckinneyExpansion.ts` contains `href: "/cities/mckinney/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-062 - Links from 3 Richardson service pages to the Richardson 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsRichardsonExpansion.ts`
+Why: The Richardson service pages have no related links at all, so /cities/richardson/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "richardson/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Richardson", href: "/cities/richardson/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "richardson/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Richardson", href: "/cities/richardson/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "richardson/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Richardson", href: "/cities/richardson/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsRichardsonExpansion.ts` contains `href: "/cities/richardson/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-063 - Link into the San Antonio permit post from the Texas DIY plumbing post - Status: OPEN
+File: `src/data/pageEnhancements.ts`
+Why: The new post /blog/san-antonio-plumbing-permit-homeowner-or-plumber (live 2026-11-15) has 2 links in. The Texas DIY plumbing post is the closest match.
+Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
+- `src/data/pageEnhancements.ts`, entry `  "can-homeowners-legally-do-their-own-plumbing-in-texas": {`:
+```ts
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
+```
+Change nothing else (PH-054 and PH-064 edit other entries in this file).
+Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" }` exactly 3 times.
+
+---
+
+## PH-064 - New blog post: Austin Water leak bill adjustment after a repair - Status: WRITER
+Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
+Goal: one new blog post at `/blog/austin-water-leak-bill-adjustment-after-repair`. Search intent: "austin water leak adjustment" / "austin water bill leak credit" (a homeowner with a high bill after a leak). Supports /cities/austin/24-hour-emergency-plumber (PH's most-shown page, keyword overhaul 05) and /cities/austin. Gap: no PH page covers Austin Water bills (grep of blogPosts.ts and pageEnhancements.ts on 2026-11-15). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug`. Claude wrote every line below: place it exactly, do not reword, add or drop anything. Use only these anchors (PH-054 and PH-063 edit other spots in the same files).
+1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(sanAntonioPlumbingPermitPost);` insert:
+```ts
+export const austinWaterLeakAdjustmentPost: BlogPost = {
+  slug: "austin-water-leak-bill-adjustment-after-repair",
+  title: "Austin Water Leak Bill Adjustment: What to Send After a Repair",
+  directAnswer:
+    "Austin Water offers a Water Leak Bill Adjustment for high charges caused by a leak. Get the leak fixed first, then send the paid repair receipt or invoice, your account number, the property address, the dates of the high charges and a description of the repair within 90 days of the repair.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(austinWaterLeakAdjustmentPost);
+```
+2. `src/data/pageEnhancements.ts` (search, do not read whole): find the line `  "san-antonio-plumbing-permit-homeowner-or-plumber": {`; directly after that entry's closing `  },` line insert:
+```ts
+  "austin-water-leak-bill-adjustment-after-repair": {
+    checklistTitle: "Before you ask Austin Water for a leak adjustment",
+    checklistIntro:
+      "A leak can push your Austin Water bill far above normal. The city has a Water Leak Bill Adjustment for that, but it only looks at a request once the leak is repaired and the paperwork is complete.",
+    checklistItems: [
+      "Get the leak repaired first. Austin Water asks for the request within 90 days of the leak repair.",
+      "Keep a copy of the repair receipt or paid invoice that describes the repair.",
+      "Have your Austin Water account number and the address of the property where the repair was done.",
+      "Write down the date range of the high charges caused by the leak, plus the date and a description of the repair.",
+      "Send the documents to Austin Water by email at customercare@coautilities.com or by fax at 512-505-4035, as the city's high water bill page describes."
+    ],
+    proofTitle: "What else Austin Water says about high bills",
+    proofItems: [
+      "The leak adjustment falls under City Code 15-9-141. If you receive one, you may not request an administrative hearing for the same billing period.",
+      "No leak? A single-family residential customer may qualify for the separate Non-Leak High Water Bill Adjustment if they were billed for at least three times their expected volume and have not received an adjustment in the past two years.",
+      "That non-leak request also needs at least four months of billing history at the address and must be sent within 90 days of the high-use bill, using the High Volume Water Bill Adjustment Application.",
+      "If your bill is still high after checking for leaks, Austin Water Customer Service at 512-494-9400 can review your usage."
+    ],
+    extraFaqs: [
+      {
+        question: "How long do I have to apply for an Austin Water leak adjustment?",
+        answer:
+          "Austin Water asks for the request within 90 days of the leak repair. Send a copy of the paid repair receipt or invoice, your account number, the property address, the date range of the high charges and the date and description of the repair. Keep copies of everything you send."
+      },
+      {
+        question: "Who fixes a leak on my side of the Austin Water meter?",
+        answer:
+          "Austin Water says property owners are responsible for service lines past the meter and for internal plumbing. A leak in your yard line, under the slab or inside the house is a job for a licensed plumber. Your customer cut-off valve can shut off water to the whole property while you wait."
+      },
+      {
+        question: "Who do I call about a water leak in Austin at night?",
+        answer:
+          "Austin Water's Customer Service Contact Center at 512-972-1000 is available 24/7 for reporting a leak that is not already on its leak map. If the leak is in your own pipes or fixtures, shut off the water at your cut-off valve and call a licensed plumber."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Austin plumbing help", href: "/cities/austin" },
+      { label: "Burst pipe help in Austin", href: "/cities/austin/burst-pipe-emergency" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+    ]
+  },
+```
+   Links in: in BOTH entries `"does-homeowners-insurance-cover-a-plumbing-leak-in-texas"` and `"water-shutoff-valve-will-not-close-during-a-leak"`, find the FIRST line `    extraLinks: [` below the entry line and insert directly BELOW it:
+```ts
+      { label: "Austin Water leak bill adjustment: what to send", href: "/blog/austin-water-leak-bill-adjustment-after-repair" },
+```
+3. `src/data/seoOverrides.ts`: directly after the 3-line `"/blog/san-antonio-plumbing-permit-homeowner-or-plumber"` entry (it ends with `  },`), insert:
+```ts
+  // New post 2026-11-16 (PH-064).
+  "/blog/austin-water-leak-bill-adjustment-after-repair": {
+    title: "Austin Water Leak Adjustment: How to Apply After a Repair",
+    description:
+      "Leak raised your Austin Water bill? Ask for a leak adjustment within 90 days of the repair. What to send, where to send it, and what if there was no leak."
+  },
+```
+4. `src/data/contentDates.ts`: directly below the line `  "/blog/san-antonio-plumbing-permit-homeowner-or-plumber": "2026-11-13",` add:
+```ts
+  "/blog/austin-water-leak-bill-adjustment-after-repair": "2026-11-16",
+```
+Sources (Claude opened them on 2026-11-15): https://www.austintexas.gov/water/high-water-bill-options ; https://www.austintexas.gov/water/water-leaks
+Done when: `npm run build` passes and `.next/server/app/blog/austin-water-leak-bill-adjustment-after-repair.html` exists and contains `What else Austin Water says about high bills`.
+
+---
