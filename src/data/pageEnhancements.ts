@@ -3207,6 +3207,54 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
   },
 
   // PH-047 anchor: the Carrollton entry goes directly below this line.
+  carrollton: {
+    decisionTitle: "Carrollton water emergency: city line or plumber?",
+    decisionIntro:
+      "Carrollton Public Works keeps a 24/7 emergency line, 972-466-3425, for water leaks, sewer problems and utility locations. A leak in the pipes or fixtures on your own property is yours to have repaired, and the city expects it fixed in a timely manner.",
+    decisionItems: [
+      "Water leaking in the street, or a sewer problem you think is on the city side: call Carrollton Public Works' emergency line at 972-466-3425, answered 24/7.",
+      "A leak inside the house, under the slab or in your yard line: shut the water off and call a licensed plumber.",
+      "Tell the plumber whether the water is clean or sewage, and whether one fixture or several are affected.",
+      "Ask the plumber up front whether the repair needs a city permit and who will pull it."
+    ],
+    providerTitle: "What a Carrollton plumber may check",
+    providerItems: [
+      "The pipes and fixtures on your property, since Carrollton treats leaks from faulty plumbing on private property as the customer's to repair.",
+      "Whether the main shutoff closes fully.",
+      "Toilets, water heater connections and irrigation lines when the water bill jumps.",
+      "A dated invoice and proof of payment, which Carrollton asks for if you apply for a leak adjustment."
+    ],
+    safetyTitle: "When to treat it as urgent in Carrollton",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up through a tub, shower or floor drain.",
+      "A leak that keeps running while you wait: Carrollton says it is the customer's responsibility to make sure leaks are repaired in a timely manner."
+    ],
+    preventionTitle: "Carrollton-specific notes after a leak",
+    preventionItems: [
+      "Keep the plumber's invoice and proof of payment: a Carrollton leak adjustment needs the Certification of Water Leak Repair form with a description of the leak and proof of payment.",
+      "Apply within 90 days of the bill that shows the water loss. Carrollton allows one leak adjustment in any 12-month period.",
+      "If the repair needs a permit, Carrollton says to contact Building Inspection at 972-466-3225. Adjustments are denied if a required permit is not obtained within 30 days of notice."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call for a water or sewer emergency in Carrollton?",
+        answer:
+          "Carrollton Public Works has a 24/7 emergency line, 972-466-3425, for water leaks, sewer problems and utility locations. For a leak in the pipes or fixtures on your own property, call a licensed plumber: Carrollton expects customers to get those leaks repaired in a timely manner."
+      },
+      {
+        question: "Can I get a water bill adjustment for a leak in Carrollton?",
+        answer:
+          "Possibly. Carrollton allows one leak adjustment in any 12-month period for leaks from faulty plumbing on private property. Apply within 90 days of the bill that shows the water loss, with the Certification of Water Leak Repair form and proof of payment for the repair."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Carrollton", href: "/cities/carrollton/emergency-drain-cleaning" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
 
   dallas: {
     decisionTitle: "Dallas emergency leak and drain triage",
