@@ -50,6 +50,7 @@ export const dallasExpansionCityServiceEnhancements: Record<string, PageEnhancem
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Dallas emergency plumbing", href: "/cities/dallas" },
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" }
