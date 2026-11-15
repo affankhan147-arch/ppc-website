@@ -45,6 +45,7 @@ Claude sessions follow their own task instructions; the branch-only rule below i
 - Don't edit `src/data/blogPosts.ts` or `src/data/pageEnhancements.ts` unless the task says so (Claude's daily blog job edits them).
 - No API keys, passwords, ID or bank numbers anywhere, ever.
 - Windows: save files as UTF-8 **without BOM** (never PowerShell `-Encoding UTF8`); keep LF line endings.
+- Multi-entry tasks: search each named entry line on its own and insert below THAT line (never the entry above or the first match in the file). Before DONE, run the Done-when count; if it is short, an entry was missed.
 
 ## Content rules (every page, section, answer)
 - One real search intent per page, tied to a real service and a city we cover. Put the long-tail keyword in the title, H1 or H2 and the first paragraph.
