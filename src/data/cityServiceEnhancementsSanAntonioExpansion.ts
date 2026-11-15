@@ -58,6 +58,10 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Don't attempt to relight a tankless unit's ignition system yourself",
       "Watch for scalding water from a malfunctioning thermostat",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+    ],
   },
   "san-antonio/toilet-overflow-emergency": {
     decisionTitle: "Toilet Overflow Emergencies in San Antonio",
@@ -106,6 +110,10 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Turn off electricity to any affected areas near standing water",
       "Document damage with photos before cleanup for insurance claims",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
+    ],
   },
   "san-antonio/sewer-backup-help": {
     decisionTitle: "Sewer Backup Help for San Antonio Homeowners",
@@ -129,6 +137,10 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Avoid using water in the home until the backup is cleared",
       "Stay away from contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
     ],
   },
   "san-antonio/commercial-emergency-plumbing": {
