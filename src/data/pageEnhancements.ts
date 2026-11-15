@@ -3577,10 +3577,54 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
       { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "Leak between the meter and the house in Dallas", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" },
+      { label: "San Antonio service area", href: "/cities/san-antonio" }
+    ]
+  },
+  "san-antonio-plumbing-permit-homeowner-or-plumber": {
+    checklistTitle: "Can you pull the plumbing permit yourself?",
+    checklistIntro:
+      "The City of San Antonio allows homeowners to pull trade permits only under strict ownership and occupancy conditions. Knowing the rules before starting a plumbing project protects you and ensures your work remains code-compliant.",
+    checklistItems: [
+      "A homeowner can only apply for a plumbing permit for an existing residence if it is their homestead and they will personally be doing the work.",
+      "The city refers homeowners to its Plumbing Homeowner Affidavit.",
+      "The homeowner plumbing permit row is only for an existing homestead and asks for proof of ownership.",
+      "The city also says that for your safety you must use licensed trade contractors for new electrical, plumbing and/or HVAC project components.",
+      "Trade contractors licensed by the city or state and registered with the city may obtain trade permits on behalf of the homeowner."
+    ],
+    proofTitle: "Before plumbing work starts in San Antonio",
+    proofItems: [
+      "The city's plumbing application is titled \"Plumbing, Gas and Sewer Permit\".",
+      "A project may need several permits (building, electrical, mechanical and plumbing) depending on its scope, and the city's example is a deck with a ceiling fan and sink, which needs building, electrical and plumbing permits.",
+      "Ask your plumber to confirm they are licensed and registered with the city, and who will pull the permit.",
+      "Keep a copy of the permit with your home records."
+    ],
+    extraFaqs: [
+      {
+        question: "Can a homeowner pull a plumbing permit in San Antonio?",
+        answer:
+          "Only for an existing home that is their homestead, doing the work personally; the city points to its Plumbing Homeowner Affidavit."
+      },
+      {
+        question: "Who can pull a plumbing permit for me in San Antonio?",
+        answer:
+          "A trade contractor licensed by the city or state and registered with the city."
+      },
+      {
+        question: "Is a gas or sewer job a separate permit in San Antonio?",
+        answer:
+          "The city's plumbing application is titled \"Plumbing, Gas and Sewer Permit\"; ask your licensed plumber to confirm what your job needs."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" },
+      { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "San Antonio service area", href: "/cities/san-antonio" }
     ]
   },
@@ -4995,6 +5039,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
       { label: "Commercial emergency plumbing", href: "/services/commercial-emergency-plumbing" },
       { label: "Partner with us", href: "/partner-with-us" },

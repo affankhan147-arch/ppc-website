@@ -509,3 +509,14 @@ export const sawsWaterLeakSanAntonioPost: BlogPost = {
 };
 
 blogPosts.push(sawsWaterLeakSanAntonioPost);
+
+export const sanAntonioPlumbingPermitPost: BlogPost = {
+  slug: "san-antonio-plumbing-permit-homeowner-or-plumber",
+  title: "Plumbing Permit in San Antonio: Can a Homeowner Pull It?",
+  directAnswer:
+    "Only in one case. The City of San Antonio says a homeowner can apply for a plumbing permit for an existing home only if it is their homestead and they will personally do the work. Otherwise, a trade contractor licensed by the city or state and registered with the city can obtain the plumbing permit on the homeowner's behalf.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(sanAntonioPlumbingPermitPost);
