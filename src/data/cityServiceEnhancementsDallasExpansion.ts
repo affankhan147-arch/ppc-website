@@ -181,6 +181,7 @@ export const dallasExpansionCityServiceEnhancements: Record<string, PageEnhancem
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Dallas emergency plumbing", href: "/cities/dallas" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "24-hour emergency plumber in Dallas", href: "/cities/dallas/24-hour-emergency-plumber" }

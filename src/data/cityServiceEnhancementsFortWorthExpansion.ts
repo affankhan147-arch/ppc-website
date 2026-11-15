@@ -181,6 +181,7 @@ export const fortWorthExpansionCityServiceEnhancements: Record<string, PageEnhan
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Fort Worth service area", href: "/cities/fort-worth" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "24-hour emergency plumber in Fort Worth", href: "/cities/fort-worth/24-hour-emergency-plumber" }
