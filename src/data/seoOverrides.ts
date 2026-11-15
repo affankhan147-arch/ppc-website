@@ -124,6 +124,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/blog/saws-water-leak-who-fixes-it-san-antonio": {
     description: "SAWS can't repair plumbing on private property. Who fixes a leak at your San Antonio home, what to shut off first, and how SAWS leak reimbursement works."
   },
+  "/blog/san-antonio-plumbing-permit-homeowner-or-plumber": {
+    description: "Can you pull your own plumbing permit in San Antonio? Only for your homestead, doing the work yourself. Otherwise a licensed, registered plumber pulls it."
+  },
   // 47 impr / 0% / pos 11.5
   "/tools/dfw-leak-cost-calculator": {
     description:
