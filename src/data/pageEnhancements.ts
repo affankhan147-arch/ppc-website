@@ -3682,6 +3682,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Confirm what happens if the first clearing attempt does not resolve the backup."
     ],
     extraLinks: [
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
       { label: "Sewer backup in Fort Worth: what it means", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" },
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
@@ -4229,6 +4230,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Confirm cleanup and sanitizing expectations separately from the plumbing repair itself, since backed-up wastewater needs different handling than clean water."
     ],
     extraLinks: [
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
       { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Sewer smell in bathroom", href: "/problems/sewer-smell-in-bathroom" },
