@@ -50,6 +50,8 @@ export const fortWorthExpansionCityServiceEnhancements: Record<string, PageEnhan
       }
     ],
     extraLinks: [
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Fort Worth service area", href: "/cities/fort-worth" },
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" }
@@ -222,6 +224,8 @@ export const fortWorthExpansionCityServiceEnhancements: Record<string, PageEnhan
       }
     ],
     extraLinks: [
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Fort Worth service area", href: "/cities/fort-worth" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line clog in Fort Worth", href: "/cities/fort-worth/main-sewer-line-clog" }
