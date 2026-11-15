@@ -3157,6 +3157,54 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
 
 export const cityPageEnhancements: Record<string, PageEnhancement> = {
   // PH-046 anchor: the Arlington entry goes directly below this line.
+  arlington: {
+    decisionTitle: "Arlington water emergency: city line or plumber?",
+    decisionIntro:
+      "In Arlington, the first call depends on what you need. Arlington Water Utilities runs a 24-Hour Emergency Service line, 817-459-5900, for help turning off your water or a suspected water main break after hours or on weekends. A leak inside the house or in your own pipes is a job for a licensed plumber.",
+    decisionItems: [
+      "Cannot turn your water off, or think a water main has broken? After hours or on weekends, call Arlington Water Utilities' 24-Hour Emergency Service line at 817-459-5900.",
+      "During business hours, Arlington Water Utilities answers at 817-275-5931, 8 a.m. to 5 p.m. Monday through Friday.",
+      "Once the water is off, call a plumber for the leak itself and say whether it is inside the house, in the yard or at an outside faucet.",
+      "Mention if the leak started during or right after a freeze, since a frozen pipe can split in more than one place."
+    ],
+    providerTitle: "What an Arlington plumber may check",
+    providerItems: [
+      "Exposed exterior pipes and pipes in unheated garages, attics and crawl spaces, the ones Arlington Water Utilities says to watch in cold weather.",
+      "Outdoor faucets and hose connections after a hard freeze.",
+      "Whether the water meter still moves with every fixture off, a sign of a hidden leak.",
+      "The main shutoff valve, so you know it closes before the next emergency."
+    ],
+    safetyTitle: "When to treat it as urgent in Arlington",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up through a tub, shower or floor drain.",
+      "Pipes that may have split in a freeze: Arlington Water Utilities says pipes can freeze and burst when the outside temperature reaches 20 degrees or below."
+    ],
+    preventionTitle: "Arlington-specific prevention notes",
+    preventionItems: [
+      "Before a hard freeze, remove hoses and insulate outdoor faucets. Arlington Water Utilities suggests wrapping outdoor faucets and exposed pipes with rags tied on with bungee cords or zip ties.",
+      "Check for a hidden leak the way Arlington Water Utilities describes: turn off the water inside and outside the home, read the meter, wait 15 minutes and read it again.",
+      "If your sprinkler system has a main shut-off valve, turn the water supply off there too before a freeze."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call for a water emergency in Arlington at night or on a weekend?",
+        answer:
+          "Call Arlington Water Utilities' 24-Hour Emergency Service line at 817-459-5900 if you need help turning off your water or suspect a water main break. For a leak inside your home or in your own pipes, call a licensed plumber once the water is off."
+      },
+      {
+        question: "How do I check for a hidden water leak in Arlington?",
+        answer:
+          "Turn off the water inside and outside the home, write down the meter reading, wait 15 minutes and read it again. Arlington Water Utilities says any water use on the meter during the test may mean a large leak or several small ones. If it moved, call a plumber."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Arlington", href: "/cities/arlington/24-hour-emergency-plumber" },
+      { label: "Burst pipe help in Arlington", href: "/cities/arlington/burst-pipe-emergency" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
 
   // PH-047 anchor: the Carrollton entry goes directly below this line.
 
