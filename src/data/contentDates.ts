@@ -53,6 +53,7 @@ export const contentPublished: Record<string, string> = {
   "/blog/same-day-drain-cleaning-in-dallas-what-to-expect": "2026-07-11",
   "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call": "2026-07-11",
   "/blog/who-is-responsible-for-sewer-line-fort-worth": "2026-11-12",
+  "/blog/carrollton-water-leak-adjustment-after-plumbing-repair": "2026-11-15",
   "/blog/shower-water-suddenly-scalding-or-freezing-what-it-means": "2026-07-25",
   "/blog/signs-your-main-drain-needs-same-day-service": "2026-07-11",
   "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners": "2026-08-05",

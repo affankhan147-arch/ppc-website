@@ -3586,6 +3586,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Carrollton water leak adjustment: how to apply", href: "/blog/carrollton-water-leak-adjustment-after-plumbing-repair" },
       { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
@@ -3630,6 +3631,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Carrollton water leak adjustment: how to apply", href: "/blog/carrollton-water-leak-adjustment-after-plumbing-repair" },
       { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Water leak at your San Antonio home: who fixes it", href: "/blog/saws-water-leak-who-fixes-it-san-antonio" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" },
@@ -4135,6 +4137,50 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
       { label: "Fort Worth plumbing help", href: "/cities/fort-worth" }
+    ]
+  },
+  "carrollton-water-leak-adjustment-after-plumbing-repair": {
+    checklistTitle: "Before you ask Carrollton for a leak adjustment",
+    checklistIntro:
+      "Carrollton provides a billing adjustment for water lost to faulty plumbing on private property once the leak is fixed. Here is what to know before submitting your request.",
+    checklistItems: [
+      "Carrollton counts a leak as a change in use caused by faulty plumbing lines and/or fixtures on private property.",
+      "It is the customer's responsibility to make sure leaks are repaired in a timely manner.",
+      "No adjustment is made until a full, leak-free billing period has passed.",
+      "The request must be sent within 90 days of the bill that shows the water loss, with the Certification of Water Leak Repair form, a description of the leak and proof of payment.",
+      "For permit questions, Carrollton says to contact Building Inspection at 972-466-3225, and repairs that needed a permit are denied if the permit is not obtained within 30 days of notice."
+    ],
+    proofTitle: "How Carrollton limits a leak adjustment",
+    proofItems: [
+      "One adjustment in any 12-month period.",
+      "Adjustments are limited to 60% where the leaked water did not return to the sanitary or storm sewer, 50% where it did, and 40% for an irrigation line leak.",
+      "No adjustment for a leak or malfunction of a pool system.",
+      "No adjustment above the actual water cost to the City.",
+      "If the leak is not repaired within 2 billing periods the adjustment is based on 2 billing periods, and if it is not repaired within 6 billing periods there is no adjustment."
+    ],
+    extraFaqs: [
+      {
+        question: "How many leak adjustments can I get in Carrollton?",
+        answer:
+          "Carrollton allows only one water leak adjustment in any 12-month period for leaks caused by faulty plumbing lines or fixtures on private property. The city expects repairs to be made in a timely manner, and applications must wait until after a full leak-free billing period has passed."
+      },
+      {
+        question: "How long do I have to apply for a Carrollton leak adjustment?",
+        answer:
+          "You must submit your request within 90 days of the bill showing the water loss. You must wait for one full leak-free billing cycle to pass first, and you must include the completed Certification of Water Leak Repair form along with paid invoices or proof of repair payment."
+      },
+      {
+        question: "Who do I call about a water leak at night in Carrollton?",
+        answer:
+          "Carrollton Public Works operates a 24/7 emergency dispatch line at 972-466-3425 for water leaks, sewer issues, and utility locations. If the water leak is in the plumbing lines or fixtures on your own property, shut off the water service and call a licensed plumber to make repairs."
+      }
+    ],
+    extraLinks: [
+      { label: "Carrollton plumbing help", href: "/cities/carrollton" },
+      { label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" }
     ]
   },
   "is-a-clogged-drain-actually-a-sewer-line-problem": {
