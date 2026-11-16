@@ -2,6 +2,15 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-16 - audit (PH only: UHP paused by Sunny)
+- Keyword overhaul: no READY_ files in the Drive folder today (6 live since 15 Nov).
+- Agent runs: 15 Nov 15:43 UTC success, 14 Nov success; the 16 Nov run had not started by 17:47 UTC (GitHub cron delay), so its branches go to tomorrow's audit.
+- Reviewed 0: no new dsh/* branches (58 on origin, all recorded). Master ac77fb9 unchanged; nothing merged.
+- Search Console skipped: Chrome offline (cloud run). PH-004 stays WAITING.
+- Assigned 0: queue without branches already at 9 OPEN (PH-055 to PH-063) + 2 WRITER (PH-054, PH-064), inside the 8-10 + 2 target. None touch keyword-overhaul titles, H1s, metas or citySearchAnswers.
+- Desktop agent idle (laptop off or app closed?): no SEO Auditor branch Mon 16 Nov, no Backlink Scout Sat 14 Nov, no app Article Writer branch since 6 Nov.
+- First-time pass rate (7 days): about 31/42 tasks + 2 reports (no reviews today). Coaching: watch PH-055 to PH-062 (several named entries each) for the multi-entry rule added to AGENTS.md on 15 Nov.
+
 ## 2026-11-15 - audit (PH only: UHP paused by Sunny)
 - Keyword overhaul: 6 patches live (READY_01 Task245, 02 services/combo/sewer calc/burst cost/problems, 03 city answers x6, 04 combo hub links + city answers x6, 05 Austin 24-hour + 3 drain pages, 06 city answers x14), 0 failed. git am clean, build PASS, master 1e8f291 Vercel success; LIVE CHECK lines verified in the built HTML (WebFetch permission timeouts and the proxy block plumbinghands.com). Drive files renamed LIVE_. IndexNow skipped (sandbox blocks api.indexnow.org).
 - Agent runs: 15 Nov 15:43 UTC success, 14 Nov success.
