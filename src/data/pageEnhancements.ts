@@ -5219,6 +5219,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
       { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" },
       { label: "DFW plumbing permit requirements & fees by city", href: "/blog/dfw-plumbing-permit-requirements-and-fees-by-city" },
       { label: "Emergency plumber overview", href: "/services/24-hour-emergency-plumber" },
