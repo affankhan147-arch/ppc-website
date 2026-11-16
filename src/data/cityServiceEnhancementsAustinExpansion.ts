@@ -35,6 +35,10 @@ export const austinExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Avoid contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
   },
   "austin/water-heater-emergency": {
     decisionTitle: "Water Heater Emergencies in Austin",
@@ -58,6 +62,10 @@ export const austinExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Shut off gas or electric supply if you smell gas or see sparking",
       "Don't attempt to relight a tankless unit's ignition system yourself",
       "Watch for scalding water from a malfunctioning thermostat",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
     ],
   },
   "austin/toilet-overflow-emergency": {
@@ -107,6 +115,11 @@ export const austinExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Turn off electricity to any affected areas near standing water",
       "Document damage with photos before cleanup for insurance claims",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+    ],
   },
   "austin/sewer-backup-help": {
     decisionTitle: "Sewer Backup Help for Austin Homeowners",
@@ -130,6 +143,11 @@ export const austinExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Avoid using water in the home until the backup is cleared",
       "Stay away from contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Austin", href: "/cities/austin/emergency-drain-cleaning" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
     ],
   },
   "austin/commercial-emergency-plumbing": {
