@@ -52,6 +52,7 @@ export const arlingtonExpansionCityServiceEnhancements: Record<string, PageEnhan
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Arlington service area", href: "/cities/arlington" },
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" }
@@ -181,6 +182,7 @@ export const arlingtonExpansionCityServiceEnhancements: Record<string, PageEnhan
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Arlington service area", href: "/cities/arlington" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "24-hour emergency plumber in Arlington", href: "/cities/arlington/24-hour-emergency-plumber" }
@@ -224,6 +226,7 @@ export const arlingtonExpansionCityServiceEnhancements: Record<string, PageEnhan
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Arlington service area", href: "/cities/arlington" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line clog in Arlington", href: "/cities/arlington/main-sewer-line-clog" }
