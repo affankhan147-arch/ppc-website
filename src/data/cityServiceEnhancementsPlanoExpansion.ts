@@ -52,6 +52,7 @@ export const planoExpansionCityServiceEnhancements: Record<string, PageEnhanceme
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Plano service area", href: "/cities/plano" },
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" }
@@ -95,6 +96,7 @@ export const planoExpansionCityServiceEnhancements: Record<string, PageEnhanceme
       }
     ],
     extraLinks: [
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
       { label: "Plano service area", href: "/cities/plano" },
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
       { label: "24-hour emergency plumber in Plano", href: "/cities/plano/24-hour-emergency-plumber" }
@@ -224,6 +226,7 @@ export const planoExpansionCityServiceEnhancements: Record<string, PageEnhanceme
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Plano service area", href: "/cities/plano" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line clog in Plano", href: "/cities/plano/main-sewer-line-clog" }
