@@ -25,6 +25,7 @@ Rankings first (titles already match the queries; position too low for CTR work)
   - 06: /cities/mesquite, /cities/grand-prairie, /cities/cedar-hill, /cities/desoto, /cities/duncanville, /cities/euless, /cities/bedford, /cities/hurst, /cities/keller, /cities/southlake, /cities/flower-mound, /cities/houston, /cities/austin, /cities/san-antonio
 
 Checks log:
+- 2026-11-17 (Tue): Search Console skipped: Chrome offline (cloud run). No new numbers. PH-054 and PH-064 leak adjustment posts and PH-055 to PH-063 links live.
 - 2026-11-15 (Sun): Search Console skipped: Chrome offline (cloud run). Keyword overhaul patches 01-06 live (list above). PH-045 San Antonio permit post live.
 - 2026-11-14 (Sat): Search Console skipped: Chrome offline (cloud run). No new numbers.
 - 2026-11-13 (Fri): Search Console skipped: Chrome offline (cloud run). No new numbers.
@@ -37,6 +38,10 @@ Rankings-first work queued 2026-11-11 (judge 14+ days after live):
 - /tools/slab-leak-repair-cost-calculator: PH-027 links from 3 leak pages (p22.1).
 - /cities/houston/24-hour-emergency-plumber (p18.5) and /cities/san-antonio/24-hour-emergency-plumber (p23.2): PH-028 links from the 24-hour service page.
 - Live 2026-11-12: PH-024 (d8a8962), PH-025 (c3949a2), PH-026 (503ae4c), PH-027 (1b34c1a), PH-028 (bbb22d2). PH-025 put 1 of 3 links and PH-027 2 of 3 links on neighbouring pages (anchor lines were not unique); PH-034 adds the 3 missing links.
+
+Rankings-first work queued 2026-11-17 (judge 14+ days after live):
+- Live 2026-11-17 (master dbd471c): PH-054 Carrollton leak adjustment post (8ed3493; supports /cities/carrollton p9.3), PH-064 Austin Water leak adjustment post (dbd471c; supports /cities/austin/24-hour-emergency-plumber), PH-055 Austin 24-hour page links from 4 service pages (09a3637), PH-056/057 Houston (p18.5) and San Antonio (p23.2) 24-hour pages from 4 more service pages each (48c5c43, b27c174), PH-058/059/060 Arlington, Plano, Irving pages -> sewer (p40.2), slab leak (p22.1) and water heater calculators (689f228, dd5cd70, af49a82), PH-061/062 McKinney and Richardson link blocks (a553a66, 68983ec), PH-063 link into the San Antonio permit post (abb4b6e).
+- Queued: PH-065 to PH-073 link blocks on 3 service pages each in Carrollton, Frisco, Denton, Lewisville, Grand Prairie, Mesquite, Allen, Grapevine, Mansfield -> each city's 24-hour page, /guides/dfw-emergency-plumbing-costs (p13.0), slab leak (p22.1), sewer (p40.2) and water heater calculators. Links only: no keyword-overhaul titles, H1s, metas or citySearchAnswers touched (frisco/burst-pipe-emergency left alone).
 
 Rankings-first work queued 2026-11-14 (judge 14+ days after live):
 - Live 2026-11-14: PH-035 Houston section (33ba765), PH-036 San Antonio section (3f64497), PH-041 (a6574d9), PH-042 (f1b38d3), PH-043 (bf8365b), PH-044 (17b325e), PH-032 Fort Worth sewer post (893f0de).

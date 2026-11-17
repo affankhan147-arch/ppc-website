@@ -2,6 +2,15 @@
 
 Newest first. Claude reviews every `dsh/*` branch each morning: PASS = merged to master; FIX = see the note under the task in TASKS.md; REJECTED = broke a hard rule.
 
+## 2026-11-17 - audit (PH only: UHP paused by Sunny)
+- Keyword overhaul: no READY_ files in the Drive folder today (6 live since 15 Nov).
+- Agent runs: 16 Nov 18:41 UTC success (9 tasks + 1 writer); 17 Nov 17:42 UTC success (PH-064 writer only; all OPEN tasks already had branches).
+- Reviewed 11, all PASS: PH-064 writer @4e1d055 (byte-identical to Claude's code, every anchor right), PH-054 writer @6fa4ca5 (facts match the Carrollton brief; Claude cut "utility locations" from the 24/7 line FAQ, not in the source, 4c3f59f), PH-055 @62a0453, PH-056 @35f5e62, PH-057 @91267ea, PH-058 @dda2597, PH-059 @73d9454, PH-060 @6bf4763, PH-061 @963ec1e, PH-062 @933c01d, PH-063 @0f8d746 (every link under the named entry). Merged 87669a5..dbd471c, local build PASS (Carrollton and Austin post HTML have the proof lists and override titles), Vercel master success. Live fetch skipped (WebFetch permission timeout).
+- Search Console skipped: Chrome offline (cloud run). PH-004 stays WAITING.
+- Assigned 9 OPEN (dry-run by Claude, tsc PASS, counts 3/3; one file per task): PH-065 to PH-073 link blocks for Carrollton, Frisco, Denton, Lewisville, Grand Prairie, Mesquite, Allen, Grapevine, Mansfield service pages. No new WRITER brief: fortworthtexas.gov and plano.gov fetches timed out (unattended permission), and no fact goes in without a source opened in the run. Queue without branches: 9 OPEN + 0 WRITER (2 short of target) + PH-004 WAITING.
+- Desktop agent idle (laptop off or app closed?): no SEO Auditor branch Mon 16 Nov, no Backlink Scout Sat 14 Nov, no app Article Writer branch since 6 Nov.
+- First-time pass rate (7 days): about 40/52 tasks + 2 reports; today 10/11 clean. Coaching: the writer still adds small details that are not in the source (PH-054 "utility locations", PH-032 "slow drainage"); a third time gets a rule in the Article Writer job file.
+
 ## 2026-11-16 - audit (PH only: UHP paused by Sunny)
 - Keyword overhaul: no READY_ files in the Drive folder today (6 live since 15 Nov).
 - Agent runs: 15 Nov 15:43 UTC success, 14 Nov success; the 16 Nov run had not started by 17:47 UTC (GitHub cron delay), so its branches go to tomorrow's audit.

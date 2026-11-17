@@ -1242,7 +1242,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `h
 
 ---
 
-## PH-054 - New blog post: Carrollton water leak adjustment after a plumbing repair - Status: WRITER
+## PH-054 - New blog post: Carrollton water leak adjustment after a plumbing repair - Status: DONE (2026-11-17, dsh/2026-11-16-PH-054 merged 8ed3493; Claude kept the 24/7 line FAQ to the sourced wording in 4c3f59f)
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/carrollton-water-leak-adjustment-after-plumbing-repair`. Search intent: "carrollton water leak adjustment" / "carrollton leak adjustment form" (a homeowner with a high bill after a leak). Service: leak repair, so it supports /cities/carrollton (1,157 impressions, position 9.3) and /tools/slab-leak-repair-cost-calculator (1,204 impressions, position 22.1). Gap: no PH page covers Carrollton (grep of blogPosts.ts and pageEnhancements.ts on 2026-11-14). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug`. Copy the shape of PH-032 (`fortWorthSewerLineResponsibilityPost`) exactly.
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(fortWorthSewerLineResponsibilityPost);`, add a new post copying the shape of `fortWorthSewerLineResponsibilityPost` exactly, then `blogPosts.push(carrolltonLeakAdjustmentPost);`. Do NOT add it after the SAWS post (PH-045 adds there). Use exactly:
@@ -1272,7 +1272,7 @@ Done when: `npm run build` passes and `.next/server/app/blog/carrollton-water-le
 
 ---
 
-## PH-055 - Links from 4 Austin service pages to the Austin 24-hour page - Status: OPEN
+## PH-055 - Links from 4 Austin service pages to the Austin 24-hour page - Status: DONE (2026-11-17, dsh/2026-11-16-PH-055 merged 09a3637)
 File: `src/data/cityServiceEnhancementsAustinExpansion.ts`
 Why: /cities/austin/24-hour-emergency-plumber is PH's most-shown page (keyword overhaul 05, live 2026-11-15). The 8 Austin service pages give it no links and have no related links at all.
 Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
@@ -1311,7 +1311,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsAustinExp
 
 ---
 
-## PH-056 - Links from 4 more Houston service pages to the Houston 24-hour page - Status: OPEN
+## PH-056 - Links from 4 more Houston service pages to the Houston 24-hour page - Status: DONE (2026-11-17, dsh/2026-11-16-PH-056 merged 48c5c43)
 File: `src/data/cityServiceEnhancementsHoustonExpansion.ts`
 Why: /cities/houston/24-hour-emergency-plumber has 1,924 impressions at position 18.5 (Search Console, 28 days to 2026-11-07). PH-048 linked 3 Houston pages; these 4 still give it no links.
 Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
@@ -1348,7 +1348,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsHoustonEx
 
 ---
 
-## PH-057 - Links from 4 more San Antonio service pages to the San Antonio 24-hour page - Status: OPEN
+## PH-057 - Links from 4 more San Antonio service pages to the San Antonio 24-hour page - Status: DONE (2026-11-17, dsh/2026-11-16-PH-057 merged b27c174)
 File: `src/data/cityServiceEnhancementsSanAntonioExpansion.ts`
 Why: /cities/san-antonio/24-hour-emergency-plumber has 1,353 impressions at position 23.2 (Search Console, 28 days to 2026-11-07). PH-049 linked 3 San Antonio pages; these 4 still give it no links. The new permit post (PH-045, live 2026-11-15) also needs links in.
 Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
@@ -1386,7 +1386,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsSanAntoni
 
 ---
 
-## PH-058 - Arlington service pages: links to the sewer calculator and the slab leak repair cost calculator - Status: OPEN
+## PH-058 - Arlington service pages: links to the sewer calculator and the slab leak repair cost calculator - Status: DONE (2026-11-17, dsh/2026-11-16-PH-058 merged 689f228)
 File: `src/data/cityServiceEnhancementsArlingtonExpansion.ts`
 Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 and /tools/slab-leak-repair-cost-calculator needs links from city service pages; the Arlington pages give them none.
 Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
@@ -1407,7 +1407,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsArlington
 
 ---
 
-## PH-059 - Plano service pages: links to the sewer calculator and the water heater repair or replace calculator - Status: OPEN
+## PH-059 - Plano service pages: links to the sewer calculator and the water heater repair or replace calculator - Status: DONE (2026-11-17, dsh/2026-11-16-PH-059 merged dd5cd70)
 File: `src/data/cityServiceEnhancementsPlanoExpansion.ts`
 Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 and /tools/water-heater-repair-or-replace-calculator needs links from city service pages; the Plano pages give them none.
 Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
@@ -1428,7 +1428,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsPlanoExpa
 
 ---
 
-## PH-060 - Irving service pages: links to the sewer calculator and the slab leak repair cost calculator - Status: OPEN
+## PH-060 - Irving service pages: links to the sewer calculator and the slab leak repair cost calculator - Status: DONE (2026-11-17, dsh/2026-11-16-PH-060 merged af49a82)
 File: `src/data/cityServiceEnhancementsIrvingExpansion.ts`
 Why: /tools/sewer-line-repair-cost-calculator has 2,130 impressions at position 40.2 and /tools/slab-leak-repair-cost-calculator needs links from city service pages; the Irving pages give them none.
 Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
@@ -1449,7 +1449,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsIrvingExp
 
 ---
 
-## PH-061 - Links from 3 McKinney service pages to the McKinney 24-hour page and calculators - Status: OPEN
+## PH-061 - Links from 3 McKinney service pages to the McKinney 24-hour page and calculators - Status: DONE (2026-11-17, dsh/2026-11-16-PH-061 merged a553a66)
 File: `src/data/cityServiceEnhancementsMckinneyExpansion.ts`
 Why: The McKinney service pages have no related links at all, so /cities/mckinney/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators get nothing from them.
 Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
@@ -1480,7 +1480,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsMckinneyE
 
 ---
 
-## PH-062 - Links from 3 Richardson service pages to the Richardson 24-hour page and calculators - Status: OPEN
+## PH-062 - Links from 3 Richardson service pages to the Richardson 24-hour page and calculators - Status: DONE (2026-11-17, dsh/2026-11-16-PH-062 merged 68983ec)
 File: `src/data/cityServiceEnhancementsRichardsonExpansion.ts`
 Why: The Richardson service pages have no related links at all, so /cities/richardson/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators get nothing from them.
 Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
@@ -1511,7 +1511,7 @@ Done when: `npm run build` passes and `src/data/cityServiceEnhancementsRichardso
 
 ---
 
-## PH-063 - Link into the San Antonio permit post from the Texas DIY plumbing post - Status: OPEN
+## PH-063 - Link into the San Antonio permit post from the Texas DIY plumbing post - Status: DONE (2026-11-17, dsh/2026-11-16-PH-063 merged abb4b6e)
 File: `src/data/pageEnhancements.ts`
 Why: The new post /blog/san-antonio-plumbing-permit-homeowner-or-plumber (live 2026-11-15) has 2 links in. The Texas DIY plumbing post is the closest match.
 Where: for EACH entry below (each entry line appears once; search, do not read the whole file), find the FIRST line `    extraLinks: [` below the entry line and insert the lines directly BELOW it:
@@ -1524,7 +1524,7 @@ Done when: `npm run build` passes and `src/data/pageEnhancements.ts` contains `h
 
 ---
 
-## PH-064 - New blog post: Austin Water leak bill adjustment after a repair - Status: WRITER
+## PH-064 - New blog post: Austin Water leak bill adjustment after a repair - Status: DONE (2026-11-17, dsh/2026-11-17-PH-064 merged dbd471c)
 Files: `src/data/blogPosts.ts`, `src/data/pageEnhancements.ts`, `src/data/seoOverrides.ts`, `src/data/contentDates.ts`
 Goal: one new blog post at `/blog/austin-water-leak-bill-adjustment-after-repair`. Search intent: "austin water leak adjustment" / "austin water bill leak credit" (a homeowner with a high bill after a leak). Supports /cities/austin/24-hour-emergency-plumber (PH's most-shown page, keyword overhaul 05) and /cities/austin. Gap: no PH page covers Austin Water bills (grep of blogPosts.ts and pageEnhancements.ts on 2026-11-15). The page renders from these 4 data files; the hero image is picked automatically from `relatedServiceSlug`. Claude wrote every line below: place it exactly, do not reword, add or drop anything. Use only these anchors (PH-054 and PH-063 edit other spots in the same files).
 1. `src/data/blogPosts.ts`: directly after the line `blogPosts.push(sanAntonioPlumbingPermitPost);` insert:
@@ -1607,3 +1607,283 @@ Sources (Claude opened them on 2026-11-15): https://www.austintexas.gov/water/hi
 Done when: `npm run build` passes and `.next/server/app/blog/austin-water-leak-bill-adjustment-after-repair.html` exists and contains `What else Austin Water says about high bills`.
 
 ---
+
+---
+
+## PH-065 - Links from 3 Carrollton service pages to the Carrollton 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsCarrolltonExpansion.ts`
+Why: The Carrollton service pages have no related links at all, so /cities/carrollton/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them, and neither does the new leak adjustment post (PH-054, live 2026-11-17).
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "carrollton/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+      { label: "Carrollton water leak adjustment: how to apply", href: "/blog/carrollton-water-leak-adjustment-after-plumbing-repair" },
+    ],
+```
+- In the entry `  "carrollton/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "carrollton/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Carrollton", href: "/cities/carrollton/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsCarrolltonExpansion.ts` contains `href: "/cities/carrollton/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-066 - Links from 3 Frisco service pages to the Frisco 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsFriscoExpansion.ts`
+Why: The Frisco service pages have no related links at all, so /cities/frisco/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them. /cities/frisco/burst-pipe-emergency is a keyword-overhaul page until 2026-12-10, so it is left alone.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "frisco/sewer-backup-help": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Frisco", href: "/cities/frisco/emergency-drain-cleaning" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+- In the entry `  "frisco/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "frisco/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsFriscoExpansion.ts` contains `href: "/cities/frisco/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-067 - Links from 3 Denton service pages to the Denton 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsDentonExpansion.ts`
+Why: The Denton service pages have no related links at all, so /cities/denton/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "denton/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Denton", href: "/cities/denton/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "denton/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Denton", href: "/cities/denton/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "denton/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Denton", href: "/cities/denton/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsDentonExpansion.ts` contains `href: "/cities/denton/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-068 - Links from 3 Lewisville service pages to the Lewisville 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsLewisvilleExpansion.ts`
+Why: The Lewisville service pages have no related links at all, so /cities/lewisville/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "lewisville/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Lewisville", href: "/cities/lewisville/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "lewisville/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Lewisville", href: "/cities/lewisville/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "lewisville/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Lewisville", href: "/cities/lewisville/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsLewisvilleExpansion.ts` contains `href: "/cities/lewisville/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-069 - Links from 3 Grand Prairie service pages to the Grand Prairie 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsGrandPrairieExpansion.ts`
+Why: The Grand Prairie service pages have no related links at all, so /cities/grand-prairie/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "grand-prairie/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Grand Prairie", href: "/cities/grand-prairie/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "grand-prairie/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Grand Prairie", href: "/cities/grand-prairie/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "grand-prairie/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Grand Prairie", href: "/cities/grand-prairie/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsGrandPrairieExpansion.ts` contains `href: "/cities/grand-prairie/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-070 - Links from 3 Mesquite service pages to the Mesquite 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsMesquiteExpansion.ts`
+Why: The Mesquite service pages have no related links at all, so /cities/mesquite/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "mesquite/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mesquite", href: "/cities/mesquite/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "mesquite/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mesquite", href: "/cities/mesquite/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "mesquite/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mesquite", href: "/cities/mesquite/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsMesquiteExpansion.ts` contains `href: "/cities/mesquite/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-071 - Links from 3 Allen service pages to the Allen 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsAllenExpansion.ts`
+Why: The Allen service pages have no related links at all, so /cities/allen/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "allen/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Allen", href: "/cities/allen/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "allen/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Allen", href: "/cities/allen/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "allen/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Allen", href: "/cities/allen/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsAllenExpansion.ts` contains `href: "/cities/allen/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-072 - Links from 3 Grapevine service pages to the Grapevine 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsGrapevineExpansion.ts`
+Why: The Grapevine service pages have no related links at all, so /cities/grapevine/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "grapevine/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Grapevine", href: "/cities/grapevine/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "grapevine/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Grapevine", href: "/cities/grapevine/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "grapevine/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Grapevine", href: "/cities/grapevine/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsGrapevineExpansion.ts` contains `href: "/cities/grapevine/24-hour-emergency-plumber" }` exactly 3 times.
+
+---
+
+## PH-073 - Links from 3 Mansfield service pages to the Mansfield 24-hour page and calculators - Status: OPEN
+File: `src/data/cityServiceEnhancementsMansfieldExpansion.ts`
+Why: The Mansfield service pages have no related links at all, so /cities/mansfield/24-hour-emergency-plumber, the DFW emergency cost guide (position 13.0) and the calculators (slab leak position 22.1, sewer position 40.2) get nothing from them.
+Where: these entries have no `extraLinks` yet. Do this in each place below (each entry line appears once; search, do not read the whole file). Find the FIRST line that is exactly `  },` below the entry line and insert the lines directly ABOVE that `  },` line:
+- In the entry `  "mansfield/burst-pipe-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mansfield", href: "/cities/mansfield/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
+    ],
+```
+- In the entry `  "mansfield/water-heater-emergency": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mansfield", href: "/cities/mansfield/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+    ],
+```
+- In the entry `  "mansfield/main-sewer-line-clog": {`:
+```ts
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mansfield", href: "/cities/mansfield/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
+```
+Copy the lines exactly, including the trailing commas. Change nothing else.
+Done when: `npm run build` passes and `src/data/cityServiceEnhancementsMansfieldExpansion.ts` contains `href: "/cities/mansfield/24-hour-emergency-plumber" }` exactly 3 times.
