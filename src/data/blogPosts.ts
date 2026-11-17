@@ -388,6 +388,16 @@ export const fortWorthSewerLineResponsibilityPost: BlogPost = {
 
 blogPosts.push(fortWorthSewerLineResponsibilityPost);
 
+export const carrolltonLeakAdjustmentPost: BlogPost = {
+  slug: "carrollton-water-leak-adjustment-after-plumbing-repair",
+  title: "Carrollton Water Leak Adjustment: How to Get a Bill Credit After a Repair",
+  directAnswer: "Carrollton can reduce a water bill raised by a leak in the plumbing on your property, but only once in any 12-month period. Get the leak repaired first, wait for a full leak-free billing period, then send the Certification of Water Leak Repair form with proof of payment within 90 days of the bill that showed the water loss.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(carrolltonLeakAdjustmentPost);
+
 
 export const highWaterPressurePost: BlogPost = {
   slug: "high-water-pressure-in-dallas-home-hidden-pipe-damage-risk",

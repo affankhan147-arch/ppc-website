@@ -175,6 +175,12 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "In Fort Worth the sewer pipe from your house to the city main is yours to maintain. How to tell whose problem a backup is, who to call and the permit rules."
   },
+  // New post 2026-11-14 (PH-054).
+  "/blog/carrollton-water-leak-adjustment-after-plumbing-repair": {
+    title: "Carrollton Water Leak Adjustment: Rules and How to Apply",
+    description:
+      "Leak raised your Carrollton water bill? The city allows one adjustment per 12 months. What it covers, the 90-day deadline and the form and receipts to send."
+  },
   // 42 impr / 2.4% / pos 4.3
   "/guides/dfw-housing-age-by-city": {
     description:
