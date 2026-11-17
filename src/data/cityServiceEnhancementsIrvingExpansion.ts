@@ -53,6 +53,7 @@ export const irvingExpansionCityServiceEnhancements: Record<string, PageEnhancem
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Irving service area", href: "/cities/irving" },
       { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
       { label: "Sewer backup help", href: "/services/sewer-backup-help" }
@@ -182,6 +183,7 @@ export const irvingExpansionCityServiceEnhancements: Record<string, PageEnhancem
       }
     ],
     extraLinks: [
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
       { label: "Irving service area", href: "/cities/irving" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "24-hour emergency plumber in Irving", href: "/cities/irving/24-hour-emergency-plumber" }
@@ -225,6 +227,7 @@ export const irvingExpansionCityServiceEnhancements: Record<string, PageEnhancem
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Irving service area", href: "/cities/irving" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Main sewer line clog in Irving", href: "/cities/irving/main-sewer-line-clog" }
