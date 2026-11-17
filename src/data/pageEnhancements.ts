@@ -4172,7 +4172,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       {
         question: "Who do I call about a water leak at night in Carrollton?",
         answer:
-          "Carrollton Public Works operates a 24/7 emergency dispatch line at 972-466-3425 for water leaks, sewer issues, and utility locations. If the water leak is in the plumbing lines or fixtures on your own property, shut off the water service and call a licensed plumber to make repairs."
+          "Carrollton Public Works operates a 24/7 emergency dispatch line at 972-466-3425 for water leaks and sewer problems. If the water leak is in the plumbing lines or fixtures on your own property, shut off the water service and call a licensed plumber to make repairs."
       }
     ],
     extraLinks: [
