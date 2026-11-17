@@ -127,6 +127,12 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/blog/san-antonio-plumbing-permit-homeowner-or-plumber": {
     description: "Can you pull your own plumbing permit in San Antonio? Only for your homestead, doing the work yourself. Otherwise a licensed, registered plumber pulls it."
   },
+  // New post 2026-11-16 (PH-064).
+  "/blog/austin-water-leak-bill-adjustment-after-repair": {
+    title: "Austin Water Leak Adjustment: How to Apply After a Repair",
+    description:
+      "Leak raised your Austin Water bill? Ask for a leak adjustment within 90 days of the repair. What to send, where to send it, and what if there was no leak."
+  },
   // 47 impr / 0% / pos 11.5
   "/tools/dfw-leak-cost-calculator": {
     description:

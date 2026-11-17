@@ -3726,6 +3726,49 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "San Antonio service area", href: "/cities/san-antonio" }
     ]
   },
+  "austin-water-leak-bill-adjustment-after-repair": {
+    checklistTitle: "Before you ask Austin Water for a leak adjustment",
+    checklistIntro:
+      "A leak can push your Austin Water bill far above normal. The city has a Water Leak Bill Adjustment for that, but it only looks at a request once the leak is repaired and the paperwork is complete.",
+    checklistItems: [
+      "Get the leak repaired first. Austin Water asks for the request within 90 days of the leak repair.",
+      "Keep a copy of the repair receipt or paid invoice that describes the repair.",
+      "Have your Austin Water account number and the address of the property where the repair was done.",
+      "Write down the date range of the high charges caused by the leak, plus the date and a description of the repair.",
+      "Send the documents to Austin Water by email at customercare@coautilities.com or by fax at 512-505-4035, as the city's high water bill page describes."
+    ],
+    proofTitle: "What else Austin Water says about high bills",
+    proofItems: [
+      "The leak adjustment falls under City Code 15-9-141. If you receive one, you may not request an administrative hearing for the same billing period.",
+      "No leak? A single-family residential customer may qualify for the separate Non-Leak High Water Bill Adjustment if they were billed for at least three times their expected volume and have not received an adjustment in the past two years.",
+      "That non-leak request also needs at least four months of billing history at the address and must be sent within 90 days of the high-use bill, using the High Volume Water Bill Adjustment Application.",
+      "If your bill is still high after checking for leaks, Austin Water Customer Service at 512-494-9400 can review your usage."
+    ],
+    extraFaqs: [
+      {
+        question: "How long do I have to apply for an Austin Water leak adjustment?",
+        answer:
+          "Austin Water asks for the request within 90 days of the leak repair. Send a copy of the paid repair receipt or invoice, your account number, the property address, the date range of the high charges and the date and description of the repair. Keep copies of everything you send."
+      },
+      {
+        question: "Who fixes a leak on my side of the Austin Water meter?",
+        answer:
+          "Austin Water says property owners are responsible for service lines past the meter and for internal plumbing. A leak in your yard line, under the slab or inside the house is a job for a licensed plumber. Your customer cut-off valve can shut off water to the whole property while you wait."
+      },
+      {
+        question: "Who do I call about a water leak in Austin at night?",
+        answer:
+          "Austin Water's Customer Service Contact Center at 512-972-1000 is available 24/7 for reporting a leak that is not already on its leak map. If the leak is in your own pipes or fixtures, shut off the water at your cut-off valve and call a licensed plumber."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Austin plumbing help", href: "/cities/austin" },
+      { label: "Burst pipe help in Austin", href: "/cities/austin/burst-pipe-emergency" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" }
+    ]
+  },
   "what-counts-as-a-plumbing-emergency": {
     checklistTitle: "How to tell if your plumbing issue counts as an emergency",
     checklistIntro:
@@ -5071,6 +5114,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Austin Water leak bill adjustment: what to send", href: "/blog/austin-water-leak-bill-adjustment-after-repair" },
       { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
       { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" }
@@ -5306,6 +5350,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Austin Water leak bill adjustment: what to send", href: "/blog/austin-water-leak-bill-adjustment-after-repair" },
       { label: "Plumber or water-restoration company first?", href: "/blog/plumber-or-water-restoration-company-first" },
       { label: "Burst pipe emergency service", href: "/services/burst-pipe-emergency" },
       { label: "Emergency leak repair cost guide", href: "/cost-guides/emergency-leak-repair-cost-dfw" }

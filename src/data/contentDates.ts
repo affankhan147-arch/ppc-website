@@ -39,6 +39,7 @@ export const contentPublished: Record<string, string> = {
   "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": "2026-11-05",
   "/blog/saws-water-leak-who-fixes-it-san-antonio": "2026-11-12",
   "/blog/san-antonio-plumbing-permit-homeowner-or-plumber": "2026-11-13",
+  "/blog/austin-water-leak-bill-adjustment-after-repair": "2026-11-16",
   "/blog/how-to-verify-a-texas-plumbers-license": "2026-08-14",
   "/blog/hydro-jetting-vs-drain-snaking-dfw": "2026-08-05",
   "/blog/is-a-clogged-drain-actually-a-sewer-line-problem": "2026-08-05",

@@ -530,3 +530,14 @@ export const sanAntonioPlumbingPermitPost: BlogPost = {
 };
 
 blogPosts.push(sanAntonioPlumbingPermitPost);
+
+export const austinWaterLeakAdjustmentPost: BlogPost = {
+  slug: "austin-water-leak-bill-adjustment-after-repair",
+  title: "Austin Water Leak Bill Adjustment: What to Send After a Repair",
+  directAnswer:
+    "Austin Water offers a Water Leak Bill Adjustment for high charges caused by a leak. Get the leak fixed first, then send the paid repair receipt or invoice, your account number, the property address, the dates of the high charges and a description of the repair within 90 days of the repair.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(austinWaterLeakAdjustmentPost);
