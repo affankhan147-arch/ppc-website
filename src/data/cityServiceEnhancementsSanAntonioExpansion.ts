@@ -34,6 +34,11 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Avoid contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
+    ],
   },
   "san-antonio/water-heater-emergency": {
     decisionTitle: "Water Heater Emergencies in San Antonio",
@@ -85,6 +90,10 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Shut off the toilet's supply valve immediately to stop the overflow",
       "Avoid flushing again until the cause is identified",
       "Clean up standing water promptly to prevent flooring damage",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in San Antonio", href: "/cities/san-antonio/emergency-drain-cleaning" },
     ],
   },
   "san-antonio/burst-pipe-emergency": {
@@ -190,6 +199,10 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Keep documentation and photos ready for any warranty claim",
       "Avoid using the affected fixture until the plumber arrives",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Plumbing permit in San Antonio: can a homeowner pull it?", href: "/blog/san-antonio-plumbing-permit-homeowner-or-plumber" },
+    ],
   },
   "san-antonio/sink-and-shower-drain-backup": {
     decisionTitle: "Sink and Shower Drain Backups in San Antonio",
@@ -213,6 +226,10 @@ export const sanAntonioExpansionCityServiceEnhancements: Record<string, PageEnha
       "Avoid chemical drain cleaners, which can damage older pipe materials and newer fittings alike",
       "Stop using the affected fixture until the clog is cleared",
       "Watch for water damage under sinks or around shower bases",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in San Antonio", href: "/cities/san-antonio/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in San Antonio", href: "/cities/san-antonio/emergency-drain-cleaning" },
     ],
   },
 };
