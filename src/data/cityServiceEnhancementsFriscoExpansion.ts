@@ -34,6 +34,10 @@ export const friscoExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Avoid contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
   },
   "frisco/water-heater-emergency": {
     decisionTitle: "Water Heater Emergencies in Frisco's Newer Homes",
@@ -57,6 +61,10 @@ export const friscoExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Shut off the gas or electric supply if you smell gas or see sparking",
       "Don't attempt to relight a tankless unit's ignition system yourself",
       "Watch for scalding water from a malfunctioning thermostat",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
     ],
   },
   "frisco/toilet-overflow-emergency": {
@@ -129,6 +137,11 @@ export const friscoExpansionCityServiceEnhancements: Record<string, PageEnhancem
       "Avoid using water in the home until the backup is cleared",
       "Stay away from contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Frisco", href: "/cities/frisco/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Frisco", href: "/cities/frisco/emergency-drain-cleaning" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
     ],
   },
   "frisco/commercial-emergency-plumbing": {
