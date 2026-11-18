@@ -43,6 +43,10 @@ export const allenExpansionCityServiceEnhancements: Record<string, PageEnhanceme
       "Avoid contact with backed-up wastewater",
       "Ventilate the area if sewer gas odor is present",
     ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Allen", href: "/cities/allen/24-hour-emergency-plumber" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+    ],
   },
   "allen/water-heater-emergency": {
     decisionTitle: "Water Heater Emergencies in Allen",
@@ -66,6 +70,10 @@ export const allenExpansionCityServiceEnhancements: Record<string, PageEnhanceme
       "Shut off gas or electric supply if you smell gas or see sparking",
       "Don't attempt to relight a tankless unit's ignition system yourself",
       "Watch for scalding water from a malfunctioning thermostat",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Allen", href: "/cities/allen/24-hour-emergency-plumber" },
+      { label: "Water heater repair or replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
     ],
   },
   "allen/toilet-overflow-emergency": {
@@ -114,6 +122,11 @@ export const allenExpansionCityServiceEnhancements: Record<string, PageEnhanceme
       "Shut off the main water supply immediately",
       "Turn off electricity to any affected areas near standing water",
       "Document damage with photos before cleanup for insurance claims",
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Allen", href: "/cities/allen/24-hour-emergency-plumber" },
+      { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" },
     ],
   },
   "allen/sewer-backup-help": {
