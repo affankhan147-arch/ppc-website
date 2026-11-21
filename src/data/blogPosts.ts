@@ -541,3 +541,133 @@ export const austinWaterLeakAdjustmentPost: BlogPost = {
 };
 
 blogPosts.push(austinWaterLeakAdjustmentPost);
+
+export const sewerCameraInspectionPost: BlogPost = {
+  slug: "sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds",
+  title: "Sewer Camera Inspection Cost in DFW: What It Finds",
+  directAnswer: "A sewer camera inspection -- also called a sewer scope -- is a video inspection of the lateral sewer line, the pipe that runs from your house to the municipal sewer tap, and it is the only way to see the condition of the buried line a standard home inspection does not cover. It is usually booked for repeat drain backups, buying an older home, or before approving a large sewer repair, and what it costs depends on access, line length, and whether the video, written report, and defect locating are included.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(sewerCameraInspectionPost);
+
+export const toiletRunningConstantlyPost: BlogPost = {
+  slug: "toilet-running-constantly-dallas-wont-stop-running",
+  title: "Toilet Running Constantly? Fix the Flapper & Fill Valve",
+  directAnswer: "A toilet that runs constantly usually means water is leaking from the tank into the bowl around the clock, or the fill valve never quite shuts off -- and in most cases the fix is one of two small parts, the flapper or the fill valve. The EPA WaterSense food-coloring dye test tells you which one: color in the bowl after ten minutes points to the flapper.",
+  category: "Emergency steps",
+  relatedServiceSlug: "toilet-overflow-emergency"
+};
+
+blogPosts.push(toiletRunningConstantlyPost);
+
+export const thawFrozenPipesPost: BlogPost = {
+  slug: "how-to-thaw-frozen-pipes-safely-dallas-fort-worth",
+  title: "How to Thaw Frozen Pipes Safely in DFW",
+  directAnswer: "A frozen pipe in a DFW home usually announces itself with a faucet that gives nothing, or a thin trickle where a full stream should be, on a cold morning. Open the faucet first, thaw with gentle steady heat -- never an open flame -- work from the faucet toward the freeze, and check for damage once the water is flowing again.",
+  category: "Emergency steps",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(thawFrozenPipesPost);
+
+export const toiletLeakingAtBasePost: BlogPost = {
+  slug: "toilet-leaking-at-base-wax-ring-failure-signs-dallas",
+  title: "Toilet Leaking at the Base? Wax Ring Signs",
+  directAnswer: "Water pooling around the base of a toilet usually means the seal between the toilet and the floor has failed -- and the water you see on the floor is only part of it, because some of it is going under the floor where you cannot see it. Dry the floor, flush once, and watch the base: water appearing after a flush points at the seal, while a rocking toilet or a sewer smell are the other signs to check.",
+  category: "Emergency steps",
+  relatedServiceSlug: "toilet-overflow-emergency"
+};
+
+blogPosts.push(toiletLeakingAtBasePost);
+
+export const waterLeakingUnderSinkPost: BlogPost = {
+  slug: "water-leaking-under-kitchen-sink-first-checks-dallas",
+  title: "Water Leaking Under the Sink? First Checks",
+  directAnswer: "A wet cabinet floor under the kitchen or bathroom sink is one of the most common leaks in a DFW home -- and one of the easiest to ignore, because it hides behind a closed door. Dry everything under the sink completely, turn the water back on, and watch: the dry-and-watch test shows which connection is actually leaking.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(waterLeakingUnderSinkPost);
+
+export const tanklessFlushDescalePost: BlogPost = {
+  slug: "tankless-water-heater-flush-descale-dallas-hard-water",
+  title: "Tankless Water Heater Flush & Descale in DFW",
+  directAnswer: "A tankless water heater has no tank to rust out, but it has a heat exchanger that water passes through every time you turn on a tap -- and in Dallas-Fort Worth, that water is hard. The minerals leave scale on the heat exchanger, and scale is an insulator: the more of it there is, the harder the unit works to heat the same water, so a flush and descale removes it.",
+  category: "Prevention",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(tanklessFlushDescalePost);
+
+export const tanklessSizePost: BlogPost = {
+  slug: "what-size-tankless-water-heater-do-i-need-dallas",
+  title: "What Size Tankless Water Heater Do I Need?",
+  directAnswer: "A tankless water heater is not sized like a tank heater: a tank is sized by gallons, but a tankless unit is sized by two numbers -- how much hot water it can deliver at once, and how much it can heat that water by. Get either number wrong and the unit will work -- just not when you need it most, like a shower running while the dishwasher fills.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(tanklessSizePost);
+
+export const castIronDrainPipePost: BlogPost = {
+  slug: "cast-iron-drain-pipe-replacement-dallas-fort-worth",
+  title: "Cast Iron Drain Pipe Replacement in DFW: Signs",
+  directAnswer: "Many Dallas-Fort Worth homes built before the 1970s still have cast iron drain pipes carrying wastewater out of the house. Cast iron corrodes from the inside out, and in North Texas clay soil that shifts with wet and dry spells, aging cast iron is one of the most common reasons older homes develop slow drains, sewer smells, and recurring clogs.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(castIronDrainPipePost);
+
+export const pexVsCopperRepipePost: BlogPost = {
+  slug: "pex-vs-copper-repipe-dallas-fort-worth",
+  title: "PEX vs Copper Repipe in DFW: Which Is Better?",
+  directAnswer: "A repipe is the replacement of the water supply lines in a home, and in Dallas-Fort Worth the question in almost every repipe conversation is the same: PEX or copper? Both are used in DFW homes today, and neither is the right answer for every house -- the honest comparison is about which fits your home.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(pexVsCopperRepipePost);
+
+export const flushWaterHeaterPost: BlogPost = {
+  slug: "how-to-flush-water-heater-dallas-fort-worth-sediment",
+  title: "How to Flush a Water Heater in DFW: Sediment",
+  directAnswer: "Sediment is the mineral grit that settles at the bottom of a conventional tank water heater -- and in Dallas-Fort Worth, where the water is hard, it builds up faster than in most places. Left alone, it makes the heater work harder, heats water more slowly, and shortens the life of the tank, so flushing it out is the maintenance job that prevents all three.",
+  category: "Prevention",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(flushWaterHeaterPost);
+
+export const waterHeaterFluePost: BlogPost = {
+  slug: "water-heater-flue-carbon-monoxide-warning-signs-dallas",
+  title: "Water Heater Flue & Carbon Monoxide Warning Signs",
+  directAnswer: "A gas water heater burns fuel to heat your water, and the flue -- the metal vent pipe on top of the heater -- carries the combustion gases, including carbon monoxide, safely outside. When the flue works, you never think about it; when it does not, those gases can come back into the home instead.",
+  category: "Emergency steps",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(waterHeaterFluePost);
+
+export const garbageDisposalJammedPost: BlogPost = {
+  slug: "garbage-disposal-jammed-reset-button-dallas-fort-worth",
+  title: "Garbage Disposal Jammed? Reset Button & When It's Dead",
+  directAnswer: "A jammed garbage disposal is one of the most common kitchen calls in a DFW home: you flip the switch, and nothing happens -- or it hums and does not turn. Most of the time the cause is simple, and the fix is a button and a wrench -- but never put your hand inside the disposal.",
+  category: "Emergency steps",
+  relatedServiceSlug: "emergency-drain-cleaning"
+};
+
+blogPosts.push(garbageDisposalJammedPost);
+
+export const sewerLineBelliedPost: BlogPost = {
+  slug: "sewer-line-bellied-sagging-signs-repair-dallas-fort-worth",
+  title: "Sewer Line Bellied in DFW: Signs & Repair Options",
+  directAnswer: "A sewer line is supposed to slope gently downward from the house to the street, so wastewater flows away under gravity. A belly is a section of that line that has sagged below the slope -- a low spot where water pools instead of flowing -- and it is one of the quieter sewer problems in DFW.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(sewerLineBelliedPost);

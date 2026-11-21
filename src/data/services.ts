@@ -203,6 +203,66 @@ export const services: Service[] = [
     costDiscussion: "Shared drain backup cost depends on where the blockage sits and whether the main line is involved. Ask whether the provider is clearing a fixture branch or diagnosing a wider line issue.",
     costFactors: ["shared line access", "clog depth", "equipment", "repeat issue", "building layout"],
     faqSeed: ["Why do sink and shower drains back up together?", "Is it a main line problem?", "Should I snake it myself?"]
+  },
+  {
+    slug: "emergency-plumbing-under-200",
+    name: "emergency plumbing under 200",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "Some emergency plumbing visits can stay under $200 -- a simple diagnosis, a minor clearing, or shutting off water and making a leak safe -- but whether a visit stays under $200 depends on the diagnosis, parts, timing, and access, so confirm the price with the matched provider before work starts.",
+    urgency: "Medium",
+    symptoms: ["urgent leak", "no hot water", "slow drain worsening", "fixture failure", "water heater issue"],
+    steps: ["Shut off the nearest valve if safe.", "Describe the problem and your budget clearly.", "Ask what the visit includes.", "Request a provider connection."],
+    callPrep: ["City and service need.", "What the problem is and when it started.", "Whether water damage is active.", "Photos or notes about the issue."],
+    commonCauses: ["fixture wear", "minor active leak", "slow clog", "water heater trouble", "shutoff failure"],
+    mistakesToAvoid: ["Do not accept guaranteed pricing before diagnosis.", "Do not hide prior chemical use.", "Do not wait if water is spreading.", "Do not assume a price cap covers parts or after-hours work."],
+    costDiscussion: "Whether an emergency plumbing visit stays under $200 depends on timing, diagnosis, access, parts, and whether property damage is active. Costs vary and must be confirmed directly with the matched provider before work starts -- a price mentioned online is not a quote for your home.",
+    costFactors: ["time of day", "diagnosis", "parts needed", "access", "service distance"],
+    faqSeed: ["Can emergency plumbing stay under $200?", "What does an emergency visit include?", "How do I keep the cost down?"]
+  },
+  {
+    slug: "toilet-backup",
+    name: "toilet backup",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "A toilet backing up -- water or waste coming back up into the bowl instead of flushing away -- usually points to a clog in the toilet trap, a blocked branch line, or a main sewer restriction. Stop flushing, avoid using other fixtures, and request urgent help if water keeps rising or other drains back up too.",
+    urgency: "High",
+    symptoms: ["toilet backs up after flushing", "water rises in bowl", "sewage odor", "tub or shower backs up too", "gurgling fixtures"],
+    steps: ["Stop flushing the toilet.", "Turn off the toilet supply valve if water keeps rising.", "Do not use other fixtures until the cause is known.", "Call for toilet backup help."],
+    callPrep: ["Whether the toilet supply valve works.", "Whether a tub or shower backs up too.", "Whether the water is clean or dirty.", "How many toilets are affected."],
+    commonCauses: ["fixture clog", "blocked toilet trap", "main line restriction", "foreign object", "failed fill valve"],
+    mistakesToAvoid: ["Do not flush repeatedly.", "Do not keep plunging if dirty water rises elsewhere.", "Do not mix chemicals with toilet water.", "Do not ignore sewage odor."],
+    costDiscussion: "Toilet backup cost depends on whether the issue is isolated to the toilet or tied to a deeper drain or sewer line problem. Cleanup and fixture repair may be separate from clearing the blockage, so confirm scope with the provider before work starts.",
+    costFactors: ["clog depth", "fixture condition", "floor cleanup", "main line involvement", "time of service"],
+    faqSeed: ["Why is my toilet backing up?", "When is toilet backup a sewer issue?", "Should I use a plunger?"]
+  },
+  {
+    slug: "water-heater-not-heating",
+    name: "water heater not heating",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "A water heater that is not heating usually comes down to a failed heating element, a tripped thermostat, a pilot light that will not stay lit, a gas supply problem, or heavy sediment. Check the power or gas supply and the pilot light if safe, then request water heater help.",
+    urgency: "Medium",
+    symptoms: ["no hot water", "lukewarm water only", "pilot light will not stay lit", "popping sounds", "water near heater"],
+    steps: ["Check whether the breaker is tripped or the gas supply is on.", "Do not relight gas if you smell gas.", "Avoid standing water near electrical parts.", "Call for water heater help."],
+    callPrep: ["Tank or tankless type.", "Approximate age and size.", "Whether water is actively leaking.", "Whether gas, breaker, or shutoff is accessible."],
+    commonCauses: ["failed heating element", "thermostat failure", "pilot light issue", "sediment buildup", "gas supply problem"],
+    mistakesToAvoid: ["Do not touch electrical components near water.", "Do not relight gas if you smell gas.", "Do not assume a tank leak can always be repaired.", "Do not ignore rusty or expanding leaks."],
+    costDiscussion: "Water heater repair cost depends on repair versus replacement, tank size, access, parts, and code requirements. Costs vary and must be confirmed directly with the matched provider -- ask whether the provider can explain options before work begins.",
+    costFactors: ["tank age", "repair versus replacement", "parts needed", "capacity", "code requirements"],
+    faqSeed: ["Why is my water heater not heating?", "Is a water heater that stopped heating an emergency?", "Can a water heater be repaired?"]
+  },
+  {
+    slug: "burst-pipe-what-to-do",
+    name: "burst pipe what to do",
+    categorySlug: "emergency-plumbing",
+    shortAnswer: "When a pipe bursts, shut off the main water valve first, keep people away from wet electrical areas, open a low faucet to drain pressure, and get an emergency plumber out for pipe repair as soon as possible.",
+    urgency: "High",
+    symptoms: ["water spraying", "ceiling leak", "wall swelling", "sudden pressure loss", "water meter spinning"],
+    steps: ["Shut off the main water valve.", "Turn off electricity near standing water if safe.", "Open a low faucet to drain pressure.", "Call for urgent pipe help."],
+    callPrep: ["Where water is appearing.", "Whether the main shutoff is closed.", "Pipe material if known.", "Whether ceiling, wall, or slab access may be involved."],
+    commonCauses: ["freeze stress", "corrosion", "high pressure", "failed fitting", "accidental damage"],
+    mistakesToAvoid: ["Do not leave the main water on.", "Do not touch wet switches or outlets.", "Do not patch over active pressure.", "Do not wait if ceilings or walls are swelling."],
+    costDiscussion: "Burst pipe repair cost depends on where the pipe broke, how hard it is to reach, the pipe material, and whether walls, ceilings, or a slab have to be opened. Costs vary and must be confirmed directly with the matched provider -- water mitigation is usually billed separately from the plumbing repair itself.",
+    costFactors: ["pipe location", "wall or slab access", "material type", "water damage", "after-hours timing"],
+    faqSeed: ["What do I do first when a pipe bursts?", "Where is my main shutoff valve?", "Is a burst pipe an emergency?"]
   }
 
 ];

@@ -5618,6 +5618,788 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water Heater Repair-or-Replace Calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
       { label: "24-hour emergency plumber", href: "/services/24-hour-emergency-plumber" }
     ]
+  },
+  "sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds": {
+    checklistTitle: "What a sewer camera inspection shows -- and when to book one",
+    checklistIntro:
+      "A sewer camera inspection is the only way to see the buried line that carries wastewater from your home to the city sewer -- the one pipe a standard home inspection does not cover. It is usually booked for repeat drain backups, buying an older home, or before approving a large sewer repair.",
+    checklistItems: [
+      "A camera scope feeds a waterproof camera through an outdoor cleanout and shows the inside of the lateral sewer line live on a monitor, with a distance counter tracking how far down the line each feature sits.",
+      "A sonde in the camera head works with a handheld locator above ground, so a problem can be found from the yard and marked exactly where it is -- the point is not just to see a problem but to know where it is.",
+      "A camera report flags what needs correction under InterNACHI sewer scope standards: visible cracks, root intrusion, offsets over a quarter of an inch, a deformed line, standing water over one inch, blockages, and crushed, broken, separated, or collapsed pipe.",
+      "In DFW, the three most common findings are root intrusion, bellies with standing water, and offset joints or aging cast iron -- North Texas clay soils shift with wet and dry spells and can shift pipe joints out of line.",
+      "Book a scope when you are buying an older home, when backups keep coming back after a cleaning, when several fixtures drain slowly at once, when you smell sewer gas or see soggy patches in the yard, or before approving a big sewer repair.",
+      "Before the visit, ask three questions: will you get the video file, will you get a written report with distances, and will defects be located and marked from above ground -- if the answer to any is no, you are paying for a look, not an inspection.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm the price in writing, including whether the recorded video, a written report with distances and defect locations, and defect locating are included.",
+      "Confirm how the line will be accessed -- a working outdoor cleanout is simplest; without one, access may mean pulling a toilet or using a roof vent.",
+      "Ask what the report will cover: pipe material where it can be identified, which portions of the line were inspected, and which were not and why.",
+      "Ask how long the visit takes and what happens next if the camera finds a belly, a break, or a collapsed section.",
+    ],
+    extraFaqs: [
+      {
+        question: "How much does a sewer camera inspection cost in DFW?",
+        answer:
+          "There is no single set price. Cost varies with access (a working cleanout versus pulling a toilet), the length of the line, and whether the recorded video, a written report, and defect locating are included. Confirm the price in writing with the matched provider before booking, and ask that the video and report are part of it."
+      },
+      {
+        question: "Does a standard home inspection include a sewer camera inspection?",
+        answer:
+          "No. Under InterNACHI's home inspection standards, an inspector is not required to inspect underground utilities, and a standard inspection will not identify concealed or latent defects in a buried line. A sewer scope is a separate, additional inspection."
+      },
+      {
+        question: "How long does a sewer camera inspection take?",
+        answer:
+          "A residential sewer scope is usually finished in a single visit. The exact time depends on access and the length of the line — the matched provider can confirm what to expect for your home."
+      },
+      {
+        question: "What if the camera finds a belly or standing water?",
+        answer:
+          "Standing water over one inch deep is reported as needing correction under the InterNACHI sewer scope standards. A belly can also hide what lies beyond it, because the camera lens cannot see past standing water. The next step — monitoring, cleaning, or repair — depends on the rest of the report and should be confirmed with the matched provider."
+      },
+      {
+        question: "Can a camera inspection see the pipe under the slab?",
+        answer:
+          "Not always. Under the InterNACHI sewer scope standards, an inspector is not required to scope or inspect underfloor or in-house portions of the building drain. If your home is on a slab, ask specifically whether the under-slab section can be reached, and from where."
+      },
+      {
+        question: "Do I need a cleanout for a sewer camera inspection?",
+        answer:
+          "Usually, yes — the camera enters through an outdoor cleanout. If your home has no accessible cleanout, access may be through a pulled toilet or a roof vent. Confirm the access point with the matched provider before the visit."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Sewer Root Intrusion", href: "/guides/dfw-sewer-root-intrusion" },
+      { label: "Sewer Line Repair Cost Calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Main Sewer Line Signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Sewer Line Clog Cost Guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Main Sewer Line Clogged in Dallas — Warning Signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
+      { label: "Who Is Responsible for a Sewer Line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
+    ]
+  },
+  "toilet-running-constantly-dallas-wont-stop-running": {
+    checklistTitle: "How to tell which part is making your toilet run",
+    checklistIntro:
+      "A toilet that runs constantly usually means water is leaking from the tank into the bowl around the clock, or the fill valve never quite shuts off. In most cases the fix is one of two small parts: the flapper or the fill valve.",
+    checklistItems: [
+      "Run the dye test: put a few drops of food coloring into the tank, wait ten minutes without flushing, and look at the bowl -- color in the bowl means water is leaking from the tank, and the flapper is the first suspect.",
+      "Lift the tank lid and look at the flapper: a warped, swollen, or worn flapper no longer seals, so water seeps past it, the tank level drops, and the fill valve tops it back up over and over.",
+      "Check the chain: if it is too short it holds the flapper slightly open, and if it is tangled or caught the flapper cannot seat at all -- it should have a small amount of slack when the flapper is closed.",
+      "Check the water level: it should sit below the top of the overflow tube. If water rises above the tube it runs straight down into the bowl and the valve never gets the signal to stop -- lower the float.",
+      "Listen to the fill valve: if it hisses or trickles after the tank is full and the float is set right, the valve itself is worn out -- DFW hard water and mineral buildup can keep a fill valve from shutting off cleanly.",
+      "Find the shutoff before you need it: every toilet has an angle-stop valve at the wall behind it, and that valve is how you stop the water fast if the toilet ever overflows.",
+    ],
+    proofTitle: "What to confirm with the matched provider",
+    proofItems: [
+      "If the dye test shows a leak and a new flapper does not fix it, ask whether the flush valve seat underneath is rough or damaged -- a new flapper will not seal on a damaged seat.",
+      "If the toilet still runs after the flapper and the float have been checked, the problem is deeper in the valve or the flush valve seat and needs a matched provider.",
+      "Ask whether the repair is a flapper, a fill valve, or both, and what the visit includes before approving the work.",
+      "A new toilet only enters the conversation when the tank or bowl itself is cracked, or when repeated repairs stop making sense -- that call should be made with the matched provider, not guessed at from the sound alone.",
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my toilet run constantly?",
+        answer:
+          "In most cases, one of two small parts is at fault: a worn flapper that no longer seals the tank, letting water leak into the bowl, or a fill valve that is set too high or has worn out and will not shut off. The food-coloring dye test will tell you which one — color in the bowl after ten minutes points to the flapper."
+      },
+      {
+        question: "How do I test for a silent toilet leak?",
+        answer:
+          "Put a few drops of food coloring into the toilet tank, wait ten minutes without flushing, and look at the bowl. If color appears in the bowl, water is leaking from the tank — this is the test the EPA's WaterSense program recommends. Flush afterward to avoid staining."
+      },
+      {
+        question: "How much water does a running toilet waste?",
+        answer:
+          "The EPA's WaterSense program estimates that the average household loses nearly 10,000 gallons of water a year to leaks, and an old or worn flapper can silently leak thousands of gallons a year on its own. A toilet that runs around the clock is one of the largest household leaks there is."
+      },
+      {
+        question: "Can I replace a flapper myself?",
+        answer:
+          "Yes — it is a small part and a short job. Take the old flapper with you when you buy the replacement so the size and style match, and check the chain has a small amount of slack when the flapper is closed. If the flush valve seat underneath is rough or damaged, a new flapper will not seal, and that needs a matched provider."
+      },
+      {
+        question: "My toilet runs only sometimes — is that a problem?",
+        answer:
+          "Yes. Intermittent running, sometimes called phantom flushing, usually means a slow flapper leak: the tank level drops a little, the fill valve tops it up, and the cycle repeats. Run the dye test to confirm it, and replace the flapper before it wastes more water."
+      },
+      {
+        question: "Does a running toilet mean I need a new toilet?",
+        answer:
+          "Usually not. A flapper or fill valve replacement solves most running toilets. A new toilet only becomes the right call when the tank or bowl itself is cracked, or when repairs keep failing — and that decision should be made with the matched provider."
+      }
+    ],
+    extraLinks: [
+      { label: "Toilet Overflow Emergency", href: "/services/toilet-overflow-emergency" },
+      { label: "Toilet Overflowing, Will Not Stop", href: "/problems/toilet-overflowing-will-not-stop" },
+      { label: "Gurgling Toilet and Slow Drains", href: "/problems/gurgling-toilet-and-slow-drains" },
+      { label: "Toilet Overflowing at Night in Dallas — Fast Steps", href: "/blog/toilet-overflowing-at-night-in-dallas-fast-steps" },
+      { label: "No Usable Toilet in the House — What DFW Homeowners Should Do", href: "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do" },
+      { label: "Water Shutoff Valve Will Not Close During a Leak", href: "/problems/water-shutoff-valve-will-not-close" }
+    ]
+  },
+  "how-to-thaw-frozen-pipes-safely-dallas-fort-worth": {
+    checklistTitle: "How to thaw a frozen pipe safely",
+    checklistIntro:
+      "A frozen pipe in a DFW home usually announces itself with a faucet that gives nothing, or a thin trickle where a full stream should be. Most of the damage happens not while the pipe is frozen, but when it thaws and a crack that formed under pressure starts to leak.",
+    checklistItems: [
+      "Start at the faucet: if one faucet has no water while others work normally, the frozen section is on the line feeding that faucet -- often an exterior wall, a garage, a crawl space, or an unheated attic.",
+      "If no faucet in the house has water, the frozen section is more likely on the main supply line, and that is a matched-provider job rather than a DIY thaw.",
+      "Before you warm anything, open the faucet the frozen pipe feeds and leave it open -- as the ice melts, water needs somewhere to go, and an open faucet gives the meltwater a path out and relieves pressure in the line.",
+      "Thaw with gentle, steady heat only: a hair dryer on low or medium, a heating pad wrapped around the pipe, towels soaked in hot water and wrung out, or a portable space heater aimed at the area from a safe distance -- and watch the heat the whole time it is applied, never leaving a space heater running unattended.",
+      "Never use an open flame. No blowtorch, no kerosene or propane heater, no charcoal stove, and no open flame of any kind near a pipe -- a torch can heat one spot so fast that the pipe bursts, and it can set insulation, framing, or stored items alight.",
+      "Apply heat starting at the faucet end and work back toward the frozen section -- melting ice at the faucet end first lets water and steam escape through the open faucet instead of trapping pressure that can split the pipe.",
+    ],
+    proofTitle: "What to check after the pipe thaws",
+    proofItems: [
+      "Once water is flowing normally, close the faucet and watch the pipe and the surrounding area for several minutes -- a crack that formed while the pipe was frozen may only show itself once full pressure returns.",
+      "Look for drips at joints and along the run, damp patches on drywall or ceilings, and any hissing sound.",
+      "If the frozen section is on the main supply line, or no faucet in the house has water, treat it as a matched-provider job rather than a DIY thaw.",
+      "If the pipe is in a wall cavity you cannot see, do not apply heat through the wall -- call a matched provider instead.",
+    ],
+    extraFaqs: [
+      {
+        question: "How do I know if my pipes are frozen?",
+        answer:
+          "The usual sign is a faucet that gives no water, or only a thin trickle, on a cold morning while other faucets work normally. The frozen section is usually on the line feeding that faucet — an exterior wall, garage, crawl space, or unheated attic. If no faucet in the house has water, the freeze is more likely on the main supply line."
+      },
+      {
+        question: "Can I use a blowtorch to thaw a frozen pipe?",
+        answer:
+          "No. Never use an open flame — no blowtorch, propane heater, or charcoal stove. The American Red Cross guidance is explicit on this: an open flame can set the house on fire and can heat one spot so fast that the pipe bursts. Use a hair dryer, a heating pad, towels soaked in hot water, or a space heater watched the whole time."
+      },
+      {
+        question: "Should the faucet be open while thawing a pipe?",
+        answer:
+          "Yes. Open the faucet the frozen pipe feeds and leave it open while you thaw. As the ice melts, the open faucet gives water a path out and relieves pressure in the line. If the pipe has cracked, the open faucet also helps you spot the leak sooner."
+      },
+      {
+        question: "Which end of the pipe do I thaw first?",
+        answer:
+          "Start at the faucet end and work back toward the frozen section. Melting the ice nearest the faucet first lets water and pressure escape through the open faucet. Starting at the far end can trap pressure between the thawed section and the remaining ice, and that pressure is what splits a pipe."
+      },
+      {
+        question: "How long does it take to thaw a frozen pipe?",
+        answer:
+          "It depends on how long the frozen section is and how cold it is — it is a slow process, and a hair dryer on a frozen pipe takes patience. Rushing it by turning the heat up does not help and risks damage. If the flow stops improving or you cannot reach the frozen section, stop and call a matched provider."
+      },
+      {
+        question: "What should I do after a pipe thaws?",
+        answer:
+          "Close the faucet and watch the pipe and the surrounding area for several minutes for drips, damp patches, or hissing. A crack formed during the freeze may only show once full pressure returns. If you find a leak, shut the water off and call a matched provider. If everything stays dry, insulate the section and seal the drafts so it does not freeze again."
+      }
+    ],
+    extraLinks: [
+      { label: "Frozen Pipes: Prevention Before the Next Freeze", href: "/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze" },
+      { label: "Burst Pipe First Steps", href: "/problems/burst-pipe-first-steps" },
+      { label: "Burst Pipe in Dallas — What to Shut Off First", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" },
+      { label: "DFW Freeze History", href: "/guides/dfw-freeze-history" },
+      { label: "Burst Pipe Emergency", href: "/services/burst-pipe-emergency" },
+      { label: "Burst Pipe Emergency Cost Guide", href: "/cost-guides/burst-pipe-emergency-cost-guide" },
+      { label: "Freeze Watch Widget", href: "/tools/freeze-watch-widget" }
+    ]
+  },
+  "toilet-leaking-at-base-wax-ring-failure-signs-dallas": {
+    checklistTitle: "How to tell a toilet base leak from a tank leak",
+    checklistIntro:
+      "Water pooling around the base of a toilet usually means the seal between the toilet and the floor has failed -- and the water you see on the floor is only part of it, because some of it is going under the floor where you cannot see it.",
+    checklistItems: [
+      "Rule out the tank first: dry the floor completely, then flush and watch. If water appears at the base only when the toilet is flushed, the seal between the toilet and the drain is the likely source.",
+      "If water appears without a flush, or drips from the tank or the supply line behind the toilet, the problem is higher up -- a tank bolt, a supply-line connection, or a fill valve -- and the base seal may be fine.",
+      "Water at the base after a flush is the clearest sign: dry the floor, flush once, and watch the base.",
+      "Sit on the toilet and shift your weight gently from side to side -- any movement at all means the toilet is not sitting firmly on the floor, and a rocking toilet is usually a failed seal, or a seal about to fail.",
+      "A sewer smell that comes and goes, or that is worse after a flush, can mean the seal is broken even when no water is visible yet, because the wax ring also seals out sewer gas.",
+      "Press the floor gently around the toilet: softness, sponginess, or dark staining means water has been getting under the toilet for a while -- and the subfloor may already be damaged. In a two-story home, a leak at the base of an upstairs toilet can show up as a water stain on the ceiling below.",
+    ],
+    proofTitle: "What to confirm with the matched provider",
+    proofItems: [
+      "If water is pooling at the base, stop using that toilet -- every flush pushes more water past the failed seal and into the floor -- and use another bathroom if you have one.",
+      "Replacing a wax ring means removing the toilet, so ask what the repair includes: draining the tank and bowl, lifting the toilet, scraping away the old wax, and inspecting the flange.",
+      "Ask whether the flange is cracked, corroded, or sitting at the wrong height -- if it is, a new wax ring alone will not hold and the flange has to be repaired or replaced first.",
+      "Do not caulk around the base to stop the leak -- caulk traps the leaking water underneath the toilet instead of letting it out, and the damage to the subfloor continues out of sight. The seal itself has to be replaced.",
+    ],
+    extraFaqs: [
+      {
+        question: "Why is water pooling at the base of my toilet?",
+        answer:
+          "In most cases the wax ring — the seal between the toilet and the floor flange — has failed, so water escapes with every flush. First rule out a leak from the tank or the supply line behind the toilet: dry the floor, flush once, and watch. Water appearing at the base only after a flush points at the seal."
+      },
+      {
+        question: "What is a wax ring and what does it do?",
+        answer:
+          "A wax ring is a ring of wax between the bottom of the toilet and the flange that connects the toilet to the drain pipe in the floor. The weight of the toilet compresses it into a watertight seal, so waste and water go down the drain and nothing escapes onto the floor. It also seals out sewer gas."
+      },
+      {
+        question: "My toilet rocks slightly — is that a problem?",
+        answer:
+          "Yes. Any movement at all means the toilet is not sitting firmly on the floor, and a rocking toilet flexes the wax seal a little at a time until it fails. Do not fix it by tightening the floor bolts hard — overtightening can crack the porcelain. The toilet needs to be lifted, the seal replaced, and the toilet shimmed so it sits rock-solid."
+      },
+      {
+        question: "Can I caulk around the base to stop the leak?",
+        answer:
+          "No. Caulk traps the leaking water underneath the toilet instead of letting it out, and the damage to the subfloor continues out of sight. A toilet base should never be fully caulked. The seal itself has to be replaced."
+      },
+      {
+        question: "Does a base leak mean I need a new toilet?",
+        answer:
+          "Usually not. A failed wax ring is replaced by lifting the toilet, fitting a new ring, and reseating it. A new toilet only enters the conversation if the toilet itself is cracked, or if the flange or subfloor damage makes the repair bigger than a reseat — and that call should be made with the matched provider after the toilet is off and the flange is inspected."
+      },
+      {
+        question: "What if the leak is staining the ceiling below?",
+        answer:
+          "In a two-story home, a base leak upstairs can show up as a water stain on the ceiling of the room below. Stop using the toilet, shut the water off at the toilet's angle-stop valve if water is spreading, and call a matched provider. The stain means water has already been getting into the floor for a while."
+      }
+    ],
+    extraLinks: [
+      { label: "Toilet Overflow Emergency", href: "/services/toilet-overflow-emergency" },
+      { label: "Toilet Overflowing, Will Not Stop", href: "/problems/toilet-overflowing-will-not-stop" },
+      { label: "Toilet Overflowing at Night in Dallas — Fast Steps", href: "/blog/toilet-overflowing-at-night-in-dallas-fast-steps" },
+      { label: "No Usable Toilet in the House — What DFW Homeowners Should Do", href: "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do" },
+      { label: "Water Stain Ceiling Below Bathroom, Dallas", href: "/blog/water-stain-ceiling-below-bathroom-dallas" },
+      { label: "Toilet Installation Cost Calculator", href: "/tools/toilet-installation-cost-calculator" }
+    ]
+  },
+  "water-leaking-under-kitchen-sink-first-checks-dallas": {
+    checklistTitle: "First checks for a leak under the sink",
+    checklistIntro:
+      "A wet cabinet floor under the kitchen or bathroom sink is one of the most common leaks in a DFW home -- and one of the easiest to ignore, because it hides behind a closed door. By the time you notice it, it may already have been soaking the cabinet base and the floor underneath for days.",
+    checklistItems: [
+      "Clear everything out of the cabinet so you can see the pipes and so nothing else gets soaked, put a bucket or a baking tray under the wettest spot, and lay towels around the cabinet base to keep water off the floor outside it.",
+      "Dry everything under the sink completely -- every pipe, every joint, every valve, and the cabinet floor -- then turn the water back on and watch: the dry-and-watch test shows which connection is actually leaking.",
+      "Check the supply lines: a damp valve or a drip at the top or bottom of a flexible supply line usually means the connection has loosened or the line itself is worn -- a bulging, cracked, or corroded supply line should be replaced, not tightened harder.",
+      "Check the shutoff valves: a valve that drips from its stem or packing nut is worn -- tightening the packing nut a quarter-turn sometimes stops it, but a valve that keeps dripping needs replacing, and that means shutting the water off at the main first.",
+      "Check the P-trap: a drip at one of its slip joints usually means the slip nut has loosened or the washer inside has worn -- hand-tighten the slip nut first, since a wrench can crack the plastic, and if it keeps dripping the washer is the likely cause.",
+      "Check the sink strainer and the faucet base: a leak at the strainer usually shows when the sink is full and draining and often means the putty or gasket has failed, while water at the back of the sink can mean the faucet's base seal has failed.",
+    ],
+    proofTitle: "When it is a matched-provider job",
+    proofItems: [
+      "Call a matched provider when the leak is on the supply side and you cannot stop it at the sink valves.",
+      "Call a matched provider when a shutoff valve will not close, or when a supply line is bulging or corroded.",
+      "Call a matched provider when the cabinet floor is soft, swollen, or stained -- a soft cabinet floor means water has been soaking it for a while, and the damage may run past the cabinet into the floor below.",
+      "In a two-story home, a leak under an upstairs bathroom sink can also show up as a stain on the ceiling below -- confirm with the matched provider what to check if you see one.",
+    ],
+    extraFaqs: [
+      {
+        question: "How do I find a leak under my sink?",
+        answer:
+          "Dry everything under the sink completely, then turn the water on and watch each connection in turn. A leak that appears while the faucet runs points at the supply side; a leak that appears only when the sink drains points at the drain side. Wrap a dry paper towel around one joint at a time — a damp spot on the towel shows exactly which joint is leaking."
+      },
+      {
+        question: "What usually leaks under a kitchen sink?",
+        answer:
+          "The common sources are the flexible supply lines, the shutoff valves on the wall, the P-trap joints, the sink strainer, and — in a kitchen — the garbage disposal connections and the dishwasher drain hose. A leak that only appears when the dishwasher runs points at the dishwasher connection."
+      },
+      {
+        question: "Can I just tighten the leaking joint myself?",
+        answer:
+          "A loose P-trap slip nut can be hand-tightened — a wrench can crack the plastic. But a supply line that is bulging or corroded, a valve that keeps dripping, or a strainer seal that has failed should be handled by a matched provider. Tightening a worn part harder does not fix it, and a supply-side leak runs while you are not looking."
+      },
+      {
+        question: "What if the shutoff valve under the sink will not close?",
+        answer:
+          "Do not force it — forcing a stuck valve can break it and make the leak worse. Shut the water off at the main shutoff for the house instead and call a matched provider. A valve that will not close is itself a failure that needs replacing."
+      },
+      {
+        question: "The cabinet floor is soft under the sink — is that serious?",
+        answer:
+          "Yes. A soft, swollen, or stained cabinet floor means water has been soaking it for a while, and the damage may run past the cabinet into the floor below. Stop the leak, dry what you can, and call a matched provider — the repair depends on how far the water has gone, and that needs an inspection."
+      },
+      {
+        question: "Nothing leaks when I test it — but the cabinet is wet again in the morning. Why?",
+        answer:
+          "A slow leak may only show over hours. Leave a dry paper towel on the cabinet floor overnight and check it in the morning. If the towel is damp and every joint tested dry, the leak is coming from somewhere you cannot see — behind the wall, under the floor, or inside the faucet body — and finding it needs a matched provider."
+      }
+    ],
+    extraLinks: [
+      { label: "Kitchen Sink Backing Up", href: "/problems/kitchen-sink-backing-up" },
+      { label: "Kitchen Sink Backing Up in Dallas — Signs You Need Drain Help", href: "/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help" },
+      { label: "Water Shutoff Valve Will Not Close During a Leak", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Water Stain Ceiling Below Bathroom, Dallas", href: "/blog/water-stain-ceiling-below-bathroom-dallas" },
+      { label: "How to Check Your Water Meter for a Hidden Leak, Dallas", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Sink and Shower Drain Backup", href: "/services/sink-and-shower-drain-backup" }
+    ]
+  },
+  "tankless-water-heater-flush-descale-dallas-hard-water": {
+    checklistTitle: "Tankless flush and descale in DFW hard water",
+    checklistIntro:
+      "A tankless water heater has no tank to rust out, but it has a heat exchanger that water passes through every time you turn on a tap -- and in Dallas-Fort Worth, that water is hard. The minerals leave scale on the heat exchanger, and scale is an insulator: the more of it there is, the harder the unit works to heat the same water.",
+    checklistItems: [
+      "Watch for fluctuating hot water: the shower runs hot, then lukewarm, then hot again, because scale on the exchanger makes the unit slow to respond to changes in flow.",
+      "Watch for less hot water than before: a shower that used to run hot at full flow now only stays hot if you turn the tap down, because the unit cannot transfer enough heat through the scale to keep up with the flow.",
+      "Watch for error codes or shutdowns: many tankless units have a scale or flow warning built in, and some shut down when the exchanger overheats -- an error code that keeps coming back after a reset is a strong sign the unit needs a flush.",
+      "Listen for noise: rumbling, crackling, or a kettle-like sound from the unit while it runs -- in a tank heater the same sound means sediment; in a tankless unit it means scale on the exchanger.",
+      "Watch for reduced flow at hot taps: scale narrowing the waterways inside the exchanger reduces how much hot water the unit can deliver at once, even when the cold-water flow is fine.",
+      "A tankless flush is a controlled circulation, not a drain-and-refill: it only works properly on a unit with isolation valves, a pair of valves on the hot and cold lines that let a pump circulate a descaling solution through the heat exchanger.",
+    ],
+    proofTitle: "What to confirm with the matched provider",
+    proofItems: [
+      "Most tankless manufacturers recommend flushing at least once a year, and in a hard-water area like DFW many recommend more often -- check your unit's manual, since it is the authority for your model.",
+      "If the unit has no isolation valves, the flush cannot be done properly without adding them -- confirm whether your unit has them before booking.",
+      "If the unit throws error codes that return after a flush, the problem is deeper than scale -- a sensor, a flow issue, or the exchanger itself -- and needs a matched provider.",
+      "If the unit is gas-fired, anything involving the gas supply or burner should be handled by a matched provider.",
+    ],
+    extraFaqs: [
+      {
+        question: "What does descaling a tankless water heater do?",
+        answer:
+          "It removes the mineral scale that hard water leaves on the heat exchanger. A pump circulates a descaling solution — plain white vinegar, or a manufacturer-approved product — through the exchanger until the scale dissolves, then the unit is flushed with clean water. The unit then heats water efficiently again instead of working harder through an insulating layer of scale."
+      },
+      {
+        question: "How often should a tankless water heater be flushed in DFW?",
+        answer:
+          "Most manufacturers recommend at least once a year, and more often in hard-water areas like Dallas–Fort Worth. Your unit's manual is the authority for your model. If the unit has never been flushed and is showing fluctuating temperature or error codes, it needs a flush now, whatever the calendar says."
+      },
+      {
+        question: "What are the signs my tankless unit needs a flush?",
+        answer:
+          "Hot water that fluctuates, less hot water than before, error codes or shutdowns that return after a reset, rumbling or crackling noise while the unit runs, and reduced flow at hot taps. Two or more together — especially fluctuating temperature plus an error code — means the unit is due."
+      },
+      {
+        question: "Can I flush a tankless water heater myself?",
+        answer:
+          "If the unit has isolation valves, you have a manufacturer-approved descaling solution, and you have read the manual, a flush is a job a homeowner can do. If the unit has no isolation valves, if error codes return after a flush, or if anything involves the gas line or burner, it is a matched-provider job."
+      },
+      {
+        question: "Does a tankless unit need flushing if the water seems fine?",
+        answer:
+          "Yes — scale builds slowly and the unit compensates until it cannot. A yearly flush is maintenance, not a repair, and it is what keeps a tankless unit from becoming a repair. In a hard-water city, skipping flushes is the fastest way to shorten a unit's life."
+      },
+      {
+        question: "My tankless unit is making a rumbling noise — is that scale?",
+        answer:
+          "It can be. In a tank heater the same sound means sediment at the bottom of the tank; in a tankless unit it means scale on the heat exchanger. If the noise comes with fluctuating temperature or reduced flow, a flush is the first step — and if the noise continues after a flush, the unit needs a matched provider to look at it."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Water Hardness by City — What It Does to Your Water Heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
+      { label: "Tankless Water Heater Not Producing Hot Water — Troubleshooting", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" },
+      { label: "Tankless Water Heater Freeze, Power Outage, DFW", href: "/blog/tankless-water-heater-freeze-power-outage-dfw" },
+      { label: "Dallas Hard Water and Drain Problems Homeowners Should Know", href: "/blog/dallas-hard-water-and-drain-problems-homeowners-should-know" },
+      { label: "Tankless Water Heater Installation Cost", href: "/cost-guides/tankless-water-heater-installation-cost" },
+      { label: "Water Heater Repair or Replace Calculator", href: "/tools/water-heater-repair-or-replace-calculator" }
+    ]
+  },
+  "what-size-tankless-water-heater-do-i-need-dallas": {
+    checklistTitle: "How to size a tankless water heater for your home",
+    checklistIntro:
+      "A tankless water heater is not sized like a tank heater. A tank is sized by gallons -- how much hot water it holds. A tankless unit is sized by two numbers: how much hot water it can deliver at once, and how much it can heat that water by.",
+    checklistItems: [
+      "Start with flow rate: add up the flow rate of everything that runs at the same time -- a standard showerhead uses up to 2.5 gallons per minute, and a standard bathroom faucet up to about 2.2 gallons per minute.",
+      "Then work out temperature rise: the gap between the incoming water temperature and the temperature you want, usually around 120 degrees -- if the incoming water is 65 degrees the rise is 55 degrees, and if it is 50 degrees the rise is 70.",
+      "The number that matters is the flow rate at the temperature rise your home needs in winter -- the big number on the box is quoted at a small temperature rise, so read the unit's performance chart, not the headline.",
+      "Size for the worst realistic combination, not the most common one: adding up only the shower and forgetting the dishwasher, the washing machine, and the second bathroom is the most common sizing mistake.",
+      "Check the gas supply: a gas tankless unit needs a gas line and meter that can deliver enough fuel at full fire -- a unit correctly sized on paper but starved for gas will not reach its rated flow.",
+      "For a gas unit, proper venting matters, and in a hard-water home the unit needs a plan for descaling -- scale on the heat exchanger cuts the unit's effective capacity over time.",
+    ],
+    proofTitle: "What to confirm with the matched provider before you buy",
+    proofItems: [
+      "Have the matched provider measure or confirm the incoming water temperature, add up the fixtures that run together, and check the unit's performance chart at the right temperature rise.",
+      "For a gas unit, confirm whether the existing gas line and meter can feed the unit at full fire.",
+      "A unit that is too small will work -- just not when you need it most, like a shower running while the dishwasher fills -- so confirm the sizing covers simultaneous use, not one fixture at a time.",
+      "Decide whole-house versus point-of-use with the matched provider: a whole-house unit must be sized for the home's full simultaneous demand, while a point-of-use unit serves one fixture only.",
+    ],
+    extraFaqs: [
+      {
+        question: "How do I size a tankless water heater?",
+        answer:
+          "Two numbers decide it: flow rate (gallons per minute) and temperature rise. Add up the flow rates of the fixtures that run at the same time — a standard showerhead uses up to 2.5 gallons per minute — and check the unit's flow rate at the temperature rise your home needs in winter, not the headline number on the box. The U.S. Department of Energy's sizing guidance frames it exactly this way."
+      },
+      {
+        question: "What flow rate do I need for two showers at once?",
+        answer:
+          "Two standard showers at once need roughly 5 gallons per minute before anything else is counted — and the dishwasher or washing machine adds more on top. Size for the worst realistic combination of fixtures running together, not the most common one."
+      },
+      {
+        question: "Does the incoming water temperature matter?",
+        answer:
+          "Yes — it sets the temperature rise the unit must deliver, and the bigger the rise, the fewer gallons per minute the unit can heat. DFW's incoming water is warmer than in colder climates, so the rise is smaller here, but it is still largest in winter. Size for the coldest incoming water, not the average."
+      },
+      {
+        question: "What happens if a tankless unit is too small?",
+        answer:
+          "It works — just not when you need it most. A shower running while the dishwasher fills will go lukewarm, and the unit will look broken when it is simply undersized. An oversized unit, on the other hand, wastes money on the install and on a gas line it may not need."
+      },
+      {
+        question: "Do I need a bigger gas line for a tankless water heater?",
+        answer:
+          "Possibly. A gas tankless unit needs a gas line and meter that can deliver enough fuel at full fire. Whether the existing gas line can feed the unit is a question for the matched provider — a unit starved for gas will not reach its rated flow, however well it was sized on paper."
+      },
+      {
+        question: "Whole-house or point-of-use — which is right?",
+        answer:
+          "A whole-house unit serves every fixture and must be sized for the home's full simultaneous demand. A point-of-use unit serves one fixture and is sized only for that fixture — the right answer for a far bathroom or a home where the main unit cannot keep up. The matched provider can size both options for your home before you buy."
+      }
+    ],
+    extraLinks: [
+      { label: "Tankless Water Heater Installation Cost", href: "/cost-guides/tankless-water-heater-installation-cost" },
+      { label: "Tankless Water Heater Not Producing Hot Water — Troubleshooting", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" },
+      { label: "Tankless Water Heater Freeze, Power Outage, DFW", href: "/blog/tankless-water-heater-freeze-power-outage-dfw" },
+      { label: "Water Heater Repair or Replace Calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+      { label: "DFW Water Hardness by City — What It Does to Your Water Heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
+      { label: "DFW Water Heater Lifespan", href: "/guides/dfw-water-heater-lifespan" }
+    ]
+  },
+  "cast-iron-drain-pipe-replacement-dallas-fort-worth": {
+    checklistTitle: "Signs your cast iron drain pipe is failing",
+    checklistIntro:
+      "Many Dallas-Fort Worth homes built before the 1970s still have cast iron drain pipes carrying wastewater out of the house. Cast iron corrodes from the inside out, and in North Texas clay soil that shifts with wet and dry spells, aging cast iron is one of the most common reasons older homes develop slow drains, sewer smells, and recurring clogs.",
+    checklistItems: [
+      "Slow drains that keep coming back: one slow drain is a branch problem, but several fixtures draining slowly at once -- a toilet, a tub, a shower -- usually points to the main line, and in an older home that line is often cast iron narrowed by scale.",
+      "Sewer smell in the bathroom or kitchen that comes and goes can mean a cracked or separated joint is letting sewer gas into the home.",
+      "Recurring clogs after cleaning: if a drain is cleared and clogs again within weeks, the problem is usually the pipe itself -- scale, a belly, or a break -- not what went down it.",
+      "Rust-colored water or flakes in a drain: flakes of rust or discolored water at a fixture can mean the pipe wall is shedding from the inside.",
+      "Wet or soggy patches in the yard, or a damp spot on the slab: a broken cast iron line can leak wastewater into the soil under or around the home -- this is the sign to act on fastest.",
+      "No one should recommend replacing a drain line without seeing it first: the standard diagnosis is a sewer camera inspection, fed through a cleanout, showing the inside of the pipe live on a monitor while the footage records.",
+    ],
+    proofTitle: "What to confirm before agreeing to a replacement",
+    proofItems: [
+      "Ask what the camera report shows: pipe material, condition of each section, and which parts could not be inspected and why -- the camera report, not the age alone, is what decides whether a line is still serviceable.",
+      "A single cracked joint can sometimes be repaired in place; a line scaled along its whole length, with joints separating and pipe wall lost, usually cannot be patched back to reliable service -- confirm which yours is.",
+      "Confirm where the pipe runs and what access means: under the slab usually means cutting through the concrete, a yard line may be trench or trenchless, and vertical stacks can be replaced from inside the wall.",
+      "Confirm the price and scope in writing with the matched provider before work starts, including whether trenchless replacement is possible for your line.",
+    ],
+    extraFaqs: [
+      {
+        question: "How do I know if my DFW home has cast iron drain pipes?",
+        answer:
+          "Homes built before the 1970s in Dallas–Fort Worth usually have cast iron drains. You can sometimes see the pipe in an unfinished area — cast iron is dark, heavy, and joined with visible hubs. A camera inspection will confirm the material and condition of the buried line."
+      },
+      {
+        question: "How long does cast iron drain pipe last?",
+        answer:
+          "Cast iron is measured in decades, not years, but its condition depends on soil, water, and use. North Texas clay soil that shifts with wet and dry spells can loosen joints, and internal corrosion narrows the pipe over time. The camera report, not the age alone, is what decides whether a line is still serviceable."
+      },
+      {
+        question: "What are the first signs of cast iron drain failure?",
+        answer:
+          "Slow drains in several fixtures at once, a sewer smell that comes and goes, clogs that return soon after cleaning, rust flakes at a fixture, and wet patches in the yard. More than one of these together is a reason to get a camera inspection."
+      },
+      {
+        question: "Can cast iron drain pipe be repaired, or does it always need replacing?",
+        answer:
+          "A single cracked joint can sometimes be repaired in place. A line with heavy scale along its length, separated joints, or lost pipe wall usually cannot be patched back to reliable service. The camera report decides which it is."
+      },
+      {
+        question: "Does cast iron replacement always mean digging up the yard?",
+        answer:
+          "Not always. A yard line may be replaceable by trench, or by a trenchless method where the new pipe is pulled through the old one — whether that is possible depends on the condition of the existing pipe and the layout of the line. A line under the slab usually means cutting through the concrete at the affected stretch. Confirm the method with the matched provider before agreeing to the work."
+      },
+      {
+        question: "How much does cast iron drain pipe replacement cost in DFW?",
+        answer:
+          "There is no single price. Cost depends on the length of the run, how deep it is, what must be opened to reach it, and what is put back afterward. Get the camera video and a written quote from the matched provider before anyone digs, and use our sewer line repair cost calculator to see the factors that drive the price."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Polybutylene Pipe Replacement", href: "/guides/dfw-polybutylene-pipe-replacement" },
+      { label: "Sewer Line Repair Cost Calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Main Sewer Line Signs", href: "/problems/main-sewer-line-signs" },
+      { label: "DFW Sewer Root Intrusion", href: "/guides/dfw-sewer-root-intrusion" },
+      { label: "Main Sewer Line Clogged in Dallas — Warning Signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
+      { label: "Who Is Responsible for a Sewer Line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
+    ]
+  },
+  "pex-vs-copper-repipe-dallas-fort-worth": {
+    checklistTitle: "PEX vs copper: how to choose for a DFW repipe",
+    checklistIntro:
+      "A repipe is the replacement of the water supply lines in a home -- the pipes that carry water to every faucet, toilet, and appliance. In Dallas-Fort Worth, the question in almost every repipe conversation is the same: PEX or copper? Both are used in DFW homes today, and neither is the right answer for every house.",
+    checklistItems: [
+      "A repipe is usually considered when a home has repeated leaks, low water pressure from narrowed pipes, discolored water, or pipe material known to fail -- polybutylene, galvanized steel, or aging copper with pinhole leaks.",
+      "PEX is cross-linked polyethylene, a flexible plastic tubing that has become the most common repipe material in new DFW work: it comes in long coils, so fewer joints and fewer places to leak, and it bends around corners, so it can often be run with less opening up of the home.",
+      "Copper is the traditional repipe material: rigid, durable, in service for generations, handles heat well, is not affected by sunlight, and is the material many plumbers and homeowners know best.",
+      "Hard water: DFW water is hard, and mineral buildup affects both materials differently -- PEX does not scale the way metal does, while copper can develop deposits and, in some conditions, pinhole leaks.",
+      "Freezes: both materials need insulation and protection in a DFW freeze. PEX tolerates freezing better than rigid copper, but neither should be left exposed -- a freeze is still a burst risk for either.",
+      "Installation and cost: PEX usually means fewer joints and less wall opened, which usually means a faster job, and for the same home a PEX repipe usually costs less than copper, mostly on material and labor time -- the exact difference should be quoted for your home, not guessed from a table.",
+    ],
+    proofTitle: "Five questions to ask before you choose",
+    proofItems: [
+      "Which material does the matched provider recommend for this home, and why?",
+      "What is the price difference between PEX and copper for this job, in writing?",
+      "How many days will the water be off, and when?",
+      "What is opened up, and what is put back afterward?",
+      "What warranty covers the work and the material?",
+    ],
+    extraFaqs: [
+      {
+        question: "Is PEX or copper better for a repipe in DFW?",
+        answer:
+          "Neither is right for every home. PEX is flexible, resists scale in hard water, tolerates freezing better, and usually costs less to install. Copper has the longer proven track record and handles heat and sunlight well. The right choice depends on your home's layout, water, and budget — confirm it with the matched provider."
+      },
+      {
+        question: "Does PEX last as long as copper?",
+        answer:
+          "Copper has the longer proven track record, measured in generations. PEX has a shorter but now substantial track record and is the material most new DFW homes are plumbed with. Longevity for either depends on installation quality and water conditions."
+      },
+      {
+        question: "Why is a copper repipe more expensive than PEX?",
+        answer:
+          "Copper costs more per foot than PEX, and because it is rigid, a copper repipe usually means more joints and more labor time. The exact difference for your home should be quoted in writing, not guessed from a table."
+      },
+      {
+        question: "Will PEX freeze and burst in a DFW freeze?",
+        answer:
+          "PEX tolerates freezing better than rigid pipe because it can expand slightly, but it is not freeze-proof. Both PEX and copper need insulation and protection in a hard freeze, and a burst pipe is an emergency either way."
+      },
+      {
+        question: "Does hard water affect PEX and copper differently?",
+        answer:
+          "Yes. DFW water is hard, and mineral buildup affects metal pipe more than PEX — copper can develop scale and, in some conditions, pinhole leaks. PEX does not corrode or scale the way metal does."
+      },
+      {
+        question: "My home has polybutylene pipe — is that a repipe?",
+        answer:
+          "Polybutylene is the grey plastic pipe used in many homes built in the 1980s and early 90s, and it is known to fail. A repipe is usually the answer, and our polybutylene replacement guide covers it. The PEX-versus-copper choice comes after that decision."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Polybutylene Pipe Replacement", href: "/guides/dfw-polybutylene-pipe-replacement" },
+      { label: "Repipe Cost Calculator", href: "/tools/repipe-cost-calculator" },
+      { label: "DFW Water Hardness by City — What It Does to Your Water Heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
+      { label: "DFW Freeze History", href: "/guides/dfw-freeze-history" },
+      { label: "Frozen Pipes in Dallas–Fort Worth — Prevention Before the Next Freeze", href: "/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze" },
+      { label: "Water Leak Between Meter and House in Dallas — Who Fixes It", href: "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it" }
+    ]
+  },
+  "how-to-flush-water-heater-dallas-fort-worth-sediment": {
+    checklistTitle: "How to flush sediment out of a water heater in DFW",
+    checklistIntro:
+      "Sediment is the mineral grit that settles at the bottom of a conventional tank water heater -- and in Dallas-Fort Worth, where the water is hard, it builds up faster than in most places. Left alone, it makes the heater work harder, heats water more slowly, and shortens the life of the tank.",
+    checklistItems: [
+      "Popping, rumbling, or crackling sounds are the most common sign: water trapped under the sediment layer boils and pops as it escapes.",
+      "Less hot water than before: the sediment layer takes up tank space and insulates the burner, so the same tank delivers less hot water and takes longer to recover.",
+      "Rusty or gritty water from the hot tap: sediment stirred up by use can come through the hot side, and grit in the water is a sign the layer is thick.",
+      "Higher energy use for the same hot water: a heater working through a sediment layer runs longer and costs more to run.",
+      "A leaking tank bottom is the worst case: sediment traps heat against the tank floor until the metal weakens and the tank leaks from the bottom.",
+      "A flush is a simple job, but the order matters and the safety steps are not optional -- and a flush does not fix a leaking tank, a failed anode rod, a pilot light that will not stay lit, or a failed expansion tank.",
+    ],
+    proofTitle: "When to let a provider do the flush",
+    proofItems: [
+      "Call the matched provider when the heater is gas and you are not comfortable with the gas control.",
+      "Call the matched provider when the drain valve is clogged or will not close, or when the tank is leaking.",
+      "Call the matched provider when the heater is over ten years old and has never been flushed.",
+      "Ask the provider to check the anode rod and the expansion tank at the same visit -- the rod is checked while the tank is being serviced.",
+    ],
+    extraFaqs: [
+      {
+        question: "How often should I flush my water heater in DFW?",
+        answer:
+          "Many manufacturers recommend flushing once a year. DFW's hard water builds sediment faster than soft-water areas, so a yearly flush is a reasonable schedule. Check your model's manual and confirm the schedule with the matched provider for your unit."
+      },
+      {
+        question: "What does sediment in a water heater sound like?",
+        answer:
+          "Popping, rumbling, or crackling — water trapped under the sediment layer boiling and escaping as it heats. It is the most common sign sediment has built up, and the sign to flush before the tank is damaged."
+      },
+      {
+        question: "Can I flush my water heater myself?",
+        answer:
+          "Yes, if you follow the order and the safety steps: power or gas off first, let the water cool, shut the cold supply, attach a hose, open a hot tap, then drain until the water runs clear, refill completely, and only then restore power or gas. If anything looks different from your unit, or the drain valve will not close, stop and call the matched provider."
+      },
+      {
+        question: "Is it safe to drain a water heater with the power on?",
+        answer:
+          "No. Never drain a tank with the power or gas still on — a heating element or burner running on an empty tank will be damaged. Turn the heater off first and restore it only after the tank is completely refilled."
+      },
+      {
+        question: "Will flushing fix a water heater that leaks from the bottom?",
+        answer:
+          "No. A flush removes sediment; it does not repair a tank. A tank leaking from the bottom usually means the tank itself has failed, and replacement is the usual answer. Our water heater repair-or-replace calculator walks through that decision."
+      },
+      {
+        question: "Does flushing help a tankless water heater too?",
+        answer:
+          "Tankless heaters do not hold a tank of water, so they do not collect sediment the same way — but DFW hard water still scales their heat exchanger, which is why tankless units need a flush and descale of their own. That is a different job from the tank flush described here."
+      }
+    ],
+    extraLinks: [
+      { label: "Water Heater Anode Rod Signs It Needs Replacing, Dallas", href: "/blog/water-heater-anode-rod-signs-it-needs-replacing-dallas" },
+      { label: "DFW Water Hardness by City — What It Does to Your Water Heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" },
+      { label: "Water Heater Expansion Tank Failure Signs, Dallas", href: "/blog/water-heater-expansion-tank-failure-signs-dallas" },
+      { label: "Water Heater Pilot Light Won't Stay Lit, Dallas", href: "/blog/water-heater-pilot-light-wont-stay-lit-dallas" },
+      { label: "Water Heater Leaking From the Bottom, Dallas — Causes and Fixes", href: "/blog/water-heater-leaking-from-the-bottom-dallas-causes-and-fixes" },
+      { label: "DFW Water Heater Lifespan", href: "/guides/dfw-water-heater-lifespan" }
+    ]
+  },
+  "water-heater-flue-carbon-monoxide-warning-signs-dallas": {
+    checklistTitle: "Water heater flue and carbon monoxide warning signs",
+    checklistIntro:
+      "A gas water heater burns fuel to heat your water, and the flue -- the metal vent pipe on top of the heater -- carries the combustion gases, including carbon monoxide, safely outside. When the flue works, you never think about it. When it does not, those gases can come back into the home instead.",
+    checklistItems: [
+      "Soot or black marks around the draft hood: soot where the flue meets the heater means exhaust has been spilling out instead of going up -- one of the clearest signs of backdrafting.",
+      "Rust or corrosion on the flue pipe: a flue that is rusting through, or joints that have separated, will not draft properly and can leak exhaust into the room.",
+      "Condensation or water stains on the flue: exhaust carries moisture, and water dripping from a flue joint or stains running down the pipe can mean the flue is too cool to draft -- often a sign of a sizing or installation problem.",
+      "A disconnected or visibly damaged flue: if the pipe has come apart, is crushed, or has a gap at a joint, the heater should not be running until it is fixed.",
+      "A pilot light that will not stay lit: a weak or failing draft can starve the burner of air or let exhaust spill back, which can keep the pilot from staying lit -- if the pilot problem comes with any of the signs above, treat it as a flue problem, not a pilot problem.",
+      "Carbon monoxide is colorless and odorless, so you cannot see it or smell it -- its symptoms are easy to mistake for something else: headache, dizziness, nausea, confusion, and tiredness that comes on while you are in the house and eases when you leave it.",
+    ],
+    proofTitle: "What to do the moment something is wrong",
+    proofItems: [
+      "If the carbon monoxide alarm sounds: leave the home immediately, taking everyone and any pets with you, and call 911 from outside. Do not go back in to turn off the heater, open windows, or look for the cause.",
+      "Do not turn the water heater back on until a professional has found and fixed the cause.",
+      "If you smell gas: leave the home, do not touch light switches or anything that could spark, and call your gas utility or 911 from outside -- natural gas itself is odorless, but the gas company adds a rotten-egg smell so leaks can be detected.",
+      "Once a year, when the water heater is serviced, the flue should be checked: connections tight, no rust-through, no blockages, and a draft test to confirm exhaust is actually going up and out.",
+    ],
+    extraFaqs: [
+      {
+        question: "What is a water heater flue?",
+        answer:
+          "The flue is the metal vent pipe on top of a gas water heater. It carries combustion gases — including carbon monoxide — up and out of the house, usually through the roof. An electric water heater has no flue and no combustion."
+      },
+      {
+        question: "What are the warning signs of a bad water heater flue?",
+        answer:
+          "Soot or black marks around the draft hood where the flue meets the heater, rust or corrosion on the flue pipe, condensation or water stains running down the pipe, a disconnected or damaged flue, and a pilot light that will not stay lit. Any of these is a reason to turn the heater off and call the matched provider."
+      },
+      {
+        question: "What should I do if my carbon monoxide alarm goes off?",
+        answer:
+          "Leave the home immediately with everyone and any pets, and call 911 from outside. Do not stay inside to investigate, open windows, or turn off the heater. Do not turn the water heater back on until a professional has found and fixed the cause."
+      },
+      {
+        question: "Can you smell carbon monoxide?",
+        answer:
+          "No. Carbon monoxide is colorless and odorless, which is why the alarm matters more than your senses. A battery-operated CO alarm on every level of the home and outside sleeping areas is the only reliable warning — test it regularly and replace it as the manufacturer directs."
+      },
+      {
+        question: "What does a gas smell near the water heater mean?",
+        answer:
+          "Natural gas has a rotten-egg smell added so leaks can be detected. If you smell it, leave the home, do not touch light switches or anything that could spark, and call your gas utility or 911 from outside. Our gas line safety guide covers this in full."
+      },
+      {
+        question: "How often should a water heater flue be checked?",
+        answer:
+          "Once a year, when the water heater is serviced. The flue should be checked for tight connections, rust-through, and blockages, with a draft test to confirm exhaust is going up and out. The anode rod and expansion tank are usually checked at the same visit."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Gas Line Safety", href: "/guides/dfw-gas-line-safety" },
+      { label: "Water Heater Pilot Light Won't Stay Lit, Dallas", href: "/blog/water-heater-pilot-light-wont-stay-lit-dallas" },
+      { label: "Water Heater Emergency", href: "/services/water-heater-emergency" },
+      { label: "No Hot Water Emergency", href: "/problems/no-hot-water-emergency" },
+      { label: "DFW Water Heater Lifespan", href: "/guides/dfw-water-heater-lifespan" },
+      { label: "Leaking Water Heater — Repair or Replace in DFW", href: "/blog/leaking-water-heater-repair-or-replace-dfw" }
+    ]
+  },
+  "garbage-disposal-jammed-reset-button-dallas-fort-worth": {
+    checklistTitle: "How to unjam a garbage disposal safely",
+    checklistIntro:
+      "A jammed garbage disposal is one of the most common kitchen calls in a DFW home: you flip the switch, and nothing happens -- or it hums and does not turn. Most of the time the cause is simple, and the fix is a button and a wrench.",
+    checklistItems: [
+      "Never put your hand inside the disposal -- not to feel for the jam, not to pull something out, not even when the switch is off. Use tongs or long pliers, and keep your fingers out of the drain opening entirely.",
+      "Cut the power before you work on it: switch the disposal off at the wall switch, and if your unit plugs into an outlet under the sink, unplug it. If it is hard-wired, switch it off at the breaker.",
+      "Almost every garbage disposal has a small red reset button on the bottom of the unit, under the sink -- it is an overload protector, and when the motor jams or overheats the button pops out and cuts power so the motor does not burn itself out.",
+      "Under the disposal, in the center of the bottom, there is a hexagonal socket that fits a 1/4-inch Allen wrench -- most disposals come with one, and if yours is missing, any 1/4-inch Allen key will do.",
+      "A disposal that hums when you flip the switch is getting power -- the motor is trying to turn and cannot. That is a jam, not a dead unit: power off, manual crank until the plate turns freely, remove the obstruction, reset, and try again.",
+      "A disposal is dead, not jammed, when it makes no sound and the power checks are all fine, it trips the reset button every time it runs even with nothing in it, it leaks from the body or the bottom seal, it grinds loudly and constantly even when empty, or it jams again and again on ordinary food scraps.",
+    ],
+    proofTitle: "What to confirm with the matched provider",
+    proofItems: [
+      "If the disposal hums again immediately after clearing a jam and resetting, or does not run at all, stop and treat it as a motor or electrical issue rather than continuing to force it.",
+      "If the disposal hums, gets hot, or smells of burning, switch it off and leave it off -- a motor that is stalled and overheating can burn out, and running it in that state turns a jam into a dead unit.",
+      "A disposal that has served for many years and now needs frequent resets has usually reached the end of its life -- confirm with the matched provider whether replacement makes more sense than another repair.",
+      "Confirm the price and scope in writing before approving a replacement, including what the visit includes.",
+    ],
+    extraFaqs: [
+      {
+        question: "Where is the reset button on a garbage disposal?",
+        answer:
+          "On the bottom of the unit, under the sink — a small red button. It is an overload protector that pops out when the motor jams or overheats. Press it firmly until it clicks and stays in, with the wall switch off, then turn the switch back on and try the disposal."
+      },
+      {
+        question: "How do I unjam a garbage disposal with an Allen wrench?",
+        answer:
+          "With the power off, insert a 1/4-inch Allen wrench into the hexagonal socket in the center of the bottom of the unit and work it back and forth until the grinding plate turns freely. Then remove the wrench, pull the obstruction out with tongs or pliers, press the reset button, and run the disposal with cold water."
+      },
+      {
+        question: "Is it safe to put my hand in a garbage disposal to clear a jam?",
+        answer:
+          "No. Never put your hand inside a disposal, even when it is off. Use tongs or long pliers to remove anything, and cut the power at the switch or breaker before you work on it."
+      },
+      {
+        question: "My garbage disposal hums but won't turn — is it dead?",
+        answer:
+          "Usually not. A hum means the motor is getting power and trying to turn — that is a jam, not a dead unit. Use the manual crank to free the plate, remove the obstruction, and press the reset button. A unit that makes no sound at all, with the power checks fine, is the one that has likely failed."
+      },
+      {
+        question: "What foods jam a garbage disposal?",
+        answer:
+          "Bones, fibrous foods like celery and onion skins, coffee grounds, and grease are the usual causes. A disposal is made for small food scraps — hard, stringy, or greasy items belong in the trash, not the drain."
+      },
+      {
+        question: "When should I replace a garbage disposal instead of fixing it?",
+        answer:
+          "When it makes no sound and the power checks are fine, trips the reset button every time it runs, leaks from the body or bottom seal, grinds loudly when empty, or jams again and again on ordinary food scraps. Our garbage disposal cost calculator walks through the factors that drive a replacement price."
+      }
+    ],
+    extraLinks: [
+      { label: "Garbage Disposal Humming, Not Turning — What It Means", href: "/blog/garbage-disposal-humming-not-turning-what-it-means" },
+      { label: "Garbage Disposal Cost Calculator", href: "/tools/garbage-disposal-cost-calculator" },
+      { label: "Kitchen Sink Backing Up in Dallas — Signs You Need Drain Help", href: "/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help" },
+      { label: "Kitchen Sink Backing Up", href: "/problems/kitchen-sink-backing-up" },
+      { label: "Emergency Drain Cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Water Shutoff Valve Will Not Close During a Leak", href: "/problems/water-shutoff-valve-will-not-close" }
+    ]
+  },
+  "sewer-line-bellied-sagging-signs-repair-dallas-fort-worth": {
+    checklistTitle: "Signs of a bellied sewer line -- and the repair options",
+    checklistIntro:
+      "A sewer line is supposed to slope gently downward from the house to the street, so wastewater flows away under gravity. A belly is a section of that line that has sagged below the slope -- a low spot where water pools instead of flowing. It is one of the quieter sewer problems in DFW: it rarely announces itself all at once.",
+    checklistItems: [
+      "Slow drains in several fixtures at once: one slow sink is a branch problem, but a toilet, tub, and shower all slow together usually points to the main line -- and a belly is one of the things that can be wrong with it.",
+      "Clogs that keep coming back after cleaning: if a drain is cleared and clogs again within weeks, the problem is usually the line itself. A belly collects solids at the low spot, so the same clog reforms in the same place.",
+      "Gurgling drains and toilets: air trapped by standing water in a belly can make drains gurgle, especially when another fixture is used.",
+      "Sewer smell in the bathroom or near a drain: waste sitting in a belly can produce odor that comes back through the drains.",
+      "A sewer backup that keeps returning: a belly can hold enough waste to cause a backup, and a backup that returns after the line was cleaned is a strong sign the shape of the pipe is the problem.",
+      "A sewer camera inspection finds a belly: the camera shows the pipe dipping, the lens going under water, and the waterline sitting in the pipe instead of draining away, while the distance counter records exactly how far down the line the belly is.",
+    ],
+    proofTitle: "What to confirm with the matched provider",
+    proofItems: [
+      "A belly cannot be cleared away -- it has to be corrected by fixing the shape of the pipe, so confirm which repair fits: spot repair for one short section, section replacement for a long belly or several low spots, or full line replacement if the line is old and has multiple problems.",
+      "The camera report decides how much pipe needs replacing -- not a guess.",
+      "Whether trenchless methods are possible depends on the condition of the existing pipe and the layout of the line -- confirm it with the matched provider.",
+      "Confirm the price and scope in writing with the matched provider before work starts, including how the belly's location was marked.",
+    ],
+    extraFaqs: [
+      {
+        question: "What is a bellied sewer line?",
+        answer:
+          "A belly is a section of the sewer lateral that has sagged below the pipe's slope, creating a low spot where water and waste pool instead of flowing away. It is a shape problem in the pipe itself — clearing the line does not fix it."
+      },
+      {
+        question: "What causes a sewer line to belly in DFW?",
+        answer:
+          "Three things, often together: expansive clay soil that swells and shrinks with wet and dry spells, shifting the pipe; poor compaction under the line when it was installed, so the ground settles unevenly; and age, ground movement, or heavy loads pressing a section down."
+      },
+      {
+        question: "How do I know if my sewer line has a belly?",
+        answer:
+          "Slow drains in several fixtures at once, clogs that return soon after cleaning, gurgling drains, sewer smell, and backups that keep coming back. A belly is confirmed by a camera inspection, which shows the dip, the standing water, and exactly where it sits."
+      },
+      {
+        question: "Can a bellied sewer line be fixed without digging?",
+        answer:
+          "Whether a trenchless method is possible depends on the condition of the existing pipe and the layout of the line. A single short belly is usually fixed by digging up and replacing that section at the correct slope. Confirm the method with the matched provider before agreeing to the work."
+      },
+      {
+        question: "Will a belly get worse over time?",
+        answer:
+          "Yes. A belly collects solids at the low spot, which slows the line further and can hide other problems behind the standing water. A camera report that shows standing water over one inch deep is reported as needing correction under the InterNACHI sewer scope standards."
+      },
+      {
+        question: "Who pays for a bellied sewer line repair?",
+        answer:
+          "It depends on where the belly sits — the homeowner usually owns the lateral from the house to the tap, and the city owns from there. Our guide on who is responsible for a sewer line in Fort Worth explains how that line is usually drawn, and the camera report will show exactly where the defect is."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW Sewer Root Intrusion", href: "/guides/dfw-sewer-root-intrusion" },
+      { label: "Sewer Line Repair Cost Calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Main Sewer Line Signs", href: "/problems/main-sewer-line-signs" },
+      { label: "Main Sewer Line Clogged in Dallas — Warning Signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
+      { label: "Who Is Responsible for a Sewer Line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
+      { label: "Sewer Backup in Fort Worth — What It Means and Who to Call", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" }
+    ]
   }
 };
 
