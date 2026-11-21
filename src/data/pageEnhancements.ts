@@ -253,7 +253,8 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
       { label: "Dallas emergency plumbing help", href: "/cities/dallas" },
-      { label: "Burst pipe guide: causes, costs, and first steps", href: "/guides/dfw-burst-pipes" }
+      { label: "Burst pipe guide: causes, costs, and first steps", href: "/guides/dfw-burst-pipes" },
+      { label: "Burst Pipe in Dallas: What to Shut Off First", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" }
     ]
   }
 };
@@ -3347,6 +3348,13 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Ask whether inlet filter cleaning is something you can safely do yourself or whether it requires a service visit.",
       "Ask how the unit's sizing compares to your household's typical simultaneous hot water demand if this keeps happening."
     ],
+    extraFaqs: [
+      {
+        question: "Does plumbing use electricity?",
+        answer:
+          "The pipes themselves do not, but electric tankless and tank water heaters, garbage disposals, and pumps do. A tankless unit that shows no power or no error code may have a tripped breaker or a gas supply issue -- check power and gas first."
+      }
+    ],
     extraLinks: [
       { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
       { label: "No hot water emergency", href: "/problems/no-hot-water-emergency" },
@@ -3489,7 +3497,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "If the swings happen randomly with no clear trigger, that can point toward a different valve failure or, less commonly, a water heater issue.",
       "Treat repeated scalding swings as a safety concern, particularly in households with young children, elderly residents, or anyone with reduced mobility or sensation.",
       "A valve that has simply worn out over years of normal use is common and not necessarily a sign of anything else wrong with the plumbing system.",
-      "Avoid using the shower until the valve is checked if scalding swings have happened more than once, especially with children in the household."
+      "Avoid using the shower until the valve is checked if scalding swings have happened more than once, especially with children in the household.",
+      "Shower valve replacement and shower installation: a failing pressure-balancing or thermostatic mixing valve is replaced as a unit. A new shower or shower valve install needs the water shut off and the valve fitted to the supply lines -- request a plumber rather than a DIY install when the valve is behind tile or the supply lines need moving.",
     ],
     proofTitle: "What to confirm when requesting a valve repair",
     proofItems: [
@@ -3831,7 +3840,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Check whether the backup follows a specific trigger -- for example, only when the toilet flushes -- since this detail helps narrow down where the restriction is.",
       "An outdoor cleanout overflowing alongside multiple indoor fixtures backing up strongly confirms a main-line rather than fixture-level issue.",
       "Avoid running the washing machine or dishwasher during a multi-fixture backup, since these add significant water volume to an already-restricted line.",
-      "Treat this pattern as more urgent than a single slow drain, since it typically indicates a larger blockage that will not resolve on its own."
+      "Treat this pattern as more urgent than a single slow drain, since it typically indicates a larger blockage that will not resolve on its own.",
+      "How the shared drain connects: the toilet, shower, and sink join a shared branch before the main sewer line. When that shared section is restricted, all three back up together -- which is why several fixtures at once points to the branch or the main line, not to one fixture.",
     ],
     proofTitle: "What to confirm when requesting help for a multi-fixture backup",
     proofItems: [
@@ -4129,13 +4139,24 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "Why does an unused bathroom drain start to smell?",
         answer:
           "Every drain relies on a small amount of standing water in the P-trap to block sewer gas from entering the room. If a drain goes unused for weeks, that water can evaporate, breaking the seal and letting odor through -- running water through it for a minute usually resolves this."
+      },
+      {
+        question: "Is a sewer smell dangerous?",
+        answer:
+          "Sewer gas can be harmful in enclosed spaces. Ventilate the room, do not ignore a persistent or strong smell, and if the smell is strong, leave the area and request help."
+      },
+      {
+        question: "When should I call a plumber for a sewer smell?",
+        answer:
+          "If the smell persists after running water in unused fixtures, if drains are slow or gurgling, or if the smell comes with a backup."
       }
     ],
     extraLinks: [
       { label: "Sewer smell in bathroom", href: "/problems/sewer-smell-in-bathroom" },
       { label: "Sewer backup help service", href: "/services/sewer-backup-help" },
       { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" },
-      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
+      { label: "Who is responsible for the sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
+      { label: "Main Sewer Line Clog", href: "/services/main-sewer-line-clog" }
     ]
   },
   "who-is-responsible-for-sewer-line-fort-worth": {
@@ -4436,7 +4457,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
     extraLinks: [
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
       { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
-      { label: "Same-day drain cleaning in Dallas", href: "/blog/same-day-drain-cleaning-in-dallas-what-to-expect" }
+      { label: "Same-day drain cleaning in Dallas", href: "/blog/same-day-drain-cleaning-in-dallas-what-to-expect" },
+      { label: "Plumbing Prices in DFW: What Jobs Cost & Why", href: "/blog/plumbing-prices-dallas-fort-worth" }
     ]
   },
   "sewer-backup-in-fort-worth-what-it-means-and-who-to-call": {
@@ -4476,7 +4498,9 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "A single occurrence might be a temporary clog; if it happens every time the toilet flushes, the restriction is likely a consistent partial blockage rather than something random.",
       "Check whether the tub drains normally on its own between flushes -- if it does, that supports a shared-line theory rather than a problem isolated to the tub.",
       "Gurgling from the tub drain right before or after the water rises is a common accompanying sign of a partially blocked shared line.",
-      "Avoid running the tub and flushing the toilet at the same time until the cause is identified, since it can worsen the backup temporarily."
+      "Avoid running the tub and flushing the toilet at the same time until the cause is identified, since it can worsen the backup temporarily.",
+      "How the tub drain connects: the tub, toilet, and sink share a bathroom branch drain that joins the main sewer line -- a blockage downstream of the join backs water up into the lowest fixture first.",
+      "Tub drain replacement signs: recurring backup after clearing, visible corrosion, and a drain that will not hold water. These describe the signs, not DIY install steps -- a drain replacement is a provider job.",
     ],
     proofTitle: "What to confirm when requesting service",
     proofItems: [
@@ -4906,6 +4930,16 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "Why does my drain keep clogging in the same spot?",
         answer:
           "Recurring clogs at the same location often point to a structural cause such as grease buildup, a partial obstruction, a bellied pipe, or root intrusion, rather than a one-time blockage. A camera inspection is typically how this gets confirmed."
+      },
+      {
+        question: "When is hydro jetting better than snaking?",
+        answer:
+          "For recurring clogs, grease buildup, root intrusion, and whole-line cleaning. Snaking breaks through one clog; jetting scours the full interior of the pipe."
+      },
+      {
+        question: "Does hydro jetting damage old pipes?",
+        answer:
+          "A provider assessment, usually with a camera inspection, decides whether jetting is appropriate for the pipe condition. Do not assume it is safe for any pipe -- ask the matched provider."
       }
     ],
     extraLinks: [
@@ -4914,7 +4948,9 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Bathtub drain backing up", href: "/problems/bathtub-drain-backing-up" },
       { label: "Main sewer line signs", href: "/problems/main-sewer-line-signs" },
       { label: "Drain cleaning cost guide", href: "/cost-guides/drain-cleaning-cost-dfw" },
-      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" }
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Emergency Drain Cleaning", href: "/services/emergency-drain-cleaning" },
+      { label: "Sewer Camera Inspection Cost in DFW: What It Finds", href: "/blog/sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds" }
     ]
   },
   "plumber-or-water-restoration-company-first": {
@@ -5149,6 +5185,16 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "Should I choose the fastest provider automatically?",
         answer:
           "Fast help matters when water or wastewater is active, but you should still confirm availability, scope, pricing rules, and credentials directly before authorizing work."
+      },
+      {
+        question: "Do emergency plumbers give free estimates?",
+        answer:
+          "Some providers offer free estimates for planned work; emergency diagnosis is usually priced. Ask about dispatch and diagnostic pricing before booking, and confirm it with the matched provider."
+      },
+      {
+        question: "What is the difference between a free estimate and a diagnostic fee?",
+        answer:
+          "An estimate prices planned work; a diagnostic fee covers finding the problem. Ask which one applies before anyone comes out."
       }
     ],
     extraLinks: [
@@ -5637,6 +5683,7 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       "Confirm how the line will be accessed -- a working outdoor cleanout is simplest; without one, access may mean pulling a toilet or using a roof vent.",
       "Ask what the report will cover: pipe material where it can be identified, which portions of the line were inspected, and which were not and why.",
       "Ask how long the visit takes and what happens next if the camera finds a belly, a break, or a collapsed section.",
+      "A general plumbing inspection covers the visible fixtures, supply lines, the water heater, and shutoffs. Only a camera scope can show the inside of the buried sewer lateral -- its material, joints, roots, bellies, and breaks.",
     ],
     extraFaqs: [
       {
@@ -5668,6 +5715,11 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "Do I need a cleanout for a sewer camera inspection?",
         answer:
           "Usually, yes — the camera enters through an outdoor cleanout. If your home has no accessible cleanout, access may be through a pulled toilet or a roof vent. Confirm the access point with the matched provider before the visit."
+      },
+      {
+        question: "Is a sewer camera inspection the same as a plumbing inspection?",
+        answer:
+          "No -- a camera inspection scopes the buried sewer lateral; a general plumbing inspection checks visible fixtures, supply lines, the water heater, and shutoffs. A camera scope is the right inspection for repeat backups, buying an older home, or before approving a large sewer repair."
       }
     ],
     extraLinks: [
@@ -5849,6 +5901,16 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "What if the leak is staining the ceiling below?",
         answer:
           "In a two-story home, a base leak upstairs can show up as a water stain on the ceiling of the room below. Stop using the toilet, shut the water off at the toilet's angle-stop valve if water is spreading, and call a matched provider. The stain means water has already been getting into the floor for a while."
+      },
+      {
+        question: "When should I call a plumber for a leaking toilet?",
+        answer:
+          "If water returns after a flush, the toilet rocks, or there is a sewer smell, request help rather than keep using it."
+      },
+      {
+        question: "Can I keep using a toilet that leaks at the base?",
+        answer:
+          "No -- every flush pushes more water under the floor. Stop using that toilet and request help."
       }
     ],
     extraLinks: [
@@ -5857,7 +5919,9 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Toilet Overflowing at Night in Dallas — Fast Steps", href: "/blog/toilet-overflowing-at-night-in-dallas-fast-steps" },
       { label: "No Usable Toilet in the House — What DFW Homeowners Should Do", href: "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do" },
       { label: "Water Stain Ceiling Below Bathroom, Dallas", href: "/blog/water-stain-ceiling-below-bathroom-dallas" },
-      { label: "Toilet Installation Cost Calculator", href: "/tools/toilet-installation-cost-calculator" }
+      { label: "Toilet Installation Cost Calculator", href: "/tools/toilet-installation-cost-calculator" },
+      { label: "Toilet Backup Help", href: "/services/toilet-backup" },
+      { label: "Toilet Running Constantly? Fix the Flapper & Fill Valve", href: "/blog/toilet-running-constantly-dallas-wont-stop-running" }
     ]
   },
   "water-leaking-under-kitchen-sink-first-checks-dallas": {
@@ -6150,6 +6214,11 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "My home has polybutylene pipe — is that a repipe?",
         answer:
           "Polybutylene is the grey plastic pipe used in many homes built in the 1980s and early 90s, and it is known to fail. A repipe is usually the answer, and our polybutylene replacement guide covers it. The PEX-versus-copper choice comes after that decision."
+      },
+      {
+        question: "What does FIP mean in plumbing?",
+        answer:
+          "FIP means Female Iron Pipe -- the female-threaded end of a fitting. MIP is the male-threaded counterpart. The terms describe how fittings connect, not a brand or a product line."
       }
     ],
     extraLinks: [
@@ -6399,6 +6468,472 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Main Sewer Line Clogged in Dallas — Warning Signs", href: "/blog/main-sewer-line-clogged-in-dallas-warning-signs" },
       { label: "Who Is Responsible for a Sewer Line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" },
       { label: "Sewer Backup in Fort Worth — What It Means and Who to Call", href: "/blog/sewer-backup-in-fort-worth-what-it-means-and-who-to-call" }
+    ]
+  },
+  "bathroom-plumber-dallas-fort-worth": {
+    checklistTitle: "What a bathroom plumber handles -- and when to call one",
+    checklistIntro:
+      "A bathroom plumber in Dallas-Fort Worth handles the fixtures that fail most often -- running toilets, leaking toilet bases, slow sink and shower drains, sewer smells, and leaks behind walls or under floors. The first step is telling the plumber which fixture is affected and whether water is spreading.",
+    checklistItems: [
+      "The toilet: running toilets, leaks at the base, rocking, and overflows. A running toilet is usually a flapper or fill valve problem; a leak at the base usually means the wax seal between the toilet and the floor has failed.",
+      "Toilet problems that need a plumber now: an overflowing toilet that will not stop, and water pooling around the base after every flush -- every flush pushes more water under the floor where you cannot see it.",
+      "A running toilet is not usually an emergency, but it is not free either -- the EPA WaterSense program notes that a leaky toilet can waste about 200 gallons of water per day. Test it with a few drops of food coloring in the tank: if color shows in the bowl without flushing, the tank is leaking.",
+      "The sink and shower: bathroom sink drains clog with hair and soap scum, and shower drains clog the same way. If the shower and the tub or sink in the same bathroom are slow together, the problem is probably in the shared branch drain, not the fixture itself.",
+      "Leaks behind walls and under floors: a stain on the ceiling below a bathroom, bubbling paint, a musty smell, loose tiles, or a water bill that jumps for no reason. Read the water meter, use no water for two hours, and read it again -- if it moved, water is going somewhere.",
+      "What to tell the plumber when you call: which fixture is affected and what it is doing, whether water is spreading, what you have already tried, and your address and access. A plumber triages by water damage, not by fixture.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm what the first visit includes -- diagnosis first, and whether a simple repair such as a worn flapper, a failed wax ring, or a clogged trap is usually fixed on that same visit.",
+      "Confirm scope and pricing before work begins, including whether a hidden leak means opening a wall or floor and what that involves.",
+      "Confirm availability and timing -- water spreading or a sewer backup is treated as an emergency, while a slow drain or a running toilet is usually scheduled.",
+      "Confirm that the provider will check the shutoff valves and supply connections, not just the fixture itself.",
+    ],
+    extraFaqs: [
+      {
+        question: "When should I call a bathroom plumber instead of fixing it myself?",
+        answer:
+          "Call a plumber when water is spreading, when the problem is behind a wall or under the floor, when a fixture keeps failing after a simple fix, or when the job involves a supply line, a drain line, or a gas connection. A running toilet with a worn flapper and a slow sink drain are the two problems most homeowners can safely try first -- anything involving wastewater or a hidden leak should not wait."
+      },
+      {
+        question: "What does a bathroom plumber do on a first visit?",
+        answer:
+          "Mostly diagnosis: check the fixture, the shutoff valves and supply connections, run the fixture, and check the drain. For a simple problem -- a worn flapper, a failed wax ring, a clogged trap -- the repair often happens on that same visit. For a hidden leak, the first visit locates the leak and agrees the repair before any wall is opened. Ask what the work includes and confirm scope and pricing with the matched provider before work begins."
+      },
+      {
+        question: "My toilet runs constantly -- is that urgent?",
+        answer:
+          "Not an emergency, but not free either. The EPA's WaterSense program notes that a leaky toilet can waste about 200 gallons of water per day. Test it with a few drops of food coloring in the tank -- if color appears in the bowl without flushing, the tank is leaking. The cause is usually a worn flapper or a fill valve that will not shut off. Get it fixed this week rather than this month."
+      },
+      {
+        question: "What causes a sewer smell in the bathroom?",
+        answer:
+          "The usual causes are a dry trap in a fixture that is rarely used, buildup in the drain, a venting problem, or sewer gas from the drain system. A smell that comes and goes after a shower or a flush points to the trap or the vent; a smell that is constant and strong points to a deeper problem. If the smell is strong, ventilate the room and request help rather than ignoring it."
+      },
+      {
+        question: "How do I know if a bathroom leak is behind the wall?",
+        answer:
+          "Look for a stain on the ceiling below the bathroom, paint or wallpaper bubbling on the bathroom wall, a musty smell that does not go away, tiles that feel loose, or a water bill that jumps for no reason. A useful check is the water meter: read it, use no water for two hours, and read it again. If the meter moved, water is going somewhere -- and that somewhere is a leak."
+      },
+      {
+        question: "How fast can a plumber come out in DFW?",
+        answer:
+          "PlumbingHands connects homeowners with local providers 24/7, including nights and weekends. How fast someone arrives depends on the matched provider, your location, and how urgent the job is -- water spreading or a sewer backup is treated as an emergency, while a slow drain or a running toilet is usually scheduled. When you call, describe the problem and whether water is spreading, and the matched provider will confirm availability and timing."
+      }
+    ],
+    extraLinks: [
+      { label: "Toilet Running Constantly? Fix the Flapper & Fill Valve", href: "/blog/toilet-running-constantly-dallas-wont-stop-running" },
+      { label: "Toilet Leaking at the Base? Wax Ring Signs", href: "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas" },
+      { label: "Water Stain on Ceiling Below a Dallas Bathroom: Causes", href: "/blog/water-stain-ceiling-below-bathroom-dallas" },
+      { label: "Drain Smell in Bathroom: Sewer Gas or Simple Clog", href: "/blog/drain-smell-in-bathroom-sewer-gas-or-simple-clog" },
+      { label: "Toilet Overflow Emergency", href: "/services/toilet-overflow-emergency" }
+    ]
+  },
+  "gas-line-plumber-dallas-fort-worth": {
+    checklistTitle: "Gas line signs, safety steps, and repairs -- what to know first",
+    checklistIntro:
+      "A gas line plumber in Dallas-Fort Worth handles gas leaks, gas line repairs, and gas connections for water heaters, stoves, and dryers. If you smell gas, the first step is to leave the house, not to look for the leak yourself.",
+    checklistItems: [
+      "Signs of a gas line problem: a rotten-egg or sulfur smell near a gas appliance or the meter, a hissing sound, a pilot light that will not stay lit, a burner that burns yellow instead of blue, or a gas bill that jumps for no reason.",
+      "If you smell gas, leave immediately -- do not stop to open windows, do not flip light switches, and do not use a phone inside. Call your gas company emergency line or 911 from outside, and do not re-enter until they say it is safe.",
+      "Gas line repairs a plumber handles: leaking joints and fittings, corroded or damaged pipe, and flexible connectors behind stoves and dryers. After any gas line work, the line is pressure-tested and checked with a leak-detection solution or a gas detector.",
+      "Gas lines for water heaters, stoves, and dryers: a gas water heater has a gas supply line, a shutoff valve, and a pilot or electronic ignition; a stove connects with a flexible connector; a gas dryer needs both a gas connection and a vent to the outside.",
+      "Permits and who can legally do gas work in Texas: the homeowner exemption in Texas Occupations Code Section 1301.051 does not cover gas line work. Gas work must be done by a professional permitted to do it in Texas, and a permit and inspection typically apply when a line is added, moved, or replaced.",
+      "What to ask before any gas work starts: whether the provider is permitted to do gas work in Texas, whether the job needs a permit, whether an inspection is included, and how the line will be tested after the repair.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm the provider is permitted to do gas work in Texas before any work begins.",
+      "Confirm whether the job needs a permit and whether the inspection is included.",
+      "Confirm how the line will be tested after the repair -- a pressure test and a leak check are the standard.",
+      "Confirm scope and pricing before work begins, and do not let anyone turn the gas back on until the repair has been tested.",
+    ],
+    extraFaqs: [
+      {
+        question: "What should I do first if I smell gas?",
+        answer:
+          "Leave the house immediately. Do not stop to look for the leak, do not open windows, do not flip light switches, and do not use a phone inside. Once you are outside and at a safe distance, call your gas company's emergency line or 911 and give the address. Do not re-enter the house until the gas company says it is safe."
+      },
+      {
+        question: "Can a plumber repair a gas line?",
+        answer:
+          "Yes -- a plumber who is permitted to do gas work in Texas can repair a gas line on the homeowner's side of the meter: leaking joints, corroded or damaged pipe, and flexible connectors. Leaks on the utility's side of the meter are the gas company's repair, and the gas stays off until the repair is made and the line is tested."
+      },
+      {
+        question: "Who do I call for a gas leak -- a plumber or the gas company?",
+        answer:
+          "The gas company first. If you smell gas, leave and call your gas company's emergency line or 911 from outside -- they make the area safe and can shut off the gas at the meter. Once the area is safe and the leak is on the homeowner's side of the meter, a gas line plumber does the repair."
+      },
+      {
+        question: "How do I know if my gas line is leaking?",
+        answer:
+          "The most common signs are a rotten-egg or sulfur smell, a hissing sound near a gas appliance or the meter, a patch of dead grass above a buried line, a water heater pilot light that will not stay lit, a stove burner that burns yellow instead of blue, or a gas bill that jumps for no reason. More than one of these together is worth taking seriously -- and if you smell gas, leave first and investigate later."
+      },
+      {
+        question: "Does gas line work need a permit in Texas?",
+        answer:
+          "Typically, yes, for work that adds, moves, replaces, or extends a gas line -- and the work is inspected before the gas is turned back on. Dallas and the other DFW cities each run their own permit process with their own thresholds. The matched provider should confirm whether the specific job needs a permit and arrange the inspection."
+      },
+      {
+        question: "What does a gas line repair usually involve?",
+        answer:
+          "The gas is shut off, the failed part -- a joint, a section of corroded pipe, or a flexible connector -- is removed and replaced, and the line is then pressure-tested and checked with a leak-detection solution or a gas detector to confirm the repair holds. The repair is not finished when the new part is in; it is finished when the test shows no leak. Confirm scope and pricing with the matched provider before work begins."
+      }
+    ],
+    extraLinks: [
+      { label: "Water Heater Pilot Light Won't Stay Lit: What It Means", href: "/blog/water-heater-pilot-light-wont-stay-lit-dallas" },
+      { label: "Water Heater Flue & Carbon Monoxide Warning Signs", href: "/blog/water-heater-flue-carbon-monoxide-warning-signs-dallas" },
+      { label: "Can Homeowners Legally Do Their Own Plumbing in Texas?", href: "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" },
+      { label: "Water Heater Emergency", href: "/services/water-heater-emergency" }
+    ]
+  },
+  "home-warranty-plumbing-coverage-texas": {
+    checklistTitle: "Home warranty plumbing in Texas -- what is covered and what is not",
+    checklistIntro:
+      "A home warranty in Texas is a service contract, not insurance -- it usually covers the repair or replacement of named plumbing systems and appliances that fail from normal wear, but it does not cover pre-existing problems, code upgrades, or damage from a leak itself.",
+    checklistItems: [
+      "What a home warranty is: a service contract you buy, usually for a year at a time, that covers the repair or replacement of named home systems and appliances when they fail from normal wear and tear. It is not insurance and it is not a maintenance plan.",
+      "Plumbing items a warranty usually covers: water heaters that fail from wear, toilet working parts such as the fill valve and flapper, faucets, garbage disposals, and leaks in accessible supply or drain pipes -- always check your own contract, because the only list that matters is the one in it.",
+      "What it usually excludes: pre-existing problems, damage caused by a leak (as opposed to the leak itself), code upgrades, improper installation and prior work, outdoor plumbing and irrigation, and -- in many plans -- the main sewer lateral.",
+      "How a plumbing claim works: stop the water first, then call the warranty company claims line -- not a plumber -- describe the problem, get a claim number, and pay the per-visit service fee. The company assigns a contractor from its network, who diagnoses the problem and reports back.",
+      "Home warranty vs. homeowners insurance: insurance covers sudden, accidental loss and pays for the damage, minus your deductible; a warranty covers breakdowns from normal wear and pays for the repair or replacement of the named item, up to the contract limits, minus a service fee.",
+      "If a claim is denied, ask for the reason in writing and ask for a review -- especially if you can document that the problem started after the contract began. Do not authorize work you cannot pay for on the assumption that the company will change its mind.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm the plumbing section of your own contract before you need it -- especially the sewer line, the limits, and the exclusions.",
+      "Confirm whether the problem is an emergency first: if water is spreading, stop the water and request help directly, then sort out the warranty question afterwards.",
+      "Confirm that you have gone through the warranty company before calling your own plumber -- calling your own plumber first can mean the company refuses to reimburse you.",
+      "Confirm the decision in writing, and keep the claim number and the contractor report.",
+    ],
+    extraFaqs: [
+      {
+        question: "Does a home warranty cover a burst pipe?",
+        answer:
+          "It depends on the contract. A burst pipe that failed from normal wear or a freeze in a heated home is often covered as a repair -- the pipe itself. What is usually not covered is the water damage the burst caused: the ruined floor, the wet drywall, the damaged ceiling below. That is a homeowners insurance matter. Stop the water first, then file the claim, and do not wait for warranty approval while water is spreading."
+      },
+      {
+        question: "Does it cover a leaking toilet?",
+        answer:
+          "Usually, yes, for the failed part -- a worn flapper, a failed fill valve, a wax ring that has given out. What is usually not covered is a pre-existing problem, damage from the leak itself, or a toilet that was installed incorrectly. A toilet that runs constantly because the flapper has decayed is the classic warranty repair; a toilet that leaks because it was never installed properly is usually denied."
+      },
+      {
+        question: "What plumbing is usually excluded?",
+        answer:
+          "Pre-existing problems, damage caused by a leak (as opposed to the leak itself), code upgrades, improper installation and prior work, outdoor plumbing and irrigation, and -- in many plans -- the main sewer lateral, which is often excluded or covered only as an add-on. Every plan also has dollar limits per item, per claim, or per contract term. The only list that matters is the one in your contract."
+      },
+      {
+        question: "How do I file a plumbing claim?",
+        answer:
+          "Stop the water first if there is a leak. Then call the warranty company's claims line -- not a plumber -- describe the problem, and get a claim number. You will pay a per-visit service fee, and the company will assign a contractor from its network to diagnose the problem. The company then decides whether the repair is covered. Get the decision in writing and keep the claim number and the contractor's report."
+      },
+      {
+        question: "Is a home warranty the same as homeowners insurance?",
+        answer:
+          "No. A home warranty is a service contract that pays for the repair or replacement of named systems and appliances that fail from normal wear. Homeowners insurance covers sudden, accidental loss -- a burst pipe flooding a room, a storm, a fire -- and pays for the damage, minus your deductible. A burst pipe is a warranty repair for the pipe and an insurance claim for the water damage. Neither product replaces the other."
+      },
+      {
+        question: "What if my claim is denied?",
+        answer:
+          "Ask for the reason in writing, and ask for a review if you think the decision is wrong -- especially if you can document that the problem started after the contract began. You can also get the repair done yourself and pay for it. What you should not do is authorize work you cannot pay for on the assumption that the company will change its mind. Confirm coverage before work begins, in writing, whenever you can."
+      }
+    ],
+    extraLinks: [
+      { label: "Does Homeowners Insurance Cover a Plumbing Leak in Texas?", href: "/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas" },
+      { label: "Burst Pipe in Dallas: What to Shut Off First", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" },
+      { label: "Emergency Drain Cleaning Cost in Dallas: Price Factors", href: "/blog/emergency-drain-cleaning-cost-in-dallas-price-factors" },
+      { label: "Burst Pipe Emergency", href: "/services/burst-pipe-emergency" }
+    ]
+  },
+  "kitchen-plumbing-services-dallas-fort-worth": {
+    checklistTitle: "Kitchen plumbing services -- sinks, disposals, dishwashers, and supply lines",
+    checklistIntro:
+      "Kitchen plumbing services in Dallas-Fort Worth cover the fixtures a kitchen depends on -- sink leaks and backups, garbage disposals, dishwasher and supply-line leaks. The first step is telling the plumber which fixture is affected and whether water is spreading.",
+    checklistItems: [
+      "What kitchen plumbing services cover: the sink and faucet, the garbage disposal, the dishwasher water connections, and the supply lines and shutoff valves under the sink.",
+      "Kitchen sink leaks and backups: a leak under the sink usually comes from the faucet base, the supply-line connections, the drain assembly, or the disposal. A sink backup is usually a grease clog in the branch drain -- and if the dishwasher backs up too, the problem is further down the line.",
+      "A dripping faucet is easy to ignore and expensive to ignore: the EPA WaterSense program notes that a faucet dripping once per second can waste more than 3,000 gallons of water per year.",
+      "Garbage disposal problems: jammed (reset button and manual crank), humming but not turning (a jam, not a dead unit), dead (no sound with the power checks fine), and leaking from the body (a replacement, not a repair). Never put your hand inside a disposal, even when it is off.",
+      "Dishwasher and supply-line leaks: a dishwasher leak is usually the drain hose, the supply connection, or the door seal. Supply lines fail slowly at a connection or burst outright -- check the lines under the kitchen sink once a year for corrosion, bulging, or dampness.",
+      "When a kitchen problem is an emergency: water spreading, a sink overflowing and not stopping, or sewage coming up into the sink. Shut off the water first -- the valve under the sink, or the main valve -- and then call.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm what the visit includes -- diagnosis first, and whether a simple repair such as a clogged trap or a jammed disposal is usually fixed on that same visit.",
+      "Confirm scope and pricing before work begins, including whether the disposal or the dishwasher connections are included.",
+      "Confirm availability and timing -- water spreading or sewage backing up is an emergency; a dripping faucet or a slow drain can usually wait for a scheduled visit.",
+      "Confirm that the provider will check the shutoff valves and supply lines, not just the fixture -- a valve that has seized shut from years of not being touched is a problem to fix before the emergency, not during it.",
+    ],
+    extraFaqs: [
+      {
+        question: "What does a kitchen plumber do?",
+        answer:
+          "A kitchen plumber handles the sink and faucet, the garbage disposal, the dishwasher's water connections, and the supply lines and shutoff valves under the sink. That covers leaks at the faucet or under the sink, sink and drain backups, disposal jams and replacements, dishwasher leaks and drain problems, and supply-line failures. If it brings water into the kitchen or takes it away, it is kitchen plumbing."
+      },
+      {
+        question: "My kitchen sink is backing up -- what first?",
+        answer:
+          "Stop running water into the sink and do not run the dishwasher -- both feed the same drain. Try a plunger, and if the sink is still slow after that, stop: a kitchen sink that is slow again within days was not fully cleared, and the clog is usually grease further down the branch line. Tell the plumber whether the dishwasher also backs up, because that detail says the clog is in the shared branch rather than in the sink itself."
+      },
+      {
+        question: "My disposal hums but won't turn -- is it dead?",
+        answer:
+          "Usually not. A hum means the motor is getting power and trying to turn -- that is a jam, not a dead unit. With the power off, use the manual crank -- a 1/4-inch Allen wrench in the socket underneath -- until the plate turns freely, remove the obstruction with tongs or pliers, press the reset button, and try again. A disposal that makes no sound at all, with the power checks fine, is the one that has likely failed. If it hums, gets hot, or smells of burning, switch it off and leave it off."
+      },
+      {
+        question: "What causes a leak under the kitchen sink?",
+        answer:
+          "Usually one of four places: the faucet base, the supply-line connections, the drain assembly, or the disposal. Dry everything under the sink, run the faucet, and watch where the water appears -- a leak that shows only when the faucet runs points to the faucet or supply lines, and a leak that shows only when the sink drains points to the drain assembly. Put a bucket under the drip while you wait for help, because a slow leak under a sink can ruin a cabinet floor in days."
+      },
+      {
+        question: "Can a plumber fix a dishwasher leak?",
+        answer:
+          "Yes, when the leak is in the water connections -- the drain hose, the supply connection, or the shared drain with the sink. A plumber handles those. A leak from the door seal or from inside the dishwasher itself is usually an appliance part. If the dishwasher is leaking and the sink is also backing up, tell the plumber -- the problem may be the shared drain rather than the dishwasher."
+      },
+      {
+        question: "When is a kitchen leak an emergency?",
+        answer:
+          "When water is spreading -- a burst supply line, a sink that is overflowing and will not stop, water running across the kitchen floor, or water dripping through the ceiling below. Shut off the water first, at the valve under the sink or at the main valve, and then call. Sewage backing up into the sink is also an emergency. A dripping faucet, a slow drain, or a disposal that needs a reset can wait for a scheduled visit."
+      }
+    ],
+    extraLinks: [
+      { label: "Kitchen Sink Backing Up in Dallas: Signs You Need Drain Help", href: "/blog/kitchen-sink-backing-up-in-dallas-signs-you-need-drain-help" },
+      { label: "Water Leaking Under the Sink? First Checks", href: "/blog/water-leaking-under-kitchen-sink-first-checks-dallas" },
+      { label: "Garbage Disposal Jammed? Reset Button & When It's Dead", href: "/blog/garbage-disposal-jammed-reset-button-dallas-fort-worth" },
+      { label: "Garbage Disposal Humming but Not Turning: What It Means", href: "/blog/garbage-disposal-humming-not-turning-what-it-means" },
+      { label: "Sink and Shower Drain Backup", href: "/services/sink-and-shower-drain-backup" }
+    ]
+  },
+  "plumbing-fixture-installation-dallas-fort-worth": {
+    checklistTitle: "Plumbing fixture installation -- what counts, what goes wrong, and when to call a plumber",
+    checklistIntro:
+      "Plumbing fixture installation in Dallas-Fort Worth covers faucets, sinks, toilets, shower valves, and hose bibs. The work that matters most is the part you cannot see: the supply connections, the seals, and whether the fixture is fitted to the existing lines without a leak.",
+    checklistItems: [
+      "What counts as a plumbing fixture: faucets, sinks, toilets, showerheads and shower valves, bathtubs, hose bibs, and garbage disposals. Water heaters and sump pumps are equipment, not fixtures; dishwashers and washing machines are appliances.",
+      "Faucet and sink installation: the hot and cold supply lines, the shutoff valves, the mounting hardware, and the seal between the faucet and the sink or countertop. Most faucet leaks after an install come from one of those connections, not from the faucet itself.",
+      "Toilet and shower fixture installation: a toilet install is mostly about the seal -- the wax ring between the toilet and the flange. A shower install is mostly about the valve behind the wall, which mixes hot and cold water and keeps the temperature steady.",
+      "What can go wrong with a bad install: slow leaks at supply connections, a failed seal at the base, loose or rocking fixtures, low pressure or temperature problems, and wasted water. The failures are in the connections, the seals, and the fit -- the parts you cannot see once the job is done.",
+      "Permits: a like-for-like replacement generally does not need one in most DFW cities. Moving a fixture, adding a new one, or running new lines usually does, because that is new plumbing work.",
+      "Call a plumber when water is spreading or you cannot shut it off, when the fixture is behind tile or a finished wall, when the toilet rocks or the floor is soft, when you are moving or adding a fixture, or when the install involves gas.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm what the install includes -- the fixture, the supply lines, the valves, and the seals -- and whether worn supply lines or valves will be replaced as part of it or quoted separately.",
+      "Confirm whether a permit is needed and whether the inspection is included in the job.",
+      "Confirm how the work will be tested for leaks before the provider leaves, and what the quote covers: parts, labor, disposal of the old fixture, and any permit fees.",
+      "Confirm what happens if the flange is cracked or a valve will not close -- does the provider stop and re-quote, or carry on?",
+    ],
+    extraFaqs: [
+      {
+        question: "What fixtures can a plumber install?",
+        answer:
+          "Faucets, sinks, toilets, showerheads and shower valves, bathtubs, hose bibs, and garbage disposals are the usual ones. A provider can also handle the supply lines, shutoff valves, and drain connections that go with them -- and in a DFW home, the supply lines and valves are often the part that actually needs replacing, because the old ones have gone stiff or brittle. Ask the matched provider what is included for equipment such as water heaters, and whether worn supply lines and valves will be replaced as part of the install or quoted separately."
+      },
+      {
+        question: "Do I need a permit to install a new faucet?",
+        answer:
+          "Usually not for a like-for-like swap in the same spot -- a new faucet where the old one was, a new toilet on the same flange. Moving a fixture, adding one, or running new lines usually does, and the rules vary by city across DFW: Dallas, Fort Worth, Plano, and Frisco do not all handle it the same way. The matched provider can confirm what applies to your address, and if a permit is needed they can tell you whether the inspection is included in the job."
+      },
+      {
+        question: "Can I install a toilet myself?",
+        answer:
+          "A straightforward like-for-like toilet swap is a job many homeowners do themselves, but the seal is the hard part -- if the flange is damaged or the toilet rocks, the wax ring will fail and water will leak at the base. That is the failure you do not see until the subfloor is soft or the ceiling below is stained. If the floor is soft, the flange is cracked, the toilet has leaked before, or the toilet is on a slab and you cannot see what is underneath, request a provider rather than doing it yourself."
+      },
+      {
+        question: "What if my new shower valve leaks?",
+        answer:
+          "A shower valve that leaks after install usually has a connection or seal problem behind the wall, or was fitted at the wrong depth. Do not keep using it -- water behind tile damages the wall cavity, and in a DFW home with a shower on an upper floor, that water ends up in the ceiling below. Shut off the water to that shower if you can -- there is usually a shutoff in an access panel, or you can use the main shutoff -- and request a provider to check it. A valve leak is a small fix if it is caught in the first week and a wall repair if it is caught in the third month."
+      },
+      {
+        question: "How long does a fixture install take?",
+        answer:
+          "A simple faucet or toilet swap is usually finished in a single visit -- a couple of hours, including the leak check at the end. A shower valve, a moved fixture, or a job that needs the wall or floor opened takes longer, sometimes across two visits if tile or drywall has to be closed up and finished after the plumbing is tested. The matched provider can confirm the timing once they know the fixture and the access -- and if the job needs a permit and an inspection, that adds a wait for the inspector, not just the work itself."
+      },
+      {
+        question: "What should I ask before booking a fixture install?",
+        answer:
+          "Ask what the install includes -- the fixture, the supply lines, the valves, and the seals -- and whether worn supply lines or valves will be replaced as part of it or quoted separately. Ask whether a permit is needed, how the work will be tested for leaks before the provider leaves, and what the quote covers: parts, labor, disposal of the old fixture, and any permit fees. Ask what happens if the flange is cracked or a valve will not close -- does the provider stop and re-quote, or carry on? Confirm the scope and the pricing with the matched provider before any work begins."
+      }
+    ],
+    extraLinks: [
+      { label: "Outdoor Faucet Hose Bib Leaking After Freeze in Dallas", href: "/blog/outdoor-faucet-hose-bib-leaking-after-freeze-dallas" },
+      { label: "Shower Water Suddenly Scalding or Freezing", href: "/blog/shower-water-suddenly-scalding-or-freezing-what-it-means" },
+      { label: "Toilet Leaking at the Base: Wax Ring Failure Signs", href: "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas" },
+      { label: "24-Hour Emergency Plumber", href: "/services/24-hour-emergency-plumber" }
+    ]
+  },
+  "plumbing-prices-dallas-fort-worth": {
+    checklistTitle: "Plumbing prices in DFW -- what moves the price and what to ask",
+    checklistIntro:
+      "Plumbing prices in Dallas-Fort Worth depend on the job, not the clock -- diagnosis, timing, access, parts, and whether water damage is active are what move the price. The useful question before any work starts is what the quote includes. This article explains what drives prices; it does not state prices.",
+    checklistItems: [
+      "What drives plumbing prices: diagnosis, access, parts, timing, and water damage already done. A plumbing quote is a price for a specific job in a specific house, not a menu price for a service.",
+      "Emergency vs. scheduled work: an emergency call means a provider is dispatched now, often outside normal hours, to stop water, sewage, or a gas problem. Scheduled work happens at an agreed time, during normal hours, with the parts ordered in advance.",
+      "Drain and sewer job price factors: access to the line (a working outdoor cleanout is the simplest entry point), the length and condition of the line, the method (snake, hydro jetting, or camera scope), and whether diagnosis is quoted separately.",
+      "Water heater job price factors: tank or tankless, access and location (a garage unit is easy to reach; an attic unit is not), venting and gas or electric supply, code and safety items, and diagnosis first -- the diagnosis decides whether the job is a repair or a replacement.",
+      "Questions to ask before you approve work: what did you find and what are you going to do about it, what exactly is included in this quote, is there a dispatch or diagnostic fee and what does it cover, what happens if the job is bigger than expected, and what is covered if something goes wrong after the work.",
+      "How to compare two plumbing quotes: compare what is included, line by line -- the diagnosis, the method, the parts, the disposal, the permit, and the re-testing. The cheapest quote is often the one that leaves something out.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm that the quote names the parts, the labor, the diagnosis, the disposal of the old fixture or unit, the permit fees where a permit is needed, and the re-testing after the work -- in writing, not as a verbal promise.",
+      "Confirm whether there is a dispatch or diagnostic fee, what it covers, and whether it is credited toward the repair.",
+      "Confirm what happens if the job turns out bigger than expected -- a drain that is actually a collapsed line, a leak that is actually inside the wall -- before work starts.",
+      "Confirm the warranty on the work itself, not just the parts, and who to call if a leak appears after the provider leaves.",
+    ],
+    extraFaqs: [
+      {
+        question: "Why do plumbing prices vary so much?",
+        answer:
+          "Because every job is different, and the differences are in your house, not in a price list. Diagnosis, access, parts, timing, and whether water damage is already active all move the price. A slow drain in a home with a cleanout in the front yard is one job; the same slow drain in a home with no cleanout, a 1970s cast-iron lateral, and roots from a live oak is another. Compare what is included, not just the total -- two quotes for the same symptom can be for two different jobs."
+      },
+      {
+        question: "What costs more -- emergency or scheduled work?",
+        answer:
+          "Emergency work usually costs more than the same repair done on a schedule, because a provider is dispatched now -- often at night, on a weekend, or on a holiday -- to stop water, sewage, or a gas problem. The first job is to stop the damage, and the full repair may follow once things are stable. Scheduled work happens at an agreed time during normal hours, with the parts ordered in advance, which gives you time to compare quotes. The exception is when waiting costs more than the call-out: water spreading across a slab floor or sewage backing up into a tub does not get cheaper by morning."
+      },
+      {
+        question: "Is a drain cleaning quote usually flat or hourly?",
+        answer:
+          "It varies by provider and by job. Some providers quote a flat price for a standard drain cleaning -- one clog, one branch, easy access. Others charge for the time and the method used, especially when the line needs a camera scope, the access is difficult, or the job turns into hydro jetting rather than a snake. What matters is that the quote says which model it is and what is included -- and whether a second visit to clear the same drain is covered if the first one does not hold."
+      },
+      {
+        question: "What should a quote include?",
+        answer:
+          "Parts, labor, diagnosis, disposal of the old fixture or unit, permit fees where a permit is needed, and re-testing after the work. If any of those are not included, ask what they would cost if needed -- the most common omission is disposal, followed by the permit fee. Get the quote in writing, and check that the parts are named: a standard fill valve and a pressure-balancing shower valve are very different parts, and 'parts included' without a name does not tell you which one you are getting."
+      },
+      {
+        question: "Do plumbers charge a dispatch or diagnostic fee?",
+        answer:
+          "Some do, some fold it into the job if you go ahead with the repair. A dispatch or diagnostic fee covers the visit and the finding of the problem -- the provider's time, the travel, and the diagnosis itself. Ask whether there is one, what it covers, whether it is credited toward the repair, and whether the diagnosis includes a camera scope or a pressure test. A fee is not a red flag on its own; a fee you only learn about after the work is done is."
+      },
+      {
+        question: "How do I compare two plumbing quotes?",
+        answer:
+          "Compare what is included, line by line: the diagnosis, the method, the parts, the disposal, the permit, and the re-testing. Ask each provider what happens if the job turns out bigger than expected -- a drain that is actually a collapsed line, a leak that is actually inside the wall. And watch for the quote that leaves the diagnosis out entirely: a provider who quotes a repair before finding the problem is guessing, and a guess is the most expensive quote of all, because it is the one that changes halfway through the job."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency Drain Cleaning Cost in Dallas: Price Factors", href: "/blog/emergency-drain-cleaning-cost-in-dallas-price-factors" },
+      { label: "Drain Cleaning Cost Guide for Dallas Homeowners", href: "/blog/drain-cleaning-cost-guide-for-dallas-homeowners" },
+      { label: "Sewer Camera Inspection Cost in DFW: What It Finds", href: "/blog/sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds" },
+      { label: "Best Questions to Ask Before You Book an Emergency Plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" }
+    ]
+  },
+  "how-home-plumbing-system-works-dallas-fort-worth": {
+    checklistTitle: "How your home plumbing system works -- supply, drain, and vents",
+    checklistIntro:
+      "A home plumbing system in Dallas-Fort Worth is two systems in one -- a pressurized supply side that brings water in from the meter, and a gravity drain side that carries wastewater out through vents to the sewer lateral. Knowing which side a problem sits on is what decides how urgent it is.",
+    checklistItems: [
+      "The two systems in your home: the supply system brings clean water in under pressure, and the drain system takes wastewater away by gravity. They meet at your fixtures and never mix.",
+      "How water gets in: from the city main under the street, through a service line to your water meter -- usually in a covered box at the curb -- then into the house through the main shutoff valve, and past a pressure-reducing valve if your home has one.",
+      "How wastewater gets out: from each fixture through a branch drain, into the main drain, and out through the sewer lateral to the city sewer. Every fixture drain has a trap that holds water as a seal against sewer gas, and every trap needs a vent.",
+      "Where DFW homes differ: most are built on concrete slabs, with supply and drain lines running underneath; North Texas water is hard and leaves scale on fixtures and inside pipes and water heaters; and DFW freezes are rare but sharp -- the February 2021 freeze burst pipes in attics and exterior walls all over the metro.",
+      "The parts that fail first: supply lines and shutoff valves, toilet fill valves and flappers, faucet washers, cartridges, and aerators, water heater parts, traps and drain seals, and the sewer lateral -- the most expensive part to fix and the easiest to ignore, because it is buried.",
+      "The habit that catches most problems early: look under your sinks once in a while, listen for a toilet that runs, and watch your water bill. And know where your main shutoff valve is and that it turns -- in most DFW houses it is near where the water line enters the house, often in the garage, a utility closet, or near the water heater.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm where your main shutoff valve is and that it turns -- if yours is an old round-handled gate valve that has not moved in a decade, have a provider check it before you need it.",
+      "Confirm whether a problem is supply side or drain side before deciding how urgent it is -- water spreading across the floor is supply side and means shutting the water off; a slow drain or a gurgling toilet is drain side.",
+      "Confirm the water meter check for a hidden leak: if every fixture is off and the meter is still moving, water is going somewhere it should not be.",
+      "Confirm scope and pricing with the matched provider before any work begins, and ask what the work includes.",
+    ],
+    extraFaqs: [
+      {
+        question: "What are the two parts of a home plumbing system?",
+        answer:
+          "The supply side and the drain side. The supply side brings clean water in under pressure from the meter to every fixture. The drain side carries wastewater away by gravity, through traps and vents, to the sewer lateral. They meet at your fixtures and never mix -- and knowing which side a problem sits on is what decides how urgent it is. Water spreading across the floor is supply side: shut the water off. A slow drain or a gurgling toilet is drain side: slower, but still worth attention, because a drain problem that is ignored becomes a backup."
+      },
+      {
+        question: "What does the vent stack do?",
+        answer:
+          "The vent stack is the pipe that runs from the drain system up through the roof. It lets air into the drains so wastewater can flow freely, and it gives sewer gas a path out above the house. Without vents, drains gurgle, drain slowly, and pull their traps dry -- which is why a toilet that gurgles when the washing machine runs is usually a vent problem, not a clog."
+      },
+      {
+        question: "Where does my water come from?",
+        answer:
+          "From the city main under the street, through a service line to your water meter -- usually in a covered box at the curb -- then into your house through the main shutoff valve. Cold water goes straight to fixtures; hot water goes through the water heater first. Your water meter is also the best tool for checking for a hidden leak: if every fixture is off and the meter is still moving, water is going somewhere it should not be."
+      },
+      {
+        question: "Where does wastewater go?",
+        answer:
+          "From each fixture through a branch drain, into the main drain, and out through the sewer lateral -- the buried pipe that connects your home to the city sewer. Every fixture drain has a trap that holds water as a seal against sewer gas, and every trap needs a vent. The boundary between your pipe and the city's usually sits at the property line, and who is responsible for a repair depends on where the problem is."
+      },
+      {
+        question: "Why do DFW homes get slab leaks?",
+        answer:
+          "Most DFW homes are built on concrete slabs, with supply and drain lines running underneath. Clay soil shifts with wet and dry spells, stressing the pipes -- and a pipe under concrete has nowhere to move, so the stress finds the weakest joint. A leak under the slab shows up as a warm spot on the floor, a damp patch, a climbing water bill, or the sound of running water when everything is off. The water bill is usually the first sign: if it has doubled and nothing is leaking that you can see, check the meter with everything off."
+      },
+      {
+        question: "What part of my plumbing should I check first?",
+        answer:
+          "Your main shutoff valve -- know where it is and that it turns. In most DFW houses it is near where the water line enters the house, often in the garage, a utility closet, or near the water heater. Then check the supply lines and shutoff valves under your sinks and behind your toilets, listen for a toilet that runs, and watch your water bill. Those four checks catch most problems while they are still small -- and the shutoff valve is the one that matters at two in the morning."
+      }
+    ],
+    extraLinks: [
+      { label: "How to Check Your Water Meter for a Hidden Leak in Dallas", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "PEX vs. Copper Repipe in Dallas-Fort Worth", href: "/blog/pex-vs-copper-repipe-dallas-fort-worth" },
+      { label: "Slab Leak Warning Signs in Dallas-Fort Worth", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
+      { label: "Is a Clogged Drain Actually a Sewer Line Problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" }
+    ]
+  },
+  "clogged-plumbing-vent-dallas-fort-worth": {
+    checklistTitle: "Clogged plumbing vent -- signs, causes, and when to call a plumber",
+    checklistIntro:
+      "A clogged plumbing vent in a Dallas-Fort Worth home usually announces itself with gurgling drains, slow fixtures, and a sewer smell. The vent stack on the roof lets air into the drain system so wastewater can flow, and when it is blocked the drains cannot breathe.",
+    checklistItems: [
+      "What the plumbing vent does: it lets air into the drain system so wastewater can flow freely, and it lets sewer gas out above the roof. Every fixture drain needs a vent to work properly -- without one, drains gurgle, drain slowly, and pull their traps dry.",
+      "Signs your vent is clogged: gurgling (the most distinctive sign -- a toilet flushes and the tub gurgles), slow drains across several fixtures at once, a sewer smell, and bubbling in the toilet bowl.",
+      "What clogs a vent: leaves and debris (the most common cause), bird and animal nests, ice in a hard freeze, a cap or cover that has failed, and construction or storm damage. In DFW, the big leaf drop comes with the live oaks and post oaks in late autumn, and again after a spring storm.",
+      "How the vent system connects: from each fixture drain, a vent pipe rises and joins the main vent stack, which runs vertically through the house and out the roof. A vent must connect to the drain above the trap, so air can reach the drain without passing through the trap water.",
+      "A vent problem and a main sewer line problem share symptoms. A vent problem usually leaves the drains working, just badly, while a main-line problem usually ends in a backup. If you are seeing sewage, or water backing up into a tub or a floor drain, treat it as a main-line problem and request help immediately.",
+      "Vent work means roof access -- do not climb on your roof. If a vent needs clearing, request a provider instead. From the ground you can keep gutters and overhanging branches trimmed back, run water in rarely used fixtures once a month so their traps stay sealed, and note the pattern for the provider.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm the diagnosis before any work -- the provider should check the drains and, if needed, run a camera to confirm it is the vent and not the main line.",
+      "Confirm how the blockage will be cleared -- usually with a snake or a jetter fed down from the roof -- and that the drains will be checked to run freely and the traps to hold their seal afterwards.",
+      "Confirm whether the stack itself is damaged or just blocked -- a crushed, bent, or disconnected stack is a repair, not a cleaning.",
+      "Confirm scope and pricing before work begins, and ask whether a cap or screen will be fitted to keep debris out.",
+    ],
+    extraFaqs: [
+      {
+        question: "What is a plumbing vent?",
+        answer:
+          "A plumbing vent is a pipe that runs from the drain system up through the roof, open to the sky. It lets air into the drains so wastewater can flow freely, and it gives sewer gas a path out above the house. Every fixture drain needs a vent to work properly -- without one, drains gurgle, drain slowly, and pull their traps dry. You can usually see the main vent stack from the yard: the short pipe sticking out of the roof."
+      },
+      {
+        question: "How do I know if my vent is clogged?",
+        answer:
+          "The usual signs are gurgling drains, several fixtures draining slowly at the same time, and a sewer smell -- especially one that comes back after you run water in unused fixtures. One slow drain is usually a local clog; several together with gurgling points to the vent or the main line. The pattern is the giveaway: a vent problem affects more than one fixture, and it gets worse over time as the blockage builds up."
+      },
+      {
+        question: "Can a clogged vent cause a sewer smell?",
+        answer:
+          "Yes. When a vent is blocked, draining water can pull the water out of the traps -- the U-shaped bends that seal sewer gas out of the house. A dry trap is an open path for sewer gas, and the smell is usually strongest in a bathroom you do not use much. Running water in the unused fixture refills the trap, but if the smell comes back, or comes with gurgling and slow drains, the vent is a likely cause -- and running the water once a month in rarely used fixtures keeps the traps sealed in the meantime."
+      },
+      {
+        question: "Can I clear a vent myself?",
+        answer:
+          "No -- not safely. The vent stack is on the roof, and clearing it means climbing up there with a ladder and a tool, on a slope, often in bad weather -- vent problems tend to show up during storms and freezes. Do not climb on your roof. Request a provider: they have the ladder and the equipment to clear the stack, check that the drains run freely afterward, and tell you whether the stack itself is damaged or just blocked."
+      },
+      {
+        question: "Is a clogged vent an emergency?",
+        answer:
+          "Usually not an immediate one, unless sewage is backing up into a fixture -- that is a main-line emergency, and you should stop using water and request help now. A clogged vent with slow drains and a smell is urgent enough to book promptly, because it can pull traps dry and let sewer gas into the house, and because a vent that stays blocked will keep getting worse. If the drains are still working, just slowly, you can book a scheduled visit; if they have stopped draining altogether, or sewage is coming up, that is an emergency."
+      },
+      {
+        question: "What does fixing a clogged vent involve?",
+        answer:
+          "The provider confirms the diagnosis by checking the drains and, if needed, running a camera; clears the blockage from the vent stack -- usually with a snake or a jetter fed down from the roof -- and checks that the drains run freely and the traps hold their seal. If the stack is damaged, it may need a repair or a replacement section, and a cap or screen may be fitted to keep debris out. The matched provider confirms the scope and the pricing before any work begins -- and if the problem turns out to be the main line rather than the vent, they should tell you that before doing the work, not after."
+      }
+    ],
+    extraLinks: [
+      { label: "Drain Smell in Bathroom: Sewer Gas or Simple Clog", href: "/blog/drain-smell-in-bathroom-sewer-gas-or-simple-clog" },
+      { label: "Is a Clogged Drain Actually a Sewer Line Problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" },
+      { label: "Toilet, Shower and Sink Backing Up Together", href: "/blog/toilet-shower-and-sink-backing-up-together-what-it-means" },
+      { label: "Main Sewer Line Clog", href: "/services/main-sewer-line-clog" }
     ]
   }
 };

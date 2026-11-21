@@ -27,7 +27,7 @@ export const services: Service[] = [
     slug: "24-hour-emergency-plumber",
     name: "24-hour emergency plumber",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "If water is leaking, a drain is backing up, or a fixture cannot be used safely after hours, shut off the closest valve and request a 24 hour plumber -- nights, weekends, and holidays included.",
+    shortAnswer: "24 hour plumbing services, around the clock in Dallas-Fort Worth -- if water is leaking, a drain is backing up, or a fixture cannot be used safely after hours, shut off the closest valve and request a 24 hour plumber, nights, weekends, and holidays included.",
     // Task208: "DFW" instead of "Dallas-Fort Worth" - after Task197 this metro-wide page started
     // outranking the Dallas city hub for "emergency plumber dallas" (13.7 vs 37.8). City intent
     // belongs to /cities/dallas; this page keeps the generic 24-hour intent.
@@ -42,13 +42,13 @@ export const services: Service[] = [
     cityHeading: "24 Hour Plumber in {city}, TX: Nights & Weekends",
     urgency: "High",
     symptoms: ["active leak", "water near electrical fixtures", "overflowing toilet", "no usable bathroom", "after-hours plumbing failure"],
-    steps: ["Shut off the nearest valve if safe.", "Move items away from water.", "Avoid using backed-up fixtures.", "Call for a provider connection."],
+    steps: ["Shut off the nearest valve if safe.", "Move items away from water.", "Avoid using backed-up fixtures.", "Call for a provider connection.", "Tell the plumber the problem, the fixture, your address, and whether water is spreading."],
     callPrep: ["Your city and nearest cross streets.", "Which fixture or pipe is affected.", "Whether water is still running.", "Photos are helpful if safe to take."],
     commonCauses: ["failed supply line", "fixture blockage", "broken shutoff valve", "frozen or stressed pipe", "main drain backup"],
     mistakesToAvoid: ["Do not keep running water to test the problem.", "Do not stand in water near electrical fixtures.", "Do not accept guaranteed pricing before diagnosis.", "Do not delay if damage is spreading."],
     costDiscussion: "Emergency plumbing cost in Dallas-Fort Worth depends on timing, diagnosis, access, parts, and whether property damage is active. Confirm dispatch, diagnostic, and repair pricing directly with the matched provider before work starts.",
     costFactors: ["time of day", "severity", "access", "parts needed", "service distance"],
-    faqSeed: ["What counts as a plumbing emergency?", "Should I shut off the main water valve?", "Can I wait until morning?"]
+    faqSeed: ["What counts as a plumbing emergency?", "Should I shut off the main water valve?", "Can I wait until morning?", "What counts as a 24-hour plumbing emergency?", "Do 24-hour plumbers charge more at night?"]
   },
   {
     slug: "emergency-drain-cleaning",
@@ -71,12 +71,12 @@ export const services: Service[] = [
     slug: "main-sewer-line-clog",
     name: "main sewer line clog",
     categorySlug: "sewer-help",
-    shortAnswer: "A main sewer line clog usually shows up in several fixtures at once, and repeat clogs can point to a broken sewer line that needs repair. Stop using water, avoid flushing toilets, and request urgent sewer line help.",
+    shortAnswer: "A sewer line plumber handles main-line clogs -- several fixtures slow at once, toilet-and-tub backup, outdoor cleanout overflow, or sewer odor. Stop using water, avoid flushing toilets, and request urgent sewer line help.",
     seoTitle: "Main Sewer Line Clog & Sewer Line Repair in DFW",
     cityHeading: "Sewer Line Clog & Sewer Repair in {city}, TX",
     urgency: "High",
     symptoms: ["toilet and tub backup", "floor drain overflow", "sewage smell", "multiple fixtures affected", "cleanout overflow"],
-    steps: ["Stop using sinks, tubs, and toilets.", "Keep people away from contaminated water.", "Check whether a cleanout is overflowing.", "Call for sewer backup help."],
+    steps: ["Stop using sinks, tubs, and toilets.", "Keep people away from contaminated water.", "Check the outdoor cleanout -- sewage visible there means the main line is blocked; stop using water inside.", "Call for sewer backup help."],
     callPrep: ["Which fixtures are backing up.", "Whether water rises in tubs or showers after flushing.", "Whether an outdoor cleanout is overflowing.", "How long the symptoms have been happening."],
     commonCauses: ["root intrusion", "collapsed or bellied pipe", "grease and sludge buildup", "foreign object", "heavy rain inflow"],
     mistakesToAvoid: ["Do not keep flushing toilets.", "Do not use every fixture to locate the clog.", "Do not touch contaminated water without protection.", "Do not assume it is only one fixture if multiple drains react."],
@@ -103,7 +103,7 @@ export const services: Service[] = [
     slug: "burst-pipe-emergency",
     name: "burst pipe emergency",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "For a burst or broken pipe, shut off the main water valve, keep people away from wet electrical areas, and get an emergency plumber out for pipe repair as soon as possible.",
+    shortAnswer: "For a burst pipe in DFW, call a burst pipe plumber fast -- shut off the main water valve first if safe, keep people away from wet electrical areas, and request an emergency burst-pipe connection as soon as possible.",
     // Keyword overhaul (2026-11-15): GSC 3 months - "burst pipe repair" 1,530 impressions (pos 35.6), "burst pipe
     // plumber" 1,013 (48.1), "emergency pipe repair" 636 (35.7). Lead with the biggest query. Semrush "frozen pipe
     // repair" 1.9K/mo, KD 9 stays in the snippet (Task245).
@@ -114,13 +114,13 @@ export const services: Service[] = [
     cityHeading: "Burst Pipe Repair in {city}, TX: 24/7 Emergency Plumber",
     urgency: "High",
     symptoms: ["water spraying", "ceiling leak", "wall swelling", "sudden pressure loss", "water meter spinning"],
-    steps: ["Shut off the main water valve.", "Turn off electricity near standing water if safe.", "Open a low faucet to drain pressure.", "Call for urgent pipe help."],
+    steps: ["Shut off the main water valve if you can reach it safely.", "Turn off electricity near standing water if safe.", "Open a low faucet to drain pressure.", "Call for urgent pipe help."],
     callPrep: ["Where water is appearing.", "Whether the main shutoff is closed.", "Pipe material if known.", "Whether ceiling, wall, or slab access may be involved."],
     commonCauses: ["freeze stress", "corrosion", "high pressure", "failed fitting", "accidental damage"],
     mistakesToAvoid: ["Do not leave the main water on.", "Do not touch wet switches or outlets.", "Do not patch over active pressure.", "Do not wait if ceilings or walls are swelling."],
     costDiscussion: "Burst pipe repair cost depends on where the pipe broke, how hard it is to reach, the pipe material, and whether walls, ceilings, or a slab have to be opened. Water mitigation is usually billed separately from the plumbing repair itself.",
     costFactors: ["pipe location", "wall or slab access", "material type", "water damage", "after-hours timing"],
-    faqSeed: ["Where is my main shutoff valve?", "Is a burst pipe an emergency?", "What should I do before help arrives?"]
+    faqSeed: ["Where is my main shutoff valve?", "Is a burst pipe an emergency?", "What should I do before help arrives?", "When should I call a burst pipe plumber instead of waiting?"]
   },
   {
     slug: "water-heater-emergency",
@@ -163,7 +163,7 @@ export const services: Service[] = [
     slug: "commercial-emergency-plumbing",
     name: "commercial emergency plumbing",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "Businesses should call quickly when plumbing stops operations, affects customers, or risks property damage, since downtime and code compliance matter.",
+    shortAnswer: "Commercial plumbing companies in DFW help businesses when plumbing stops operations -- drain backups, restrooms out of service, water-heater failure, and leaks that stop work. Businesses should call quickly when plumbing affects customers or risks property damage, since downtime and code compliance matter.",
     urgency: "High",
     symptoms: ["restroom shutdown", "kitchen drain backup", "water on floor", "tenant complaints", "business interruption"],
     steps: ["Stop affected equipment.", "Block off unsafe areas.", "Document impacted fixtures.", "Request commercial plumbing help."],
@@ -172,7 +172,7 @@ export const services: Service[] = [
     mistakesToAvoid: ["Do not leave unsafe wet areas open.", "Do not run equipment tied to backed-up drains.", "Do not promise tenants a fixed repair time without confirmation.", "Do not ignore recurring business interruptions."],
     costDiscussion: "Commercial emergency plumbing cost depends on business hours, fixture count, access, equipment, and downtime needs. Ask about after-hours options and what is included in the visit.",
     costFactors: ["business hours", "fixture count", "access", "required equipment", "downtime impact"],
-    faqSeed: ["When should a business call an emergency plumber?", "Can work happen after hours?", "What information should a manager provide?"]
+    faqSeed: ["When should a business call an emergency plumber?", "Can work happen after hours?", "What information should a manager provide?", "What commercial plumbing work do you cover?", "Do you handle commercial plumbing maintenance?", "What should a business do first in a drain backup?"]
   },
   {
     slug: "same-day-plumber-connection",
