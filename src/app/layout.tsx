@@ -29,6 +29,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9781688149019681"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <JsonLd data={organizationSchema()} />
         <Header />
