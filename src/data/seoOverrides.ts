@@ -229,4 +229,12 @@ export const seoOverrides: Record<string, SeoOverride> = {
   "/services/main-sewer-line-clog": {
     title: "Sewer Line Plumber in DFW: Clogs & Backups"
   },
+  // Keyword upgrade Round 2 (2026-11-21, Semrush pasted keywords) -- 2 new titles (R1-R2).
+  // Titles only; H1 and body unchanged. All titles <= 60 chars.
+  "/blog/toilet-running-constantly-dallas-wont-stop-running": {
+    title: "Plumber for Running Toilet in DFW: When to Call"
+  },
+  "/services/water-heater-emergency": {
+    title: "Plumber for Hot Water Heater Repair in DFW"
+  },
 };

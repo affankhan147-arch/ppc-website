@@ -254,7 +254,8 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
       { label: "Dallas emergency plumbing help", href: "/cities/dallas" },
       { label: "Burst pipe guide: causes, costs, and first steps", href: "/guides/dfw-burst-pipes" },
-      { label: "Burst Pipe in Dallas: What to Shut Off First", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" }
+      { label: "Burst Pipe in Dallas: What to Shut Off First", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" },
+      { label: "Plumber for Water Hammer in DFW: Banging Pipes", href: "/blog/plumber-for-water-hammer-dallas-fort-worth" }
     ]
   }
 };
@@ -5195,6 +5196,16 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "What is the difference between a free estimate and a diagnostic fee?",
         answer:
           "An estimate prices planned work; a diagnostic fee covers finding the problem. Ask which one applies before anyone comes out."
+      },
+      {
+        question: "How do I write a good review for a plumber?",
+        answer:
+          "Mention the job, the problem, whether they explained pricing before starting, and whether the work held up. Honest specifics help the next homeowner more than stars alone -- a review that says what was fixed, how long it took, and whether the provider explained the options is the useful kind."
+      },
+      {
+        question: "Where can I get free plumbing advice before I book?",
+        answer:
+          "The questions in this guide cover the checks to make before booking, and they cost nothing to ask. For a diagnosis, a provider inspection is what settles it -- do not expect a free diagnosis or free work from a visit, and be wary of anyone who promises either without seeing the job."
       }
     ],
     extraLinks: [
@@ -5780,6 +5791,16 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "Does a running toilet mean I need a new toilet?",
         answer:
           "Usually not. A flapper or fill valve replacement solves most running toilets. A new toilet only becomes the right call when the tank or bowl itself is cracked, or when repairs keep failing — and that decision should be made with the matched provider."
+      },
+      {
+        question: "When should I call a plumber for a running toilet?",
+        answer:
+          "If it runs constantly after a flapper check, if the fill valve will not shut off, or if water is leaking onto the floor. A toilet that runs after every flush, or a water bill that jumps without a reason you can see, is worth a call -- the fix is usually a small part, but the water waste adds up while you wait."
+      },
+      {
+        question: "Can a running toilet wait until morning?",
+        answer:
+          "A slow run can usually wait a day if nothing is leaking, but shut off the toilet's supply valve overnight if the sound or the water use worries you. Do not promise yourself it is harmless -- a toilet that runs around the clock can waste a lot of water, and if water is leaking onto the floor, that is not a wait-until-morning problem."
       }
     ],
     extraLinks: [
@@ -5788,7 +5809,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Gurgling Toilet and Slow Drains", href: "/problems/gurgling-toilet-and-slow-drains" },
       { label: "Toilet Overflowing at Night in Dallas — Fast Steps", href: "/blog/toilet-overflowing-at-night-in-dallas-fast-steps" },
       { label: "No Usable Toilet in the House — What DFW Homeowners Should Do", href: "/blog/no-usable-toilet-in-the-house-what-dfw-homeowners-should-do" },
-      { label: "Water Shutoff Valve Will Not Close During a Leak", href: "/problems/water-shutoff-valve-will-not-close" }
+      { label: "Water Shutoff Valve Will Not Close During a Leak", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "Bathroom Plumber in DFW: Toilet, Sink & Shower Help", href: "/blog/bathroom-plumber-dallas-fort-worth" }
     ]
   },
   "how-to-thaw-frozen-pipes-safely-dallas-fort-worth": {
@@ -6526,7 +6548,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Toilet Leaking at the Base? Wax Ring Signs", href: "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas" },
       { label: "Water Stain on Ceiling Below a Dallas Bathroom: Causes", href: "/blog/water-stain-ceiling-below-bathroom-dallas" },
       { label: "Drain Smell in Bathroom: Sewer Gas or Simple Clog", href: "/blog/drain-smell-in-bathroom-sewer-gas-or-simple-clog" },
-      { label: "Toilet Overflow Emergency", href: "/services/toilet-overflow-emergency" }
+      { label: "Toilet Overflow Emergency", href: "/services/toilet-overflow-emergency" },
+      { label: "Shower Repair in DFW: Leaks, Pressure & Valves", href: "/blog/shower-repair-dallas-fort-worth" }
     ]
   },
   "gas-line-plumber-dallas-fort-worth": {
@@ -6817,7 +6840,8 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Emergency Drain Cleaning Cost in Dallas: Price Factors", href: "/blog/emergency-drain-cleaning-cost-in-dallas-price-factors" },
       { label: "Drain Cleaning Cost Guide for Dallas Homeowners", href: "/blog/drain-cleaning-cost-guide-for-dallas-homeowners" },
       { label: "Sewer Camera Inspection Cost in DFW: What It Finds", href: "/blog/sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds" },
-      { label: "Best Questions to Ask Before You Book an Emergency Plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" }
+      { label: "Best Questions to Ask Before You Book an Emergency Plumber", href: "/blog/best-questions-to-ask-before-you-book-an-emergency-plumber" },
+      { label: "Rough-In Plumbing Cost Per Fixture in DFW", href: "/blog/rough-in-plumbing-cost-per-fixture-dallas-fort-worth" }
     ]
   },
   "how-home-plumbing-system-works-dallas-fort-worth": {
@@ -6869,13 +6893,24 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "What part of my plumbing should I check first?",
         answer:
           "Your main shutoff valve -- know where it is and that it turns. In most DFW houses it is near where the water line enters the house, often in the garage, a utility closet, or near the water heater. Then check the supply lines and shutoff valves under your sinks and behind your toilets, listen for a toilet that runs, and watch your water bill. Those four checks catch most problems while they are still small -- and the shutoff valve is the one that matters at two in the morning."
+      },
+      {
+        question: "What does drain slope mean?",
+        answer:
+          "Drains need fall to move wastewater -- the standard for most home drains is about a quarter inch of fall per foot of run, which is the IPC Table 704.1 minimum for pipes 2-1/2 inches and smaller; larger pipes can run flatter. Too little slope leaves waste behind, and too much lets the water outrun the solids. A drain that gurgles or drains slowly can be a slope problem, not a clog."
+      },
+      {
+        question: "What is a plumbing appurtenance?",
+        answer:
+          "An appurtenance is a device or fixture attached to the plumbing system -- faucets, valves, traps, and similar fittings. The word describes the part's role in the system, not a brand. When a provider talks about appurtenances, they mean the fittings and devices connected to the pipes, as opposed to the pipes themselves."
       }
     ],
     extraLinks: [
       { label: "How to Check Your Water Meter for a Hidden Leak in Dallas", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
       { label: "PEX vs. Copper Repipe in Dallas-Fort Worth", href: "/blog/pex-vs-copper-repipe-dallas-fort-worth" },
       { label: "Slab Leak Warning Signs in Dallas-Fort Worth", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
-      { label: "Is a Clogged Drain Actually a Sewer Line Problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" }
+      { label: "Is a Clogged Drain Actually a Sewer Line Problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" },
+      { label: "HVAC or Plumbing: Which Pro to Call in DFW?", href: "/blog/hvac-or-plumbing-which-pro-to-call-dallas-fort-worth" }
     ]
   },
   "clogged-plumbing-vent-dallas-fort-worth": {
@@ -6934,6 +6969,240 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Is a Clogged Drain Actually a Sewer Line Problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" },
       { label: "Toilet, Shower and Sink Backing Up Together", href: "/blog/toilet-shower-and-sink-backing-up-together-what-it-means" },
       { label: "Main Sewer Line Clog", href: "/services/main-sewer-line-clog" }
+    ]
+  },
+  "plumber-for-water-hammer-dallas-fort-worth": {
+    checklistTitle: "Plumber for water hammer -- what it is, what causes it, and when to call",
+    checklistIntro:
+      "A plumber for water hammer in Dallas-Fort Worth handles the loud banging or thudding that happens when a faucet or valve shuts off fast -- the moving water slams to a stop and the shock wave rattles the pipes -- and the first step is telling the plumber when the noise happens and which fixture triggers it.",
+    checklistItems: [
+      "What water hammer is: moving water stopped too suddenly turns its momentum into a pressure wave that travels back through the pipe and bounces off bends and fittings -- the bang you hear, and sometimes the shudder you feel through the wall or floor.",
+      "The fixtures that trigger it most are the ones that close fast -- a washing machine's solenoid valve, a dishwasher, a toilet fill valve, and single-lever faucets -- and if the banging started right after a new appliance or faucet went in, that is the first thing to tell the plumber.",
+      "What causes it in DFW homes: high water pressure or a failed pressure-reducing valve, fast-closing appliance valves, loose pipe straps in older 1960s and 1970s builds, and missing or failed water hammer arresters whose air cushion has been absorbed over time.",
+      "Why it matters: each pressure wave stresses soldered copper joints, crimped PEX fittings, and threaded connections, and over months and years it loosens joints and works fittings apart -- in a slab home a leak can stay hidden for weeks and show up first as a climbing water bill or a warm spot on the floor.",
+      "What a plumber checks and fixes: the questions first (when it happens, which fixture, hot or cold), then a pressure test at a hose bib, arresters where the fast valves are, loose straps secured to the framing, and the water heater expansion tank checked as part of the same visit.",
+      "What to do before the plumber arrives: note exactly when it happens and which fixture triggers it, check for leaks under sinks and at ceilings below upstairs bathrooms, and do not open walls, cut pipes, or adjust the PRV yourself -- if a pipe is actively leaking, shut off the main and call.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm the diagnosis before any work -- the provider should test the pressure and trace which fixture triggers the noise before recommending arresters or a PRV replacement.",
+      "Confirm how the fix will be done -- arresters sized to the line and fixture at the fast valve, loose runs strapped to the framing, and whether the PRV needs replacing rather than adjusting.",
+      "Confirm whether the expansion tank is part of the problem -- a failed tank raises pressure on the hot-water side and makes water hammer worse.",
+      "Confirm scope and pricing before work begins, and ask what the visit includes if the noise turns out to be a leak rather than just a bang.",
+    ],
+    extraFaqs: [
+      {
+        question: "What causes water hammer?",
+        answer:
+          "Water hammer happens when moving water is stopped suddenly, usually by a fast-closing valve, and the shock wave rattles the pipes. The usual causes in a DFW home are high water pressure, a failed pressure-reducing valve, fast-closing appliance valves on a washing machine or dishwasher, loose pipe straps, or an arrester that has failed with age. It often starts after a new appliance or fixture goes in, because the new valve closes faster than the old one did."
+      },
+      {
+        question: "Is water hammer dangerous?",
+        answer:
+          "One bang is not dangerous. Repeated water hammer is, because the shock wave stresses joints and fittings every time it passes, and over months and years it can loosen a joint enough to leak or, in an older system, to burst. The danger is not the noise; it is the wear the noise is telling you about. A bang that repeats at the same moment, on the same fixture, is worth a pressure check and a look at the likely causes."
+      },
+      {
+        question: "Can water hammer burst a pipe?",
+        answer:
+          "It can, over time. Water hammer does not usually burst a healthy pipe on the first night. It weakens joints and fittings through repeated stress, and the failure comes later at the weakest point, often an old joint or a section of pipe already thinned by age or scale. In a home with older supply lines, that weak point is closer than it looks. The fix is to deal with the pressure and the shock wave while the system is still intact."
+      },
+      {
+        question: "What is a water hammer arrestor?",
+        answer:
+          "An arrester is a small device installed on a supply line near a fast-closing valve, usually at a washing machine or dishwasher. It has a sealed chamber with a piston or an air cushion that absorbs the shock wave when the valve snaps shut, so the wave does not travel through the rest of the house. A plumber sizes it to the line and the fixture and installs it on the supply side. Older air-chamber arresters can waterlog over the years and stop working, which is why a home that was quiet for twenty years can suddenly start banging."
+      },
+      {
+        question: "Why does it happen only on one faucet?",
+        answer:
+          "Because the cause is usually at that fixture. A washing machine's solenoid valve closes far faster than a hand-turned faucet, so the hammer shows up on the laundry run and nowhere else. A toilet fill valve does the same. A single-lever faucet closes faster than a two-handle one. If the bang follows one fixture, the fix is usually at that fixture: an arrester on its supply line, or a check of its valve. If it happens on every fixture, the cause is more likely system-wide, such as high pressure or a failed PRV."
+      },
+      {
+        question: "How fast can a plumber come out in DFW?",
+        answer:
+          "It depends on the provider, the time of day, and whether water is actively leaking. If a pipe is leaking now, that is an emergency and a provider is dispatched as soon as possible. If the noise is the only symptom and nothing is leaking, it is usually a scheduled visit, and the provider can give you a time window when you call. Call 1 844-397-8298 and describe when the noise happens and which fixture triggers it -- that is what decides how fast the visit needs to be."
+      },
+    ],
+    extraLinks: [
+      { label: "Burst Pipe in Dallas: What to Shut Off First", href: "/blog/burst-pipe-in-dallas-what-to-shut-off-first" },
+      { label: "How to Check Your Water Meter for a Hidden Leak in Dallas", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "Slab Leak Warning Signs Dallas Fort Worth Homeowners", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
+      { label: "Water Heater Expansion Tank Failure Signs Dallas", href: "/blog/water-heater-expansion-tank-failure-signs-dallas" },
+      { label: "Burst Pipe Emergency Service", href: "/services/burst-pipe-emergency" },
+    ]
+  },
+  "shower-repair-dallas-fort-worth": {
+    checklistTitle: "Shower repair -- leaks, pressure, temperature, and drains",
+    checklistIntro:
+      "A plumber to fix a shower in Dallas-Fort Worth handles the problems that stop a shower working -- a leaking shower head or valve, low water pressure, a shower that runs hot then cold, and a slow or backing-up shower drain -- and the first step is telling the plumber which symptom you have and whether water is leaking where you can see it.",
+    checklistItems: [
+      "Shower problems a plumber fixes: leaks, low pressure, temperature swings, and drainage -- four different jobs in the same square of tile, and the symptom tells the plumber where to start.",
+      "Leaking shower heads and valves: a dripping head is usually a valve cartridge worn by DFW hard water; a leak behind the wall runs down the cavity and shows up as a ceiling stain or bubbling paint in the room below.",
+      "Low pressure and temperature swings: scale in the head, a sticking pressure-balancing valve, or a supply problem upstream -- a shower that goes scalding without warning is a failed safety device and should be dealt with promptly.",
+      "Shower drain backups and slow drains: a slow shower drain is usually local, in the trap or branch; a shower that backs up when the toilet flushes or the washing machine drains points further down the line, and a gurgling drain with a sewer smell may be a blocked vent.",
+      "In DFW, main-line problems often involve live-oak roots in the sewer lateral and clay soil shifting the pipe -- a shower backing up along with a toilet and a sink at once means the fix starts with a camera scope, not a plunger.",
+      "When it is an emergency: water leaking through a ceiling or wall, sewage backing up through the drain, a scalding shower, or a gas smell near a gas water heater -- otherwise a scheduled visit is fine, and describing the symptom when you call decides the timing.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm what is actually leaking before any work -- the head, the valve, the spout, or the drain -- because a cartridge replacement and a valve replacement are different jobs.",
+      "Confirm whether the valve is a modern cartridge valve or a 1970s or 1980s valve with no parts available -- an older valve may need a full replacement through the wall.",
+      "Confirm whether the drain problem is local or main line -- a provider should scope the lateral before recommending a repair when more than one fixture is affected.",
+      "Confirm scope and pricing before work begins, and ask what the visit includes if the problem turns out to be behind the tile rather than at the head.",
+    ],
+    extraFaqs: [
+      {
+        question: "What does a plumber do to fix a shower?",
+        answer:
+          "It depends on the symptom. For a leak, the plumber finds whether it is the head, the valve, the spout, or the drain, and replaces the worn cartridge, seal, or valve. For low pressure, the plumber checks the head for scale, then the valve, then the supply. For temperature swings, the plumber checks the pressure-balancing valve. For a slow or backing-up drain, the plumber clears the branch or, if more than one fixture is affected, scopes the main line. The first step in every case is the same: describe the symptom, and say whether water is leaking anywhere you can see it."
+      },
+      {
+        question: "Why is my shower leaking?",
+        answer:
+          "Usually a valve that is not closing fully, because the cartridge or the seals inside it have worn out, and DFW's hard water speeds that wear up. A head that drips after the water is off is usually the valve. A leak behind the wall, the one that stains a ceiling below, is usually the valve body or a joint behind the tile. A leak at the tub spout while the shower runs is usually the diverter seal. A plumber finds which one it is before recommending a fix, because a cartridge replacement and a valve replacement are different jobs."
+      },
+      {
+        question: "Why is my shower pressure low?",
+        answer:
+          "The most common cause is scale in the shower head, which narrows the openings until the spray turns into a dribble. The next most common is a sticking pressure-balancing valve, which restricts flow as well as temperature. If the pressure is low at every fixture, the cause is upstream, in the main valve or the pressure-reducing valve. If it dropped after a repair or a remodel, a partially closed valve or a kinked line from the work is worth checking. A plumber tests the pressure at more than one fixture to tell the difference."
+      },
+      {
+        question: "Why does my shower run hot then cold?",
+        answer:
+          "Usually a pressure-balancing valve that is sticking, often because of mineral scale. The valve is supposed to keep the hot and cold supply in balance so the temperature stays steady when another fixture is used. When the spool inside it sticks, the balance goes, and the shower swings hot, then cold, then hot again. It can also happen if the water heater is struggling, or if the hot-water supply is shared with a fixture that draws heavily. A shower that goes scalding without warning is a safety problem and should be dealt with promptly."
+      },
+      {
+        question: "My shower drain is slow -- is it the drain or the vent?",
+        answer:
+          "If only the shower is slow, it is usually the drain itself: hair and soap in the trap and the branch. If the drain gurgles, drains slowly, and the bathroom sometimes smells of sewer gas, the vent may be blocked, because a blocked vent stops the drain flowing properly and can pull the water out of the trap. If the shower backs up when the toilet flushes or the washing machine drains, the blockage is further down, in the main line, and the shower is just the lowest fixture showing it. A plumber checks the vent and the main line before assuming the branch is the problem."
+      },
+      {
+        question: "How fast can a plumber come out in DFW?",
+        answer:
+          "It depends on the provider, the time of day, and the symptom. Water leaking through a ceiling, sewage backing up through the drain, or a scalding shower is an emergency and a provider is dispatched as soon as possible. A dripping head, low pressure, or a slow drain is usually a scheduled visit, and the provider can give you a time window when you call. Call 1 844-397-8298 and describe the symptom: which one it is, when it started, and whether water is leaking anywhere you can see it."
+      },
+    ],
+    extraLinks: [
+      { label: "Shower Water Suddenly Scalding or Freezing: What It Means", href: "/blog/shower-water-suddenly-scalding-or-freezing-what-it-means" },
+      { label: "Toilet, Shower and Sink Backing Up Together: What It Means", href: "/blog/toilet-shower-and-sink-backing-up-together-what-it-means" },
+      { label: "Bathroom Plumber in DFW: Toilet, Sink & Shower Help", href: "/blog/bathroom-plumber-dallas-fort-worth" },
+      { label: "Sink and Shower Drain Backup Service", href: "/services/sink-and-shower-drain-backup" },
+    ]
+  },
+  "rough-in-plumbing-cost-per-fixture-dallas-fort-worth": {
+    checklistTitle: "Rough-in plumbing cost per fixture -- what counts, what drives it, and what to ask",
+    checklistIntro:
+      "Rough-in plumbing cost per fixture in Dallas-Fort Worth depends on the fixture, not a flat rate -- a toilet, a shower, and a kitchen sink each need different pipe runs, venting, and access, so the useful question before a remodel is what the quote counts as one fixture and what it leaves out.",
+    checklistItems: [
+      "What rough-in means: the first phase of plumbing in a remodel or new build, with supply lines, drain lines, and vents run before the walls close and the pipe ends left capped or stubbed out for the fixtures.",
+      "What counts as one fixture: one point of use -- one toilet, one sink, one shower, one washing machine connection -- and a bathroom with a toilet, a sink, and a shower is three fixtures, not one.",
+      "What drives the cost per fixture: the fixture type and how many connections it needs, the distance to the main, venting, access in open framing versus a finished home, and whether the home is slab or pier-and-beam.",
+      "Rough-in heights and fixture placement: the drain stub-out for a kitchen sink is commonly set around 18 inches above the finished floor, in a range of roughly 16 to 20 inches, depending on the sink's depth and whether there is a garbage disposal.",
+      "Fixture count changes the job: each additional fixture adds a drain connection, a vent connection, and supply runs -- and there is no standard calculator that can price a rough-in, because the cost depends on the house, not just the count.",
+      "Rough-in versus finish work: the drywall is the line between them, and changing a fixture after the walls close means opening the wall again -- pick the fixtures before the rough-in starts and give the plumber the specification sheets, not just the names.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm what counts as one fixture in the quote -- get the list in writing, by name and by room, and ask what changes if you add or remove one.",
+      "Confirm what is included for each fixture -- supply lines, drain connection, vent connection, stub-outs, and whether slab cutting is included, since that is often the largest single item in a slab home.",
+      "Confirm the rough-in dimensions against the fixtures you have picked -- a farmhouse sink and a top-mount sink do not have the same rough-in height.",
+      "Confirm what is in the finish phase and whether it is in this quote or a separate one, and what happens if the job turns out bigger than expected.",
+    ],
+    extraFaqs: [
+      {
+        question: "What is rough-in plumbing?",
+        answer:
+          "Rough-in is the first phase of plumbing in a remodel or a new build: the supply lines, drain lines, and vents are run inside the walls and under the floors before the drywall, tile, and paint go in. The pipe ends are left capped or stubbed out where the fixtures will eventually connect. Nothing is finished yet. There is no faucet, no toilet, no shower head. The finish phase, which connects the fixtures to those stub-outs, comes after the walls close."
+      },
+      {
+        question: "What counts as one fixture?",
+        answer:
+          "One fixture is one point of use: one toilet, one sink, one shower, one tub, one washing machine connection. A bathroom with a toilet, a sink, and a shower is three fixtures, not one. A kitchen with a sink, a dishwasher, and an ice maker is three fixtures, not one. A double vanity is two fixtures. The count matters because each fixture needs its own drain, vent, and supply connections, and a quote that counts them differently from you is a quote for a different job."
+      },
+      {
+        question: "How does fixture count change the price?",
+        answer:
+          "Each additional fixture adds a drain connection, a vent connection, and supply runs, and each one has to be tied into the main. A fixture close to the main drain and the main supply is a short run. A fixture on the far side of the house, upstairs, or in a new addition is a long run, and a long run means more pipe, more fittings, and more time. The fixture type matters too: a shower needs more connections than a toilet, and a kitchen sink with a dishwasher and a disposal needs more than a bathroom sink."
+      },
+      {
+        question: "What is the rough-in height for a kitchen sink?",
+        answer:
+          "The drain stub-out for a kitchen sink is commonly set around 18 inches above the finished floor, in a range of roughly 16 to 20 inches, and the exact height depends on the sink's depth, whether there is a garbage disposal, and how the trap will sit underneath. A deep farmhouse sink needs the drain lower than a shallow top-mount sink, because the trap has to fit under a deeper basin. A disposal needs clearance below the drain. The height is set from the fixture that is going in, so the plumber needs to know which sink you have picked before the rough-in starts."
+      },
+      {
+        question: "Is rough-in priced per fixture or per job?",
+        answer:
+          "It is quoted both ways, and the quote should say which. A per-fixture quote gives a figure for each fixture, which makes it easy to see what changes if you add or remove one. A per-job quote gives one figure for the whole rough-in, which is simpler but harder to compare. Either way is fine, as long as the quote lists which fixtures it counts, what is included for each one, and whether slab cutting, venting, and access work are in the figure or separate."
+      },
+      {
+        question: "What should a rough-in quote include?",
+        answer:
+          "The supply lines, the drain connection, the vent connection, and the stub-outs for each fixture, plus any slab cutting or wall opening the job needs, and the permit where the city requires one. It should list the fixtures by name and by room, so you can see what counts as one fixture. It should say what happens if the job turns out bigger than expected. And it should say what is in the finish phase, and whether the finish is in this quote or a separate one, because the rough-in on its own is only half the job."
+      },
+    ],
+    extraLinks: [
+      { label: "Plumbing Prices in DFW: What Jobs Cost & Why", href: "/blog/plumbing-prices-dallas-fort-worth" },
+      { label: "Plumbing Fixture Installation in DFW: What to Know", href: "/blog/plumbing-fixture-installation-dallas-fort-worth" },
+      { label: "How Your Home Plumbing System Works: DFW Guide", href: "/blog/how-home-plumbing-system-works-dallas-fort-worth" },
+      { label: "PEX vs Copper Repipe in Dallas Fort Worth", href: "/blog/pex-vs-copper-repipe-dallas-fort-worth" },
+    ]
+  },
+  "hvac-or-plumbing-which-pro-to-call-dallas-fort-worth": {
+    checklistTitle: "HVAC or plumbing -- which pro handles what in a DFW home",
+    checklistIntro:
+      "\"HVAC or plumbing\" is the question to ask before you book -- in a Dallas-Fort Worth home, the plumber handles water, drains, gas lines, and water heaters, while the HVAC technician handles heating and cooling equipment, and the symptom you have decides which one to call.",
+    checklistItems: [
+      "What a plumber handles: the water side of the house -- the main water line, supply pipes, shutoff and pressure-reducing valves, every drain and trap, the sewer lateral and vents, gas lines, and water heaters, tank or tankless.",
+      "What an HVAC technician handles: the air side -- the air conditioner and its condenser, evaporator coil, and refrigerant lines, the furnace and its blower and heat exchanger, the ductwork, and the thermostat.",
+      "Where the two overlap: water heaters (plumbing, including the flue), gas furnaces (the furnace is HVAC, the gas supply line is plumbing), and condensate drains (a drain, but part of the AC system -- HVAC is usually the first call).",
+      "How to tell which one your problem needs: no hot water means a plumber, no cool air means HVAC, a sewer smell means a plumber, a gas smell means leave the house and call for help from outside.",
+      "A water leak's location is the clue: under a bathroom or water heater is plumbing, under the indoor air handler is usually the condensate drain and HVAC -- and if you are still not sure, call a plumber first, because water damage spreads faster than a cooling problem.",
+      "What to tell the pro when you call: the symptom in plain language, when it started and what changed first, where it is, whether anything is leaking and getting worse, and what you have already tried.",
+    ],
+    proofTitle: "What to confirm with the matched provider before booking",
+    proofItems: [
+      "Confirm which trade the problem belongs to before booking -- a water heater is plumbing, a furnace is HVAC, and a condensate drain belongs to both.",
+      "Confirm whether the company sends a plumber or an HVAC technician for your symptom, even at a company that does both.",
+      "Confirm what the visit includes if the problem turns out to be the other trade -- a plumber who arrives and finds an HVAC problem should say so before doing the work.",
+      "Confirm scope and pricing with the matched provider before any work begins, and ask what happens if the diagnosis changes once the provider is on site.",
+    ],
+    extraFaqs: [
+      {
+        question: "Do plumbers fix water heaters or does HVAC?",
+        answer:
+          "Plumbers fix water heaters, whether they are tank or tankless, gas or electric. The water heater, its flue and venting, its relief valve, its expansion tank, and its drain pan are all plumbing. HVAC handles heating and cooling equipment, not water heaters. If the problem is no hot water, a leaking water heater, or water that is too hot, call a plumber."
+      },
+      {
+        question: "Who fixes a gas furnace -- a plumber or HVAC?",
+        answer:
+          "HVAC fixes the furnace. The furnace itself, the burners, the heat exchanger, the igniter, and the controls are HVAC equipment. The gas line that feeds the furnace is plumbing, but the furnace is not. If the furnace will not light, short-cycles, or blows cold air, call an HVAC technician. If you smell gas, leave the house and call for help from outside, and do not try to find the source yourself."
+      },
+      {
+        question: "Who handles a leaking AC condensate drain?",
+        answer:
+          "Usually the HVAC technician, because the condensate drain is part of the AC system, and it clogs with algae and sludge from the coil. An HVAC technician clears it as part of servicing the AC. A plumber can clear a condensate drain too, because it is a drain, and if the drain keeps clogging, or the leak turns out to be in the plumbing rather than the AC, a plumber can sort it. If the AC is running and water is leaking, call HVAC first."
+      },
+      {
+        question: "Can one company do both?",
+        answer:
+          "Some companies do both plumbing and HVAC, and some do only one. A company that does both can send the right technician for the problem, and that is convenient when you are not sure which trade you need. But a company that does both still sends a plumber for a plumbing problem and an HVAC technician for an HVAC problem; the trades are separate, even when the company is not. When you call, describe the symptom, and let the company decide which technician to send."
+      },
+      {
+        question: "What if I'm not sure which trade I need?",
+        answer:
+          "Work through the symptom. No hot water means a plumber. No cool air means HVAC. Water leaking from a ceiling under a bathroom means a plumber. Water leaking under the indoor air handler usually means HVAC. A sewer smell means a plumber. A gas smell means leave the house and call for help. If you are still not sure, call a plumber first, because a plumbing problem that is left alone does more damage faster than an HVAC problem that is left alone. A plumber who arrives and finds an HVAC problem will tell you."
+      },
+      {
+        question: "How fast can a plumber come out in DFW?",
+        answer:
+          "It depends on the provider, the time of day, and the symptom. Water actively leaking, sewage backing up, or a gas smell is an emergency and a provider is dispatched as soon as possible. A water heater that makes no hot water but is not leaking is usually a scheduled visit, and the provider can give you a time window when you call. Call 1 844-397-8298 and describe the symptom in plain language: what it is, when it started, and whether water is leaking anywhere you can see it."
+      },
+    ],
+    extraLinks: [
+      { label: "Can Homeowners Legally Do Their Own Plumbing in Texas?", href: "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" },
+      { label: "Water Heater Flue Carbon Monoxide Warning Signs Dallas", href: "/blog/water-heater-flue-carbon-monoxide-warning-signs-dallas" },
+      { label: "Tankless Water Heater Not Producing Hot Water: Troubleshooting", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" },
+      { label: "How Your Home Plumbing System Works: DFW Guide", href: "/blog/how-home-plumbing-system-works-dallas-fort-worth" },
+      { label: "Water Heater Emergency Service", href: "/services/water-heater-emergency" },
     ]
   }
 };
