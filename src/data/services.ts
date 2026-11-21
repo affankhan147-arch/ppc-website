@@ -126,7 +126,7 @@ export const services: Service[] = [
     slug: "water-heater-emergency",
     name: "water heater emergency",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "A leaking or unsafe water heater, or a sudden loss of hot water, needs fast attention. Shut off water and power or gas if safe, then request help for inspection or repair.",
+    shortAnswer: "A plumber for hot water heater repair in DFW handles a leaking water heater, no hot water, or an unsafe unit -- shut off water and power or gas if safe, then request help for inspection or repair.",
     // Task245 (2026-11-14): Semrush "emergency hot water heater repair" 3.6K/mo, KD 6; PH ranked ~16.
     seoTitle: "Emergency Hot Water Heater Repair in DFW: Leaks, No Hot Water",
     seoDescription:
@@ -140,7 +140,7 @@ export const services: Service[] = [
     mistakesToAvoid: ["Do not touch electrical components near water.", "Do not relight gas if you smell gas.", "Do not assume a tank leak can always be repaired.", "Do not ignore rusty or expanding leaks."],
     costDiscussion: "Water heater emergency cost depends on repair versus replacement, tank size, access, parts, and code requirements. Confirm whether the provider can explain options before work begins.",
     costFactors: ["tank age", "leak location", "repair versus replacement", "capacity", "code requirements"],
-    faqSeed: ["Is a leaking water heater an emergency?", "Should I turn off the breaker?", "Can a water heater leak be repaired?"]
+    faqSeed: ["Is a leaking water heater an emergency?", "Should I turn off the breaker?", "Can a water heater leak be repaired?", "Do you repair hot water heaters or only replace them?", "What should I do first if my water heater stops making hot water?"]
   },
   {
     slug: "sewer-backup-help",
@@ -163,7 +163,7 @@ export const services: Service[] = [
     slug: "commercial-emergency-plumbing",
     name: "commercial emergency plumbing",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "Commercial plumbing companies in DFW help businesses when plumbing stops operations -- drain backups, restrooms out of service, water-heater failure, and leaks that stop work. Businesses should call quickly when plumbing affects customers or risks property damage, since downtime and code compliance matter.",
+    shortAnswer: "A commercial plumber in DFW helps businesses when plumbing stops operations -- drain backups, restrooms out of service, water-heater failure, and leaks that stop work. Commercial plumbing services cover the fixtures and equipment a business depends on, and businesses should call quickly when plumbing affects customers or risks property damage, since downtime and code compliance matter.",
     urgency: "High",
     symptoms: ["restroom shutdown", "kitchen drain backup", "water on floor", "tenant complaints", "business interruption"],
     steps: ["Stop affected equipment.", "Block off unsafe areas.", "Document impacted fixtures.", "Request commercial plumbing help."],
@@ -172,7 +172,7 @@ export const services: Service[] = [
     mistakesToAvoid: ["Do not leave unsafe wet areas open.", "Do not run equipment tied to backed-up drains.", "Do not promise tenants a fixed repair time without confirmation.", "Do not ignore recurring business interruptions."],
     costDiscussion: "Commercial emergency plumbing cost depends on business hours, fixture count, access, equipment, and downtime needs. Ask about after-hours options and what is included in the visit.",
     costFactors: ["business hours", "fixture count", "access", "required equipment", "downtime impact"],
-    faqSeed: ["When should a business call an emergency plumber?", "Can work happen after hours?", "What information should a manager provide?", "What commercial plumbing work do you cover?", "Do you handle commercial plumbing maintenance?", "What should a business do first in a drain backup?"]
+    faqSeed: ["When should a business call an emergency plumber?", "Can work happen after hours?", "What information should a manager provide?", "What commercial plumbing work do you cover?", "Do you handle commercial plumbing maintenance?", "What should a business do first in a drain backup?", "What commercial plumbing services do you cover?"]
   },
   {
     slug: "same-day-plumber-connection",

@@ -555,7 +555,7 @@ blogPosts.push(sewerCameraInspectionPost);
 export const toiletRunningConstantlyPost: BlogPost = {
   slug: "toilet-running-constantly-dallas-wont-stop-running",
   title: "Toilet Running Constantly? Fix the Flapper & Fill Valve",
-  directAnswer: "A toilet that runs constantly usually means water is leaking from the tank into the bowl around the clock, or the fill valve never quite shuts off -- and in most cases the fix is one of two small parts, the flapper or the fill valve. The EPA WaterSense food-coloring dye test tells you which one: color in the bowl after ten minutes points to the flapper.",
+  directAnswer: "A plumber for running toilet in DFW is worth calling when the running does not stop after a basic flapper check -- a running toilet usually means the flapper or fill valve is not sealing and the water keeps flowing; call when the toilet runs after every flush, when the fill valve will not shut off, or when the water bill jumps.",
   category: "Emergency steps",
   relatedServiceSlug: "toilet-overflow-emergency"
 };
@@ -751,3 +751,43 @@ export const cloggedPlumbingVentPost: BlogPost = {
 };
 
 blogPosts.push(cloggedPlumbingVentPost);
+
+export const plumberForWaterHammerPost: BlogPost = {
+  slug: "plumber-for-water-hammer-dallas-fort-worth",
+  title: "Plumber for Water Hammer in DFW: Banging Pipes",
+  directAnswer: "A plumber for water hammer in Dallas-Fort Worth handles the loud banging or thudding that happens when a faucet or valve shuts off fast -- the moving water slams to a stop and the shock wave rattles the pipes -- and the first step is telling the plumber when the noise happens and which fixture triggers it.",
+  category: "Emergency steps",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(plumberForWaterHammerPost);
+
+export const showerRepairPost: BlogPost = {
+  slug: "shower-repair-dallas-fort-worth",
+  title: "Shower Repair in DFW: Leaks, Pressure & Valves",
+  directAnswer: "A plumber to fix a shower in Dallas-Fort Worth handles the problems that stop a shower working -- a leaking shower head or valve, low water pressure, a shower that runs hot then cold, and a slow or backing-up shower drain -- and the first step is telling the plumber which symptom you have and whether water is leaking where you can see it.",
+  category: "Emergency steps",
+  relatedServiceSlug: "sink-and-shower-drain-backup"
+};
+
+blogPosts.push(showerRepairPost);
+
+export const roughInPlumbingCostPerFixturePost: BlogPost = {
+  slug: "rough-in-plumbing-cost-per-fixture-dallas-fort-worth",
+  title: "Rough-In Plumbing Cost Per Fixture in DFW",
+  directAnswer: "Rough-in plumbing cost per fixture in Dallas-Fort Worth depends on the fixture, not a flat rate -- a toilet, a shower, and a kitchen sink each need different pipe runs, venting, and access, so the useful question before a remodel is what the quote counts as one fixture and what it leaves out.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(roughInPlumbingCostPerFixturePost);
+
+export const hvacOrPlumbingPost: BlogPost = {
+  slug: "hvac-or-plumbing-which-pro-to-call-dallas-fort-worth",
+  title: "HVAC or Plumbing: Which Pro to Call in DFW?",
+  directAnswer: "\"HVAC or plumbing\" is the question to ask before you book -- in a Dallas-Fort Worth home, the plumber handles water, drains, gas lines, and water heaters, while the HVAC technician handles heating and cooling equipment, and the symptom you have decides which one to call.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(hvacOrPlumbingPost);
