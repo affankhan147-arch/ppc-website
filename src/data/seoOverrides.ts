@@ -205,5 +205,28 @@ export const seoOverrides: Record<string, SeoOverride> = {
   // SEO-AUDIT 2026-11-06: title was 62 chars.
   "/tools/water-service-line-cost-calculator": {
     title: "Water Service Line Cost Calculator (Plus Who Pays)"
-  }
+  },
+  // Keyword upgrade (2026-11-21, Semrush pasted keywords) -- 7 new titles (R1-R7).
+  // Titles only; H1 and body unchanged. All titles <= 60 chars.
+  "/services/burst-pipe-emergency": {
+    title: "Burst Pipe Plumber in DFW: 24/7 Emergency Help"
+  },
+  "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas": {
+    title: "Leaking Toilet in DFW: When to Call a Plumber"
+  },
+  "/services/24-hour-emergency-plumber": {
+    title: "24 Hour Plumbing Services in DFW: Call Now"
+  },
+  "/services/commercial-emergency-plumbing": {
+    title: "Commercial Plumbing Companies in DFW: 24/7 Help"
+  },
+  "/blog/hydro-jetting-vs-drain-snaking-dfw": {
+    title: "Hydro Jetting Plumber in DFW: Jetting vs. Snaking"
+  },
+  "/blog/drain-smell-in-bathroom-sewer-gas-or-simple-clog": {
+    title: "Plumber for Sewer Smell in DFW: Gas or Simple Clog"
+  },
+  "/services/main-sewer-line-clog": {
+    title: "Sewer Line Plumber in DFW: Clogs & Backups"
+  },
 };

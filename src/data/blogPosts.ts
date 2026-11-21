@@ -142,7 +142,7 @@ const directAnswerOverrides: Record<string, string> = {
   "Burst Pipe in Dallas: What to Shut Off First":
     "During a Dallas burst pipe, shut off the main water valve if safe, avoid wet electrical areas, relieve pressure at a low faucet, and request urgent pipe help.",
   "Drain Smell in Bathroom: Sewer Gas or Simple Clog":
-    "Bathroom drain smell can come from a dry trap, buildup, venting issue, or sewer gas risk; slow drains or backup signs make it more urgent.",
+    "A plumber for sewer smell is worth calling when a bathroom smell comes from a dry trap, buildup, a venting issue, or sewer gas -- slow drains or backup signs make it more urgent and worth a plumber's check.",
   "Is a Clogged Drain Actually a Sewer Line Problem?":
     "A single slow drain may be local, but multiple fixtures, toilet gurgling, outdoor cleanout overflow, or sewage odor can point to a sewer-line problem.",
   "Emergency Plumber vs Regular Plumber: What Is the Difference":
@@ -180,7 +180,7 @@ const directAnswerOverrides: Record<string, string> = {
   "Plumber or Water-Restoration Company First After a Leak":
     "After a burst pipe or major leak, the plumbing side usually needs to be controlled first -- stopping the water source and addressing the pipe -- before a water-restoration company can safely dry the space and check for hidden moisture or mold risk.",
   "Hydro Jetting vs. Drain Snaking: Which Does DFW Need?":
-    "Drain snaking breaks through or pulls out a specific clog and is often used for a single blockage, while hydro jetting uses pressurized water to scour the full interior of the pipe and is more often used for recurring buildup, grease, or root intrusion; a camera inspection or provider assessment usually determines which is appropriate.",
+    "A hydro jetting plumber uses pressurized water to scour the full interior of the pipe, while snaking breaks through one clog. Which one fits depends on whether the problem is a single blockage or recurring buildup, grease, or root intrusion -- a camera inspection or provider assessment usually determines which is appropriate.",
   "Leaking Water Heater: Repair or Replace? DFW Guide":
     "A water heater leaking from a fitting, valve, or connection is sometimes repairable, while a leak from the tank body itself generally is not; age, tank condition, and leak location are the main factors a provider will check before recommending repair or replacement.",
   "Emergency Plumber in Irving, TX: Before You Call":
@@ -575,7 +575,7 @@ blogPosts.push(thawFrozenPipesPost);
 export const toiletLeakingAtBasePost: BlogPost = {
   slug: "toilet-leaking-at-base-wax-ring-failure-signs-dallas",
   title: "Toilet Leaking at the Base? Wax Ring Signs",
-  directAnswer: "Water pooling around the base of a toilet usually means the seal between the toilet and the floor has failed -- and the water you see on the floor is only part of it, because some of it is going under the floor where you cannot see it. Dry the floor, flush once, and watch the base: water appearing after a flush points at the seal, while a rocking toilet or a sewer smell are the other signs to check.",
+  directAnswer: "A leaking toilet with water pooling around the base usually means the seal between the toilet and the floor has failed -- and the water you see is only part of it, because some of it goes under the floor where you cannot see it. Call a plumber if water returns after a flush, the toilet rocks, or there is a sewer smell, rather than keep using it.",
   category: "Emergency steps",
   relatedServiceSlug: "toilet-overflow-emergency"
 };
@@ -671,3 +671,83 @@ export const sewerLineBelliedPost: BlogPost = {
 };
 
 blogPosts.push(sewerLineBelliedPost);
+
+export const bathroomPlumberPost: BlogPost = {
+  slug: "bathroom-plumber-dallas-fort-worth",
+  title: "Bathroom Plumber in DFW: Toilet, Sink & Shower Help",
+  directAnswer: "A bathroom plumber in Dallas-Fort Worth handles the fixtures that fail most often -- running toilets, leaking toilet bases, slow sink and shower drains, sewer smells, and leaks behind walls or under floors -- and the first step is telling the plumber which fixture is affected and whether water is spreading.",
+  category: "Emergency steps",
+  relatedServiceSlug: "toilet-overflow-emergency"
+};
+
+blogPosts.push(bathroomPlumberPost);
+
+export const gasLinePlumberPost: BlogPost = {
+  slug: "gas-line-plumber-dallas-fort-worth",
+  title: "Gas Line Plumber in DFW: Leaks, Repairs & Safety",
+  directAnswer: "A gas line plumber in Dallas-Fort Worth handles gas leaks, gas line repairs, and gas connections for water heaters, stoves, and dryers -- and if you smell gas, the first step is to leave the house, not to look for the leak yourself.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(gasLinePlumberPost);
+
+export const homeWarrantyPlumbingPost: BlogPost = {
+  slug: "home-warranty-plumbing-coverage-texas",
+  title: "Home Warranty Plumbing in Texas: What's Covered",
+  directAnswer: "A home warranty in Texas is a service contract, not insurance -- it usually covers the repair or replacement of named plumbing systems and appliances that fail from normal wear, but it does not cover pre-existing problems, code upgrades, or damage from a leak itself.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(homeWarrantyPlumbingPost);
+
+export const kitchenPlumbingServicesPost: BlogPost = {
+  slug: "kitchen-plumbing-services-dallas-fort-worth",
+  title: "Kitchen Plumbing Services in DFW: Sinks & Disposals",
+  directAnswer: "Kitchen plumbing services in Dallas-Fort Worth cover the fixtures a kitchen depends on -- sink leaks and backups, garbage disposals, dishwasher and supply-line leaks -- and the first step is telling the plumber which fixture is affected and whether water is spreading.",
+  category: "Emergency steps",
+  relatedServiceSlug: "sink-and-shower-drain-backup"
+};
+
+blogPosts.push(kitchenPlumbingServicesPost);
+
+export const plumbingFixtureInstallationPost: BlogPost = {
+  slug: "plumbing-fixture-installation-dallas-fort-worth",
+  title: "Plumbing Fixture Installation in DFW: What to Know",
+  directAnswer: "Plumbing fixture installation in Dallas-Fort Worth covers faucets, sinks, toilets, shower valves, and hose bibs -- and the work that matters most is the part you cannot see: the supply connections, the seals, and whether the fixture is fitted to the existing lines without a leak.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(plumbingFixtureInstallationPost);
+
+export const plumbingPricesPost: BlogPost = {
+  slug: "plumbing-prices-dallas-fort-worth",
+  title: "Plumbing Prices in DFW: What Jobs Cost & Why",
+  directAnswer: "Plumbing prices in Dallas-Fort Worth depend on the job, not the clock -- diagnosis, timing, access, parts, and whether water damage is active are what move the price, so the useful question before any work starts is what the quote includes.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(plumbingPricesPost);
+
+export const homePlumbingSystemPost: BlogPost = {
+  slug: "how-home-plumbing-system-works-dallas-fort-worth",
+  title: "How Your Home Plumbing System Works: DFW Guide",
+  directAnswer: "A home plumbing system in Dallas-Fort Worth is two systems in one -- a pressurized supply side that brings water in from the meter, and a gravity drain side that carries wastewater out through vents to the sewer lateral -- and knowing which side a problem sits on is what decides how urgent it is.",
+  category: "Prevention",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(homePlumbingSystemPost);
+
+export const cloggedPlumbingVentPost: BlogPost = {
+  slug: "clogged-plumbing-vent-dallas-fort-worth",
+  title: "Clogged Plumbing Vent in DFW: Signs & Fixes",
+  directAnswer: "A clogged plumbing vent in a Dallas-Fort Worth home usually announces itself with gurgling drains, slow fixtures, and a sewer smell -- the vent stack on the roof lets air into the drain system so wastewater can flow, and when it is blocked the drains cannot breathe.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(cloggedPlumbingVentPost);
