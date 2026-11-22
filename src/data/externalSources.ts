@@ -104,7 +104,8 @@ const cityOfficialSites: Record<string, string> = {
   duncanville: "https://www.duncanvilletx.gov/",
   houston: "https://www.houstontx.gov/",
   austin: "https://www.austintexas.gov/",
-  "san-antonio": "https://www.sa.gov/"
+  "san-antonio": "https://www.sa.gov/",
+  "san-marcos": "https://www.sanmarcostx.gov/"
 };
 
 export function getCitySiteSource(citySlug: string, cityName: string): SourceLink | undefined {
