@@ -212,13 +212,13 @@ export const seoOverrides: Record<string, SeoOverride> = {
   // Keyword upgrade (2026-11-21, Semrush pasted keywords) -- 7 new titles (R1-R7).
   // Titles only; H1 and body unchanged. All titles <= 60 chars.
   "/services/burst-pipe-emergency": {
-    title: "Burst Pipe Plumber in DFW: 24/7 Emergency Help"
+    title: "Burst Pipe Repair in DFW: 24/7 Emergency Plumber"
   },
   "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas": {
     title: "Leaking Toilet in DFW: When to Call a Plumber"
   },
   "/services/24-hour-emergency-plumber": {
-    title: "24 Hour Plumbing Services in DFW: Call Now"
+    title: "24 Hour Plumber in DFW: Nights & Weekends"
   },
   "/services/commercial-emergency-plumbing": {
     title: "Commercial Plumbing Companies in DFW: 24/7 Help"
@@ -238,7 +238,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
     title: "Plumber for Running Toilet in DFW: When to Call"
   },
   "/services/water-heater-emergency": {
-    title: "Plumber for Hot Water Heater Repair in DFW"
+    title: "Emergency Hot Water Heater Repair in DFW"
   },
 
   // Title-length fix (2026-11-22 audit) -- 4 new titles, all <= 60 chars.
@@ -258,5 +258,16 @@ export const seoOverrides: Record<string, SeoOverride> = {
   // old title was 61 chars
   "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater": {
     title: "DFW Water Hardness by City: What It Does to Water Heaters"
+  },
+
+  // CTR optimization Batch A (2026-11-22, GSC 28 days to 2026-11-21) -- 2 new descriptions.
+  // Descriptions only; titles unchanged. All descriptions <= 158 chars.
+  "/tools/slab-leak-repair-cost-calculator": {
+    description:
+      "Free calculator: see 2026 cost ranges for trenchless pipe relining vs. rerouting a slab leak, plus what leak detection costs before repair."
+  },
+  "/tools/water-pressure-regulator-cost-calculator": {
+    description:
+      "Free calculator: pick your line size for a 2026 cost range to replace a failed water pressure regulator (PRV), plus the signs it failed open or closed."
   },
 };
