@@ -61,6 +61,14 @@ export const cities: City[] = [
     countyHint: "Bexar County",
     areaHint: "South Central Texas, including Bexar, Comal, and Guadalupe counties",
     priority: 1
+  },
+  {
+    slug: "san-marcos",
+    name: "San Marcos",
+    marketSlug: "austin",
+    countyHint: "Hays County",
+    areaHint: "San Marcos homes and neighborhoods along I-35 between Austin and San Antonio, around Texas State University and the San Marcos River",
+    priority: 2
   }
 ];
 
@@ -83,7 +91,8 @@ export const priorityCityServiceCombos = [
   { citySlug: "frisco", serviceSlug: "24-hour-emergency-plumber" },
   { citySlug: "frisco", serviceSlug: "emergency-drain-cleaning" },
   { citySlug: "mckinney", serviceSlug: "24-hour-emergency-plumber" },
-  { citySlug: "mckinney", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "mckinney", serviceSlug: "emergency-drain-cleaning" }
+,
   { citySlug: "denton", serviceSlug: "24-hour-emergency-plumber" },
   { citySlug: "denton", serviceSlug: "emergency-drain-cleaning" },
   { citySlug: "lewisville", serviceSlug: "24-hour-emergency-plumber" },
@@ -121,7 +130,9 @@ export const priorityCityServiceCombos = [
   { citySlug: "austin", serviceSlug: "24-hour-emergency-plumber" },
   { citySlug: "austin", serviceSlug: "emergency-drain-cleaning" },
   { citySlug: "san-antonio", serviceSlug: "24-hour-emergency-plumber" },
-  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" }
+  { citySlug: "san-marcos", serviceSlug: "24-hour-emergency-plumber" },
+  { citySlug: "san-antonio", serviceSlug: "emergency-drain-cleaning" },
+  { citySlug: "san-marcos", serviceSlug: "emergency-drain-cleaning" }
 ,
   { citySlug: "rowlett", serviceSlug: "24-hour-emergency-plumber" },
   { citySlug: "rowlett", serviceSlug: "emergency-drain-cleaning" },
@@ -167,7 +178,8 @@ export const priorityCityServiceCombos = [
   { citySlug: "wylie", serviceSlug: "main-sewer-line-clog" },
   { citySlug: "houston", serviceSlug: "main-sewer-line-clog" },
   { citySlug: "austin", serviceSlug: "main-sewer-line-clog" },
-  { citySlug: "san-antonio", serviceSlug: "main-sewer-line-clog" }
+  { citySlug: "san-antonio", serviceSlug: "main-sewer-line-clog" },
+  { citySlug: "san-marcos", serviceSlug: "main-sewer-line-clog" }
 ,
   { citySlug: "dallas", serviceSlug: "water-heater-emergency" },
   { citySlug: "fort-worth", serviceSlug: "water-heater-emergency" },
@@ -201,7 +213,8 @@ export const priorityCityServiceCombos = [
   { citySlug: "wylie", serviceSlug: "water-heater-emergency" },
   { citySlug: "houston", serviceSlug: "water-heater-emergency" },
   { citySlug: "austin", serviceSlug: "water-heater-emergency" },
-  { citySlug: "san-antonio", serviceSlug: "water-heater-emergency" }
+  { citySlug: "san-antonio", serviceSlug: "water-heater-emergency" },
+  { citySlug: "san-marcos", serviceSlug: "water-heater-emergency" }
 ,
   { citySlug: "dallas", serviceSlug: "toilet-overflow-emergency" },
   { citySlug: "fort-worth", serviceSlug: "toilet-overflow-emergency" },
@@ -236,6 +249,7 @@ export const priorityCityServiceCombos = [
   { citySlug: "houston", serviceSlug: "toilet-overflow-emergency" },
   { citySlug: "austin", serviceSlug: "toilet-overflow-emergency" },
   { citySlug: "san-antonio", serviceSlug: "toilet-overflow-emergency" },
+  { citySlug: "san-marcos", serviceSlug: "toilet-overflow-emergency" },
   { citySlug: "dallas", serviceSlug: "burst-pipe-emergency" },
   { citySlug: "fort-worth", serviceSlug: "burst-pipe-emergency" },
   { citySlug: "arlington", serviceSlug: "burst-pipe-emergency" },
@@ -269,6 +283,7 @@ export const priorityCityServiceCombos = [
   { citySlug: "houston", serviceSlug: "burst-pipe-emergency" },
   { citySlug: "austin", serviceSlug: "burst-pipe-emergency" },
   { citySlug: "san-antonio", serviceSlug: "burst-pipe-emergency" },
+  { citySlug: "san-marcos", serviceSlug: "burst-pipe-emergency" },
   { citySlug: "dallas", serviceSlug: "sewer-backup-help" },
   { citySlug: "fort-worth", serviceSlug: "sewer-backup-help" },
   { citySlug: "arlington", serviceSlug: "sewer-backup-help" },
@@ -302,6 +317,7 @@ export const priorityCityServiceCombos = [
   { citySlug: "houston", serviceSlug: "sewer-backup-help" },
   { citySlug: "austin", serviceSlug: "sewer-backup-help" },
   { citySlug: "san-antonio", serviceSlug: "sewer-backup-help" },
+  { citySlug: "san-marcos", serviceSlug: "sewer-backup-help" },
   { citySlug: "dallas", serviceSlug: "commercial-emergency-plumbing" },
   { citySlug: "fort-worth", serviceSlug: "commercial-emergency-plumbing" },
   { citySlug: "arlington", serviceSlug: "commercial-emergency-plumbing" },
@@ -335,6 +351,7 @@ export const priorityCityServiceCombos = [
   { citySlug: "houston", serviceSlug: "commercial-emergency-plumbing" },
   { citySlug: "austin", serviceSlug: "commercial-emergency-plumbing" },
   { citySlug: "san-antonio", serviceSlug: "commercial-emergency-plumbing" },
+  { citySlug: "san-marcos", serviceSlug: "commercial-emergency-plumbing" },
   { citySlug: "dallas", serviceSlug: "same-day-plumber-connection" },
   { citySlug: "fort-worth", serviceSlug: "same-day-plumber-connection" },
   { citySlug: "arlington", serviceSlug: "same-day-plumber-connection" },
@@ -368,6 +385,7 @@ export const priorityCityServiceCombos = [
   { citySlug: "houston", serviceSlug: "same-day-plumber-connection" },
   { citySlug: "austin", serviceSlug: "same-day-plumber-connection" },
   { citySlug: "san-antonio", serviceSlug: "same-day-plumber-connection" },
+  { citySlug: "san-marcos", serviceSlug: "same-day-plumber-connection" },
   { citySlug: "dallas", serviceSlug: "sink-and-shower-drain-backup" },
   { citySlug: "fort-worth", serviceSlug: "sink-and-shower-drain-backup" },
   { citySlug: "arlington", serviceSlug: "sink-and-shower-drain-backup" },
@@ -400,7 +418,8 @@ export const priorityCityServiceCombos = [
   { citySlug: "wylie", serviceSlug: "sink-and-shower-drain-backup" },
   { citySlug: "houston", serviceSlug: "sink-and-shower-drain-backup" },
   { citySlug: "austin", serviceSlug: "sink-and-shower-drain-backup" },
-  { citySlug: "san-antonio", serviceSlug: "sink-and-shower-drain-backup" }
+  { citySlug: "san-antonio", serviceSlug: "sink-and-shower-drain-backup" },
+  { citySlug: "san-marcos", serviceSlug: "sink-and-shower-drain-backup" }
 ];
 
 export function isPriorityCityService(citySlug: string, serviceSlug: string) {
