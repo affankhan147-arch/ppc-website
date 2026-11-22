@@ -24,7 +24,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   },
   // 466 impr / 1.1% / pos 9.6 - queries are brand + "serial number".
   "/tools/water-heater-age-lookup": {
-    title: "Water Heater Age Lookup by Serial Number: AO Smith, Rheem, GE",
+    title: "Water Heater Age Lookup by Serial Number: AO Smith, Rheem",
     description:
       "Free tool: pick your brand, type the first 4 digits of the serial number and see when your water heater was made. Covers Rheem, Ruud, AO Smith, State and GE."
   },
@@ -119,9 +119,11 @@ export const seoOverrides: Record<string, SeoOverride> = {
       "Turn off every fixture, find the leak indicator on your water meter and watch it. If it moves with everything off, you have a hidden leak. Here's how to find it."
   },
   "/blog/water-leak-between-meter-and-house-dallas-who-fixes-it": {
+    title: "Water Leak Between Meter and House in Dallas: Who Fixes It?",
     description: "In Dallas the pipe from the meter to your house is yours to fix. How to tell which side is leaking, when to call 311 and how DWU leak adjustments work."
   },
   "/blog/saws-water-leak-who-fixes-it-san-antonio": {
+    title: "Water Leak in San Antonio: Who Fixes It and Will SAWS Help?",
     description: "SAWS can't repair plumbing on private property. Who fixes a leak at your San Antonio home, what to shut off first, and how SAWS leak reimbursement works."
   },
   "/blog/san-antonio-plumbing-permit-homeowner-or-plumber": {
@@ -150,6 +152,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
       "A sudden drop across the whole house usually points to the pressure regulator, a main-line leak or a city-side problem. How to tell which one you have."
   },
   "/blog/tankless-water-heater-freeze-power-outage-dfw": {
+    title: "Tankless Water Heater Freeze: What to Do in a DFW Outage",
     description:
       "Tankless freeze protection only works with power. What DFW homeowners should do before a freeze and how to drain the unit in a long outage."
   },
@@ -236,5 +239,24 @@ export const seoOverrides: Record<string, SeoOverride> = {
   },
   "/services/water-heater-emergency": {
     title: "Plumber for Hot Water Heater Repair in DFW"
+  },
+
+  // Title-length fix (2026-11-22 audit) -- 4 new titles, all <= 60 chars.
+  // Titles only; H1 and body unchanged. Old titles were 61-72 chars.
+  // old title was 72 chars
+  "/blog/dfw-plumbing-permit-requirements-and-fees-by-city": {
+    title: "DFW Plumbing Permit Requirements & Fees by City (2026)"
+  },
+  // old title was 65 chars
+  "/blog/dfw-lead-service-line-inventory-by-city": {
+    title: "DFW Lead Service Line Inventory by City: Is Your Pipe Lead?"
+  },
+  // old title was 64 chars
+  "/blog/water-heater-leaking-from-the-bottom-dallas-causes-and-fixes": {
+    title: "Water Heater Leaking From Bottom in Dallas: Causes & Fixes"
+  },
+  // old title was 61 chars
+  "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater": {
+    title: "DFW Water Hardness by City: What It Does to Water Heaters"
   },
 };
