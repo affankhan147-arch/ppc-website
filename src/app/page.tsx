@@ -75,8 +75,8 @@ const cityEmergencyLinks = [
 ];
 
 export const metadata = buildMetadata({
-  title: "24/7 Emergency Plumber in Dallas-Fort Worth",
-  description: truncateForMeta("Call for 24/7 emergency plumber and emergency plumbing service across Dallas-Fort Worth for drain, sewer, pipe, toilet, leak, and water-heater problems."),
+  title: "Emergency Plumber in Dallas-Fort Worth: 24/7 Help",
+  description: truncateForMeta("Emergency plumbing help across Dallas-Fort Worth: burst pipes, sewer backups, drain cleaning and water heater leaks, day or night."),
   path: "/"
 });
 
