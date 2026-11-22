@@ -1802,6 +1802,48 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
     ]
   },
+  "mansfield/emergency-drain-cleaning": {
+    decisionTitle: "Mansfield drain backup decision guide",
+    decisionIntro: "Mansfield straddles Tarrant, Johnson, and Ellis counties, and its drains split the same way its housing does. Homes from the 1970s and 80s near the historic downtown still run original cast-iron sewer lines that tree roots find, while newer master-planned communities like Walnut Creek Valley, M3 Ranch, and South Pointe run PEX and PVC where the usual culprit is construction debris or a fixture-level clog. The area's expansive clay soil can shift a line after heavy rain in either kind of neighborhood, and hard water leaves mineral scale that narrows older pipes over time.",
+    decisionItems: [
+      "Mention whether your home is near the historic downtown or in a newer community, since the likely cause changes with the construction era.",
+      "For older downtown homes, note any mature trees near the suspected sewer line path and whether the backup keeps returning after clearing.",
+      "For newer homes, describe whether the backup started shortly after move-in, which points to debris rather than roots.",
+      "Say whether the backup followed heavy rain, since clay-soil movement can shift a line that was fine the week before.",
+      "Ask whether a camera inspection is warranted: it is the only way to see the buried lateral before anyone proposes digging."
+    ],
+    providerTitle: "What a Mansfield drain provider may check",
+    providerItems: [
+      "Root intrusion likelihood in older downtown laterals near mature trees.",
+      "Cast-iron sewer line condition typical of 1970s-80s construction.",
+      "Mineral scale narrowing older drain lines, a hard-water pattern in the area.",
+      "Construction debris likelihood in newer community homes.",
+      "Cleanout access and whether the blockage pattern points to one fixture or the main line."
+    ],
+    safetyTitle: "When Mansfield drain issues are urgent",
+    safetyItems: [
+      "Multiple fixtures backing up together, which points to the main line rather than one drain.",
+      "Sewage coming up through a tub, shower, or floor drain.",
+      "A backup that returns quickly after clearing, which suggests roots rather than a simple clog.",
+      "An outdoor cleanout overflowing, or a sewage smell with slow drains."
+    ],
+    preventionTitle: "Reducing repeat drain issues in Mansfield",
+    preventionItems: [
+      "Older downtown homeowners should consider periodic camera inspection to catch root intrusion early, before it becomes a backup.",
+      "Newer community homeowners should report early backups to their builder if the home is still within warranty.",
+      "Ask the provider to note the pipe material found during service, so the next call starts from what is already known."
+    ],
+    extraFaqs: [
+      { question: "When is a camera inspection worth it for a Mansfield drain?", answer: "When the same drain keeps clogging, when several fixtures back up together, or before approving a large sewer repair. A sewer camera inspection is a video look at the lateral line from the house to the municipal tap, and it shows whether the cause is roots, a sagging or cracked section, or just a blockage — which decides whether the fix is clearing, jetting, or repair." },
+      { question: "Why does the same Mansfield drain keep clogging?", answer: "In older downtown homes the usual pattern is roots in original cast-iron lines or mineral scale narrowing the pipe over time; in newer communities it is often leftover construction debris. A drain that clogs again weeks after clearing usually has a cause clearing alone does not fix, and that is when a camera inspection earns its keep." }
+    ],
+    extraLinks: [
+      { label: "Mansfield service area", href: "/cities/mansfield" },
+      { label: "Sewer camera inspection: what it finds", href: "/blog/sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds" },
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Drain cleaning cost in DFW", href: "/cost-guides/drain-cleaning-cost-dfw" }
+    ]
+  },
   "dallas/24-hour-emergency-plumber": {
     decisionTitle: "Dallas emergency plumbing decision guide",
     decisionIntro: "Dallas sits on Blackland Prairie expansive clay soil, which shifts noticeably with seasonal moisture changes and can stress underground supply lines, especially in older neighborhoods with original cast iron or galvanized piping.",
@@ -3208,6 +3250,57 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
     ]
   },
 
+  austin: {
+    decisionTitle: "Austin water emergency: city line or plumber?",
+    decisionIntro:
+      "In Austin, the first call depends on which side of the meter the water is on. Austin Water maintains the water mains and the line up to the meter and takes leak reports around the clock at 512-972-1000. Property owners are responsible for the service line past the meter and for the plumbing inside the house, and that is a job for an emergency plumber. Austin covers Central Texas, including Travis, Williamson, and Hays counties, and its housing runs from older homes with outdated plumbing to new construction with unfamiliar systems.",
+    decisionItems: [
+      "Water bubbling up in the street, a sidewalk, or the meter box: report it to Austin Water at 512-972-1000, which is available 24/7.",
+      "A leak inside the house, under the slab, or in the yard between the meter and the house: close your cut-off valve and call a plumber.",
+      "Sewage backing up into a tub, shower, or floor drain is a plumbing emergency at any hour; stop using water until the line is cleared.",
+      "For non-emergency water and sewer questions, Austin 311 answers from 7 a.m. to 9 p.m.",
+      "Mention whether the leak started during or right after a freeze, since a frozen pipe can split in more than one place."
+    ],
+    providerTitle: "What an Austin plumber may check",
+    providerItems: [
+      "Pipes in the attic, garage, exterior walls, and outdoor hose bibs, the places most likely to split in a hard freeze.",
+      "The private service line between the meter and the house if the yard is soggy or the meter keeps moving with every fixture off.",
+      "Water heater connections and the relief line when the leak is near the heater.",
+      "Mineral buildup from limestone bedrock and hard water, a common cause of frequent clogs in Austin pipes.",
+      "A dated, paid invoice that names the repair, which Austin Water asks for with a leak bill adjustment request."
+    ],
+    safetyTitle: "When it can't wait until morning in Austin",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel, or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up into the house.",
+      "Burst pipes after a hard freeze: in the February 10-18, 2021 winter storm, the National Weather Service Austin/San Antonio office reported 5 to 6 consecutive days of temperature records at its climate sites, including Austin's."
+    ],
+    preventionTitle: "Austin-specific prevention notes",
+    preventionItems: [
+      "Find your cut-off valve before you need it: Austin Water says it sits on the service line just past the meter box, on your side, and shuts off water to the whole property.",
+      "Insulate exposed pipes in the attic, the garage, and on outside walls before a freeze.",
+      "Keep the plumber's paid invoice after any leak repair: Austin Water's leak bill adjustment request has to be sent within 90 days of the repair."
+    ],
+    extraFaqs: [
+      {
+        question: "Where is the cut-off valve in an Austin home?",
+        answer:
+          "Austin Water says it sits on the service line just past the meter box, on your side, and shuts off water to the whole property. Find it before you need it — in an emergency you do not want to be hunting for it while water spreads."
+      },
+      {
+        question: "What should I have ready when I call an emergency plumber in Austin?",
+        answer:
+          "Whether you have closed the cut-off valve, whether the leak started during or right after a freeze, which fixtures are affected, and whether the water is clean or sewage. If the repair is done, keep the dated, paid invoice — Austin Water asks for it with a leak bill adjustment request."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Austin", href: "/cities/austin/emergency-drain-cleaning" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
+
   // PH-047 anchor: the Carrollton entry goes directly below this line.
   carrollton: {
     decisionTitle: "Carrollton water emergency: city line or plumber?",
@@ -3300,7 +3393,262 @@ export const cityPageEnhancements: Record<string, PageEnhancement> = {
       { label: "Emergency leak repair cost", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
       { label: "Emergency drain cleaning in Dallas", href: "/cities/dallas/emergency-drain-cleaning" }
     ]
-  }
+  },
+  "fort-worth": {
+    decisionTitle: "Fort Worth emergency plumbing: old house or new build?",
+    decisionIntro:
+      "Fort Worth mixes historic pier-and-beam homes in areas like Fairmount and Ryan Place with newer slab construction farther north and west toward Alliance, so the first useful detail in any request is which kind of house it is. Crawlspace access is a real factor for some dispatches, and pipe material and age often differ between the older central neighborhoods and the newer far-north and west subdivisions.",
+    decisionItems: [
+      "Mention if the home has a crawlspace or pier-and-beam foundation, since this can change how a provider accesses the affected supply line.",
+      "Share whether the property is in an older central Fort Worth neighborhood or a newer far-north or west subdivision, since pipe material and age often differ.",
+      "Describe the fixture affected and whether the shutoff is reachable in a crawlspace or a standard interior location.",
+      "For drain backups, say whether the home is near the historic core, where original cast-iron or clay sewer laterals are more prone to root intrusion, or in a newer subdivision with PVC lines."
+    ],
+    providerTitle: "What a Fort Worth provider may check",
+    providerItems: [
+      "Crawlspace access and condition if the home is pier-and-beam construction.",
+      "Galvanized supply line condition in older central Fort Worth homes; lines in homes built before the 1960s are past typical service life.",
+      "Water pressure and PEX manifold condition in newer far-north construction.",
+      "Pipe material in the sewer lateral: cast iron or clay near the historic core, PVC in newer subdivisions.",
+      "Whether the issue is isolated to one fixture or affects a shared supply line."
+    ],
+    safetyTitle: "When to treat it as urgent in Fort Worth",
+    safetyItems: [
+      "Water pooling in a crawlspace, which can be harder to notice than a slab leak.",
+      "Water near electrical panels or outlets in older homes with dated wiring.",
+      "A shutoff valve that will not close in a hard-to-reach crawlspace location.",
+      "Sewage backing up through multiple fixtures, especially in older homes with cast-iron laterals."
+    ],
+    preventionTitle: "Fort Worth-specific prevention notes",
+    preventionItems: [
+      "Pier-and-beam homes benefit from periodic crawlspace inspection since leaks there are less visible than slab leaks.",
+      "Homes near the historic core benefit from periodic camera inspection of cast-iron or clay laterals to catch root intrusion early.",
+      "Note whether your home is pier-and-beam or slab when requesting service so the right equipment is dispatched.",
+      "Fort Worth water runs comparatively softer than much of DFW at 7-10 grains per gallon, but scale still builds in tank water heaters over time, so note the heater's age when calling about no hot water."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I include in a Fort Worth emergency plumbing request?",
+        answer:
+          "Whether the home is pier-and-beam or slab, whether it is in an older central neighborhood or a newer far-north or west subdivision, which fixture is affected, and whether the shutoff is reachable in a crawlspace or a standard interior location. Those four details decide what equipment the provider brings."
+      },
+      {
+        question: "How do I know if a Fort Worth leak is under the slab or in the crawlspace?",
+        answer:
+          "In a pier-and-beam home, water pooling in the crawlspace is the giveaway, and it can go unnoticed longer than a slab leak. In a slab home, the signs are warm spots on the floor, the sound of running water with everything off, or a meter that keeps moving — the same warning signs our slab leak post for DFW homeowners covers in detail."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Fort Worth", href: "/cities/fort-worth/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Fort Worth", href: "/cities/fort-worth/emergency-drain-cleaning" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
+
+  houston: {
+    decisionTitle: "Houston water emergency: city line or plumber?",
+    decisionIntro:
+      "In Houston, the first call depends on where the water is. Water coming up in the street or at the city's meter is reported to the City of Houston through 311, which is open 24 hours a day, 7 days a week. Water leaking inside the house or from your own pipes is a job for a plumber. Houston sits on expansive Gulf Coast clay soil that shifts with moisture, and its flat terrain and heavy rainfall can overload the sewer system in a major storm, so the city's housing stock — from early-20th-century inner-loop homes to 1990s-2020s suburbs — fails in different ways.",
+    decisionItems: [
+      "Say whether the water is inside the house, in the yard, or in the street, so you know right away whether it is a city problem or a plumbing problem.",
+      "If water is bubbling up in the street or around the meter box, report it to 311; the City of Houston lists reporting water leaks among its 311 services.",
+      "Tell the plumber whether you have been able to shut the water off, and where your shutoff is.",
+      "Mention if the leak started during or right after a freeze: Winter Storm Uri in February 2021 caused widespread burst-pipe damage across the Houston area.",
+      "For sewer backups, say whether it started during heavy rain, since flat terrain and storm overload can push the system back into the house."
+    ],
+    providerTitle: "What a Houston plumber may check",
+    providerItems: [
+      "Exposed pipes in the attic, garage, exterior walls, and outdoor hose bibs, the places most likely to split in a hard freeze.",
+      "Foundation movement from expansive clay soil pulling on slab-based supply and drain lines.",
+      "Original cast-iron drain pipes and clay sewer laterals in older inner-loop neighborhoods like The Heights, Montrose, and Oak Forest, which are prone to corrosion and root intrusion.",
+      "PEX plumbing and slab-on-grade construction in newer suburbs like Katy, Cypress, Sugar Land, and The Woodlands.",
+      "Corrosion in older tank-style water heaters, which Houston's humid climate and high water table can accelerate."
+    ],
+    safetyTitle: "When to treat it as urgent in Houston",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel, or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up through a tub, shower, or floor drain, especially during or after heavy rain.",
+      "A burst pipe after a freeze, or a slab leak suspected from foundation movement."
+    ],
+    preventionTitle: "Houston-specific prevention notes",
+    preventionItems: [
+      "Insulate exposed pipes before a freeze; the places that split first are attics, garages, exterior walls, and hose bibs.",
+      "Know where your main shutoff is before the next storm, since hurricane-season power outages can add urgency to a leak that would otherwise wait.",
+      "Older inner-loop homes benefit from periodic camera inspection of cast-iron drains and clay laterals before roots become a backup."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I tell a plumber first about a Houston leak?",
+        answer:
+          "Whether the water is inside the house, in the yard, or in the street; whether you have shut the water off; whether the home is an older inner-loop house or a newer suburb; and whether the problem started during heavy rain or a freeze. Those details decide whether it is a city call, a slab-line issue, or a fixture repair."
+      },
+      {
+        question: "Why do Houston sewer backups happen during heavy rain?",
+        answer:
+          "Houston's flat terrain and heavy rainfall can overload the sewer system in a major storm, and older clay laterals with root intrusion are the first to back up. If the backup started with the rain, say so when you call — it changes what the provider checks first."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Houston", href: "/cities/houston/emergency-drain-cleaning" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
+
+  mansfield: {
+    decisionTitle: "Mansfield plumbing emergency: older home or new community?",
+    decisionIntro:
+      "Mansfield sits across Tarrant, Johnson, and Ellis counties, and its plumbing splits the same way its housing does. Homes from the 1970s and 80s near the historic downtown still run original copper and galvanized supply lines and cast-iron sewer lines, while newer master-planned communities like Walnut Creek Valley, M3 Ranch, and South Pointe run PEX and PVC. Clay soil and hard water affect both, but the pipes inside them are different.",
+    decisionItems: [
+      "Say roughly when the house was built and whether it is near the historic downtown or in a newer community, since the likely cause changes with the era.",
+      "For older downtown homes, mention discolored water in the weeks before a leak: corrosion in original metal lines is a common warning sign.",
+      "For drain backups in older neighborhoods, note mature trees near the sewer line path and whether the backup keeps returning after clearing.",
+      "Say whether the problem started after heavy rain, since the area's expansive clay soil can shift lines that were fine the week before.",
+      "For newer homes, say whether the backup or leak started shortly after move-in, which points to construction debris or a single fitting."
+    ],
+    providerTitle: "What a Mansfield plumber may check",
+    providerItems: [
+      "Original copper or galvanized pipe corrosion near the historic downtown.",
+      "Root intrusion into cast-iron sewer lines in older, tree-heavy neighborhoods.",
+      "Mineral scale narrowing older drain lines, a hard-water pattern in the area.",
+      "PEX fittings in newer subdivisions, where a break is often a single fitting.",
+      "Clay-soil-related pipe stress, especially after heavy rain."
+    ],
+    safetyTitle: "When to treat it as urgent in Mansfield",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel, or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage coming up through a tub, shower, or floor drain.",
+      "A leak that keeps running while you wait, or a backup that returns within days of clearing."
+    ],
+    preventionTitle: "Mansfield-specific prevention notes",
+    preventionItems: [
+      "Older downtown homeowners should consider periodic camera inspection to catch root intrusion early, before it becomes a backup.",
+      "Newer community homeowners should report early backups to their builder if the home is still within warranty.",
+      "Discolored water is worth mentioning early: in older Mansfield homes it often precedes a corrosion-driven burst."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I tell a plumber first about a Mansfield leak?",
+        answer:
+          "Roughly when the house was built, whether it is near the historic downtown or in a newer community, whether the water is clean or sewage, and whether you have closed the main valve. The construction era decides whether the plumber expects corrosion, roots, or a single failed fitting."
+      },
+      {
+        question: "Is a slow drain in an older Mansfield home an emergency?",
+        answer:
+          "Not always. One slow sink is usually a local clog. It becomes urgent when several fixtures back up together, when sewage appears, or when the same drain clogs again weeks after clearing — that pattern points to roots or scale in the line, not the fixture."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Mansfield", href: "/cities/mansfield/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Mansfield", href: "/cities/mansfield/emergency-drain-cleaning" },
+      { label: "Burst pipe help in Mansfield", href: "/cities/mansfield/burst-pipe-emergency" }
+    ]
+  },
+
+  mckinney: {
+    decisionTitle: "McKinney plumbing emergency: downtown or new subdivision?",
+    decisionIntro:
+      "McKinney's plumbing splits between its historic downtown and its rapidly developed outer subdivisions. Older downtown sewer laterals face more root-intrusion risk from mature trees than the newer PVC lines common in the outer subdivisions, and McKinney water tests in the 10-17 grains-per-gallon Very Hard range, so mineral scale builds inside tank water heaters faster here than in much of DFW.",
+    decisionItems: [
+      "Mention whether your property is in historic downtown McKinney or a newer outer subdivision.",
+      "For downtown properties, note any mature trees near the suspected sewer line path.",
+      "For newer subdivisions, describe whether the backup started shortly after construction, suggesting debris rather than root intrusion.",
+      "For no-hot-water calls, mention the water heater's age: hard water scale shortens tank life, and the provider will want to know what it is working with.",
+      "If your water bill jumped well beyond the city's published rate increase, say so — that gap usually points to a hidden leak, not the rate itself."
+    ],
+    providerTitle: "What a McKinney plumber may check",
+    providerItems: [
+      "Root intrusion likelihood in older downtown laterals near mature trees.",
+      "Construction debris likelihood in newer subdivision homes.",
+      "Pipe material differences between historic core and newer growth areas.",
+      "Mineral scale inside tank water heaters, given McKinney's Very Hard water.",
+      "Cleanout access, which varies between older and newer neighborhood layouts."
+    ],
+    safetyTitle: "When to treat it as urgent in McKinney",
+    safetyItems: [
+      "Recurring backups in historic downtown homes suggesting root intrusion.",
+      "Backup shortly after move-in in newer subdivisions, suggesting construction debris.",
+      "Multiple fixtures affected together regardless of neighborhood.",
+      "Water you cannot shut off, or water reaching outlets, the electrical panel, or light fixtures."
+    ],
+    preventionTitle: "McKinney-specific prevention notes",
+    preventionItems: [
+      "Historic downtown homeowners should consider periodic root-intrusion inspection.",
+      "Newer subdivision homeowners should report early backups to their builder if within warranty.",
+      "Tank water heaters in Very Hard water benefit from noting the install date: scale builds faster here, so age matters more than it does in softer-water cities."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I include in a McKinney emergency plumbing request?",
+        answer:
+          "Whether the property is in historic downtown McKinney or a newer outer subdivision, whether mature trees sit near the suspected sewer line, whether the backup started shortly after move-in, and whether several fixtures are affected together. The neighborhood's age decides whether the provider expects roots, debris, or a fixture clog."
+      },
+      {
+        question: "Does McKinney's hard water affect my water heater?",
+        answer:
+          "Yes. McKinney tests in the 10-17 grains-per-gallon Very Hard range, while Fort Worth runs lower at 7-10. The harder the water, the faster mineral scale builds inside a tank water heater, cutting efficiency and shortening the tank's service life — so mention the heater's age and whether you have noticed popping sounds or rusty water when you call."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in McKinney", href: "/cities/mckinney/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in McKinney", href: "/cities/mckinney/emergency-drain-cleaning" },
+      { label: "Emergency plumber cost in DFW: what changes the price", href: "/guides/dfw-emergency-plumbing-costs" }
+    ]
+  },
+
+  plano: {
+    decisionTitle: "Plano plumbing emergency: East Plano or West Plano?",
+    decisionIntro:
+      "Plano's plumbing splits by side of the city. East and Central Plano's original 1970s-80s copper and galvanized lines can fail suddenly as they age past 40-50 years, while West Plano's newer PEX manifold systems rarely burst outright but can fail at a manifold valve or fitting. Plano's median home was built in 1993, right inside the 1978-1995 polybutylene pipe era, so the age of the house is the first thing a provider wants to know.",
+    decisionItems: [
+      "Say whether your home is in East or Central Plano's older construction or West Plano's newer PEX-manifold construction.",
+      "For an older home, note whether the failure is a sudden rupture or a worsening pinhole leak.",
+      "For a newer PEX manifold home, describe whether the failure point is at a manifold valve or fitting versus mid-line.",
+      "Homes built between 1978 and 1995 may have gray polybutylene supply pipe, which tends to fail at fittings, so mention the age of the house when you call.",
+      "Confirm whether the home's main shutoff has already been closed to stop water flow before a provider arrives."
+    ],
+    providerTitle: "What a Plano provider may check",
+    providerItems: [
+      "Original copper or galvanized line condition and thinning in East and Central Plano homes from the 1970s-80s.",
+      "PEX manifold valve and fitting condition in newer West Plano construction.",
+      "Gray polybutylene supply pipe in homes built between 1978 and 1995, which tends to fail at fittings.",
+      "Whether a freeze event or pressure spike likely triggered the failure.",
+      "Extent of water damage to flooring and drywall once the leak source is controlled."
+    ],
+    safetyTitle: "When a Plano pipe break is urgent",
+    safetyItems: [
+      "Active, uncontrolled water flow anywhere in the home.",
+      "Water near electrical outlets, panels, or fixtures.",
+      "A burst that keeps running while the shutoff is closed, which can mean the valve itself has failed.",
+      "Water spreading toward wood flooring or drywall in an older home with original lines."
+    ],
+    preventionTitle: "Plano-specific prevention notes",
+    preventionItems: [
+      "Homes from the polybutylene era benefit from knowing where their supply lines run and what material they are before an emergency.",
+      "After-hours work costs more almost everywhere in DFW: ask for the dispatch fee and the hourly or flat rate before the plumber drives out, and ask whether a temporary fix tonight and the full repair tomorrow would cost less.",
+      "If water is pouring from the street, the curb, or the meter box, that is usually a city water main or service line, and the City of Plano's utility department handles it, not a private plumber."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I tell a plumber first about a Plano pipe break?",
+        answer:
+          "Whether the home is in East or Central Plano's older construction or West Plano's newer PEX-manifold construction, whether the failure is a sudden rupture or a worsening pinhole leak, and whether the main shutoff is already closed. Homes built between 1978 and 1995 may have gray polybutylene supply pipe, which tends to fail at fittings, so mention the age of the house."
+      },
+      {
+        question: "Is a burst pipe in Plano more likely in an older or newer home?",
+        answer:
+          "Older East and Central Plano homes with 1970s-80s copper and galvanized lines can fail suddenly as they age past 40-50 years. West Plano's newer PEX manifold systems rarely burst outright but can fail at a manifold valve or fitting. Either way, shut the main valve first, open the lowest faucet to drain the lines, and photograph the damage before moving anything."
+      }
+    ],
+    extraLinks: [
+      { label: "24-hour emergency plumber in Plano", href: "/cities/plano/24-hour-emergency-plumber" },
+      { label: "Emergency drain cleaning in Plano", href: "/cities/plano/emergency-drain-cleaning" },
+      { label: "Burst pipe help in Plano", href: "/cities/plano/burst-pipe-emergency" }
+    ]
+  },
+
 };
 
 export const blogEnhancements: Record<string, BlogEnhancement> = {
@@ -7213,6 +7561,16 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "Is a water heater that stopped heating an emergency?",
       answer:
         "A water heater with no hot water is usually not as urgent as an active leak, but it still warrants a same-day request, especially in colder months. Check the breaker or gas pilot first, note the tank's age and type, and avoid relighting gas if you smell gas before calling."
+    },
+    {
+      question: "How much does emergency water heater repair cost?",
+      answer:
+        "It depends on repair versus replacement, tank size, access, parts, and code requirements — the same factors our water heater emergency cost guide walks through. The questions worth asking before work begins are whether the tank can be repaired or needs replacing, whether it is tank or tankless, and what the provider charges for the visit itself. Confirm the options and the price in writing before approving work."
+    },
+    {
+      question: "My water heater stopped heating — is that an emergency?",
+      answer:
+        "Usually not as urgent as an active leak, but it still warrants a same-day request, especially in colder months. Check the breaker or gas pilot first, note the tank's age and type, and avoid relighting gas if you smell gas. If the tank is leaking, pooling water, or making popping sounds, treat it as urgent: shut off water and power or gas if safe, then request help right away."
     }
   ],
   "same-day-plumber-connection": [
@@ -7246,6 +7604,16 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "What should I do first if a pipe bursts?",
       answer:
         "Shut off the main water valve first, then turn off electricity near standing water if it is safe to reach the breaker. Open a low faucet to relieve pressure in the line, and avoid touching wet switches or outlets before help arrives."
+    },
+    {
+      question: "How much does burst pipe repair cost?",
+      answer:
+        "It depends on where the pipe broke, how hard it is to reach, the pipe material, and whether walls, ceilings, or a slab have to be opened. Water mitigation is usually billed separately from the plumbing repair itself. Our burst pipe emergency cost guide walks through those factors in detail — ask the matched provider for a diagnostic estimate up front so you know the scope before work begins."
+    },
+    {
+      question: "What should I do before the plumber arrives?",
+      answer:
+        "Shut off the main water valve first if you can reach it safely, then turn off electricity near standing water if it is safe to reach the breaker. Open a low faucet to relieve pressure in the line, and avoid touching wet switches or outlets. Our Burst Pipe in Dallas: What to Shut Off First post walks through the shutoff order in detail — the key point is to stop the water before doing anything else."
     }
   ],
   "main-sewer-line-clog": [

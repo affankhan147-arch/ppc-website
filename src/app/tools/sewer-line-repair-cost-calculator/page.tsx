@@ -40,6 +40,16 @@ const faqs = [
     question: "Are these my exact repair costs?",
     answer:
       "No. These are planning estimates built from Angi's 2026 published national cost data. Your actual quote depends on pipe depth, soil conditions, access, permit requirements in your specific city, and what a camera inspection finds - a licensed plumber's inspection is always the final word."
+  },
+  {
+    question: "Does homeowners insurance cover sewer line repair?",
+    answer:
+      "It varies by policy and cause, and you should check your own policy before assuming anything. Texas homeowners insurance generally covers water damage from a sudden, accidental plumbing failure like a burst pipe, but typically excludes gradual leaks, wear-and-tear, and standard sewer backups — and even then, the policy usually covers the resulting water damage, not the cost to repair the pipe itself. Our post on whether homeowners insurance covers a plumbing leak in Texas explains the distinction in detail."
+  },
+  {
+    question: "Pipe bursting vs pipe lining — what's the difference?",
+    answer:
+      "Both are trenchless methods, meaning neither requires digging up the whole yard. Pipe lining installs a new liner inside the existing pipe, while pipe bursting pulls a new pipe through while breaking the old one apart. Lining runs about $135-$150 per linear foot and bursting about $150-$190 in the 2026 data this calculator uses. Neither works if the pipe has fully collapsed or has significant bellies — a sewer camera inspection confirms which method your line qualifies for."
   }
 ];
 

@@ -44,6 +44,16 @@ const faqs = [
     question: "Are these my exact repair costs?",
     answer:
       "No. These are planning estimates built from HomeAdvisor's 2026 published national cost data, cross-checked against This Old House's independently stated overall range. Your actual quote depends on pipe depth, access, how much pipe is damaged, and what a leak-detection diagnosis finds - a licensed plumber's inspection is always the final word."
+  },
+  {
+    question: "How do I know if I have a slab leak?",
+    answer:
+      "Watch for an unexplained spike in your water bill, warm spots on flooring, the sound of running water when everything is off, cracks in walls or flooring, or unexplained moisture and mold under carpet. Any one of those is worth an evaluation before the leak causes structural damage — our slab leak warning signs post for DFW homeowners walks through each sign and what to check first."
+  },
+  {
+    question: "Is a slab leak an emergency?",
+    answer:
+      "Treat it as urgent. A slab leak keeps running under the concrete until it is found, and the longer it runs the more it can damage the slab and the flooring above it. Shut off the water at the main valve if you can, stop using fixtures, and request help promptly — a professional leak-detection diagnosis (acoustic listening, thermal imaging, or tracer gas, typically $150-$400) is what confirms the leak's exact location before any repair is proposed."
   }
 ];
 
