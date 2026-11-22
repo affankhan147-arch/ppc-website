@@ -7311,6 +7311,11 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "What does fixing a clogged vent involve?",
         answer:
           "The provider confirms the diagnosis by checking the drains and, if needed, running a camera; clears the blockage from the vent stack -- usually with a snake or a jetter fed down from the roof -- and checks that the drains run freely and the traps hold their seal. If the stack is damaged, it may need a repair or a replacement section, and a cap or screen may be fitted to keep debris out. The matched provider confirms the scope and the pricing before any work begins -- and if the problem turns out to be the main line rather than the vent, they should tell you that before doing the work, not after."
+      },
+      {
+        question: "What is an AAV in plumbing?",
+        answer:
+          "An AAV -- an air admittance valve -- is a small one-way valve fitted to a drain line so air can get in when water drains away, without the drain needing a vent pipe all the way up through the roof. When a fixture drains, the valve opens to let air in so the water flows freely and the trap stays sealed; when the water stops, it closes so sewer gas cannot come back into the house. That is what aav plumbing means: a vent that works without a roof stack. You will usually find one under a kitchen island sink, where there is no wall to run a vent up, or in a remodel or an older DFW home where putting a new vent through the roof is impractical. An AAV is not a fix for a clogged vent, though -- if your drains gurgle, run slow, or you smell sewer gas, the valve itself may have failed or the drain may be blocked, and that is worth getting checked rather than assuming the AAV will sort it out. If you are not sure whether your home has one, or whether one is right for your situation, ask your plumber -- they can tell you at a glance."
       }
     ],
     extraLinks: [
