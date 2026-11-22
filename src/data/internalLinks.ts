@@ -25,13 +25,21 @@
 //   /cities/plano/24-hour-emergency-plumber      1639 impr, pos 45.72
 //   /cities/mckinney/24-hour-emergency-plumber   1576 impr, pos 37.04
 //   /cities/irving                                917 impr, pos 26.47
+//
+// 2026-11-22 reorder: re-pulled with the 22 Nov Search Console export (28-day window).
+// New top 8 by that data: Austin 24h (7,363 impr) and the sewer calculator (4,330) enter the
+// pool; Plano/Dallas/Richardson/Fort Worth/Burst pipe/McKinney keep their relative order below
+// them. Five more entries appended: slab calculator, Mansfield drain, water-heater service,
+// Houston 24h, license-verification post.
 export const internalLinkGroups = [
+  { label: "24-hour emergency plumber in Austin", href: "/cities/austin/24-hour-emergency-plumber" },
+  { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
   { label: "Emergency plumber in Plano", href: "/cities/plano" },
   { label: "Emergency plumber in Dallas", href: "/cities/dallas" },
   { label: "Emergency plumber in Richardson", href: "/cities/richardson" },
   { label: "Emergency plumber in Fort Worth", href: "/cities/fort-worth" },
-  { label: "Emergency plumber in McKinney", href: "/cities/mckinney" },
   { label: "Burst pipe emergency", href: "/services/burst-pipe-emergency" },
+  { label: "Emergency plumber in McKinney", href: "/cities/mckinney" },
   { label: "Emergency plumber in Carrollton", href: "/cities/carrollton" },
   { label: "Emergency plumber in Garland", href: "/cities/garland" },
   { label: "Emergency plumber in Frisco", href: "/cities/frisco" },
@@ -52,5 +60,10 @@ export const internalLinkGroups = [
   { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" },
   { label: "Failed shutoff leak checklist", href: "/blog/water-shutoff-valve-will-not-close-during-a-leak" },
   { label: "FAQ hub", href: "/faq" },
-  { label: "Request provider connection", href: "/contact" }
+  { label: "Request provider connection", href: "/contact" },
+  { label: "Slab leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+  { label: "Emergency drain cleaning in Mansfield", href: "/cities/mansfield/emergency-drain-cleaning" },
+  { label: "Emergency hot water heater repair", href: "/services/water-heater-emergency" },
+  { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" },
+  { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" }
 ];

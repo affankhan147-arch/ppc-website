@@ -205,6 +205,7 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
       }
     ],
     extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
       { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
       { label: "Outdoor cleanout overflowing", href: "/problems/outdoor-cleanout-overflowing" },
       { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" },
