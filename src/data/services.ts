@@ -56,7 +56,7 @@ export const services: Service[] = [
     categorySlug: "drain-cleaning",
     shortAnswer: "Emergency drain cleaning and drain service calls make sense when wastewater backs up, more than one fixture is affected, or a clog shuts down a kitchen, bathroom, or business.",
     seoTitle: "Emergency Drain Cleaning in DFW: 24/7 Drain Service",
-    cityHeading: "Drain Cleaning in {city}, TX: 24/7 Emergency Drain Service",
+    cityHeading: "Drain Cleaning in {city}, TX: 24/7 Emergency Service",
     urgency: "High",
     symptoms: ["multiple slow drains", "standing water", "sewage odor", "gurgling fixtures", "overflowing cleanout"],
     steps: ["Stop running water into the clogged line.", "Do not add chemical drain cleaner after backup starts.", "Note which fixtures are affected.", "Request same-day drain help."],
@@ -111,7 +111,7 @@ export const services: Service[] = [
     seoDescription:
       "Burst or frozen pipe in Dallas-Fort Worth? Shut off the main water valve, then call {phone} for 24/7 burst pipe and emergency pipe repair.",
     seoH1: "Burst Pipe Repair & 24/7 Emergency Pipe Repair in Dallas-Fort Worth",
-    cityHeading: "Burst Pipe Repair in {city}, TX: 24/7 Emergency Plumber",
+    cityHeading: "Burst Pipe Repair in {city}, TX: Emergency Plumber",
     urgency: "High",
     symptoms: ["water spraying", "ceiling leak", "wall swelling", "sudden pressure loss", "water meter spinning"],
     steps: ["Shut off the main water valve if you can reach it safely.", "Turn off electricity near standing water if safe.", "Open a low faucet to drain pressure.", "Call for urgent pipe help."],
