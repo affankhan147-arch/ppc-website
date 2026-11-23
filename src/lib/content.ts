@@ -97,7 +97,8 @@ export function getAllInventoryPages(): InventoryPage[] {
     { kind: "legal", title: "Partner With Us", path: "/partner-with-us", h1: "Provider partner inquiries", description: "Partner inquiry page for real plumbing providers and service partners." },
     { kind: "legal", title: "Privacy Policy", path: "/privacy", h1: "Privacy policy", description: "How this website handles submitted service request information." },
     { kind: "legal", title: "Terms", path: "/terms", h1: "Terms of use", description: "Terms for using this provider connection website." },
-    { kind: "legal", title: "Disclosure", path: "/disclosure", h1: "Provider connection disclosure", description: "Honest disclosure for this service request website." }
+    { kind: "legal", title: "Disclosure", path: "/disclosure", h1: "Provider connection disclosure", description: "Honest disclosure for this service request website." },
+    { kind: "legal", title: "About Plumbing Hands", path: "/about", h1: "About Plumbing Hands", description: "How Plumbing Hands connects Dallas-Fort Worth homeowners with independent emergency plumbers, what it costs, and where we serve." }
   ];
 
   const servicePages = services.map((service) => ({
