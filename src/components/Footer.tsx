@@ -58,6 +58,8 @@ export function Footer() {
         <div>
           <p className="font-bold">Legal</p>
           <div className="mt-3 grid gap-2 text-sm text-slate-400">
+            <Link href="/about" className="hover:text-[#4FD1C5]">About</Link>
+            <Link href="/contact" className="hover:text-[#4FD1C5]">Contact</Link>
             <Link href="/privacy" className="hover:text-[#4FD1C5]">Privacy</Link>
             <Link href="/terms" className="hover:text-[#4FD1C5]">Terms</Link>
             <Link href="/disclosure" className="hover:text-[#4FD1C5]">Disclosure</Link>
