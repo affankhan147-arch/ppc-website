@@ -105,7 +105,7 @@ export default function AboutPage() {
         <p className="section-kicker">Where we serve</p>
         <h2 className="mt-2 text-2xl font-black text-white">{cities.length} Texas cities, centred on Dallas-Fort Worth</h2>
         <p className="mt-3 leading-7 text-slate-300">
-          {siteConfig.name} connects homeowners in {cities.length} Texas cities across the {siteConfig.marketName},
+          {siteConfig.brandName} connects homeowners in {cities.length} Texas cities across the {siteConfig.marketName},
           with service-area pages for Houston, Austin and San Antonio as well. See the{" "}
           <Link href="/cities" className={link}>
             full list of service-area cities
