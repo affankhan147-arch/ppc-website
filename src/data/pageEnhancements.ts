@@ -1499,6 +1499,57 @@ export const cityServiceEnhancements: Record<string, PageEnhancement> = {
       { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" }
     ]
   },
+  "austin/24-hour-emergency-plumber": {
+    decisionTitle: "Austin emergency plumbing decision guide",
+    decisionIntro: "An Austin plumbing emergency at 2 a.m. splits the same way a daytime one does: Austin Water owns the mains and the line up to the meter and takes leak reports around the clock at 512-972-1000, while everything past the meter — the yard line, the slab, the pipes inside the house — is the owner's, and at night that means closing the cut-off valve and calling a plumber. Coverage runs across Travis, Williamson, and Hays counties, from older homes with outdated plumbing to new builds, and a leak under a slab foundation can sit out of sight with only a warm floor, a damp patch, or a moving meter to show for it.",
+    decisionItems: [
+      "Water bubbling up in the street, a sidewalk, or the meter box after hours: report it to Austin Water at 512-972-1000, which is available 24/7.",
+      "A leak inside the house, under the slab, or in the yard between the meter and the house: close your cut-off valve first, then call a plumber.",
+      "Sewage backing up into a tub, shower, or floor drain is a plumbing emergency at any hour; stop using water until the line is cleared.",
+      "Mention whether the leak started during or right after a freeze, since a frozen pipe can split in more than one place."
+    ],
+    providerTitle: "What an Austin plumber may check",
+    providerItems: [
+      "Exposed pipes in the attic, garage, exterior walls and outdoor hose bibs, the places most likely to split in a hard freeze.",
+      "The private service line between the meter and the house if the yard is soggy or the meter keeps moving with every fixture off.",
+      "Water heater connections and the relief line when the leak is near the heater.",
+      "Mineral buildup from limestone bedrock and hard water, a common cause of frequent clogs in Austin pipes."
+    ],
+    safetyTitle: "When to treat it as urgent in Austin",
+    safetyItems: [
+      "Water you cannot shut off, or water reaching outlets, the electrical panel or light fixtures.",
+      "A ceiling that is sagging or dripping.",
+      "Sewage backing up into a tub, shower or floor drain.",
+      "Burst pipes after a hard freeze: in the February 10-18, 2021 winter storm, the National Weather Service Austin/San Antonio office reported 5 to 6 consecutive days of temperature records at its climate sites, including Austin's."
+    ],
+    preventionTitle: "Austin-specific prevention notes",
+    preventionItems: [
+      "Find your cut-off valve before you need it: Austin Water says it sits on the service line just past the meter box, on your side, and shuts off water to the whole property.",
+      "Insulate exposed pipes in the attic, the garage and on outside walls before a freeze.",
+      "Keep the plumber's paid invoice after any leak repair: Austin Water's leak bill adjustment request has to be sent within 90 days of the repair."
+    ],
+    extraFaqs: [
+      {
+        question: "Who do I call about a water leak in the street in Austin?",
+        answer: "Austin Water at 512-972-1000. Its Customer Service Contact Center is available 24/7 for reporting a leak that is not already on its leak map. For a leak inside your home, under the slab, or in your own pipes, shut off the water at your cut-off valve and call a licensed plumber."
+      },
+      {
+        question: "Can I get a credit on my Austin water bill after a leak?",
+        answer: "Possibly. Austin Water has a Water Leak Bill Adjustment, but it only looks at a request once the leak is repaired. Send the request within 90 days of the repair with a copy of the paid repair receipt or invoice, your account number, the property address, the date range of the high charges, and the date and description of the repair. The adjustment falls under City Code 15-9-141, and an adjustment is not guaranteed."
+      },
+      {
+        question: "What should I do first if a pipe bursts in an Austin slab home?",
+        answer: "Close the cut-off valve first — Austin Water says it sits on the service line just past the meter box, on your side, and shuts off water to the whole property. In a slab home the leak is often under the concrete, so you may only see the signs: a warm spot on the floor, a damp patch, the sound of running water when every fixture is off, or the meter moving with everything off. Do not keep running water, keep the paid invoice from the repair, and send it to Austin Water within 90 days if you ask for a leak bill adjustment."
+      }
+    ],
+    extraLinks: [
+      { label: "Austin service area", href: "/cities/austin" },
+      { label: "24-hour emergency plumber service", href: "/services/24-hour-emergency-plumber" },
+      { label: "Ceiling leak from plumbing", href: "/problems/ceiling-leak-from-plumbing" },
+      { label: "Water shutoff valve will not close", href: "/problems/water-shutoff-valve-will-not-close" },
+      { label: "24-hour emergency plumber in Houston", href: "/cities/houston/24-hour-emergency-plumber" }
+    ]
+  },
   "irving/24-hour-emergency-plumber": {
     decisionTitle: "Irving emergency plumbing decision guide",
     decisionIntro: "Irving spans older neighborhoods near the original Las Colinas development with aging copper supply lines, alongside newer high-density multi-family and townhome construction closer to DFW Airport with more complex shared-line coordination.",
@@ -7252,6 +7303,11 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         question: "What is a plumbing appurtenance?",
         answer:
           "An appurtenance is a device or fixture attached to the plumbing system -- faucets, valves, traps, and similar fittings. The word describes the part's role in the system, not a brand. When a provider talks about appurtenances, they mean the fittings and devices connected to the pipes, as opposed to the pipes themselves."
+      },
+      {
+        question: "Is there a plumbing slope calculator for home drains?",
+        answer:
+          "A plumbing slope calculator would only divide the drop by the length of the run — the rule it checks is about a quarter inch of fall per foot of run, which is the IPC Table 704.1 minimum for pipes 2-1/2 inches and smaller, while larger pipes can run flatter. Too little slope leaves waste behind, and too much lets the water outrun the solids. A drain that gurgles or drains slowly can be a slope problem, not a clog, and confirming the fall in a finished house usually takes a camera check — ask the provider to confirm the slope before agreeing to a re-pipe."
       }
     ],
     extraLinks: [
@@ -7492,6 +7548,16 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
         answer:
           "The supply lines, the drain connection, the vent connection, and the stub-outs for each fixture, plus any slab cutting or wall opening the job needs, and the permit where the city requires one. It should list the fixtures by name and by room, so you can see what counts as one fixture. It should say what happens if the job turns out bigger than expected. And it should say what is in the finish phase, and whether the finish is in this quote or a separate one, because the rough-in on its own is only half the job."
       },
+      {
+        question: "Is there a plumbing fixture calculator I can use before a rough-in quote?",
+        answer:
+          "There is no standard calculator that can price a rough-in, because the cost depends on the house, not just the count — the fixture type, the distance to the main, venting, access, and whether the home is slab or pier-and-beam. The closest thing to a plumbing fixture calculator is the count itself: walk the job room by room, count one fixture per point of use, and get that list in writing with the quote, so you can see what changes if you add or remove one."
+      },
+      {
+        question: "How does a plumbing fixture count calculator work for a remodel?",
+        answer:
+          "It works the same way a quote does: one fixture is one point of use — one toilet, one sink, one shower, one washing machine connection. A bathroom with a toilet, a sink and a shower is three fixtures, not one, and a double vanity is two. Each fixture adds a drain connection, a vent connection and supply runs, so the count sets the size of the job. Use your count to compare quotes line by line: if two quotes count the fixtures differently, they are quotes for two different jobs."
+      },
     ],
     extraLinks: [
       { label: "Plumbing Prices in DFW: What Jobs Cost & Why", href: "/blog/plumbing-prices-dallas-fort-worth" },
@@ -7564,14 +7630,49 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
 export const serviceFaqEnhancements: Record<string, FAQ[]> = {
   "water-heater-emergency": [
     {
-      question: "Is a water heater that stopped heating an emergency?",
+      question: "Is a leaking water heater an emergency?",
       answer:
-        "A water heater with no hot water is usually not as urgent as an active leak, but it still warrants a same-day request, especially in colder months. Check the breaker or gas pilot first, note the tank's age and type, and avoid relighting gas if you smell gas before calling."
+        "Yes, when water is actively leaking — and how urgent it is depends on where the heater sits and how fast the water is coming out. A slow drip from a fitting in a garage may be containable, but a tank leaking in an attic, which is common in two-story DFW homes, can soak the ceiling below in short order, and any water near electrical parts or a gas burner is a safety problem, not just a mess. Shut off the cold-water supply valve above the heater, turn off power or gas if you can do it safely, and keep people away from standing water near the unit. A tank leaking from the body itself usually will not stop on its own, so describe the leak location, whether the unit is tank or tankless, and roughly how old it is when you request help."
+    },
+    {
+      question: "Should I turn off the breaker?",
+      answer:
+        "Yes, if the water heater is electric and you can reach the breaker panel without standing in water — cutting power removes the shock risk from water near the unit's electrical parts. Do not touch the panel with wet hands, and do not wade through standing water to reach it; if the panel is wet or you would have to stand in water, leave it alone and say so when you request help. For a gas heater, turn the gas control on the unit to pilot or off instead of touching the breaker. Either way, also close the cold-water supply valve above the heater to stop more water feeding the leak, and if you smell gas, leave the house and call the gas utility or emergency services from outside."
+    },
+    {
+      question: "Can a water heater leak be repaired?",
+      answer:
+        "It depends on where the water is coming from. Leaks at a supply connector, the drain valve, a loose fitting, or the temperature-and-pressure relief valve discharge pipe can often be repaired by replacing the failed part. A tank leaking from the body itself — a rusted seam, corrosion at the base, or water seeping through the steel — generally cannot be repaired reliably, because the tank has failed. North Texas hard water and sediment speed up that corrosion, which is why the age of the unit matters. When you request help, say exactly where the water appears, whether the unit is tank or tankless, and roughly how old it is, and ask the matched provider to explain the repair-versus-replacement options and the price before approving work."
+    },
+    {
+      question: "Do you repair hot water heaters or only replace them?",
+      answer:
+        "Both repair and replacement are handled through matched local providers — there is no replace-only policy. A fault in a part, such as a heating element, thermostat, gas valve, igniter, or temperature-and-pressure relief valve, is usually a repair, while a tank that has corroded through or a unit so old that the repair costs more than it is worth usually points to replacement. The provider decides on site after seeing the unit, so share whether it is tank or tankless, roughly how old it is, and what it is doing — leaking, no hot water, strange noises. Ask the provider to walk through the options and confirm the price before any work begins."
+    },
+    {
+      question: "What should I do first if my water heater stops making hot water?",
+      answer:
+        "Check the simple causes first: for an electric heater, look for a tripped breaker; for a gas heater, check whether the pilot is out and the gas supply is on; for a tankless unit, check the power and any error code on the display. Also check whether water is leaking from the unit — if it is, shut off the water and power or gas if safe and treat it as urgent. Do not relight a gas burner if you smell gas. Note whether the problem affects every tap or just one — every tap points to the heater, one tap points to the fixture — along with the unit type and approximate age, then request help with those details so the provider can triage it properly."
+    },
+    {
+      question: "What should I do if my water heater is leaking in DFW?",
+      answer:
+        "Shut off the water at the heater's cold-water shutoff valve if you can reach it safely, or at the main if you cannot, then turn off power at the breaker for an electric heater or set a gas heater's control to off if it is safe to reach. Note where the water is coming from — the relief valve, a connection, or the tank body — and the tank's age and whether it is tank or tankless, since that is what the provider asks first. A tank that leaks from the body itself, or a heater that is leaking and making popping sounds, is urgent: keep clear of standing water near outlets and request help right away."
+    },
+    {
+      question: "My water heater is making a popping noise — is that an emergency in DFW?",
+      answer:
+        "Popping on its own is usually sediment boiling under scale — North Texas water is hard and leaves scale inside water heaters — rather than an emergency. It becomes urgent if the popping comes with leaking, pooling water, or no hot water at all. Note the tank's age, whether the noise started suddenly, and whether the water runs rusty or smells, and ask the provider whether the tank needs a sediment flush. Do not relight gas if you smell gas."
     },
     {
       question: "How much does emergency water heater repair cost?",
       answer:
         "It depends on repair versus replacement, tank size, access, parts, and code requirements — the same factors our water heater emergency cost guide walks through. The questions worth asking before work begins are whether the tank can be repaired or needs replacing, whether it is tank or tankless, and what the provider charges for the visit itself. Confirm the options and the price in writing before approving work."
+    },
+    {
+      question: "Is a water heater that stopped heating an emergency?",
+      answer:
+        "A water heater with no hot water is usually not as urgent as an active leak, but it still warrants a same-day request, especially in colder months. Check the breaker or gas pilot first, note the tank's age and type, and avoid relighting gas if you smell gas before calling."
     },
     {
       question: "My water heater stopped heating — is that an emergency?",
@@ -7584,6 +7685,21 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "How fast is same-day plumber connection service?",
       answer:
         "Same-day connection routes your request to available local providers the same day when possible, but exact arrival time depends on provider schedules, distance, and current demand. Confirm timing directly with the matched provider rather than assuming a fixed window."
+    },
+    {
+      question: "How does a plumber connection work?",
+      answer:
+        "You describe the problem, your city, and how urgent it is, and the request is routed to available local providers across Dallas-Fort Worth. The matched provider then confirms timing, pricing, and scope directly with you before any work starts. This website is a connection service, not a plumbing company — it does not send its own plumbers or set prices. Share the affected fixture, what happened, whether water is still running, and photos if it is safe to take them. The provider handles the diagnosis and the repair once they are matched to your request."
+    },
+    {
+      question: "Is same-day service guaranteed?",
+      answer:
+        "No — same-day means the request is routed the same day to providers who may have availability; it does not guarantee an arrival window or a completed repair the same day. Arrival depends on provider schedules, distance, current demand, and parts. Freeze mornings and Monday mornings are the busiest across DFW, and a job that needs a part the provider does not carry may need a follow-up visit. Confirm timing directly with the matched provider. If water is actively spreading or sewage is involved, say so in the request — that is triaged as an emergency, not a routine same-day slot."
+    },
+    {
+      question: "What details should I share?",
+      answer:
+        "Your city and nearest cross streets; which fixture or pipe is affected; what happened and when it started; whether water is still running or spreading; whether sewage or a sewer odor is involved; and whether you already used chemical drain cleaner. For a water heater, add tank or tankless and the approximate age; for a drain, add which fixtures are slow or backing up together. Photos help if it is safe to take them. The more specific the request, the faster the provider can triage it and bring the right parts — an upstairs hall bathroom sink backing up into the tub is far more useful than just bathroom sink."
     }
   ],
   "toilet-overflow-emergency": [
@@ -7591,6 +7707,21 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "What if my toilet backup will not stop even after shutting the valve?",
       answer:
         "If the toilet supply valve is closed but water keeps rising or backs into a tub or shower, the blockage is likely deeper than the toilet trap and may involve the main line. Stop using other fixtures and request urgent service rather than continuing to plunge."
+    },
+    {
+      question: "How do I stop a toilet from overflowing?",
+      answer:
+        "Turn the supply valve behind or beside the toilet clockwise — it is the small oval or lever valve on the wall or floor near the base. If it will not turn, lift the float arm inside the tank to stop the fill. Do not flush again. Mop up clean water with towels; if the water is dirty or smells of sewage, keep people away and treat it as a backup, not a simple overflow. If the bowl keeps rising after the valve is closed, the blockage is deeper than the toilet — stop using other fixtures and request urgent help rather than continuing to plunge."
+    },
+    {
+      question: "When is toilet overflow a sewer issue?",
+      answer:
+        "When it is not just the toilet: water rises in the tub or shower when you flush; a floor drain backs up; more than one toilet is affected; gurgling comes from other fixtures; a sewer odor appears; or the overflow keeps happening after the toilet itself has been cleared. A single toilet overflowing after too much paper is usually a trap clog; overflow that involves other fixtures points to a branch or main sewer line. Stop flushing, stop using other fixtures until the cause is known, and describe the full pattern when you request help."
+    },
+    {
+      question: "Should I use a plunger?",
+      answer:
+        "Yes, for a single toilet with clean water and no other fixtures involved — use a flange plunger, the kind with the narrow extension that seals the bowl outlet. Push gently first to seat it, then plunge firmly without splashing. Stop if the water rises instead of dropping, if dirty water appears, or if the tub or shower starts reacting — that means the blockage is past the toilet, and plunging can push wastewater into other fixtures. Never plunge after pouring chemical cleaner into the bowl, and if the toilet supply valve does not stop the water, close it and request urgent help instead."
     }
   ],
   "24-hour-emergency-plumber": [
@@ -7598,9 +7729,69 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "Is there a lower-cost option for a smaller emergency plumbing issue?",
       answer:
         "Pricing depends on diagnosis, timing, and scope, so there is no fixed under-$200 guarantee. Ask the matched provider for a diagnostic and dispatch estimate up front so you know what a smaller, non-structural issue is likely to cost before work begins."
+    },
+    {
+      question: "What counts as a plumbing emergency?",
+      answer:
+        "Anything that can cause damage, expose people to unsafe water, or leave the home without an essential fixture: an active leak you cannot stop, a burst pipe, a sewage backup, a toilet that will not stop overflowing, no usable toilet at all, water near electrical fixtures, a gas smell near a gas appliance, or no water coming into the house. A slow drip, a single slow drain, or a running toilet is urgent but can usually wait for a same-day slot. When you are unsure, describe what is happening — the triage question is whether damage is spreading right now, not how dramatic the problem looks."
+    },
+    {
+      question: "Should I shut off the main water valve?",
+      answer:
+        "Yes, if water is active and you cannot stop it at the fixture — closing the main valve stops all water entering the house. It is usually in the garage, a utility closet, near the water heater, or at the meter box near the curb; turn it clockwise. Older valves can be stiff, so do not force one that will not move, because a snapped valve makes the problem worse — use the meter shutoff instead. If the fixture valve stops the leak, use that and leave the main on; the main valve is for leaks you cannot isolate, a burst pipe, or water spreading through walls or ceilings."
+    },
+    {
+      question: "Can I wait until morning?",
+      answer:
+        "It depends on whether the water is still moving. If the leak is stopped — valve closed, no water spreading — no sewage is involved, you have a working toilet, and there is no water near electrics, waiting until morning is often reasonable: put towels down, keep the area dry, and do not use the affected fixture. If water is still spreading, sewage is present, a ceiling is sagging, or you have no working toilet, do not wait. Overnight, water keeps moving through drywall and under slab flooring, so a problem that looks small at midnight can be a much bigger repair by morning."
+    },
+    {
+      question: "What counts as a 24-hour plumbing emergency?",
+      answer:
+        "The same test as any plumbing emergency, plus timing: it cannot safely wait for business hours. Active leaks, burst pipes, sewage backups, toilets that will not stop overflowing, loss of all water to the house, water near an electrical panel, or a water heater leaking in an attic over living space all qualify. A 24-hour request covers nights, weekends, and holidays. A slow drain or a dripping tap is a same-day job, not a 2 a.m. call — but if you are unsure, describe the symptoms and let the matched provider triage it rather than guessing wrong in either direction."
+    },
+    {
+      question: "Do 24-hour plumbers charge more at night?",
+      answer:
+        "After-hours work often costs more than a weekday daytime visit — night, weekend, and holiday calls can carry a higher dispatch or diagnostic fee, and parts availability can change the scope — but there is no fixed rate, and no number quoted here is a price for your home. What matters is asking the matched provider before work starts: what the visit includes, whether there is an after-hours fee, and what diagnosis costs. Get that answer before authorizing work, and do not accept a guaranteed total before the problem has actually been diagnosed."
     }
   ],
   "burst-pipe-emergency": [
+    {
+      question: "Where is my main shutoff valve?",
+      answer:
+        "In most DFW homes the main shutoff is where the water line enters the house — often on a garage wall, in a utility closet, or near the water heater. In older Dallas homes, in neighborhoods like Oak Cliff and Lakewood, it can also be under the kitchen sink or in a hallway closet. There is a second shutoff at the meter itself, in the ground-level meter box near the curb or property line, which usually needs a meter key or a wrench to turn. Find both before an emergency and check that the indoor valve actually turns — older gate valves seize up from disuse. If the indoor valve will not close during a burst, use the meter shutoff and tell the provider the indoor valve failed."
+    },
+    {
+      question: "Is a burst pipe an emergency?",
+      answer:
+        "Yes — an active burst is always urgent. Water under mains pressure can soak drywall, ceilings, insulation, and flooring within minutes, and in DFW homes built on slab foundations it can also spread under flooring before it is visible on the surface. A ceiling bulging with water can come down, and water near outlets or a breaker panel adds a safety risk. Shut off the main valve first, then request help. A frozen pipe that has not burst yet is urgent too, because the break often appears as the pipe thaws — do not wait for morning if water is active or the meter is spinning with every tap off."
+    },
+    {
+      question: "What should I do before help arrives?",
+      answer:
+        "First shut off the main water valve, then open a low faucet — a bathtub tap or an outdoor spigot — to drain pressure from the line. If you can reach the breaker safely without standing in water, cut power to the wet areas, and keep everyone away from wet outlets and switches. Move rugs, furniture, and electronics out of the water's path, put towels or buckets where water is pooling, and take photos of the damage for your insurer. Note where the water is appearing and the pipe material if you can see it. Do not try to patch a pressurized pipe or cut into a wall to find it — that is the provider's job once the water is stopped."
+    },
+    {
+      question: "When should I call a burst pipe plumber instead of waiting?",
+      answer:
+        "Call immediately when water is spraying, pressure has dropped suddenly, a ceiling or wall is swelling, the water meter is spinning with every tap off, or water is near anything electrical. Waiting is only reasonable when a pipe is frozen but not leaking, you can keep the area warm, and you can watch it — and even then a same-day request is wise, because DFW freeze mornings bring a rush of burst pipes at once and providers book up fast. If you are unsure whether the pipe has actually split, call anyway: a burst that waits overnight becomes water-damage work on top of a plumbing repair."
+    },
+    {
+      question: "How do I find where the burst pipe is in my DFW home?",
+      answer:
+        "Shut off the main water valve first, then follow the water: check the attic, garage, exterior walls and outdoor hose bibs, which are the places most likely to split in a hard freeze, and look for a sagging or dripping ceiling, a warm spot on the floor if it is a hot line, or a soggy patch in the yard. With every fixture off, check whether the meter is still moving — a moving meter means water is still leaving the house somewhere. Tell the provider what you found, which shutoff worked, and where water is visible, rather than opening walls yourself."
+    },
+    {
+      question: "Will Texas homeowners insurance cover a burst pipe?",
+      answer:
+        "It depends on how the burst happened. The test Texas insurers use is sudden versus gradual: a single abrupt burst is generally treated as covered for the resulting water damage — flooring, drywall, belongings — but not for repairing or replacing the failed pipe itself, which is treated as a maintenance cost. A freeze-related burst can be denied if the home was not reasonably maintained in the cold. Shut off the water, take photos, keep the plumber's dated invoice and a written statement identifying an acute failure, and check with your insurer before authorising extra work."
+    },
+    {
+      question: "How much does burst pipe repair cost?",
+      answer:
+        "It depends on where the pipe broke, how hard it is to reach, the pipe material, and whether walls, ceilings, or a slab have to be opened. Water mitigation is usually billed separately from the plumbing repair itself. Our burst pipe emergency cost guide walks through those factors in detail — ask the matched provider for a diagnostic estimate up front so you know the scope before work begins."
+    },
     {
       question: "What leak details should I include in the request?",
       answer:
@@ -7610,11 +7801,6 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "What should I do first if a pipe bursts?",
       answer:
         "Shut off the main water valve first, then turn off electricity near standing water if it is safe to reach the breaker. Open a low faucet to relieve pressure in the line, and avoid touching wet switches or outlets before help arrives."
-    },
-    {
-      question: "How much does burst pipe repair cost?",
-      answer:
-        "It depends on where the pipe broke, how hard it is to reach, the pipe material, and whether walls, ceilings, or a slab have to be opened. Water mitigation is usually billed separately from the plumbing repair itself. Our burst pipe emergency cost guide walks through those factors in detail — ask the matched provider for a diagnostic estimate up front so you know the scope before work begins."
     },
     {
       question: "What should I do before the plumber arrives?",
@@ -7627,6 +7813,182 @@ export const serviceFaqEnhancements: Record<string, FAQ[]> = {
       question: "What details help a main sewer line call get triaged?",
       answer:
         "Share which fixtures react together, whether the outdoor cleanout is overflowing, whether wastewater is visible, and whether heavy rain or recurring backups are involved."
+    },
+    {
+      question: "How do I know it is the main sewer line?",
+      answer:
+        "The pattern is several fixtures reacting together: flush the toilet and water rises in the tub or shower; run the washing machine and a floor drain or toilet gurgles; multiple drains slow down at the same time; or sewage appears at the lowest drain in the house or at the outdoor cleanout near the property line. A single slow sink is a branch clog; the main line is suspect when fixtures on different branches misbehave together. Older DFW neighborhoods with clay or cast-iron laterals, such as Oak Cliff, Lakewood, and parts of Fort Worth, are more prone to root intrusion and bellies — sagging sections — from shifting clay soil."
+    },
+    {
+      question: "Is a sewer backup dangerous?",
+      answer:
+        "Yes — sewage is contaminated water carrying bacteria and other pathogens, so do not walk through it barefoot, do not let children or pets near it, and do not try to mop it up with household cleaning as if it were clean water. It can also signal a broken or blocked lateral that will keep backing up until it is cleared. Stop using fixtures, keep the area clear, and request urgent help. Cleanup and plumbing repair are usually separate scopes — ask the provider what each covers before work starts, and take photos of the affected area for your insurer before anything is moved."
+    },
+    {
+      question: "Will drain cleaning fix a main line clog?",
+      answer:
+        "Sometimes — a cable or auger can clear grease, sludge, or a soft blockage in the main line, and hydro-jetting can scour buildup off the pipe walls. But cleaning does not fix a collapsed pipe, a bellied section that holds water, heavy root intrusion that keeps growing back, or a broken lateral — those need a camera inspection and repair planning. In DFW's shifting clay soil, bellies and root intrusion in older clay lines are common causes that cleaning alone will not solve. Ask whether the visit includes a camera inspection, and what happens if the clog comes back soon after clearing."
+    }
+  ],
+  "emergency-drain-cleaning": [
+    {
+      question: "When is a clogged drain an emergency?",
+      answer:
+        "When wastewater is backing up, more than one fixture is affected, the clog shuts down a kitchen or the only bathroom, sewage odor or dirty water appears, or a floor drain or the outdoor cleanout is overflowing. A single slow bathroom sink is a same-day job, not an emergency. In DFW, grease-heavy kitchen lines and hair and soap buildup in shower drains are the usual causes of single-fixture clogs; multiple fixtures at once usually means the problem is deeper — a shared branch or the main line — and that is the emergency."
+    },
+    {
+      question: "Is chemical drain cleaner safe?",
+      answer:
+        "For a slow drain with no standing water, a caustic cleaner may clear a minor organic clog, but it is not a safe general fix: it can damage older pipes, it will not touch roots, grease buildup, or foreign objects, and it creates a splash and fume risk for anyone who works on the drain afterwards — always tell the provider if you used it. Never pour chemicals into standing water or a backed-up drain, never mix different cleaners, and never use them in a toilet. Once water is backing up, mechanical clearing — plunger, auger, or hydro-jetting — is the safer route."
+    },
+    {
+      question: "What does same-day drain cleaning include?",
+      answer:
+        "Typically, diagnosis of which line is blocked, clearing the clog with the right method for the location — an auger for a fixture branch, a cable or jetting for a deeper line — and a check that water flows again. It does not automatically include a camera inspection, pipe repair, or cleanup of wastewater, which may be separate scopes. Ask the matched provider before work starts what the visit covers, what equipment they will bring, and what happens if the clog turns out to be in the main line rather than the fixture."
+    },
+    {
+      question: "Is emergency drain service available nights and weekends in DFW?",
+      answer:
+        "Yes — emergency drain requests are routed nights, weekends, and holidays across Dallas-Fort Worth, including Dallas, Fort Worth, Plano, Arlington, Irving, Garland, Frisco, and McKinney. Availability depends on the matched provider's schedule and current demand, so arrival times cannot be promised — freeze mornings and holiday weekends are the busiest. If wastewater is actively backing up, say so in the request; that gets triaged as urgent rather than a routine same-day slot."
+    }
+  ],
+  "sewer-backup-help": [
+    {
+      question: "What should I do during a sewer backup?",
+      answer:
+        "Stop using every fixture — no flushing, no showers, no laundry, no dishwasher — because every gallon you send down goes toward the blockage and can come back up at the lowest drain in the house. Keep children and pets out of the affected area, do not walk through contaminated water, and do not pour chemicals into backed-up drains. Check whether the outdoor cleanout is overflowing, but do not open a pressurized cap. Note which fixtures are affected and how the backup started, then request urgent sewer help with those details."
+    },
+    {
+      question: "Who handles sewer backup cleanup?",
+      answer:
+        "Two different jobs are involved: a plumber clears and diagnoses the line, while cleanup of contaminated water and affected flooring, drywall, and belongings is usually a water-damage or restoration job, and may involve your homeowner's insurer. The matched plumbing provider handles the line itself — ask whether they also coordinate cleanup or whether you need a separate restoration company. Document the damage with photos before anything is moved, and check your policy for sewer-backup coverage before authorizing cleanup work."
+    },
+    {
+      question: "Can rain cause sewer backup?",
+      answer:
+        "Yes, in the sense that heavy rain exposes a line that is already compromised. A healthy sewer lateral handles a storm, but cracked joints in older clay or cast-iron pipes let groundwater in, a bellied section already holds water, and a partial blockage leaves no spare capacity — so a backup that only happens during or right after heavy rain points to infiltration or a line that was already restricted, rather than a simple clog. Note the timing when you request help, because only when it rains is a useful detail for the provider. If the street itself is flooding, the problem may be on the city side, and the provider can advise after inspection."
+    }
+  ],
+  "commercial-emergency-plumbing": [
+    {
+      question: "When should a business call an emergency plumber?",
+      answer:
+        "When plumbing stops operations or risks customers, tenants, or property: restrooms out of service, a kitchen drain backing up during service, water on the floor in a customer area, a water heater down in a restaurant, hotel, or salon, a leak threatening inventory or equipment, or a sewage odor in a dining or retail space. A single slow sink in a back office can wait for a scheduled visit; anything that closes fixtures customers use or risks a health-code problem cannot. For restaurants and food service in DFW, a drain backup during service is an emergency — it can shut down the kitchen."
+    },
+    {
+      question: "Can work happen after hours?",
+      answer:
+        "Yes — commercial emergency work is commonly scheduled after closing or overnight so the business can keep trading: restaurants between services, offices after staff leave, retail before opening. The matched provider confirms after-hours availability, access arrangements, and whether after-hours rates apply — ask before work starts. Share your opening hours, when the space is empty, and who can let the provider in. For multi-tenant buildings in Dallas or Fort Worth, also share the property-management contact, because access to shared risers or shutoffs often needs their approval."
+    },
+    {
+      question: "What information should a manager provide?",
+      answer:
+        "Business type and hours; which fixtures or equipment are affected; whether customers, tenants, or food service are impacted; where the shutoffs are; access instructions such as keys, codes, the loading dock, and the after-hours contact; whether it is a single unit or a multi-tenant building; and any history — recurring backups, recent work, or grease-trap service dates for restaurants. Photos of the affected area help. The more the provider knows before arriving, the less downtime — especially for grease-line and restroom issues, where bringing the right equipment on the first visit matters."
+    },
+    {
+      question: "What commercial plumbing work do you cover?",
+      answer:
+        "The emergency and repair work businesses depend on: drain and sewer clearing for restrooms and kitchens, restroom fixture repair such as flush valves, faucets, and toilets, water-heater repair and replacement for commercial units, leak response for supply lines, grease-line issues in restaurants, and backflow or pressure problems where they affect operations. Work is done by matched local providers, and the exact scope, parts, and pricing are confirmed with the provider before work starts. If the job needs a permit or involves a shared building system, the provider will say so."
+    },
+    {
+      question: "Do you handle commercial plumbing maintenance?",
+      answer:
+        "Maintenance is handled as scheduled work rather than emergency response: recurring drain service, restroom fixture checks, water-heater flushing and inspection — important with DFW hard water and sediment — grease-trap line maintenance for restaurants, and backflow testing where the city requires it. Describe the property, the fixture count, and how often you want service, and the matched provider can confirm what is included and how it is scheduled. Maintenance will not fix an active backup — if water is on the floor now, request emergency help first."
+    },
+    {
+      question: "What should a business do first in a drain backup?",
+      answer:
+        "Stop using the affected fixtures and any equipment tied to them — in a restaurant, that means the sinks and dish station feeding the backed-up line; in an office, the restrooms on that branch. Block off wet areas so customers and staff do not walk through wastewater, note which fixtures are involved, and check whether the backup is in one unit or building-wide — building-wide points to the main line or a shared lateral. Do not pour chemicals into a backed-up commercial drain, and do not keep running water to test it. Then request commercial help with the fixture list and your hours."
+    },
+    {
+      question: "What commercial plumbing services do you cover?",
+      answer:
+        "The service model covers the full path from emergency response to scheduled work: emergency call-outs for backups, leaks, and restroom outages; same-day repair for fixtures, water heaters, and supply lines; after-hours work so trading is not interrupted; and planned maintenance for restrooms, drains, and water heaters. It covers restaurants, offices, retail, salons, multifamily buildings, and other commercial properties across Dallas-Fort Worth. The provider confirms scope, timing, and pricing for your property before work begins — no blanket price or arrival promise is made here."
+    }
+  ],
+  "sink-and-shower-drain-backup": [
+    {
+      question: "Why do sink and shower drains back up together?",
+      answer:
+        "Because they usually share a branch line in the bathroom: the sink and the shower — and often the toilet — drain into the same pipe before it joins the main. A clog in that shared branch, hair and soap sludge from the shower mixed with toothpaste and grime from the sink, backs water up into whichever fixture is lowest, usually the shower or tub. In two-story DFW homes the upstairs bathroom group shares a branch too, so the pattern can appear upstairs while the downstairs drains run fine. If the toilet gurgles as well, the clog may be further down the line."
+    },
+    {
+      question: "Is it a main line problem?",
+      answer:
+        "Not necessarily — and that is exactly what the provider checks. If only the bathroom group is affected, the sink and shower and maybe the toilet in the same bathroom, while the kitchen and other bathrooms drain fine, it is usually a branch clog. It becomes a main-line suspect when fixtures in different parts of the house react together — the kitchen sink backs up when the toilet flushes, or water appears at a floor drain or the outdoor cleanout. Describe which fixtures react together when you request help; that pattern is the diagnostic clue."
+    },
+    {
+      question: "Should I snake it myself?",
+      answer:
+        "For a single slow sink or shower, a hand auger or drain snake can work if you are comfortable and the clog is near the fixture — work gently and never force it. Stop and call a provider if water is backing up rather than just draining slowly, if more than one fixture is involved, if you hit something solid that will not move, or if the drain has had chemical cleaner in it. A powered snake in the wrong hands can crack older pipes or punch through a trap, and in older DFW homes with cast-iron branches that is a real risk. If you are unsure, a same-day drain request costs less than a cracked pipe."
+    }
+  ],
+  "emergency-plumbing-under-200": [
+    {
+      question: "Can emergency plumbing stay under $200?",
+      answer:
+        "Sometimes — a straightforward visit can stay under $200 when the job is small: a simple diagnosis, clearing a minor fixture clog, shutting off water and making a leak safe, or resetting a fixture. It depends on the diagnosis, parts, access, and timing — after-hours calls, main-line work, camera inspection, and anything involving opening walls or a slab will cost more. No price here is a quote for your home. The only way to know is to ask the matched provider before work starts what the visit includes and what the diagnostic and dispatch charges are."
+    },
+    {
+      question: "What does an emergency visit include?",
+      answer:
+        "Usually, arrival and assessment, finding the shutoff and stopping active water if needed, diagnosing the cause, and the first step of making the situation safe — which may be a repair, a temporary stop-gap, or a plan for a follow-up visit with parts. What it does not automatically include: parts beyond basic fittings, a camera inspection, wall or slab access, water-damage cleanup, or a second visit. Ask the matched provider to spell out what is included in the visit charge and what would be billed separately before they start work."
+    },
+    {
+      question: "How do I keep the cost down?",
+      answer:
+        "Stop the water yourself first if you can — a closed valve turns an emergency into a scheduled repair. Describe the problem precisely so the provider brings the right parts and does not need a return trip. Ask up front what the diagnostic and dispatch charges are and whether there is an after-hours fee. Do not authorize extra work, such as a camera inspection, repiping, or upgrades, on the spot without a clear reason and a price. And fix small issues early — a slow drain cleared now is cheaper than a main-line backup later, and in DFW's hard-water homes, keeping a water heater flushed on schedule avoids sediment failures."
+    }
+  ],
+  "toilet-backup": [
+    {
+      question: "Why is my toilet backing up?",
+      answer:
+        "Usually one of three things: a clog in the toilet trap or the branch right behind it — too much paper, wipes, even ones labeled flushable, or a foreign object; a blockage further down the branch the toilet shares with the tub or shower; or a restriction in the main sewer line. The pattern tells the story: one toilet only, after a heavy flush, points to the trap; the tub gurgling or filling when you flush points further down; every toilet and drain in the house acting up points to the main line. Stop flushing and watch which other fixtures react before you request help."
+    },
+    {
+      question: "When is toilet backup a sewer issue?",
+      answer:
+        "When the backup is not confined to one toilet: water rises in the tub or shower after a flush, a floor drain overflows, more than one toilet backs up, a sewer odor shows up with slow drains throughout the house, or the outdoor cleanout is overflowing. Those patterns mean the blockage is in the main sewer line or the lateral to the street, not the toilet itself. In older DFW areas with clay laterals, root intrusion is a common cause. Stop using all fixtures and request sewer help rather than continuing to plunge."
+    },
+    {
+      question: "Should I use a plunger?",
+      answer:
+        "Only if it is a single toilet, the water is clean, and no other fixture is reacting — use a flange plunger that seals the bowl outlet, and stop if the water level rises instead of falling. Do not keep plunging if the tub or shower starts filling, if dirty water appears, or if a second toilet is affected — that means the clog is past the toilet, and plunging can force wastewater up through other fixtures. Never plunge a toilet that has had chemical cleaner poured into it; the splash risk is not worth it, and if the supply valve does not stop the water, close it and request urgent help instead."
+    }
+  ],
+  "water-heater-not-heating": [
+    {
+      question: "Why is my water heater not heating?",
+      answer:
+        "The common causes are a failed heating element or a tripped thermostat on an electric unit, a pilot light that will not stay lit or a failed thermocouple on a gas unit, a flow, ignition, or error-code fault on a tankless unit, or heavy sediment buildup — a real issue with DFW's hard water — insulating the bottom of the tank so the burner or element cannot heat the water properly. Check the breaker and the pilot first if it is safe to do so, note whether the unit is gas or electric, tank or tankless, and any error code or popping sounds, then request help with those details so the provider can bring the right parts."
+    },
+    {
+      question: "Is a water heater that stopped heating an emergency?",
+      answer:
+        "Usually not as urgent as a leak, but it still warrants a same-day request — especially in colder months, or in a home with only one water heater, elderly occupants, or small children. No hot water with no leak is a comfort and hygiene problem, not a damage problem: check the breaker or gas pilot first, and do not relight gas if you smell gas. It becomes urgent if the tank is also leaking, pooling water, or making popping or rumbling sounds — then shut off water and power or gas if safe and request help right away."
+    },
+    {
+      question: "Can a water heater be repaired?",
+      answer:
+        "Often, yes — many no-heat faults are part failures, not tank failures: a heating element, thermostat, gas valve, igniter, or thermocouple can be replaced, and a tankless unit can often be flushed and serviced. What usually cannot be repaired is a tank leaking from the body itself, because corrosion through the steel means the tank has failed. The provider's call depends on the unit's age, whether it is tank or tankless, and what failed. Share those details in the request, and ask the provider to explain the repair-versus-replacement options and the price before approving work."
+    }
+  ],
+  "burst-pipe-what-to-do": [
+    {
+      question: "What do I do first when a pipe bursts?",
+      answer:
+        "Shut off the main water valve first — that is the single step that limits the damage. It is usually in the garage, a utility closet, near the water heater, or at the meter box by the curb; turn it clockwise. Then, if you can reach the breaker safely without standing in water, cut power to the wet areas, and open a low faucet to drain pressure from the line. Keep people away from wet outlets and switches, and call for emergency pipe help once the water is stopped — the provider will want to know where the water is appearing and whether the main is closed."
+    },
+    {
+      question: "Where is my main shutoff valve?",
+      answer:
+        "Start where the water line enters the house: in most DFW homes that is the garage wall, a utility closet, or near the water heater; in older Dallas homes it can be under the kitchen sink or in a hallway closet. If you cannot find an indoor valve, use the shutoff in the meter box at the curb — it sits in a ground-level box near the street and usually needs a meter key or a wrench to turn. Find it now, before the next freeze, and check that it actually turns — older gate valves seize up, and discovering that during a burst is the worst time."
+    },
+    {
+      question: "Is a burst pipe an emergency?",
+      answer:
+        "Yes — if a pipe has burst, water is escaping under pressure and the damage clock is running: drywall, insulation, and flooring soak fast, and in a two-story DFW home a burst in the attic can bring a ceiling down. The only wait case is a pipe you suspect is frozen but has not burst and is not leaking — keep the area warm, open the affected tap slightly, and watch it closely, but still request same-day help, because the break often shows up as the pipe thaws. If water is visible, or the meter is spinning with every tap off, do not wait."
     }
   ]
 };
