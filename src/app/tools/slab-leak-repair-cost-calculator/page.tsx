@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import SlabLeakRepairCostCalculator from "@/components/SlabLeakRepairCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/slab-leak-repair-cost-calculator";
 const TITLE = "Slab Leak Repair Cost Calculator: Relining vs. Reroute";
@@ -75,17 +76,19 @@ export default function SlabLeakRepairCostCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             A slab leak repair can run anywhere from a few hundred dollars to several thousand, mostly
             depending on the repair method. Pick a method below and see a real cost range, built from
             HomeAdvisor&apos;s published 2026 national data.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-slab-leak-repair-cost-calculator-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage("burst-pipe-emergency", 2)}
               alt={`${TITLE} - Plumber diagnosing a slab leak under a Dallas-Fort Worth home's foundation`}
@@ -98,32 +101,32 @@ export default function SlabLeakRepairCostCalculatorPage() {
 
           <SlabLeakRepairCostCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why DFW homeowners hit this decision often</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why DFW homeowners hit this decision often</h2>
+            <p className="text-ink-2 mb-4">
               Dallas-Fort Worth sits on expansive Blackland Prairie clay that expands and contracts with
               every rain-and-drought cycle, putting constant stress on the water lines embedded beneath
               concrete slab foundations. Once a leak-detection diagnosis confirms a slab leak, the
               relining-versus-reroute decision comes down to how much pipe is damaged and whether that
               section has already collapsed. Our{" "}
-              <Link href="/guides/dfw-slab-leaks" className="text-[#F0B429] underline">
+              <Link href="/guides/dfw-slab-leaks" className="text-accent underline">
                 DFW slab leaks guide
               </Link>{" "}
               covers why this happens locally and the detection methods plumbers actually use.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               If the leak led to water damage, what your homeowners insurance will and won&apos;t cover is a
               separate question from the repair cost itself - see our{" "}
-              <Link href="/guides/texas-insurance-plumbing-claims" className="text-[#F0B429] underline">
+              <Link href="/guides/texas-insurance-plumbing-claims" className="text-accent underline">
                 Texas insurance & plumbing claims guide
               </Link>
               .
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.homeadvisor.com/cost/plumbing/slab-leak-repair/" className="underline" target="_blank" rel="noopener noreferrer">
                   HomeAdvisor: How Much Does Slab Leak Repair Cost?
@@ -139,24 +142,24 @@ export default function SlabLeakRepairCostCalculatorPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for property managers, real estate agents, home inspectors, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

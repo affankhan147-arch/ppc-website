@@ -2,7 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LeadIn, LocalGuidance, OfficialSources } from "@/components/PageSections";
+import { DirectAnswer, EmergencySteps, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { costGuides } from "@/data/costGuides";
 import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
@@ -68,10 +68,9 @@ export default async function ProblemPage({ params }: Props) {
       />
       <Breadcrumbs items={[{ label: "Problems", href: "/problems" }, { label: problem.title, href: path }]} />
       <article className="mt-6 max-w-4xl">
-        <p className="section-kicker">Homeowner problem guide</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{problem.title}</h1>
+        <h1 className="display-title mt-3 text-4xl font-bold leading-tight text-ink">{problem.title}</h1>
         <Byline path={path} />
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <div className="photo-frame relative mt-6 h-64 w-full sm:h-80">
           <Image
             src={heroImage}
             alt={problem.title}
@@ -81,7 +80,7 @@ export default async function ProblemPage({ params }: Props) {
             priority
           />
         </div>
-        <p className="mt-6 text-lg leading-8 text-slate-300"><LeadIn topic={problem.title} />{problem.directAnswer}</p>
+        <p className="lead mt-6 text-ink-2">{problem.directAnswer}</p>
         <div className="mt-6">
           <CallButton location={`problem-${problem.slug}-top`} />
         </div>
@@ -90,27 +89,24 @@ export default async function ProblemPage({ params }: Props) {
         <div>
           <DirectAnswer>{problem.directAnswer}</DirectAnswer>
           <InfoListSection
-            kicker="What it means"
             title="What this usually means"
             intro={problem.whatItMeans}
             items={problem.warningSigns}
           />
           <EmergencySteps steps={problem.steps} />
           <InfoListSection
-            kicker="Mistakes to avoid"
             title="What not to do"
             items={problem.whatNotToDo}
           />
           <InfoListSection
-            kicker="Urgency"
             title="When this becomes urgent"
             items={problem.urgentWhen}
           />
           {enhancement ? (
             <>
-              <InfoListSection kicker="Decision support" title={enhancement.decisionTitle} intro={enhancement.decisionIntro} items={enhancement.decisionItems} />
-              <InfoListSection kicker="Provider diagnosis" title={enhancement.providerTitle} items={enhancement.providerItems} />
-              <InfoListSection kicker="Safety boundaries" title={enhancement.safetyTitle} items={enhancement.safetyItems} />
+              <InfoListSection title={enhancement.decisionTitle} intro={enhancement.decisionIntro} items={enhancement.decisionItems} />
+              <InfoListSection title={enhancement.providerTitle} items={enhancement.providerItems} />
+              <InfoListSection title={enhancement.safetyTitle} items={enhancement.safetyItems} />
             </>
           ) : null}
         </div>

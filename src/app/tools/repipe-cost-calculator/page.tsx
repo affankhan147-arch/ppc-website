@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import RepipeCostCalculator from "@/components/RepipeCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/repipe-cost-calculator";
 const TITLE = "Whole-House Repipe Cost Calculator: PEX vs. Copper";
@@ -50,18 +51,20 @@ export default function RepipeCostCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             A whole-house repipe is one of the biggest plumbing decisions a homeowner makes - often triggered
             by failing polybutylene or galvanized pipe. Enter your home&apos;s square footage and pick a pipe
             material to see a modeled cost range, built from HomeAdvisor&apos;s and Angi&apos;s published 2026
             cost data.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-repipe-cost-calculator-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage(undefined, 6)}
               alt={`${TITLE} - Homeowner discussing a whole-house repipe estimate with a DFW plumber`}
@@ -74,31 +77,31 @@ export default function RepipeCostCalculatorPage() {
 
           <RepipeCostCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why DFW homeowners hit this decision often</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why DFW homeowners hit this decision often</h2>
+            <p className="text-ink-2 mb-4">
               DFW has a large stock of homes built during the 1978-1995 window when polybutylene supply pipe was
               standard, plus older neighborhoods still running galvanized steel. Both materials fail with age, and
               unlike a single leak repair, the fix is usually a full repipe rather than a patch. Our{" "}
-              <Link href="/guides/dfw-polybutylene-pipe-replacement" className="text-[#F0B429] underline">
+              <Link href="/guides/dfw-polybutylene-pipe-replacement" className="text-accent underline">
                 polybutylene pipe guide
               </Link>{" "}
               covers how to identify PB pipe, the insurance implications, and the real-world DFW cost range this
               calculator&apos;s estimates are checked against.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               Whether your home falls in that higher-risk construction window - and what your city&apos;s typical
               housing stock looks like - is covered in our{" "}
-              <Link href="/guides/dfw-housing-age-by-city" className="text-[#F0B429] underline">
+              <Link href="/guides/dfw-housing-age-by-city" className="text-accent underline">
                 DFW housing age by city guide
               </Link>
               .
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.homeadvisor.com/cost/plumbing/install-new-plumbing-pipes" className="underline" target="_blank" rel="noopener noreferrer">
                   HomeAdvisor: How Much Does It Cost to Repipe a House?
@@ -112,31 +115,31 @@ export default function RepipeCostCalculatorPage() {
                 (2026 data - national cost range and per-linear-foot figures by pipe material)
               </li>
             </ul>
-            <p className="mt-3 text-xs text-slate-400">
+            <p className="mt-3 text-xs text-muted">
               The copper-vs-PEX multiplier above is a modeled estimate derived transparently from these sources&apos;
               per-linear-foot figures and labor-share data, not a directly published total-cost figure - see the
               calculator&apos;s own notes for the exact derivation.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for home inspectors, real estate agents, insurance agents, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

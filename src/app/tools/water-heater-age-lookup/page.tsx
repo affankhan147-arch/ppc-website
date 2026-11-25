@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import WaterHeaterAgeLookup from "@/components/WaterHeaterAgeLookup";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/water-heater-age-lookup";
 const TITLE = "Water Heater Age Lookup: Find Your Water Heater's Age by Serial Number";
@@ -60,17 +61,19 @@ export default function WaterHeaterAgeLookupPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             Most homeowners have no idea how old their water heater actually is - there&apos;s rarely an install
             date written anywhere. But the serial number on the rating plate already encodes it. Pick your
             brand, enter the first 4 digits of the serial number, and see the approximate manufacture date.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-water-heater-age-lookup-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage("water-heater-emergency", 0)}
               alt={`${TITLE} - Water heater rating plate showing the model and serial number used to determine its age`}
@@ -83,9 +86,9 @@ export default function WaterHeaterAgeLookupPage() {
 
           <WaterHeaterAgeLookup />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why the serial number, not the model number</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why the serial number, not the model number</h2>
+            <p className="text-ink-2 mb-4">
               A water heater&apos;s model number identifies which product it is - capacity, fuel type, features.
               The serial number is what the factory stamped at the moment of production, and on most major
               brands its first several digits are a date code rather than a random tracking number. Rheem,
@@ -94,20 +97,20 @@ export default function WaterHeaterAgeLookupPage() {
               year-then-week. Once you know which family your brand belongs to, the same 4 digits that look
               like a random string decode into an actual date.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               Already know your unit is getting old and just want the repair-vs-replace math? Our{" "}
-              <Link href="/tools/water-heater-repair-or-replace-calculator" className="text-[#F0B429] underline">
+              <Link href="/tools/water-heater-repair-or-replace-calculator" className="text-accent underline">
                 water heater repair-or-replace calculator
               </Link>{" "}
               takes the age this tool gives you and weighs it against a specific repair quote.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why DFW homeowners check this so often</h2>
-            <p className="text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why DFW homeowners check this so often</h2>
+            <p className="text-ink-2">
               DFW&apos;s hard water shortens water heater lifespan compared to the national average - see our{" "}
-              <Link href="/guides/dfw-water-heater-lifespan" className="text-[#F0B429] underline">
+              <Link href="/guides/dfw-water-heater-lifespan" className="text-accent underline">
                 DFW water heater lifespan guide
               </Link>{" "}
               for the city-by-city hardness data behind that. Knowing your unit&apos;s real age (not a guess
@@ -115,9 +118,9 @@ export default function WaterHeaterAgeLookupPage() {
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.waterheaterhub.com/water-heater-age-lookup/" className="underline" target="_blank" rel="noopener noreferrer">
                   Water Heater Hub: Water Heater Age Lookup
@@ -133,24 +136,24 @@ export default function WaterHeaterAgeLookupPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this tool</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this tool</h2>
+            <p className="text-ink-2 mb-3">
               Free for home inspectors, real estate agents, property managers, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

@@ -35,12 +35,12 @@ export default function WaterFiltrationSelector() {
     return () => clearTimeout(timer);
   }, [citySlug, concernId]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Your city
           <select className={field} value={citySlug} onChange={(e) => setCitySlug(e.target.value)}>
             {waterHardnessData.map((c) => (
@@ -49,7 +49,7 @@ export default function WaterFiltrationSelector() {
             <option value={regionalAverageHardness.slug}>{regionalAverageHardness.name}</option>
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Your main concern
           <select
             className={field}
@@ -64,36 +64,36 @@ export default function WaterFiltrationSelector() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Recommended system</p>
-          <p className="mt-1 text-xl font-bold text-white">{system.label}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Recommended system</p>
+          <p className="mt-1 text-xl font-bold text-ink">{system.label}</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Installed cost range</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(system.lowInstalled)}-{money(system.highInstalled)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Installed cost range</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(system.lowInstalled)}-{money(system.highInstalled)}</p>
         </div>
       </div>
 
-      <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+      <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
         <p>{system.note}</p>
       </div>
 
       {disinfectantNote && (
-        <div className="mt-4 rounded-lg border border-[#1A3A38] p-4 text-slate-300">
-          <p className="text-xs uppercase tracking-wide text-slate-400 mb-1">
+        <div className="mt-4 rounded-lg border border-rule p-4 text-ink-2">
+          <p className="text-xs text-muted mb-1">
             What your city&apos;s water utility uses
           </p>
           <p>{disinfectantNote.note}</p>
         </div>
       )}
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         Installed-cost ranges by system type: HomeAdvisor, &quot;How Much Do Home Water Filtration Systems
         Cost?&quot; (2025/2026 data, independently re-verified against the same page a second time this
         session). Disinfectant facts: Dallas Water Utilities&apos; and the North Texas Municipal Water
         District&apos;s own published water quality pages.
       </p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-2 text-xs text-muted">
         These are planning estimates only, not a quote - your actual installed cost depends on your home&apos;s
         plumbing layout, water pressure, and whether electrical access is needed for a UV stage. A licensed
         plumber&apos;s on-site look is the only way to confirm the exact number.

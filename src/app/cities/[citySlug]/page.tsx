@@ -104,15 +104,14 @@ export default async function CityPage({ params }: Props) {
       <Breadcrumbs items={[{ label: "Cities", href: "/cities" }, { label: city.name, href: path }]} />
       <div className="mt-6">
         <article>
-          <p className="section-kicker">Local service-area guidance</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
-            Need an emergency plumber in {city.name}, TX? This page routes emergency plumbing calls -- active leaks, pipe breaks, drain and
-            sewer backups, overflowing toilets, and water heater failures -- in {city.name} and nearby {city.countyHint} areas to available providers.
+          <h1 className="display-title font-bold">{pageHeading}</h1>
+          <p className="lead mt-4 text-ink-2">
+            Need an emergency plumber in {city.name}, TX? This page routes emergency plumbing calls: active leaks, pipe breaks, drain and
+            sewer backups, overflowing toilets, and water heater failures, in {city.name} and nearby {city.countyHint} areas to available providers.
             {has24HourPage ? (
               <>
                 {" "}Calling late at night or on a weekend? See the{" "}
-                <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}/24-hour-emergency-plumber`}>
+                <Link className="font-bold text-accent underline" href={`/cities/${city.slug}/24-hour-emergency-plumber`}>
                   24 hour plumber in {city.name}
                 </Link>{" "}
                 page.
@@ -123,7 +122,7 @@ export default async function CityPage({ params }: Props) {
             <CallButton location={`city-${city.slug}-top`} pagePath={path} pageType="city" city={city.name} service="Emergency plumbing" />
           </div>
         </article>
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <div className="photo-frame mt-6 h-64 w-full sm:h-80">
           <Image
             src={getArticleImage(undefined, cities.findIndex((item) => item.slug === city.slug))}
             alt={`Emergency plumbing service in ${city.name}, TX`}
@@ -143,17 +142,16 @@ export default async function CityPage({ params }: Props) {
       <EnhancementSections enhancement={enhancement} />
       {searchAnswers ? (
         <section className="content-section">
-          <p className="section-kicker">Common {city.name} searches</p>
-          <h2 className="mt-2 text-2xl font-black text-white">{searchAnswers.title}</h2>
-          <p className="mt-3 leading-7 text-slate-300">{searchAnswers.intro}</p>
+          <h2 className="text-2xl font-bold text-ink">{searchAnswers.title}</h2>
+          <p className="mt-3 leading-7 text-ink-2">{searchAnswers.intro}</p>
           <div className="mt-6 space-y-6">
             {searchAnswers.items.map((item) => (
               <div key={item.question}>
-                <h3 className="text-lg font-bold text-white">{item.question}</h3>
-                <p className="mt-2 leading-7 text-slate-300">{item.answer}</p>
+                <h3 className="text-lg font-bold text-ink">{item.question}</h3>
+                <p className="mt-2 leading-7 text-ink-2">{item.answer}</p>
                 {item.link ? (
                   <p className="mt-2">
-                    <Link className="font-bold text-emerald-300 underline" href={item.link.href}>
+                    <Link className="font-bold text-accent underline" href={item.link.href}>
                       {item.link.label}
                     </Link>
                   </p>
@@ -165,29 +163,28 @@ export default async function CityPage({ params }: Props) {
       ) : null}
       {city.marketSlug === "dallas-fort-worth" ? (
         <section className="content-section">
-          <p className="section-kicker">Freeze season</p>
-          <h2 className="mt-2 text-2xl font-black text-white">Freeze season in {city.name}: protect your pipes</h2>
-          <p className="mt-3 leading-7 text-slate-300">
+          <h2 className="text-2xl font-bold text-ink">Freeze season in {city.name}: protect your pipes</h2>
+          <p className="mt-3 leading-7 text-ink-2">
             Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). Pipes in exterior walls, attics, garages and crawl spaces freeze first. If one splits, shut off the main water valve before anything else, then call.
           </p>
           <ul className="mt-4 space-y-2">
             <li>
-              <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}/burst-pipe-emergency`}>
+              <Link className="font-bold text-accent underline" href={`/cities/${city.slug}/burst-pipe-emergency`}>
                 Burst pipe help in {city.name}
               </Link>
             </li>
             <li>
-              <Link className="font-bold text-emerald-300 underline" href="/guides/dfw-burst-pipes">
+              <Link className="font-bold text-accent underline" href="/guides/dfw-burst-pipes">
                 Burst pipes in DFW: causes, costs and first steps
               </Link>
             </li>
             <li>
-              <Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">
+              <Link className="font-bold text-accent underline" href="/guides/dfw-freeze-history">
                 How often DFW freezes (NWS data)
               </Link>
             </li>
             <li>
-              <Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">
+              <Link className="font-bold text-accent underline" href="/tools/freeze-watch-widget">
                 Live DFW freeze watch
               </Link>
             </li>
@@ -195,7 +192,6 @@ export default async function CityPage({ params }: Props) {
         </section>
       ) : null}
       <InfoListSection
-        kicker="Local relevance"
         title={`Emergency plumbing situations in ${city.name}`}
         intro={`This page is organized around ${city.areaHint}. Confirm pricing, credentials, timing, and scope directly with the provider.`}
         items={[
@@ -208,11 +204,10 @@ export default async function CityPage({ params }: Props) {
       />
 
       <section className="content-section">
-        <p className="section-kicker">Service options</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Urgent service options for {city.name}</h2>
+        <h2 className="text-2xl font-bold text-ink">Urgent service options for {city.name}</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Link key={service.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400" href={`/services/${service.slug}`}>
+            <Link key={service.slug} className="premium-card p-4 font-bold text-ink" href={`/services/${service.slug}`}>
               {titleCase(service.name)}
             </Link>
           ))}
@@ -220,11 +215,10 @@ export default async function CityPage({ params }: Props) {
       </section>
       {cityServiceLinks.length ? (
         <section className="content-section">
-          <p className="section-kicker">Priority local pages</p>
-          <h2 className="mt-2 text-2xl font-black text-white">High-priority {city.name} emergency pages</h2>
+          <h2 className="text-2xl font-bold text-ink">High-priority {city.name} emergency pages</h2>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {cityServiceLinks.map((service) => (
-              <Link key={service.slug} className="rounded-md border border-emerald-200 bg-emerald-50 p-4 font-bold text-emerald-950 hover:border-emerald-500" href={`/cities/${city.slug}/${service.slug}`}>
+              <Link key={service.slug} className="premium-card p-4 font-bold text-ink" href={`/cities/${city.slug}/${service.slug}`}>
                 {titleCase(service.name)} in {city.name}
               </Link>
             ))}
@@ -232,11 +226,10 @@ export default async function CityPage({ params }: Props) {
         </section>
       ) : null}
       <section className="content-section">
-        <p className="section-kicker">Nearby DFW areas</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Nearby DFW locations</h2>
+        <h2 className="text-2xl font-bold text-ink">Nearby DFW locations</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {nearbyCities.map((nearby) => (
-            <Link key={nearby.slug} className="rounded-md border border-slate-200 bg-white p-4 font-bold text-slate-900 hover:border-emerald-400" href={`/cities/${nearby.slug}`}>
+            <Link key={nearby.slug} className="premium-card p-4 font-bold text-ink" href={`/cities/${nearby.slug}`}>
               {nearby.name}
             </Link>
           ))}

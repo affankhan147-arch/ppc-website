@@ -98,7 +98,7 @@ export function publishedLabel(path: string): string | null {
 export function Byline({ path }: { path: string }) {
   const label = publishedLabel(path);
   return (
-    <p className="mt-3 text-sm text-slate-400">
+    <p className="mt-3 text-sm text-muted">
       By the {siteConfig.brandName} editorial team{label ? <> · Published {label}</> : null}
     </p>
   );

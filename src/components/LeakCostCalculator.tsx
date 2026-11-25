@@ -46,12 +46,12 @@ export default function LeakCostCalculator() {
     return () => clearTimeout(timer);
   }, [citySlug, presetId, usage, customGpd]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Your city
           <select className={field} value={citySlug} onChange={(e) => setCitySlug(e.target.value)}>
             {leakCostCities.map((c) => (
@@ -59,12 +59,12 @@ export default function LeakCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Normal monthly water use (gallons)
           <input className={field} type="number" min={0} step={500} value={usage}
             onChange={(e) => setUsage(Number(e.target.value) || 0)} />
         </label>
-        <label className="block text-sm text-slate-300 sm:col-span-2">
+        <label className="block text-sm text-ink-2 sm:col-span-2">
           Leak type
           <select className={field} value={presetId} onChange={(e) => setPresetId(e.target.value)}>
             {leakPresets.map((p) => (
@@ -74,7 +74,7 @@ export default function LeakCostCalculator() {
           </select>
         </label>
         {presetId === "custom" && (
-          <label className="block text-sm text-slate-300 sm:col-span-2">
+          <label className="block text-sm text-ink-2 sm:col-span-2">
             Gallons lost per day
             <input className={field} type="number" min={0} step={10} value={customGpd}
               onChange={(e) => setCustomGpd(Number(e.target.value) || 0)} />
@@ -83,23 +83,23 @@ export default function LeakCostCalculator() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Water lost per month</p>
-          <p className="mt-1 text-2xl font-bold text-white">{gallonsFmt(result.leakGallons)} gal</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Water lost per month</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{gallonsFmt(result.leakGallons)} gal</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Added water charge</p>
-          <p className="mt-1 text-2xl font-bold text-[#F0B429]">{money(result.extraWater)}/mo</p>
-          <p className="text-xs text-slate-400">{money(result.extraWater * 12)} per year</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Added water charge</p>
+          <p className="mt-1 text-2xl font-bold text-call">{money(result.extraWater)}/mo</p>
+          <p className="text-xs text-muted">{money(result.extraWater * 12)} per year</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Extra sewer if it runs {city.winterMonths}</p>
-          <p className="mt-1 text-2xl font-bold text-[#F0B429]">{money(result.extraSewer)}/mo</p>
-          <p className="text-xs text-slate-400">locked into your sewer average</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Extra sewer if it runs {city.winterMonths}</p>
+          <p className="mt-1 text-2xl font-bold text-call">{money(result.extraSewer)}/mo</p>
+          <p className="text-xs text-muted">locked into your sewer average</p>
         </div>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         {city.name}: {city.effectiveLabel}. {city.sewerRule} Estimates use a 30-day month and the
         published volume rates only; fixed monthly charges don&apos;t change with a leak. Your utility bill is the final word.
       </p>

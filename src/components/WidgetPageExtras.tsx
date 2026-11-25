@@ -14,12 +14,12 @@ export function WidgetHero({ alt, serviceSlug, seed = 0 }: { alt: string; servic
 export function EmbedHowTo({ name }: { name: string }) {
   return (
     <section className="mb-10">
-      <h2 className="text-xl font-semibold text-[#F0B429] mb-3">How to add the {name} to your site</h2>
-      <p className="text-slate-300 mb-4">
+      <h2 className="text-xl font-semibold text-call mb-3">How to add the {name} to your site</h2>
+      <p className="text-ink-2 mb-4">
         Each badge is a small image served from plumbinghands.com and wrapped in a link, so there is nothing to install and
         nothing to update on your side. It works anywhere you can paste a short piece of HTML.
       </p>
-      <ol className="list-decimal space-y-2 pl-5 text-slate-300">
+      <ol className="list-decimal space-y-2 pl-5 text-ink-2">
         <li>Copy the code under the badge you want.</li>
         <li>
           Paste it into an HTML or embed block: a Custom HTML block in WordPress, a Code block in Squarespace, an Embed HTML

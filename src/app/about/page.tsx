@@ -40,7 +40,7 @@ const aboutFaqs = [
   }
 ];
 
-const link = "text-[#4FD1C5] underline hover:text-white";
+const link = "font-bold text-accent underline hover:text-ink";
 
 export default function AboutPage() {
   return (
@@ -51,34 +51,32 @@ export default function AboutPage() {
           breadcrumbSchema([{ name: "About", path: "/about" }])
         ]}
       />
-      <div className="answer-grid">
-        <article>
-          <p className="section-kicker">About</p>
-          <h1 className="mt-3 text-4xl font-black text-white">About Plumbing Hands</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
-            Plumbing Hands publishes plain-English plumbing guides for Dallas-Fort Worth homeowners and runs a phone
-            line that connects callers with independent emergency plumbing providers.
-          </p>
-          <div className="mt-6">
-            <CallButton location="about-top" pagePath="/about" pageType="about" service="Emergency plumbing" city="Dallas-Fort Worth" />
-          </div>
+      <section className="content-section">
+        <h1 className="display-title font-bold text-ink">About Plumbing Hands</h1>
+        <p className="lead mt-4 text-ink-2">
+          Plumbing Hands publishes plain-English plumbing guides for Dallas-Fort Worth homeowners and runs a phone
+          line that connects callers with independent emergency plumbing providers.
+        </p>
+        <div className="mt-6">
+          <CallButton location="about-top" pagePath="/about" pageType="about" service="Emergency plumbing" city="Dallas-Fort Worth" />
+        </div>
+        <div className="mt-6">
           <DirectAnswer>
             Plumbing Hands is a referral service, not a plumbing company. We don&apos;t fix pipes, employ the plumbers
             who respond, or set their prices.
           </DirectAnswer>
-        </article>
-      </div>
+        </div>
+      </section>
 
       <section className="content-section">
-        <p className="section-kicker">How it works</p>
-        <h2 className="mt-2 text-2xl font-black text-white">One call, routed to a provider that covers you</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">One call, routed to a provider that covers you</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Call {siteConfig.phoneDisplay}. The number on the site is a routing line, not the direct line of one plumbing
           company. Your call goes to an available independent provider that serves your city and the kind of problem you
           describe &mdash; a burst pipe in a February freeze, a sewer backup on a Sunday night, a water heater that quit
           before work. The provider you reach can change with the time of day, your location and the service you need.
         </p>
-        <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-slate-300">
+        <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-ink-2">
           <li>Your call is routed to an independent plumbing provider that serves your city.</li>
           <li>Describe what you see &mdash; a leak, a backup, no hot water &mdash; and say whether water is coming inside.</li>
           <li>The provider confirms how the visit works and gives you its own pricing.</li>
@@ -88,9 +86,8 @@ export default function AboutPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">What it costs</p>
-        <h2 className="mt-2 text-2xl font-black text-white">You never pay Plumbing Hands anything</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">You never pay Plumbing Hands anything</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           This is a referral (pay-per-call) website: when you call the number on the site, the call may be routed to an
           independent plumber or a call partner that pays us a referral fee for the connection. Any price for the visit
           or the repair is set and quoted by the provider who takes the job. Read the full{" "}
@@ -102,9 +99,8 @@ export default function AboutPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">Where we serve</p>
-        <h2 className="mt-2 text-2xl font-black text-white">{cities.length} Texas cities, centred on Dallas-Fort Worth</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">{cities.length} Texas cities, centred on Dallas-Fort Worth</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           {siteConfig.brandName} connects homeowners in {cities.length} Texas cities across the {siteConfig.marketName},
           with service-area pages for Houston, Austin and San Antonio as well. See the{" "}
           <Link href="/cities" className={link}>
@@ -115,9 +111,8 @@ export default function AboutPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">What we publish</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Guides, costs and calculators, written for DFW homes</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">Guides, costs and calculators, written for DFW homes</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Alongside the phone line, the site publishes plain-English{" "}
           <Link href="/blog" className={link}>
             emergency plumbing guides
@@ -140,9 +135,8 @@ export default function AboutPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">Before you hire</p>
-        <h2 className="mt-2 text-2xl font-black text-white">What to check before any provider starts work</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">What to check before any provider starts work</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Texas licenses plumbers through the Texas State Board of Plumbing Examiners, so ask for the license number and
           check it before you approve work. Get the price in writing before work starts, ask for proof of insurance, and
           keep the written quote with the invoice. If a provider will not give you a license number or a written price,
@@ -159,9 +153,8 @@ export default function AboutPage() {
       />
 
       <section className="content-section">
-        <p className="section-kicker">Service-area note</p>
-        <p className="mt-2 leading-7 text-slate-300">{siteConfig.disclosure}</p>
-        <p className="mt-3 leading-7 text-slate-300">
+        <p className="leading-7 text-ink-2">{siteConfig.disclosure}</p>
+        <p className="mt-3 leading-7 text-ink-2">
           Questions or a service request? See the{" "}
           <Link href="/contact" className={link}>
             contact page

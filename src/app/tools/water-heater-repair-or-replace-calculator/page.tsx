@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import { WidgetHero } from "@/components/WidgetPageExtras";
 import WaterHeaterReplaceCalculator from "@/components/WaterHeaterReplaceCalculator";
 import { unitTypes, repairOptions, FIFTY_PERCENT_RULE_SOURCE } from "@/data/waterHeaterReplaceCosts";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/water-heater-repair-or-replace-calculator";
 const TITLE = "Water Heater Repair or Replace Calculator (DFW)";
@@ -60,42 +61,44 @@ export default function WaterHeaterReplaceCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             Getting a repair quote on an older water heater and wondering if it&apos;s worth it? Enter your unit&apos;s
             age, type, and the repair it needs. The calculator weighs the repair cost against a typical new unit
             using the same 50% rule water heater manufacturers themselves recommend, plus manufacturer-published
             age thresholds.
           </p>
 
+          <div className="mb-6">
+            <CallButton location="tool-water-heater-repair-or-replace-calculator-top" />
+          </div>
+
           <WidgetHero alt={`${TITLE} - tank water heater being inspected in a DFW home`} serviceSlug="water-heater-emergency" />
 
           <WaterHeaterReplaceCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">How the recommendation is calculated</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">How the recommendation is calculated</h2>
+            <p className="text-ink-2 mb-4">
               This tool checks three things, in order: first, whether the failure is even repairable (a leak from
               the tank body itself never is). Second, the 50% rule - {FIFTY_PERCENT_RULE_SOURCE} states that once a
               repair costs half or more of a new unit, replacement is almost always the better investment. Third,
               age against the manufacturer-expected lifespan: {unitTypes.map((u) => `${u.label.toLowerCase()} (${u.expectedLifespanLow}-${u.expectedLifespanHigh} years)`).join(" and ")}.
               A unit already inside that window gets a caution even when the specific repair itself is cheap.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               Repair cost ranges for {repairOptions.filter((r) => !r.alwaysReplace && r.id !== "custom").map((r) => r.label.toLowerCase()).join(", ")}{" "}
               and replacement cost ranges for both tank and tankless units come from Angi&apos;s 2026 national cost data. If
               you already have a written quote, enter it directly with the &quot;Other repair&quot; option for a more precise answer.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why DFW&apos;s water shortens this decision window</h2>
-            <p className="text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why DFW&apos;s water shortens this decision window</h2>
+            <p className="text-ink-2">
               Water heaters in Dallas-Fort Worth work against harder water than most of the country - see our{" "}
-              <Link href="/guides/dfw-water-heater-lifespan" className="text-[#F0B429] underline">
+              <Link href="/guides/dfw-water-heater-lifespan" className="text-accent underline">
                 DFW water heater lifespan guide
               </Link>{" "}
               for the city-by-city hardness data. Sediment and scale buildup from that hard water is exactly what
@@ -104,9 +107,9 @@ export default function WaterHeaterReplaceCalculatorPage() {
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/" className="underline" target="_blank" rel="noopener noreferrer">
                   Rheem Manufacturing: Water Heater Lifespan - When to Repair vs. Replace
@@ -128,24 +131,24 @@ export default function WaterHeaterReplaceCalculatorPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for home inspectors, real estate agents, property managers, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

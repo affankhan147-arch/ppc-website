@@ -47,12 +47,12 @@ export default function GarbageDisposalCostCalculator() {
     return () => clearTimeout(timer);
   }, [people, ageYears, problem, result.leansReplace]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           What&apos;s going on?
           <select
             className={field}
@@ -64,7 +64,7 @@ export default function GarbageDisposalCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Unit&apos;s age (years), if known
           <input
             className={field}
@@ -76,7 +76,7 @@ export default function GarbageDisposalCostCalculator() {
             onChange={(e) => setAgeYears(Math.max(0, Number(e.target.value) || 0))}
           />
         </label>
-        <label className="block text-sm text-slate-300 sm:col-span-2">
+        <label className="block text-sm text-ink-2 sm:col-span-2">
           People in the household (for sizing a replacement unit)
           <input
             className={field}
@@ -91,21 +91,21 @@ export default function GarbageDisposalCostCalculator() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">
             {result.leansReplace ? "Replacement leans better here" : "Repair is usually worth trying first"}
           </p>
-          <p className="mt-1 text-2xl font-bold text-white">
+          <p className="mt-1 text-2xl font-bold text-ink">
             {result.leansReplace
               ? `${money(tier.installedLow)}-${money(tier.installedHigh)}`
               : `${money(overallRepair.low)}-${money(overallRepair.high)}`}
           </p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">
             {result.leansReplace ? "Recommended size for your household" : "If repair doesn't fix it, replacement range"}
           </p>
-          <p className="mt-1 text-2xl font-bold text-white">
+          <p className="mt-1 text-2xl font-bold text-ink">
             {result.leansReplace
               ? tier.hpRange
               : `${money(tier.installedLow)}-${money(tier.installedHigh)}`}
@@ -113,7 +113,7 @@ export default function GarbageDisposalCostCalculator() {
         </div>
       </div>
 
-      <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+      <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
         {result.leansReplace ? (
           <p>
             {result.severeFault && problem !== "estimate-only"
@@ -136,14 +136,14 @@ export default function GarbageDisposalCostCalculator() {
         )}
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         Replacement cost by household-size tier and overall average/range: HomeAdvisor, &quot;How Much Does It Cost to
         Replace a Garbage Disposal?&quot; (fetched 2026-10-14). Repair overall range/average: HomeAdvisor figures as
         cited in Bob Vila&apos;s repair-cost guide - shown as one general range here rather than broken into
         per-problem dollar figures, since that finer breakdown in the secondary source carries no cited source and
         the article itself is several years old.
       </p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-2 text-xs text-muted">
         This is a planning estimate, not a quote. Wiring problems, disposal mounting issues, and what&apos;s
         actually wrong with your specific unit can only be confirmed by a licensed plumber&apos;s on-site look - and
         if you smell burning or a unit keeps humming after a jam is cleared, shut it off and unplug it first.

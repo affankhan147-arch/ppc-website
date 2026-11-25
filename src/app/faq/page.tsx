@@ -23,21 +23,21 @@ export default function FAQPage() {
           faqSchema(faqs)
         ]}
       />
-      <p className="section-kicker">Answer engine hub</p>
-      <h1 className="mt-3 text-4xl font-black text-white">Emergency plumbing and drain cleaning FAQ</h1>
-      <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
-        Short answers for urgent homeowner decisions, written with transparent service-area language and clear provider-availability reminders.
-      </p>
-      <div className="mt-6">
-        <CallButton location="faq-top" />
-      </div>
+      <section className="content-section">
+        <h1 className="display-title font-bold text-ink">Emergency plumbing and drain cleaning FAQ</h1>
+        <p className="lead mt-4 text-ink-2">
+          Short answers for urgent homeowner decisions, written with transparent service-area language and clear provider-availability reminders.
+        </p>
+        <div className="mt-6">
+          <CallButton location="faq-top" />
+        </div>
+      </section>
       <FAQBlock faqs={emergencyFaqs} title="Emergency plumbing questions" />
       <FAQBlock faqs={universalFaqs} title="Cost, coverage and provider questions" />
 
       <section className="content-section">
-        <p className="section-kicker">Using these answers</p>
-        <h2 className="mt-2 text-2xl font-black text-white">When a plumbing problem cannot wait</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">When a plumbing problem cannot wait</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Treat it as urgent when water is actively leaking, sewage is coming up through a drain, a toilet will not stop
           running over, or you have no working toilet or no water at all. Shut off the water at the fixture valve or the main
           shutoff if you can do it safely, keep people away from water near electrical outlets, and call. Slow drains, a

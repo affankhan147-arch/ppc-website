@@ -100,24 +100,23 @@ export default async function CityServicePage({ params }: Props) {
       <Breadcrumbs items={[{ label: city.name, href: `/cities/${city.slug}` }, { label: displayName, href: path }]} />
       <div className="mt-6">
         <article>
-          <p className="section-kicker">City plus service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
+          <h1 className="display-title font-bold">{pageHeading}</h1>
           {is24Hour ? (
-            <p className="mt-4 text-lg leading-8 text-slate-300">
+            <p className="lead mt-4 text-ink-2">
               Need a 24 hour plumber in {city.name} after regular business hours? This page is for the late-night, overnight, weekend, and
-              holiday calls -- a leak at 2 a.m., a backed-up toilet on a Sunday. For daytime or general help, start with the{" "}
-              <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}`}>
+              holiday calls: a leak at 2 a.m., a backed-up toilet on a Sunday. For daytime or general help, start with the{" "}
+              <Link className="font-bold text-accent underline" href={`/cities/${city.slug}`}>
                 emergency plumber in {city.name}, TX
               </Link>{" "}
               page. Confirm availability, after-hours pricing, credentials, and arrival time directly with the provider.
             </p>
           ) : (
-            <p className="mt-4 text-lg leading-8 text-slate-300">
+            <p className="lead mt-4 text-ink-2">
               Searching for {displayName.toLowerCase()} near {city.name}, available 24 hours a day? Local guidance for {city.name} homeowners and
               property managers who need {displayName.toLowerCase()}. For any other urgent problem, start with the{" "}
               {/* Keyword overhaul 04: every city x service page points "emergency plumber in <city>" at the city hub,
                   because Search Console showed these pages ranking 40-70 for the hub's query and splitting it. */}
-              <Link className="font-bold text-emerald-300 underline" href={`/cities/${city.slug}`}>
+              <Link className="font-bold text-accent underline" href={`/cities/${city.slug}`}>
                 emergency plumber in {city.name}, TX
               </Link>{" "}
               page. Confirm availability, pricing, credentials, and arrival details directly with the provider.
@@ -127,7 +126,7 @@ export default async function CityServicePage({ params }: Props) {
             <CallButton location={`city-service-${city.slug}-${service.slug}-top`} pagePath={path} pageType="city-service" city={city.name} service={displayName} />
           </div>
         </article>
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <div className="photo-frame mt-6 h-64 w-full sm:h-80">
           <Image
             src={getCityServiceImage(city.slug, service.slug, priorityCityServiceCombos.findIndex((combo) => combo.citySlug === city.slug && combo.serviceSlug === service.slug))}
             alt={`${displayName} in ${city.name}, TX - provider responding to an active service call`}
@@ -144,7 +143,6 @@ export default async function CityServicePage({ params }: Props) {
       </DirectAnswer>
       <EmergencySteps steps={service.steps} />
       <InfoListSection
-        kicker="City relevance"
         title={`${city.name} service-area guidance`}
         intro={`This page is focused on ${city.areaHint}. Confirm pricing, credentials, timing, and scope directly with the provider.`}
         items={[
@@ -156,7 +154,6 @@ export default async function CityServicePage({ params }: Props) {
       />
       <EnhancementSections enhancement={enhancement} />
       <InfoListSection
-        kicker="Before calling"
         title="What to prepare"
         items={service.callPrep}
       />
@@ -164,24 +161,22 @@ export default async function CityServicePage({ params }: Props) {
       <LocalGuidance cityName={city.name} />
       {service.slug === "burst-pipe-emergency" && city.marketSlug === "dallas-fort-worth" ? (
         <section className="content-section">
-          <p className="section-kicker">Freeze season</p>
-          <h2 className="mt-2 text-2xl font-black text-white">After a hard freeze in {city.name}: what to check</h2>
-          <p className="mt-3 leading-7 text-slate-300">Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). After a freeze, check pipes in exterior walls, attics, garages and crawl spaces for wet spots, bulging drywall or low water pressure. A pipe can crack while frozen and only start leaking once it thaws.</p>
+          <h2 className="text-2xl font-bold text-ink">After a hard freeze in {city.name}: what to check</h2>
+          <p className="mt-3 leading-7 text-ink-2">Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). After a freeze, check pipes in exterior walls, attics, garages and crawl spaces for wet spots, bulging drywall or low water pressure. A pipe can crack while frozen and only start leaking once it thaws.</p>
           <ul className="mt-4 space-y-2">
-            <li><Link className="font-bold text-emerald-300 underline" href="/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze">How to keep pipes from freezing in DFW</Link></li>
-            <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
-            <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
-            <li><Link className="font-bold text-emerald-300 underline" href="/cost-guides/burst-pipe-emergency-cost-guide">Burst pipe repair cost guide</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze">How to keep pipes from freezing in DFW</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/cost-guides/burst-pipe-emergency-cost-guide">Burst pipe repair cost guide</Link></li>
           </ul>
         </section>
       ) : null}
       {nearbyCities.length > 0 ? (
         <section className="content-section">
-          <p className="section-kicker">Nearby cities</p>
-          <h2 className="mt-2 text-2xl font-black text-white">{displayName} in nearby cities</h2>
+          <h2 className="text-2xl font-bold text-ink">{displayName} in nearby cities</h2>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {nearbyCities.map((c) => (
-              <li key={c.slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${c.slug}/${service.slug}`}>{displayName} in {c.name}</Link></li>
+              <li key={c.slug}><Link className="font-bold text-accent underline" href={`/cities/${c.slug}/${service.slug}`}>{displayName} in {c.name}</Link></li>
             ))}
           </ul>
         </section>

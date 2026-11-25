@@ -61,12 +61,12 @@ export default function WaterHeaterAgeLookup() {
     return () => clearTimeout(timer);
   }, [familyId, result]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Brand
           <select
             className={field}
@@ -78,7 +78,7 @@ export default function WaterHeaterAgeLookup() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           First 4 digits of the serial number
           <input
             className={field}
@@ -92,28 +92,28 @@ export default function WaterHeaterAgeLookup() {
         </label>
       </div>
 
-      <p className="mt-3 text-xs text-slate-400">{family.note} {family.example}.</p>
+      <p className="mt-3 text-xs text-muted">{family.note} {family.example}.</p>
 
       {result && "error" in result && (
-        <div className="mt-6 rounded-lg bg-[#0F1F1D] p-4 text-amber-300">{result.error}</div>
+        <div className="mt-6 rounded-lg bg-paper p-4 text-call">{result.error}</div>
       )}
 
       {result && !("error" in result) && (
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-lg bg-[#0F1F1D] p-4">
-            <p className="text-xs uppercase tracking-wide text-slate-400">
+          <div className="rounded-lg bg-paper p-4">
+            <p className="text-xs text-muted">
               {result.approximate ? "Approximate manufacture date" : "Manufacture date"}
             </p>
-            <p className="mt-1 text-2xl font-bold text-white">{result.month} {result.year}</p>
+            <p className="mt-1 text-2xl font-bold text-ink">{result.month} {result.year}</p>
           </div>
-          <div className="rounded-lg bg-[#0F1F1D] p-4">
-            <p className="text-xs uppercase tracking-wide text-slate-400">Approximate age</p>
-            <p className="mt-1 text-2xl font-bold text-white">{result.age} {result.age === 1 ? "year" : "years"} old</p>
+          <div className="rounded-lg bg-paper p-4">
+            <p className="text-xs text-muted">Approximate age</p>
+            <p className="mt-1 text-2xl font-bold text-ink">{result.age} {result.age === 1 ? "year" : "years"} old</p>
           </div>
         </div>
       )}
 
-      <div className="mt-6 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+      <div className="mt-6 rounded-lg bg-paper p-4 text-ink-2">
         <p className="text-sm">
           Different brand? Bradford White and most tankless brands (Rinnai, Navien, Noritz, Bosch) use a
           letter-based date code or print the date in plain text - rather than guess at a letter cipher,
@@ -122,13 +122,13 @@ export default function WaterHeaterAgeLookup() {
         <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
           {manualLookupBrands.map((b) => (
             <li key={b.brand}>
-              <a href={b.url} target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">{b.brand}</a>
+              <a href={b.url} target="_blank" rel="noopener noreferrer" className="text-call underline">{b.brand}</a>
             </li>
           ))}
         </ul>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         A two-digit year is read as this century unless that would place manufacture in the future, in which
         case it&apos;s read as last century - the standard way both sourced guides handle the same ambiguity.
         This is an estimate based on published brand date-code formats, not a substitute for the rating plate

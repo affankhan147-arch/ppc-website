@@ -48,12 +48,12 @@ export default function SlabLeakRepairCostCalculator() {
     return () => clearTimeout(timer);
   }, [methodId, feet, needsDetection]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Repair method
           <select className={field} value={methodId} onChange={(e) => setMethodId(e.target.value as RepairMethodId)}>
             {repairMethods.map((m) => (
@@ -62,7 +62,7 @@ export default function SlabLeakRepairCostCalculator() {
           </select>
         </label>
         {method.perFoot && (
-          <label className="block text-sm text-slate-300">
+          <label className="block text-sm text-ink-2">
             Feet of damaged pipe (under the slab)
             <input
               className={field}
@@ -75,26 +75,26 @@ export default function SlabLeakRepairCostCalculator() {
             />
           </label>
         )}
-        <label className="flex items-center gap-2 text-sm text-slate-300 sm:col-span-2">
+        <label className="flex items-center gap-2 text-sm text-ink-2 sm:col-span-2">
           <input type="checkbox" checked={needsDetection} onChange={(e) => setNeedsDetection(e.target.checked)} />
           Include professional leak detection ({money(leakDetection.low)}-{money(leakDetection.high)})
         </label>
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">{method.shortLabel} estimate</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(result.low)}-{money(result.high)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">{method.shortLabel} estimate</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(result.low)}-{money(result.high)}</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Typical range, all DFW slab leaks</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(overallAverage.low)}-{money(overallAverage.high)}</p>
-          <p className="mt-1 text-xs text-slate-400">Published average: {money(overallAverage.avg)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Typical range, all DFW slab leaks</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(overallAverage.low)}-{money(overallAverage.high)}</p>
+          <p className="mt-1 text-xs text-muted">Published average: {money(overallAverage.avg)}</p>
         </div>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">{method.note} {method.source}.</p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">{method.note} {method.source}.</p>
+      <p className="mt-2 text-xs text-muted">
         {leakDetection.note} {overallAverage.note} These are planning estimates only, not a quote - a
         licensed plumber&apos;s leak detection is the only way to confirm which repair method your pipe
         actually qualifies for.

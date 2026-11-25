@@ -117,12 +117,11 @@ export default function ToolsIndexPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tools</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">
             Free DFW Plumbing Tools & Embeddable Widgets
           </h1>
-          <p className="text-slate-300 mb-8">
+          <p className="lead mt-4 mb-8">
             Free, sourced data tools built for DFW homeowners, real estate agents, home inspectors,
             and local site owners. Every widget below is free to embed on your own site.
           </p>
@@ -131,10 +130,10 @@ export default function ToolsIndexPage() {
               <a
                 key={tool.href}
                 href={tool.href}
-                className="premium-card group p-6"
+                className="premium-card p-6"
               >
-                <h2 className="text-xl font-black leading-tight text-white">{tool.title}</h2>
-                <p className="mt-3 leading-7 text-slate-300">{tool.description}</p>
+                <h2 className="text-xl font-bold text-ink">{tool.title}</h2>
+                <p className="mt-3 leading-7 text-ink-2">{tool.description}</p>
               </a>
             ))}
           </div>
@@ -142,14 +141,13 @@ export default function ToolsIndexPage() {
 
         <div className="max-w-4xl mx-auto">
           <section className="content-section">
-            <p className="section-kicker">How to use the tools</p>
-            <h2 className="mt-2 text-2xl font-black text-white">How the free DFW plumbing tools work</h2>
-            <p className="mt-3 leading-7 text-slate-300">
+            <h2 className="text-2xl font-bold text-ink">How the free DFW plumbing tools work</h2>
+            <p className="mt-3 leading-7 text-ink-2">
               The calculators ask a few questions about your home, such as its age, pipe material, water hardness or fixture
               count, and return a realistic range with the factors that move the price. Use the range to judge whether a quote
               makes sense, then ask the plumber to put the scope and price in writing. Results are estimates, not quotes.
             </p>
-            <p className="mt-3 leading-7 text-slate-300">
+            <p className="mt-3 leading-7 text-ink-2">
               The widgets and badges are free to embed on real estate, HOA, property management and local news sites. Each page
               has a copy-and-paste code box, and the data refreshes on its own, so nothing needs updating after you publish.
             </p>

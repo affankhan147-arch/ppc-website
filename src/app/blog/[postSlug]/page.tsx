@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LeadIn, LocalGuidance, OfficialSources } from "@/components/PageSections";
+import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { blogPosts, getLiveBlogPosts, retiredBlogSlugs } from "@/data/blogPosts";
 import { getTopicSources, sourcesHeading } from "@/data/externalSources";
 import { emergencyFaqs, universalFaqs } from "@/data/faqs";
@@ -73,10 +73,13 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <Breadcrumbs items={[{ label: "Guides", href: "/blog" }, { label: post.title, href: path }]} />
       <article className="mt-6 max-w-4xl">
-        <p className="section-kicker">{post.category}</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{post.title}</h1>
+        <h1 className="display-title mt-3 text-4xl font-bold leading-tight text-ink">{post.title}</h1>
         <Byline path={path} />
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <p className="lead mt-6 text-ink-2">{post.directAnswer}</p>
+        <div className="mt-6">
+          <CallButton location={`blog-${post.slug}-top`} />
+        </div>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden sm:h-80">
           <Image
             src={heroImage}
             alt={post.title}
@@ -86,18 +89,13 @@ export default async function BlogPostPage({ params }: Props) {
             priority
           />
         </div>
-        <p className="mt-6 text-lg leading-8 text-slate-300"><LeadIn topic={post.title} />{post.directAnswer}</p>
-        <div className="mt-6">
-          <CallButton location={`blog-${post.slug}-top`} />
-        </div>
       </article>
       <div className="mt-8 answer-grid">
         <div>
           <DirectAnswer>{post.directAnswer}</DirectAnswer>
           <section className="content-section">
-            <p className="section-kicker">Decision guide</p>
-            <h2 className="mt-2 text-2xl font-black text-white">How to decide what happens next</h2>
-            <p className="mt-3 leading-7 text-slate-300">
+            <h2 className="text-2xl font-bold text-ink">How to decide what happens next</h2>
+            <p className="mt-3 leading-7 text-ink-2">
               Start by identifying whether the issue is isolated to one fixture or affects several drains. If the problem is spreading,
               includes dirty water, or risks property damage, treat it as urgent and request provider guidance.
             </p>
@@ -105,13 +103,11 @@ export default async function BlogPostPage({ params }: Props) {
           {enhancement ? (
             <>
               <InfoListSection
-                kicker="Checklist"
                 title={enhancement.checklistTitle}
                 intro={enhancement.checklistIntro}
                 items={enhancement.checklistItems}
               />
               <InfoListSection
-                kicker="Verification"
                 title={enhancement.proofTitle}
                 items={enhancement.proofItems}
               />
@@ -122,13 +118,12 @@ export default async function BlogPostPage({ params }: Props) {
       <LocalGuidance />
       {post.slug.includes("freez") || post.slug.includes("burst") ? (
         <section className="content-section">
-          <p className="section-kicker">Freeze season</p>
-          <h2 className="mt-2 text-2xl font-black text-white">More freeze and burst pipe help for Dallas-Fort Worth</h2>
+          <h2 className="text-2xl font-bold text-ink">More freeze and burst pipe help for Dallas-Fort Worth</h2>
           <ul className="mt-4 space-y-2">
-            <li><Link className="font-bold text-emerald-300 underline" href="/services/burst-pipe-emergency">Burst pipe emergency help</Link></li>
-            <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-burst-pipes">Burst pipes in DFW: causes, costs and first steps</Link></li>
-            <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
-            <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/services/burst-pipe-emergency">Burst pipe emergency help</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/guides/dfw-burst-pipes">Burst pipes in DFW: causes, costs and first steps</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
+            <li><Link className="font-bold text-accent underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
           </ul>
         </section>
       ) : null}

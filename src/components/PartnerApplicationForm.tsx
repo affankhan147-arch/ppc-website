@@ -104,7 +104,7 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
   return (
     <form
       method="post"
-      className="premium-form grid gap-3 rounded-md border border-slate-200 bg-white p-4 shadow-xl shadow-slate-950/10"
+      className="premium-form grid gap-3 rounded-card border border-rule bg-paper-2 p-4"
       onFocusCapture={handleFormStart}
       onSubmit={handleSubmit}
     >
@@ -119,55 +119,55 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
       <input className="hidden" type="text" name="companyFax" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <div>
-        <p className="text-xs font-black uppercase tracking-normal text-sky-700">Provider application</p>
-        <h2 className="mt-1 text-xl font-black text-slate-950 sm:text-2xl">Share your coverage details</h2>
+        <p className="text-xs font-black text-accent">Provider application</p>
+        <h2 className="mt-1 text-xl font-bold text-ink sm:text-2xl">Share your coverage details</h2>
       </div>
 
-      <label className="grid gap-1 text-sm font-semibold text-slate-700">
+      <label className="grid gap-1 text-sm font-semibold text-ink-2">
         Business name
-        <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="businessName" autoComplete="organization" required />
+        <input className="rounded-md px-3 py-3" name="businessName" autoComplete="organization" required />
       </label>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Contact name
-          <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="contactName" autoComplete="name" required />
+          <input className="rounded-md px-3 py-3" name="contactName" autoComplete="name" required />
         </label>
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Phone
-          <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="phone" autoComplete="tel" required />
+          <input className="rounded-md px-3 py-3" name="phone" autoComplete="tel" required />
         </label>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Email
-          <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="email" type="email" autoComplete="email" required />
+          <input className="rounded-md px-3 py-3" name="email" type="email" autoComplete="email" required />
         </label>
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Website if available
-          <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="website" type="url" placeholder="https://example.com" />
+          <input className="rounded-md px-3 py-3" name="website" type="url" placeholder="https://example.com" />
         </label>
       </div>
 
-      <label className="grid gap-1 text-sm font-semibold text-slate-700">
+      <label className="grid gap-1 text-sm font-semibold text-ink-2">
         Primary service areas
-        <textarea className="min-h-20 rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="primaryServiceAreas" placeholder="Cities, ZIP codes, or neighborhoods served" required />
+        <textarea className="min-h-20 rounded-md px-3 py-3" name="primaryServiceAreas" placeholder="Cities, ZIP codes, or neighborhoods served" required />
       </label>
 
-      <label className="grid gap-1 text-sm font-semibold text-slate-700">
+      <label className="grid gap-1 text-sm font-semibold text-ink-2">
         Plumbing services offered
-        <textarea className="min-h-20 rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="servicesOffered" placeholder="Emergency plumbing, drain cleaning, sewer, water heater, commercial..." required />
+        <textarea className="min-h-20 rounded-md px-3 py-3" name="servicesOffered" placeholder="Emergency plumbing, drain cleaning, sewer, water heater, commercial..." required />
       </label>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Operating hours
-          <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="operatingHours" placeholder="24/7, weekdays, nights, weekends..." required />
+          <input className="rounded-md px-3 py-3" name="operatingHours" placeholder="24/7, weekdays, nights, weekends..." required />
         </label>
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Emergency-response capacity
-          <select className="rounded-md border border-slate-300 bg-white px-3 py-3 text-slate-950" name="emergencyCapacity" defaultValue="limited" required>
+          <select className="rounded-md px-3 py-3" name="emergencyCapacity" defaultValue="limited" required>
             <option value="yes-24-7">24/7 emergency capacity</option>
             <option value="limited">Limited emergency capacity</option>
             <option value="no">No emergency capacity</option>
@@ -177,17 +177,17 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Customer type
-          <select className="rounded-md border border-slate-300 bg-white px-3 py-3 text-slate-950" name="customerTypes" defaultValue="residential-commercial" required>
+          <select className="rounded-md px-3 py-3" name="customerTypes" defaultValue="residential-commercial" required>
             <option value="residential-commercial">Residential and commercial</option>
             <option value="residential">Residential only</option>
             <option value="commercial">Commercial only</option>
           </select>
         </label>
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Preferred contact method
-          <select className="rounded-md border border-slate-300 bg-white px-3 py-3 text-slate-950" name="preferredContactMethod" defaultValue="phone" required>
+          <select className="rounded-md px-3 py-3" name="preferredContactMethod" defaultValue="phone" required>
             <option value="phone">Phone</option>
             <option value="email">Email</option>
           </select>
@@ -195,13 +195,13 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           License or credential information
-          <input className="rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="licenseInfo" placeholder="Share only verifiable details" />
+          <input className="rounded-md px-3 py-3" name="licenseInfo" placeholder="Share only verifiable details" />
         </label>
-        <label className="grid gap-1 text-sm font-semibold text-slate-700">
+        <label className="grid gap-1 text-sm font-semibold text-ink-2">
           Insurance status
-          <select className="rounded-md border border-slate-300 bg-white px-3 py-3 text-slate-950" name="insuranceStatus" defaultValue="prefer-discuss" required>
+          <select className="rounded-md px-3 py-3" name="insuranceStatus" defaultValue="prefer-discuss" required>
             <option value="insured">Insured</option>
             <option value="not-insured">Not insured</option>
             <option value="not-sure">Not sure</option>
@@ -210,17 +210,17 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
         </label>
       </div>
 
-      <label className="grid gap-1 text-sm font-semibold text-slate-700">
+      <label className="grid gap-1 text-sm font-semibold text-ink-2">
         Notes
-        <textarea className="min-h-20 rounded-md border border-slate-300 px-3 py-3 text-slate-950" name="notes" placeholder="Coverage limits, dispatch rules, exclusions, or onboarding questions" />
+        <textarea className="min-h-20 rounded-md px-3 py-3" name="notes" placeholder="Coverage limits, dispatch rules, exclusions, or onboarding questions" />
       </label>
 
-      <label className="flex gap-2 text-xs leading-5 text-slate-600">
-        <input className="mt-1 h-4 w-4 rounded border-slate-300" type="checkbox" name="consent" required />
+      <label className="flex gap-2 text-xs leading-5 text-muted">
+        <input className="mt-1 h-4 w-4 rounded" type="checkbox" name="consent" required />
         I agree to be contacted about provider onboarding and understand that submitted credential, insurance, service-area, and availability details must be verified before being used publicly.
       </label>
 
-      <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-slate-950 px-4 py-3 text-base font-black text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500" type="submit" disabled={submitting}>
+      <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-call px-4 py-3 text-base font-black text-call-ink disabled:cursor-not-allowed disabled:opacity-60" type="submit" disabled={submitting}>
         <Send className="h-4 w-4" aria-hidden="true" />
         {submitting ? "Submitting Application" : "Submit Provider Application"}
       </button>
@@ -230,14 +230,14 @@ export function PartnerApplicationForm({ pageUrl }: PartnerApplicationFormProps)
           aria-live="polite"
           className={`rounded-md border p-3 text-sm font-semibold leading-6 ${
             status.tone === "success"
-              ? "border-emerald-200 bg-emerald-50 text-emerald-900"
-              : "border-red-200 bg-red-50 text-red-900"
+              ? "border-success bg-paper text-success"
+              : "border-error bg-paper text-error"
           }`}
         >
           {status.message}
         </p>
       ) : null}
-      <p className="text-xs leading-5 text-slate-600">
+      <p className="text-xs leading-5 text-muted">
         Application routing depends on the approved provider-review workflow. Do not submit customer emergency requests through this form.
       </p>
     </form>

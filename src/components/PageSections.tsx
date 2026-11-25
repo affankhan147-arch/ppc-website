@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HelpCircle, MapPin, WalletCards } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { FAQ } from "@/data/faqs";
 import type { SourceLink } from "@/data/externalSources";
 import { internalLinkGroups } from "@/data/internalLinks";
@@ -8,12 +8,15 @@ import type { PageEnhancement } from "@/data/pageEnhancements";
 import { siteConfig } from "@/data/site";
 
 // Bold run-in that restates the page topic at the start of an intro paragraph.
+// NOTE (design.md): templates no longer render LeadIn — the H1 echo is a gate 69
+// fix; the intro paragraph starts with its own sentence. Kept exported so no
+// import breaks while templates are migrated.
 export function LeadIn({ topic }: { topic: string }) {
   const text = topic.trim();
   const end = /[?.!]$/.test(text) ? "" : ".";
   return (
     <>
-      <strong className="font-bold text-white">
+      <strong className="font-bold text-ink">
         {text}
         {end}
       </strong>{" "}
@@ -26,16 +29,15 @@ export function OfficialSources({ title, intro, links }: { title: string; intro?
   if (!links.length) return null;
   return (
     <section className="content-section">
-      <div className="section-kicker"><ExternalLink className="h-4 w-4" aria-hidden="true" /> Official sources</div>
-      <h2 className="mt-2 text-2xl font-black text-white">{title}</h2>
-      {intro ? <p className="mt-3 leading-7 text-slate-300">{intro}</p> : null}
+      <h2 className="text-2xl font-bold text-ink">{title}</h2>
+      {intro ? <p className="mt-3 leading-7 text-ink-2">{intro}</p> : null}
       <ul className="mt-4 grid gap-3 md:grid-cols-2">
         {links.map((link) => (
-          <li key={link.href} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
-            <a href={link.href} target="_blank" rel="noopener noreferrer" className="font-bold text-[#4FD1C5] underline hover:text-white">
+          <li key={link.href} className="rounded-card border border-rule bg-paper p-4">
+            <a href={link.href} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline hover:text-ink">
               {link.label}
             </a>
-            {link.note ? <p className="mt-1 text-sm leading-6 text-slate-300">{link.note}</p> : null}
+            {link.note ? <p className="mt-1 text-sm leading-6 text-ink-2">{link.note}</p> : null}
           </li>
         ))}
       </ul>
@@ -45,9 +47,9 @@ export function OfficialSources({ title, intro, links }: { title: string; intro?
 
 export function DirectAnswer({ children }: { children: ReactNode }) {
   return (
-    <section className="rounded-md border border-[#4FD1C5]/25 bg-[#16302C] p-5">
-      <p className="text-sm font-black uppercase tracking-normal text-[#4FD1C5]">Quick answer</p>
-      <div className="mt-2 text-lg font-semibold leading-7 text-white">{children}</div>
+    <section className="rounded-card border border-rule bg-paper-3 p-5">
+      <p className="text-sm font-bold text-accent">Quick answer</p>
+      <div className="mt-2 text-lg font-semibold leading-7 text-ink">{children}</div>
     </section>
   );
 }
@@ -55,12 +57,12 @@ export function DirectAnswer({ children }: { children: ReactNode }) {
 export function EmergencySteps({ steps }: { steps: string[] }) {
   return (
     <section className="content-section">
-      <div className="section-kicker"><AlertTriangle className="h-4 w-4" aria-hidden="true" /> What to do now</div>
+      <h2 className="text-2xl font-bold text-ink">What to do now</h2>
       <ol className="mt-4 grid gap-3 md:grid-cols-2">
         {steps.map((step, index) => (
-          <li key={step} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
-            <span className="text-xs font-black text-[#F0B429]">Step {index + 1}</span>
-            <p className="mt-1 font-semibold text-white">{step}</p>
+          <li key={step} className="rounded-card border border-rule bg-paper p-4">
+            <span className="text-sm font-bold text-accent">Step {index + 1}</span>
+            <p className="mt-1 font-semibold text-ink">{step}</p>
           </li>
         ))}
       </ol>
@@ -71,12 +73,12 @@ export function EmergencySteps({ steps }: { steps: string[] }) {
 export function CostFactors({ factors }: { factors: string[] }) {
   return (
     <section className="content-section">
-      <div className="section-kicker"><WalletCards className="h-4 w-4" aria-hidden="true" /> Cost factors</div>
-      <p className="mt-3 text-slate-300">Pricing should be confirmed directly with the matched provider before work starts. Common factors include:</p>
+      <h2 className="text-2xl font-bold text-ink">Cost factors</h2>
+      <p className="mt-3 text-ink-2">Pricing should be confirmed directly with the matched provider before work starts. Common factors include:</p>
       <ul className="mt-4 grid gap-2 sm:grid-cols-2">
         {factors.map((factor) => (
-          <li key={factor} className="flex gap-2 rounded-md bg-[#0F1F1D] p-3 text-sm font-semibold text-slate-200">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-[#4FD1C5]" aria-hidden="true" />
+          <li key={factor} className="flex gap-2 rounded-card bg-paper p-3 text-sm font-semibold text-ink-2">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-accent" aria-hidden="true" />
             {factor}
           </li>
         ))}
@@ -86,24 +88,21 @@ export function CostFactors({ factors }: { factors: string[] }) {
 }
 
 export function InfoListSection({
-  kicker,
   title,
   intro,
   items
 }: {
-  kicker: string;
   title: string;
   intro?: string;
   items: string[];
 }) {
   return (
     <section className="content-section">
-      <p className="section-kicker">{kicker}</p>
-      <h2 className="mt-2 text-2xl font-black text-white">{title}</h2>
-      {intro ? <p className="mt-3 leading-7 text-slate-300">{intro}</p> : null}
+      <h2 className="text-2xl font-bold text-ink">{title}</h2>
+      {intro ? <p className="mt-3 leading-7 text-ink-2">{intro}</p> : null}
       <ul className="mt-4 grid gap-3 md:grid-cols-2">
         {items.map((item) => (
-          <li key={item} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 font-semibold leading-6 text-slate-200">
+          <li key={item} className="rounded-card border border-rule bg-paper p-4 font-semibold leading-6 text-ink-2">
             {item}
           </li>
         ))}
@@ -115,8 +114,7 @@ export function InfoListSection({
 export function LocalGuidance({ cityName = "Dallas-Fort Worth" }: { cityName?: string }) {
   return (
     <section className="content-section">
-      <div className="section-kicker"><MapPin className="h-4 w-4" aria-hidden="true" /> Local service-area guidance</div>
-      <p className="mt-3 leading-7 text-slate-300">
+      <p className="leading-7 text-ink-2">
         This page is written for homeowners and property managers in {cityName}. {siteConfig.serviceStatement} Availability, pricing,
         credentials, and arrival details should be confirmed directly with the matched provider.
       </p>
@@ -130,24 +128,20 @@ export function EnhancementSections({ enhancement }: { enhancement?: PageEnhance
   return (
     <>
       <InfoListSection
-        kicker="Decision support"
         title={enhancement.decisionTitle}
         intro={enhancement.decisionIntro}
         items={enhancement.decisionItems}
       />
       <InfoListSection
-        kicker="Provider diagnosis"
         title={enhancement.providerTitle}
         items={enhancement.providerItems}
       />
       <InfoListSection
-        kicker="Safety boundaries"
         title={enhancement.safetyTitle}
         items={enhancement.safetyItems}
       />
       {enhancement.preventionItems?.length ? (
         <InfoListSection
-          kicker="Prevention"
           title={enhancement.preventionTitle || "How to reduce repeat risk"}
           items={enhancement.preventionItems}
         />
@@ -159,13 +153,12 @@ export function EnhancementSections({ enhancement }: { enhancement?: PageEnhance
 export function FAQBlock({ faqs, title = "Frequently asked questions" }: { faqs: FAQ[]; title?: string }) {
   return (
     <section className="content-section">
-      <div className="section-kicker"><HelpCircle className="h-4 w-4" aria-hidden="true" /> Common questions</div>
-      <h2 className="mt-2 text-2xl font-black text-white">{title}</h2>
+      <h2 className="text-2xl font-bold text-ink">{title}</h2>
       <div className="mt-4 grid gap-3">
         {faqs.map((faq) => (
-          <details key={faq.question} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4">
-            <summary className="cursor-pointer font-bold text-white">{faq.question}</summary>
-            <p className="mt-2 leading-7 text-slate-300">{faq.answer}</p>
+          <details key={faq.question} className="rounded-card border border-rule bg-paper p-4">
+            <summary className="cursor-pointer font-bold text-ink">{faq.question}</summary>
+            <p className="mt-2 leading-7 text-ink-2">{faq.answer}</p>
           </details>
         ))}
       </div>
@@ -184,11 +177,10 @@ export function InternalLinks({ extra = [] }: { extra?: { label: string; href: s
     .slice(0, 8);
   return (
     <section className="content-section">
-      <div className="section-kicker"><ArrowRight className="h-4 w-4" aria-hidden="true" /> Keep reading</div>
-      <h2 className="mt-2 text-2xl font-black text-white">Related emergency plumbing resources</h2>
+      <h2 className="text-2xl font-bold text-ink">Related emergency plumbing resources</h2>
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {links.map((link) => (
-          <Link key={link.href} href={link.href} className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 font-bold text-white transition hover:border-[#4FD1C5]">
+          <Link key={link.href} href={link.href} className="rounded-card border border-rule bg-paper p-4 font-bold text-ink transition-colors hover:border-accent">
             {link.label}
           </Link>
         ))}

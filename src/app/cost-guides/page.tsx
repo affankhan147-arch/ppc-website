@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, DollarSign } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources } from "@/data/externalSources";
@@ -48,21 +47,18 @@ export default function CostGuidesIndexPage() {
       />
       <Breadcrumbs items={[{ label: "Cost guides", href: path }]} />
 
-      <section className="content-section soft-band">
-        <p className="section-kicker">
-          <DollarSign className="h-4 w-4" aria-hidden="true" /> Cost guides
-        </p>
-        <h1 className="mt-3 text-3xl font-black leading-tight text-white sm:text-4xl">
+      <section className="content-section">
+        <h1 className="display-title font-bold">
           DFW Emergency Plumbing Cost Guides
         </h1>
-        <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+        <p className="lead mt-4">
           No fabricated price tags - each guide below explains what actually drives emergency
           plumbing cost in Dallas-Fort Worth and the questions worth asking before you approve
           any work.
         </p>
       </section>
 
-      <div className="photo-frame relative mt-2 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+      <div className="photo-frame relative mt-2 h-64 w-full sm:h-80">
         <Image
           src={getArticleImage(undefined, 5)}
           alt="Homeowner reviewing an emergency plumbing cost estimate in Dallas-Fort Worth"
@@ -79,12 +75,12 @@ export default function CostGuidesIndexPage() {
             <Link
               key={guide.slug}
               href={`/cost-guides/${guide.slug}`}
-              className="premium-card group min-w-0 p-5 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-xl"
+              className="premium-card min-w-0 p-5"
             >
-              <h2 className="text-xl font-black text-white">{guide.title}</h2>
-              <p className="mt-2 text-sm font-semibold leading-6 text-slate-200">{guide.directAnswer}</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-base font-black text-cyan-700 group-hover:text-cyan-900">
-                Read the guide <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              <h2 className="text-xl font-bold text-ink">{guide.title}</h2>
+              <p className="mt-2 text-sm font-semibold leading-6 text-ink-2">{guide.directAnswer}</p>
+              <span className="mt-4 inline-flex text-base font-bold text-accent">
+                Read the guide
               </span>
             </Link>
           ))}
@@ -92,9 +88,8 @@ export default function CostGuidesIndexPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">How to use these guides</p>
-        <h2 className="mt-2 text-2xl font-black text-white">How to read a plumbing cost guide</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">How to read a plumbing cost guide</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Each guide explains what drives the price of one job rather than promising a single number. Look at the factors that
           apply to your home, such as access, pipe material, the time of day and whether a permit is needed, then ask the
           provider to price those items in writing. If a quote is far outside what the guide describes, ask what is different

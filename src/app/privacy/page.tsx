@@ -10,8 +10,8 @@ export const metadata = buildMetadata({
   path: "/privacy"
 });
 
-const h2 = "mt-8 text-2xl font-bold text-white";
-const link = "text-[#4FD1C5] underline hover:text-white";
+const h2 = "text-2xl font-bold text-ink";
+const link = "font-bold text-accent underline hover:text-ink";
 
 export default function PrivacyPage() {
   return (
@@ -22,33 +22,33 @@ export default function PrivacyPage() {
           breadcrumbSchema([{ name: "Privacy", path: "/privacy" }])
         ]}
       />
-      <p className="section-kicker">Legal</p>
-      <h1 className="mt-3 text-4xl font-black text-white">Privacy policy</h1>
-      <div className="content-section space-y-4 leading-7 text-slate-300">
-        <p>
+      <section className="content-section">
+        <h1 className="display-title font-bold text-ink">Privacy policy</h1>
+        <p className="lead mt-4 text-ink-2">
           This privacy policy explains what information Plumbing Hands collects when you use this website or call the phone
           number shown on it, how that information is used, and the choices you have. Plumbing Hands connects Dallas-Fort Worth
           homeowners with independent plumbing providers. How that connection works is explained on our{" "}
           <Link href="/disclosure" className={link}>provider connection disclosure</Link> page.
         </p>
-
+      </section>
+      <div className="content-section space-y-4 leading-7 text-ink-2">
         <h2 className={h2}>Information we collect</h2>
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            <strong className="text-white">Service request details you type in:</strong> name, phone number, city or ZIP code,
+            <strong className="text-ink">Service request details you type in:</strong> name, phone number, city or ZIP code,
             the service you need, how urgent it is, and any message you add.
           </li>
           <li>
-            <strong className="text-white">Page details sent with a request:</strong> the page you were on, the page that sent
+            <strong className="text-ink">Page details sent with a request:</strong> the page you were on, the page that sent
             you here, and campaign (UTM) tags, so we know which pages help people find service.
           </li>
           <li>
-            <strong className="text-white">Call details:</strong> calls to the number on this site go through a call routing
+            <strong className="text-ink">Call details:</strong> calls to the number on this site go through a call routing
             service so they can reach an available provider. That service can log your phone number, the time and length of the
             call, and the page that showed the number. Calls may be recorded for quality and billing purposes.
           </li>
           <li>
-            <strong className="text-white">Analytics data:</strong> only if you accept analytics cookies (see below).
+            <strong className="text-ink">Analytics data:</strong> only if you accept analytics cookies (see below).
           </li>
         </ul>
         <p>Do not submit sensitive account credentials, payment details, medical information, or private documents through the form.</p>

@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import PressureRegulatorCostCalculator from "@/components/PressureRegulatorCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/water-pressure-regulator-cost-calculator";
 const TITLE = "Water Pressure Regulator (PRV) Replacement Cost Calculator";
@@ -55,18 +56,20 @@ export default function PressureRegulatorCostCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             A pressure-reducing valve (PRV) regulates the municipal supply pressure coming into your home. When it
             fails - almost always open rather than closed - unregulated pressure can quietly stress pipes, fixtures,
             and your water heater for months before anything obvious breaks. Pick your line size below to see a
             real, sourced 2026 cost range for replacing it.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-water-pressure-regulator-cost-calculator-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage(undefined, 4)}
               alt={`${TITLE} - Plumber inspecting a water pressure regulator valve on a home's main water line in Dallas-Fort Worth`}
@@ -79,27 +82,27 @@ export default function PressureRegulatorCostCalculatorPage() {
 
           <PressureRegulatorCostCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Failed open vs. failed closed</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Failed open vs. failed closed</h2>
+            <p className="text-ink-2 mb-4">
               A PRV almost always fails toward being wide open, which lets full municipal pressure run unregulated
               into your home&apos;s pipes. Our{" "}
-              <Link href="/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" className="text-[#F0B429] underline">
+              <Link href="/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" className="text-accent underline">
                 high water pressure guide
               </Link>{" "}
               covers the warning signs - banging pipes, a toilet that keeps refilling, fixtures wearing out early,
               and a water heater failing sooner than expected. A PRV failing toward closed is less common and shows
               up as a sudden, whole-house pressure drop instead, covered in our{" "}
-              <Link href="/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" className="text-[#F0B429] underline">
+              <Link href="/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" className="text-accent underline">
                 sudden low water pressure guide
               </Link>
               . A simple gauge test at an outdoor hose bib is the fastest way to confirm which one you actually have.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.angi.com/articles/water-pressure-regulator-replacement-cost.htm" className="underline" target="_blank" rel="noopener noreferrer">
                   Angi: How Much Does Water Pressure Regulator Replacement Cost?
@@ -115,24 +118,24 @@ export default function PressureRegulatorCostCalculatorPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for home inspectors, real estate agents, insurance agents, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

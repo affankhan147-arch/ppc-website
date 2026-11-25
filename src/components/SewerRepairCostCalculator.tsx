@@ -69,12 +69,12 @@ export default function SewerRepairCostCalculator() {
     return () => clearTimeout(timer);
   }, [methodId, length, needsCamera, needsPermit, hasRootObstacle]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-muted bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Sewer line length needing repair (feet)
           <input
             className={field}
@@ -86,7 +86,7 @@ export default function SewerRepairCostCalculator() {
             onChange={(e) => setLength(Math.max(1, Number(e.target.value) || 1))}
           />
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Repair method
           <select className={field} value={methodId} onChange={(e) => setMethodId(e.target.value as RepairMethodId)}>
             {repairMethods.map((m) => (
@@ -94,33 +94,33 @@ export default function SewerRepairCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="flex items-center gap-2 text-sm text-slate-300 sm:col-span-2">
+        <label className="flex items-center gap-2 text-sm text-ink-2 sm:col-span-2">
           <input type="checkbox" checked={needsCamera} onChange={(e) => setNeedsCamera(e.target.checked)} />
           Include a diagnostic camera inspection ({money(cameraInspection.low)}-{money(cameraInspection.high)})
         </label>
-        <label className="flex items-center gap-2 text-sm text-slate-300 sm:col-span-2">
+        <label className="flex items-center gap-2 text-sm text-ink-2 sm:col-span-2">
           <input type="checkbox" checked={needsPermit} onChange={(e) => setNeedsPermit(e.target.checked)} />
           Assume a city permit is required (up to {money(permitFee.high)})
         </label>
-        <label className="flex items-center gap-2 text-sm text-slate-300 sm:col-span-2">
+        <label className="flex items-center gap-2 text-sm text-ink-2 sm:col-span-2">
           <input type="checkbox" checked={hasRootObstacle} onChange={(e) => setHasRootObstacle(e.target.checked)} />
           Tree roots or other obstacles likely in the way (adds extra excavation labor)
         </label>
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">{method.shortLabel} estimate</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(result.low)}-{money(result.high)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">{method.shortLabel} estimate</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(result.low)}-{money(result.high)}</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Traditional dig-and-replace estimate</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(result.tradLow)}-{money(result.tradHigh)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Traditional dig-and-replace estimate</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(result.tradLow)}-{money(result.tradHigh)}</p>
         </div>
       </div>
 
       {method.minDisruption && (
-        <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+        <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
           <p>
             Going trenchless here could save roughly <strong>{money(Math.max(0, result.savingsLow))}-{money(Math.max(0, result.savingsHigh))}</strong>{" "}
             versus a full dig-and-replace at this length, with far less yard disruption - but only if your pipe&apos;s
@@ -129,8 +129,8 @@ export default function SewerRepairCostCalculator() {
         </div>
       )}
 
-      <p className="mt-4 text-xs text-slate-400">{method.note} {method.source}.</p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">{method.note} {method.source}.</p>
+      <p className="mt-2 text-xs text-muted">
         {cameraInspection.note} {treeRootObstacle.note} {permitFee.note} These are planning estimates only, not a
         quote - a licensed plumber&apos;s camera inspection is the only way to confirm your pipe&apos;s actual condition
         and which methods are viable.

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
-import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LeadIn, LocalGuidance, OfficialSources } from "@/components/PageSections";
+import { CostFactors, DirectAnswer, EmergencySteps, EnhancementSections, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
 import { cities, priorityCityServiceCombos } from "@/data/cities";
 import { costGuides } from "@/data/costGuides";
 import { getServiceSources } from "@/data/externalSources";
@@ -103,17 +103,15 @@ export default async function ServicePage({ params }: Props) {
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: displayName, href: path }]} />
       <div className="mt-6">
         <article>
-          <p className="section-kicker">{service.urgency} urgency service page</p>
-          <h1 className="mt-3 text-4xl font-black leading-tight text-white">{pageHeading}</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
-            <LeadIn topic={pageHeading} />
+          <h1 className="display-title font-bold text-ink">{pageHeading}</h1>
+          <p className="lead mt-4 text-ink-2">
             Clear guidance for urgent homeowner questions and service requests across Dallas-Fort Worth. Availability, credentials, pricing, and arrival details should be confirmed directly with the provider.
           </p>
           <div className="mt-6">
             <CallButton location={`service-${service.slug}-top`} pagePath={path} pageType="service" service={displayName} />
           </div>
         </article>
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden sm:h-80">
           <Image
             src={getArticleImage(service.slug, services.findIndex((item) => item.slug === service.slug))}
             alt={`${displayName} in Dallas-Fort Worth - provider responding to an active service call`}
@@ -128,7 +126,6 @@ export default async function ServicePage({ params }: Props) {
       <DirectAnswer>{service.shortAnswer}</DirectAnswer>
       <EmergencySteps steps={service.steps} />
       <InfoListSection
-        kicker="Before calling"
         title="What information to prepare"
         intro="The matched provider can usually triage faster when the request includes clear, practical details."
         items={service.callPrep}
@@ -136,40 +133,35 @@ export default async function ServicePage({ params }: Props) {
       <EnhancementSections enhancement={enhancement} />
 
       <section className="content-section">
-        <p className="section-kicker">When to call</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Signs this service should not wait</h2>
+        <h2 className="text-2xl font-bold text-ink">Signs this service should not wait</h2>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {service.symptoms.map((symptom) => (
-            <li key={symptom} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-800">{symptom}</li>
+            <li key={symptom} className="rounded-card border border-rule bg-paper p-3 font-semibold text-ink-2">{symptom}</li>
           ))}
         </ul>
       </section>
 
       <InfoListSection
-        kicker="Common causes"
         title={`Why ${displayName} issues happen`}
         intro="The exact cause requires diagnosis, but these are common patterns Dallas-Fort Worth homeowners and managers report."
         items={service.commonCauses}
       />
       <InfoListSection
-        kicker="Avoid these mistakes"
         title="What not to do during the emergency"
         items={service.mistakesToAvoid}
       />
       <section className="content-section">
-        <p className="section-kicker">Cost discussion</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Cost factors to confirm before work starts</h2>
-        <p className="mt-3 leading-7 text-slate-300">{service.costDiscussion}</p>
+        <h2 className="text-2xl font-bold text-ink">Cost factors to confirm before work starts</h2>
+        <p className="mt-3 leading-7 text-ink-2">{service.costDiscussion}</p>
       </section>
       <CostFactors factors={service.costFactors} />
       <LocalGuidance />
       {service.slug === "burst-pipe-emergency" ? (
         <section className="content-section">
-          <p className="section-kicker">Local help</p>
-          <h2 className="mt-2 text-2xl font-black text-white">Burst pipe help by city in Dallas-Fort Worth</h2>
+          <h2 className="text-2xl font-bold text-ink">Burst pipe help by city in Dallas-Fort Worth</h2>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
              {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
-               <li key={slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+               <li key={slug}><Link className="font-bold text-accent underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
              ))}
           </ul>
         </section>

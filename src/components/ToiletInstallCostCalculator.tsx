@@ -42,13 +42,13 @@ export default function ToiletInstallCostCalculator() {
     return () => clearTimeout(timer);
   }, [toiletType, jobType, includeRemoval]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
   const typeLabel = toiletTypeCosts.find((t) => t.id === toiletType)?.label ?? "";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Toilet type
           <select
             className={field}
@@ -60,7 +60,7 @@ export default function ToiletInstallCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Job type
           <select
             className={field}
@@ -72,34 +72,34 @@ export default function ToiletInstallCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="flex items-center gap-2 text-sm text-slate-300 sm:col-span-2">
+        <label className="flex items-center gap-2 text-sm text-ink-2 sm:col-span-2">
           <input
             type="checkbox"
             checked={includeRemoval}
             disabled={jobType === "new-install"}
             onChange={(e) => setIncludeRemoval(e.target.checked)}
-            className="h-4 w-4 rounded border-[#1A3A38]"
+            className="h-4 w-4 rounded border-rule"
           />
           Haul away the old toilet (+{money(removalHaulAway.low)}-{money(removalHaulAway.high)})
         </label>
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Fixr range</p>
-          <p className="mt-1 text-2xl font-bold text-white">
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Fixr range</p>
+          <p className="mt-1 text-2xl font-bold text-ink">
             {money(result.low)}-{money(result.high)}
           </p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">HomeAdvisor average</p>
-          <p className="mt-1 text-2xl font-bold text-white">
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">HomeAdvisor average</p>
+          <p className="mt-1 text-2xl font-bold text-ink">
             {result.homeAdvisorMid !== null ? money(result.homeAdvisorMid) : "Not listed for this type"}
           </p>
         </div>
       </div>
 
-      <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+      <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
         {jobType === "new-install" ? (
           <p>
             Installing a {typeLabel.toLowerCase()} where no toilet existed before means new rough-in plumbing, a
@@ -116,13 +116,13 @@ export default function ToiletInstallCostCalculator() {
         )}
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         Figures above come from two independently fetched cost guides checked October 2026: Fixr, &quot;Cost to
         Install a Toilet,&quot; and HomeAdvisor, &quot;How Much Does It Cost to Install a Toilet?&quot; They disagree
         moderately on national averages and on which toilet type costs more - that reflects real market-price
         variance, not an error, so both ranges are shown rather than one smoothed-over number.
       </p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-2 text-xs text-muted">
         This is a planning estimate, not a quote. Venting, floor-flange condition, and whether the shutoff valve
         also needs replacing can only be confirmed by a licensed plumber&apos;s on-site look.
       </p>

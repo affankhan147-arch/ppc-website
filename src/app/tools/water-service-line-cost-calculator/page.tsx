@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import WaterServiceLineCostCalculator from "@/components/WaterServiceLineCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/water-service-line-cost-calculator";
 const TITLE = "Water Service Line Replacement Cost Calculator (Plus Who Pays)";
@@ -50,18 +51,20 @@ export default function WaterServiceLineCostCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             Your water service line is the pipe running from the street or meter to your house - a different job
             from an interior whole-house repipe. Enter the distance and pick a method to see a modeled cost range,
             built from HomeAdvisor&apos;s published 2026 cost data, plus a clear answer on who&apos;s actually
             responsible for paying for it.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-water-service-line-cost-calculator-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage(undefined, 1)}
               alt={`${TITLE} - Underground water service line being inspected before replacement at a DFW home`}
@@ -74,9 +77,9 @@ export default function WaterServiceLineCostCalculatorPage() {
 
           <WaterServiceLineCostCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Who actually pays - you or the city?</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Who actually pays - you or the city?</h2>
+            <p className="text-ink-2 mb-4">
               Under Texas Administrative Code Title 16, Section 24.163(a)(2), the utility installs and owns the
               service pipe only from its main up to the meter. From the discharge side of the meter onward - the
               run to your house - is the customer&apos;s property and the customer&apos;s responsibility to
@@ -86,34 +89,34 @@ export default function WaterServiceLineCostCalculatorPage() {
               municipal utilities generally, though the exact property-line or easement boundary is worth confirming
               with your own city before assuming where your responsibility starts.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               If you&apos;re also dealing with a sudden pressure change rather than a known line failure, our{" "}
-              <Link href="/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" className="text-[#F0B429] underline">
+              <Link href="/blog/sudden-low-water-pressure-in-dallas-home-what-it-means" className="text-accent underline">
                 sudden low water pressure guide
               </Link>{" "}
               and{" "}
-              <Link href="/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" className="text-[#F0B429] underline">
+              <Link href="/blog/high-water-pressure-in-dallas-home-hidden-pipe-damage-risk" className="text-accent underline">
                 high water pressure guide
               </Link>{" "}
               cover the signs worth checking before assuming the service line itself is the problem.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Permits in your DFW city</h2>
-            <p className="text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Permits in your DFW city</h2>
+            <p className="text-ink-2">
               Most DFW cities require a permit for water service line work, typically in the $100-$500 range, though
               the exact fee and process differ by city. Our{" "}
-              <Link href="/blog/dfw-plumbing-permit-requirements-and-fees-by-city" className="text-[#F0B429] underline">
+              <Link href="/blog/dfw-plumbing-permit-requirements-and-fees-by-city" className="text-accent underline">
                 DFW plumbing permit requirements and fees by city guide
               </Link>{" "}
               covers Dallas, Fort Worth, Arlington, and Plano&apos;s own published fee schedules in detail.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.homeadvisor.com/cost/plumbing/install-a-water-main/" className="underline" target="_blank" rel="noopener noreferrer">
                   HomeAdvisor: How Much Does Main Water Line Replacement Cost?
@@ -135,24 +138,24 @@ export default function WaterServiceLineCostCalculatorPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for home inspectors, real estate agents, insurance agents, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

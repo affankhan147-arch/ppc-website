@@ -41,28 +41,31 @@ export function CookieConsent({ gaId }: { gaId: string }) {
           role="dialog"
           aria-label="Cookie consent"
           aria-live="polite"
-          className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-[#0B1917] px-4 py-4 shadow-2xl sm:px-6"
+          className="fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-paper px-4 py-3 sm:px-6 sm:py-4"
         >
-          <div className="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm leading-6 text-slate-300">
+          <div className="mx-auto flex max-w-5xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+            <p className="text-sm leading-6 text-muted">
               This site uses cookies for basic analytics to understand how visitors use it. See our{" "}
-              <a href="/privacy" className="underline hover:text-[#4FD1C5]">
+              <a href="/privacy" className="underline hover:text-accent">
                 Privacy Policy
               </a>{" "}
-              for details. You can accept or decline analytics cookies, and change your choice anytime from the footer.
+              for details.{" "}
+              <span className="hidden sm:inline">
+                You can accept or decline analytics cookies, and change your choice anytime from the footer.
+              </span>
             </p>
             <div className="flex shrink-0 gap-2">
               <button
                 type="button"
                 onClick={() => choose("declined")}
-                className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/5"
+                className="rounded-lg border border-rule px-4 py-2 text-sm font-semibold text-ink-2 transition hover:bg-paper-2"
               >
                 Decline
               </button>
               <button
                 type="button"
                 onClick={() => choose("accepted")}
-                className="rounded-lg bg-[#4FD1C5] px-4 py-2 text-sm font-black text-[#0B1917] transition hover:bg-[#3fc0b4]"
+                className="rounded-lg bg-accent px-4 py-2 text-sm font-black text-accent-ink transition hover:bg-[color-mix(in_oklab,var(--color-accent)_88%,black)]"
               >
                 Accept
               </button>

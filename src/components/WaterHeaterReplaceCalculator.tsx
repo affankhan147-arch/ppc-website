@@ -53,9 +53,9 @@ export default function WaterHeaterReplaceCalculator() {
     repair: "Repair"
   };
   const verdictColor: Record<Verdict, string> = {
-    replace: "text-red-400",
-    borderline: "text-[#F0B429]",
-    repair: "text-green-400"
+    replace: "text-error",
+    borderline: "text-call",
+    repair: "text-success"
   };
 
   const firstRender = useRef(true);
@@ -74,12 +74,12 @@ export default function WaterHeaterReplaceCalculator() {
     return () => clearTimeout(timer);
   }, [unitTypeId, repairId, age, customCost, result.verdict]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Water heater type
           <select className={field} value={unitTypeId} onChange={(e) => setUnitTypeId(e.target.value as "tank" | "tankless")}>
             {unitTypes.map((u) => (
@@ -87,12 +87,12 @@ export default function WaterHeaterReplaceCalculator() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Age of unit (years)
           <input className={field} type="number" min={0} max={40} step={1} value={age}
             onChange={(e) => setAge(Math.max(0, Number(e.target.value) || 0))} />
         </label>
-        <label className="block text-sm text-slate-300 sm:col-span-2">
+        <label className="block text-sm text-ink-2 sm:col-span-2">
           What needs fixing?
           <select className={field} value={repairId} onChange={(e) => setRepairId(e.target.value)}>
             {repairOptions.map((r) => (
@@ -104,13 +104,13 @@ export default function WaterHeaterReplaceCalculator() {
         </label>
 
         {repairId === "custom" && (
-          <label className="block text-sm text-slate-300 sm:col-span-2">
+          <label className="block text-sm text-ink-2 sm:col-span-2">
             Quoted repair cost ($)
             <input className={field} type="number" min={0} step={10} value={customCost}
               onChange={(e) => setCustomCost(Number(e.target.value) || 0)} />
           </label>
         )}
-        <label className="block text-sm text-slate-300 sm:col-span-2">
+        <label className="block text-sm text-ink-2 sm:col-span-2">
           Your DFW city (for a water-hardness note)
           <select className={field} value={citySlug} onChange={(e) => setCitySlug(e.target.value)}>
             {waterHardnessData.map((c) => (
@@ -121,25 +121,25 @@ export default function WaterHeaterReplaceCalculator() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Estimated repair cost</p>
-          <p className="mt-1 text-2xl font-bold text-white">{repair.alwaysReplace ? "N/A" : money(repairCost)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Estimated repair cost</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{repair.alwaysReplace ? "N/A" : money(repairCost)}</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Typical new {unitTypeId} unit installed</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(unit.replaceLow)}-{money(unit.replaceHigh)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Typical new {unitTypeId} unit installed</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(unit.replaceLow)}-{money(unit.replaceHigh)}</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Recommendation</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Recommendation</p>
           <p className={`mt-1 text-2xl font-bold ${verdictColor[result.verdict]}`}>{verdictLabel[result.verdict]}</p>
         </div>
       </div>
 
-      <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+      <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
         <p>{result.reason}</p>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         {repair.note} {unit.label} typically lasts {unit.expectedLifespanLow}-{unit.expectedLifespanHigh} years ({unit.source}).
         In {city.name}, water hardness runs {city.rangeLabel} GPG ({city.classification}) - homes in DFW&apos;s harder-water
         cities typically need more frequent tank flushing and often see faster sediment buildup; see our{" "}

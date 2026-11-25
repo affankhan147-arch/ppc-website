@@ -83,7 +83,7 @@ const faqs = [
 
 export default function LicenseVerificationPage() {
   return (
-    <>
+    <main className="page-shell">
       <JsonLd data={[
         webPageSchema(path, title, description),
         articleSchema(path, title, description),
@@ -97,9 +97,9 @@ export default function LicenseVerificationPage() {
         { label: "Guides", href: "/blog" },
         { label: "Verify a Texas Plumber's License", href: path }
       ]} />
-      <h1 className="mt-6 text-4xl font-black leading-tight text-white">{title}</h1>
+      <h1 className="display-title mt-6 text-4xl font-bold leading-tight text-ink">{title}</h1>
       <Byline path={path} />
-      <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+      <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden sm:h-80">
         <Image
           src={getArticleImage("24-hour-emergency-plumber", 1)}
           alt="Homeowner verifying a Texas plumber's license and paperwork before a job"
@@ -112,17 +112,17 @@ export default function LicenseVerificationPage() {
       <DirectAnswer>
         <p>
           To verify a Texas plumber&apos;s license, use the free TSBPE public license search in four steps:
+        </p>
           <ol className="list-decimal ml-6 mt-2 space-y-1">
             <li>Go to the TSBPE Public License Search: <a href="https://vo.licensing.hpc.texas.gov/datamart/selSearchType.do" target="_blank" rel="noopener noreferrer">vo.licensing.hpc.texas.gov/datamart/selSearchType.do</a> (or visit <a href="https://tsbpe.texas.gov" target="_blank" rel="noopener noreferrer">tsbpe.texas.gov</a> and click &quot;Find a license/registration&quot;).</li>
             <li>Choose <strong>&quot;Search by Name&quot;</strong> or <strong>&quot;Search by License Number&quot;</strong> - License Number is more precise.</li>
             <li>Select <strong>&quot;Texas State Board of Plumbing Examiners&quot;</strong> from the Board dropdown, then <strong>&quot;Plumbing - Licensed or Registered&quot;</strong>.</li>
             <li>Review the results: active status, expiration date, insurance (COI), endorsements, and any disciplinary history.</li>
           </ol>
-        </p>
       </DirectAnswer>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Step-by-Step Search Process</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Step-by-Step Search Process</h2>
         <div className="mt-4 space-y-4">
           <div>
             <h3 className="font-semibold">1. Open the search portal</h3>
@@ -147,8 +147,8 @@ export default function LicenseVerificationPage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">What the Results Mean</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">What the Results Mean</h2>
         <div className="mt-4 space-y-3">
           <div>
             <h3 className="font-semibold">License Status</h3>
@@ -191,55 +191,55 @@ export default function LicenseVerificationPage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Homeowner Exemption (Texas Occupations Code)</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Homeowner Exemption (Texas Occupations Code)</h2>
         <p className="mt-2">You may see plumbers advertise that they can do work without a license under a &quot;homeowner exemption&quot;. However, the Texas Occupations Code allows <strong>unlicensed DIY work only on your own occupied primary residence</strong>. This exemption does <strong>not</strong> apply to rental properties, commercial buildings, or homes you do not personally occupy. If you hire someone claiming exemption for a non-eligible property, you could be held liable for code violations or unsafe work.</p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Red Flags to Watch For</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Red Flags to Watch For</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="p-4 border border-red-200 rounded-lg bg-red-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
+              <AlertTriangle className="h-5 w-5 text-accent mt-0.5" />
               <div>
-                <h3 className="font-semibold text-red-800">No license or &quot;Inactive&quot;</h3>
-                <p className="text-sm text-red-700">Do not hire. Unlicensed work may void insurance claims and lead to fines.</p>
+                <h3 className="font-semibold text-ink">No license or &quot;Inactive&quot;</h3>
+                <p className="text-sm text-ink-2">Do not hire. Unlicensed work may void insurance claims and lead to fines.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-orange-200 rounded-lg bg-orange-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <Info className="h-5 w-5 text-orange-600 mt-0.5" />
+              <Info className="h-5 w-5 text-accent mt-0.5" />
               <div>
-                <h3 className="font-semibold text-orange-800">No active COI</h3>
-                <p className="text-sm text-orange-700">If the plumber can&apos;t provide proof of liability insurance, you assume all financial risk.</p>
+                <h3 className="font-semibold text-ink">No active COI</h3>
+                <p className="text-sm text-accent">If the plumber can&apos;t provide proof of liability insurance, you assume all financial risk.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-yellow-200 rounded-lg bg-yellow-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <XCircle className="h-5 w-5 text-yellow-600 mt-0.5" />
+              <XCircle className="h-5 w-5 text-accent mt-0.5" />
               <div>
-                <h3 className="font-semibold text-yellow-800">Disciplinary history</h3>
-                <p className="text-sm text-yellow-700">Multiple complaints or unresolved actions are a serious warning.</p>
+                <h3 className="font-semibold text-ink">Disciplinary history</h3>
+                <p className="text-sm text-ink-2">Multiple complaints or unresolved actions are a serious warning.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-purple-200 rounded-lg bg-purple-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <Shield className="h-5 w-5 text-purple-600 mt-0.5" />
+              <Shield className="h-5 w-5 text-accent mt-0.5" />
               <div>
-                <h3 className="font-semibold text-purple-800">Unusual payment demands</h3>
-                <p className="text-sm text-purple-700">Requests for 100% upfront payment are a common red flag.</p>
+                <h3 className="font-semibold text-ink">Unusual payment demands</h3>
+                <p className="text-sm text-ink-2">Requests for 100% upfront payment are a common red flag.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-6">
           <div>
             <h3 className="font-semibold">Is it illegal to hire an unlicensed plumber in Texas?</h3>
@@ -288,8 +288,8 @@ export default function LicenseVerificationPage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Next Steps for Hiring</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Next Steps for Hiring</h2>
         <ul className="list-disc ml-6 mt-2 space-y-1">
           <li>Always verify the plumber&apos;s license and COI before signing any contract.</li>
           <li>Get at least two written estimates for major work.</li>
@@ -312,6 +312,6 @@ export default function LicenseVerificationPage() {
         { label: "Emergency Plumber Plano", href: "/cities/plano/24-hour-emergency-plumber" },
         { label: "Free DFW Data Badges (Embeddable)", href: "/tools/dfw-data-badges" },
       ]} />
-    </>
+    </main>
   );
 }

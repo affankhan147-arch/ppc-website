@@ -40,12 +40,12 @@ export default function RepipeCostCalculator() {
     return () => clearTimeout(timer);
   }, [materialId, sqft]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Home size (square feet)
           <input
             className={field}
@@ -57,7 +57,7 @@ export default function RepipeCostCalculator() {
             onChange={(e) => setSqft(Math.max(400, Number(e.target.value) || 400))}
           />
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Pipe material
           <select
             className={field}
@@ -71,13 +71,13 @@ export default function RepipeCostCalculator() {
         </label>
       </div>
 
-      <div className="mt-6 rounded-lg bg-[#0F1F1D] p-4">
-        <p className="text-xs uppercase tracking-wide text-slate-400">{material.shortLabel} full-repipe estimate</p>
-        <p className="mt-1 text-2xl font-bold text-white">{money(result.low)}-{money(result.high)}</p>
+      <div className="mt-6 rounded-lg bg-paper p-4">
+        <p className="text-xs text-muted">{material.shortLabel} full-repipe estimate</p>
+        <p className="mt-1 text-2xl font-bold text-ink">{money(result.low)}-{money(result.high)}</p>
       </div>
 
       {materialId === "copper" && (
-        <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+        <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
           <p>
             For comparison, the same home repiped in PEX would run roughly{" "}
             <strong>{money(result.pexLow)}-{money(result.pexHigh)}</strong> - most DFW repipe jobs today
@@ -86,8 +86,8 @@ export default function RepipeCostCalculator() {
         </div>
       )}
 
-      <p className="mt-4 text-xs text-slate-400">{material.note}</p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">{material.note}</p>
+      <p className="mt-2 text-xs text-muted">
         {perSqFtRate.note} These are planning estimates only, not a quote - the number of fixtures, whether
         your home is slab or pier-and-beam, attic/crawlspace access, and any drywall repair all move the
         real number. A licensed plumber&apos;s walkthrough is the only way to get an exact price.

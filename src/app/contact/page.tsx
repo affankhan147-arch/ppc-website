@@ -43,7 +43,7 @@ const contactFaqs = [
   }
 ];
 
-const link = "text-[#4FD1C5] underline hover:text-white";
+const link = "font-bold text-accent underline hover:text-ink";
 
 export default function ContactPage() {
   return (
@@ -54,26 +54,24 @@ export default function ContactPage() {
           breadcrumbSchema([{ name: "Contact", path: "/contact" }])
         ]}
       />
-      <div className="answer-grid">
-        <article>
-          <p className="section-kicker">Contact</p>
-          <h1 className="mt-3 text-4xl font-black text-white">Request urgent plumbing help</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
-            Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
-          </p>
-          <div className="mt-6">
-            <CallButton location="contact-top" pagePath="/contact" pageType="contact" service="Emergency plumbing" city="Dallas-Fort Worth" />
-          </div>
+      <section className="content-section">
+        <h1 className="display-title font-bold text-ink">Request urgent plumbing help</h1>
+        <p className="lead mt-4 text-ink-2">
+          Share your city, service need, urgency, and phone number. {siteConfig.serviceStatement}
+        </p>
+        <div className="mt-6">
+          <CallButton location="contact-top" pagePath="/contact" pageType="contact" service="Emergency plumbing" city="Dallas-Fort Worth" />
+        </div>
+        <div className="mt-6">
           <DirectAnswer>
             For active water, wastewater, or essential fixture problems, call if safe. Forms are useful when you can briefly describe the issue and your location.
           </DirectAnswer>
-        </article>
-      </div>
+        </div>
+      </section>
 
       <section className="content-section">
-        <p className="section-kicker">Before you call</p>
-        <h2 className="mt-2 text-2xl font-black text-white">What to have ready when you call</h2>
-        <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">What to have ready when you call</h2>
+        <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-ink-2">
           <li>Your city or ZIP code, so the call reaches a provider that covers your area.</li>
           <li>Which fixture changed first, and whether other drains or toilets react at the same time.</li>
           <li>Whether the water is clean supply water or dirty wastewater.</li>
@@ -83,9 +81,8 @@ export default function ContactPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">Safety first</p>
-        <h2 className="mt-2 text-2xl font-black text-white">When to call 911 or your utility before a plumber</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">When to call 911 or your utility before a plumber</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           If you smell gas, leave the home and call 911 or your gas company from outside. If water is near outlets, a breaker
           panel or appliances, stay out of the water and switch power off at the panel only if you can reach it safely. For a
           broken water main in the street or at the meter, call your city water utility first. Once everyone is safe, a plumber
@@ -94,9 +91,8 @@ export default function ContactPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">Find the right page</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Service areas, services and guides</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">Service areas, services and guides</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Browse <Link href="/cities" className={link}>emergency plumbing by city</Link>, compare{" "}
           <Link href="/services" className={link}>24/7 plumbing services</Link>, check{" "}
           <Link href="/cost-guides" className={link}>plumbing cost guides</Link> before you approve work, or match your symptom in
@@ -114,8 +110,7 @@ export default function ContactPage() {
       />
 
       <section className="content-section">
-        <p className="section-kicker">Service-area note</p>
-        <p className="mt-2 leading-7 text-slate-300">{siteConfig.disclosure}</p>
+        <p className="leading-7 text-ink-2">{siteConfig.disclosure}</p>
       </section>
     </main>
   );
