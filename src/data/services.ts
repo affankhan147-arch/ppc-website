@@ -163,7 +163,7 @@ export const services: Service[] = [
     slug: "commercial-emergency-plumbing",
     name: "commercial emergency plumbing",
     categorySlug: "emergency-plumbing",
-    shortAnswer: "A commercial plumber in DFW helps businesses when plumbing stops operations -- drain backups, restrooms out of service, water-heater failure, and leaks that stop work. Commercial plumbing services cover the fixtures and equipment a business depends on, and businesses should call quickly when plumbing affects customers or risks property damage, since downtime and code compliance matter.",
+    shortAnswer: "A commercial plumber in DFW helps businesses when plumbing stops operations -- drain backups, restrooms out of service, water-heater failure, and leaks that stop work. A commercial plumbing contractor covers the fixtures and equipment a business depends on, and businesses should call quickly when plumbing affects customers or risks property damage, since downtime and code compliance matter.",
     urgency: "High",
     symptoms: ["restroom shutdown", "kitchen drain backup", "water on floor", "tenant complaints", "business interruption"],
     steps: ["Stop affected equipment.", "Block off unsafe areas.", "Document impacted fixtures.", "Request commercial plumbing help."],

@@ -56,13 +56,21 @@ export default async function ServicePage({ params }: Props) {
   const pageHeading = service.seoH1 ?? `${displayName} in Dallas-Fort Worth`;
   const path = `/services/${service.slug}`;
   const enhancement = serviceEnhancements[service.slug];
+  const svcFaqEnh = serviceFaqEnhancements[service.slug] || [];
+  // faqSeed questions with a real answer in serviceFaqEnhancements must not
+  // also render with the generic stock answer below.
+  const answeredFaqQuestions = new Set(
+    svcFaqEnh.map((faq) => faq.question.toLowerCase().trim().replace(/\s+/g, " "))
+  );
   const faqs = [
     ...(enhancement?.extraFaqs || []),
-    ...(serviceFaqEnhancements[service.slug] || []),
-    ...service.faqSeed.map((question) => ({
-      question,
-      answer: `${service.shortAnswer} The safest next step is to stop water use where possible, describe the affected fixtures, and request a provider connection.`
-    })),
+    ...svcFaqEnh,
+    ...service.faqSeed
+      .filter((question) => !answeredFaqQuestions.has(question.toLowerCase().trim().replace(/\s+/g, " ")))
+      .map((question) => ({
+        question,
+        answer: `${service.shortAnswer} The safest next step is to stop water use where possible, describe the affected fixtures, and request a provider connection.`
+      })),
     ...emergencyFaqs,
     ...universalFaqs
   ].slice(0, 8);
