@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import WaterSoftenerCostCalculator from "@/components/WaterSoftenerCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/water-softener-cost-calculator";
 const TITLE = "Water Softener Cost & Sizing Calculator for DFW";
@@ -60,17 +61,19 @@ export default function WaterSoftenerCostCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             DFW&apos;s water runs Hard to Very Hard almost everywhere in the metro. Pick your city and
             household size to see the grain capacity you need and a real installed cost range, built
             from this site&apos;s own cited hardness data and HomeAdvisor&apos;s 2025/2026 cost figures.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-water-softener-cost-calculator-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage(undefined, 3)}
               alt={`${TITLE} - Water heater inspection in a DFW home with hard water scale buildup`}
@@ -83,38 +86,38 @@ export default function WaterSoftenerCostCalculatorPage() {
 
           <WaterSoftenerCostCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why DFW&apos;s hard water matters</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why DFW&apos;s hard water matters</h2>
+            <p className="text-ink-2 mb-4">
               Hard water doesn&apos;t just leave spots on glassware - the calcium and magnesium minerals
               it carries build up as scale inside water heater tanks, cutting efficiency and shortening
               the heater&apos;s life. Our{" "}
-              <Link href="/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" className="text-[#F0B429] underline">
+              <Link href="/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" className="text-accent underline">
                 DFW water hardness by city guide
               </Link>{" "}
               covers exactly how that scale buildup affects your water heater, city by city.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               If your water heater is already showing scale-related symptoms, our{" "}
-              <Link href="/tools/water-heater-repair-or-replace-calculator" className="text-[#F0B429] underline">
+              <Link href="/tools/water-heater-repair-or-replace-calculator" className="text-accent underline">
                 water heater repair-or-replace calculator
               </Link>{" "}
               can help you decide whether to fix it now or replace it - softening the water going forward
               protects whichever heater you end up with.
             </p>
-            <p className="text-slate-300 mt-4">
+            <p className="text-ink-2 mt-4">
               A softener only solves hardness. If you&apos;re also dealing with chlorine/chloramine taste,
               cloudy water, or want better drinking-water purity, our{" "}
-              <Link href="/tools/water-filtration-system-selector" className="text-[#F0B429] underline">
+              <Link href="/tools/water-filtration-system-selector" className="text-accent underline">
                 water filtration system selector
               </Link>{" "}
               covers those separately, with its own real installed-cost range.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.homeadvisor.com/cost/kitchens/water-softener-installation-costs" className="underline" target="_blank" rel="noopener noreferrer">
                   HomeAdvisor: How Much Does a Water Softener System Cost to Install?
@@ -131,24 +134,24 @@ export default function WaterSoftenerCostCalculatorPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for property managers, real estate agents, home inspectors, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

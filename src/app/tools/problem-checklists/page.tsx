@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources } from "@/data/externalSources";
 import { EmbedHowTo, WidgetHero } from "@/components/WidgetPageExtras";
 import { problems } from "@/data/problems";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 export const metadata = buildMetadata({
   title: "Free DFW Plumbing Problem Checklist Badges",
@@ -56,24 +57,26 @@ export default function ProblemChecklistsPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tools</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">
             Free DFW Plumbing Problem Checklist Badges
           </h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={"Free DFW Plumbing Problem Checklist Badges"} />
+          <p className="lead mt-4 mb-6">
             Six free, embeddable badges covering our highest-severity plumbing emergencies, each
             pointing to the full warning-sign list published on the matching guide. Useful for
             real estate, property-management, and home-inspection sites that want a quick safety
             reference. All 15 situations are covered in the{" "}
-            <Link href="/problems" className="text-[#F0B429] underline">
+            <Link href="/problems" className="text-accent underline">
               full problem guide directory
             </Link>
             .
           </p>
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <div className="mb-6">
+            <CallButton location="tool-problem-checklists-top" />
+          </div>
+
+          <div className="bg-paper border-l-4 border-call p-5 mb-8 text-ink-2 text-sm">
             <p>
               Free to use on any site. Keep each badge linked to its source guide so readers can
               see the full warning-sign list - don&apos;t alter the badge image or strip the link.
@@ -83,15 +86,15 @@ export default function ProblemChecklistsPage() {
 
           <WidgetHero alt="Free DFW plumbing problem checklist badges for real estate, property management and home inspection sites" serviceSlug="burst-pipe-emergency" seed={1} />
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a problem checklist badge, copy the code</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-4">Pick a problem checklist badge, copy the code</h2>
             <div className="space-y-8">
               {featured.map((problem) => {
                 const alt = `${problem.title}: ${problem.warningSigns.length} warning signs to know - by Plumbing Hands`;
                 const code = embedSnippet(problem.slug, alt);
                 return (
-                  <div key={problem.slug} className="border border-[#1A3A38] rounded-xl p-4">
-                    <p className="text-white font-semibold mb-2">{problem.title}</p>
+                  <div key={problem.slug} className="border border-rule rounded-card p-4">
+                    <p className="text-ink font-semibold mb-2">{problem.title}</p>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`/api/widgets/problem-checklist/${problem.slug}`}
@@ -99,7 +102,7 @@ export default function ProblemChecklistsPage() {
                       height={26}
                       className="mb-2"
                     />
-                    <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto">
+                    <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto">
                       <code>{code}</code>
                     </pre>
                   </div>
@@ -108,14 +111,14 @@ export default function ProblemChecklistsPage() {
             </div>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">What each problem checklist covers</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">What each problem checklist covers</h2>
+            <p className="text-ink-2 mb-4">
               Every badge links to a full Plumbing Hands problem guide with the warning signs, first steps, mistakes to avoid and the
               point where the situation becomes urgent. The badge shows how many warning signs that guide lists, so readers know at a
               glance there is a short, practical checklist behind it.
             </p>
-            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+            <ul className="list-disc space-y-2 pl-5 text-ink-2">
               {featured.map((problem) => (
                 <li key={`cover-${problem.slug}`}>
                   {problem.title}: {problem.warningSigns.length} warning signs, plus first steps and what not to do.

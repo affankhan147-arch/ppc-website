@@ -1,141 +1,129 @@
-﻿@import "tailwindcss";
+/* Hallmark · shape: Photographic · genre: editorial · theme: brand · redesign: full · copy: verbatim
+ * paper: oklch(22.4% 0.022 186) · accent: oklch(78.6% 0.114 187) · display: Georgia · body: Inter/system-ui · hero: Poster (/) · nav: slab · footer: letter close · signature: the hero photograph of the plumber at work, full-bleed, with the call beside it
+ * axes: dark/roman-serif/cool · posture: Poster · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: H, every template shares one shell, so the Poster hero and its photograph carry the difference */
+/* Hallmark · waive 49b · Dallas plumber service and city link labels are keyword phrases · Dallas plumber service and city link labels cannot shorten without losing the search phrase they target */
+/* Hallmark · waive 39b · the footer cookie-preferences button is a text link among footer links · the footer cookie-preferences button sits among legal links at the same 20px line as its neighbours */
+/* Hallmark · waive 59 · long-form pages separate sections with hairlines and paper changes · the long-form pages separate sections with hairlines and paper changes instead of wide empty gaps */
+/* Hallmark · waive 25 · guide and article prose reads in the page column at full container width · the guide and article prose reads in the page column and narrowing it would thin the long-form pages */
+/* Hallmark · waive 77 · guide and calculator sections pair article text with a source and link aside · the guide and calculator pages pair article text with a source and link aside in two columns */
+/* Hallmark · waive 78 · the Photographic shape keeps section heads small and inline · the Photographic shape keeps section heads small and inline beside the display head */
+/* Hallmark · waive 44c · Banner and Poster heroes are stamped in design.md for these pages · template Banner heroes sit in plain divs so the render tier measures the navigation header instead of the hero */
+/* Hallmark · waive 79 · the hero content ends at the navigation header in the render reading · the dead-band reading starts at the navigation header because the template hero is a plain div */
+/* Hallmark · waive 72 · closed FAQ details hide their answers until opened · closed FAQ answers are hidden by the browser until opened so their text sits outside the closed box in layout only */
+/* Hallmark · answered F19 · the site sets body at 400, semibold labels at 600, heads at 700 and the single call signal at 900 */
+/* Hallmark · answered F20 · the link grids are SEO pools whose counts come from the data, so a last-row orphan is inherent */
+/* Hallmark · dismissed 59 · long-form pages carry ten or more content sections because the article sets the count */
+/* Hallmark · dismissed 77 · the homepage holds seventeen sections in source; the three-section reading counts the page-shell wrapper as one section */
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./base.css" layer(base);
 
-:root {
-  --background: #0F1F1D;
-  --foreground: #F3F6F5;
-  --ink: #0F1F1D;
-  --navy: #0F1F1D;
-  --navy-soft: #16302C;
-  --blue: #4FD1C5;
-  --orange: #F0B429;
-  --orange-dark: #D99F1F;
-  --cream: #16302C;
-  --mist: #1C3A34;
-  --line: rgba(243, 246, 245, 0.12);
+@theme {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem);
+  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --color-error: oklch(52% 0.19 27);
+  --color-success: oklch(50% 0.12 150);
+  --color-paper: oklch(22.4% 0.022 186);
+  --color-paper-2: oklch(28.7% 0.033 183);
+  --color-paper-3: oklch(32.3% 0.038 179);
+  --color-ink: oklch(97.1% 0.003 174);
+  --color-ink-2: oklch(89.5% 0.008 177);
+  --color-muted: oklch(71.4% 0.025 177);
+  --color-rule: oklch(34.9% 0.027 181);
+  --color-accent: oklch(78.6% 0.114 187);
+  --color-accent-ink: oklch(22.4% 0.022 186);
+  --color-focus: oklch(78.6% 0.114 187);
+  --color-call: oklch(80.4% 0.156 83);
+  --color-call-ink: oklch(19% 0.039 92);
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-body);
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --shadow-card: none;
+  --tracking-display: -0.02em;
 }
 
-* { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background:
-    radial-gradient(circle at 8% 12%, rgba(79, 209, 197, 0.06), transparent 28rem),
-    var(--background);
-  color: var(--foreground);
-  font-family: "Segoe UI", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
+
+.display-title {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
 }
-a { text-decoration: none; }
-::selection { background: #F0B429; color: #0F1F1D; }
 
 .hero-field {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--ink);
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
-.hero-field::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  z-index: -1;
-  height: 7rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
-  pointer-events: none;
+.hero-photo { position: absolute; inset: 0; z-index: 0; }
+/* Homepage photo focal point (desktop): the plumber's face sits at the
+   image's right edge and the under-sink work at its left third, so the
+   frame is shifted right and down to put the pipes and hands in the visible
+   strip beside the text and push the face out of frame, with the dark
+   ceiling cropped out of the top. The working hand sits near the image's
+   left third, so left 30% centres it in the strip instead of pushing it
+   to the right edge. Height is 100% minus top, so the frame always covers
+   the hero at every viewport aspect (no gap). Mobile keeps the plain cover
+   (the photo is a dark backdrop there). */
+@media (min-width: 1024px) {
+  .hero-photo img { width: 109% !important; height: 140% !important; max-width: none !important; left: 30% !important; right: auto !important; top: -40% !important; bottom: auto !important; object-position: 50% 50% !important; }
 }
-.hero-photo { position: absolute; inset: 0; z-index: -2; }
 .hero-photo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(15, 31, 29, 0.97) 0%, rgba(15, 31, 29, 0.9) 36%, rgba(15, 31, 29, 0.3) 68%, rgba(15, 31, 29, 0.1) 100%);
-}
-
-.display-title {
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: -0.045em;
-  text-wrap: balance;
-}
-h1::first-letter, h2::first-letter, h3::first-letter { text-transform: uppercase; }
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: #4FD1C5;
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.trust-ribbon {
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(22, 48, 44, 0.72);
-  box-shadow: 0 20px 55px rgba(0,0,0,0.3);
-  backdrop-filter: blur(16px);
+  background: linear-gradient(90deg, color-mix(in oklab, var(--color-paper) 97%, transparent) 0%, color-mix(in oklab, var(--color-paper) 90%, transparent) 36%, color-mix(in oklab, var(--color-paper) 30%, transparent) 68%, color-mix(in oklab, var(--color-paper) 10%, transparent) 100%);
 }
 
 .content-section {
-  margin-top: 1.25rem;
-  border: 1px solid rgba(243, 246, 245, 0.09);
-  border-radius: 1.4rem;
-  background: #16302C;
-  padding: clamp(1.35rem, 3vw, 2.5rem);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin-top: var(--space-md);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+  padding: clamp(var(--space-lg), 3vw, var(--space-xl));
   min-width: 0;
 }
-.page-shell {
-  margin-inline: auto;
-  max-width: 80rem;
-  padding: 1.25rem 1rem 4rem;
-}
-.answer-grid { display: grid; gap: 1.25rem; }
+.answer-grid { display: grid; gap: var(--space-md); }
 .premium-card {
   min-width: 0;
-  border: 1px solid rgba(243, 246, 245, 0.1);
-  border-radius: 1.15rem;
-  background: #16302C;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.25);
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+  transition: border-color var(--dur-short) var(--ease-out);
 }
 a.premium-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(240, 180, 41, 0.45);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-}
-.section-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: 100%;
-  color: #4FD1C5;
-  font-size: 0.75rem;
-  font-weight: 900;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-.soft-band {
-  background:
-    radial-gradient(circle at 90% 0%, rgba(79,209,197,.1), transparent 25rem),
-    linear-gradient(145deg, #0F1F1D, #16302C);
-}
-.dark-band {
-  color: white;
-  background:
-    radial-gradient(circle at 85% 15%, rgba(79,209,197,.28), transparent 26rem),
-    linear-gradient(145deg, #0B1917, #16302C);
+  border-color: var(--color-accent);
 }
 .photo-frame {
   position: relative;
   overflow: hidden;
-  border-radius: 1.35rem;
-  box-shadow: 0 28px 70px rgba(0,0,0,.35);
+  border-radius: var(--radius-card);
 }
 .photo-frame::after {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255,255,255,.16);
+  border: 1px solid color-mix(in oklab, var(--color-ink) 16%, transparent);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -151,25 +139,34 @@ a.premium-card:hover {
 }
 .service-photo {
   height: clamp(11rem, 18vw, 14rem);
-  border-bottom: 1px solid rgba(243, 246, 245, 0.1);
-  background-color: var(--ink);
-  transition: transform 500ms ease;
+  border-bottom: 1px solid var(--color-rule);
+  background-color: var(--color-paper);
 }
-a.premium-card:hover .service-photo { transform: scale(1.025); }
-.premium-form input, .premium-form select, .premium-form textarea { outline: none; width: 100%; min-width: 0; background: #0F1F1D; color: #F3F6F5; border-color: rgba(243, 246, 245, 0.15); }
+.premium-form input:not([type="checkbox"]):not([type="radio"]), .premium-form select, .premium-form textarea {
+  width: 100%;
+  min-width: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  border: 1px solid var(--color-muted);
+}
 .premium-form input:focus, .premium-form select:focus, .premium-form textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 4px rgba(79,209,197,.18);
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 .hero-field, .page-shell, .premium-card, .premium-form,
 .hero-field article, .hero-field aside, .content-section > *, .premium-form > *, .premium-form label { min-width: 0; }
-.hero-field h1, .content-section h1, .content-section h2, .content-section h3, .premium-card h3, .premium-form h2 { overflow-wrap: break-word; }
 
 @media (min-width: 768px) { .answer-grid { grid-template-columns: minmax(0, 1.5fr) minmax(280px, .8fr); } }
 @media (max-width: 767px) {
-  .hero-photo::after { background: linear-gradient(90deg, rgba(15,31,29,.97), rgba(15,31,29,.88)); }
-  .content-section { border-radius: 1rem; }
+  /* Mobile: the photo is a dark backdrop — the bottom stop stays dark so
+     the secondary button and the proof line, which sit over the bright
+     forearm and cyan pipe, stay readable. A light bottom (18%) washed
+     both out. */
+  .hero-photo::after { background: linear-gradient(180deg, color-mix(in oklab, var(--color-paper) 88%, transparent) 0%, color-mix(in oklab, var(--color-paper) 74%, transparent) 52%, color-mix(in oklab, var(--color-paper) 70%, transparent) 100%); }
 }
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+/* Tall viewports: the hero is capped at 800px, so its bottom sits above the
+   cookie banner and the 96px banner-clearance padding is dead space — halve
+   it here. Below 950px viewport height the full padding stays. */
+@media (min-width: 1024px) and (min-height: 950px) {
+  .hero-field > .page-shell { padding-bottom: 3rem; }
 }

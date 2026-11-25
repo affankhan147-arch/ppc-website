@@ -1,10 +1,11 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources } from "@/data/externalSources";
 import { EmbedHowTo, WidgetHero } from "@/components/WidgetPageExtras";
 import { costGuides } from "@/data/costGuides";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 export const metadata = buildMetadata({
   title: "Free DFW Cost Guide Checklist Badges (Embeddable)",
@@ -39,13 +40,11 @@ export default function CostGuideChecklistsPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tools</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">
             Free DFW Cost Guide Checklist Badges
           </h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={"Free DFW Cost Guide Checklist Badges"} />
+          <p className="lead mt-4 mb-6">
             Six free, embeddable badges - one per emergency plumbing issue - showing how many
             key questions homeowners should ask before approving repair work. Each count is
             pulled directly from our published cost guides, so it stays accurate if a guide is
@@ -53,7 +52,11 @@ export default function CostGuideChecklistsPage() {
             that want a quick, trustworthy contractor-vetting reference.
           </p>
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <div className="mb-6">
+            <CallButton location="tool-cost-guide-checklists-top" />
+          </div>
+
+          <div className="bg-paper border-l-4 border-call p-5 mb-8 text-ink-2 text-sm">
             <p>
               Free to use on any site. Keep each badge linked to its source cost guide so readers
               can see the full list of questions - don&apos;t alter the badge image or strip the
@@ -63,15 +66,15 @@ export default function CostGuideChecklistsPage() {
 
           <WidgetHero alt="Free DFW cost guide checklist badges listing the questions to ask before approving plumbing work" serviceSlug="24-hour-emergency-plumber" seed={2} />
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Pick a cost checklist badge, copy the code</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-4">Pick a cost checklist badge, copy the code</h2>
             <div className="space-y-8">
               {costGuides.map((guide) => {
                 const alt = `${guide.title}: ${guide.questionsToAsk.length} key questions to ask - by Plumbing Hands`;
                 const code = embedSnippet(guide.slug, alt);
                 return (
-                  <div key={guide.slug} className="border border-[#1A3A38] rounded-xl p-4">
-                    <p className="text-white font-semibold mb-2">{guide.title}</p>
+                  <div key={guide.slug} className="border border-rule rounded-card p-4">
+                    <p className="text-ink font-semibold mb-2">{guide.title}</p>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`/api/widgets/cost-checklist/${guide.slug}`}
@@ -79,7 +82,7 @@ export default function CostGuideChecklistsPage() {
                       height={26}
                       className="mb-2"
                     />
-                    <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto">
+                    <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto">
                       <code>{code}</code>
                     </pre>
                   </div>
@@ -88,14 +91,14 @@ export default function CostGuideChecklistsPage() {
             </div>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Why a cost checklist helps before you approve work</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Why a cost checklist helps before you approve work</h2>
+            <p className="text-ink-2 mb-4">
               Emergency plumbing prices vary by provider, time of day and how hard the problem is to reach, so a single price range
               rarely tells a homeowner much. A short list of questions does more. It turns a rushed phone call into a clear, written
               scope before anyone opens a wall or snakes a line.
             </p>
-            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+            <ul className="list-disc space-y-2 pl-5 text-ink-2">
               <li>Ask for the scope and the price in writing before work starts.</li>
               <li>Ask whether the call-out or diagnostic fee is credited toward the repair.</li>
               <li>Confirm the after-hours, weekend or holiday rate if it applies.</li>

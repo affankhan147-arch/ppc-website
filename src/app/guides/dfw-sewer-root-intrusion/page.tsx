@@ -2,6 +2,7 @@
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
+import { CallButton } from "@/components/CallButton";
 import { getArticleImage } from "@/lib/articleImages";
 
 export const metadata = buildMetadata({
@@ -31,19 +32,20 @@ export default function SewerRootGuidePage() {
       />
       <JsonLd data={articleSchema("/guides/dfw-sewer-root-intrusion", "Sewer Line Maintenance & Root Intrusion in DFW", "A research-backed guide explaining why DFW sewer lines are uniquely prone to root intrusion, how it's diagnosed, and what homeowners can do.")} />
 
-      <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Research Guide</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <main className="page-shell">
+        <article className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold text-ink">
             Sewer Line Maintenance &amp; Root Intrusion in DFW
           </h1>
           <Byline path="/guides/dfw-sewer-root-intrusion" />
 
-          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
-            <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>
-          </aside>
+          <p className="lead mt-6">Sewer root intrusion is a common cause of slow drains and backups in DFW neighborhoods with mature trees. This guide covers why it happens here, how it is diagnosed, the repair and prevention options, and how insurance usually treats it.</p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <div className="mt-6">
+            <CallButton location="guide-dfw-sewer-root-intrusion-top" />
+          </div>
+
+          <div className="photo-frame relative mt-6 h-64 w-full sm:h-80">
             <Image
               src={getArticleImage("main-sewer-line-clog", 0)}
               alt="Sewer camera inspection revealing root intrusion in a DFW sewer line"
@@ -54,88 +56,90 @@ export default function SewerRootGuidePage() {
             />
           </div>
 
-          <p className="text-lg leading-8 text-slate-200 mb-8">Sewer root intrusion is a common cause of slow drains and backups in DFW neighborhoods with mature trees. This guide covers why it happens here, how it is diagnosed, the repair and prevention options, and how insurance usually treats it.</p>
+          <aside role="note" className="bg-paper border-l-4 border-call p-5 text-ink-2 text-sm">
+            <p>This guide is for informational purposes only and does not constitute professional plumbing, legal, or insurance advice. Always consult a licensed professional for your specific situation.</p>
+          </aside>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: Why Sewer Root Intrusion Is Common in DFW</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 1: Why Sewer Root Intrusion Is Common in DFW</h2>
+            <p className="text-ink-2 mb-4">
               DFW’s expansive clay soil creates an environment where tree roots grow aggressively, and the region’s mature tree canopy means many older neighborhoods have decades‑old root systems seeking moisture. Sewer lines, particularly older cast‑iron or clay pipes, become prime targets – roots enter through tiny cracks, expand, and eventually cause complete blockages.
             </p>
-            <p className="text-slate-300 mb-4">
-              Local municipalities are clear about responsibility. The <a href="https://codelibrary.amlegal.com/codes/dallas/latest/dallas_tx/0-0-0-125444" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">City of Dallas&apos;s code (Sec. 49-24, Service Connections)</a> states the city is responsible for maintenance of the service connection from the main to the property line for wastewater service; the sewer lateral and other private plumbing are the homeowner&apos;s responsibility. <a href="https://www.fortworthtexas.gov/departments/neighborhoods/services/priority-repair" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Fort Worth offers a Priority Repair Program</a> for income‑eligible homeowners facing emergency sewer repairs, and <a href="https://www.arlingtontx.gov/cms/one.aspx?pageId=14973369" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">Arlington Water Utilities</a> covers structural failures specifically within the public right‑of‑way.
+            <p className="text-ink-2 mb-4">
+              Local municipalities are clear about responsibility. The <a href="https://codelibrary.amlegal.com/codes/dallas/latest/dallas_tx/0-0-0-125444" target="_blank" rel="noopener noreferrer" className="text-accent underline">City of Dallas&apos;s code (Sec. 49-24, Service Connections)</a> states the city is responsible for maintenance of the service connection from the main to the property line for wastewater service; the sewer lateral and other private plumbing are the homeowner&apos;s responsibility. <a href="https://www.fortworthtexas.gov/departments/neighborhoods/services/priority-repair" target="_blank" rel="noopener noreferrer" className="text-accent underline">Fort Worth offers a Priority Repair Program</a> for income‑eligible homeowners facing emergency sewer repairs, and <a href="https://www.arlingtontx.gov/cms/one.aspx?pageId=14973369" target="_blank" rel="noopener noreferrer" className="text-accent underline">Arlington Water Utilities</a> covers structural failures specifically within the public right‑of‑way.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               For homeowners, the practical takeaway is that the sewer lateral (the pipe from the property line to the house) is almost always your responsibility – and root intrusion is one of the most common causes of failure in that section.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: Diagnosis &amp; Detection</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 2: Diagnosis &amp; Detection</h2>
+            <p className="text-ink-2 mb-4">
               Root intrusion doesn’t happen overnight. The earliest signs are often subtle:
             </p>
-            <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
+            <ul className="list-disc list-inside text-ink-2 space-y-2 mb-4">
               <li>Recurring backups in the same drain, even after snaking.</li>
               <li>Gurgling sounds from toilets or floor drains when water is used elsewhere.</li>
               <li>Multiple fixtures reacting together – for example, when you flush a toilet, water rises in a tub or shower.</li>
               <li>Slow drains that don’t clear with plunging.</li>
             </ul>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               When a homeowner suspects a main sewer line issue, a professional sewer camera inspection is the standard diagnostic tool. A small camera is inserted into the line from a cleanout, allowing the technician to visually identify cracks, root intrusion, and the extent of the blockage.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               Hydro‑jetting is the most common clearing method for root intrusion. It uses high‑pressure water to cut through roots and clean the interior walls of the pipe. However, hydro‑jetting alone is often temporary – if the roots have already caused structural damage, a permanent repair may be needed.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: Repair &amp; Prevention</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 3: Repair &amp; Prevention</h2>
+            <p className="text-ink-2 mb-4">
               When roots have caused significant damage to a sewer line, repair options depend on the severity and location of the damage.
             </p>
-            <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4">
+            <ul className="list-disc list-inside text-ink-2 space-y-2 mb-4">
               <li><strong>Trenchless repair (pipe lining)</strong> – A resin‑impregnated liner is inserted into the existing pipe and cured in place, creating a new, seamless pipe inside the old one. This avoids excavation and is ideal for moderate damage.</li>
               <li><strong>Traditional excavation</strong> – For severe damage or when the pipe has collapsed, the section must be dug up and replaced. This is more disruptive but often the only option for major failures.</li>
             </ul>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               See what each option actually costs for your line&apos;s length in our{" "}
-              <a href="/tools/sewer-line-repair-cost-calculator" className="text-[#F0B429] underline">
+              <a href="/tools/sewer-line-repair-cost-calculator" className="text-accent underline">
                 sewer line repair cost calculator
               </a>
               , built from real 2026 published data.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               Prevention is more cost‑effective than repair. Homeowners can:
             </p>
-            <ul className="list-disc list-inside text-slate-300 space-y-2">
+            <ul className="list-disc list-inside text-ink-2 space-y-2">
               <li>Schedule periodic sewer camera inspections, especially for homes with mature trees near the sewer line path or older pipes, to catch root intrusion before it causes a full blockage.</li>
               <li>Avoid planting large trees near the sewer line path.</li>
               <li>Install a backwater valve to protect against sewer backups during heavy rain or municipal line overflows.</li>
             </ul>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: Insurance Coverage</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 4: Insurance Coverage</h2>
+            <p className="text-ink-2 mb-4">
               Root intrusion is classified as “gradual deterioration” – it develops over time and is not a sudden, accidental event. Therefore, standard homeowners policies typically exclude root‑related sewer line damage.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               To obtain coverage, homeowners must purchase a separate <strong>Sewer Backup Coverage</strong> or <strong>Service Line Coverage</strong> endorsement. These endorsements are two different products – they are not the same. “Sewer Backup Coverage” typically covers damage caused by backups (e.g., water rising into the house), while “Service Line Coverage” covers the repair or replacement of the pipe itself, including damage caused by roots.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               If you have the appropriate endorsement, filing a claim requires:
             </p>
-            <ul className="list-disc list-inside text-slate-300 space-y-2">
+            <ul className="list-disc list-inside text-ink-2 space-y-2">
               <li>A dated, documented diagnosis from a licensed plumber.</li>
               <li>Clear photos of the damage and the roots.</li>
               <li>All correspondence with your insurance company.</li>
             </ul>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               Homeowners should check their policy and confirm whether they have either endorsement – and understand that standard policies do not cover root intrusion.
             </p>
           </section>
 
-          <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
+          <div className="mt-12 pt-6 border-t border-rule text-muted text-sm">
             <p><strong>Have a plumbing emergency?</strong> Call PlumbingHands – DFW’s trusted emergency plumber, available 24/7.</p>
           </div>
 
@@ -150,8 +154,8 @@ export default function SewerRootGuidePage() {
               ]}
             />
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
     </>
   );
 }

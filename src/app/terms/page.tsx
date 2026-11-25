@@ -10,8 +10,8 @@ export const metadata = buildMetadata({
   path: "/terms"
 });
 
-const h2 = "mt-8 text-2xl font-bold text-white";
-const link = "text-[#4FD1C5] underline hover:text-white";
+const h2 = "text-2xl font-bold text-ink";
+const link = "font-bold text-accent underline hover:text-ink";
 
 export default function TermsPage() {
   return (
@@ -22,13 +22,14 @@ export default function TermsPage() {
           breadcrumbSchema([{ name: "Terms", path: "/terms" }])
         ]}
       />
-      <p className="section-kicker">Legal</p>
-      <h1 className="mt-3 text-4xl font-black text-white">Terms of use</h1>
-      <div className="content-section space-y-4 leading-7 text-slate-300">
-        <p>
+      <section className="content-section">
+        <h1 className="display-title font-bold text-ink">Terms of use</h1>
+        <p className="lead mt-4 text-ink-2">
           These terms apply when you use the Plumbing Hands website, its guides and calculators, its embeddable widgets, or the
           phone number and request forms shown on it. By using the site you agree to them.
         </p>
+      </section>
+      <div className="content-section space-y-4 leading-7 text-ink-2">
         <p>This website provides information and service request options. It does not guarantee availability, pricing, arrival time, results, licensing, insurance, or emergency response.</p>
 
         <h2 className={h2}>What this website is</h2>

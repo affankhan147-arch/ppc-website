@@ -61,12 +61,12 @@ export default function PressureRegulatorCostCalculator() {
     return () => clearTimeout(timer);
   }, [sizeId, typeId, hardToAccess, permitNeeded]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Line size
           <select className={field} value={sizeId} onChange={(e) => setSizeId(e.target.value as RegulatorSizeId)}>
             {regulatorSizes.map((s) => (
@@ -74,7 +74,7 @@ export default function PressureRegulatorCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Regulator type (for reference)
           <select className={field} value={typeId} onChange={(e) => setTypeId(e.target.value as RegulatorTypeId)}>
             {regulatorTypes.map((t) => (
@@ -85,33 +85,33 @@ export default function PressureRegulatorCostCalculator() {
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        <label className="flex items-center gap-2 text-sm text-slate-300">
+        <label className="flex items-center gap-2 text-sm text-ink-2">
           <input type="checkbox" checked={hardToAccess} onChange={(e) => setHardToAccess(e.target.checked)} />
           Regulator is hidden or hard to access (behind a wall, under a floor, in a crawl space)
         </label>
-        <label className="flex items-center gap-2 text-sm text-slate-300">
+        <label className="flex items-center gap-2 text-sm text-ink-2">
           <input type="checkbox" checked={permitNeeded} onChange={(e) => setPermitNeeded(e.target.checked)} />
           My city requires a permit and inspection for this work
         </label>
       </div>
 
-      <div className="mt-6 rounded-lg bg-[#0F1F1D] p-4">
-        <p className="text-xs uppercase tracking-wide text-slate-400">{size.shortLabel} installed estimate</p>
-        <p className="mt-1 text-2xl font-bold text-white">{money(result.low)}-{money(result.high)}</p>
+      <div className="mt-6 rounded-lg bg-paper p-4">
+        <p className="text-xs text-muted">{size.shortLabel} installed estimate</p>
+        <p className="mt-1 text-2xl font-bold text-ink">{money(result.low)}-{money(result.high)}</p>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">{size.note}</p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">{size.note}</p>
+      <p className="mt-2 text-xs text-muted">
         A {type.label.toLowerCase()} regulator&apos;s part alone typically runs {money(type.unitLow)}-{money(type.unitHigh)},
         separate from labor - this is shown for reference only and is not added on top of the installed estimate above,
         which already includes a typical part plus labor for that size category.
       </p>
-      <p className="mt-3 text-xs text-slate-400">
+      <p className="mt-3 text-xs text-muted">
         Simply repairing a failing regulator instead of replacing it typically runs {money(repairRange.low)}-{money(repairRange.high)} -
         worth asking about if the unit is otherwise new, but replacement is usually the better value once a repair
         quote gets close to half the cost of a new installed unit.
       </p>
-      <p className="mt-3 text-xs text-slate-400">
+      <p className="mt-3 text-xs text-muted">
         These are planning estimates only, not a quote - exact accessibility, local permit rules, and whether any
         after-hours or emergency work is involved all move the real number. A licensed plumber&apos;s on-site look
         is the only way to get an exact price.

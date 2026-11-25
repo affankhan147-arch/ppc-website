@@ -51,12 +51,12 @@ export default function WaterServiceLineCostCalculator() {
     return () => clearTimeout(timer);
   }, [methodId, materialId, length]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-3">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Distance from street/meter to house (ft)
           <input
             className={field}
@@ -68,7 +68,7 @@ export default function WaterServiceLineCostCalculator() {
             onChange={(e) => setLength(Math.max(10, Number(e.target.value) || 10))}
           />
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Installation method
           <select
             className={field}
@@ -80,7 +80,7 @@ export default function WaterServiceLineCostCalculator() {
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Pipe material
           <select
             className={field}
@@ -94,23 +94,23 @@ export default function WaterServiceLineCostCalculator() {
         </label>
       </div>
 
-      <div className="mt-6 rounded-lg bg-[#0F1F1D] p-4">
-        <p className="text-xs uppercase tracking-wide text-slate-400">{method.shortLabel} estimate for {length} ft</p>
-        <p className="mt-1 text-2xl font-bold text-white">{money(result.low)}-{money(result.high)}</p>
+      <div className="mt-6 rounded-lg bg-paper p-4">
+        <p className="text-xs text-muted">{method.shortLabel} estimate for {length} ft</p>
+        <p className="mt-1 text-2xl font-bold text-ink">{money(result.low)}-{money(result.high)}</p>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">{method.note}</p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">{method.note}</p>
+      <p className="mt-2 text-xs text-muted">
         {material.label} material itself typically runs {money(material.perFootMaterialLow)}-{money(material.perFootMaterialHigh)} per linear foot,
         separate from labor - jobs using {material.label.toLowerCase()} tend to land toward the {material.tendsToward === "high" ? "higher" : "lower"} end
         of the installed estimate above rather than changing the total directly.
       </p>
-      <p className="mt-3 text-xs text-slate-400">{distanceAddOn.note}</p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-3 text-xs text-muted">{distanceAddOn.note}</p>
+      <p className="mt-2 text-xs text-muted">
         A single spot repair (one failure point, not a full replacement) typically runs {money(spotRepairRange.low)}-{money(spotRepairRange.high)} instead.
         Most DFW cities also require a permit (typically {money(permitRange.low)}-{money(permitRange.high)}) for this work.
       </p>
-      <p className="mt-3 text-xs text-slate-400">
+      <p className="mt-3 text-xs text-muted">
         These are planning estimates only, not a quote - soil type, depth, driveway or sidewalk crossings, and how
         far the house sits from the connection point all move the real number. A licensed plumber&apos;s on-site
         walkthrough is the only way to get an exact price.

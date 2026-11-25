@@ -5,6 +5,7 @@ import { sources } from "@/data/externalSources";
 import { EmbedHowTo } from "@/components/WidgetPageExtras";
 import { siteConfig } from "@/data/site";
 import { categoryLabels, categoryOrder, getWidgetFactsByCategory } from "@/data/widgetFacts";
+import { CallButton } from "@/components/CallButton";
 
 export const metadata = buildMetadata({
   title: "Free DFW Plumbing Data Badges (Embeddable)",
@@ -39,23 +40,26 @@ export default function DfwDataBadgesPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tools</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">
             Free DFW Plumbing Data Badges
           </h1>
-          <p className="text-slate-300 mb-6">
+          <p className="lead mt-4 mb-6">
             A small set of free, embeddable badges covering real Dallas-Fort Worth data - winter
             freeze risk, population growth, and water heater lifespan. Useful for home-services
             blogs, insurance and property-management sites, and local news or newsletter writers
             who want a quick, accurate reference. Looking for water hardness by city? See our{" "}
-            <a href="/tools/water-hardness-widget" className="text-[#F0B429] underline">
+            <a href="/tools/water-hardness-widget" className="text-accent underline">
               water hardness widget
             </a>{" "}
             instead.
           </p>
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <div className="mb-6">
+            <CallButton location="tool-dfw-data-badges-top" />
+          </div>
+
+          <div className="bg-paper border-l-4 border-call p-5 mb-8 text-ink-2 text-sm">
             <p>
               Free to use on any site. Keep each badge linked to its source page so readers can see
               the underlying data - don&apos;t alter the badge image or strip the link. That&apos;s
@@ -68,7 +72,7 @@ export default function DfwDataBadgesPage() {
               <a
                 key={category}
                 href={`#${category}`}
-                className="rounded-full border border-[#1A3A38] px-4 py-1.5 text-sm font-semibold text-slate-300 hover:border-[#F0B429] hover:text-[#F0B429]"
+                className="rounded-pill border border-rule px-4 py-1.5 text-sm font-semibold text-ink-2 hover:border-accent hover:text-accent"
               >
                 {categoryLabels[category]}
               </a>
@@ -79,15 +83,15 @@ export default function DfwDataBadgesPage() {
             const facts = getWidgetFactsByCategory(category);
             if (facts.length === 0) return null;
             return (
-              <section key={category} id={category} className="mb-10 scroll-mt-24">
-                <h2 className="text-xl font-semibold text-[#F0B429] mb-4">{categoryLabels[category]}</h2>
+              <section key={category} id={category} className="content-section scroll-mt-24">
+                <h2 className="text-2xl font-bold text-ink mb-4">{categoryLabels[category]}</h2>
                 <div className="space-y-8">
                   {facts.map((fact) => {
                     const alt = `${fact.label}: ${fact.value} - DFW data badge by Plumbing Hands`;
                     const code = embedSnippet(fact.slug, fact.linkPath, alt);
                     return (
-                      <div key={fact.slug} className="border border-[#1A3A38] rounded-xl p-4">
-                        <p className="text-white font-semibold mb-2">{fact.label}</p>
+                      <div key={fact.slug} className="border border-rule rounded-card p-4">
+                        <p className="text-ink font-semibold mb-2">{fact.label}</p>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={`/api/widgets/facts/${fact.slug}`}
@@ -95,8 +99,8 @@ export default function DfwDataBadgesPage() {
                           height={26}
                           className="mb-2"
                         />
-                        <p className="text-slate-400 text-xs mb-3">Source: {fact.sourceNote}</p>
-                        <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto">
+                        <p className="text-muted text-xs mb-3">Source: {fact.sourceNote}</p>
+                        <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto">
                           <code>{code}</code>
                         </pre>
                       </div>

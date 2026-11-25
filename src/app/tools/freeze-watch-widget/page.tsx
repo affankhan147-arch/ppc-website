@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources } from "@/data/externalSources";
 import { EmbedHowTo } from "@/components/WidgetPageExtras";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 export const metadata = buildMetadata({
   title: "Free DFW Freeze Watch Widget (Live, Embeddable)",
@@ -37,13 +38,11 @@ export default function FreezeWatchWidgetPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tools - Live Data</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">
             Free DFW Freeze Watch Widget
           </h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={"Free DFW Freeze Watch Widget"} />
+          <p className="lead mt-4 mb-6">
             Unlike our other badges, this one updates automatically. It pulls the current
             overnight low forecast for Dallas-Fort Worth directly from the National Weather
             Service and flips to a freeze-risk warning whenever the forecast low is 32F or
@@ -51,7 +50,11 @@ export default function FreezeWatchWidgetPage() {
             that want a live winter-prep reminder without maintaining it themselves.
           </p>
 
-          <div className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
+          <div className="mb-6">
+            <CallButton location="tool-freeze-watch-widget-top" />
+          </div>
+
+          <div className="bg-paper border-l-4 border-call p-5 mb-8 text-ink-2 text-sm">
             <p>
               Free to use on any site. The badge refreshes roughly hourly and never shows data
               older than a few hours. Keep it linked to the source page - don&apos;t alter the
@@ -59,9 +62,9 @@ export default function FreezeWatchWidgetPage() {
             </p>
           </div>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-4">Live preview</h2>
-            <div className="border border-[#1A3A38] rounded-xl p-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-4">Live preview</h2>
+            <div className="border border-rule rounded-card p-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/api/widgets/freeze-watch"
@@ -69,34 +72,34 @@ export default function FreezeWatchWidgetPage() {
                 height={26}
                 className="mb-3"
               />
-              <p className="text-slate-400 text-xs mb-3">
+              <p className="text-muted text-xs mb-3">
                 Source: National Weather Service forecast for the Dallas-Fort Worth area (FWD
                 office). Freeze risk is flagged when the forecast low is 32F or below.
               </p>
-              <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto">
+              <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto">
                 <code>{embedCode}</code>
               </pre>
             </div>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">How the freeze watch widget works</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">How the freeze watch widget works</h2>
+            <p className="text-ink-2 mb-4">
               The badge reads the National Weather Service forecast for the Dallas-Fort Worth area, issued by the NWS office in
               Fort Worth, and shows the coming overnight low. When that low is 32F or colder it switches to a freeze-risk warning.
               It refreshes roughly every hour, so any site that embeds it always shows the current forecast without anyone editing
               the page, and it goes quiet again on its own once the cold snap passes.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               Pipes in unheated attics, garages, crawl spaces and exterior walls are the most exposed, and the risk grows the longer
               temperatures stay below freezing. A single cold night is usually less dangerous than two or three hard-freeze nights in a
               row, which is when DFW homes see the most burst pipes.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">What to do when the widget shows a freeze warning</h2>
-            <ul className="list-disc space-y-2 pl-5 text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">What to do when the widget shows a freeze warning</h2>
+            <ul className="list-disc space-y-2 pl-5 text-ink-2">
               <li>Let faucets on exterior walls drip slowly overnight so water keeps moving through the pipes.</li>
               <li>Open the cabinet doors under kitchen and bathroom sinks on outside walls so warm air can reach the pipes.</li>
               <li>Disconnect and drain garden hoses, and cover outdoor hose bibs.</li>
@@ -106,12 +109,12 @@ export default function FreezeWatchWidgetPage() {
             </ul>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">If a pipe has already burst</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">If a pipe has already burst</h2>
             <p className="leading-7 mb-3">Shut off the main water valve first, then open the page for your city:</p>
             <ul className="grid gap-2 sm:grid-cols-2">
                {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
-                   <li key={slug}><Link className="text-[#F0B429] underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+                   <li key={slug}><Link className="text-accent underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
                  ))}
             </ul>
           </section>

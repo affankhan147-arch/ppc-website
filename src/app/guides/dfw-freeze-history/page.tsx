@@ -3,6 +3,7 @@ import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, webPageSchema, Byline, articleSchema } from "@/lib/schema";
 import { InternalLinks } from "@/components/PageSections";
+import { CallButton } from "@/components/CallButton";
 import { getArticleImage } from "@/lib/articleImages";
 
 export const metadata = buildMetadata({
@@ -32,20 +33,21 @@ export default function DfwFreezeHistoryPage() {
       />
       <JsonLd data={articleSchema("/guides/dfw-freeze-history", "How Often Does DFW Actually Freeze? NWS Climate Data", "Official National Weather Service data on how many days per year Dallas-Fort Worth actually freezes, average first/last freeze dates, and what that means for your pipes.")} />
 
-      <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Research Guide - NWS Data</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <main className="page-shell">
+        <article className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold text-ink">
             How Often Does DFW Actually Freeze?<br />
-            <span className="text-[#F0B429]">The Real National Weather Service Numbers</span>
+            <span className="text-call">The Real National Weather Service Numbers</span>
           </h1>
           <Byline path="/guides/dfw-freeze-history" />
 
-          <aside role="note" className="bg-[#0F1F1D] border-l-4 border-[#F0B429] p-5 mb-8 text-slate-300 text-sm">
-            <p>This guide is for informational purposes only and does not constitute professional plumbing or insurance advice. Figures below are sourced directly from the National Weather Service (see citations at the end of this page).</p>
-          </aside>
+          <p className="lead mt-6">DFW&apos;s freeze history is longer than its mild-winter reputation suggests. This guide uses National Weather Service records to show how often the metro actually freezes, when the freeze season starts and ends, and why that matters for exposed pipes.</p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+          <div className="mt-6">
+            <CallButton location="guide-dfw-freeze-history-top" />
+          </div>
+
+          <div className="photo-frame relative mt-6 h-64 w-full sm:h-80">
             <Image
               src={getArticleImage("burst-pipe-emergency", 0)}
               alt="Frozen pipe risk during a Dallas-Fort Worth winter freeze"
@@ -56,63 +58,65 @@ export default function DfwFreezeHistoryPage() {
             />
           </div>
 
-          <p className="text-lg leading-8 text-slate-200 mb-8">DFW&apos;s freeze history is longer than its mild-winter reputation suggests. This guide uses National Weather Service records to show how often the metro actually freezes, when the freeze season starts and ends, and why that matters for exposed pipes.</p>
+          <aside role="note" className="bg-paper border-l-4 border-call p-5 text-ink-2 text-sm">
+            <p>This guide is for informational purposes only and does not constitute professional plumbing or insurance advice. Figures below are sourced directly from the National Weather Service (see citations at the end of this page).</p>
+          </aside>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 1: DFW&apos;s Actual Freeze Numbers, Not the Reputation</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 1: DFW&apos;s Actual Freeze Numbers, Not the Reputation</h2>
+            <p className="text-ink-2 mb-4">
               &quot;DFW barely freezes&quot; is the common assumption, and it&apos;s part of why so many local homes are under-protected for winter. The National Weather Service&apos;s own climate normals for DFW Airport put the real number at an average of 29.2 days per year with a minimum temperature at or below 32 degrees Fahrenheit - not a once-a-decade event, a near-monthly occurrence across a typical winter.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               Those freezing days aren&apos;t spread evenly across the year. NWS&apos;s monthly breakdown shows January averaging 10.6 freezing days, December averaging 8.1, and February averaging 6.2 - together accounting for the large majority of DFW&apos;s annual freeze total, with November and March contributing only a handful of days each and the remaining months essentially none.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               A separate NBC 5 meteorologist analysis of the same underlying DFW Airport station data puts the average closer to 33 freezing days in a typical season, with real year-to-year swings: the 2019-2020 winter saw 21 freezing days, while 2016-2017 recorded just 11 - the lowest on record. The exact count varies by source and averaging period, but every credible reading puts DFW&apos;s freeze count in the dozens of days per year, not the handful many homeowners assume.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 2: When DFW&apos;s Freeze Season Actually Starts and Ends</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 2: When DFW&apos;s Freeze Season Actually Starts and Ends</h2>
+            <p className="text-ink-2 mb-4">
               The average date of DFW&apos;s first freeze of the season is November 22, and the average last freeze falls around March 12 - a roughly 3.5-month window most years during which exposed pipe runs are genuinely at risk, not just during a single headline cold snap.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               The extremes matter for planning too. DFW&apos;s earliest recorded freeze hit October 22, 1898, and the latest recorded freeze reached all the way to April 13 in both 1997 and 1957. On the other end, the record cold temperature ever measured at DFW Airport is -8 degrees Fahrenheit, set in February 1899 - a reminder that the region&apos;s coldest extremes, while rare, are on the historical record, not hypothetical.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 3: Why This Data Matters More Than the &quot;DFW Doesn&apos;t Really Freeze&quot; Assumption</h2>
-            <p className="text-slate-300 mb-4">
-              DFW homes are generally not built to the same freeze-protection standard as homes in consistently cold climates, precisely because sustained hard freezes are the exception rather than the rule here - see our <a href="/guides/dfw-burst-pipes" className="text-[#F0B429] underline">DFW burst pipes guide</a> for the full mechanics of why that gap causes pipes to fail. Almost 30 freezing nights a year, concentrated into a roughly 15-week window, is enough repeated freeze-thaw stress on exposed or poorly insulated pipe runs to matter every single winter - not just during an outlier event like February 2021&apos;s Winter Storm Uri.
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 3: Why This Data Matters More Than the &quot;DFW Doesn&apos;t Really Freeze&quot; Assumption</h2>
+            <p className="text-ink-2 mb-4">
+              DFW homes are generally not built to the same freeze-protection standard as homes in consistently cold climates, precisely because sustained hard freezes are the exception rather than the rule here - see our <a href="/guides/dfw-burst-pipes" className="text-accent underline">DFW burst pipes guide</a> for the full mechanics of why that gap causes pipes to fail. Almost 30 freezing nights a year, concentrated into a roughly 15-week window, is enough repeated freeze-thaw stress on exposed or poorly insulated pipe runs to matter every single winter - not just during an outlier event like February 2021&apos;s Winter Storm Uri.
             </p>
-            <p className="text-slate-300 mb-4">
+            <p className="text-ink-2 mb-4">
               The practical takeaway: freeze prep in DFW isn&apos;t a once-a-decade precaution ahead of a rare severe event. Based on the NWS&apos;s own 29.2-day annual average, a typical DFW winter includes freezing conditions on close to one night in every twelve between late November and mid-March.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Section 4: Track This Winter&apos;s Freeze Risk Live</h2>
-            <p className="text-slate-300 mb-4">
-              The numbers above are historical averages - for the current forecast, our free <a href="/tools/freeze-watch-widget" className="text-[#F0B429] underline">DFW Freeze Watch Widget</a> pulls the live overnight low directly from the National Weather Service and flags freeze risk automatically, updated roughly hourly through the freeze season.
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Section 4: Track This Winter&apos;s Freeze Risk Live</h2>
+            <p className="text-ink-2 mb-4">
+              The numbers above are historical averages - for the current forecast, our free <a href="/tools/freeze-watch-widget" className="text-accent underline">DFW Freeze Watch Widget</a> pulls the live overnight low directly from the National Weather Service and flags freeze risk automatically, updated roughly hourly through the freeze season.
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Burst pipe help in your city</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Burst pipe help in your city</h2>
             <p className="leading-7 mb-3">If a freeze has already cracked a pipe, shut off the main water valve first, then open the page for your city:</p>
             <ul className="grid gap-2 sm:grid-cols-2">
                {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
-                   <li key={slug}><Link className="text-[#F0B429] underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+                   <li key={slug}><Link className="text-accent underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
                  ))}
             </ul>
           </section>
 
-          <p className="text-slate-400 text-sm mt-4">
-            <strong>Sources:</strong> <a href="https://www.weather.gov/fwd/dfw_records_normals" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">National Weather Service - DFW Normals, Means, and Extremes</a>; <a href="https://www.nbcdfw.com/weather/weather-connection/freeze-facts-in-north-texas/2495509/" target="_blank" rel="noopener noreferrer" className="text-[#F0B429] underline">NBC 5 DFW - Freeze Facts for North Texas</a>.
+          <p className="text-muted text-sm mt-4">
+            <strong>Sources:</strong> <a href="https://www.weather.gov/fwd/dfw_records_normals" target="_blank" rel="noopener noreferrer" className="text-accent underline">National Weather Service - DFW Normals, Means, and Extremes</a>; <a href="https://www.nbcdfw.com/weather/weather-connection/freeze-facts-in-north-texas/2495509/" target="_blank" rel="noopener noreferrer" className="text-accent underline">NBC 5 DFW - Freeze Facts for North Texas</a>.
           </p>
 
-          <div className="mt-12 pt-6 border-t border-[#1A3A38] text-slate-400 text-sm">
+          <div className="mt-12 pt-6 border-t border-rule text-muted text-sm">
             <p><strong>Worried about a freeze this week?</strong> Call PlumbingHands - DFW&apos;s trusted emergency plumber, available 24/7.</p>
           </div>
 
@@ -129,8 +133,8 @@ export default function DfwFreezeHistoryPage() {
               ]}
             />
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
     </>
   );
 }

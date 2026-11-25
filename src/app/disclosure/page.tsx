@@ -11,8 +11,8 @@ export const metadata = buildMetadata({
   path: "/disclosure"
 });
 
-const h2 = "mt-8 text-2xl font-bold text-white";
-const link = "text-[#4FD1C5] underline hover:text-white";
+const h2 = "text-2xl font-bold text-ink";
+const link = "font-bold text-accent underline hover:text-ink";
 
 export default function DisclosurePage() {
   return (
@@ -23,10 +23,11 @@ export default function DisclosurePage() {
           breadcrumbSchema([{ name: "Disclosure", path: "/disclosure" }])
         ]}
       />
-      <p className="section-kicker">Disclosure</p>
-      <h1 className="mt-3 text-4xl font-black text-white">Provider connection disclosure</h1>
-      <div className="content-section space-y-4 leading-7 text-slate-300">
-        <p>{siteConfig.legalDisclosure}</p>
+      <section className="content-section">
+        <h1 className="display-title font-bold text-ink">Provider connection disclosure</h1>
+        <p className="lead mt-4 text-ink-2">{siteConfig.legalDisclosure}</p>
+      </section>
+      <div className="content-section space-y-4 leading-7 text-ink-2">
         <p>No page on this site should be read as a verified Google Business Profile, physical office listing, review, license, insurance statement, or response-time commitment unless verified proof is stated on that page.</p>
 
         <h2 className={h2}>How Plumbing Hands is paid</h2>

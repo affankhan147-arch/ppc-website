@@ -2,13 +2,11 @@
 import Link from "next/link";
 import {
   AlertTriangle,
-  ArrowRight,
   CheckCircle2,
   Clock3,
   Droplets,
   MapPin,
   SearchCheck,
-  ShieldCheck,
   Wrench
 } from "lucide-react";
 import { CallButton } from "@/components/CallButton";
@@ -97,64 +95,57 @@ export default function HomePage() {
         faqSchema(faqs)
       ]} />
 
-      <section className="hero-field min-h-[620px] text-white">
+      <section className="hero-field flex min-h-[620px] items-center text-ink lg:min-h-[min(calc(100svh-110px),800px)]">
         <div className="hero-photo">
           <Image src="/images/hero/hero-emergency-plumber-repair.jpg" alt="Licensed emergency plumber actively repairing a pipe at a DFW home" fill sizes="100vw" className="object-cover object-center" priority />
         </div>
-        <div className="mx-auto flex min-h-[620px] max-w-7xl items-center px-4 py-14 lg:py-20">
+        <div className="page-shell relative py-8 pb-24 lg:py-16 lg:pb-24">
           <article className="max-w-3xl">
-            <p className="eyebrow"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Plumbing Service in Dallas-Fort Worth</p>
-            <h1 className="display-title mt-6 text-5xl font-bold leading-[.98] sm:text-6xl lg:text-7xl">
+            <h1 className="display-title font-bold">
               DFW&apos;s Fastest Emergency Plumber – 24/7
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 sm:text-xl">
+            <p className="lead mt-6">
               Need an emergency plumber in Dallas-Fort Worth? Call Plumbing Hands for active leaks and drain backups, plus sewer, toilet, burst-pipe, and water-heater problems.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <CallButton location="home-hero" label={`Call ${siteConfig.phoneDisplay}`} pagePath="/" pageType="homepage" service="Emergency plumbing" city={siteConfig.marketName} />
-              <Link href="#urgent-help" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-black text-white backdrop-blur transition hover:bg-white/20">
-                Find your plumbing service <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <Link href="#urgent-help" className="inline-flex min-h-12 items-center justify-center rounded-pill border border-rule px-6 py-3 font-black text-ink transition-colors hover:border-accent hover:text-accent">
+                Find your plumbing service
               </Link>
             </div>
-            <div className="trust-ribbon mt-10 grid gap-1 rounded-2xl p-3 sm:grid-cols-3">
-              {["Emergency phone line", "DFW plumbing service", "Clear next steps"].map((item) => (
-                <div key={item} className="flex items-center gap-2 rounded-xl px-3 py-3 text-sm font-bold text-slate-100">
-                  <CheckCircle2 className="h-4 w-4 flex-none text-[#4FD1C5]" aria-hidden="true" /> {item}
-                </div>
-              ))}
-            </div>
+            <p className="mt-8 border-t border-rule pt-5 text-sm font-bold text-ink sm:pt-6">
+              <span className="whitespace-nowrap">24/7 emergency phone line,</span> <span className="whitespace-nowrap">{cities.length} DFW service areas,</span> <span className="whitespace-nowrap">{services.length} urgent plumbing services</span>
+            </p>
           </article>
         </div>
       </section>
 
-      <section id="urgent-help" className="relative z-10 mx-auto -mt-14 max-w-7xl px-4">
-        <div className="rounded-[1.5rem] border border-white/10 bg-[#16302C] p-5 shadow-[0_30px_80px_rgba(0,0,0,.3)] sm:p-7">
-          <p className="section-kicker">Start with the symptom</p>
-          <h2 className="display-title mt-2 text-3xl font-bold text-white sm:text-4xl">What Needs Attention Right Now?</h2>
+      <div className="page-shell">
+        <section id="urgent-help" className="content-section">
+          <h2 className="display-title text-3xl font-bold text-ink sm:text-4xl">What Needs Attention Right Now?</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {urgentCards.map(({ title, text, icon: Icon, href }) => (
-              <Link key={title} href={href} className="premium-card group p-5">
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-[#0F1F1D] text-[#F0B429]"><Icon className="h-6 w-6" aria-hidden="true" /></span>
-                <h3 className="mt-4 text-lg font-black leading-tight text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-[#4FD1C5]">See safe next steps <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+              <Link key={title} href={href} className="premium-card p-5">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-12 w-12 flex-none place-items-center rounded-xl bg-paper text-call"><Icon className="h-6 w-6" aria-hidden="true" /></span>
+                  <h3 className="text-lg font-black leading-tight text-ink">{title}</h3>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-ink-2">{text}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-accent">See safe next steps</span>
               </Link>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <div className="page-shell">
         <section className="content-section overflow-hidden p-0">
           <div className="grid lg:grid-cols-[.88fr_1.12fr]">
             <div className="media-cover diagnostic-photo" role="img" aria-label="Fully visible plumbing service vehicle ready for an urgent service call" />
             <div className="p-7 sm:p-10 lg:p-12">
-              <p className="section-kicker">Be ready before the call</p>
-              <h2 className="display-title mt-3 text-4xl font-bold leading-tight text-white">The Right Details Help Service Start Faster.</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-300">A clear description helps identify whether the problem involves one fixture, a wider drain or sewer line, a supply pipe, or a water heater.</p>
+              <h2 className="display-title text-4xl font-bold leading-tight text-ink">The Right Details Help Service Start Faster.</h2>
+              <p className="mt-5 text-lg leading-8 text-ink-2">A clear description helps identify whether the problem involves one fixture, a wider drain or sewer line, a supply pipe, or a water heater.</p>
               <div className="mt-6 grid gap-3">
                 {["Which fixture changed first", "Whether water is clean or contaminated", "What shutoff or cleanout is safely accessible", "Whether another fixture reacts at the same time"].map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-xl bg-[#0F1F1D] px-4 py-3 font-bold text-slate-200"><SearchCheck className="h-5 w-5 flex-none text-[#4FD1C5]" aria-hidden="true" />{item}</div>
+                  <div key={item} className="flex items-center gap-3 rounded-card border border-rule bg-paper px-4 py-3 font-bold text-ink-2"><SearchCheck className="h-5 w-5 flex-none text-accent" aria-hidden="true" />{item}</div>
                 ))}
               </div>
             </div>
@@ -163,25 +154,25 @@ export default function HomePage() {
 
         <section id="services" className="content-section">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div><p className="section-kicker">Emergency plumbing services</p><h2 className="display-title mt-2 text-4xl font-bold text-white">Help Organized Around Your Plumbing Problem.</h2></div>
-            <Link href="/services" className="inline-flex items-center gap-2 font-black text-[#4FD1C5]">Browse all 24/7 emergency plumbing services <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+            <div><h2 className="display-title text-4xl font-bold text-ink">Help Organized Around Your Plumbing Problem.</h2></div>
+            <Link href="/services" className="inline-flex items-center gap-2 font-black text-accent">Browse all 24/7 emergency plumbing services</Link>
           </div>
-          <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-7 grid gap-4 md:grid-cols-2">
             {featuredServices.map((service) => (
-              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card group overflow-hidden">
-                <div className="relative h-40 w-full overflow-hidden">
+              <Link key={service.slug} href={`/services/${service.slug}`} className="premium-card overflow-hidden">
+                <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={serviceImages[service.slug] ?? "/images/hero/hero-emergency-plumber-repair.jpg"}
                     alt={`${titleCase(service.name)} - professional plumber on the job`}
                     fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-300 group-hover:scale-105"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-black leading-tight text-white">{titleCase(service.name)}</h3>
-                  <p className="mt-2 line-clamp-3 leading-7 text-slate-300">{service.shortAnswer}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#F0B429]">Explore this service <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+                  <h3 className="text-xl font-black leading-tight text-ink">{titleCase(service.name)}</h3>
+                  <p className="mt-2 line-clamp-3 leading-7 text-ink-2">{service.shortAnswer}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-call">Explore this service</span>
                 </div>
               </Link>
             ))}
@@ -189,79 +180,80 @@ export default function HomePage() {
         </section>
 
 <section className="content-section">
-  <p className="section-kicker">Freeze season</p>
-  <h2 className="mt-2 text-2xl font-black text-white">Freeze season in Dallas-Fort Worth: protect your pipes</h2>
-  <p className="mt-3 leading-7 text-slate-300">Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service). Pipes in exterior walls, attics, garages and crawl spaces freeze first. If one splits, shut off the main water valve before anything else, then call.</p>
+  <h2 className="text-2xl font-black text-ink">Freeze season in Dallas-Fort Worth: protect your pipes</h2>
+  <p className="lead mt-3 text-ink-2">Across Dallas-Fort Worth the average first freeze comes around November 22 and the last around March 12 (National Weather Service).</p>
+  <ul className="mt-4 space-y-2 text-ink-2">
+    <li className="leading-7">Pipes in exterior walls, attics, garages and crawl spaces freeze first.</li>
+    <li className="leading-7">If one splits, shut off the main water valve before anything else, then call.</li>
+  </ul>
   <ul className="mt-4 space-y-2">
-    <li><Link className="font-bold text-emerald-300 underline" href="/services/burst-pipe-emergency">Burst pipe emergency help</Link></li>
-    <li><Link className="font-bold text-emerald-300 underline" href="/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze">How to keep pipes from freezing in DFW</Link></li>
-    <li><Link className="font-bold text-emerald-300 underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
-    <li><Link className="font-bold text-emerald-300 underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
+    <li><Link className="font-bold text-accent underline" href="/services/burst-pipe-emergency">Burst pipe emergency help</Link></li>
+    <li><Link className="font-bold text-accent underline" href="/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze">How to keep pipes from freezing in DFW</Link></li>
+    <li><Link className="font-bold text-accent underline" href="/guides/dfw-freeze-history">How often DFW freezes (NWS data)</Link></li>
+    <li><Link className="font-bold text-accent underline" href="/tools/freeze-watch-widget">Live DFW freeze watch</Link></li>
   </ul>
 </section>
 
 <section className="content-section">
-  <p className="section-kicker">Emergency plumbers by city</p>
-  <h2 className="display-title mt-2 text-4xl font-bold text-white">Find an Emergency Plumber in Dallas-Fort Worth Near You.</h2>
+  <h2 className="display-title text-4xl font-bold text-ink">Find an Emergency Plumber in Dallas-Fort Worth Near You.</h2>
   <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     {cityEmergencyLinks.map((link) => (
-      <Link key={link.href} href={link.href} className="premium-card group p-5">
-        <span className="grid h-12 w-12 place-items-center rounded-xl bg-[#0F1F1D] text-[#F0B429]"><MapPin className="h-6 w-6" aria-hidden="true" /></span>
-        <h3 className="mt-4 text-lg font-black leading-tight text-white">{link.title}</h3>
-        <p className="mt-2 text-sm leading-6 text-slate-300">{link.description}</p>
-        <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-[#4FD1C5]">View this city <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+      <Link key={link.href} href={link.href} className="premium-card p-5">
+        <div className="flex items-center gap-3">
+          <span className="grid h-12 w-12 flex-none place-items-center rounded-xl bg-paper text-call"><MapPin className="h-6 w-6" aria-hidden="true" /></span>
+          <h3 className="text-lg font-black leading-tight text-ink">{link.title}</h3>
+        </div>
+        <p className="mt-3 text-sm leading-6 text-ink-2">{link.description}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-sm font-black text-accent">View this city</span>
       </Link>
     ))}
   </div>
 </section>
 
 
-        <section className="content-section dark-band">
+        <section className="content-section">
           <div className="mx-auto max-w-5xl text-center">
-            <p className="eyebrow">One call. Clear next steps.</p>
-            <h2 className="display-title mt-4 text-4xl font-bold leading-tight sm:text-5xl">Tell Us What Happened. Get Your Plumbing Service Moving.</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-200">Share the problem, your DFW location, and the urgency by phone so the right plumbing service can be identified without a long form.</p>
+            <h2 className="display-title text-4xl font-bold leading-tight text-ink sm:text-5xl">Tell Us What Happened. Get Your Plumbing Service Moving.</h2>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-ink-2">Share the problem, your DFW location, and the urgency by phone so the right plumbing service can be identified without a long form.</p>
           </div>
-          <div className="mx-auto mt-9 grid max-w-5xl gap-4 md:grid-cols-3">
+          <ol className="mx-auto mt-9 max-w-5xl divide-y divide-rule border-y border-rule">
             {["Describe the affected fixture and urgency", "Share the DFW city or ZIP", "Discuss the right service and next step"].map((step, index) => (
-              <div key={step} className="rounded-2xl border border-white/15 bg-white/[.07] p-5 text-left"><span className="grid h-10 w-10 place-items-center rounded-full bg-[#F0B429] font-black text-[#1A1300]">{index + 1}</span><p className="mt-4 font-bold leading-7 text-white">{step}</p></div>
+              <li key={step} className="flex items-baseline gap-5 py-5 text-left"><span className="font-display text-2xl font-bold text-accent">{index + 1}</span><p className="font-bold leading-7 text-ink">{step}</p></li>
             ))}
-          </div>
+          </ol>
         </section>
 
         <section className="content-section">
           <div className="text-center">
-            <p className="section-kicker">Built for urgent plumbing needs</p>
-            <h2 className="display-title mx-auto mt-3 max-w-4xl text-4xl font-bold leading-tight text-white">Professional Plumbing Help Starts With One Clear Call.</h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">From the first safety step to choosing the right service, Plumbing Hands connects you with 24 hour plumbers and same day plumber service near you, so emergency plumbing help is never far away across Dallas-Fort Worth.</p>
+            <h2 className="display-title mx-auto max-w-4xl text-4xl font-bold leading-tight text-ink">Professional Plumbing Help Starts With One Clear Call.</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-ink-2">From the first safety step to choosing the right service, Plumbing Hands connects you with 24 hour plumbers and same day plumber service near you, so emergency plumbing help is never far away across Dallas-Fort Worth.</p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {["Emergency-ready guidance", "Service organized by problem", "Coverage across Dallas-Fort Worth"].map((item) => (
-              <div key={item} className="premium-card p-6"><CheckCircle2 className="h-8 w-8 text-[#4FD1C5]" aria-hidden="true" /><h3 className="mt-4 text-xl font-black text-white">{item}</h3></div>
+              <div key={item} className="premium-card flex items-center gap-4 p-6"><CheckCircle2 className="h-8 w-8 flex-none text-accent" aria-hidden="true" /><h3 className="text-xl font-black text-ink">{item}</h3></div>
             ))}
           </div>
         </section>
 
         <section className="content-section">
           <div className="text-center">
-            <p className="section-kicker">How it works</p>
-            <h2 className="display-title mx-auto mt-3 max-w-3xl text-4xl font-bold leading-tight text-white">Three Steps From Call To Confirmed Help.</h2>
+            <h2 className="display-title mx-auto max-w-3xl text-4xl font-bold leading-tight text-ink">Three Steps From Call To Confirmed Help.</h2>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 divide-y divide-rule border-y border-rule">
             {["Explain what is happening", "Share your DFW location", "Confirm the next step"].map((title, index) => (
-              <article key={title} className="overflow-hidden rounded-3xl border border-white/10 bg-[#16302C] shadow-sm">
-                <div className="relative h-40 w-full overflow-hidden">
+              <article key={title} className="flex items-center gap-5 py-6 sm:gap-8">
+                <div className="photo-frame relative h-24 w-36 flex-none overflow-hidden sm:h-28 sm:w-48">
                   <Image
                     src={processImages[index] ?? processImages[0]}
                     alt={`${title} - PlumbingHands technician`}
                     fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
+                    sizes="(min-width: 640px) 192px, 144px"
                     className="object-cover"
                   />
                 </div>
-                <div className="p-5">
-                  <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#F0B429] text-base font-black text-[#1A1300]">{index + 1}</span>
-                  <h3 className="mt-5 text-xl font-black text-white">{title}</h3>
+                <div className="flex items-baseline gap-4">
+                  <span className="font-display text-2xl font-bold text-accent">{index + 1}</span>
+                  <h3 className="text-xl font-black text-ink">{title}</h3>
                 </div>
               </article>
             ))}
@@ -269,42 +261,40 @@ export default function HomePage() {
         </section>
 
 
-        <section className="content-section soft-band">
+        <section className="content-section">
           <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr]">
             <div>
-              <p className="section-kicker">Plumbing Service in Dallas-Fort Worth</p>
-              <h2 className="display-title mt-3 text-4xl font-bold text-white">Emergency Plumbing Service Across DFW.</h2>
-              <p className="mt-4 text-lg leading-8 text-slate-300">Choose your city to find emergency plumbing service for leaks, drains, sewers, toilets, pipes, and water heaters.</p>
+              <h2 className="display-title text-4xl font-bold text-ink">Emergency Plumbing Service Across DFW.</h2>
+              <p className="mt-4 text-lg leading-8 text-ink-2">Choose your city to find emergency plumbing service for leaks, drains, sewers, toilets, pipes, and water heaters.</p>
               <div className="mt-6 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl bg-[#16302C] p-5 shadow-sm"><p className="text-4xl font-black text-white">{cities.length}</p><p className="mt-1 text-sm font-bold text-slate-400">DFW service areas</p></div>
-                <div className="rounded-2xl bg-[#16302C] p-5 shadow-sm"><p className="text-4xl font-black text-white">{services.length}</p><p className="mt-1 text-sm font-bold text-slate-400">urgent plumbing services</p></div>
+                <div className="rounded-card border border-rule bg-paper-2 p-5"><p className="text-4xl font-black text-ink">{cities.length}</p><p className="mt-1 text-sm font-bold text-muted">DFW service areas</p></div>
+                <div className="rounded-card border border-rule bg-paper-2 p-5"><p className="text-4xl font-black text-ink">{services.length}</p><p className="mt-1 text-sm font-bold text-muted">urgent plumbing services</p></div>
               </div>
-              <Link href="/cities" className="mt-6 inline-flex items-center gap-2 font-black text-[#4FD1C5]">Find service in your city <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+              <Link href="/cities" className="mt-6 inline-flex items-center gap-2 font-black text-accent">Find service in your city</Link>
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {cities.slice(0, 12).map((city) => <Link key={city.slug} href={`/cities/${city.slug}`} className="premium-card flex items-center gap-3 p-4 font-black text-white"><MapPin className="h-5 w-5 text-[#F0B429]" aria-hidden="true" />{city.name}</Link>)}
+              {cities.slice(0, 12).map((city) => <Link key={city.slug} href={`/cities/${city.slug}`} className="premium-card flex items-center gap-3 p-4 font-black text-ink"><MapPin className="h-5 w-5 text-call" aria-hidden="true" />{city.name}</Link>)}
             </div>
           </div>
         </section>
 
         <section className="content-section">
-          <p className="section-kicker">Practical cost guidance</p>
-          <h2 className="display-title mt-2 text-4xl font-bold text-white">Know What Can Change The Scope.</h2>
-          <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="display-title text-4xl font-bold text-ink">Know What Can Change The Scope.</h2>
+          <div className="mt-7 grid gap-4 md:grid-cols-2">
             {costGuides.map((guide, index) => (
-              <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card group overflow-hidden">
-                <div className="relative h-32 w-full overflow-hidden">
+              <Link key={guide.slug} href={`/cost-guides/${guide.slug}`} className="premium-card overflow-hidden">
+                <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={getGridImage(index)}
                     alt={guide.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-300 group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-black text-white">{guide.title}</h3>
-                  <p className="mt-3 leading-7 text-slate-300">{guide.directAnswer}</p>
+                  <h3 className="text-xl font-black text-ink">{guide.title}</h3>
+                  <p className="mt-3 leading-7 text-ink-2">{guide.directAnswer}</p>
                 </div>
               </Link>
             ))}
@@ -312,23 +302,22 @@ export default function HomePage() {
         </section>
 
         <section className="content-section">
-          <p className="section-kicker">Homeowner guidance</p>
-          <h2 className="display-title mt-2 text-4xl font-bold text-white">Answers For The Moment Something Changes.</h2>
-          <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="display-title text-4xl font-bold text-ink">Answers For The Moment Something Changes.</h2>
+          <div className="mt-7 grid gap-4 md:grid-cols-2">
             {problems.slice(0, 6).map((problem, index) => (
-              <Link key={problem.slug} href={`/problems/${problem.slug}`} className="premium-card group overflow-hidden">
-                <div className="relative h-32 w-full overflow-hidden">
+              <Link key={problem.slug} href={`/problems/${problem.slug}`} className="premium-card overflow-hidden">
+                <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={getGridImage(index)}
                     alt={problem.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-300 group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-black text-white">{problem.title}</h3>
-                  <p className="mt-3 leading-7 text-slate-300">{problem.directAnswer}</p>
+                  <h3 className="text-xl font-black text-ink">{problem.title}</h3>
+                  <p className="mt-3 leading-7 text-ink-2">{problem.directAnswer}</p>
                 </div>
               </Link>
             ))}
@@ -336,15 +325,14 @@ export default function HomePage() {
         </section>
 
         <section className="content-section">
-          <p className="section-kicker">Research-backed guides</p>
-          <h2 className="display-title mt-2 text-4xl font-bold text-white">DFW Plumbing Guides &amp; Local Data.</h2>
-          <p className="mt-4 text-lg leading-8 text-slate-300">Sourced, in-depth guides on the plumbing issues that hit Dallas-Fort Worth homes hardest -- from burst pipes and slab leaks to insurance coverage and water heater lifespan.</p>
-          <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="display-title text-4xl font-bold text-ink">DFW Plumbing Guides &amp; Local Data.</h2>
+          <p className="mt-4 text-lg leading-8 text-ink-2">Sourced, in-depth guides on the plumbing issues that hit Dallas-Fort Worth homes hardest: from burst pipes and slab leaks to insurance coverage and water heater lifespan.</p>
+          <div className="mt-7 grid gap-4 md:grid-cols-2">
             {homeGuides.map((guide) => (
-              <Link key={guide.href} href={guide.href} className="premium-card group p-6">
-                <h3 className="text-xl font-black leading-tight text-white">{guide.title}</h3>
-                <p className="mt-3 leading-7 text-slate-300">{guide.description}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#F0B429]">Read the guide <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" /></span>
+              <Link key={guide.href} href={guide.href} className="premium-card p-6">
+                <h3 className="text-xl font-black leading-tight text-ink">{guide.title}</h3>
+                <p className="mt-3 leading-7 text-ink-2">{guide.description}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-call">Read the guide</span>
               </Link>
             ))}
           </div>
@@ -359,10 +347,9 @@ export default function HomePage() {
         <FAQBlock faqs={faqs} title="Emergency plumber questions DFW homeowners ask" />
         <InternalLinks />
 
-        <section className="content-section dark-band text-center">
-          <p className="eyebrow">Need plumbing service now?</p>
-          <h2 className="display-title mx-auto mt-4 max-w-3xl text-4xl font-bold sm:text-5xl">Call Plumbing Hands And Get The Next Step Started.</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-200">Tell us the plumbing problem and your Dallas-Fort Worth location. The emergency line is ready for active leaks, backups, toilet, pipe, sewer, and water-heater service needs.</p>
+        <section className="content-section text-center">
+          <h2 className="display-title mx-auto max-w-3xl text-4xl font-bold text-ink sm:text-5xl">Call Plumbing Hands And Get The Next Step Started.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-ink-2">Tell us the plumbing problem and your Dallas-Fort Worth location. The emergency line is ready for active leaks, backups, toilet, pipe, sewer, and water-heater service needs.</p>
           <div className="mt-7"><CallButton location="home-closing" label={`Call ${siteConfig.phoneDisplay}`} pagePath="/" pageType="homepage" city={siteConfig.marketName} /></div>
         </section>
       </div>

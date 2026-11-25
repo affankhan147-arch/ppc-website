@@ -47,7 +47,7 @@ export const metadata: Metadata = buildMetadata({ title, description, path });
 
 export default function InsuranceCoveragePage() {
   return (
-    <>
+    <main className="page-shell">
       <JsonLd data={[
         webPageSchema(path, title, description),
         articleSchema(path, title, description),
@@ -61,7 +61,7 @@ export default function InsuranceCoveragePage() {
         { label: "Guides", href: "/blog" },
         { label: "Insurance & Plumbing Leaks", href: path }
       ]} />
-      <h1 className="mt-6 text-4xl font-black leading-tight text-white">{title}</h1>
+      <h1 className="display-title mt-6 text-4xl font-bold leading-tight text-ink">{title}</h1>
       <Byline path={path} />
 
       <DirectAnswer>
@@ -70,8 +70,8 @@ export default function InsuranceCoveragePage() {
         </p>
       </DirectAnswer>
 
-      <section className="content-section mt-8">
-        <div className="overflow-hidden rounded-2xl border border-white/10">
+      <section className="content-section">
+        <div className="overflow-hidden border border-rule">
           <Image
             src="/images/blog/texas-homeowners-insurance-plumbing-leak-coverage-diagram.svg"
             alt="Does homeowners insurance cover a plumbing leak in Texas? Diagram of a covered sudden burst pipe vs. a typically excluded gradual leak"
@@ -82,15 +82,15 @@ export default function InsuranceCoveragePage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">What&apos;s Typically Covered vs. Excluded</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">What&apos;s Typically Covered vs. Excluded</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="p-4 border border-green-200 rounded-lg bg-green-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="h-5 w-5 text-green-700 mt-0.5" />
+              <CheckCircle2 className="h-5 w-5 text-accent mt-0.5" />
               <div>
-                <h3 className="font-semibold text-green-800">Usually covered</h3>
-                <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-green-800">
+                <h3 className="font-semibold text-ink">Usually covered</h3>
+                <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-ink">
                   <li>Structural damage from a sudden, accidental burst pipe or overflow</li>
                   <li>Damaged flooring, drywall, cabinetry, and belongings from that sudden event</li>
                   <li>Slab tear-out and replacement needed to access a leaking pipe</li>
@@ -98,12 +98,12 @@ export default function InsuranceCoveragePage() {
               </div>
             </div>
           </div>
-          <div className="p-4 border border-red-200 rounded-lg bg-red-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <XCircle className="h-5 w-5 text-red-700 mt-0.5" />
+              <XCircle className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-red-800">Usually excluded</h3>
-                <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-red-800">
+                <h3 className="font-semibold text-ink">Usually excluded</h3>
+                <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-ink">
                   <li>Repairing or replacing the pipe itself (treated as maintenance)</li>
                   <li>Gradual leaks, seepage, or damage that built up over weeks or months</li>
                   <li>Sewer or drain backup, unless you added that specific endorsement</li>
@@ -115,60 +115,60 @@ export default function InsuranceCoveragePage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">The &quot;Sudden and Accidental&quot; Rule</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">The &quot;Sudden and Accidental&quot; Rule</h2>
         <p className="mt-2">
           Almost every coverage decision comes back to this one distinction. A pipe that bursts and floods a room in minutes is sudden and accidental - that&apos;s the scenario homeowners insurance is built for. A pipe that has been weeping slowly behind a wall for months, showing up only as a gradually rising water bill or a faint musty smell, is treated as a maintenance failure the homeowner should have caught, not a covered loss. If you notice a sudden spike in your water bill, that&apos;s actually a useful data point for a claim - it helps establish that the leak has a specific, recent onset rather than being long-term.
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Slab Leaks and DFW&apos;s Clay Soil</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Slab Leaks and DFW&apos;s Clay Soil</h2>
         <p className="mt-2">
-          North Texas sits on expansive clay soil that shifts as it absorbs and loses moisture, and that movement is a well-documented contributor to slab leaks in the region. That creates a genuine gray area for insurance purposes: insurers generally exclude damage caused by soil or foundation movement, but they generally do cover a straightforward pipe defect. The trouble is telling the two apart after the fact. A licensed plumber&apos;s diagnostic report - ideally including how and where the pipe failed - is the strongest piece of documentation you can bring to that conversation with your insurer. See our guide on <Link href="/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" className="text-teal-700 underline">slab leak warning signs DFW homeowners should know</Link> for what to watch for before it becomes a claim at all.
+          North Texas sits on expansive clay soil that shifts as it absorbs and loses moisture, and that movement is a well-documented contributor to slab leaks in the region. That creates a genuine gray area for insurance purposes: insurers generally exclude damage caused by soil or foundation movement, but they generally do cover a straightforward pipe defect. The trouble is telling the two apart after the fact. A licensed plumber&apos;s diagnostic report - ideally including how and where the pipe failed - is the strongest piece of documentation you can bring to that conversation with your insurer. See our guide on <Link href="/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" className="text-accent underline">slab leak warning signs DFW homeowners should know</Link> for what to watch for before it becomes a claim at all.
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Mold Coverage Is Often Capped, Not Excluded Outright</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Mold Coverage Is Often Capped, Not Excluded Outright</h2>
         <p className="mt-2">
           Most Texas homeowners carry an HO-A policy, which only covers water damage from a leak that was sudden and accidental - the same rule as above applies to any resulting mold. Even when a policy does cover mold remediation, that coverage is typically capped at a set dollar amount rather than paid in full, so a bigger mold problem following a covered leak can still leave you with real out-of-pocket cost. Ask your insurer for your policy&apos;s specific mold sublimit rather than assuming a &quot;covered&quot; leak means unlimited mold coverage too.
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Your Duty to Maintain the Property</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Your Duty to Maintain the Property</h2>
         <p className="mt-2">
           Insurers can deny or reduce a claim if the damage resulted from a homeowner ignoring an obvious, ongoing problem - leaving heat off during a hard freeze and letting pipes burst, or continuing to use a fixture after noticing a slow leak or pressure drop, are common examples. Keeping your thermostat at a reasonable minimum during freeze warnings and addressing warning signs (dropping water pressure, an unexplained bill spike, visible moisture) promptly is both good practice and part of what an insurer expects before they&apos;ll treat a loss as sudden and accidental rather than neglected.
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Claim Timeline and Your Rights in Texas</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Claim Timeline and Your Rights in Texas</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <FileClock className="h-5 w-5 text-slate-700 mt-0.5" />
+              <FileClock className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-slate-950">15 + 15 day rule</h3>
-                <p className="text-sm text-slate-700">Texas requires insurers to begin investigating a written claim within 15 days of receiving it, then accept or reject it within another 15 days once they have what they need to decide.</p>
+                <h3 className="font-semibold text-ink">15 + 15 day rule</h3>
+                <p className="text-sm text-ink-2">Texas requires insurers to begin investigating a written claim within 15 days of receiving it, then accept or reject it within another 15 days once they have what they need to decide.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <ShieldQuestion className="h-5 w-5 text-slate-700 mt-0.5" />
+              <ShieldQuestion className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-slate-950">The CLUE database</h3>
-                <p className="text-sm text-slate-700">Water and mold claims are recorded in the CLUE database, visible to future insurers (and sometimes buyers), which can affect future premiums - worth weighing for a small leak where paying out of pocket is an option.</p>
+                <h3 className="font-semibold text-ink">The CLUE database</h3>
+                <p className="text-sm text-ink-2">Water and mold claims are recorded in the CLUE database, visible to future insurers (and sometimes buyers), which can affect future premiums - worth weighing for a small leak where paying out of pocket is an option.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Strengthening a Claim</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Strengthening a Claim</h2>
         <ul className="list-disc ml-6 mt-2 space-y-1">
           <li>Act quickly once you notice the leak - delay can itself be used to argue the damage was not sudden</li>
           <li>Photograph the damage, the source if visible, and any water bill spike before cleanup starts</li>
@@ -177,8 +177,8 @@ export default function InsuranceCoveragePage() {
         </ul>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-6">
           {faqs.map((faq) => (
             <div key={faq.question}>
@@ -189,8 +189,8 @@ export default function InsuranceCoveragePage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <p className="text-sm text-slate-300">
+      <section className="content-section">
+        <p className="text-sm text-ink-2">
           This page provides general information, not insurance or legal advice. Coverage details vary by insurer, policy form, and endorsements - always confirm your specific coverage directly with your insurance agent or company before making decisions based on this guide.
         </p>
         <div className="mt-4">
@@ -209,6 +209,6 @@ export default function InsuranceCoveragePage() {
         { label: "Water Heater Emergency", href: "/services/water-heater-emergency" },
         { label: "Emergency Plumbing Cost Guide DFW", href: "/guides/dfw-emergency-plumbing-costs" },
       ]} />
-    </>
+    </main>
   );
 }

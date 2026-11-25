@@ -66,13 +66,12 @@ export default async function CostGuidePage({ params }: Props) {
       />
       <Breadcrumbs items={[{ label: "Cost guides", href: "/cost-guides" }, { label: guide.title, href: path }]} />
       <article className="mt-6 max-w-4xl">
-        <p className="section-kicker">Cost guide</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{guide.title}</h1>
-        <p className="mt-6 text-lg leading-8 text-slate-300">{guide.directAnswer}</p>
+        <h1 className="display-title font-bold">{guide.title}</h1>
+        <p className="lead mt-6">{guide.directAnswer}</p>
         <div className="mt-6">
           <CallButton location={`cost-guide-${guide.slug}-top`} />
         </div>
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <div className="photo-frame relative mt-6 h-64 w-full sm:h-80">
           <Image
             src={getArticleImage(guide.relatedServiceSlug, costGuides.findIndex((item) => item.slug === guide.slug))}
             alt={`${guide.title} - Dallas-Fort Worth plumbing cost reference photo`}
@@ -87,33 +86,29 @@ export default async function CostGuidePage({ params }: Props) {
         <div>
           <DirectAnswer>{guide.directAnswer}</DirectAnswer>
           <InfoListSection
-            kicker="Range guidance"
             title="What affects the range"
             intro={guide.rangeGuidance}
             items={guide.factors}
           />
           <CostFactors factors={guide.factors} />
           <InfoListSection
-            kicker="Before you approve"
             title="Questions to ask"
             items={guide.questionsToAsk}
           />
           {enhancement ? (
             <>
-              <InfoListSection kicker="Decision support" title={enhancement.decisionTitle} intro={enhancement.decisionIntro} items={enhancement.decisionItems} />
-              <InfoListSection kicker="Provider diagnosis" title={enhancement.providerTitle} items={enhancement.providerItems} />
-              <InfoListSection kicker="Safety boundaries" title={enhancement.safetyTitle} items={enhancement.safetyItems} />
+              <InfoListSection title={enhancement.decisionTitle} intro={enhancement.decisionIntro} items={enhancement.decisionItems} />
+              <InfoListSection title={enhancement.providerTitle} items={enhancement.providerItems} />
+              <InfoListSection title={enhancement.safetyTitle} items={enhancement.safetyItems} />
             </>
           ) : relatedService ? (
             <>
               <InfoListSection
-                kicker="When it costs more"
                 title={`Signs the ${relatedService.name.toLowerCase()} job should not wait`}
                 intro="Waiting rarely makes these jobs cheaper. When any of the signs below show up, the repair scope and the cleanup bill both tend to grow."
                 items={relatedService.symptoms}
               />
               <InfoListSection
-                kicker="Avoid extra cost"
                 title="Mistakes that make the bill bigger"
                 items={relatedService.mistakesToAvoid}
               />
@@ -123,7 +118,6 @@ export default async function CostGuidePage({ params }: Props) {
       </div>
       <LocalGuidance />
       <InfoListSection
-        kicker="Compare quotes"
         title="How to compare plumbing quotes fairly"
         intro="Two quotes are only comparable when they price the same job. Use this checklist before you pick a provider."
         items={[
@@ -136,11 +130,10 @@ export default async function CostGuidePage({ params }: Props) {
       />
       {guide.slug === "burst-pipe-emergency-cost-guide" ? (
         <section className="content-section">
-          <p className="section-kicker">Local help</p>
-          <h2 className="mt-2 text-2xl font-black text-white">Burst pipe help by city in Dallas-Fort Worth</h2>
+          <h2 className="text-2xl font-bold text-ink">Burst pipe help by city in Dallas-Fort Worth</h2>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
              {[["dallas", "Dallas"], ["fort-worth", "Fort Worth"], ["arlington", "Arlington"], ["plano", "Plano"], ["irving", "Irving"], ["garland", "Garland"], ["frisco", "Frisco"], ["mckinney", "McKinney"]].map(([slug, name]) => (
-               <li key={slug}><Link className="font-bold text-emerald-300 underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
+               <li key={slug}><Link className="font-bold text-accent underline" href={`/cities/${slug}/burst-pipe-emergency`}>Burst pipe help in {name}</Link></li>
              ))}
           </ul>
         </section>

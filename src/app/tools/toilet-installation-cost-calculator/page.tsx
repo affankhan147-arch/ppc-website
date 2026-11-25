@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata, truncateForMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
-import { InternalLinks, LeadIn, OfficialSources } from "@/components/PageSections";
+import { InternalLinks, OfficialSources } from "@/components/PageSections";
 import { sources, sourcesHeading } from "@/data/externalSources";
 import ToiletInstallCostCalculator from "@/components/ToiletInstallCostCalculator";
 import { getArticleImage } from "@/lib/articleImages";
 import { siteConfig } from "@/data/site";
+import { CallButton } from "@/components/CallButton";
 
 const PATH = "/tools/toilet-installation-cost-calculator";
 const TITLE = "Toilet Installation & Replacement Cost Calculator for DFW";
@@ -60,17 +61,19 @@ export default function ToiletInstallCostCalculatorPage() {
       />
 
       <div className="page-shell">
-        <div className="premium-card max-w-4xl mx-auto">
-          <div className="section-kicker">Free Tool</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{TITLE}</h1>
-          <p className="text-slate-300 mb-6">
-            <LeadIn topic={TITLE} />
+        <div className="max-w-4xl mx-auto">
+          <h1 className="display-title font-bold">{TITLE}</h1>
+          <p className="lead mt-4 mb-6">
             Pick the toilet type you want and whether you&apos;re swapping an existing one or installing where
             none existed before, to see a real cost range - pulled from two independently checked 2026 cost
             guides, since they don&apos;t fully agree with each other on price.
           </p>
 
-          <div className="photo-frame relative mt-2 mb-8 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+          <div className="mb-6">
+            <CallButton location="tool-toilet-installation-cost-calculator-top" />
+          </div>
+
+          <div className="photo-frame relative mt-2 mb-8 h-56 w-full sm:h-72">
             <Image
               src={getArticleImage("toilet-overflow-emergency", 1)}
               alt={`${TITLE} - Plumber installing a new toilet in a DFW bathroom`}
@@ -83,30 +86,30 @@ export default function ToiletInstallCostCalculatorPage() {
 
           <ToiletInstallCostCalculator />
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">A running toilet usually isn&apos;t a sign you need a new one</h2>
-            <p className="text-slate-300 mb-4">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">A running toilet usually isn&apos;t a sign you need a new one</h2>
+            <p className="text-ink-2 mb-4">
               A running toilet is almost always a worn flapper or fill valve, not a reason to replace the whole
               fixture - but left unfixed it can quietly add hundreds of gallons a month to your bill. See our{" "}
-              <Link href="/tools/dfw-leak-cost-calculator" className="text-[#F0B429] underline">
+              <Link href="/tools/dfw-leak-cost-calculator" className="text-accent underline">
                 DFW water leak cost calculator
               </Link>{" "}
               to see what a running toilet or a drip is actually costing you before you decide whether to repair
               or replace.
             </p>
-            <p className="text-slate-300">
+            <p className="text-ink-2">
               If the toilet itself is the problem - it won&apos;t stop overflowing, or it&apos;s simply decades
               old - our{" "}
-              <Link href="/problems/toilet-overflowing-will-not-stop" className="text-[#F0B429] underline">
+              <Link href="/problems/toilet-overflowing-will-not-stop" className="text-accent underline">
                 toilet overflowing and will not stop guide
               </Link>{" "}
               covers the first steps to take and when it becomes urgent.
             </p>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Sources</h2>
-            <ul className="list-disc pl-5 text-slate-300 space-y-1">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Sources</h2>
+            <ul className="list-disc pl-5 text-ink-2 space-y-1">
               <li>
                 <a href="https://www.fixr.com/costs/toilet-installation" className="underline" target="_blank" rel="noopener noreferrer">
                   Fixr: Cost to Install a Toilet
@@ -124,24 +127,24 @@ export default function ToiletInstallCostCalculatorPage() {
             </ul>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Questions</h2>
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
                 <div key={f.question}>
-                  <h3 className="text-white font-semibold">{f.question}</h3>
-                  <p className="text-slate-300">{f.answer}</p>
+                  <h3 className="text-ink font-semibold">{f.question}</h3>
+                  <p className="text-ink-2">{f.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl font-semibold text-[#F0B429] mb-3">Share this calculator</h2>
-            <p className="text-slate-300 mb-3">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink mb-3">Share this calculator</h2>
+            <p className="text-ink-2 mb-3">
               Free for property managers, real estate agents, home inspectors, and local bloggers. Copy this link:
             </p>
-            <pre className="bg-[#0B1614] text-slate-300 text-xs p-3 rounded-lg overflow-x-auto"><code>{embed}</code></pre>
+            <pre className="bg-paper text-ink-2 text-xs p-3 overflow-x-auto"><code>{embed}</code></pre>
           </section>
 
           <OfficialSources

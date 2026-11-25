@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { AlertTriangle, CheckCircle2, XCircle, FileWarning } from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { DirectAnswer, FAQBlock, InfoListSection, InternalLinks, LocalGuidance, OfficialSources } from "@/components/PageSections";
@@ -82,10 +82,13 @@ export default function DiyPlumbingLegalityPage() {
       />
       <Breadcrumbs items={[{ label: "Guides", href: "/blog" }, { label: title, href: path }]} />
       <article className="mt-6 max-w-4xl">
-        <p className="section-kicker">Cost and decision guides</p>
-        <h1 className="mt-3 text-4xl font-black leading-tight text-white">{title}</h1>
+        <h1 className="display-title mt-3 text-4xl font-bold leading-tight text-ink">{title}</h1>
           <Byline path="/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" />
-        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <p className="lead mt-6 text-ink-2">{directAnswer}</p>
+        <div className="mt-6">
+          <CallButton location="blog-diy-legality-top" pagePath={path} pageType="blog" service="24-hour-emergency-plumber" />
+        </div>
+        <div className="photo-frame relative mt-6 h-64 w-full overflow-hidden sm:h-80">
           <Image
             src={heroImage}
             alt="Texas homeowner checking whether they can legally do their own plumbing work"
@@ -95,28 +98,23 @@ export default function DiyPlumbingLegalityPage() {
             priority
           />
         </div>
-        <p className="mt-6 text-lg leading-8 text-slate-300">{directAnswer}</p>
-        <div className="mt-6">
-          <CallButton location="blog-diy-legality-top" pagePath={path} pageType="blog" service="24-hour-emergency-plumber" />
-        </div>
       </article>
 
       <div className="mt-8 answer-grid">
         <div>
           <DirectAnswer>{directAnswer}</DirectAnswer>
 
-          <section className="content-section mt-8">
-            <p className="section-kicker">The legal basis</p>
-            <h2 className="mt-2 text-2xl font-black text-white">Texas Occupations Code Section 1301.051</h2>
-            <p className="mt-3 leading-7 text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink">Texas Occupations Code Section 1301.051</h2>
+            <p className="mt-3 leading-7 text-ink-2">
               Texas requires a Texas State Board of Plumbing Examiners (TSBPE) license to perform plumbing work - with one narrow
               exemption. Section 1301.051, titled &ldquo;Plumbing by Property Owner in Homestead,&rdquo; states:
             </p>
-            <blockquote className="mt-4 rounded-md border-l-4 border-[#4FD1C5] bg-[#0F1F1D] p-4 italic leading-7 text-slate-200">
+            <blockquote className="mt-4 rounded-card border-l-4 border-accent bg-paper p-4 italic leading-7 text-ink-2">
               &ldquo;A property owner is not required to be licensed under this chapter to perform plumbing in the property owner&apos;s
               homestead.&rdquo;
             </blockquote>
-            <p className="mt-4 leading-7 text-slate-300">
+            <p className="mt-4 leading-7 text-ink-2">
               That is the entire operative text. It is narrow by design: it exempts the property owner&apos;s own labor, on their own
               homestead, from the state licensing requirement. It does not say anything about permits, inspections, gas work, or work
               performed by anyone other than the owner - those are addressed elsewhere in state and local code.{" "}
@@ -124,7 +122,7 @@ export default function DiyPlumbingLegalityPage() {
                 href="https://texas.public.law/statutes/tex._occ._code_section_1301.051"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#4FD1C5] underline"
+                className="font-semibold text-accent underline"
               >
                 Read the statute text
               </a>
@@ -132,13 +130,13 @@ export default function DiyPlumbingLegalityPage() {
             </p>
           </section>
 
-          <div className="content-section mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-md border border-emerald-500/30 bg-emerald-500/10 p-5">
+          <div className="content-section grid gap-4 sm:grid-cols-2">
+            <div className="rounded-card border border-rule bg-paper p-5">
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-emerald-400" aria-hidden="true" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-accent" aria-hidden="true" />
                 <div>
-                  <h3 className="font-black text-white">What the exemption covers</h3>
-                  <ul className="mt-2 space-y-1.5 text-sm leading-6 text-slate-300">
+                  <h3 className="font-bold text-ink">What the exemption covers</h3>
+                  <ul className="mt-2 space-y-1.5 text-sm leading-6 text-ink-2">
                     <li>Plumbing work you personally perform</li>
                     <li>On a home you own and occupy as your primary residence (your homestead)</li>
                     <li>Typical scope: fixture replacement, repairs, running a drain line, swapping a water heater, general repiping</li>
@@ -146,12 +144,12 @@ export default function DiyPlumbingLegalityPage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-md border border-red-500/30 bg-red-500/10 p-5">
+            <div className="rounded-card border border-rule bg-paper p-5">
               <div className="flex items-start gap-3">
-                <XCircle className="mt-0.5 h-5 w-5 flex-none text-red-400" aria-hidden="true" />
+                <XCircle className="mt-0.5 h-5 w-5 flex-none text-accent" aria-hidden="true" />
                 <div>
-                  <h3 className="font-black text-white">What it does not cover</h3>
-                  <ul className="mt-2 space-y-1.5 text-sm leading-6 text-slate-300">
+                  <h3 className="font-bold text-ink">What it does not cover</h3>
+                  <ul className="mt-2 space-y-1.5 text-sm leading-6 text-ink-2">
                     <li>Rental, investment, vacation, or commercial properties</li>
                     <li>Hiring an unlicensed person to do the work for you</li>
                     <li>Gas line work, which is regulated separately</li>
@@ -162,10 +160,9 @@ export default function DiyPlumbingLegalityPage() {
             </div>
           </div>
 
-          <section className="content-section mt-8">
-            <div className="section-kicker"><FileWarning className="h-4 w-4" aria-hidden="true" /> Permits are a separate requirement</div>
-            <h2 className="mt-2 text-2xl font-black text-white">A license exemption is not a permit exemption</h2>
-            <p className="mt-3 leading-7 text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink">A license exemption is not a permit exemption</h2>
+            <p className="mt-3 leading-7 text-ink-2">
               This is the most commonly missed detail: not needing a state plumbing license does not mean your work is exempt from
               your city&apos;s permit and inspection process. In Dallas, for example, a permit is generally required for work that
               moves, replaces, extends, or adds plumbing lines - not just routine upkeep - and the homeowner exemption does not waive
@@ -174,7 +171,7 @@ export default function DiyPlumbingLegalityPage() {
                 href="https://dallascityhall.com/departments/sustainabledevelopment/buildinginspection/Pages/building_inspection_faqs.aspx"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#4FD1C5] underline"
+                className="font-semibold text-accent underline"
               >
                 See Dallas building inspection FAQs
               </a>
@@ -184,23 +181,22 @@ export default function DiyPlumbingLegalityPage() {
             </p>
           </section>
 
-          <section className="content-section mt-8">
-            <p className="section-kicker">Quick reference</p>
-            <h2 className="mt-2 text-2xl font-black text-white">Permit Offices for Major DFW Cities</h2>
-            <p className="mt-3 leading-7 text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink">Permit Offices for Major DFW Cities</h2>
+            <p className="mt-3 leading-7 text-ink-2">
               Every DFW city sets its own permit thresholds, so the fastest way to confirm whether your specific project needs one
               is to check directly with your city&apos;s permit office before you start. Here are the official permit pages for the
               largest cities in the metro:
             </p>
-            <div className="mt-4 overflow-hidden rounded-md border border-white/10">
+            <div className="mt-4 overflow-hidden rounded-card border border-rule">
               <table className="w-full text-left text-sm">
-                <thead className="bg-[#0F1F1D] text-slate-200">
+                <thead className="bg-paper text-ink-2">
                   <tr>
-                    <th className="px-4 py-3 font-black">City</th>
-                    <th className="px-4 py-3 font-black">Official Permit Page</th>
+                    <th className="px-4 py-3 font-bold">City</th>
+                    <th className="px-4 py-3 font-bold">Official Permit Page</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/10">
+                <tbody className="divide-y divide-rule">
                   {[
                     { city: "Dallas", href: "https://dallascityhall.com/departments/sustainabledevelopment/buildinginspection/Pages/building_inspection_faqs.aspx" },
                     { city: "Fort Worth", href: "https://www.fortworthtexas.gov/departments/development-services/permits/residential-building-permit" },
@@ -209,10 +205,10 @@ export default function DiyPlumbingLegalityPage() {
                     { city: "Frisco", href: "https://www.friscotexas.gov/1696/Residential-Permits" },
                     { city: "McKinney", href: "https://www.mckinneytexas.org/3350/Home-Repairs-Permit-Information" }
                   ].map((row) => (
-                    <tr key={row.city} className="text-slate-300">
-                      <td className="px-4 py-3 font-semibold text-white">{row.city}</td>
+                    <tr key={row.city} className="text-ink-2">
+                      <td className="px-4 py-3 font-semibold text-ink">{row.city}</td>
                       <td className="px-4 py-3">
-                        <a href={row.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#4FD1C5] underline">
+                        <a href={row.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent underline">
                           {row.city} permit office
                         </a>
                       </td>
@@ -221,14 +217,13 @@ export default function DiyPlumbingLegalityPage() {
                 </tbody>
               </table>
             </div>
-            <p className="mt-3 text-sm leading-6 text-slate-400">
+            <p className="mt-3 text-sm leading-6 text-muted">
               Permit thresholds and self-service categories change from time to time - confirm current requirements directly with
               your city before starting work, especially for anything beyond a like-for-like fixture swap.
             </p>
           </section>
 
           <InfoListSection
-            kicker="Reality check"
             title="What's realistically a DIY job vs. when to call a licensed plumber"
             intro="The exemption tells you what's legal. It doesn't tell you what's a good idea. Scope and risk matter more than the legal floor."
             items={[
@@ -239,23 +234,22 @@ export default function DiyPlumbingLegalityPage() {
             ]}
           />
 
-          <section className="content-section mt-8">
-            <div className="section-kicker"><AlertTriangle className="h-4 w-4" aria-hidden="true" /> Why this matters beyond the legal question</div>
-            <h2 className="mt-2 text-2xl font-black text-white">The real risk isn&apos;t the fine - it&apos;s what happens later</h2>
-            <p className="mt-3 leading-7 text-slate-300">
+          <section className="content-section">
+            <h2 className="text-2xl font-bold text-ink">The real risk isn&apos;t the fine - it&apos;s what happens later</h2>
+            <p className="mt-3 leading-7 text-ink-2">
               Homeowners rarely run into trouble at the moment they do unpermitted work. The problems show up later:
             </p>
             <ul className="mt-4 space-y-3">
-              <li className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 leading-6 text-slate-200">
-                <strong className="text-white">Insurance claims:</strong> if water damage traces back to unpermitted or improperly
+              <li className="rounded-card border border-rule bg-paper p-4 leading-6 text-ink-2">
+                <strong className="text-ink">Insurance claims:</strong> if water damage traces back to unpermitted or improperly
                 performed plumbing work, an insurer can deny the claim.
               </li>
-              <li className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 leading-6 text-slate-200">
-                <strong className="text-white">Selling the home:</strong> a buyer&apos;s inspector can flag unpermitted plumbing
+              <li className="rounded-card border border-rule bg-paper p-4 leading-6 text-ink-2">
+                <strong className="text-ink">Selling the home:</strong> a buyer&apos;s inspector can flag unpermitted plumbing
                 changes, which can stall or reduce the sale price until the work is brought up to code and permitted after the fact.
               </li>
-              <li className="rounded-md border border-white/10 bg-[#0F1F1D] p-4 leading-6 text-slate-200">
-                <strong className="text-white">Rework:</strong> uninspected work behind a finished wall or floor may need to be
+              <li className="rounded-card border border-rule bg-paper p-4 leading-6 text-ink-2">
+                <strong className="text-ink">Rework:</strong> uninspected work behind a finished wall or floor may need to be
                 opened back up later to verify or correct it.
               </li>
             </ul>

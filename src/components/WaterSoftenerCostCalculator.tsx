@@ -54,12 +54,12 @@ export default function WaterSoftenerCostCalculator() {
     return () => clearTimeout(timer);
   }, [citySlug, people, gpd, typeId]);
 
-  const field = "w-full rounded-lg border border-[#1A3A38] bg-[#0B1614] p-3 text-white";
+  const field = "w-full rounded-lg border border-rule bg-paper p-3 text-ink";
 
   return (
-    <div className="rounded-xl border border-[#1A3A38] p-5">
+    <div className="rounded-xl border border-rule p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           Your city
           <select className={field} value={citySlug} onChange={(e) => setCitySlug(e.target.value)}>
             {waterHardnessData.map((c) => (
@@ -70,7 +70,7 @@ export default function WaterSoftenerCostCalculator() {
             </option>
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-ink-2">
           People in the household
           <input
             className={field}
@@ -82,7 +82,7 @@ export default function WaterSoftenerCostCalculator() {
             onChange={(e) => setPeople(Math.max(1, Number(e.target.value) || 1))}
           />
         </label>
-        <label className="block text-sm text-slate-300 sm:col-span-2">
+        <label className="block text-sm text-ink-2 sm:col-span-2">
           Estimated water use (gallons per person per day) - adjust if you know your actual usage from a water bill
           <input
             className={field}
@@ -94,7 +94,7 @@ export default function WaterSoftenerCostCalculator() {
             onChange={(e) => setGpd(Math.max(20, Number(e.target.value) || defaultGallonsPerPersonPerDay))}
           />
         </label>
-        <label className="block text-sm text-slate-300 sm:col-span-2">
+        <label className="block text-sm text-ink-2 sm:col-span-2">
           Softener type
           <select className={field} value={typeId} onChange={(e) => setTypeId(e.target.value as SoftenerTypeId)}>
             {softenerTypes.map((t) => (
@@ -105,17 +105,17 @@ export default function WaterSoftenerCostCalculator() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">Recommended grain capacity</p>
-          <p className="mt-1 text-2xl font-bold text-white">{result.tier.grains.toLocaleString("en-US")} grains</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">Recommended grain capacity</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{result.tier.grains.toLocaleString("en-US")} grains</p>
         </div>
-        <div className="rounded-lg bg-[#0F1F1D] p-4">
-          <p className="text-xs uppercase tracking-wide text-slate-400">{type.shortLabel}, installed</p>
-          <p className="mt-1 text-2xl font-bold text-white">{money(type.lowInstalled)}-{money(type.highInstalled)}</p>
+        <div className="rounded-lg bg-paper p-4">
+          <p className="text-xs text-muted">{type.shortLabel}, installed</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{money(type.lowInstalled)}-{money(type.highInstalled)}</p>
         </div>
       </div>
 
-      <div className="mt-4 rounded-lg bg-[#0F1F1D] p-4 text-slate-300">
+      <div className="mt-4 rounded-lg bg-paper p-4 text-ink-2">
         <p>
           At {result.hardnessGpg.toFixed(0)} GPG for {cityEntry.name} and {people} {people === 1 ? "person" : "people"}{" "}
           using {gpd} gal/day each, your household runs through about{" "}
@@ -125,13 +125,13 @@ export default function WaterSoftenerCostCalculator() {
         </p>
       </div>
 
-      <p className="mt-4 text-xs text-slate-400">
+      <p className="mt-4 text-xs text-muted">
         Grain-capacity sizing uses a commonly published water-treatment industry rule of thumb (daily grain load x 7
         days between regenerations x a 25% reserve buffer) - it is not a manufacturer spec or a regulated figure, which
         is why the water-use input above is adjustable. Installed-cost ranges by type and equipment-only cost by
         capacity: HomeAdvisor, &quot;How Much Does a Water Softener System Cost to Install?&quot; (2025/2026 data).
       </p>
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-2 text-xs text-muted">
         These are planning estimates only, not a quote - your actual installed cost depends on existing plumbing
         access, electrical needs, drain-line routing for the brine discharge, and any permit your city requires. A
         licensed plumber&apos;s on-site look is the only way to confirm the exact number.

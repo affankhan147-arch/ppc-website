@@ -57,7 +57,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function DrainBackupRestaurantPage() {
   return (
-    <>
+    <main className="page-shell">
       <JsonLd data={[
         webPageSchema(path, title, description),
         articleSchema(path, title, description),
@@ -71,7 +71,7 @@ export default function DrainBackupRestaurantPage() {
         { label: "Guides", href: "/blog" },
         { label: "Restaurant Drain Backup", href: path }
       ]} />
-      <h1 className="mt-6 text-4xl font-black leading-tight text-white">{title}</h1>
+      <h1 className="display-title mt-6 text-4xl font-bold leading-tight text-ink">{title}</h1>
       <Byline path={path} />
 
       <DirectAnswer>
@@ -80,8 +80,8 @@ export default function DrainBackupRestaurantPage() {
         </p>
       </DirectAnswer>
 
-      <section className="content-section mt-8">
-        <div className="overflow-hidden rounded-2xl border border-white/10">
+      <section className="content-section">
+        <div className="overflow-hidden border border-rule">
           <Image
             src="/images/blog/restaurant-grease-trap-drain-backup-diagram.svg"
             alt="Restaurant drain backup diagram: the grease trap between the kitchen drain line and the sewer cleanout, what owners should check first"
@@ -92,50 +92,50 @@ export default function DrainBackupRestaurantPage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">The First 15 Minutes</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">The First 15 Minutes</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <Clock className="h-5 w-5 text-slate-700 mt-0.5" />
+              <Clock className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-slate-950">Stop using affected fixtures</h3>
-                <p className="text-sm text-slate-700">Every sink, floor drain, or dishwasher run adds more water to a line that is already backing up, and can push contaminated water further into the kitchen.</p>
+                <h3 className="font-semibold text-ink">Stop using affected fixtures</h3>
+                <p className="text-sm text-ink-2">Every sink, floor drain, or dishwasher run adds more water to a line that is already backing up, and can push contaminated water further into the kitchen.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <ShieldAlert className="h-5 w-5 text-slate-700 mt-0.5" />
+              <ShieldAlert className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-slate-950">Keep the area clear</h3>
-                <p className="text-sm text-slate-700">Block off the affected section from staff and customers. Wastewater backup - especially anything touching a floor drain tied to the sewer side - is a contamination risk, not just a mess.</p>
+                <h3 className="font-semibold text-ink">Keep the area clear</h3>
+                <p className="text-sm text-ink-2">Block off the affected section from staff and customers. Wastewater backup - especially anything touching a floor drain tied to the sewer side - is a contamination risk, not just a mess.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <FileWarning className="h-5 w-5 text-slate-700 mt-0.5" />
+              <FileWarning className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-slate-950">Document before cleanup starts</h3>
-                <p className="text-sm text-slate-700">Photos and a short written timeline (when it started, which fixtures, how far it spread) help with insurance, an inspector&apos;s questions, and giving a provider accurate information before dispatch.</p>
+                <h3 className="font-semibold text-ink">Document before cleanup starts</h3>
+                <p className="text-sm text-ink-2">Photos and a short written timeline (when it started, which fixtures, how far it spread) help with insurance, an inspector&apos;s questions, and giving a provider accurate information before dispatch.</p>
               </div>
             </div>
           </div>
-          <div className="p-4 border border-slate-200 rounded-lg bg-slate-50">
+          <div className="p-4 border border-rule rounded-card bg-paper">
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-5 w-5 text-slate-700 mt-0.5" />
+              <AlertTriangle className="h-5 w-5 text-ink-2 mt-0.5" />
               <div>
-                <h3 className="font-semibold text-slate-950">Decide if you need to close a section</h3>
-                <p className="text-sm text-slate-700">If wastewater has reached food prep, storage, or a customer-facing area, that section should close until it is cleaned and the cause is resolved - this is a health code call, not just an operations one.</p>
+                <h3 className="font-semibold text-ink">Decide if you need to close a section</h3>
+                <p className="text-sm text-ink-2">If wastewater has reached food prep, storage, or a customer-facing area, that section should close until it is cleaned and the cause is resolved - this is a health code call, not just an operations one.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Why Restaurant Drains Back Up Differently Than Home Drains</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Why Restaurant Drains Back Up Differently Than Home Drains</h2>
         <p className="mt-2">
           A home kitchen sink backup is usually a single clogged trap or branch line. A restaurant kitchen runs through a grease trap (also called a grease interceptor) first - a dedicated container that is supposed to let fats, oils, and grease (often shortened to FOG in city code documents) cool, separate, and stay out of the sewer line, while wastewater continues on to the main sewer connection. When a restaurant backs up, the cause is more often one of three things: the grease trap itself is full or near capacity, grease has hardened somewhere in the line between the kitchen and the trap, or - less commonly but more seriously - the main line past the trap has its own blockage or damage.
         </p>
@@ -144,8 +144,8 @@ export default function DrainBackupRestaurantPage() {
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">DFW City Grease Trap Requirements (What We Could Verify)</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">DFW City Grease Trap Requirements (What We Could Verify)</h2>
         <div className="mt-4 space-y-4">
           <div>
             <h3 className="font-semibold">Dallas</h3>
@@ -160,26 +160,26 @@ export default function DrainBackupRestaurantPage() {
             <p className="mt-1">Sizes grease trap requirements based on the number and type of plumbing fixtures connected, and may require an undersized existing trap to be replaced. Neglected traps that contribute to a sanitary sewer overflow can carry city fines described as reaching into the thousands of dollars, on top of cleanup costs.</p>
           </div>
         </div>
-        <p className="mt-3 text-sm text-slate-300">
+        <p className="mt-3 text-sm text-ink-2">
           City ordinances change, and exact intervals, sizing tables, and fine amounts vary by city and over time - confirm current requirements directly with your city&apos;s water utilities or pretreatment program before relying on any specific number here.
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Grease Trap Backup vs. Main Sewer Line Backup: How to Tell</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Grease Trap Backup vs. Main Sewer Line Backup: How to Tell</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="p-4 border border-orange-200 rounded-lg bg-orange-50">
-            <h3 className="font-semibold text-orange-800">Points to a grease trap issue</h3>
-            <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-orange-800">
+          <div className="p-4 border border-rule rounded-card bg-paper">
+            <h3 className="font-semibold text-ink">Points to a grease trap issue</h3>
+            <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-ink">
               <li>Backup is limited to kitchen fixtures upstream of the trap</li>
               <li>Slow draining has been getting worse over days or weeks</li>
               <li>It has been longer than 90 days (or your city&apos;s interval) since the trap was last pumped</li>
               <li>Strong grease or sewer-gas odor near the trap access lid</li>
             </ul>
           </div>
-          <div className="p-4 border border-red-200 rounded-lg bg-red-50">
-            <h3 className="font-semibold text-red-800">Points to a line or main sewer issue</h3>
-            <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-red-800">
+          <div className="p-4 border border-rule rounded-card bg-paper">
+            <h3 className="font-semibold text-ink">Points to a line or main sewer issue</h3>
+            <ul className="mt-2 list-disc ml-5 space-y-1 text-sm text-ink">
               <li>Backup happened suddenly, not gradually</li>
               <li>Non-kitchen fixtures (restroom, floor drains elsewhere) are affected too</li>
               <li>The trap was recently pumped and the backup happened anyway</li>
@@ -192,15 +192,15 @@ export default function DrainBackupRestaurantPage() {
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Plumber, Grease Hauler, or Restoration Company First?</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Plumber, Grease Hauler, or Restoration Company First?</h2>
         <p className="mt-2">
-          For a straightforward full trap, call your licensed grease hauler. For anything involving a suspected line blockage, damaged trap, or backup that a routine pumping did not fix, that is a plumbing call. If wastewater has already spread onto flooring, into walls, or under equipment, the plumbing side generally needs to be controlled first - stopping the source and clearing the line - before a water-restoration company can safely dry the space and check for hidden moisture. See our guide on <Link href="/blog/plumber-or-water-restoration-company-first" className="text-teal-700 underline">who to call first after a leak or backup</Link> for more on that sequencing.
+          For a straightforward full trap, call your licensed grease hauler. For anything involving a suspected line blockage, damaged trap, or backup that a routine pumping did not fix, that is a plumbing call. If wastewater has already spread onto flooring, into walls, or under equipment, the plumbing side generally needs to be controlled first - stopping the source and clearing the line - before a water-restoration company can safely dry the space and check for hidden moisture. See our guide on <Link href="/blog/plumber-or-water-restoration-company-first" className="text-accent underline">who to call first after a leak or backup</Link> for more on that sequencing.
         </p>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-6">
           {faqs.map((faq) => (
             <div key={faq.question}>
@@ -211,8 +211,8 @@ export default function DrainBackupRestaurantPage() {
         </div>
       </section>
 
-      <section className="content-section mt-8">
-        <h2 className="text-2xl font-bold text-white">Requesting Commercial Emergency Plumbing</h2>
+      <section className="content-section">
+        <h2 className="text-2xl font-bold text-ink">Requesting Commercial Emergency Plumbing</h2>
         <p className="mt-2">
           When you request help, have the affected fixtures, how long the backup has been happening, and your last known grease trap cleaning date ready - it helps a provider triage whether this looks like a trap, line, or main sewer issue before they arrive.
         </p>
@@ -232,6 +232,6 @@ export default function DrainBackupRestaurantPage() {
         { label: "Main Sewer Line Clog", href: "/services/main-sewer-line-clog" },
         { label: "Plumber or Restoration Company First?", href: "/blog/plumber-or-water-restoration-company-first" },
       ]} />
-    </>
+    </main>
   );
 }

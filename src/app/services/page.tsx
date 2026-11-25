@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock, Droplets, ShieldCheck, Wrench } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CallButton } from "@/components/CallButton";
 import { FAQBlock, InternalLinks, OfficialSources } from "@/components/PageSections";
@@ -24,12 +24,6 @@ const categoryLabels: Record<string, string> = {
   "emergency-plumbing": "Emergency Plumbing",
   "drain-cleaning": "Drain Cleaning",
   "sewer-help": "Sewer Line Help"
-};
-
-const categoryIcons: Record<string, typeof Wrench> = {
-  "emergency-plumbing": Wrench,
-  "drain-cleaning": Droplets,
-  "sewer-help": ShieldCheck
 };
 
 const hubBullets = [
@@ -78,27 +72,24 @@ export default function ServicesHubPage() {
       />
       <Breadcrumbs items={[{ label: "Services", href: path }]} />
 
-      <section className="content-section soft-band">
+      <section className="content-section">
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div className="min-w-0">
-            <p className="section-kicker">
-              <Clock className="h-4 w-4" aria-hidden="true" /> 24/7 emergency plumbing services
-            </p>
-            <h1 className="mt-3 text-3xl font-black leading-tight text-white sm:text-4xl">
+            <h1 className="display-title font-bold text-ink">
               24/7 Emergency Plumbing Services in Dallas-Fort Worth
             </h1>
-            <ul className="mt-5 grid gap-3 text-lg font-bold text-slate-800 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-3 text-lg font-bold text-ink sm:grid-cols-2">
               {hubBullets.map((item) => (
-                <li key={item} className="flex gap-2 rounded-md border border-slate-200 bg-white p-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-cyan-700" aria-hidden="true" />
+                <li key={item} className="flex gap-2 rounded-card border border-rule bg-paper p-3">
+                  <CheckCircle2 className="mt-1 h-5 w-5 flex-none text-accent" aria-hidden="true" />
                   <span className="min-w-0">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="min-w-0 rounded-md border border-cyan-200 bg-white p-5">
-            <p className="text-lg font-black text-slate-950">Request path</p>
-            <ul className="mt-3 grid gap-2 text-base font-semibold text-slate-700">
+          <div className="min-w-0 rounded-card border border-rule bg-paper p-5">
+            <p className="text-lg font-bold text-ink">Request path</p>
+            <ul className="mt-3 grid gap-2 text-base font-semibold text-ink-2">
               <li>Choose the service that matches your issue</li>
               <li>Describe the symptoms and your city</li>
               <li>Confirm pricing, credentials, and scope directly</li>
@@ -110,7 +101,7 @@ export default function ServicesHubPage() {
         </div>
       </section>
 
-      <div className="photo-frame relative mt-2 h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+      <div className="photo-frame relative mt-2 h-64 w-full overflow-hidden sm:h-80">
         <Image
           src={getArticleImage(undefined, 3)}
           alt="24/7 emergency plumbing technician responding to a service call in Dallas-Fort Worth"
@@ -122,27 +113,23 @@ export default function ServicesHubPage() {
       </div>
 
       {categorySlugs.map((categorySlug) => {
-        const Icon = categoryIcons[categorySlug] || Wrench;
         const categoryServices = services.filter((service) => service.categorySlug === categorySlug);
         return (
           <section className="content-section" key={categorySlug}>
-            <p className="section-kicker">
-              <Icon className="h-4 w-4" aria-hidden="true" /> {categoryLabels[categorySlug] || titleCase(categorySlug.replace(/-/g, " "))}
-            </p>
-            <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">
-              {categoryLabels[categorySlug] || titleCase(categorySlug.replace(/-/g, " "))} services
+            <h2 className="text-2xl font-bold text-ink">
+              {`${categoryLabels[categorySlug] || titleCase(categorySlug.replace(/-/g, " "))} services`}
             </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {categoryServices.map((service) => (
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="premium-card group min-w-0 p-5 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-xl"
+                  className="premium-card min-w-0 p-5"
                 >
-                  <h3 className="text-xl font-black text-white">{titleCase(service.name)}</h3>
-                  <p className="mt-2 text-sm font-semibold leading-6 text-slate-200">{service.shortAnswer}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-base font-black text-cyan-700 group-hover:text-cyan-900">
-                    View details <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                  <h3 className="font-bold text-ink">{titleCase(service.name)}</h3>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-ink-2">{service.shortAnswer}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-base font-bold text-accent">
+                    View details
                   </span>
                 </Link>
               ))}

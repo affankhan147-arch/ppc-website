@@ -11,7 +11,7 @@ export const metadata = buildMetadata({
   path: "/partner-with-us"
 });
 
-const link = "text-[#4FD1C5] underline hover:text-white";
+const link = "font-bold text-accent underline hover:text-ink";
 
 export default function PartnerPage() {
   return (
@@ -24,32 +24,31 @@ export default function PartnerPage() {
       />
       <div className="answer-grid">
         <article>
-          <p className="section-kicker">Provider partners</p>
-          <h1 className="mt-3 text-4xl font-black text-white">Provider partner inquiries</h1>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
+          <h1 className="display-title font-bold text-ink">Provider partner inquiries</h1>
+          <p className="lead mt-4 text-ink-2">
             This page is for real plumbing providers and service partners who can respond to urgent plumbing, drain, sewer, pipe, toilet, and water-heater requests.
           </p>
-          <DirectAnswer>
-            Partners should provide real business details, owner-approved service areas, verified credential claims, clear availability rules, and capacity for urgent work.
-          </DirectAnswer>
+          <div className="mt-6">
+            <DirectAnswer>
+              Partners should provide real business details, owner-approved service areas, verified credential claims, clear availability rules, and capacity for urgent work.
+            </DirectAnswer>
+          </div>
         </article>
         <PartnerApplicationForm pageUrl="/partner-with-us" />
       </div>
 
       <section className="content-section">
-        <p className="section-kicker">Partner quality rules</p>
-        <h2 className="mt-2 text-2xl font-black text-white">What we ask from plumbing provider partners</h2>
+        <h2 className="text-2xl font-bold text-ink">What we ask from plumbing provider partners</h2>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {["Service area match", "Real business information", "Clear availability", "Urgent request capacity", "Verified credential claims only", "Owner-approved compliance claims"].map((rule) => (
-            <li key={rule} className="rounded-md bg-slate-50 p-3 font-semibold text-slate-800">{rule}</li>
+            <li key={rule} className="rounded-card border border-rule bg-paper p-4 font-semibold leading-6 text-ink-2">{rule}</li>
           ))}
         </ul>
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">How it works</p>
-        <h2 className="mt-2 text-2xl font-black text-white">How provider partnerships work</h2>
-        <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">How provider partnerships work</h2>
+        <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7 text-ink-2">
           <li>You send your business name, Texas license number, the cities you cover and the services you handle.</li>
           <li>We check the license on the TSBPE license search and confirm your service area and hours.</li>
           <li>Calls and requests from homeowners in your area, for the services you handle, are routed to you during the hours you set.</li>
@@ -58,9 +57,8 @@ export default function PartnerPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">Where calls come from</p>
-        <h2 className="mt-2 text-2xl font-black text-white">The homeowners behind each request</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">The homeowners behind each request</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           Requests come from Dallas-Fort Worth homeowners who searched for urgent help and read pages such as our{" "}
           <Link href="/services" className={link}>emergency plumbing services</Link>,{" "}
           <Link href="/cities" className={link}>city service area pages</Link> and{" "}
@@ -71,9 +69,8 @@ export default function PartnerPage() {
       </section>
 
       <section className="content-section">
-        <p className="section-kicker">Good fit</p>
-        <h2 className="mt-2 text-2xl font-black text-white">Who tends to do well as a partner</h2>
-        <p className="mt-3 leading-7 text-slate-300">
+        <h2 className="text-2xl font-bold text-ink">Who tends to do well as a partner</h2>
+        <p className="mt-3 leading-7 text-ink-2">
           The providers who get the most from urgent calls answer the phone quickly, give a clear arrival window and explain
           the price before they start. Homeowners calling about a burst pipe or a sewer backup are stressed and often have
           water on the floor, so a calm first conversation matters as much as the repair. Shops with a dispatcher or an
