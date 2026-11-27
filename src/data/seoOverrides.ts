@@ -298,4 +298,41 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "Tankless water heater repair in Dallas-Fort Worth: the common failures, what hard water does to a heat exchanger, error codes, and repair vs. replace. Call 1 844-397-8298."
   },
+
+  // New 2026-11-27 -- "slab leak detection" 6,600/mo, KD 14%. No dedicated page existed for the head term; new blog post.
+  "/blog/slab-leak-detection-dallas-fort-worth": {
+    title: "Slab Leak Detection in DFW: Signs, Tests & Costs",
+    description:
+      "Slab leak detection in Dallas-Fort Worth: the warning signs, the free water meter test, and how professionals pinpoint a leak under concrete without tearing up your floor. Call 1 844-397-8298."
+  },
+  // New 2026-11-27 -- "plumber toilet repair" 4,400/mo, KD 6%. No dedicated page existed for the head term; new blog post.
+  "/blog/toilet-repair-dallas-fort-worth": {
+    title: "Toilet Repair in DFW: Diagnose It Before You Call",
+    description:
+      "Toilet repair in Dallas-Fort Worth: a running toilet, a weak flush, a leak at the base, or a clog that will not clear — what causes each, what you can fix, and when to call a plumber. 1 844-397-8298."
+  },
+  // New 2026-11-27 -- "storm drain cleaning services" 4,400/mo, KD 5%. No dedicated page existed for the head term; new blog post.
+  "/blog/storm-drain-cleaning-dallas-fort-worth": {
+    title: "Storm Drain Cleaning in DFW: Before the Next Storm",
+    description:
+      "Storm drain cleaning in Dallas-Fort Worth: yard drains, catch basins, and area drains — what clogs them, how they are cleaned, and when to book before the next big storm. Call 1 844-397-8298."
+  },
+  // New 2026-11-27 -- "gas leak plumber" 3,600/mo, KD 8%. No dedicated page existed for the head term; new blog post.
+  "/blog/gas-leak-detection-dallas-fort-worth": {
+    title: "Gas Leak Detection in DFW: What to Do First",
+    description:
+      "Gas leak detection in Dallas-Fort Worth: the signs of a gas leak, what to do first, and how a licensed plumber finds it — plus when to call 911 and Atmos Energy. Call 1 844-397-8298."
+  },
+  // New 2026-11-27 -- "sewer line repair quote" GSC pos 3.9, 389 impr, 0 clicks. No dedicated page existed for the query; new blog post (complements the cost calculator).
+  "/blog/sewer-line-repair-quote-dallas-fort-worth": {
+    title: "Sewer Line Repair Quote in DFW: Read & Compare",
+    description:
+      "Sewer line repair quote in Dallas-Fort Worth: what a quote should include line by line, how to compare quotes, and the red flags that mean walk away. Get the price before work starts: 1 844-397-8298."
+  },
+  // New 2026-11-27 -- "commercial water heater repair" 1,900/mo, KD 5%. No dedicated page existed for the head term; new blog post.
+  "/blog/commercial-water-heater-repair-dallas-fort-worth": {
+    title: "Commercial Water Heater Repair in DFW: Downtime",
+    description:
+      "Commercial water heater repair in Dallas-Fort Worth: restaurants, offices, apartments, and gyms — the common failures, what downtime costs, and how to get a local licensed plumber fast. Call 1 844-397-8298."
+  },
 };

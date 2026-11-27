@@ -831,3 +831,64 @@ export const tanklessWaterHeaterRepairDallasFortWorthPost: BlogPost = {
 };
 
 blogPosts.push(tanklessWaterHeaterRepairDallasFortWorthPost);
+
+
+export const slabLeakDetectionDallasFortWorthPost: BlogPost = {
+  slug: "slab-leak-detection-dallas-fort-worth",
+  title: "Slab Leak Detection in Dallas-Fort Worth: How to Find a Leak Under Your Foundation Before It Finds Your Floors",
+  directAnswer: "A slab leak is a leak in a pipe under your concrete foundation. The first signs are a water bill that climbs for no reason, a warm patch on the floor, the sound of running water when everything is off, or damp flooring -- and a free water meter test can confirm a leak in about half an hour. Professional detection uses line isolation, pressure testing, acoustic listening, thermal imaging, and tracer gas to pinpoint the leak within inches before any concrete is opened.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "burst-pipe-emergency"
+};
+
+blogPosts.push(slabLeakDetectionDallasFortWorthPost);
+
+export const toiletRepairDallasFortWorthPost: BlogPost = {
+  slug: "toilet-repair-dallas-fort-worth",
+  title: "Toilet Repair in Dallas-Fort Worth: Diagnose the Problem Before You Call a Plumber",
+  directAnswer: "Most toilet repairs come from a few parts: a worn flapper or fill valve causes running, a failed wax ring or loose bolts cause leaks at the base, and a blockage in the trap or drain causes clogs. A cracked bowl or tank means replacing the toilet. Start by identifying where the water is going -- into the bowl, onto the floor, through the overflow tube, or nowhere at all during a flush -- and shut off the supply valve before opening any connections.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "toilet-overflow-emergency"
+};
+
+blogPosts.push(toiletRepairDallasFortWorthPost);
+
+export const stormDrainCleaningDallasFortWorthPost: BlogPost = {
+  slug: "storm-drain-cleaning-dallas-fort-worth",
+  title: "Storm Drain Cleaning in Dallas-Fort Worth: Keep the Rain Moving Before It Finds Your House",
+  directAnswer: "A storm drain carries rainwater away from your property -- yard drains, area drains, catch basins, trench drains, and the pipes that connect them. In DFW they clog with live oak leaves, clay soil sediment, construction debris, and tree roots. Cleaning means clearing the grate and basin by hand, vacuuming out the sediment, jetting the line, and testing it with water. Book it before storm season, not during it.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "emergency-drain-cleaning"
+};
+
+blogPosts.push(stormDrainCleaningDallasFortWorthPost);
+
+export const gasLeakDetectionDallasFortWorthPost: BlogPost = {
+  slug: "gas-leak-detection-dallas-fort-worth",
+  title: "Gas Leak Detection in Dallas-Fort Worth: What to Do First, and How a Leak Is Found",
+  directAnswer: "If you smell gas, leave the house immediately and call 911 and Atmos Energy at 1-866-322-8667 from a safe distance -- do not touch switches, phones, or appliances inside. A gas leak is natural gas escaping from piping, joints, or appliance connections; the signs are a rotten egg smell, a hissing sound, dead vegetation above a buried line, or a gas bill that climbs with no change in use. Detection happens after the site is confirmed safe.",
+  category: "Emergency steps",
+  relatedServiceSlug: "24-hour-emergency-plumber"
+};
+
+blogPosts.push(gasLeakDetectionDallasFortWorthPost);
+
+export const sewerLineRepairQuoteDallasFortWorthPost: BlogPost = {
+  slug: "sewer-line-repair-quote-dallas-fort-worth",
+  title: "Sewer Line Repair Quote in Dallas-Fort Worth: How to Read It, Compare It, and Know If It Is Fair",
+  directAnswer: "A sewer line repair quote should be built on a camera inspection, and it should be itemised: the inspection, cleaning, access, the repair itself (usually priced by the foot or per repair), reconnections, restoration, permits, and a final camera check. Published ranges put Texas full sewer line replacement at $3,800 to $13,500 for a typical 40 to 60 foot residential lateral, at $60 to $180 per foot, with a camera inspection at roughly $150 to $400. Compare quotes line by line, not by the total.",
+  category: "Cost and decision guides",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(sewerLineRepairQuoteDallasFortWorthPost);
+
+export const commercialWaterHeaterRepairDallasFortWorthPost: BlogPost = {
+  slug: "commercial-water-heater-repair-dallas-fort-worth",
+  title: "Commercial Water Heater Repair in Dallas-Fort Worth: Downtime, Recovery, and Getting Hot Water Back",
+  directAnswer: "Commercial water heaters work harder than residential units and support much larger daily demand -- a restaurant, an office, an apartment building, or a gym can use in a morning what a house uses in a week. The most common repair calls are no hot water, water not getting hot enough, inconsistent temperature, a leaking tank or connection, strange banging or rumbling, rust-coloured hot water, and slow recovery during peak demand. In DFW, hard water scale is the problem underneath most of them. If the tank is leaking, it cannot be repaired.",
+  category: "Emergency steps",
+  relatedServiceSlug: "commercial-emergency-plumbing"
+};
+
+blogPosts.push(commercialWaterHeaterRepairDallasFortWorthPost);
