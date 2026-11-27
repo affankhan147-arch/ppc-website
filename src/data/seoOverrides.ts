@@ -277,4 +277,25 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "Sewer line repair in Dallas-Fort Worth: the warning signs, what a camera inspection finds, trenchless vs. digging, and how to read a quote. Connect with a local licensed plumber: 1 844-397-8298."
   },
+
+  // New 2026-11-27 — "plumber for toilet leak" 22,200/mo, KD 10%. No dedicated page existed for the head term; new blog post.
+  "/blog/plumber-for-toilet-leak-dallas-fort-worth": {
+    title: "Plumber for Toilet Leak in DFW: Find It, Fix It Fast",
+    description:
+      "Toilet leaking in Dallas-Fort Worth? Find where the water is coming from — wax ring, supply line, tank, or base — and when to call a plumber. 1 844-397-8298."
+  },
+
+  // New 2026-11-27 — "hydro jetting services" 6,600/mo, KD 14%. No dedicated page existed for the head term; new blog post.
+  "/blog/hydro-jetting-services-dallas-fort-worth": {
+    title: "Hydro Jetting Services in DFW: When You Need It & Costs",
+    description:
+      "Hydro jetting services in Dallas-Fort Worth: what jetting does, when it beats snaking, what it costs, and when it is not safe. Call 1 844-397-8298."
+  },
+
+  // New 2026-11-27 — "tankless water heater repair" 18,100/mo, KD 12%. No dedicated page existed for the head term; new blog post.
+  "/blog/tankless-water-heater-repair-dallas-fort-worth": {
+    title: "Tankless Water Heater Repair in DFW: What Breaks & Costs",
+    description:
+      "Tankless water heater repair in Dallas-Fort Worth: the common failures, what hard water does to a heat exchanger, error codes, and repair vs. replace. Call 1 844-397-8298."
+  },
 };
