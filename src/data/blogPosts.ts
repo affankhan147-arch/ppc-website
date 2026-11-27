@@ -791,3 +791,13 @@ export const hvacOrPlumbingPost: BlogPost = {
 };
 
 blogPosts.push(hvacOrPlumbingPost);
+
+export const sewerLineRepairDallasFortWorthPost: BlogPost = {
+  slug: "sewer-line-repair-dallas-fort-worth",
+  title: "Sewer Line Repair in Dallas-Fort Worth: Signs, Methods, and What It Really Costs",
+  directAnswer: "Sewer line repair in Dallas-Fort Worth starts with a camera inspection: several drains slow at once, toilets gurgling, or sewage backing up into a tub or shower usually means the main line, not one drain. The fix is a spot repair, trenchless lining, pipe bursting, or open-trench replacement -- get the price in writing first and check the plumber's Texas license.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "main-sewer-line-clog"
+};
+
+blogPosts.push(sewerLineRepairDallasFortWorthPost);

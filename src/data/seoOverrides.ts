@@ -270,4 +270,11 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       "Free calculator: pick your line size for a 2026 cost range to replace a failed water pressure regulator (PRV), plus the signs it failed open or closed."
   },
+
+  // New 2026-11-27 — "sewer line repair" 90,500/mo, KD 12%. No dedicated page existed for the head term; new blog post.
+  "/blog/sewer-line-repair-dallas-fort-worth": {
+    title: "Sewer Line Repair in DFW: Signs, Methods & Costs",
+    description:
+      "Sewer line repair in Dallas-Fort Worth: the warning signs, what a camera inspection finds, trenchless vs. digging, and how to read a quote. Connect with a local licensed plumber: 1 844-397-8298."
+  },
 };
