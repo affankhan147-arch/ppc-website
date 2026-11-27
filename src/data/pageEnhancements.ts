@@ -122,32 +122,41 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
   "emergency-drain-cleaning": {
     decisionTitle: "How to judge drain-cleaning urgency",
     decisionIntro:
-      "Drain backups become higher priority when wastewater appears, multiple fixtures react, or the blocked fixture is essential for the home or business.",
+      "Drain backups become higher priority when wastewater appears, multiple fixtures react, or the blocked fixture is essential for the home or business. A drain emergency is water where it should not be, getting worse while you decide -- a slow drain is not the same thing.",
     decisionItems: [
       "Treat the issue as urgent when toilets, tubs, floor drains, or cleanouts back up together.",
       "Request help sooner when the backup returns after plunging or affects more than one room.",
       "Avoid chemical cleaners once standing water or wastewater is present.",
-      "Ask whether the visit covers a fixture clog, branch line, or possible main sewer restriction."
+      "Ask whether the visit covers a fixture clog, branch line, or possible main sewer restriction.",
+      "Call now, tonight, if water is backing up into a sink, tub, toilet, or floor drain; sewage is coming up anywhere; the only toilet will not drain; or water is pooling on the floor.",
+      "A single slow drain that still empties can usually wait for a same-day slot -- but a drain that is slow in every fixture at once is usually a main sewer line problem, and that is an emergency even if nothing has backed up yet."
     ],
     providerTitle: "What a drain provider may check",
     providerItems: [
       "Whether the backup starts at one fixture or follows water use elsewhere.",
       "Cleanout access, fixture access, and whether cable or camera inspection is appropriate.",
       "Signs of grease, roots, foreign objects, failed disposal parts, or a main-line restriction.",
-      "Whether repeated clogs need a cause diagnosis rather than another temporary clearing."
+      "Whether repeated clogs need a cause diagnosis rather than another temporary clearing.",
+      "Whether snaking or hydro jetting fits -- snaking clears a path through a local clog, while jetting scours grease, scale, and roots off the pipe walls.",
+      "Whether a camera inspection is needed -- for a drain that has blocked three times in a year, a camera turns guessing into a diagnosis."
     ],
     safetyTitle: "When to stop DIY drain attempts",
     safetyItems: [
       "Stop if plunging one fixture makes water rise in another fixture.",
       "Stop if wastewater or sewer odor appears in a tub, shower, or floor drain.",
       "Stop if chemical cleaner has already been added and standing water remains.",
-      "Stop if a business restroom, kitchen, or floor drain backup creates a slip or sanitation risk."
+      "Stop if a business restroom, kitchen, or floor drain backup creates a slip or sanitation risk.",
+      "Stop if a drain that was snaked twice clogs again within months -- the cause was not removed, and snaking again will not remove it.",
+      "Do not let anyone hydro-jet a line without a camera check first -- jetting a collapsed or badly corroded pipe can damage it."
     ],
     preventionTitle: "Ways to reduce repeat drain problems",
     preventionItems: [
       "Keep grease, wipes, paper towels, and hygiene products out of drains and toilets.",
       "Act on recurring slow drains before wastewater backs up into lower fixtures.",
-      "Ask the provider what likely caused the clog and what maintenance is reasonable."
+      "Ask the provider what likely caused the clog and what maintenance is reasonable.",
+      "Never pour grease down a sink -- let it solidify and throw it away; grease hardens faster in cold pipes in winter. Use strainers in showers and tubs, and never flush wipes, even ones labelled flushable.",
+      "A line that has blocked twice in a year should be camera-inspected instead of snaked a third time. Homes with a large live oak over the sewer line benefit from an inspection every few years.",
+      "After a heavy DFW thunderstorm, a partially blocked drain can back up fast -- a drain that was fine on Tuesday can back up on Thursday night."
     ],
     extraFaqs: [
       {
@@ -163,8 +172,9 @@ export const serviceEnhancements: Record<string, PageEnhancement> = {
     ],
     extraLinks: [
       { label: "Drain cleaning cost factors", href: "/cost-guides/drain-cleaning-cost-dfw" },
-      { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" },
-      { label: "Water backing up in shower and toilet", href: "/problems/water-backing-up-in-shower-and-toilet" }
+      { label: "Hydro jetting vs. drain snaking in DFW", href: "/blog/hydro-jetting-vs-drain-snaking-dfw" },
+      { label: "How long should emergency drain cleaning take", href: "/blog/how-long-should-emergency-drain-cleaning-take" },
+      { label: "Kitchen sink backing up", href: "/problems/kitchen-sink-backing-up" }
     ]
   },
   "main-sewer-line-clog": {
@@ -7623,6 +7633,57 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Tankless Water Heater Not Producing Hot Water: Troubleshooting", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" },
       { label: "How Your Home Plumbing System Works: DFW Guide", href: "/blog/how-home-plumbing-system-works-dallas-fort-worth" },
       { label: "Water Heater Emergency Service", href: "/services/water-heater-emergency" },
+    ]
+  },
+  "sewer-line-repair-dallas-fort-worth": {
+    checklistTitle: "What to check before you agree to a sewer line repair",
+    checklistIntro:
+      "A sewer line problem creeps up -- several drains misbehaving at once is the pattern that matters. Work through these in order before anyone digs.",
+    checklistItems: [
+      "Several drains slow at once, toilets gurgling, or water backing up in the lowest fixture usually means the main line, not one drain.",
+      "A wet or suspiciously green patch in the yard, or a sewage smell near the cleanout, points to a leaking line under the lawn.",
+      "Get a camera inspection before agreeing to any repair -- it shows cracks, roots, offsets, bellies, and collapsed sections, with the exact distance and depth.",
+      "Ask the plumber to record the inspection and show you the footage; never agree to a full line replacement without a camera in the ground.",
+      "Get several written quotes and compare them line by line, not just the total -- camera, cleaning, access, the repair itself, reconnections, restoration, permits, and a final camera check.",
+      "Check the plumber's Texas license before you approve work, and never pay in full up front."
+    ],
+    proofTitle: "How the repair methods compare -- and what to confirm",
+    proofItems: [
+      "Spot repair fixes a short damaged section by digging just that area; it is the cheapest option when the damage truly is local.",
+      "Trenchless lining (CIPP) forms a new pipe inside the old one through one or two small access points; it cannot fix a collapsed or badly bellied pipe.",
+      "Pipe bursting pulls a new pipe through the old one while breaking the old pipe apart -- full replacement without a trench, where the layout allows.",
+      "Open-trench replacement is the most straightforward and the most disruptive; restoration of the yard, driveway, or patio should be in the quote or explicitly excluded.",
+      "In Dallas-Fort Worth, the homeowner generally owns the sewer lateral to the city main, including the section under the sidewalk and street -- so a failed lateral is the homeowner's repair.",
+      "A new PVC line should last fifty years or more; a lined pipe is rated for decades. The installation matters more than the material -- proper fall, bedding, and joints in DFW clay."
+    ],
+    extraFaqs: [
+      {
+        question: "How do I know if it is the sewer line or just a clogged drain?",
+        answer:
+          "One slow drain is usually a local clog. Several drains slow at once, toilets gurgling, or water backing up in the lowest fixture all point to the main line. A camera inspection settles it definitively."
+      },
+      {
+        question: "Can a sewer line be repaired without digging up my yard?",
+        answer:
+          "Often, yes -- trenchless lining and pipe bursting repair or replace the pipe through one or two small access points. They cannot fix a collapsed pipe or a badly bellied one, and they are not suitable for every layout. The camera inspection determines which methods your line supports."
+      },
+      {
+        question: "What should a sewer line repair quote include?",
+        answer:
+          "The camera inspection, cleaning, access, the repair itself by the foot or per repair, reconnections, restoration, permits, and a final camera check. Compare quotes line by line, check the plumber's license, and never pay in full up front."
+      },
+      {
+        question: "How long does sewer line repair take?",
+        answer:
+          "A spot repair is usually a day. A trenchless lining or pipe bursting job is typically one to two days. An open-trench replacement on a long or deep line can take several days, plus restoration time for the yard, driveway, or patio."
+      }
+    ],
+    extraLinks: [
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Sewer root intrusion in DFW", href: "/guides/dfw-sewer-root-intrusion" },
+      { label: "Who is responsible for a sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
     ]
   }
 };
