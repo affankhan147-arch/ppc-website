@@ -7685,6 +7685,159 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Sewer root intrusion in DFW", href: "/guides/dfw-sewer-root-intrusion" },
       { label: "Who is responsible for a sewer line in Fort Worth", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
     ]
+  },
+  "plumber-for-toilet-leak-dallas-fort-worth": {
+    checklistTitle: "What to check before you call a plumber for a toilet leak",
+    checklistIntro:
+      "A toilet leak is a where-is-the-water-going problem, not an is-it-broken problem. Work through these in order before anyone arrives.",
+    checklistItems: [
+      "Dry everything, flush once, and watch where water appears first -- the location of the water is the diagnosis.",
+      "Water in the bowl without flushing, or a toilet refilling on its own, is a silent tank-to-bowl leak -- do the dye test: food colouring in the tank, no flush for 10 to 15 minutes; colour in the bowl means water is leaking past the flapper.",
+      "Water at the base after a flush points to the wax ring or flange -- stop using that toilet, because every flush pushes more water under the floor.",
+      "Water down the back of the toilet means the tank-to-bowl gasket has failed; a drip at the wall valve means the supply line or shut-off valve.",
+      "Shut off the water at the toilet valve and flush once; if the valve will not turn, shut off the main supply instead -- and soak up standing water and get air moving.",
+      "A stain on the ceiling below a bathroom, or a floor that feels soft near the base, means water is already through the floor -- call now, and take a photo before you clean up."
+    ],
+    proofTitle: "Where toilet leaks come from -- and what the repair involves",
+    proofItems: [
+      "A leaking toilet can waste about 200 gallons of water per day, according to the EPA WaterSense program, and toilets account for nearly 30 percent of indoor water use.",
+      "The flapper is the usual suspect in a silent leak: DFW's very hard water and chlorine wear the rubber down, and a warped or scale-coated flapper does not seal.",
+      "The braided supply line is under constant pressure -- a line weeping at the connection for weeks can split without warning and flood a bathroom floor in minutes.",
+      "The wax ring is a one-time-use seal: once compressed it does not spring back, so a rocking toilet breaks the seal and every flush pushes water and waste into the subfloor.",
+      "Expansive clay soil under much of the Metroplex shifts the slab just enough to rock a toilet that was set level years ago, and corroded flanges in 1970s-90s homes give the bolts nothing to hold.",
+      "A cracked tank or bowl is not a repair: porcelain under pressure can fail suddenly, so stop using the toilet and replace it -- do not patch it or caulk it."
+    ],
+    extraFaqs: [
+      {
+        question: "How do I find where my toilet is leaking from?",
+        answer:
+          "Dry everything, flush once, and watch where water appears first. Water at the base after a flush points to the wax ring; water down the back points to the tank-to-bowl gasket; a drip at the wall valve points to the supply line or shut-off. If nothing is visible, do the dye test."
+      },
+      {
+        question: "How much water does a leaking toilet waste?",
+        answer:
+          "A leaking toilet can waste about 200 gallons of water per day, according to the EPA WaterSense program -- and a silent tank-to-bowl leak can run for months before the water bill makes it obvious."
+      },
+      {
+        question: "Should I call a plumber for a leaking toilet, or fix it myself?",
+        answer:
+          "A flapper or fill valve adjustment is a reasonable homeowner job. A leak at the base, from the supply line or shut-off valve, a cracked tank or bowl, water through the ceiling, or a soft floor all need a plumber for water leaks."
+      },
+      {
+        question: "Can a toilet leak be confused with a slab leak?",
+        answer:
+          "Yes. Shut off the toilet supply and dry the floor -- if the floor stays dry, the toilet was the source; if water keeps appearing, the problem is elsewhere."
+      }
+    ],
+    extraLinks: [
+      { label: "Toilet overflow emergency service", href: "/services/toilet-overflow-emergency" },
+      { label: "Toilet leaking at base: wax ring failure signs", href: "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas" },
+      { label: "Emergency leak repair cost in DFW", href: "/cost-guides/emergency-leak-repair-cost-dfw" },
+      { label: "Does homeowners insurance cover a plumbing leak in Texas?", href: "/blog/does-homeowners-insurance-cover-a-plumbing-leak-in-texas" },
+      { label: "How to verify a Texas plumber's license", href: "/blog/how-to-verify-a-texas-plumbers-license" }
+    ]
+  },
+  "hydro-jetting-services-dallas-fort-worth": {
+    checklistTitle: "What to check before you agree to hydro jetting",
+    checklistIntro:
+      "Jetting cleans the pipe; it does not fix a broken one. Work through these in order before anyone feeds a hose into your line.",
+    checklistItems: [
+      "The same drain clogging again within weeks or months of being snaked means the buildup is still on the pipe walls -- a line that needs snaking every few months is a line that needs cleaning.",
+      "Several drains slow at the same time, or water backing up into the lowest fixture, points to buildup in a shared branch or the main line.",
+      "Get a camera inspection before any jetting when the pipe's condition is unknown -- it shows cracks, roots, offsets, bellies, and collapsed sections, with the exact distance and depth.",
+      "Ask the plumber to show you the camera footage before and after -- the after-footage proves the pipe is actually clean, not just flowing again for the moment.",
+      "If someone offers to jet a main line without a camera, get a second opinion; a collapsed line, a badly bellied line, or old fragile pipe that has never been inspected should not be jetted.",
+      "Get the price in writing before work starts, with the camera, root cutting, and access broken out -- and never pay in full up front."
+    ],
+    proofTitle: "What jetting does -- and when it is the wrong tool",
+    proofItems: [
+      "A snake punches a hole through a clog and restores flow; a hydro jet scours the full inside wall of the pipe and removes the grease, scale, and roots that caused the clog, which is why a jetted line stays clear longer.",
+      "Published guides put the working pressure at roughly 1,500 to 4,000 PSI, adjusted to the pipe (HomeGuide; SewerLine Lab, surveyed Aug 2026) -- a sound PVC main line takes a different approach than a fifty-year-old cast iron line in Oak Cliff.",
+      "Published national ranges put a standard residential visit at roughly $350 to $600, national average about $475 (Angi, updated Oct 2026); HomeGuide puts most residential jobs at $250 to $800.",
+      "Jetting a collapsed pipe washes soil into the line and can enlarge the hole; jetting a badly bellied line cleans it out and the water pools there again -- both need repair, not cleaning.",
+      "Expansive clay soil shifts buried pipe and creates bellies, live oak roots grow into joints, and DFW's hard water leaves mineral scale inside drain pipe -- the three reasons DFW lines clog the way they do.",
+      "A standard residential main-line visit, including the camera inspection before and after, typically takes one to three hours on site (SewerLine Lab, surveyed Aug 2026)."
+    ],
+    extraFaqs: [
+      {
+        question: "How much does hydro jetting cost?",
+        answer:
+          "Published national ranges put a standard residential visit at roughly $350 to $600, with a national average of about $475 (Angi, updated Oct 2026). HomeGuide puts most residential jobs at $250 to $800. Heavy roots, long main lines, commercial grease lines, and jobs with no cleanout cost more. These are national ranges, not Dallas-Fort Worth prices -- get a written quote for your line before the work starts."
+      },
+      {
+        question: "Is hydro jetting safe for old pipes?",
+        answer:
+          "It depends on the pipe's condition, which is why a camera inspection comes first. Sound PVC, cast iron, and clay lines can be jetted when the pressure and nozzle are matched to the pipe. A collapsed pipe, a badly bellied line, or old fragile pipe that has never been inspected should not be jetted. The camera is what decides."
+      },
+      {
+        question: "How is hydro jetting different from snaking?",
+        answer:
+          "A snake punches a hole through a clog and restores flow; a hydro jet scours the full inside wall of the pipe and removes the grease, scale, and roots that caused the clog. Snaking is faster and cheaper and right for a simple one-off clog. Jetting is the answer when the same line keeps clogging after snaking."
+      },
+      {
+        question: "Can I rent a hydro jetter and do it myself?",
+        answer:
+          "No. Hydro jetting is professional equipment, not a DIY job. The water pressure involved can cut skin, a hose fed into a damaged line can break the pipe or flood the house, and without a camera inspection first you cannot know whether the line is safe to jet. This is licensed-plumber work."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Hydro jetting vs. drain snaking in DFW", href: "/blog/hydro-jetting-vs-drain-snaking-dfw" },
+      { label: "Sewer camera inspection cost in DFW: what it finds", href: "/blog/sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds" },
+      { label: "Drain cleaning cost guide for Dallas homeowners", href: "/blog/drain-cleaning-cost-guide-for-dallas-homeowners" },
+      { label: "Sewer root intrusion in DFW", href: "/guides/dfw-sewer-root-intrusion" }
+    ]
+  },
+  "tankless-water-heater-repair-dallas-fort-worth": {
+    checklistTitle: "What to check before you agree to a tankless water heater repair",
+    checklistIntro:
+      "Tankless units fail differently from tank heaters, and in Dallas-Fort Worth they fail for a specific reason more than any other: the water. Work through these in order.",
+    checklistItems: [
+      "If the unit has never been descaled and is more than two years old, ask about a descaling flush first -- a surprising number of 'broken' tankless units in DFW are simply scaled up, and a flush is the repair.",
+      "Write the error code down exactly as it appears and tell the plumber when you call -- Rinnai '11' means no ignition, Navien 'E003' means a flame rod fault, Rheem 'LC' means scale.",
+      "Check the simple causes first: the breaker, the gas valve, whether the shutoff valves to the unit are fully open, and the inlet filter -- a tankless heater needs a minimum flow to fire.",
+      "Water leaking from the heat exchanger itself is serious; water dripping from connections or valves is usually repairable -- know which one you have before you agree to anything.",
+      "Use the 50 percent rule: if the repair costs more than half of a new installed unit, replace it -- especially if the unit is fifteen years or older or facing a second major repair within two years.",
+      "Ask whether the plumber is licensed by the Texas State Board of Plumbing Examiners, what the price is before work starts, and what warranty comes with the repair -- and verify the license yourself."
+    ],
+    proofTitle: "What breaks on a tankless unit in DFW -- and what it costs",
+    proofItems: [
+      "Scale buildup in the heat exchanger is the DFW problem: Dallas-Fort Worth water is very hard at 10 to 17 grains per gallon, and a unit descaled annually will last twenty years or more while a neglected one in hard water can fail in ten.",
+      "Published national ranges put a descaling flush at $150 to $300, a flow sensor replacement at $200 to $400, and most tankless repairs at $150 to $600, with the average around $325.",
+      "A heat exchanger repair runs $600 to $1,200 in published national ranges, and on a unit over twelve years old it often justifies replacement instead; a full unit replacement runs $1,800 to $4,500 or more.",
+      "The February 2021 freeze showed that a tankless heater holds very little water in a thin-walled heat exchanger that does not forgive freezing -- when the power goes out, the built-in freeze protection stops working and the heat exchanger can crack.",
+      "The cold water sandwich -- hot, then cold, then hot again -- happens when the unit shuts off between uses and the water in the pipes cools, or when the flow sensor is slow to respond; a recirculation pump fixes the first cause, a sensor replacement the second.",
+      "If you smell gas, leave the house and call 911 and Atmos Energy at 1-866-322-8667 from outside -- do not keep trying to ignite a unit that smells of gas."
+    ],
+    extraFaqs: [
+      {
+        question: "How often should a tankless water heater be descaled in Dallas-Fort Worth?",
+        answer:
+          "Once a year. DFW water is very hard at 10 to 17 grains per gallon, and scale is the most common cause of tankless failure here. Annual descaling is what gets a tankless unit to twenty years."
+      },
+      {
+        question: "Why does my tankless water heater go cold in the middle of a shower?",
+        answer:
+          "Usually the flow sensor is slow to respond, the unit is undersized for the demand, or scale has narrowed the heat exchanger. If it happens when a second fixture opens, the unit may be undersized."
+      },
+      {
+        question: "Is it worth repairing a ten-year-old tankless unit?",
+        answer:
+          "Usually, if the heat exchanger is intact and the repair is a part under $600. Use the 50 percent rule: if the repair costs more than half of a new installed unit, replace it."
+      },
+      {
+        question: "Can a tankless water heater freeze in Texas?",
+        answer:
+          "Yes -- and it has, most famously in February 2021. The heat exchanger holds little water in thin walls, and when the power goes out the built-in freeze protection stops. Keep power to the unit during a freeze if you can, and know where the shutoff is."
+      }
+    ],
+    extraLinks: [
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Tankless water heater not producing hot water: troubleshooting", href: "/blog/tankless-water-heater-not-producing-hot-water-troubleshooting" },
+      { label: "Tankless water heater installation cost", href: "/cost-guides/tankless-water-heater-installation-cost" },
+      { label: "Water heater repair-or-replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+      { label: "DFW water hardness by city: what it does to your water heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" }
+    ]
   }
 };
 

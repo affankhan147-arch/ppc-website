@@ -801,3 +801,33 @@ export const sewerLineRepairDallasFortWorthPost: BlogPost = {
 };
 
 blogPosts.push(sewerLineRepairDallasFortWorthPost);
+
+export const plumberForToiletLeakDallasFortWorthPost: BlogPost = {
+  slug: "plumber-for-toilet-leak-dallas-fort-worth",
+  title: "Plumber for Toilet Leak in Dallas-Fort Worth: Where It Is Leaking, What It Means, and When It Cannot Wait",
+  directAnswer: "A toilet leaks from one of five places: the tank into the bowl, the supply line or shut-off valve, the gasket between the tank and the bowl, the wax ring seal at the base, or a crack in the porcelain. Dry everything, flush once, and watch where water appears -- water from the base, a soft floor, or water through the ceiling below means stop using that toilet and call a plumber.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "toilet-overflow-emergency"
+};
+
+blogPosts.push(plumberForToiletLeakDallasFortWorthPost);
+
+export const hydroJettingServicesDallasFortWorthPost: BlogPost = {
+  slug: "hydro-jetting-services-dallas-fort-worth",
+  title: "Hydro Jetting Services in Dallas-Fort Worth: What It Is, When You Need It, and What It Costs",
+  directAnswer: "Hydro jetting services use high-pressure water to scour a drain or sewer line clean, removing grease, scale, sludge, and tree roots that a snake only punches through. It is the right call when drains keep clogging after snaking, when several fixtures are slow at once, or when a camera inspection shows heavy buildup -- but never before a camera inspection, because jetting a damaged line can make it worse.",
+  category: "Drain and sewer guidance",
+  relatedServiceSlug: "emergency-drain-cleaning"
+};
+
+blogPosts.push(hydroJettingServicesDallasFortWorthPost);
+
+export const tanklessWaterHeaterRepairDallasFortWorthPost: BlogPost = {
+  slug: "tankless-water-heater-repair-dallas-fort-worth",
+  title: "Tankless Water Heater Repair in Dallas-Fort Worth: What Breaks, What It Costs, and When to Replace",
+  directAnswer: "Most tankless water heater repairs in Dallas-Fort Worth come down to scale buildup in the heat exchanger, a failed flow sensor, a failed igniter or flame sensor, an error-code lockout, or venting trouble. Scale is the DFW story: the water here is very hard, and a tankless unit that has never been descaled will usually tell you about it with lukewarm water and an error code -- descale once a year.",
+  category: "Emergency steps",
+  relatedServiceSlug: "water-heater-emergency"
+};
+
+blogPosts.push(tanklessWaterHeaterRepairDallasFortWorthPost);
