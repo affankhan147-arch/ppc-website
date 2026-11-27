@@ -7838,6 +7838,312 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { label: "Water heater repair-or-replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
       { label: "DFW water hardness by city: what it does to your water heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" }
     ]
+  },
+  "slab-leak-detection-dallas-fort-worth": {
+    checklistTitle: "How to check for a slab leak before you call a plumber",
+    checklistIntro:
+      "Work through these in order -- the meter test costs nothing and tells you whether there is a leak at all before anyone is booked.",
+    checklistItems: [
+      "Turn off every tap, the washing machine, the dishwasher, and any automatic irrigation, then read your water meter -- including the small leak indicator dial that spins at very small flows.",
+      "Leave the house untouched for two to three hours (or 15 to 30 minutes if you are watching the leak indicator) and read the meter again -- if it has moved at all, water is escaping on your side of the meter.",
+      "Walk the house barefoot and feel for warm patches on the floor -- a hot water line leaking below heats the concrete above it, and this is the sign people trust most once they know what it means.",
+      "Listen late at night for a faint hiss, trickle, or low rushing sound near a wall or under the floor when every tap is off.",
+      "Check for damp carpet, warped wood flooring, loose tiles, a musty smell at the base of walls, or new cracks -- two or three signs together is a pattern worth a meter test tonight.",
+      "Ask the plumber which detection methods they use and whether they confirm with two methods before opening the floor -- and ask for the price of detection alone, separately from any repair."
+    ],
+    proofTitle: "Why slab leaks happen so often in Dallas-Fort Worth",
+    proofItems: [
+      "Expansive clay soil is the single biggest reason DFW has more slab leaks than most American cities: the clay swells when wet and shrinks when dry, lifting and dropping the ground under a house by inches over a season and stressing every buried pipe.",
+      "Large parts of Dallas and Fort Worth were built in the 1960s, 70s, and 80s with copper supply lines under the slab -- after decades in contact with soil and water, copper develops pinhole leaks, and a house from 1975 with its original copper is living on borrowed time.",
+      "DFW water is very hard at 10 to 17 grains per gallon in cities including Frisco, McKinney, Rockwall, and Forney -- hard water accelerates corrosion inside copper pipe and leaves scale that narrows the bore.",
+      "Published national ranges from Angi 2026 put professional slab leak detection at $150 to $400, averaging around $280 -- and it is the cheapest money in the whole job, because it is what prevents a ten-foot trench through your living room for a leak the size of a pinhole.",
+      "A good plumber pinpoints the leak within 6 to 12 inches using a sequence -- meter isolation, hot versus cold line isolation, static pressure testing, acoustic listening, thermal imaging, and tracer gas -- and confirms with two methods before anyone picks up a saw.",
+      "A plumber who wants to start jackhammering after a single test is skipping steps -- ask which methods they use and whether they confirm the location before opening the floor."
+    ],
+    extraFaqs: [
+      {
+        question: "How do I know if I have a slab leak or just a high water bill?",
+        answer:
+          "Run the meter test. Turn everything off, watch the leak indicator for 15 to 30 minutes. If it moves with zero water use in the house, water is escaping somewhere -- and if you also have a warm patch on the floor or the sound of running water at night, a slab leak is the likely cause."
+      },
+      {
+        question: "Can a slab leak be fixed without breaking the floor?",
+        answer:
+          "Sometimes. Pipe rerouting bypasses the buried section entirely through the attic and walls, and pipe lining repairs from inside. A spot repair needs the floor opened above the leak -- but proper detection keeps that opening small, ideally under a square foot."
+      },
+      {
+        question: "How much does slab leak detection cost?",
+        answer:
+          "Published national ranges put detection at $150 to $400, averaging around $280, depending on the methods used. It is billed separately from the repair. Our slab-leak repair cost calculator gives a starting estimate for the full job."
+      },
+      {
+        question: "Will my homeowners insurance cover a slab leak?",
+        answer:
+          "Often, the damage caused by the leak -- flooring, drywall, the access work -- is covered, while the pipe repair itself is not. It depends on the policy and the cause. Our guide to Texas insurance and plumbing leaks explains the distinction, and you should call your insurer before authorising work."
+      }
+    ],
+    extraLinks: [
+      { label: "Slab leaks in DFW: the guide", href: "/guides/dfw-slab-leaks" },
+      { label: "Slab-leak repair cost calculator", href: "/tools/slab-leak-repair-cost-calculator" },
+      { label: "Slab leak warning signs in Dallas-Fort Worth", href: "/blog/slab-leak-warning-signs-dallas-fort-worth-homeowners" },
+      { label: "How to check your water meter for a hidden leak", href: "/blog/how-to-check-your-water-meter-for-a-hidden-leak-dallas" },
+      { label: "PEX vs. copper repiping in Dallas-Fort Worth", href: "/blog/pex-vs-copper-repipe-dallas-fort-worth" }
+    ]
+  },
+  "toilet-repair-dallas-fort-worth": {
+    checklistTitle: "Diagnose your toilet problem before you call a plumber",
+    checklistIntro:
+      "Identify where the water is going first -- that tells you whether the problem is in the tank, at the base, or in the drain.",
+    checklistItems: [
+      "If the toilet runs after flushing, try the dye test: a few drops of food colouring in the tank, wait 10 to 15 minutes without flushing -- if colour appears in the bowl, the flapper is leaking.",
+      "Check the chain: too short holds the flapper slightly open, too long tangles and delays it closing -- there should be about half an inch of slack when the flapper is closed.",
+      "Check the tank water level against the marked line, usually about an inch below the top of the overflow tube -- if the fill valve is set too high, water rises above the tube and drains into the bowl continuously.",
+      "For a weak flush, check the tank water level, then the rim holes under the bowl rim -- DFW hard water clogs them with mineral scale over years until the flush loses its swirl.",
+      "For water on the floor near the base, dry everything and flush once while watching closely -- water at the base means a failed wax ring, and the toilet has to come off and be reset.",
+      "For clogs, use a flange plunger with firm, steady strokes, then a closet auger -- and avoid chemical drain cleaners, which often do not clear the clog and make the job hazardous for whoever works on it next."
+    ],
+    proofTitle: "What causes the most common toilet problems",
+    proofItems: [
+      "Toilets account for nearly 30 percent of indoor water use, according to the EPA WaterSense program -- and a leaking toilet can waste about 200 gallons of water per day.",
+      "A toilet that cycles on and off or hisses continuously is usually a flapper that no longer seals, a chain that is too short or tangled, or a fill valve set too high.",
+      "A weak flush is usually low tank water, clogged rim holes from DFW mineral buildup, or a blocked roof vent -- a blocked vent breaks the siphon and makes the toilet flush weakly and gurgle.",
+      "A toilet that flushes weakly in every bathroom at once is more likely a vent or main line problem than a single clogged toilet -- if other drains gurgle or back up when you flush, the problem is downstream.",
+      "A cracked bowl or tank should not be patched -- porcelain under pressure can fail suddenly and flood the room. If you see a crack, stop using the toilet and replace it.",
+      "Some toilets need special parts that have to be ordered -- certain Kohler, Toto, and American Standard models use fill valves, flappers, and handles that are not always available off the shelf, so a plumber may need to order the part and return."
+    ],
+    extraFaqs: [
+      {
+        question: "Why does my toilet keep running?",
+        answer:
+          "Almost always a flapper that no longer seals, a chain that is too short or tangled, or a fill valve set too high. Try the dye test: food colouring in the tank, wait 15 minutes without flushing. If colour appears in the bowl, the flapper is leaking."
+      },
+      {
+        question: "Why is there water around the base of my toilet?",
+        answer:
+          "Usually a failed wax ring -- the seal between the toilet and the floor flange. It can also be a loose supply connection or a tank bolt leak. Dry everything, flush once, and watch where the water appears. A base leak needs a plumber; the toilet has to come off and be reset."
+      },
+      {
+        question: "How do I fix a clogged toilet?",
+        answer:
+          "Use a flange plunger with firm, steady strokes. If that does not clear it, a closet auger reaches farther and is safer for porcelain than a drain snake. Avoid chemical drain cleaners. If it clogs often, or other drains are affected, call a plumber -- the problem may be in the drain line or the vent."
+      },
+      {
+        question: "Should I repair or replace my toilet?",
+        answer:
+          "Repair it if the problem is a part -- flapper, fill valve, flush valve, handle, wax ring. Replace it if the tank or bowl is cracked, or if it is an old high-volume toilet and the repair money is better spent on a modern 1.28-gallon unit."
+      }
+    ],
+    extraLinks: [
+      { label: "Toilet overflow emergency service", href: "/services/toilet-overflow-emergency" },
+      { label: "Toilet installation cost calculator", href: "/tools/toilet-installation-cost-calculator" },
+      { label: "Toilet overflowing at night in Dallas: fast steps", href: "/blog/toilet-overflowing-at-night-in-dallas-fast-steps" },
+      { label: "Toilet running constantly in Dallas: won't stop running", href: "/blog/toilet-running-constantly-dallas-wont-stop-running" },
+      { label: "Toilet leaking at the base: wax ring failure signs", href: "/blog/toilet-leaking-at-base-wax-ring-failure-signs-dallas" }
+    ]
+  },
+  "storm-drain-cleaning-dallas-fort-worth": {
+    checklistTitle: "How to tell your storm drain needs cleaning",
+    checklistIntro:
+      "Watch for these signs after rain -- the most serious one is water sitting against the foundation.",
+    checklistItems: [
+      "Water pools where it used to drain -- a low spot in the yard, a driveway, or a patio that holds water after rain when it did not before.",
+      "The yard floods in every storm, not once in a decade -- a regular, predictable flood in the same place, every time it rains hard.",
+      "A grate that stays full of standing water -- if the water in a catch basin or yard drain does not drop within a few hours of the rain stopping, the line downstream is blocked.",
+      "Water running against the foundation -- the most serious sign, because in DFW clay soil that is a foundation problem as well as a drainage problem.",
+      "A downspout that overflows at the gutter -- the buried line it connects to is blocked, and the water is coming back up.",
+      "Lift the grate and clear leaves and debris by hand, regularly, especially under a live oak -- that is genuinely useful maintenance and it costs nothing. Do not put a pressure washer or a drain snake into a buried line you have not inspected."
+    ],
+    proofTitle: "What clogs a storm drain in Dallas-Fort Worth",
+    proofItems: [
+      "Live oak leaves are DFW's signature clog: the trees shed year-round, and the small, tough leaves mat into a waterproof layer over a grate -- a yard under a mature live oak can fill a catch basin in a single season.",
+      "Clay soil sediment is the most common cause of a storm drain that 'worked fine last year' -- fine sediment washes in, settles in the low spots of a buried line, and packs hard between storms.",
+      "Tree roots find the moisture in a storm line joint and grow into it, just as they do in a sewer line -- clay and concrete storm pipe are particularly vulnerable, and snaking alone will not clear a root mass.",
+      "Newer DFW subdivisions -- Frisco, McKinney, Celina, and the new builds across the metro -- generate concrete washout, gravel, and dirt that ends up in storm lines during construction, so a drain on a recently built lot may have been partially blocked since the house was finished.",
+      "A proper cleaning does the basin first and the pipe second: the standing water, mud, and leaves are vacuumed out of the basin so the debris is not pushed down the line, then the line is jetted and tested with water.",
+      "DFW's heaviest rain comes in spring and early summer, roughly April through June, with a second round in the fall -- the right time to clean a storm drain is before that season starts, when the schedule is open and the crew can work in dry weather."
+    ],
+    extraFaqs: [
+      {
+        question: "Is my storm drain the city's responsibility?",
+        answer:
+          "The city's storm sewer starts at the street. Everything on your property -- yard drains, area drains, catch basins, the pipes that connect them -- is the homeowner's responsibility, including the section that runs to the street."
+      },
+      {
+        question: "How often should storm drains be cleaned?",
+        answer:
+          "A yard drain under a mature live oak benefits from an annual cleanout before storm season. A catch basin in a parking lot or HOA common area should be on a regular cycle -- at least annually, more often if it fills fast."
+      },
+      {
+        question: "What is the difference between a storm drain and a sewer drain?",
+        answer:
+          "A storm drain carries rainwater away from your property. A sewer drain carries wastewater from your house to the city sewer. They are separate systems, they clog for different reasons, and a problem in one does not mean a problem in the other."
+      },
+      {
+        question: "Can I clean a storm drain myself?",
+        answer:
+          "You can lift the grate and clear leaves and debris by hand, and you should -- it is the most useful maintenance there is. Do not put a pressure washer or a drain snake into a buried line you have not inspected. A camera inspection first is what keeps a cleaning from becoming a repair."
+      }
+    ],
+    extraLinks: [
+      { label: "Emergency drain cleaning service", href: "/services/emergency-drain-cleaning" },
+      { label: "Dallas storms and sewer backups: what to check", href: "/blog/dallas-storms-and-sewer-backups-what-to-check" },
+      { label: "Hydro jetting vs. drain snaking in DFW", href: "/blog/hydro-jetting-vs-drain-snaking-dfw" },
+      { label: "Is a clogged drain actually a sewer line problem?", href: "/blog/is-a-clogged-drain-actually-a-sewer-line-problem" },
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" }
+    ]
+  },
+  "gas-leak-detection-dallas-fort-worth": {
+    checklistTitle: "What to do first if you smell gas -- right now",
+    checklistIntro:
+      "Read this section first. The rest of the guide can wait. These steps are from Atmos Energy's own published guidance.",
+    checklistItems: [
+      "Leave the area immediately. Get everyone out of the house -- people and pets. Do not stop to open windows, do not stop to gather things, do not stop to find the source.",
+      "Do not operate anything that could spark. Do not touch light switches. Do not use a phone inside the house. Do not light anything. Do not turn appliances on or off. Do not operate the garage door opener.",
+      "From a safe distance, call 911 and Atmos Energy. Atmos Energy is the natural gas utility for Dallas-Fort Worth, headquartered in Dallas. Its 24-hour emergency number is 1-866-322-8667, answered around the clock. Call 911 first if anyone feels unwell, if there is a strong smell, or if you hear hissing. Then call Atmos Energy. Do not go back inside until emergency responders or Atmos Energy have confirmed it is safe.",
+      "Do not turn off your home's natural gas during severe weather, even if you are evacuated -- that is Atmos Energy's own guidance, and it exists because a system that has been shut off cannot be safely restored without an inspection.",
+      "A plumber comes after the emergency response, not before. Gas leak detection -- the work of finding the leak -- happens once the site is confirmed safe. Do not call a plumber first when you smell gas. Call 911 and Atmos Energy first.",
+      "Call 811 before you dig, every time, for any reason. It is free, and it is the law in Texas before excavation."
+    ],
+    proofTitle: "How a licensed plumber finds a gas leak, step by step",
+    proofItems: [
+      "Detection happens after the site is confirmed safe: the plumber confirms the area is safe to work in and that emergency responders have cleared any immediate danger before any testing begins.",
+      "A combustible gas detector survey walks the piping from the meter to every appliance connection -- including basement and crawlspace runs, and behind appliances -- and finds where gas is building up, including spots that cannot be seen.",
+      "The gas meter test: every appliance is turned off and the meter is watched -- if the meter moves with no gas being used, gas is escaping somewhere in the system.",
+      "Leak detection fluid is applied to joints, fittings, hoses, and the regulator -- bubbles show exactly which joint is leaking. It is simple, and it is precise: it marks the exact fitting, not just the area.",
+      "A pressure test isolates the system and holds it under pressure -- a pressure drop proves whether the piping holds, and isolating sections one at a time narrows down which segment is losing pressure. A pressure test is also required after many repairs, to prove the repair holds before the gas is turned back on.",
+      "Most gas leaks are found at a connection, not in the middle of a pipe -- appliance connectors, the meter and house line, older black iron pipe in pre-1980s homes in neighbourhoods like Lakewood, Oak Cliff, and Fairmount, and lines damaged by digging or freezing."
+    ],
+    extraFaqs: [
+      {
+        question: "What should I do if I smell gas in my house?",
+        answer:
+          "Leave immediately. Do not touch switches, phones, or appliances inside. From a safe distance, call 911 and Atmos Energy at 1-866-322-8667. Do not go back inside until emergency responders or Atmos Energy confirm it is safe."
+      },
+      {
+        question: "How does a plumber find a gas leak?",
+        answer:
+          "With a combustible gas detector survey, a meter test, leak detection fluid on joints (bubbles mark the exact fitting), and a pressure test to prove which section is losing pressure and that the repair holds."
+      },
+      {
+        question: "What does gas leak detection cost?",
+        answer:
+          "It depends on the size of the system, how many appliances are connected, and whether a pressure test is needed. Detection and repair are separate charges and should be quoted separately. Ask for the price before work starts."
+      },
+      {
+        question: "Who do I call if a gas line is damaged by digging or a storm?",
+        answer:
+          "Atmos Energy, at 1-866-322-8667, immediately -- even if you do not smell gas. And call 811 before you dig, every time. It is free, and it prevents the damage in the first place."
+      }
+    ],
+    extraLinks: [
+      { label: "DFW gas line safety guide", href: "/guides/dfw-gas-line-safety" },
+      { label: "Gas line plumber in Dallas-Fort Worth", href: "/blog/gas-line-plumber-dallas-fort-worth" },
+      { label: "Water heater flue and carbon monoxide warning signs", href: "/blog/water-heater-flue-carbon-monoxide-warning-signs-dallas" },
+      { label: "Frozen pipes in Dallas-Fort Worth: prevention before the next freeze", href: "/blog/frozen-pipes-dallas-fort-worth-prevention-before-the-next-freeze" },
+      { label: "Can homeowners legally do their own plumbing in Texas?", href: "/blog/can-homeowners-legally-do-their-own-plumbing-in-texas" }
+    ]
+  },
+  "sewer-line-repair-quote-dallas-fort-worth": {
+    checklistTitle: "What a sewer line repair quote should include, line by line",
+    checklistIntro:
+      "If a quote is a single number with no breakdown, ask for the breakdown -- a plumber who cannot break down their own price has not thought through the job.",
+    checklistItems: [
+      "Inspection: the camera survey to find and measure the problem, roughly $150 to $400 -- listed separately, not buried in the total.",
+      "Cleaning: jetting or cutting out roots and buildup so the repair can go in -- a line has to be clean before it can be lined or replaced.",
+      "Access: using an existing cleanout, installing one, or digging pits for bursting -- if there is no cleanout, one may need to be installed, and that is a line item, not a surprise.",
+      "The repair: the liner, the burst pipe, or the spot repairs, usually priced by the foot or per repair -- the largest line, and the one that varies most by method.",
+      "Reconnections: reopening branch lines and connecting at the house and at the city main -- a quote that does not mention reconnections has left out real work.",
+      "Restoration, permits, and a final camera check: backfilling, replacing concrete, regrading, and landscaping -- plus most DFW cities' permit requirement and a final camera check showing the finished work. Restoration is the line most often omitted."
+    ],
+    proofTitle: "How a sewer quote is built -- and the red flags",
+    proofItems: [
+      "Published national ranges from Angi, updated July 2026, put trenchless sewer line replacement at about $60 to $250 per foot, cured-in-place lining at $80 to $250 per foot, and pipe bursting at $60 to $200 per foot; open-trench replacement runs about $50 to $250 per foot.",
+      "SewerLine Lab, which surveyed contractor pricing in August 2026, puts Texas full replacement at $3,800 to $13,500 for a typical 40 to 60 foot lateral, at $60 to $180 per foot, and notes clay soil shifts as the Texas factor that moves the price.",
+      "A line three feet down is a different job from a line eight feet down, and a typical DFW residential lateral is 40 to 60 feet from the house to the city main -- length and depth are what move the price most after the method.",
+      "A bellied pipe -- a section that has sagged so water pools instead of flowing -- cannot be lined; it has to be dug up or regraded, and that changes the method and the price.",
+      "Red flags: no camera inspection, a single number with no breakdown, full payment up front, pressure to decide today, no licence or one that cannot be verified, restoration not mentioned at all, and a price far below every other quote.",
+      "On a job over $500, a deposit of 30 to 50 percent is the usual pattern -- full payment before the work is done is not. A quote is not just a price; it is a promise about what will be done, and the cheapest promise is rarely the best one."
+    ],
+    extraFaqs: [
+      {
+        question: "How much does sewer line repair cost in Dallas-Fort Worth?",
+        answer:
+          "Published ranges put Texas full replacement at $3,800 to $13,500 for a typical 40 to 60 foot lateral, at $60 to $180 per foot, with a camera inspection at roughly $150 to $400. Those are published ranges, not a quote -- your depth, access, method, and restoration move the number. Use our sewer line repair cost calculator for a starting estimate, and get a written quote from a plumber who has run a camera."
+      },
+      {
+        question: "Should I get more than one quote?",
+        answer:
+          "Yes. Get several written quotes and compare them line by line, not by the total. The cheapest total is often the one that left out restoration, permits, or the final camera check."
+      },
+      {
+        question: "Does homeowners insurance cover sewer line repair?",
+        answer:
+          "Usually not for wear, age, or root damage, which are the most common causes. Sudden and accidental damage is sometimes covered, and some policies offer a sewer line rider. Check your policy before you assume either way."
+      },
+      {
+        question: "How long does a sewer line repair take?",
+        answer:
+          "A spot repair is usually a day. A trenchless lining or pipe bursting job is typically one to two days. An open-trench replacement on a long or deep line can take several days, plus restoration time."
+      }
+    ],
+    extraLinks: [
+      { label: "Sewer line repair cost calculator", href: "/tools/sewer-line-repair-cost-calculator" },
+      { label: "Sewer line clog cost guide", href: "/cost-guides/sewer-line-clog-cost-guide" },
+      { label: "Main sewer line clog service", href: "/services/main-sewer-line-clog" },
+      { label: "Sewer camera inspection cost in Dallas-Fort Worth", href: "/blog/sewer-camera-inspection-cost-dallas-fort-worth-what-it-finds" },
+      { label: "Who is responsible for a sewer line in Fort Worth?", href: "/blog/who-is-responsible-for-sewer-line-fort-worth" }
+    ]
+  },
+  "commercial-water-heater-repair-dallas-fort-worth": {
+    checklistTitle: "What to check before you book a commercial water heater repair",
+    checklistIntro:
+      "Tell the plumber the demand pattern -- when the hot water runs out, and what is running at the time -- because that is what lets them diagnose a capacity problem instead of just replacing a part.",
+    checklistItems: [
+      "Note when it fails and what is running at the time -- a unit that is fine at 3 pm can fail at 7 am, and the failure is a capacity problem as often as it is a broken part.",
+      "Read the fault history on the control board if there is one -- modern commercial gas heaters show error codes and their occurrence, and that history is genuinely useful diagnostic information.",
+      "Identify the source of a leak before anything else: the tank itself, a pipe above it, or the connectors -- in the majority of leaking cases, a leak coming directly from the tank cannot be repaired.",
+      "Check the thermostat and mixing valve settings and the recirculation pump -- inconsistent temperature across fixtures usually points at the mixing valve or the recirculation loop, not at the heater itself.",
+      "Ask the plumber how long the hot water will be off and whether a temporary heater is an option -- for a business, the quote should include the downtime, not just the repair.",
+      "Ask for the price before any work starts, in writing, with the part and the labour separated -- and ask whether the plumber stocks common commercial parts, because a first-visit repair is the difference between a morning without hot water and a day without it."
+    ],
+    proofTitle: "How commercial water heaters differ -- and what breaks",
+    proofItems: [
+      "A residential tank is usually 40 or 50 gallons; a commercial unit can be 100 gallons or more, with a much higher input -- and it is rated by recovery rate, the gallons per hour it can raise to temperature, not just by capacity.",
+      "Commercial water heaters operate under stricter code requirements than residential units: temperature settings, mixing valves to prevent scalding, backflow prevention, venting, gas sizing, and inspection -- a repair that ignores code is not a repair.",
+      "DFW water is very hard at 10 to 17 grains per gallon in cities including Frisco, McKinney, Rockwall, and Forney, and scale builds up faster in a commercial unit that runs all day than in a residential one -- scale insulates the bottom of the tank, forces the burner to work longer, and produces the rumbling sound.",
+      "Use the 50 percent rule: if the repair costs more than half of a new installed unit, replace it -- but a business has two more factors, downtime and redundancy, and every hour without hot water costs a business money.",
+      "Many commercial properties run two units, or a tankless cascade, so that one unit can be serviced without shutting down hot water entirely -- if your property has a single unit and no backup, a failure is a shutdown.",
+      "Most commercial water heater failures in DFW are maintenance failures before they are part failures -- a descaling programme, anode rod checks, flame sensor cleaning, flue inspection, relief valve testing, and recirculation pump verification, done on a schedule, is what keeps a commercial unit alive."
+    ],
+    extraFaqs: [
+      {
+        question: "How long does a commercial water heater repair take?",
+        answer:
+          "A part replacement -- an element, a thermostat, a gas valve, an igniter -- is usually a few hours. A descaling takes about an hour per unit. A tank replacement takes a day or more, longer if venting, gas sizing, or permits are involved."
+      },
+      {
+        question: "Why does our hot water run out during peak hours but not at other times?",
+        answer:
+          "Because the unit's recovery rate cannot keep up with the peak demand. It may be a failed element or burner reducing the recovery rate, or the unit may be undersized for the demand the building now has. A plumber should check both."
+      },
+      {
+        question: "Can a commercial water heater be repaired, or does it always need replacing?",
+        answer:
+          "It can be repaired, and most repairs are parts -- elements, thermostats, gas valves, igniters, control boards, contactors. A leaking tank cannot be repaired. Use the 50 percent rule: if the repair costs more than half of a new installed unit, replace it."
+      },
+      {
+        question: "How often should a commercial water heater be serviced in Dallas-Fort Worth?",
+        answer:
+          "At least annually, and more often if the demand is high or the water is particularly hard. Descaling, anode checks, flame sensor cleaning, flue inspection, and relief valve testing should be on a schedule, not left until something fails."
+      }
+    ],
+    extraLinks: [
+      { label: "Commercial emergency plumbing service", href: "/services/commercial-emergency-plumbing" },
+      { label: "Water heater emergency service", href: "/services/water-heater-emergency" },
+      { label: "Tankless water heater installation cost", href: "/cost-guides/tankless-water-heater-installation-cost" },
+      { label: "Water heater repair-or-replace calculator", href: "/tools/water-heater-repair-or-replace-calculator" },
+      { label: "DFW water hardness by city: what it does to your water heater", href: "/blog/dfw-water-hardness-by-city-what-it-does-to-your-water-heater" }
+    ]
   }
 };
 
